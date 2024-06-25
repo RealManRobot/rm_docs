@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.nVtVLczR.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"python/struct/a.md","filePath":"python/struct/a.md","lastUpdated":null}'),r={name:"python/struct/a.md"};function o(s,n,c,p,d,_){return a(),e("div")}const m=t(r,[["render",o]]);export{l as __pageData,m as default};

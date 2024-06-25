@@ -1,0 +1,50 @@
+/*去除表格边框*/
+.vp-doc th,
+.vp-doc td {
+    border-right: none !important;
+    border-left: none !important;
+}
+thead,
+tbody {
+    border-right: 1px solid var(--vp-c-divider);
+    border-left: 1px solid var(--vp-c-divider);
+}
+
+/*调整active*/
+
+.VPNavBarMenuLink.active {
+    color: #EC6102 !important;
+}
+
+.VPNavBarMenuLink:hover {
+    color: #EC6102 !important;
+}
+
+/**/
+.VPSidebarItem.level-0.is-link>.item>.link:hover .text,
+.VPSidebarItem.level-1.is-link>.item>.link:hover .text,
+.VPSidebarItem.level-2.is-link>.item>.link:hover .text,
+.VPSidebarItem.level-3.is-link>.item>.link:hover .text,
+.VPSidebarItem.level-4.is-link>.item>.link:hover .text,
+.VPSidebarItem.level-5.is-link>.item>.link:hover .text {
+    color: #EC6102 !important;
+}
+
+.VPSidebarItem.level-0.is-active>.item .link>.text,
+.VPSidebarItem.level-1.is-active>.item .link>.text,
+.VPSidebarItem.level-2.is-active>.item .link>.text,
+.VPSidebarItem.level-3.is-active>.item .link>.text,
+.VPSidebarItem.level-4.is-active>.item .link>.text,
+.VPSidebarItem.level-5.is-active>.item .link>.text {
+    color: #EC6102 !important;
+}
+
+.VPSidebarItem.level-2.is-active>.item>.indicator,
+.VPSidebarItem.level-3.is-active>.item>.indicator,
+.VPSidebarItem.level-4.is-active>.item>.indicator,
+.VPSidebarItem.level-5.is-active>.item>.indicator{
+    background-color: #EC6102 !important;
+}
+.title{
+    color: #EC6102 !important;
+}
