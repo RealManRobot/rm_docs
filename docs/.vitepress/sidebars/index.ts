@@ -186,13 +186,63 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     ],
     "/AI/": [
       {
-        text: "",
+        text:'简介',
+        link:'/AI/intro'
+      },
+      {
+        text: "SDK开发指南",
         items: [
           {
-            text: "",
-            link: "",
+            text: "yolo",
+            items:[
+              {
+                text:'快速开始',
+                link:'/AI/developerGuide/yolo/gettingStarted'
+              },
+              {
+                text:'概述',
+                link:'/AI/developerGuide/yolo/introduction'
+              },
+              {
+                text:'环境配置',
+                link:'/AI/developerGuide/yolo/developmentEnvironmentConfig'
+              },
+              {
+                text:'接口示例',
+                link:'/AI/developerGuide/yolo/interfaceExample'
+              },
+              {
+                text:'资源下载',
+                link:'/AI/developerGuide/yolo/download'
+              },
+              {
+                text:'故障排除',
+                link:'/AI/developerGuide/yolo/troubleshooting'
+              },
+            ]
+          },
+          {
+            text: "视觉伺服",
+            link:'/AI/visualServo/index'
+          },
+          {
+            text: "6D姿态",
+            link:'/AI/6D-Attitude/index'
           },
         ],
+      },
+      {
+        text: "常见问题",
+        items:[
+          {
+            text:'cuda环境安装',
+            link:'/AI/FQA/environmentalInstallation'
+          }
+        ]
+      },
+      {
+        text: "历史版本",
+        link:'/AI/versionControl'
       },
     ],
     "/symbiosis/": [
