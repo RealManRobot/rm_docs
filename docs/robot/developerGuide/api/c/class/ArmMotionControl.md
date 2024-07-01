@@ -2,7 +2,7 @@
 
 控制运动的急停、缓停、暂停、继续、清除轨迹以及查询当前规划类型。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 轨迹缓停`rm_set_arm_slow_stop()`
 

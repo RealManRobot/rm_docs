@@ -2,7 +2,7 @@
 
 工具坐标系标定、切换、删除、修改、查询及工具包络参数等管理。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 六点法自动设置工具坐标系 标记点位`rm_set_auto_tool_frame()`
 

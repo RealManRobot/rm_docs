@@ -2,7 +2,7 @@
 
 机械臂控制器可通过网口、WIFI、RS232-USB 接口和 RS485 接口与用户通信，用户使用时无需切换，可使用上述任一接口， 控制器收到指令后，若指令格式正确，则会通过相同的接口反馈数据。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 配置WiFi AP模式`rm_set_wifi_ap()`
 

@@ -2,7 +2,7 @@
 
 关节、位置、姿态的示教及步进控制。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 关节步进`rm_set_joint_step()`
 

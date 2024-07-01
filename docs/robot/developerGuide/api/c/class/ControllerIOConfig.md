@@ -2,7 +2,7 @@
 
 机械臂控制器提供IO端口，用于与外部设备交互。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置数字IO模式`rm_set_IO_mode()`
 

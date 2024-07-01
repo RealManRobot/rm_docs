@@ -9,7 +9,7 @@
 > - 关闭Modbus RTU模式后，系统将自动切换回机械臂控制模式，使用波特率460800BPS，停止位1，数据位8，无校验。
 此外，I系列控制器还支持modbus-TCP主站配置，允许用户配置使用modbus-TCP主站，以连接外部设备的modbus-TCP从站。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 配置通讯端口ModbusRTU模式`rm_set_modbus_mode()`
 

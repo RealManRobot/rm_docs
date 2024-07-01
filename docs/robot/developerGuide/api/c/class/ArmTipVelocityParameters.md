@@ -2,7 +2,7 @@
 
 机械臂末端运动参数设置及获取，包含线速度设置与查询、角速度设置与查询、角加速度设置与查询、碰撞等级设置与查询等。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置机械臂末端最大线速度`rm_set_arm_max_line_speed()`
 

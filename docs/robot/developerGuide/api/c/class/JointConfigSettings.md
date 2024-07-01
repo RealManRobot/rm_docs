@@ -3,7 +3,7 @@
 对机械臂的关节参数进行设置，如果关节发生错误，则无法修改关节参数，必须先清除关节错误代码。另外设置关节之前， 必须先将关节掉使能，否则会设置不成功。
 关节所有参数在修改完成后，会自动保存到关节 Flash，立即生效，之后关节处于掉使能状态，修改完参数后必须 发送指令控制关节上使能。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置关节最大速度`rm_set_joint_max_speed()`
 

@@ -2,7 +2,7 @@
 
 机械臂末端工具端提供多种IO端口，用于与外部设备交互。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置工具端数字IO输出`rm_set_tool_DO_state()`
 

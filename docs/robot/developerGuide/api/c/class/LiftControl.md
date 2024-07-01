@@ -2,7 +2,7 @@
 
 升降机构速度开环控制、位置闭环控制及状态获取。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 升降机构速度开环控制`rm_set_lift_speed()`
 
