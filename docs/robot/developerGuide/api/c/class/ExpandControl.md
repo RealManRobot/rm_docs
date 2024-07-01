@@ -2,7 +2,7 @@
 
 扩展关节速度环控制、位置环控制及状态获取。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 扩展关节状态获取`rm_get_expand_state()`
 

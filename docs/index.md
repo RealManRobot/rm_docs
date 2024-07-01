@@ -30,4 +30,7 @@ features:
   - title: 优势四
     icon: ⚡️
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 优势五
+    icon: ⚡️
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---

@@ -2,7 +2,7 @@
 
 工作坐标系标定、切换、删除、修改、查询等管理。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 三点法自动设置工作坐标系`rm_set_auto_work_frame()`
 

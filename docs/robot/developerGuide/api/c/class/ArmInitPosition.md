@@ -2,7 +2,7 @@
 
 记录机械臂初始位置
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置机械臂的初始位置角度`rm_set_init_pose()`
 

@@ -2,7 +2,7 @@
 
 机械臂当前状态、关节温度、电流、电压查询。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 获取机械臂当前状态`rm_get_current_arm_state()`
 

@@ -2,7 +2,7 @@
 
 睿尔曼机械臂末端配置因时的五指灵巧手，可通过协议对灵巧手进行设置。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置灵巧手目标手势序列号`rm_set_hand_posture()`
 

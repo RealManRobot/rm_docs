@@ -2,7 +2,7 @@
 
 关节运动、笛卡尔空间运动以及角度及位姿透传。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 关节空间运动`rm_movej()`
 

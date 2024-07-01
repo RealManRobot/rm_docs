@@ -2,7 +2,7 @@
 
 睿尔曼机械臂末端配备了因时机器人公司的 EG2-4C2 手爪，为了便于用户操作手爪，机械臂控制器 对用户开放了手爪的控制协议（手爪控制协议与末端modbus 功能互斥）。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 设置手爪行程`rm_set_gripper_route()`
 

@@ -2,7 +2,7 @@
 
 控制器状态获取、电源控制、错误清除、有线网口IP地址配置、软件信息获取。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 获取控制器状态`rm_get_controller_state()`
 
