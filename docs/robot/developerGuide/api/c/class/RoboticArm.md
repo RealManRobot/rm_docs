@@ -176,7 +176,7 @@ int rm_delete_robot_arm(rm_robot_handle * handle)
 - **方法原型：**
 
 ```C
-int rm_delete_robot_arm(rm_robot_handle * handle)
+int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 ```
 
 *可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
@@ -299,7 +299,7 @@ void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 - **方法原型：**
 
 ```C
-void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
+void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime_callback)
 ```
 
 *这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/rm_realtime_arm_joint_state_t.md)查阅结构体详情。

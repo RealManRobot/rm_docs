@@ -54,7 +54,8 @@ int rm_set_joint_step(rm_robot_handle * handle,int joint_num,float step,int v,in
 int rm_set_pos_step(rm_robot_handle * handle,rm_pos_teach_type_e type,float step,int v,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pos_teach_type_e](../struct/rm_pos_teach_type_e.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_pos_teach_type_e](../type/rm_pos_teach_type_e.md)查阅枚举类型详细描述*
 
 - **参数说明:**
 
@@ -98,7 +99,8 @@ int rm_set_pos_step(rm_robot_handle * handle,rm_pos_teach_type_e type,float step
 int rm_set_ort_step(rm_robot_handle * handle,rm_ort_teach_type_e type,float step,int v,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_ort_teach_type_e](../struct/rm_ort_teach_type_e.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_ort_teach_type_e](../type/rm_ort_teach_type_e.md)查阅枚举类型详细描述*
 
 - **参数说明:**
 
