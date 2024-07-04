@@ -185,7 +185,7 @@ int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   handle  |    需要删除的机械臂句柄。    |
+|   handle  |    机械臂控制句柄。    |
 |   mode  |    0：仿真模式；1：真实模式。    |
 
 - **返回值:**
