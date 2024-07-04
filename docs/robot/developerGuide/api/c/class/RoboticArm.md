@@ -33,7 +33,7 @@ printf("api version: %s\n", version);
 int rm_init(rm_thread_mode_e mode)
 ```
 
-*可以跳转[rm_thread_mode_e](../struct/rm_thread_mode_e.md)查阅枚举类型*
+*可以跳转[rm_thread_mode_e](../type/rm_thread_mode_e.md)查阅枚举类型*
 
 - **参数说明:**
 
@@ -84,7 +84,7 @@ int rm_destory(void )
 void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback, int level)
 ```
 
-*可以跳转[rm_thread_mode_e](../struct/rm_thread_mode_e.md)查阅枚举类型*
+*可以跳转[rm_thread_mode_e](../type/rm_thread_mode_e.md)查阅枚举类型*
 
 - **参数说明:**
 

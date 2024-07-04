@@ -12,7 +12,7 @@
 void rm_algo_init_sys_data(rm_robot_arm_model_e Mode,rm_force_type_e Type)
 ```
 
-*可以跳转[rm_robot_arm_model_e](../type/rm_robot_arm_model_e.md)和[rm_force_type_e](../type/rm_force_type_e.md)查阅枚举类型详细描述*
+*可以跳转[rm_robot_arm_model_e](跳转到typc_list的rm_robot_arm_model_e)和[rm_force_type_e](跳转到typc_list的rm_force_type_e)查阅枚举类型详细描述*
 >备注：不连接机械臂时调用
 
 - **参数说明:**
