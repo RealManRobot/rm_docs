@@ -35,7 +35,14 @@ int rm_set_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t conf
 - **使用示例**
   
 ```C
-
+rm_realtime_push_config_t config;
+config.cycle = 5;
+config.enable = true;
+config.force_coordinate = 1;
+config.port = 8089;
+strcpy(config.ip, "192.168.1.108");
+int ret = rm_set_realtime_push(robot_handle, config);
+printf("rm_set_realtime_push result %d\n",ret);
 ```
 
 ## 查询 UDP 机械臂状态主动上报配置`rm_get_realtime_push()`
@@ -68,5 +75,7 @@ int rm_get_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t * co
 - **使用示例**
   
 ```C
-
+rm_realtime_push_config_t gconfig;
+ret = rm_get_realtime_push(robot_handle, &gconfig);
+printf("realtime config result:d%\n ip:%s\n",ret, gconfig.ip);
 ```

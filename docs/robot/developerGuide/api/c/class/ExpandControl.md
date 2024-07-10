@@ -34,7 +34,9 @@ int rm_get_expand_state(rm_robot_handle * handle,rm_expand_state_t * state)
 - **使用示例**
   
 ```C
-
+// 查询扩展关节状态
+rm_expand_state_t state;
+int result = rm_get_expand_state(robot_handle, &state);
 ```
 
 ## 扩展关节速度环控制`rm_set_expand_speed()`
@@ -67,7 +69,8 @@ int rm_set_expand_speed(rm_robot_handle * handle,int speed)
 - **使用示例**
   
 ```C
-
+int speed = 50;
+ret = rm_set_expand_speed(robot_handle,speed);
 ```
 
 ## 扩展关节位置环控制`rm_set_expand_pos()`
@@ -104,5 +107,10 @@ int rm_set_expand_pos(rm_robot_handle * handle,int speed,int pos,int block)
 - **使用示例**
   
 ```C
-
+// 默认线程模式为多线程，以20%的速度阻塞运行到200mm的位置
+int ret;
+int target = 200;
+int speed = 20;
+int block = 1;
+ret = rm_set_expand_pos(robot_handle,speed,target,block);
 ```

@@ -41,7 +41,18 @@ int rm_add_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t co
 - **使用示例**
   
 ```C
-
+// 新增长方体几何模型参数 “test1”
+rm_fence_config_t fence_config;
+strncpy(fence_config.name, "test1", 10);
+fence_config.form = 1;
+fence_config.cube.x_max_limit = 0.5;
+fence_config.cube.x_min_limit = -0.5;
+fence_config.cube.y_max_limit = 0.5;
+fence_config.cube.y_min_limit = -0.5;
+fence_config.cube.z_max_limit = 0.5;
+fence_config.cube.z_min_limit = -0.5;
+int result = rm_add_electronic_fence_config(robot_handle, fence_config);  
+printf("rm_add_electronic_fence_config:%d\n", result);
 ```
 
 ## 更新几何模型参数`rm_update_electronic_fence_config()`
@@ -74,7 +85,18 @@ int rm_update_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t
 - **使用示例**
   
 ```C
-
+// 修改长方体几何模型参数 “test1”
+rm_fence_config_t fence_config;
+strncpy(fence_config.name, "test1", 10);
+fence_config.form = 1;
+fence_config.cube.x_max_limit = 0.5;
+fence_config.cube.x_min_limit = -1.0;
+fence_config.cube.y_max_limit = 0.5;
+fence_config.cube.y_min_limit = -0.5;
+fence_config.cube.z_max_limit = 0.5;
+fence_config.cube.z_min_limit = -0.5;
+int result = rm_update_electronic_fence_config(robot_handle, fence_config);  
+printf("rm_update_electronic_fence_config :%d\n", result);
 ```
 
 ## 删除指定几何模型`rm_delete_electronic_fence_config()`
@@ -107,7 +129,8 @@ int rm_delete_electronic_fence_config(rm_robot_handle * handle,const char * form
 - **使用示例**
   
 ```C
-
+ ret = rm_delete_electronic_fence_config(robot_handle, "test");
+ printf("delete electronic fence config result : %d\n", ret);
 ```
 
 ## 查询所有几何模型名称`rm_get_electronic_fence_list_names()`
@@ -141,7 +164,13 @@ int rm_get_electronic_fence_list_names(rm_robot_handle * handle,rm_fence_names_t
 - **使用示例**
   
 ```C
-
+rm_fence_names_t fence_names[10];
+int len_fence = 0;
+ret = rm_get_electronic_fence_list_names(robot_handle, fence_names, &len_fence);
+printf("get electronic fence list names result : %d\n", ret);
+for (int i = 0; i < len_fence; i++) {
+    printf("electronic_fence[%d] name : %s\n", i, fence_names[i].name);
+}
 ```
 
 ## 查询指定几何模型参数`rm_get_given_electronic_fence_config()`
@@ -175,7 +204,16 @@ int rm_get_given_electronic_fence_config(rm_robot_handle * handle,const char * n
 - **使用示例**
   
 ```C
-
+rm_fence_config_t fence_config_given;
+ret = rm_get_given_electronic_fence_config(robot_handle, "test", &fence_config_given);
+printf("get given electronic fence config result : %d\n", ret);
+printf("fence config given : %f, %f, %f, %f, %f, %f\n",
+fence_config_given.cube.x_max_limit,
+fence_config_given.cube.x_min_limit,    
+fence_config_given.cube.y_max_limit,        
+fence_config_given.cube.y_min_limit,
+fence_config_given.cube.z_max_limit,
+fence_config_given.cube.z_min_limit);
 ```
 
 ## 查询所有几何模型参数`rm_get_electronic_fence_list_infos()`
@@ -209,7 +247,14 @@ int rm_get_electronic_fence_list_infos(rm_robot_handle * handle,rm_fence_config_
 - **使用示例**
   
 ```C
-
+rm_fence_config_list_t list;
+int len;
+result = rm_get_electronic_fence_list_infos(robot_handle, &list, &len);
+printf("rm_get_electronic_fence_list_infos: %d:\n", result);
+for (int i = 0; i < len; i++) {
+    printf("electronic_fence[%d] name: %s, ", i + 1, list.config[i].name);
+    printf("form: %d\n", list.config[i].form);
+}
 ```
 
 ## 设置电子围栏使能状态`rm_set_electronic_fence_enable()`
@@ -244,7 +289,13 @@ int rm_set_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_
 - **使用示例**
   
 ```C
-
+// 设置电子围栏使能、机器人在电子围栏内部且针对整臂区域生效
+rm_electronic_fence_enable_t fence_state;
+fence_state.enable_state = true;
+fence_state.effective_region = 0;
+fence_state.in_out_side = 0;
+ret = rm_set_electronic_fence_enable(robot_handle, fence_state);
+printf("set electronic fence enable result : %d\n", ret);
 ```
 
 ## 获取电子围栏使能状态`rm_get_electronic_fence_enable()`
@@ -277,7 +328,11 @@ int rm_get_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_
 - **使用示例**
   
 ```C
-
+ret = rm_get_electronic_fence_enable(robot_handle, &fence_state);
+printf("get electronic fence enable result : %d\n", ret);
+printf("fence enable state : %d\n", fence_state.enable_state);
+printf("fence effective region : %d\n", fence_state.effective_region);
+printf("fence in/out side : %d\n", fence_state.in_out_side);
 ```
 
 ## 设置当前电子围栏参数配置`rm_set_electronic_fence_config()`
@@ -310,7 +365,17 @@ int rm_set_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t co
 - **使用示例**
   
 ```C
-
+// 设置当前电子围栏参数
+rm_fence_config_t set_fence_config;
+set_fence_config.form = 1;
+set_fence_config.cube.x_max_limit = 0.5;
+set_fence_config.cube.x_min_limit = -1.0;
+set_fence_config.cube.y_max_limit = 0.5;
+set_fence_config.cube.y_min_limit = -0.5;
+set_fence_config.cube.z_max_limit = 0.5;
+set_fence_config.cube.z_min_limit = -0.5;
+ret = rm_set_electronic_fence_config(robot_handle, set_fence_config);
+printf("set electronic fence config result : %d\n", ret);
 ```
 
 ## 获取当前电子围栏参数`rm_get_electronic_fence_config()`
@@ -343,7 +408,15 @@ int rm_get_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t * 
 - **使用示例**
   
 ```C
-
+ret = rm_get_electronic_fence_config(robot_handle, &set_fence_config);
+printf("get electronic fence config result : %d\n", ret);
+printf("fence form : %d\n", set_fence_config.form);
+printf("fence x_max_limit : %f\n", set_fence_config.cube.x_max_limit);
+printf("fence x_min_limit : %f\n", set_fence_config.cube.x_min_limit);
+printf("fence y_max_limit : %f\n", set_fence_config.cube.y_max_limit);
+printf("fence y_min_limit : %f\n", set_fence_config.cube.y_min_limit);
+printf("fence z_max_limit : %f\n", set_fence_config.cube.z_max_limit);
+printf("fence z_min_limit : %f\n", set_fence_config.cube.z_min_limit);
 ```
 
 ## 设置虚拟墙使能状态`rm_set_virtual_wall_enable()`
@@ -376,7 +449,13 @@ int rm_set_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enab
 - **使用示例**
   
 ```C
-
+// 设置虚拟墙使能、机器人在电子围栏内部、针对末端生效
+rm_electronic_fence_enable_t fence_state;
+fence_state.enable_state = true;
+fence_state.effective_region = 0;
+fence_state.in_out_side = 1;
+ret = rm_set_electronic_fence_enable(robot_handle, fence_state);
+printf("set electronic fence enable result : %d\n", ret);
 ```
 
 ## 获取虚拟墙使能状态`rm_get_virtual_wall_enable()`
@@ -409,7 +488,11 @@ int rm_get_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enab
 - **使用示例**
   
 ```C
-
+ret = rm_get_virtual_wall_enable(robot_handle, &fence_state);
+printf("get virtual wall enable result : %d\n", ret);
+printf("fence enable state : %d\n", fence_state.enable_state);
+printf("fence effective region : %d\n", fence_state.effective_region);
+printf("fence in/out side : %d\n", fence_state.in_out_side);
 ```
 
 ## 设置当前虚拟墙参数`rm_set_virtual_wall_config()`
@@ -442,7 +525,17 @@ int rm_set_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t config
 - **使用示例**
   
 ```C
-
+// 设置当前电子围栏参数
+rm_fence_config_t set_fence_config;
+set_fence_config.form = 1;
+set_fence_config.cube.x_max_limit = 0.5;
+set_fence_config.cube.x_min_limit = -1.0;
+set_fence_config.cube.y_max_limit = 0.5;
+set_fence_config.cube.y_min_limit = -0.5;
+set_fence_config.cube.z_max_limit = 0.5;
+set_fence_config.cube.z_min_limit = -0.5;
+ret = rm_set_virtual_wall_config(robot_handle, set_fence_config);
+printf("set virtual wall config result : %d\n", ret);
 ```
 
 ## 获取当前虚拟墙参数`rm_get_virtual_wall_config()`
@@ -475,5 +568,13 @@ int rm_get_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t * conf
 - **使用示例**
   
 ```C
-
+ret = rm_get_virtual_wall_config(robot_handle, &set_fence_config);
+printf("get virtual wall config result : %d\n", ret);
+printf("fence form : %d\n", set_fence_config.form);
+printf("fence x_max_limit : %f\n", set_fence_config.cube.x_max_limit);
+printf("fence x_min_limit : %f\n", set_fence_config.cube.x_min_limit);
+printf("fence y_max_limit : %f\n", set_fence_config.cube.y_max_limit);
+printf("fence y_min_limit : %f\n", set_fence_config.cube.y_min_limit);
+printf("fence z_max_limit : %f\n", set_fence_config.cube.z_max_limit);
+printf("fence z_min_limit : %f\n", set_fence_config.cube.z_min_limit);
 ```

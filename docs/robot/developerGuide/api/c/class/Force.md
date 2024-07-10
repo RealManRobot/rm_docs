@@ -31,13 +31,22 @@ int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 |   0  |    `int`    |    成功。    |
 |   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。可能情况：当前机械臂不是六维力版本    |
 |  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
 
 - **使用示例**
   
 ```C
-
+//获取六维力数据
+rm_force_data_t force_data;
+ret = rm_get_force_data(robot_handle, &force_data);
+printf("get force data result : %d\n", ret);
+for(int i = 0; i < 6; i++) {
+    printf("force data[%d] : %f \n", i, force_data.force_data[i]);
+    printf("work_zero_force_data[%d] : %f \n", i, force_data.work_zero_force_data[i]);
+    printf("tool_zero_force_data[%d] : %f \n", i, force_data.tool_zero_force_data[i]);
+    printf("zero_force_data[%d] : %f \n", i, force_data.zero_force_data[i]);  
+}
 ```
 
 ## 六维力零位标定`rm_clear_force_data()`
@@ -71,7 +80,8 @@ int rm_clear_force_data(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+ret = rm_clear_force_data(robot_handle);
+printf("clear force data result : %d\n", ret);
 ```
 
 ## 自动设置六维力重心参数`rm_set_force_sensor()`
@@ -113,7 +123,9 @@ int rm_set_force_sensor(rm_robot_handle * handle,bool block)
 - **使用示例**
   
 ```C
-
+// 阻塞完成六维力重心标定
+ret = rm_set_force_sensor(robot_handle, true);
+printf("set force sensor result : %d\n", ret);
 ```
 
 ## 手动标定六维力数据`rm_manual_set_force()`
@@ -151,7 +163,51 @@ int rm_manual_set_force(rm_robot_handle * handle,int count,float * joint,bool bl
 - **使用示例**
   
 ```C
+// 定义四个关节角度数组，每个数组对应一个标定位置  
+float joint_pos1[6] = {0, 0, -60, 0, 60, 0}; // 第一个位置  
+float joint_pos2[6] = {0, 0, -60, 0, -30, 0}; // 第二个位置  
+float joint_pos3[6] = {0, 0, -60, 0, -30, 180}; // 第三个位置  
+float joint_pos4[6] = {0, 0, -60, 0, -120, 0}; // 第四个位置  
 
+// 阻塞模式，等待标定完成  
+bool block = true;  
+
+// 顺序设置四个位置  
+for (int i = 1; i <= 4; i++) {  
+    float *current_joint;  
+    switch (i) {  
+        case 1: current_joint = joint_pos1; break;  
+        case 2: current_joint = joint_pos2; break;  
+        case 3: current_joint = joint_pos3; break;  
+        case 4: current_joint = joint_pos4; break;  
+        default: continue; // 不应该到达这里  
+    }  
+
+    // 调用函数，发送标定位置  
+    int status = rm_manual_set_force(robot_handle, i, current_joint, block);  
+
+    // 检查函数返回值  
+    switch (status) {  
+        case 0:  
+            printf("标定位置 %d 成功\n", i);  
+            break;  
+        case 1:  
+            printf("标定位置 %d 失败：控制器返回错误或参数错误\n", i);  
+            return 1; // 提前退出程序  
+        case -1:  
+            printf("标定位置 %d 数据发送失败\n", i);  
+            return -1;  
+        case -2:  
+            printf("标定位置 %d 数据接收失败或超时\n", i);  
+            return -2;  
+        case -3:  
+            printf("标定位置 %d 返回值解析失败\n", i);  
+            return -3;  
+        default:  
+            printf("未知错误\n");  
+            return status;  
+    }  
+}  
 ```
 
 ## 停止标定力传感器重心`rm_stop_set_force_sensor()`
@@ -185,5 +241,6 @@ int rm_stop_set_force_sensor(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//退出六维力标定流程
+ret = rm_stop_set_force_sensor(robot_handle);
 ```

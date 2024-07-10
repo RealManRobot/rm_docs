@@ -35,7 +35,12 @@ int rm_set_arm_slow_stop(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 设置机器人缓慢停止  
+if (rm_set_arm_slow_stop(robot_handle) == 0) {  
+    printf("Arm set to slow stop successfully.\n");  
+} else {  
+    printf("Failed to set arm to slow stop.\n");  
+} 
 ```
 
 ## 轨迹急停`rm_set_arm_stop()`
@@ -69,7 +74,12 @@ int rm_set_arm_stop(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 设置机器人急停  
+if (rm_set_arm_stop(robot_handle) == 0) {  
+    printf("Arm set to stop successfully.\n");  
+} else {  
+    printf("Failed to set arm to stop.\n");  
+}
 ```
 
 ## 轨迹暂停`rm_set_arm_pause()`
@@ -103,7 +113,12 @@ int rm_set_arm_pause(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 设置机器人暂停  
+if (rm_set_arm_pause(robot_handle) == 0) {  
+    printf("Arm set to pause successfully.\n");  
+} else {  
+    printf("Failed to set arm to pause.\n");  
+} 
 ```
 
 ## 暂停后继续轨迹运动`rm_set_arm_continue()`
@@ -135,7 +150,12 @@ int rm_set_arm_continue(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 设置机器人暂停后继续  
+if (rm_set_arm_continue(robot_handle) == 0) {  
+    printf("Arm set to continue successfully.\n");  
+} else {  
+    printf("Failed to set arm to continue.\n");  
+} 
 ```
 
 ## 清除当前轨迹`rm_set_delete_current_trajectory()`
@@ -169,7 +189,12 @@ int rm_set_delete_current_trajectory(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 删除当前轨迹  
+if (rm_set_delete_current_trajectory(robot_handle) == 0) {  
+    printf("Current trajectory deleted successfully.\n");
+} else {  
+    printf("Failed to delete Current trajectory.\n");  
+} 
 ```
 
 ## 清除所有轨迹`rm_set_arm_delete_trajectory()`
@@ -203,7 +228,12 @@ int rm_set_arm_delete_trajectory(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 清除所有轨迹  
+if (rm_set_arm_delete_trajectory(robot_handle) == 0) {  
+    printf("Trajectory deleted successfully.\n");
+} else {  
+    printf("Failed to delete Trajectory.\n");  
+} 
 ```
 
 ## 获取当前正在规划的轨迹信息`rm_get_arm_current_trajectory()`
@@ -238,5 +268,10 @@ int rm_get_arm_current_trajectory(rm_robot_handle * handle,rm_arm_current_trajec
 - **使用示例**
   
 ```C
-
+// 获取当前机械臂轨迹的信息
+rm_arm_current_trajectory_e trajectory_type;  
+float trajectory_data[7]; 
+if (rm_get_arm_current_trajectory(robot_handle, &trajectory_type, trajectory_data) == 0) {  
+    printf("Current arm trajectory type: %d\n", trajectory_type);    
+} 
 ```

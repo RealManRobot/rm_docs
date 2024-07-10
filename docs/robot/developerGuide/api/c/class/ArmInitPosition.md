@@ -34,7 +34,16 @@ int rm_set_init_pose(rm_robot_handle * handle,float * joint)
 - **使用示例**
   
 ```C
+// 定义一个包含关节角度的数组（6轴机械臂）  
+float joint_angles[6] = {0.1, -0.3, 1.5, 2.7, -1.2, 0.8};  
 
+// 调用函数设置初始姿态  
+int result = rm_set_init_pose(robot_handle, joint_angles);  
+if (result == 0) { 
+    printf("Initial pose set successfully.\n");  
+} else {  
+    printf("Failed to set initial pose. Error code: %d\n", result);  
+} 
 ```
 
 ## 获取机械臂初始位置角度`rm_get_init_pose()`
@@ -67,5 +76,16 @@ int rm_get_init_pose(rm_robot_handle * handle,float * joint)
 - **使用示例**
   
 ```C
-
+float joint_angles[6];  
+// 调用函数获取初始姿态  
+int result = rm_get_init_pose(robot_handle, joint_angles);  
+if (result == 0) { 
+    printf("Initial pose retrieved successfully.\n");  
+    // 打印关节角度或位置 
+    for (int i = 0; i < 6; i++) {  
+        printf("Joint %d: %.2f\n", i + 1, joint_angles[i]);  
+    }  
+} else {  
+    printf("Failed to retrieve initial pose.\n");  
+}  
 ```

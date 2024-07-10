@@ -38,7 +38,9 @@ int rm_set_hand_posture(rm_robot_handle * handle,int posture_num,bool block,int 
 - **使用示例**
   
 ```C
-
+//设置灵巧手阻塞执行1号手势，10秒无返回则超时
+int posture_num = 1;
+ret = rm_set_hand_posture(robot_handle,posture_num,true,10);
 ```
 
 ## 设置灵巧手动作序列`rm_set_hand_seq()`
@@ -75,7 +77,9 @@ int rm_set_hand_seq(rm_robot_handle * handle,int seq_num,bool block,int timeout)
 - **使用示例**
   
 ```C
-
+//设置灵巧手阻塞执行1号动作序列，15秒无返回则超时
+int posture_num = 1;
+ret = rm_set_hand_seq(robot_handle,posture_num,true,15);
 ```
 
 ## 设置灵巧手各自由度角度`rm_set_hand_angle()`
@@ -110,7 +114,9 @@ int rm_set_hand_angle(rm_robot_handle * handle,const int * hand_angle)
 - **使用示例**
   
 ```C
-
+//设置灵巧手各手指动作
+const int angle[6]= {-1,100,200,300,400,500};
+ret = rm_set_hand_angle(robot_handle,angle);
 ```
 
 ## 设置灵巧手速度`rm_set_hand_speed()`
@@ -143,7 +149,9 @@ int rm_set_hand_speed(rm_robot_handle * handle,int speed)
 - **使用示例**
   
 ```C
-
+//设置灵巧手各手指速度
+int speed = 500;
+ret = rm_set_hand_speed(robot_handle,speed);
 ```
 
 ## 设置灵巧手力阈值`rm_set_hand_force()`
@@ -176,5 +184,7 @@ int rm_set_hand_force(rm_robot_handle * handle,int hand_force)
 - **使用示例**
   
 ```C
-
+//设置灵巧手力阈值500
+int force = 500;
+ret = rm_set_hand_force(robot_handle,force);
 ```

@@ -37,7 +37,12 @@ int rm_get_controller_state(rm_robot_handle * handle,float * voltage,float * cur
 - **使用示例**
   
 ```C
-
+//获取控制器状态
+float voltage = 0;                                                            
+float current = 0;                                                            
+float temperature = 0;                                                        
+int sys_err = 0;                                                         
+ret = rm_get_controller_state(robot_handle, &voltage, &current, &temperature, &sys_err);    
 ```
 
 ## 设置机械臂电源`rm_set_arm_power()`
@@ -70,7 +75,8 @@ int rm_set_arm_power(rm_robot_handle * handle,int arm_power)
 - **使用示例**
   
 ```C
-
+//控制机械臂上电
+ret = rm_set_arm_power(robot_handle, 1);
 ```
 
 ## 读取机械臂电源状态`rm_get_arm_power_state()`
@@ -103,7 +109,9 @@ int rm_get_arm_power_state(rm_robot_handle * handle,int * power_state)
 - **使用示例**
   
 ```C
-
+//读取机械臂电源状态
+int power;
+ret = rm_get_arm_power_state(robot_handle,&power);   
 ```
 
 ## 读取控制器的累计运行时间`rm_get_system_runtime()`
@@ -140,7 +148,13 @@ int rm_get_system_runtime(rm_robot_handle * handle,int * day,int * hour,int * mi
 - **使用示例**
   
 ```C
-
+//获取控制器的累计运行时间
+char state = 0;
+int day;
+int hour;
+int min;
+int sec;
+ret = rm_get_system_runtime(robot_handle, &day, &hour, &min, &sec);    
 ```
 
 ## 清零控制器的累计运行时间`rm_clear_system_runtime()`
@@ -172,7 +186,8 @@ int rm_clear_system_runtime(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//清空控制器累计运行时间
+ret = rm_clear_system_runtime(robot_handle);
 ```
 
 ## 读取关节的累计转动角度`rm_get_joint_odom()`
@@ -190,7 +205,7 @@ int rm_get_joint_odom(rm_robot_handle * handle,float * joint_odom)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    `/`    |    机械臂句柄。    |
-|   joint_odom  |    `float`    |    各关节累计的转动角度。    |
+|   joint_odom  |    `float`    |    存放各关节累计的转动角度的数组。    |
 
 - **返回值:**
 
@@ -205,7 +220,9 @@ int rm_get_joint_odom(rm_robot_handle * handle,float * joint_odom)
 - **使用示例**
   
 ```C
-
+//获取关节累计转动角度
+float odom[7];
+ret = rm_get_joint_odom(robot_handle,odom);   
 ```
 
 ## 清零关节累计转动的角度`rm_clear_joint_odom()`
@@ -237,7 +254,8 @@ int rm_clear_joint_odom(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//清除关节累计转动角度
+ret = rm_clear_joint_odom(robot_handle);
 ```
 
 ## 配置有线网口IP地址`rm_set_NetIP()`
@@ -270,7 +288,8 @@ int rm_set_NetIP(rm_robot_handle * handle,const char * ip)
 - **使用示例**
   
 ```C
-
+//配置有线网卡IP地址
+ret = rm_set_NetIP(robot_handle,(char*)"192.168.1.19");
 ```
 
 ## 清除系统错误`rm_clear_system_err()`
@@ -302,7 +321,8 @@ int rm_clear_system_err(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//清除系统错误代码
+ret = rm_clear_system_err(robot_handle);
 ```
 
 ## 读取机械臂软件信息`rm_get_arm_software_info()`
@@ -335,7 +355,9 @@ int rm_get_arm_software_info(rm_robot_handle * handle,rm_arm_software_version_t 
 - **使用示例**
   
 ```C
-
+//读取机械臂软件信息
+rm_arm_software_version_t info;
+ret = rm_get_arm_software_info(robot_handle, &info);
 ```
 
 ## 查询控制器RS485模式`rm_get_controller_RS485_mode()`
@@ -370,7 +392,10 @@ int rm_get_controller_RS485_mode(rm_robot_handle * handle,int * mode,int * baudr
 - **使用示例**
   
 ```C
-
+int mode;
+int baudrate;
+int timeout;
+ret = rm_get_controller_RS485_mode(robot_handle, &mode, &baudrate, &timeout);
 ```
 
 ## 查询工具端RS485模式`rm_get_tool_RS485_mode()`
@@ -405,7 +430,10 @@ int rm_get_tool_RS485_mode(rm_robot_handle * handle,int * mode,int * baudrate,in
 - **使用示例**
   
 ```C
-
+int mode;
+int baudrate;
+int timeout;
+ret = rm_get_tool_RS485_mode(robot_handle, &mode, &baudrate, &timeout);
 ```
 
 ## 查询关节软件版本号`rm_get_joint_software_version()`
@@ -440,7 +468,9 @@ int rm_get_joint_software_version(rm_robot_handle * handle,int * version)
 - **使用示例**
   
 ```C
-
+//获取关节软件版本号
+float ver[6] = {0};
+ret = rm_get_joint_software_version(robot_handle,ver);
 ```
 
 ## 查询末端接口板软件版本号`rm_get_tool_software_version()`
@@ -475,5 +505,7 @@ int rm_get_tool_software_version(rm_robot_handle * handle,int * version)
 - **使用示例**
   
 ```C
-
+//查询末端接口板软件版本号    
+int ver = 0;                                                                       
+ret = rm_get_tool_software_version(robot_handle,&ver);
 ```

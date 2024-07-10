@@ -34,7 +34,8 @@ int rm_set_self_collision_enable(rm_robot_handle * handle,bool state)
 - **使用示例**
   
 ```C
-
+// 禁使能自碰撞安全检查
+ret = rm_set_self_collision_enable(robot_handle, false);
 ```
 
 ## 获取自碰撞安全检测使能状态`rm_get_self_collision_enable()`
@@ -67,5 +68,7 @@ int rm_get_self_collision_enable(rm_robot_handle * handle,bool * state)
 - **使用示例**
   
 ```C
-
+// 查询自碰撞安全检测使能状态
+bool state;
+ret = rm_get_self_collision_enable(robot_handle, &state);
 ```
