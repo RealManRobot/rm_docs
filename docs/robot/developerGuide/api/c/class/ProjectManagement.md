@@ -35,7 +35,16 @@ int rm_send_project(rm_robot_handle * handle,rm_send_project_t project,int * err
 - **使用示例**
   
 ```C
-
+// 将文件保存到控制器，保存id为10，并以20%的速度运行在线编程文件
+rm_send_project_t project;
+int errline;
+strcpy(project.project_path, "/home/work/realman.txt");
+project.plan_speed = 20;
+project.only_save = 0;
+project.save_id = 10;
+project.project_path_len = strlen(project.project_path);
+ret = rm_send_project(robot_handle, project, &errline);
+printf("send project result: %d, err_line: %d\n", ret, errline);
 ```
 
 ## 轨迹规划中改变速度比例系数`rm_set_plan_speed()`
@@ -68,7 +77,8 @@ int rm_set_plan_speed(rm_robot_handle * handle,int speed)
 - **使用示例**
   
 ```C
-
+int speed = 20;
+ret = rm_set_plan_speed(robot_handle,speed);
 ```
 
 ## 获取在线编程列表`rm_get_program_trajectory_list()`
@@ -104,7 +114,13 @@ int rm_get_program_trajectory_list(rm_robot_handle * handle,int page_num,int pag
 - **使用示例**
   
 ```C
-
+// 查询所有在线编程列表
+int page_num = 1;
+int page_size = 10;
+const char *vague_search;
+rm_program_trajectorys_t program_trajectorys;
+int result = rm_get_program_trajectory_list(robot_handle, page_num, page_size, vague_search, &program_trajectorys);
+printf("rm_get_program_trajectory_list result : %d\n", result);
 ```
 
 ## 开始运行指定编号轨迹`rm_set_program_id_run()`
@@ -142,7 +158,9 @@ int rm_set_program_id_run(rm_robot_handle * handle,int id,int speed,int block)
 - **使用示例**
   
 ```C
-
+// 以默认速度运行id为1的在线编程文件，阻塞运行（默认线程模式为多线程）
+ret = rm_set_program_id_run(robot_handle, 1, 0, 1);
+printf("rm_set_program_id_run result :%d\n", ret);
 ```
 
 ## 查询在线编程运行状态`rm_get_program_run_state()`
@@ -175,7 +193,8 @@ int rm_get_program_run_state(rm_robot_handle * handle,rm_program_run_state_t * r
 - **使用示例**
   
 ```C
-
+rm_program_run_state_t state;
+ret = rm_get_program_run_state(robot_handle, &state);
 ```
 
 ## 删除指定编号轨迹`rm_delete_program_trajectory()`
@@ -208,7 +227,8 @@ int rm_delete_program_trajectory(rm_robot_handle * handle,int id)
 - **使用示例**
   
 ```C
-
+ret = rm_delete_program_trajectory(robot_handle, 50);
+printf("delete program trajectory result : %d\n", ret);
 ```
 
 ## 修改指定编号的轨迹信息`rm_update_program_trajectory()`
@@ -243,7 +263,8 @@ int rm_update_program_trajectory(rm_robot_handle * handle,int id,int speed,const
 - **使用示例**
   
 ```C
-
+ret = rm_update_program_trajectory(robot_handle,1,50,"test");
+printf("update program trajectory result : %d\n", ret);
 ```
 
 ## 设置IO默认运行编号`rm_set_default_run_program()`
@@ -276,7 +297,9 @@ int rm_set_default_run_program(rm_robot_handle * handle,int id)
 - **使用示例**
   
 ```C
-
+// 设置 IO 默认运行的在线编程文件编号为1
+int ret = -1;
+ret = rm_set_default_run_program(robot_handle, 1);
 ```
 
 ## 获取IO默认运行编号`rm_get_default_run_program()`
@@ -309,7 +332,8 @@ int rm_get_default_run_program(rm_robot_handle * handle,int * id)
 - **使用示例**
   
 ```C
-
+int id;
+ret = rm_get_default_run_program(robot_handle, id);
 ```
 
 ## 新增全局路点`rm_add_global_waypoint()`
@@ -342,7 +366,25 @@ int rm_add_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 - **使用示例**
   
 ```C
-
+// 新增全局路点p3
+rm_waypoint_t waypoint;
+strcpy(waypoint.point_name,"p3");
+waypoint.joint[0] = 20;
+waypoint.joint[1] = 30;
+// 剩余关节角度均为 0
+for (int i = 2; i < 6; ++i) {
+    waypoint.joint[i] = 0.0;
+}
+// 设置位置姿态
+waypoint.pose.position.x = 0.01;
+waypoint.pose.position.y = 0.02;
+waypoint.pose.position.z = 0.03;
+waypoint.pose.euler.rx = 0.1;
+waypoint.pose.euler.ry = 0.2;
+waypoint.pose.euler.rz = 0.3;
+strcpy(waypoint.work_frame, "World");
+strcpy(waypoint.tool_frame, "Arm_Tip");
+ret = rm_add_global_waypoint(robot_handle, waypoint);
 ```
 
 ## 更新全局路点`rm_update_global_waypoint()`
@@ -375,7 +417,25 @@ int rm_update_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 - **使用示例**
   
 ```C
-
+// 更新全局路点p3
+rm_waypoint_t waypoint;
+strcpy(waypoint.point_name,"p3");
+waypoint.joint[0] = 20;
+waypoint.joint[1] = 30;
+// 剩余关节角度均为 10
+for (int i = 2; i < 6; ++i) {
+    waypoint.joint[i] = 0.0;
+}
+// 设置位置姿态
+waypoint.pose.position.x = 0.01;
+waypoint.pose.position.y = 0.02;
+waypoint.pose.position.z = 0.03;
+waypoint.pose.euler.rx = 0.1;
+waypoint.pose.euler.ry = 0.2;
+waypoint.pose.euler.rz = 0.3;
+strcpy(waypoint.work_frame, "World");
+strcpy(waypoint.tool_frame, "Arm_Tip");
+ret = rm_update_global_waypoint(robot_handle, waypoint);
 ```
 
 ## 删除全局路点`rm_delete_global_waypoint()`
@@ -408,7 +468,8 @@ int rm_delete_global_waypoint(rm_robot_handle * handle,const char * point_name)
 - **使用示例**
   
 ```C
-
+// 删除全局路点p3
+rm_delete_global_waypoint(robot_handle, "p3");
 ```
 
 ## 查询指定全局路点`rm_get_given_global_waypoint()`
@@ -442,7 +503,9 @@ int rm_get_given_global_waypoint(rm_robot_handle * handle,const char * name,rm_w
 - **使用示例**
   
 ```C
-
+// 获取全局路点p1参数
+rm_waypoint_t point;
+ret = rm_get_given_global_waypoint(robot_handle, "p3", &point);
 ```
 
 ## 查询多个全局路点`rm_get_global_waypoints_list()`
@@ -478,5 +541,10 @@ int rm_get_global_waypoints_list(rm_robot_handle * handle,int page_num,int page_
 - **使用示例**
   
 ```C
-
+rm_waypoint_list_t point_list;
+int page_num = 1;
+int page_size = 10;
+const char *vague_search;
+ret = rm_get_global_waypoints_list(robot_handle,page_num,page_size,vague_search,&point_list);
+printf("get global waypoints list result : %d\n", ret);
 ```

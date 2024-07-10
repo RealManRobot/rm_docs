@@ -36,7 +36,11 @@ int rm_set_install_pose(rm_robot_handle * handle,float x,float y,float z)
 - **使用示例**
   
 ```C
-
+//设置安装角度旋转角30°，俯仰角60°,方位角90°
+float x = 30;
+float y = 60;
+float z = 90;
+ret = rm_set_install_pose(robot_handle,x,y,z);
 ```
 
 ## 获取安装方式参数`rm_get_install_pose()`
@@ -71,5 +75,7 @@ int rm_get_install_pose(rm_robot_handle * handle,float * x,float * y,float * z)
 - **使用示例**
   
 ```C
-
+//获取安装角度
+float fx,fy,fz;
+ret = Get_Install_Pose(m_sockhand,&fx,&fy,&fz);
 ```

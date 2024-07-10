@@ -53,7 +53,8 @@ int rm_init(rm_thread_mode_e mode)
 - **使用示例**
   
 ```C
-
+// 初始化线程模式为三线程模式
+rm_init(RM_TRIPLE_MODE_E);
 ```
 
 ## 关闭所有连接，销毁所有线程`rm_destory()`
@@ -73,7 +74,7 @@ int rm_destory(void )
 - **使用示例**
   
 ```C
-
+rm_destory();
 ```
 
 ## 日志打印配置`rm_set_log_call_back()`
@@ -96,7 +97,7 @@ void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback
 - **使用示例**
   
 ```C
-// 打印error级别的日志信息
+// 获取当前时间信息
 char *get_cur_time()
 {
   static char s[32] = {0};
@@ -107,11 +108,14 @@ char *get_cur_time()
   strftime(s, 20, "%Y%m%d %H:%M:%S", ltime);
   return s;
 }
+
+// 日志回调函数
 void api_log(const char* message, va_list args) {
     printf("[%s]: ",get_cur_time());
     vfprintf(stdout, message, args);
 }
- 
+
+// 注册日志打印回调函数，打印error级别的日志信息
 rm_set_log_call_back(api_log, 3);
 ```
 
@@ -139,7 +143,16 @@ rm_robot_handle* rm_create_robot_arm(const char * ip, int port)
 - **使用示例**
   
 ```C
-
+rm_robot_handle *robot_handle = rm_create_robot_arm("192.168.1.18",8080);
+if(robot_handle->id == -1)
+{
+    rm_delete_robot_arm(robot_handle);
+    printf("arm connect err...\n");
+}
+else if(robot_handle != NULL)
+{
+    printf("connect success,arm id %d\n",robot_handle->id);
+}
 ```
 
 ## 根据句柄删除机械臂`rm_delete_robot_arm()`
@@ -168,7 +181,7 @@ int rm_delete_robot_arm(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+rm_delete_robot_arm(robot_handle);
 ```
 
 ## 机械臂仿真/真实模式设置`rm_set_arm_run_mode()`
@@ -201,7 +214,15 @@ int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 - **使用示例**
   
 ```C
-
+// 设置机械臂运行模式为仿真模式
+int ret = rm_set_arm_run_mode(robot_handle, 0);   
+if (ret == 0) {  
+    // 设置成功  
+    printf("Robot arm run mode set successfully.\n");  
+} else {  
+    // 设置失败
+    printf("Failed to set robot arm run mode. Error code: %d\n", ret);  
+}
 ```
 
 ## 机械臂仿真/真实模式获取`rm_get_arm_run_mode()`
@@ -234,7 +255,15 @@ int rm_get_arm_run_mode(rm_robot_handle * handle,int * mode)
 - **使用示例**
   
 ```C
-
+int mode;
+ret = rm_get_arm_run_mode(robot_handle, &mode);   
+if (ret == 0) {  
+    // 设置成功  
+    printf("Robot arm run mode get successfully. Current run mode: %d\n", mode);  
+} else {  
+    // 设置失败处理  
+    printf("Failed to get robot arm run mode. Error code: %d\n", ret);  
+}
 ```
 
 ## 获取机械臂基本信息`rm_get_robot_info()`
@@ -252,7 +281,7 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 |   参数    |   值    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   robot_info  |    用户自定义    |    机械臂基本信息结构体。    |
+|   robot_info  |    用户自定义    |    存放机械臂基本信息结构体。    |
 
 
 - **返回值:**
@@ -266,6 +295,10 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 - **使用示例**
   
 ```C
+rm_robot_info_t robot_info;
+ret = rm_get_robot_info(robot_handle, &robot_info);
+printf("Get robot info result : %d\n", ret);
+printf("Robot info : %d %d %d \n", robot_info.arm_dof,robot_info.arm_model,robot_info.force_type);
 
 ```
 
@@ -291,7 +324,24 @@ void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 - **使用示例**
   
 ```C
-
+// 机械臂事件回调函数
+void callback_event(rm_event_push_data_t data)
+{
+    printf("CallbackCallbackCallbackCallbackCallback\n");
+    switch (data.event_type)
+    {
+    case RM_CURRENT_TRAJECTORY_STATE_E:
+        printf("当前轨迹运行结果：%d,到位设备：%d，是否存在下一条轨迹：%d\n",data.trajectory_state,data.device, data.trajectory_connect);
+        break;
+    case RM_PROGRAM_RUN_FINISH_E:
+        printf("在线编程运行结束,结束ID:%d\n", data.program_id);
+        break;
+    default:
+        break;
+    }
+}
+// 机械臂事件回调函数注册
+rm_get_arm_event_call_back(callback_event);
 ```
 
 ## UDP机械臂状态主动上报信息回调注册`rm_realtime_arm_state_call_back()`
@@ -314,5 +364,52 @@ void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime
 - **使用示例**
   
 ```C
+// 机械臂实时状态回调函数
+void callback_rm_realtime_arm_joint_state(rm_realtime_arm_joint_state_t state) {  
+    // 检查数据解析错误码  
+    if (state.errCode == -3) {  
+        printf("Data parsing error: Data incomplete or format incorrect\n");  
+    }  
+  
+    // 打印机械臂的IP地址  
+    printf("Arm IP: %s\n", state.arm_ip);  
+  
+    // 检查机械臂错误码  
+    if (state.arm_err != 0) {  
+        printf("Arm Error Code: %u\n", state.arm_err);  
+    }  
+  
+    // 遍历并打印关节状态  
+    for (int i = 0; i < ARM_DOF; ++i) {  
+        printf("Joint %d Current: %.3f mA, Enabled: %s, Error Code: %u, Position: %.3f°, Temperature: %.3f°C, Voltage: %.3f V\n",  
+               i, state.joint_status.joint_current[i], state.joint_status.joint_en_flag[i] ? "true" : "false",  
+               state.joint_status.joint_err_code[i], state.joint_status.joint_position[i],  
+               state.joint_status.joint_temperature[i], state.joint_status.joint_voltage[i]);  
+    }  
+  
+    // 打印力传感器数据(需末端带有力传感器)  
+    printf("Force Sensor Raw: [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f] N/Nm\n",  
+        state.force_sensor.force[0], state.force_sensor.force[1], state.force_sensor.force[2],  
+        state.force_sensor.force[3], state.force_sensor.force[4], state.force_sensor.force[5]);  
+    printf("Zero Force: [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f] N/Nm\n",  
+        state.force_sensor.zero_force[0], state.force_sensor.zero_force[1], state.force_sensor.zero_force[2],  
+        state.force_sensor.zero_force[3], state.force_sensor.zero_force[4], state.force_sensor.zero_force[5]);  
+    printf("Force Coordinate System: %d\n", state.force_sensor.coordinate);  
 
+    // 打印系统错误码  
+    if (state.sys_err != 0) {  
+        printf("System Error Code: %u\n", state.sys_err);  
+    }  
+  
+    // 打印当前路点信息  
+    printf("Current Waypoint Position: (%.3f, %.3f, %.3f) m\n",  
+           state.waypoint.position.x, state.waypoint.position.y, state.waypoint.position.z);  
+    printf("Quaternion: (%.3f, %.3f, %.3f, %.3f)\n",  
+           state.waypoint.quaternion.w, state.waypoint.quaternion.x, state.waypoint.quaternion.y, state.waypoint.quaternion.z);  
+    printf("Euler Angles: (%.3f, %.3f, %.3f) rad\n",  
+           state.waypoint.euler.rx, state.waypoint.euler.ry, state.waypoint.euler.rz);  
+} 
+
+// 机械臂实时状态回调函数注册
+rm_realtime_arm_state_call_back(callback_rm_realtime_arm_joint_state);
 ```

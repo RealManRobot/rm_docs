@@ -34,7 +34,9 @@ int rm_set_arm_max_line_speed(rm_robot_handle * handle,float speed)
 - **使用示例**
   
 ```C
-
+//设置机械臂末端最大线速度0.1m/s
+float speed = 0.1;
+ret = rm_set_arm_max_line_speed(robot_handle,speed);
 ```
 
 ## 设置机械臂末端最大线加速度`rm_set_arm_max_line_acc()`
@@ -67,7 +69,9 @@ int rm_set_arm_max_line_acc(rm_robot_handle * handle,float acc)
 - **使用示例**
   
 ```C
-
+//设置机械臂末端最大线加速度2m/s²
+float acc = 2;
+ret = rm_set_arm_max_line_acc(robot_handle,acc);
 ```
 
 ## 设置机械臂末端最大角速度`rm_set_arm_max_angular_speed()`
@@ -100,7 +104,9 @@ int rm_set_arm_max_angular_speed(rm_robot_handle * handle,float speed)
 - **使用示例**
   
 ```C
-
+//设置机械臂末端最大角速度0.2rad/s
+float speed = 0.2;
+ret=rm_set_arm_max_angular_speed(robot_handle,speed);
 ```
 
 ## 设置机械臂末端最大角加速度`rm_set_arm_max_angular_acc()`
@@ -133,7 +139,9 @@ int rm_set_arm_max_angular_acc(rm_robot_handle * handle,float acc)
 - **使用示例**
   
 ```C
-
+//设置机械臂末端最大角加速度4rad/s²
+float acc = 4;
+ret = rm_set_arm_max_angular_acc(robot_handle,acc);
 ```
 
 ## 设置机械臂末端参数为默认值`rm_set_arm_tcp_init()`
@@ -165,7 +173,10 @@ int rm_set_arm_tcp_init(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//初始化机械臂参数，机械臂的末端参数回复到默认值。默认参数为：
+// 末端线速度：0.1m/s末端线加速度：0.5m/s²
+// 末端角速度：0.2rad/s末端角加速度：1rad/s²
+ret = rm_set_arm_tcp_init(robot_handle);
 ```
 
 ## 设置机械臂动力学碰撞检测等级`rm_set_collision_state()`
@@ -198,7 +209,9 @@ int rm_set_collision_state(rm_robot_handle * handle,int collision_stage)
 - **使用示例**
   
 ```C
-
+//设置机械臂碰撞防护等级为1
+int stage = 1;
+ret=rm_set_collision_state(robot_handle,stage,RM_BLOCK);
 ```
 
 ## 查询碰撞防护等级`rm_get_collision_stage()`
@@ -231,7 +244,9 @@ int rm_get_collision_stage(rm_robot_handle * handle,int * collision_stage)
 - **使用示例**
   
 ```C
-
+//查询机械臂动力学碰撞等级
+int stage = -1;
+ret = rm_get_collision_stage(robot_handle,&stage);
 ```
 
 ## 获取机械臂末端最大线速度`rm_get_arm_max_line_speed()`
@@ -264,7 +279,9 @@ int rm_get_arm_max_line_speed(rm_robot_handle * handle,float * speed)
 - **使用示例**
   
 ```C
-
+//获取机械臂末端线速度
+float speed = 0;                                                              
+ret = rm_get_arm_max_line_speed(robot_handle,&speed);
 ```
 
 ## 获取机械臂末端最大线加速度`rm_get_arm_max_line_acc()`
@@ -297,7 +314,9 @@ int rm_get_arm_max_line_acc(rm_robot_handle * handle,float * acc)
 - **使用示例**
   
 ```C
-
+//获取机械臂末端线加速度
+float acc = 0;                                                            
+ret = rm_get_arm_max_line_acc(robot_handle,&acc);      
 ```
 
 ## 获取机械臂末端最大角速度`rm_get_arm_max_angular_speed()`
@@ -330,7 +349,9 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 - **使用示例**
   
 ```C
-
+//获取机械臂末端角速度
+float speed = 0;
+ret = rm_get_arm_max_angular_speed(robot_handle,&speed);
 ```
 
 ## 获取机械臂末端最大角加速度`rm_get_arm_max_angular_acc()`
@@ -363,5 +384,7 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 - **使用示例**
   
 ```C
-
+//获取末端角加速度
+float acc = 0;
+ret = rm_get_arm_max_angular_speed(robot_handle,&acc);
 ```

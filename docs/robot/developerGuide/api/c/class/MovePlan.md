@@ -42,7 +42,14 @@ int rm_movej(rm_robot_handle * handle,const float * joint,int v,int r,int trajec
 - **使用示例**
   
 ```C
+float joint[6] = {0.0, 0.0, 0.0, 0.0, 90.0, 0.0};
 
+int v = 20; // 速度
+int r = 0;  // 交融半径
+int trajectory_connect = 0; // 立即规划并执行轨迹
+int block = 1; // 阻塞模式（默认线程模式为多线程）
+
+ret = rm_movej(robot_handle, joint, v, r, trajectory_connect, block);
 ```
 
 ## 笛卡尔空间直线运动`rm_movel()`
@@ -83,7 +90,16 @@ int rm_movel(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_
 - **使用示例**
   
 ```C
-
+int v = 20; // 速度
+int r = 0;  // 交融半径
+int trajectory_connect = 0; // 立即规划并执行轨迹
+int block = 1; // 阻塞模式（默认线程模式为多线程）
+rm_pose_t pose = {
+        .position = {0.5, 0.5, 0.5},
+        .euler = {0.0, 0.0, 0.0}
+};// 示例位姿
+ret = rm_movel(robot_handle, pose, v, r, trajectory_connect, block);
+printf("rm_movel result : %d\n", ret);
 ```
 
 ## 样条曲线运动`rm_moves()`
@@ -125,6 +141,40 @@ int rm_moves(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_
 - **使用示例**
   
 ```C
+int v = 20; // 速度
+int r = 0;  // 交融半径
+int trajectory_connect = 1; // 与下一条轨迹一起规划
+int block = 1; // 阻塞模式（默认线程模式为多线程）
+rm_pose_t pose1 = {
+        .position = {0.1, 0.2, 0.5},
+        .euler = {0.0, 0.0, 0.0}
+};// 示例位姿
+rm_pose_t pose2 = {
+        .position = {0.3, 0.5, 0.5},
+        .euler = {0.0, 0.0, 0.0}
+};// 示例位姿
+rm_pose_t pose3 = {
+        .position = {0.4, 0.5, 0.5},
+        .euler = {0.0, 0.0, 0.0}
+};// 示例位姿
+
+// 发出第一个点位
+result = rm_moves(robot_handle, pose1, v, r, trajectory_connect, block);
+if(result != 0) { 
+    printf("rm_moves result : %d\n", result);
+}
+
+// 发出第二个点位，轨迹连接标志设为1以进行样条曲线连接
+result = rm_moves(robot_handle, pose2, v, r, trajectory_connect, block);
+if(result != 0) { 
+    printf("rm_moves result : %d\n", result);
+}
+
+// 发出第三个点位，立即规划
+result = rm_moves(robot_handle, pose3, v, r, 0, block);
+if(result != 0) { 
+    printf("rm_moves result : %d\n", result);
+}
 
 ```
 
@@ -168,7 +218,21 @@ int rm_movec(rm_robot_handle * handle,rm_pose_t pose_via,rm_pose_t pose_to,int v
 - **使用示例**
   
 ```C
-
+rm_pose_t povia;                                                        
+povia.position.x=-0.300;                                                   
+povia.position.y=-0.03;                                                   
+povia.position.z=0.215;                                                    
+povia.euler.rx=3.0;                                                      
+povia.euler.ry=0.1;                                                      
+povia.euler.rz=0.1;                                                      
+rm_pose_t poto;                                                         
+poto.position.x=-0.4;                                                      
+poto.position.y=-0.030;                                                    
+poto.position.z=0.215;                                                     
+poto.rx=3.0;                                                       
+poto.ry=0.1;                                                       
+poto.rz=0.1;                                                       
+ret = rm_movec(robot_handle,povia,poto,20,0,0,0,1);
 ```
 
 ## 该函数用于关节空间运动到目标位姿`rm_movej_p()`
@@ -209,7 +273,17 @@ int rm_movej_p(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajector
 - **使用示例**
   
 ```C
-
+// 关节空间运动到目标位姿，阻塞模式（默认线程模式为多线程模式）
+// 目标位置：x：0.1m，y:0.2m，z：0.03m；姿态：rx:0.4rad，ry:0.5rad，rz:0.6rad；
+// 速度系数20%，不交融，立即规划执行
+rm_pose_t pose;                                                            
+pose.position.x=-0.1;                                                       
+pose.position.y=-0.2;                                                       
+pose.position.z=0.3;                                                        
+pose.euler.rx=0.4;                                                          
+pose.euler.ry=0.5;                                                          
+pose.euler.rz=0.6;                                                          
+ret = rm_movej_p(robot_handle,pose, 20,0,0,1);  
 ```
 
 ## 角度透传`rm_movej_canfd()`
@@ -246,7 +320,9 @@ int rm_movej_canfd(rm_robot_handle * handle,float * joint,bool follow,float expa
 - **使用示例**
   
 ```C
-
+//角度透传到CANFD，目标关节角度：[1°,0°,20°,30°,0°,20°]
+float joint[6] = { 1, 0, 20, 30, 0, 20};
+rm_movej_canfd(robot_handle,joint,true,0);
 ```
 
 ## 位姿透传`rm_movep_canfd()`
@@ -284,5 +360,16 @@ int rm_movep_canfd(rm_robot_handle * handle,rm_pose_t pose,bool follow)
 - **使用示例**
   
 ```C
-
+/*pose：目标位姿，位置精度：0.001mm，姿态精度：0.001rad
+目标位置：x：0m，y:0m，z：0.85049m
+目标姿态：rx:0rad，ry:0rad，rz:3.142rad
+目标位姿为当前工具在当前工作坐标系下的数值。*/
+rm_pose_t pose;                                                           
+pose.position.x=0;                                                           
+pose.position.y=0;                                                           
+pose.position.z=0.85049;                                                         
+pose.euler.rx=0;                                                           
+pose.euler.ry=0;
+pose.euler.rz=3142;                       
+rm_movep_canfd(robot_handle,pose,true);  
 ```

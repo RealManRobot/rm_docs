@@ -34,7 +34,8 @@ int rm_start_force_position_move(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//开启透传力位混合控制补偿模式
+ret = rm_start_force_position_move(robot_handle);
 ```
 
 ## 停止透传力位混合控制补偿模式`rm_stop_force_position_move()`
@@ -66,7 +67,7 @@ int rm_stop_force_position_move(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+ret = rm_stop_force_position_move(robot_handle);
 ```
 
 ## 透传力位混合补偿-角度方式`rm_force_position_move_joint()`
@@ -104,7 +105,14 @@ int rm_force_position_move_joint(rm_robot_handle * handle,const float * joint,in
 - **使用示例**
   
 ```C
-
+//透传力位混合补偿--关节角度
+const float joint[6] = {1,2,3,4,5,6};
+int sensor = 0;
+int mode = 0;
+int dir = 2;
+float force = 5;
+bool follow = true;
+ret=Force_Position_Move_Joint(robot_handle,joint,sensor,mode,dir,force,follow);
 ```
 
 ## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`
@@ -142,5 +150,11 @@ int rm_force_position_move_pose(rm_robot_handle * handle,rm_pose_t pose,int sens
 - **使用示例**
   
 ```C
-
+//透传力位混合补偿--位姿
+int sensor = 0;
+int mode = 0;
+int dir = 2;
+float force = 15;
+bool follow = true;
+ret=rm_force_position_move_pose(robot_handle,pose,sensor,mode,dir,force,follow);
 ```

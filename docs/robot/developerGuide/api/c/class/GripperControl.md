@@ -37,7 +37,10 @@ int rm_set_gripper_route(rm_robot_handle * handle,int min_limit,int max_limit)
 - **使用示例**
   
 ```C
-
+//设置手爪开口最小值70，最大值500
+int min_limit = 70;
+int max_limit = 500;
+ret=rm_set_gripper_route(robot_handle,min_limit,max_limit);
 ```
 
 ## 松开手爪`rm_set_gripper_release()`
@@ -75,7 +78,9 @@ int rm_set_gripper_release(rm_robot_handle * handle,int speed,bool block,int tim
 - **使用示例**
   
 ```C
-
+//手爪以500的速度松开，10s无返回则超时
+int speed =500;
+ret = rm_set_gripper_release(robot_handle, speed, true, 10);
 ```
 
 ## 手爪力控夹取`rm_set_gripper_pick()`
@@ -114,7 +119,10 @@ int rm_set_gripper_pick(rm_robot_handle * handle,int speed,int force,bool block,
 - **使用示例**
   
 ```C
-
+//设置夹取速度为500，力矩阈值200,10s无返回则超时
+int speed = 500;
+int force = 200;
+ret = rm_set_gripper_pick(robot_handle,speed,force,true,10);
 ```
 
 ## 手爪持续力控夹取`rm_set_gripper_pick_on()`
@@ -151,7 +159,10 @@ int rm_set_gripper_pick_on(rm_robot_handle * handle,int speed,int force,bool blo
 - **使用示例**
   
 ```C
-
+//设置夹取速度500，夹取力矩阈值200，10s无返回则超时。
+int speed = 500;
+int force = 200;
+ret =  rm_set_gripper_pick_on(robot_handle,speed,force,true,10);
 ```
 
 ## 设置手爪达到指定位置`rm_set_gripper_position()`
@@ -189,7 +200,9 @@ int rm_set_gripper_position(rm_robot_handle * handle,int position,bool block,int
 - **使用示例**
   
 ```C
-
+//控制手爪到达500开口度，10s无返回则超时
+int position = 500;
+ret = rm_set_gripper_position(robot_handle,position,true,10);
 ```
 
 ## 查询夹爪状态`rm_get_gripper_state()`
@@ -224,5 +237,7 @@ int rm_get_gripper_state(rm_robot_handle * handle,rm_gripper_state_t * state)
 - **使用示例**
 
 ```C
-
+//获取夹爪状态
+rm_gripper_state_t state;
+ret = rm_get_gripper_state(handle, &state);
 ```

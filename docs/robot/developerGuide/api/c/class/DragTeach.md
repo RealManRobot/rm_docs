@@ -34,7 +34,9 @@ int rm_start_drag_teach(rm_robot_handle * handle,int trajectory_record)
 - **使用示例**
   
 ```C
-
+//控制机械臂进入拖动示教模式，拖动示教时记录轨迹
+int trajectory_record = 1;
+ret = rm_start_drag_teach(robot_handle,trajectory_record);
 ```
 
 ## 拖动示教结束`rm_stop_drag_teach()`
@@ -66,7 +68,8 @@ int rm_stop_drag_teach(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//退出拖动示教模式
+ret = rm_stop_drag_teach(robot_handle);
 ```
 
 ## 开始复合模式拖动示教`rm_start_multi_drag_teach()`
@@ -108,7 +111,10 @@ int rm_start_multi_drag_teach(rm_robot_handle * handle,int mode,int singular_wal
 - **使用示例**
   
 ```C
-
+//使用末端六维力，只动位置，开启拖动奇异墙
+int mode = 1;
+int singular_wall = 1;
+ret = rm_start_multi_drag_teach(robot_handle,mode,singular_wall);
 ```
 
 ## 运动到轨迹起点`rm_drag_trajectory_origin()`
@@ -147,7 +153,8 @@ int rm_drag_trajectory_origin(rm_robot_handle * handle,int block)
 - **使用示例**
   
 ```C
-
+// 默认当前线程模式为多线程，阻塞运动到轨迹起点
+ret = rm_drag_trajectory_origin(robot_handle,1);  
 ```
 
 ## 轨迹复现开始`rm_run_drag_trajectory()`
@@ -185,7 +192,9 @@ int rm_run_drag_trajectory(rm_robot_handle * handle,int block)
 - **使用示例**
   
 ```C
-
+// 默认当前线程模式为多线程，阻塞复现拖动示教轨迹
+int block = 1;
+ret = rm_run_drag_trajectory(robot_handle,block);
 ```
 
 ## 暂停轨迹复现`rm_pause_drag_trajectory()`
@@ -219,7 +228,8 @@ int rm_pause_drag_trajectory(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//轨迹复现暂停
+ret = rm_pause_drag_trajectory(robot_handle);
 ```
 
 ## 继续轨迹复现`rm_continue_drag_trajectory()`
@@ -253,7 +263,8 @@ int rm_continue_drag_trajectory(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//轨迹复现继续
+ret = rm_continue_drag_trajectory(robot_handle);
 ```
 
 ## 停止轨迹复现`rm_stop_drag_trajectory()`
@@ -287,7 +298,8 @@ int rm_stop_drag_trajectory(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//轨迹复现停止
+ret = rm_stop_drag_trajectory(robot_handle);
 ```
 
 ## 保存拖动示教轨迹`rm_save_trajectory()`
@@ -305,7 +317,7 @@ int rm_save_trajectory(rm_robot_handle * handle,char * name,int * num)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    `/`    |    机械臂句柄。    |
-|   name  |    `char`    |    轨迹要保存的文件路径及名称，长度不超过300个字符，例: c:/rm_test.txt。    |
+|   name  |    `char`    |    轨迹要保存的文件路径及名称，长度不超过300个字符，例: d:/rm_test.txt。    |
 |   num  |    `int`    |    轨迹点数。    |
 
 - **返回值:**
@@ -324,7 +336,11 @@ int rm_save_trajectory(rm_robot_handle * handle,char * name,int * num)
 - **使用示例**
   
 ```C
-
+// 保存拖动示教点位到指定路径
+char *name = "/home/realman/work/example.txt";
+int num = -1;
+ret = rm_save_trajectory(robot_handle, name, &num);
+printf("rm_save_trajectory result :%d, num:%d\n", ret, num);
 ```
 
 ## 力位混合控制`rm_set_force_position()`
@@ -362,7 +378,12 @@ int rm_set_force_position(rm_robot_handle * handle,int sensor,int mode,int direc
 - **使用示例**
   
 ```C
-
+//设置六维力基坐标系Z轴力控，5N力大小     
+int sensor = 1;
+int mode = 0;
+int direction = 2;
+float N = 5;                          
+ret = rm_set_force_position(robot_handle, sensor, mode, direction, N);
 ```
 
 ## 结束力位混合控制`rm_stop_force_position()`
@@ -394,5 +415,6 @@ int rm_stop_force_position(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//结束力位混合控制
+ret = rm_stop_force_position(robot_handle);
 ```

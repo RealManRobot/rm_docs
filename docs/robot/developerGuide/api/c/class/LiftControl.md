@@ -34,7 +34,9 @@ int rm_set_lift_speed(rm_robot_handle * handle,int speed)
 - **使用示例**
   
 ```C
-
+//设置移动平台移动速度50%，向下运动
+int speed = -50;
+ret = rm_set_lift_speed(robot_handle,speed);
 ```
 
 ## 升降机构位置闭环控制`rm_set_lift_height()`
@@ -73,7 +75,10 @@ int rm_set_lift_height(rm_robot_handle * handle,int speed,int height,int block)
 - **使用示例**
   
 ```C
-
+//设置目标高度100mm，升降速度50%，阻塞运动，默认线程模式为多线程模式
+int height = 100;
+int speed = 50;
+ret = rm_set_lift_height(robot_handle,height,speed,1);
 ```
 
 ## 获取升降机构状态`rm_get_lift_state()`
@@ -106,5 +111,7 @@ int rm_get_lift_state(rm_robot_handle * handle,rm_expand_state_t * state)
 - **使用示例**
   
 ```C
-
+// 查询升降机状态
+rm_expand_state_t state;
+int result = rm_get_lift_state(robot_handle, &state);
 ```

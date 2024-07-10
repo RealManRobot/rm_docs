@@ -41,7 +41,8 @@ int rm_set_joint_step(rm_robot_handle * handle,int joint_num,float step,int v,in
 - **使用示例**
   
 ```C
-
+// 默认当前线程模式为多线程，使用阻塞模式，以50%的速度使关节1正向运动10°
+rm_set_joint_step(robot_handle, 1, 10, 50, 1); 
 ```
 
 ## 位置步进`rm_set_pos_step()`
@@ -86,7 +87,8 @@ int rm_set_pos_step(rm_robot_handle * handle,rm_pos_teach_type_e type,float step
 - **使用示例**
   
 ```C
-
+// 默认当前线程模式为多线程，阻塞模式，沿当前工作坐标系X轴正方向步进0.05m
+rm_set_pos_step(robot_handle, RM_X_DIR_E, 0.05f, 50, 1);  
 ```
 
 ## 姿态步进`rm_set_ort_step()`
@@ -131,7 +133,8 @@ int rm_set_ort_step(rm_robot_handle * handle,rm_ort_teach_type_e type,float step
 - **使用示例**
   
 ```C
-
+// 默认当前线程模式为多线程，阻塞模式，绕 x 轴负方向旋转 0.5rad，速度 20%
+rm_set_ort_step(robot_handle, RM_RX_ROTATE_E, -0.5f, 20, 1); 
 ```
 
 ## 切换示教运动坐标系`rm_set_teach_frame()`
@@ -165,7 +168,12 @@ int rm_set_teach_frame(rm_robot_handle * handle,int frame_type)
 - **使用示例**
   
 ```C
-
+// 设置示教坐标系为工具坐标系  
+if (rm_set_teach_frame(robot_handle, 1) == 0) {  
+    printf("Teach Frame set successfully\n");
+} else {  
+    printf("Failed to get teach frame\n");  
+} 
 ```
 
 ## 获取示教参考坐标系`rm_get_teach_frame()`
@@ -199,7 +207,13 @@ int rm_get_teach_frame(rm_robot_handle * handle,int frame_type)
 - **使用示例**
   
 ```C
-
+// 获取当前示教坐标系 
+int frame_type = -1;  
+if (rm_get_teach_frame(&handle, &frame_type) == 0) {  
+    printf("Current teach frame: %d\n", frame_type);
+} else {  
+    printf("Failed to get teach frame\n");  
+} 
 ```
 
 ## 关节示教`rm_set_joint_teach()`
@@ -234,7 +248,8 @@ int rm_set_joint_teach(rm_robot_handle * handle,int joint_num,int direction,int 
 - **使用示例**
   
 ```C
-
+// 关节1以50%的速度正向示教
+rm_set_joint_teach(robot_handle, 1, 1, 50);
 ```
 
 ## 笛卡尔空间位置示教`rm_set_pos_teach()`
@@ -273,7 +288,8 @@ int rm_set_pos_teach(rm_robot_handle * handle,rm_pos_teach_type_e type,int direc
 - **使用示例**
   
 ```C
-
+// 沿当前工作坐标系X轴正方向示教，速度50%
+rm_set_pos_teach(robot_handle, RM_X_DIR_E, 1, 50);
 ```
 
 ## 笛卡尔空间姿态示教`rm_set_ort_teach()`
@@ -313,7 +329,8 @@ int rm_set_ort_teach(rm_robot_handle * handle,rm_ort_teach_type_e type,int direc
 - **使用示例**
   
 ```C
-
+// 阻塞模式姿态示教，绕x 轴负方向旋转,速度 20%
+rm_set_ort_teach(robot_handle, RM_RX_ROTATE_E, 0, 20);
 ```
 
 ## 示教停止`rm_set_stop_teach()`
@@ -345,5 +362,10 @@ int rm_set_stop_teach(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+// 停止示教  
+if (rm_set_stop_teach(robot_handle) == 0) {  
+    printf("Teach stop successfully\n");
+} else {  
+    printf("Failed to stop teach\n");  
+} 
 ```
