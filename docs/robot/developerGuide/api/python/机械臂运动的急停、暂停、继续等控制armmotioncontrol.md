@@ -1,0 +1,192 @@
+---
+title: "机械臂运动的急停、暂停、继续等控制ArmMotionControl"
+tags: ""
+---
+
+# 机械臂运动的急停、暂停、继续等控制`ArmMotionControl`
+
+
+可用于机械臂运动的急停、暂停、继续等控制，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是机械臂运动的急停、暂停、继续等控制`ArmMotionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+
+---
+## 轨迹缓停，在当前正在运行的轨迹上停止`rm_set_arm_slow_stop()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_slow_stop (self)
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 轨迹急停，关节最快速度停止，轨迹不可恢复`rm_set_arm_stop()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_stop (self)
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 轨迹暂停，暂停在规划轨迹上，轨迹可恢复`rm_set_arm_pause()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_pause (self)
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 轨迹暂停后，继续当前轨迹运动`rm_set_arm_continue()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_continue	(self)	
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 清除当前轨迹`rm_set_delete_current_trajectory()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_delete_current_trajectory (self)
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 清楚所有轨迹`rm_set_arm_delete_trajectory()`
+
+- **方法原型：**
+```python
+int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_delete_trajectory (self)
+```
+
+- **返回值:** </br>
+函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用使用示例**
+  
+```python
+
+```
+
+## 获取当前正在规划的轨迹信息`rm_get_arm_current_trajectory()`
+
+- **方法原型：**
+```python
+dict[str, any] Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_get_arm_current_trajectory (self)
+```
+
+- **返回值:** </br>
+ dict[str,any]: 包含以下键值的字典
+ 
+1. 'return_code' (int): 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+2. 返回的规划类型
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   trajectory_type  |    `rm_arm_current_trajectory_e`   |    返回的规划类型    |
+
+
+3. 规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   data  |    `list[float]`   |    无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿    |
+
+- **使用使用示例**
+  
+```python
+
+```
