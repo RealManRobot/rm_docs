@@ -25,7 +25,9 @@ void rm_algo_init_sys_data(rm_robot_arm_model_e Mode,rm_force_type_e Type)
 - **使用示例**
   
 ```C
-
+rm_robot_arm_model_e Mode = RM_MODEL_RM_75_E;
+rm_force_type_e Type = RM_MODEL_RM_SF_E;
+rm_algo_init_sys_data(Mode, Type);
 ```
 
 ## 设置安装角度`rm_algo_set_angle()`
@@ -47,7 +49,7 @@ void rm_algo_set_angle(float x,float y,float z)
 - **使用示例**
   
 ```C
-
+rm_algo_set_angle(0, 90, 0)
 ```
 
 ## 获取安装角度`rm_algo_get_angle()`
@@ -69,7 +71,8 @@ void rm_algo_get_angle(float x,float y,float z)
 - **使用示例**
   
 ```C
-
+float x,y,z;
+rm_algo_get_angle(&x,&y,&z);
 ```
 
 ## 获取安装角度`rm_algo_set_workframe()`
@@ -91,7 +94,15 @@ void rm_algo_set_workframe(const rm_frame_t *const coord_work)
 - **使用示例**
   
 ```C
+rm_frame_t coord_work;
+coord_work.pose.position.x = (float)0.1;
+coord_work.pose.position.y = (float)0.2;
+coord_work.pose.position.z = (float)0.3;
+coord_work.pose.euler.rx = (float)0.1;
+coord_work.pose.euler.ry = (float)0.2;
+coord_work.pose.euler.rz = (float)0.3;
 
+rm_algo_set_workframe(&coord_work);
 ```
 
 ## 获取当前工作坐标系`rm_algo_get_curr_workframe()`
@@ -113,7 +124,8 @@ void rm_algo_get_curr_workframe(rm_frame_t * coord_work)
 - **使用示例**
   
 ```C
-
+rm_frame_t coord_work;
+rm_algo_get_curr_workframe(&coord_work);
 ```
 
 ## 设置工具坐标系`rm_algo_set_toolframe()`
@@ -135,6 +147,18 @@ void rm_algo_set_toolframe(const rm_frame_t *const coord_tool)
 - **使用示例**
   
 ```C
+rm_frame_t coord_tool;
+coord_tool.pose.position.x = (float)0.1;  
+coord_tool.pose.position.y = (float)0.2;
+coord_tool.pose.position.z = (float)0.3;
+coord_tool.pose.euler.rx = (float)0.1;
+coord_tool.pose.euler.ry = (float)0.2;
+coord_tool.pose.euler.rz = (float)0.3;
+coord_tool.payload = (float)1.5;
+coord_tool.x = (float)0.1;
+coord_tool.y = (float)0.2;
+coord_tool.z = (float)0.3;
+rm_algo_set_toolframe(&coord_tool);
 
 ```
 
@@ -157,7 +181,8 @@ void rm_algo_get_curr_toolframe(rm_frame_t * coord_tool)
 - **使用示例**
   
 ```C
-
+rm_frame_t coord_tool;
+rm_algo_get_curr_toolframe(&coord_tool);
 ```
 
 ## 设置算法关节最大限位`rm_algo_set_joint_max_limit()`
@@ -177,7 +202,8 @@ void rm_algo_set_joint_max_limit(const float *const joint_limit)
 - **使用示例**
   
 ```C
-
+float joint_limit[6] = {150,100,90,120,120,300};
+rm_algo_set_joint_max_limit(joint_limit);
 ```
 
 ## 获取算法关节最大限位`rm_algo_get_joint_max_limit()`
@@ -197,7 +223,8 @@ void rm_algo_get_joint_max_limit(float * joint_limit)
 - **使用示例**
   
 ```C
-
+float after_joint_limit[7];
+rm_algo_get_joint_max_limit(after_joint_limit);
 ```
 
 ## 设置算法关节最小限位`rm_algo_set_joint_min_limit()`
@@ -217,7 +244,8 @@ void rm_algo_set_joint_min_limit(const float *const joint_limit)
 - **使用示例**
   
 ```C
-
+float joint_limit[6] = {150,100,90,120,120,300};
+rm_algo_set_joint_min_limit(joint_limit);
 ```
 
 ## 获取算法关节最小限位`rm_algo_get_joint_min_limit()`
@@ -237,7 +265,8 @@ void rm_algo_get_joint_min_limit(const float *const joint_limit)
 - **使用示例**
   
 ```C
-
+float after_joint_limit[7];
+rm_algo_get_joint_min_limit(after_joint_limit);
 ```
 
 ## 设置算法关节最大速度`rm_algo_set_joint_max_speed()`
@@ -257,7 +286,8 @@ void rm_algo_set_joint_max_speed(const float *const joint_slim_max)
 - **使用示例**
   
 ```C
-
+float joint_slim_max[6] = {20,20,20,20,20,20};
+rm_algo_set_joint_max_speed(joint_slim_max);
 ```
 
 ## 获取算法关节最大速度`rm_algo_get_joint_max_speed()`
@@ -277,7 +307,8 @@ void rm_algo_get_joint_max_speed(float * joint_slim_max)
 - **使用示例**
   
 ```C
-
+float after_joint_slimit_max[6];
+rm_algo_get_joint_max_speed(after_joint_slimit_max);
 ```
 
 ## 设置算法关节最大加速度`rm_algo_set_joint_max_acc()`
@@ -297,7 +328,8 @@ void rm_algo_set_joint_max_acc(const float *const joint_alim_max)
 - **使用示例**
   
 ```C
-
+float joint_alimit[6] = {20,20,20,20,20,20};
+rm_algo_set_joint_max_acc(joint_alimit);
 ```
 
 ## 获取算法关节最大加速度`rm_algo_get_joint_max_acc()`
@@ -317,7 +349,8 @@ void rm_algo_get_joint_max_acc(float * joint_alim_max)
 - **使用示例**
   
 ```C
-
+float after_joint_alimit[6];
+rm_algo_get_joint_max_acc(after_joint_alimit);
 ```
 
 ## 逆解函数`rm_algo_inverse_kinematics()`
@@ -354,7 +387,26 @@ int rm_algo_inverse_kinematics(rm_robot_handle * handle,rm_inverse_kinematics_pa
 - **使用示例**
   
 ```C
-
+rm_inverse_kinematics_params_t params;
+float joint_angles[6] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+float q_in[6] = {0.5f, 1.0f, 1.5f, 2.0f, 2.5f, 3.0f};
+params.q_in = q_in;
+params.q_pose.position.x = (float)0.3;
+params.q_pose.position.y = (float)0.0;
+params.q_pose.position.z = (float)0.3;
+params.q_pose.quaternion.w = (float)0.0;
+params.q_pose.quaternion.x = (float)0.0;
+params.q_pose.quaternion.y = (float)0.0;
+params.q_pose.quaternion.z = (float)0.0;
+params.q_pose.euler.rx = (float)3.14;
+params.q_pose.euler.ry = (float)0.0;
+params.q_pose.euler.rz = (float)0.0;
+params.flag = 1;
+int result = wrapper.rm_algo_inverse_kinematics(handle, params, joint_angles);
+printf("Inverse kinematics calculation: %d\n", result);
+if (result == 0) {
+    printf("Joint angles: [%.2f, %.2f, %.2f, %.2f, %.2f, %.2f]\n", joint_angles[0], joint_angles[1], joint_angles[2], joint_angles[3], joint_angles[4], joint_angles[5]);
+}
 ```
 
 ## 正解算法`rm_algo_forward_kinematics()`
@@ -385,27 +437,14 @@ rm_pose_t rm_algo_forward_kinematics(rm_robot_handle * handle,const float *const
 - **使用示例**
   
 ```C
-rm_pose_t pose;
-pose.position.x = 0.186350;
-pose.position.y = 0.062099;
-pose.position.z = 0.2;
-pose.euler.rx = 3.141;
-pose.euler.ry = 0;
-pose.euler.rz = 1.569;
-float q_in_values[] = {0, 0, -90, 0, -90, 0};
-float q_out[6]; 
-rm_inverse_kinematics_params_t params = {
-    .q_in = *q_in_values,
-    .q_pose = &pose,
-    .flag = 1,
-};
-// 不连接机械臂调用正逆解
-rm_algo_init_sys_data(RM_MODEL_RM_65_E, RM_MODEL_RM_B_E);
-pose = rm_algo_forward_kinematics(NULL, q_out);
-printf("rm_algo_forward_kinematics pose:[%.2f] [%.2f] [%.2f]\n",pose.position.x,pose.position.y,pose.position.z);
-pose.position.x += 0.01;
-int ret = rm_algo_inverse_kinematics(NULL, &params, q_out);
-printf("algo_inverse_kinematics:[%d],[%.2f] [%.2f][%.2f] [%.2f][%.2f] [%.2f]\n",ret,q_out[0],q_out[1],q_out[2],q_out[3],q_out[4],q_out[5]);
+float joint_angles[6] = {0.5f, 1.0f, 1.5f, 2.0f, 2.5f, 3.0f};
+rm_pose_t pose = rm_algo_forward_kinematics(handle, joint_angles);
+printf("Joint angles: [%.2f, %.2f, %.2f, %.2f, %.2f, %.2f]\n", joint_angles[0], joint_angles[1], 
+        joint_angles[2], joint_angles[3], joint_angles[4], joint_angles[5]);
+printf("End effector pose: Position(%.2f, %.2f, %.2f), Quaternion(%.2f, %.2f, %.2f, %.2f), Euler angles(%.2f, %.2f, %.2f)\n",
+        pose.position.x, pose.position.y, pose.position.z,
+        pose.quaternion.w, pose.quaternion.x, pose.quaternion.y, pose.quaternion.z,
+        pose.euler.rx, pose.euler.ry, pose.euler.rz);
 ```
 
 ## 欧拉角转四元数`rm_algo_euler2quaternion()`
@@ -431,7 +470,10 @@ rm_quat_t rm_algo_euler2quaternion(rm_euler_t eu)
 - **使用示例**
   
 ```C
-
+rm_euler_t euler = {(float)0.1, (float)0.2, (float)0.3};
+rm_quat_t quat = rm_algo_euler2quaternion(euler);
+printf("Euler angles: (rx: %.2f, ry: %.2f, rz: %.2f)\n", euler.rx, euler.ry, euler.rz);
+printf("Quaternion: (w: %.2f, x: %.2f, y: %.2f, z: %.2f)\n", quat.w, quat.x, quat.y, quat.z);
 ```
 
 ## 四元数转欧拉角`rm_algo_quaternion2euler()`
@@ -457,7 +499,10 @@ rm_euler_t rm_algo_quaternion2euler(rm_quat_t qua)
 - **使用示例**
   
 ```C
-
+rm_quat_t quat = {(float)1.0, (float)0.0, (float)0.0, (float)0.0};
+rm_euler_t euler = rm_algo_quaternion2euler(quat);
+printf("Quaternion: (w: %.2f, x: %.2f, y: %.2f, z: %.2f)\n", quat.w, quat.x, quat.y, quat.z);
+printf("Euler angles: (rx: %.2f, ry: %.2f, rz: %.2f)\n", euler.rx, euler.ry, euler.rz);
 ```
 
 ## 欧拉角转旋转矩阵`rm_algo_euler2matrix()`
@@ -483,7 +528,13 @@ rm_matrix_t rm_algo_euler2matrix(rm_euler_t state)
 - **使用示例**
   
 ```C
-
+//欧拉角转旋转矩阵
+rm_euler_t eu;
+rm_matrix_t matrix;
+eu.rx = -2.85993f;
+eu.ry = -0.447394f;
+eu.rz = -1.81038f;
+matrix = rm_algo_euler2matrix(eu);
 ```
 
 ## 位姿转旋转矩阵`rm_algo_pos2matrix()`
@@ -509,7 +560,15 @@ rm_matrix_t rm_algo_pos2matrix(rm_pose_t state)
 - **使用示例**
   
 ```C
-
+rm_pose_t pose;
+rm_matrix_t matrix;
+pose.position.x = -0.177347f;
+pose.position.y = 0.438112f;
+pose.position.z = -0.215102f;
+pose.euler.rx = 2.09078f;
+pose.euler.ry = 0.942362f;
+pose.euler.rz = 2.39144f;
+matrix = rm_algo_pos2matrix(pose);
 ```
 
 ## 旋转矩阵转位姿`rm_algo_matrix2pos()`
@@ -535,7 +594,16 @@ rm_pose_t rm_algo_matrix2pos(rm_matrix_t matrix)
 - **使用示例**
   
 ```C
-
+rm_matrix_t matrix;
+matrix.irow = 4;
+matrix.iline = 4;
+float point[4][4] = {{1.0, 0.0, 0.0, 10.0},{0.0, 1.0, 0.0, 20.0},{0.0, 0.0, 1.0, 30.0},{0.0, 0.0, 0.0, 1.0}};
+for(int i = 0; i < 4; i++){
+    for(int j = 0; j < 4; j++){
+        matrix.data[i][j] = point[i][j];
+    }
+ };
+rm_pose_t pose = rm_algo_matrix2pos(matrix);
 ```
 
 ## 基坐标系转工作坐标系`rm_algo_base2workframe()`
@@ -562,7 +630,22 @@ rm_pose_t rm_algo_base2workframe(rm_matrix_t matrix,rm_pose_t state)
 - **使用示例**
   
 ```C
-
+rm_matrix_t matrix = {
+    4, 4,
+    {
+        {1.0, 0.0, 0.0, 0.1},
+        {0.0, 1.0, 0.0, 0.2},
+        {0.0, 0.0, 1.0, 0.3},
+        {0.0, 0.0, 0.0, 1.0}
+    }
+};
+rm_pose_t state = {
+    {0.5, 0.5, 0.5},  // 位置
+    .euler = {0.1, 0.2, 0.3}  // 欧拉角
+};
+rm_matrix_t matrix = Algo_Pos2Matrix(pose1);
+pose = rm_algo_base2workframe(matrix,pose1);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
 ## 工作坐标系转基坐标系`rm_algo_workframe2base()`
@@ -589,7 +672,22 @@ rm_pose_t rm_algo_workframe2base(rm_matrix_t matrix,rm_pose_t state)
 - **使用示例**
   
 ```C
+rm_matrix_t matrix = {
+    4, 4,
+    {
+        {1.0, 0.0, 0.0, 0.1},
+        {0.0, 1.0, 0.0, 0.2},
+        {0.0, 0.0, 1.0, 0.3},
+        {0.0, 0.0, 0.0, 1.0}
+    }
+};
+rm_pose_t state = {
+    {0.5, 0.5, 0.5},  // 位置
+    .euler = {0.1, 0.2, 0.3}  // 欧拉角
+};
 
+pose = rm_algo_workframe2base(matrix,state);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
 ## 计算环绕运动位姿计算环绕运动位姿`rm_algo_RotateMove()`
@@ -619,7 +717,19 @@ rm_pose_t rm_algo_RotateMove(rm_robot_handle * handle,const float *const curr_jo
 - **使用示例**
   
 ```C
-
+// 计算在frame坐标系下环绕X轴旋转10度后的位姿
+float joint[6] = {0,0,90,0,90,0};
+rm_pose_t frame;
+frame.position.x=0;
+frame.position.y=0;
+frame.position.z=0;
+frame.euler.rx = 0;
+frame.euler.ry = 0;
+frame.euler.rz = 0;
+rm_pose_t pose;
+float rotateAngle = 10;
+pose = Algo_RotateMove(joint,1,rotateAngle ,frame);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
 ## 计算沿工具坐标系运动位姿`rm_algo_cartesian_tool()`
@@ -649,7 +759,9 @@ rm_pose_t rm_algo_cartesian_tool(rm_robot_handle * handle,const float *const cur
 - **使用示例**
   
 ```C
-
+float joint[6] = {20,20,70,30,90,120};
+rm_pose_t pose = rm_algo_cartesian_tool(joint,0.01f,0.01f,0.01f);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
 ## 末端位姿转成工具位姿`rm_algo_end2tool()`
@@ -676,7 +788,16 @@ rm_pose_t rm_algo_end2tool(rm_robot_handle * handle,rm_pose_t eu_end)
 - **使用示例**
   
 ```C
-
+rm_pose_t pose;
+rm_pose_t eu_end;
+eu_end.position.x = -0.259256f;
+eu_end.position.y = -0.170727f;
+eu_end.position.z = 0.35621f;
+eu_end.euler.rx = -2.85993f;
+eu_end.euler.ry = -0.447394f;
+eu_end.euler.rz = -1.81038f;
+pose = rm_algo_end2tool(eu_end);
+printf("Pose:  %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
 ## 工具位姿转末端位姿`rm_algo_tool2end()`
@@ -703,5 +824,14 @@ rm_pose_t rm_algo_tool2end(rm_robot_handle * handle,rm_pose_t eu_tool)
 - **使用示例**
   
 ```C
-
+rm_pose_t pose;
+rm_pose_t eu_tool;
+eu_tool.position.x = -0.17391f;
+eu_tool.position.y = 0.437109f;
+eu_tool.position.z = -0.21619f;
+eu_tool.euler.rx = 2.741f;
+eu_tool.euler.ry = -0.244002f;
+eu_tool.euler.rz = 2.938f;
+pose = rm_algo_end2tool(eu_tool);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
