@@ -34,7 +34,10 @@ int rm_set_wifi_ap(rm_robot_handle * handle,const char * wifi_name,const char * 
 - **使用示例**
   
 ```C
-
+//配置wifiAP内容，wifi名称：robot，连接密码：12345678
+char *wifi_name = (char*)"robot";
+char* password = (char*)"12345678";
+ret = rm_set_wifi_ap(robot_handle,wifi_name,password);
 ```
 
 ## 配置WiFi STA模式`rm_set_wifi_sta()`
@@ -67,7 +70,10 @@ int rm_set_wifi_sta(rm_robot_handle * handle,const char * router_name,const char
 - **使用示例**
   
 ```C
-
+//配置wifiSTA内容，目标路由器名称：robot，路由器密码：12345678
+char *router_name = (char*)"robot";
+char* password = (char*)"12345678";
+ret = rm_set_wifi_sta(robot_handle,router_name,password);
 ```
 
 ## 控制器RS485接口波特率设置`rm_set_RS485()`
@@ -99,7 +105,9 @@ int rm_set_RS485(rm_robot_handle * handle,int baudrate)
 - **使用示例**
   
 ```C
-
+//配置RS485波特率为460800
+int baudrate = 460800;
+ret = rm_set_RS485(robot_handle,baudrate);
 ```
 
 ## 获取有线网卡信息`rm_get_wired_net()`
@@ -136,7 +144,11 @@ int rm_get_wired_net(rm_robot_handle * handle,char * ip,char * mask,char * mac)
 - **使用示例**
   
 ```C
-
+//查询有线网卡网络信息
+char ip[128];
+char mask[128];
+char mac[128];
+ret = rm_get_wired_net(robot_handle,ip,mask,mac);
 ```
 
 ## 查询无线网卡网络信息`rm_get_wifi_net()`
@@ -173,7 +185,9 @@ int rm_get_wifi_net(rm_robot_handle * handle,rm_wifi_net_t * wifi_net)
 - **使用示例**
   
 ```C
-
+//查询无线网卡网络信息
+rm_wifi_net_t wifi;
+ret = rm_get_wifi_net(handle, &wifi);
 ```
 
 ## 恢复网络出厂设置`rm_set_net_default()`
@@ -205,7 +219,8 @@ int rm_set_net_default(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//恢复网络出厂设置
+ret = rm_set_net_default(robot_handle);
 ```
 
 ## 配置关闭WiFi功能`rm_set_wifi_close()`
@@ -239,5 +254,6 @@ int rm_set_wifi_close(rm_robot_handle * handle)
 - **使用示例**
   
 ```C
-
+//恢复网络出厂设置
+ret = rm_set_net_default(robot_handle);
 ```

@@ -35,7 +35,10 @@ int rm_set_tool_DO_state(rm_robot_handle * handle,int io_num,int state)
 - **使用示例**
   
 ```C
-
+//设置工具端1号通道输出高电平
+int num = 1;
+int state = 1;
+ret = rm_set_tool_DO_state(robot_handle,num,state);
 ```
 
 ## 设置工具端数字IO模式`rm_set_tool_IO_mode()`
@@ -69,7 +72,10 @@ int rm_set_tool_IO_mode(rm_robot_handle * handle,int io_num,int io_mode)
 - **使用示例**
   
 ```C
-
+//设置工具端IO2号数字通道为输出模式
+int num = 2;
+int state = 1;
+ret = rm_set_tool_IO_mode(robot_handle,num,state);
 ```
 
 ## 获取数字IO状态`rm_get_tool_IO_state()`
@@ -103,7 +109,10 @@ int rm_get_tool_IO_state(rm_robot_handle * handle,int * mode,int * state)
 - **使用示例**
   
 ```C
-
+//查询工具端数字IO状态         
+float IO_Mode[2];                               
+float IO_state[2];                              
+ret = rm_get_tool_IO_state(robot_handle, IO_Mode, IO_state)     
 ```
 
 ## 设置工具端电源输出`rm_set_tool_voltage()`
@@ -138,7 +147,9 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 - **使用示例**
   
 ```C
-
+//设置工具端电源输出类型5V
+int type = 1;
+ret = rm_set_tool_voltage(robot_handle, type);
 ```
 
 ## 获取工具端电源输出`rm_get_tool_voltage()`
@@ -171,5 +182,7 @@ iint rm_get_tool_voltage(rm_robot_handle * handle,int voltage_type)
 - **使用示例**
   
 ```C
-
+//获取工具端电源输出
+int voltage;
+ret = rm_get_tool_voltage(robot_handle,&voltage);  
 ```

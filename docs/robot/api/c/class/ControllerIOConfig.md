@@ -35,7 +35,10 @@ int rm_set_IO_mode(rm_robot_handle * handle,int io_num,int io_mode)
 - **使用示例**
   
 ```C
-
+//设置数字IO 1号通道输入开始功能复用模式
+int io_num = 1;                              
+int io_mode = 2;                       
+ret = rm_set_IO_mode (robot_handle,io_num,io_mode);
 ```
 
 ## 设置数字IO输出`rm_set_DO_state()`
@@ -69,7 +72,10 @@ int rm_set_DO_state(rm_robot_handle * handle,int io_num,int state)
 - **使用示例**
   
 ```C
-
+//设置数字IO 1号通道输出高
+int io_num = 1;                              
+int state = 1;                       
+ret = rm_set_DO_state(robot_handle,io_num,state);
 ```
 
 ## 获取数字IO状态`rm_get_IO_state()`
@@ -104,7 +110,11 @@ int rm_get_IO_state(rm_robot_handle * handle,int io_num,int * state,int * mode)
 - **使用示例**
   
 ```C
-
+//查询数字IO输出1号通道状态
+int num = 1;
+int state;
+int mode;
+ret = rm_get_IO_state(robot_handle,num,&state,&mode); 
 ```
 
 ## 获取所有IO输入状态`rm_get_IO_input()`
@@ -137,7 +147,9 @@ int rm_get_IO_input(rm_robot_handle * handle,int * DI_state)
 - **使用示例**
   
 ```C
-
+//查询所有IO输入状态
+int DI_state[4] = {0};
+ret = rm_get_IO_input(robot_handle,DI_state);
 ```
 
 ## 获取所有IO输出状态`rm_get_IO_output()`
@@ -170,7 +182,9 @@ int rm_get_IO_output(rm_robot_handle * handle,int * DO_state)
 - **使用示例**
   
 ```C
-
+//查询所有IO输出状态
+int DO_state[4] = {0};
+ret = rm_get_IO_output(robot_handle,DO_state);
 ```
 
 ## 设置控制器电源输出`rm_set_voltage()`
@@ -203,7 +217,9 @@ int rm_set_voltage(rm_robot_handle * handle,int voltage_type)
 - **使用示例**
   
 ```C
-
+//设置控制器端电源开机输出输出24V
+int type = 3;
+ret = rm_set_voltage(robot_handle, type); 
 ```
 
 ## 获取控制器电源输出`rm_get_voltage()`
@@ -236,5 +252,7 @@ int rm_get_voltage(rm_robot_handle * handle,int * voltage_type)
 - **使用示例**
   
 ```C
-
+//查询电源输出状态
+int voltage_type;
+ret = rm_get_voltage(robot_handle,&voltage_type);    
 ```

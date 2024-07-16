@@ -2,8 +2,6 @@
 
 机械臂当前状态、关节温度、电流、电压查询。
 
-
-
 ## 获取机械臂当前状态`rm_get_current_arm_state()`
 
 - **方法原型：**
@@ -34,7 +32,25 @@ int rm_get_current_arm_state(rm_robot_handle * handle,rm_current_arm_state_t * s
 - **使用示例**
   
 ```C
-
+// 获取机械臂当前状态  
+rm_current_arm_state_t current_state;  
+if (rm_get_current_arm_state(robot_handle, &current_state) == 0) { 
+    printf("Current Pose: \n");  
+    printf("Position: (%.3f, %.3f, %.3f) m\n",  
+           current_state.pose.position.x, current_state.pose.position.y, current_state.pose.position.z);  
+    printf("Quaternion: (%.3f, %.3f, %.3f, %.3f)\n",  
+           current_state.pose.quaternion.w, current_state.pose.quaternion.x, current_state.pose.quaternion.y, current_state.pose.quaternion.z);  
+    printf("Euler Angles: (%.3f, %.3f, %.3f) rad\n",  
+           current_state.pose.euler.rx, current_state.pose.euler.ry, current_state.pose.euler.rz);  
+    printf("Joint Angles: ");  
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f ", current_state.joint[i]);  
+    }  
+    printf("\nArm Error: %u\n", current_state.arm_err);  
+    printf("System Error: %u\n", current_state.sys_err);  
+} else {  
+    printf("Failed to get current arm state\n");  
+}  
 ```
 
 ## 获取关节当前温度`rm_get_current_joint_temperature()`
@@ -67,7 +83,16 @@ int rm_get_current_joint_temperature(rm_robot_handle * handle,float * temperatur
 - **使用示例**
   
 ```C
-
+float temperature[ARM_DOF];  
+if (rm_get_current_joint_temperature(robot_handle, temperature) == 0) {  
+    printf("Joint Temperature: "); 
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f ", temperature[i]);  
+    }
+    printf("\n");  
+} else {  
+    printf("Failed to get joint temperature\n");  
+} 
 ```
 
 ## 获取关节当前电流`rm_get_current_joint_current()`
@@ -100,7 +125,16 @@ int rm_get_current_joint_current(rm_robot_handle * handle,float * current)
 - **使用示例**
   
 ```C
-
+float current[ARM_DOF];  
+if (rm_get_current_joint_current(robot_handle, current) == 0) {  
+    printf("Joint current: "); 
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f ", current[i]);  
+    }
+    printf("\n");  
+} else {  
+    printf("Failed to get joint current\n");  
+} 
 ```
 
 ## 获取关节当前电压`rm_get_current_joint_voltage()`
@@ -133,7 +167,16 @@ int rm_get_current_joint_voltage(rm_robot_handle * handle,float * voltage)
 - **使用示例**
   
 ```C
-
+float voltage[ARM_DOF];  
+if (rm_get_current_joint_voltage(robot_handle, voltage) == 0) {  
+    printf("Joint voltage: "); 
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f ", voltage[i]);  
+    }
+    printf("\n");  
+} else {  
+    printf("Failed to get joint voltage\n");  
+} 
 ```
 
 ## 获取当前关节角度`rm_get_joint_degree()`
@@ -166,7 +209,16 @@ int rm_get_joint_degree(rm_robot_handle * handle,float * joint)
 - **使用示例**
   
 ```C
-
+float degree[ARM_DOF];  
+if (rm_get_joint_degree(robot_handle, degree) == 0) {  
+    printf("Joint degree: "); 
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f ", degree[i]);  
+    }
+    printf("\n");  
+} else {  
+    printf("Failed to get joint degree\n");  
+} 
 ```
 
 ## 获取机械臂所有状态信息`rm_get_arm_all_state()`
@@ -199,5 +251,18 @@ int rm_get_arm_all_state(rm_robot_handle * handle,rm_arm_all_state_t * state)机
 - **使用示例**
   
 ```C
-
+rm_arm_all_state_t all_state;  
+if (rm_get_arm_all_state(robot_handle, &all_state) == 0) {  
+    printf("Joint Currents: ");  
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f mA ", all_state.joint_current[i]);  
+    }  
+    printf("\nJoint Temperatures: ");  
+    for (int i = 0; i < ARM_DOF; i++) {  
+        printf("%.2f C ", all_state.joint_temperature[i]);  
+    }  
+    // 打印其他信息...  
+} else {  
+    printf("Failed to get arm all state\n");  
+} 
 ```

@@ -37,7 +37,7 @@ int rm_set_joint_max_speed(rm_robot_handle * handle,int joint_num,float max_spee
   
 ```C
 // 设置关节1最大速度180°/s  
-int ret = rm_set_joint_max_speed(handle,1,180);
+int ret = rm_set_joint_max_speed(robot_handle,1,180);
 printf("set_joint_max_speed result:%d\n",ret);
 ```
 
@@ -72,7 +72,10 @@ int rm_set_joint_max_acc(rm_robot_handle *handle,int joint_num,float max_acc)
 - **使用示例**
   
 ```C
-
+//设置关节2最大加速度600°/s²
+int joint_num = 2;
+float acc = 600;
+ret = rm_set_joint_max_acc(robot_handle,joint_num,acc);
 ```
 
 ## 设置关节最小限位`rm_set_joint_min_pos()`
@@ -106,7 +109,10 @@ int rm_set_joint_min_pos(rm_robot_handle * handle,int joint_num,float min_pos)
 - **使用示例**
   
 ```C
-
+//设置关节6，最小限位度数-360°
+int joint_num = 6;                                                        
+float joint = -360;                                                        
+ret=rm_set_joint_min_pos(robot_handle,joint_num,joint);
 ```
 
 ## 设置关节最大限位`rm_set_joint_max_pos()`
@@ -140,7 +146,10 @@ int rm_set_joint_max_pos(rm_robot_handle * handle,int joint_num,float max_pos)
 - **使用示例**
   
 ```C
-
+//设置关节6，最大限位度数360°
+int joint_num = 6;
+float joint = 360;
+ret = rm_set_joint_max_pos(robot_handle,joint_num,joint);
 ```
 
 ## 设置关节最大速度(驱动器)`rm_set_joint_drive_max_speed()`
@@ -174,7 +183,9 @@ int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float ma
 - **使用示例**
   
 ```C
-
+// 设置关节驱动器1最大速度180°/s  
+int ret = rm_set_joint_drive_max_speed(robot_handle,1,180);
+printf("rm_set_joint_drive_max_speed result:%d\n",ret);
 ```
 
 ## 设置关节最大加速度(驱动器)`rm_set_joint_drive_max_acc()`
@@ -208,7 +219,10 @@ int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float ma
 - **使用示例**
   
 ```C
-
+//设置关节驱动器2最大加速度600°/s²
+int joint_num = 2;
+float acc = 600;
+ret = rm_set_joint_drive_max_speed(robot_handle,joint_num,acc);
 ```
 
 ## 设置关节最小限位(驱动器)`rm_set_joint_drive_min_pos()`
@@ -242,7 +256,10 @@ int rm_set_joint_drive_min_pos(rm_robot_handle * handle,int joint_num,float min_
 - **使用示例**
   
 ```C
-
+//设置关节驱动器6，最小限位度数-360°
+int joint_num = 6;                                                        
+float joint = -360;                                                        
+ret=rm_set_joint_drive_min_pos(robot_handle,joint_num,joint);
 ```
 
 ## 设置关节最大限位(驱动器)`rm_set_joint_drive_max_pos()`
@@ -276,7 +293,10 @@ int rm_set_joint_drive_max_pos(rm_robot_handle * handle,int joint_num,float max_
 - **使用示例**
   
 ```C
-
+//设置关节驱动器6，最大限位度数360°
+int joint_num = 6;
+float joint = 360;
+ret = rm_set_joint_drive_max_pos(robot_handle,joint_num,joint);
 ```
 
 ## 设置关节最大限位(驱动器)`rm_set_joint_en_state()`
@@ -310,7 +330,9 @@ int rm_set_joint_en_state(rm_robot_handle * handle,int joint_num,int en_state)
 - **使用示例**
   
 ```C
-
+//设置关节1上使能
+int joint_num = 1;                                                         
+ret=rm_set_joint_en_state(m_sockhand,joint_num,true,RM_BLOCK);
 ```
 
 ## 设置关节零位`rm_set_joint_zero_pos()`
@@ -343,7 +365,9 @@ int rm_set_joint_zero_pos(rm_robot_handle * handle,int joint_num)
 - **使用示例**
   
 ```C
-
+//设置关节3当前位置为零位
+int joint_num = 3;                                                         
+ret = rm_set_joint_zero_pos(m_sockhand,joint_num); 
 ```
 
 ## 清除关节错误代码`rm_set_joint_clear_err()`
@@ -376,7 +400,9 @@ int rm_set_joint_clear_err(rm_robot_handle * handle,int joint_num)
 - **使用示例**
   
 ```C
-
+//清除关节2错误代码
+int joint_num = 2;                                                          
+ret=rm_set_joint_clear_err(m_sockhand,joint_num);  
 ```
 
 ## 一键设置关节限位`rm_auto_set_joint_limit()`
@@ -409,7 +435,8 @@ int rm_auto_set_joint_limit(rm_robot_handle *handle,int limit_mode)
 - **使用示例**
   
 ```C
-
+ret = rm_auto_set_joint_limit(robot_handle, 1);
+printf("set joint limit result : %d\n", ret);
 ```
 
 ## 查询关节最大速度`rm_get_joint_max_speed()`
@@ -442,7 +469,14 @@ int rm_get_joint_max_speed(rm_robot_handle * handle,float * max_speed)
 - **使用示例**
   
 ```C
-
+float max_speed[6];
+ret = rm_get_joint_max_speed(robot_handle, max_speed);
+printf("get joint max speed result : %d\n", ret);
+printf("Max speeds: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_speed[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节最大加速度`rm_get_joint_max_acc()`
@@ -475,7 +509,14 @@ int rm_get_joint_max_acc(rm_robot_handle * handle,float * max_acc)
 - **使用示例**
   
 ```C
-
+float max_acc[6];
+ret = rm_get_joint_max_acc(robot_handle, max_acc);
+printf("get joint max acc result : %d\n", ret);
+printf("Max accelerations: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_acc[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节最小限位`rm_get_joint_min_pos()`
@@ -508,7 +549,14 @@ int rm_get_joint_min_pos(rm_robot_handle * handle,float * min_pos)
 - **使用示例**
   
 ```C
-
+float min_pos[6];
+ret = rm_get_joint_min_pos(robot_handle, min_pos);
+printf("get joint min pos result : %d\n", ret);
+printf("Min positions: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", min_pos[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节最大限位`rm_get_joint_max_pos()`
@@ -541,7 +589,14 @@ int rm_get_joint_max_pos(rm_robot_handle * handle,float * max_pos)
 - **使用示例**
   
 ```C
-
+float max_pos[6];
+ret = rm_get_joint_max_pos(robot_handle, max_pos);
+printf("get joint max pos result : %d\n", ret);
+printf("Max positions: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_pos[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节(驱动器)最大速度`rm_get_joint_drive_max_speed()`
@@ -574,7 +629,14 @@ int rm_get_joint_drive_max_speed(rm_robot_handle * handle,float * max_speed)
 - **使用示例**
   
 ```C
-
+float max_speed[6];
+ret = rm_get_joint_drive_max_speed(robot_handle, max_speed);
+printf("get joint drive max speed result : %d\n", ret);
+printf("Max drive speeds: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_speed[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节(驱动器)最大加速度`rm_get_joint_drive_max_acc()`
@@ -607,7 +669,14 @@ int rm_get_joint_drive_max_acc(rm_robot_handle * handle,float * max_acc)
 - **使用示例**
   
 ```C
-
+float max_acc[6];
+ret = rm_get_joint_drive_max_acc(robot_handle, max_acc);
+printf("get joint drive max acc result : %d\n", ret);
+printf("Max accelerations: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_acc[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节(驱动器)最小限位`rm_get_joint_drive_min_pos()`
@@ -640,7 +709,14 @@ int rm_get_joint_drive_min_pos(rm_robot_handle * handle,float * min_pos)
 - **使用示例**
   
 ```C
-
+float min_pos[6];
+ret = rm_get_joint_drive_min_pos(robot_handle, min_pos);
+printf("get joint drive min pos result : %d\n", ret);
+printf("Min positions: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", min_pos[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节(驱动器)最大限位`rm_get_joint_drive_max_pos()`
@@ -673,7 +749,14 @@ int rm_get_joint_drive_max_pos(rm_robot_handle * handle,float * max_pos)
 - **使用示例**
   
 ```C
-
+float max_pos[6];
+ret = rm_get_joint_drive_max_pos(robot_handle, max_pos);
+printf("get joint drive max pos result : %d\n", ret);
+printf("Max positions: ");
+for (int i = 0; i < 6; i++) {
+    printf("%.2f ", max_pos[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节使能状态`rm_get_joint_en_state()`
@@ -706,7 +789,14 @@ int rm_get_joint_en_state(rm_robot_handle * handle,uint8_t * en_state)
 - **使用示例**
   
 ```C
-
+uint8_t en_state[6];
+ret = rm_get_joint_en_state(robot_handle, en_state);
+printf("get joint en state result : %d\n", ret);
+printf("Enable states: ");
+for (int i = 0; i < 6; i++) {
+    printf("%d ", en_state[i]);
+}
+printf("\n");
 ```
 
 ## 查询关节错误代码`rm_get_joint_err_flag()`
@@ -740,5 +830,18 @@ int rm_get_joint_err_flag(rm_robot_handle * handle,uint16_t * err_flag,uint16_t 
 - **使用示例**
   
 ```C
-
+uint16_t err_flag[6];
+uint16_t brake_state[6];
+ret = rm_get_joint_err_flag(robot_handle, err_flag,brake_state);
+printf("get joint err flag result : %d\n", ret);
+printf("Error flags: ");
+for (int i = 0; i < 6; i++) {
+    printf("%d ", err_flag[i]);
+}
+printf("\n");
+printf("Brake states: ");
+for (int i = 0; i < 6; i++) {
+    printf("%d ", brake_state[i]);
+}
+printf("\n");
 ```
