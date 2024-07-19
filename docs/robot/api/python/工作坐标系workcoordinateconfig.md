@@ -34,10 +34,29 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_auto_work_frame (
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置关节角度[0, 20, 70, 0, 90, 0]的位置为原点
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+print(arm.rm_set_auto_work_frame("test_work", 1))
+# 设置关节角度[0, 30, 60, 0, 90, 0]的位置为X轴一点
+print(arm.rm_movej([0, 30, 60, 0, 90, 0], 20, 0, 0, True))
+print(arm.rm_set_auto_work_frame("test_work", 2))
+# 设置关节角度[0, 40, 50, 0, 90, 0]的位置为Y轴一点
+print(arm.rm_movej([0, 40, 50, 0, 90, 0], 20, 0, 0, True))
+print(arm.rm_set_auto_work_frame("test_work", 3))
+# 生成“test_work”坐标系
+print(arm.rm_set_auto_work_frame("test_work", 4))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 手动设置工作坐标系`rm_set_manual_work_frame()`
@@ -65,10 +84,19 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_manual_work_frame
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_manual_work_frame("test", [-0.259256, -0.170727, 0.35621, 0, -0.447394, -1.81038]))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 切换当前工作坐标系`rm_change_work_frame()`
@@ -95,10 +123,19 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_change_work_frame (se
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_change_work_frame("test"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 删除指定工作坐标系`rm_delete_work_frame()`
@@ -125,10 +162,19 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_delete_work_frame (se
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_delete_work_frame("test"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 修改指定工作坐标系`rm_update_work_frame()`
@@ -156,10 +202,19 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_update_work_frame (se
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_update_work_frame("test", [0,0,0,0,0,0]))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取所有工作坐标系名称`rm_get_total_work_frame()`
@@ -195,17 +250,24 @@ dict[str, any]: 包含以下键值的字典:
 | :--- | :--- | :--- |
 |   len  |    `int`    |    工作坐标系名称数量。    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_total_work_frame())
 ```
 
-## 获取指定工作坐标系`rm_get_total_work_frame()`
+## 获取指定工作坐标系`rm_get_given_work_frame()`
 
 - **方法原型：**
 ```python
-dict[str, any] Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_get_total_work_frame (self)
+dict[str, any] Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_get_given_work_frame (self)
 ```
 
 - **参数说明:**
@@ -234,13 +296,22 @@ tuple[int, list[float]]: 包含两个元素的元组
 |   pose  |    `list[float]`    |    工作坐标系位姿列表   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_given_work_frame("test"))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 获取当前工作坐标系`rm_get_total_work_frame()`
+## 获取当前工作坐标系`rm_get_current_work_frame()`
 
 - **方法原型：**
 ```python
@@ -267,8 +338,17 @@ tuple[int, dict[str, any]]: 包含两个元素的元组
 |   rm_frame_t  |    `dict[str, any]`    |    工作坐标系字典，键为rm_frame_t的参数名。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_current_work_frame())
+
+arm.rm_delete_robot_arm()
 ```

@@ -33,10 +33,21 @@ int Robotic_Arm.rm_robot_interface.ExpandControl.rm_set_expand_speed (self, int 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 扩展关节速度50% 反向运动
+print(arm.rm_set_expand_speed(-50))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 扩展关节位置环控制`rm_set_expand_pos()`
@@ -66,10 +77,20 @@ int Robotic_Arm.rm_robot_interface.ExpandControl.rm_set_expand_pos	(	 	self, int
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_expand_pos(200, 20, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取扩展关节状态`rm_get_expand_state()`
@@ -96,8 +117,18 @@ tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ExpandControl.rm_get_e
 | :--- | :--- | :---|
 |   rm_expand_state_t  |    `dict[str,any]`   |    获取到的扩展关节状态字典，键为rm_expand_state_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_expand_state())
+
+arm.rm_delete_robot_arm()
 ```

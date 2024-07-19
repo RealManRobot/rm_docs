@@ -42,9 +42,21 @@ int Robotic_Arm.rm_robot_interface.ElectronicFenceConfig.rm_add_electronic_fence
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+config = rm_fence_config_t(
+    1, "test", cube=rm_fence_config_cube_t(-1.1, 1.1, -1.1, 1.1, -1.1, 1.1))
+
+print(arm.rm_add_electronic_fence_config())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 更新几何模型参数`rm_update_electronic_fence_config()`
@@ -70,9 +82,20 @@ int Robotic_Arm.rm_robot_interface.ElectronicFenceConfig.rm_update_electronic_fe
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+config = rm_fence_config_t(
+    1, "test", cube=rm_fence_config_cube_t(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0))
+print(arm.rm_update_electronic_fence_config(config))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 删除指定几何模型`rm_delete_electronic_fence_config()`
@@ -98,9 +121,18 @@ int Robotic_Arm.rm_robot_interface.ElectronicFenceConfig.rm_delete_electronic_fe
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_delete_electronic_fence_config("test"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询所有几何模型名称`rm_get_electronic_fence_list_names()`
@@ -135,12 +167,21 @@ dict[str,any]: 包含以下键值的字典
 | :--- | :--- | :--- |
 |   len  |    `int`    |    几何模型名称列表长度    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_electronic_fence_list_names())
+
+arm.rm_delete_robot_arm()
 ```
 
-## 查询指定几何模型参数`rm_delete_electronic_fence_config()`
+## 查询指定几何模型参数`rm_get_given_electronic_fence_config()`
 - **方法原型：**
 ```python
 tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ElectronicFenceConfig.rm_get_given_electronic_fence_config (self, str name)
@@ -164,9 +205,18 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。-int 函数执行的状�
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 |dict| `[str,any] `|返回指定几何模型的参数字典，键为rm_fence_config_t结构体的字段名称  |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_given_electronic_fence_config("test"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询所有几何模型参数`rm_get_electronic_fence_list_infos()`
@@ -201,9 +251,18 @@ type: 包含以下键值的字典:
 | :--- | :--- | :--- |
 |   len  |    `int`    |    几何模型列表长度    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_electronic_fence_list_infos())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置电子围栏使能状态`rm_set_electronic_fence_enable()`
@@ -229,11 +288,21 @@ int: 函数执行的状态码
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。   |
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+electronic_fence_enable = rm_electronic_fence_enable_t(True, 0, 0)
+print(arm.rm_set_electronic_fence_enable())
+
+arm.rm_delete_robot_arm()
 ```
-## 获取电子围栏使能状态`rm_set_electronic_fence_enable()`
+## 获取电子围栏使能状态`rm_get_electronic_fence_enable()`
 - **方法原型：**
 ```python
 tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ElectronicFenceConfig.rm_get_electronic_fence_enable (self)
@@ -254,9 +323,18 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。-int 函数执行的状�
 |   dict  | `[str,any]`|   返回电子围栏使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称    |
 
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_electronic_fence_enable())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置当前电子围栏参数配置`rm_set_electronic_fence_config()`
@@ -282,12 +360,22 @@ int: 函数执行的状态码
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。   |
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+config = rm_fence_config_t(1, cube=rm_fence_config_cube_t(-0.9, 0.9, -0.9, 0.9, -0.9, 0.9))
+print(arm.rm_set_electronic_fence_config(config))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 获取当前电子围栏参数`rm_set_electronic_fence_enable()`
+## 获取当前电子围栏参数`rm_get_electronic_fence_config()`
 - **方法原型：**
 ```python
 tuple[int, dict[str, any]]
@@ -308,8 +396,18 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。
 |   dict  | `[str,any]`|   返回当前电子围栏参数字典，键为rm_fence_config_t结构体的字段名称（不返回电子围栏名称）    |
 
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_electronic_fence_config())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置当前虚拟墙参数`rm_set_virtual_wall_config()`
@@ -335,9 +433,19 @@ int: 函数执行的状态码
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。   |
 |   -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+config = rm_fence_config_t(1, cube=rm_fence_config_cube_t(-0.9, 0.9, -0.9, 0.9, -0.9, 0.9))
+print(arm.rm_set_virtual_wall_config(config))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取当前虚拟墙参数`rm_get_virtual_wall_config()`
@@ -360,6 +468,16 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 |   dict  | `[str,any]`|   返回当前虚拟墙参数字典，键为rm_fence_config_t结构体的字段名称（不返回虚拟墙名称）    |
 
 
-- **使用使用示例**
+- **使用示例**
 ```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_virtual_wall_config())
+
+arm.rm_delete_robot_arm()
 ```

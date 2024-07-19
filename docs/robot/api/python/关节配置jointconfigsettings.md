@@ -33,10 +33,19 @@ int: 函数执行的状态码
 |   -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |   -3  |    `int`   |   返回值解析失败，控制器返回的数据格式不正确或无法识别。    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_max_speed(1, 180))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置关节最大加速度`rm_set_joint_max_acc()`
@@ -68,7 +77,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_max_acc(1, 600))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置关节最小位置限位`rm_set_joint_min_pos()`
@@ -100,7 +118,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_min_pos(1, -178))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置关节最大位置限位`rm_set_joint_max_pos()`
@@ -132,7 +159,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_max_pos(1, 178))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节最大速度`rm_set_joint_drive_max_speed()`
@@ -164,7 +200,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_drive_max_speed(1, 180))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节最大加速度`rm_set_joint_drive_max_acc()`
@@ -196,7 +241,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_drive_max_acc(1, 600))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节(驱动器)最小限位`rm_set_joint_drive_min_pos()`
@@ -228,7 +282,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_drive_min_pos(1, -178))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节(驱动器)最大限位`rm_set_joint_drive_max_pos()`
@@ -260,7 +323,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_drive_max_pos(1, 178))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节使能状态`rm_set_joint_en_state()`
@@ -292,7 +364,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_en_state(1, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置指定关节当前位置为零位`rm_set_joint_zero_pos()`
@@ -323,7 +404,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_zero_pos(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清除指定关节错误代码`rm_set_joint_clear_err()`
@@ -354,7 +444,16 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_joint_clear_err(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 恢复关节限位的出厂设置`rm_auto_set_joint_limit()`
@@ -385,5 +484,14 @@ int: 函数执行的状态码
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_auto_set_joint_limit(1))
+
+arm.rm_delete_robot_arm()
 ```

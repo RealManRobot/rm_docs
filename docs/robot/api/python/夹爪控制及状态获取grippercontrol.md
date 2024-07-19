@@ -35,10 +35,20 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_route (self, in
 |  -4  |    `int`   |    超时   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_gripper_route(70, 200))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 松开手爪，即手爪以指定的速度运动到开口最大处`rm_set_gripper_release()`
@@ -71,10 +81,20 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_release (self, 
 |  -4  |    `int`   |    超时   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_gripper_release(500, True, 10))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 手爪力控夹取，手爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取`rm_set_gripper_pick()`
@@ -108,10 +128,20 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick (self, int
 |  -4  |    `int`   |    超时   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_gripper_pick(500, 200, True, 10))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 手爪持续力控夹取`rm_set_gripper_pick_on()`
@@ -145,10 +175,20 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick_on (self, 
 |  -4  |    `int`   |    超时   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_gripper_pick_on(500, 200, True, 10))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置手爪达到指定位置`rm_set_gripper_position()`
@@ -181,10 +221,20 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_position (self,
 |  -4  |    `int`   |    超时   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_gripper_position(500, True, 10))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询夹爪状态`rm_get_gripper_state()`
@@ -193,15 +243,6 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_position (self,
 ```python
 tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.GripperControl.rm_get_gripper_state	(self)
 ```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| position      | `int` | 手爪开口位置，范围：1~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
-
 
 
 - **返回值:** </br>
@@ -223,8 +264,18 @@ tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状�
 | :--- | :--- | :---|
 |   rm_gripper_state_t  |    `dict[str, any]`   |    夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_gripper_state())
+
+arm.rm_delete_robot_arm()
 ```

@@ -42,10 +42,20 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_set_modbus_mode (self, int	po
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_modbus_mode(1,115200,2))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 关闭通讯端口 Modbus RTU 模式`rm_close_modbus_mode()`
@@ -72,10 +82,20 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_close_modbus_mode (self, int 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_close_modbus_mode(2))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 配置连接`rm_set_modbustcp_mode()`
@@ -90,7 +110,7 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_set_modbustcp_mode (self, str
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
 | ip      | `str` | 从机IP地址                   |
-| port      | `str` | 端口号                   |
+| port      | `int` | 端口号                   |
 | timeout      | `int` | 超时时间，单位秒                   |
 
 
@@ -105,10 +125,20 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_set_modbustcp_mode (self, str
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_modbustcp_mode("192.168.1.120", 502, 2000))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 关闭通讯端口ModbusRTU模式`rm_close_modbustcp_mode()`
@@ -129,10 +159,20 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_close_modbustcp_mode (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_close_modbustcp_mode())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读线圈`rm_read_coils()`
@@ -167,10 +207,22 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回线圈状态，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485接口读数据，起始地址为10， 外设设备地址为2，读2个数据
+read_params = rm_peripheral_read_write_params_t(0, 10, 2, 2)
+print(arm.rm_read_coils(read_params))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读离散量输入`rm_read_input_status()`
@@ -205,10 +257,22 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回离散量，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485接口读数据，起始地址为10， 外设设备地址为2，读3个数据
+read_params = rm_peripheral_read_write_params_t(0, 10, 2, 3)
+print(arm.rm_read_input_status(read_params))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读保持寄存器`rm_read_holding_registers()`
@@ -243,10 +307,22 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回寄存器数据，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485端口读取数据，起始地址为10， 外设设备地址为2
+param = rm_peripheral_read_write_params_t(0, 10, 2)
+print("读保持寄存器: ", arm.rm_read_holding_registers(param))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -282,10 +358,22 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回寄存器数据，数据类型：int16    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2
+param = rm_peripheral_read_write_params_t(0, 10, 2)
+print("读保持寄存器: ", arm.rm_read_input_registers(param))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 写单个寄存器`rm_write_single_register()`
@@ -314,10 +402,22 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_write_single_register (self, 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485接口写100数据，起始地址为10， 外设设备地址为2
+write_params = rm_peripheral_read_write_params_t(0, 10, 2)
+print(arm.rm_write_single_register(write_params, 100))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 写多个寄存器`rm_write_registers()`
@@ -346,10 +446,22 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_write_registers (self, rm_per
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485接口写数据，起始地址为10， 外设设备地址为2，寄存器数量为2
+write_params = rm_peripheral_read_write_params_t(0, 10, 2, 2)
+print(arm.rm_write_registers(write_params), [15, 20, 25, 30])
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 写多圈数据`rm_write_coils()`
@@ -378,10 +490,22 @@ int Robotic_Arm.rm_robot_interface.ModbusConfig.rm_write_coils (self, rm_periphe
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485接口写数据，起始地址为10， 外设设备地址为2，线圈数量为16
+write_params = rm_peripheral_read_write_params_t(0, 10, 2, 16)
+print(arm.rm_write_coils(write_params, [15, 20]))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读多圈数据`rm_read_multiple_coils()`
@@ -416,10 +540,22 @@ tuple[int,list[int]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回线圈状态列表，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，线圈数量为24
+param = rm_peripheral_read_write_params_t(0, 10, 2, 24)
+print(arm.rm_read_multiple_coils(param))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -455,17 +591,29 @@ tuple[int,list[int]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回寄存器数据列表，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，寄存器数量为5
+param = rm_peripheral_read_write_params_t(0, 10, 2, 5)
+print(arm.rm_read_multiple_holding_registers(param))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读多个输入寄存器`rm_read_multiple_input_registers()`
 
 - **方法原型：**
 ```python
-tuple[int, list[int]] Robotic_Arm.rm_robot_interface.ModbusConfig.rm_read_multiple_holding_registers (self, rm_peripheral_read_write_params_t read_params)
+tuple[int, list[int]] Robotic_Arm.rm_robot_interface.ModbusConfig.rm_read_multiple_input_registers (self, rm_peripheral_read_write_params_t read_params)
 ```
 
 - **参数说明:**
@@ -493,6 +641,19 @@ tuple[int,list[int]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    返回寄存器数据列表，数据类型：int8    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，寄存器数量为5
+param = rm_peripheral_read_write_params_t(0, 10, 2, 5)
+print(arm.rm_read_multiple_input_registers(param))
+
+arm.rm_delete_robot_arm()

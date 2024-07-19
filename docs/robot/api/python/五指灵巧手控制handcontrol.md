@@ -38,10 +38,20 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_posture (self, int po
 |  -5  |    `int`   |   超时未返回   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_hand_posture(1, True, 10))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置灵巧手目标手势序列号`rm_set_hand_seq()`
@@ -75,10 +85,20 @@ int seq_num, bool block, int timeout)
 |  -5  |    `int`   |   超时未返回   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_hand_seq(1, True, 15))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置灵巧手各自由度角度`rm_set_hand_angle()`
@@ -110,10 +130,21 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_angle (self, list[int
 |  -4  |    `int`   |   超时未返回   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置灵巧手各手指角度
+print(arm.rm_set_hand_angle([-1,100,200,300,400,500]))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置灵巧手速度`rm_set_hand_speed()`
@@ -141,10 +172,20 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_speed (self, int spee
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 |  -4  |    `int`   |   超时未返回   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_hand_speed(500))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -173,8 +214,18 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_force (self, int forc
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 |  -4  |    `int`   |   超时未返回   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_hand_force(500))
+
+arm.rm_delete_robot_arm()
 ```

@@ -34,10 +34,21 @@ int Robotic_Arm.rm_robot_interface.LiftControl.rm_set_lift_speed (self, int spee
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 升降机构以50%的速度向下运动
+print(arm.rm_set_lift_speed(-50))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 升降机构位置闭环控制`rm_set_lift_height()`
@@ -52,8 +63,8 @@ int Robotic_Arm.rm_robot_interface.LiftControl.rm_set_lift_height (self, int spe
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
 | speed      | `int` | 速度百分比，1~100|
-| speed      | `int` | 目标高度，单位 mm，范围：0~2600|
-|   height  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
+| height      | `int` | 目标高度，单位 mm，范围：0~2600|
+|   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
 
 
@@ -68,13 +79,23 @@ int Robotic_Arm.rm_robot_interface.LiftControl.rm_set_lift_height (self, int spe
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_lift_height(20, 200, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 获取升降机构状态`rm_set_lift_height()`
+## 获取升降机构状态`rm_get_lift_state()`
 
 - **方法原型：**
 ```python
@@ -100,8 +121,18 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   rm_expand_state_t  |    `dict[str,any]`   |    获取到的升降机构状态字典，键为rm_expand_state_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_lift_state())
+
+arm.rm_delete_robot_arm()
 ```

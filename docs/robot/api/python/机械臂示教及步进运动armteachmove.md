@@ -39,10 +39,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_joint_step (self, int num
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 关节5步进3°
+print(arm.rm_set_joint_step(5, 3, 20, 1))
+
+arm.rm_delete_robot_arm()
 ```
 ## 当前工作坐标系下，位置步进`rm_set_pos_step()`
 
@@ -74,10 +84,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_pos_step	(self, rm_pos_te
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 当前工作坐标系X轴方向步进0.05m
+print(arm.rm_set_pos_step(rm_pos_teach_type_e.RM_X_DIR_E, 0.05, 20, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 当前工作坐标系下，姿态步进`rm_set_ort_step()`
@@ -110,10 +130,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_ort_step (self, rm_ort_te
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 绕当前工作坐标系X轴旋转0.01rad
+print(arm.rm_set_ort_step(rm_ort_teach_type_e.RM_RX_ROTATE_E, 0.01, 20, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 关节示教`rm_set_joint_teach()`
@@ -143,10 +173,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_joint_teach (self, int	nu
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 关节5正方向示教
+print(arm.rm_set_joint_teach(5, 1, 20))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 当前工作坐标系下，笛卡尔空间位置示教`rm_set_pos_teach()`
@@ -176,10 +216,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_pos_teach (self, rm_pos_t
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 当前工作坐标系X轴正方向示教
+print(arm.rm_set_pos_teach(rm_pos_teach_type_e.RM_X_DIR_E, 1, 20))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 当前工作坐标系下，笛卡尔空间姿态示教`rm_set_ort_teach()`
@@ -209,10 +259,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_ort_teach (self, rm_ort_t
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 绕当前工作坐标系X轴正方向示教
+print(arm.rm_set_ort_teach(rm_ort_teach_type_e.RM_RX_ROTATE_E, 1, 20))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 示教停止`rm_set_stop_teach()`
@@ -242,10 +302,19 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_stop_teach (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_stop_teach())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 切换示教运动坐标系`rm_set_teach_frame()`
@@ -273,10 +342,20 @@ int Robotic_Arm.rm_robot_interface.ArmTeachMove.rm_set_teach_frame (self, int fr
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 切换示教坐标系为当前工具坐标系
+print(arm.rm_set_teach_frame(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取示教参考坐标系`rm_get_teach_frame()`
@@ -308,8 +387,17 @@ tuple[int,int]: 包含两个元素的元组
 
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_teach_frame())
+
+arm.rm_delete_robot_arm()
 ```

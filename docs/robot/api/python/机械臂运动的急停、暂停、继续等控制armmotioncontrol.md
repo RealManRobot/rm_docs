@@ -27,10 +27,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_slow_stop (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_slow_stop())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 轨迹急停，关节最快速度停止，轨迹不可恢复`rm_set_arm_stop()`
@@ -51,10 +61,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_stop (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_stop())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 轨迹暂停，暂停在规划轨迹上，轨迹可恢复`rm_set_arm_pause()`
@@ -75,10 +95,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_pause (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_pause())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 轨迹暂停后，继续当前轨迹运动`rm_set_arm_continue()`
@@ -99,10 +129,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_continue	(self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_continue())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清除当前轨迹`rm_set_delete_current_trajectory()`
@@ -123,10 +163,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_delete_current_trajec
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_delete_current_trajectory())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清楚所有轨迹`rm_set_arm_delete_trajectory()`
@@ -147,10 +197,20 @@ int Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_set_arm_delete_trajectory
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_delete_trajectory())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取当前正在规划的轨迹信息`rm_get_arm_current_trajectory()`
@@ -185,8 +245,18 @@ dict[str, any] Robotic_Arm.rm_robot_interface.ArmMotionControl.rm_get_arm_curren
 | :--- | :--- | :---|
 |   data  |    `list[float]`   |    无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_current_trajectory())
+
+arm.rm_delete_robot_arm()
 ```

@@ -21,7 +21,7 @@ int Robotic_Arm.rm_robot_interface.SelfCollision.rm_set_self_collision_enable (s
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| enable      | `bool` | true代表使能，false代表禁使能                    |
+| enable      | `bool` | True代表使能，False代表禁使能                    |
 
 
 - **返回值:** </br>
@@ -35,10 +35,20 @@ int Robotic_Arm.rm_robot_interface.SelfCollision.rm_set_self_collision_enable (s
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_self_collision_enable(True))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取自碰撞安全检测使能状态`rm_get_self_collision_enable()`
@@ -68,8 +78,18 @@ tuple[int,bool]: 包含两个元素的元组
 | :-------- | :---- | :----------------------------------- |
 | -      | `bool` | 返回自碰撞安全检测使能状态，true代表使能，false代表禁使能   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_self_collision_enable())
+
+arm.rm_delete_robot_arm()
 ```

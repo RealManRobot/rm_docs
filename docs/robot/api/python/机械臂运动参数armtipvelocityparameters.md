@@ -33,10 +33,19 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_arm_max_line_
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_line_speed(0.25))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置机械臂末端最大线加速度`rm_set_arm_max_line_acc()`
@@ -64,10 +73,19 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_arm_max_line_
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_line_acc(1.6))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -96,10 +114,19 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_arm_max_angul
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_angular_speed(0.6))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置机械臂末端最大角速度`rm_set_arm_max_angular_acc()`
@@ -127,10 +154,19 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_arm_max_angul
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_angular_acc(4))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -152,10 +188,22 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_arm_tcp_init 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 初始化机械臂参数，机械臂的末端参数恢复到默认值。默认参数为：
+# 末端线速度：0.1m/s末端线加速度：0.5m/s²
+# 末端角速度：0.2rad/s末端角加速度：1rad/s²
+print(arm.rm_set_arm_tcp_init())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -184,10 +232,20 @@ int Robotic_Arm.rm_robot_interface.ArmTipVelocityParameters.rm_set_collision_sta
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置机械臂碰撞防护等级为1
+print(arm.rm_set_collision_state(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -218,13 +276,22 @@ tuple[int,int]: 包含两个元素的元组。
 | :--- | :--- | :---|
 |   0～8  |    `int`   |    等级：0~8，0-无碰撞，8-碰撞最灵敏     |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_collision_stage())
+
+arm.rm_delete_robot_arm()
 ```
 
-## 查询碰撞防护等级`rm_get_collision_stage()`
+## 获取机械臂末端最大线速度`rm_get_arm_max_line_speed()`
 
 - **方法原型：**
 ```python
@@ -244,16 +311,25 @@ tuple[int,int]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 碰撞等级
+2. 机械臂末端最大线速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `float`   |    末端最大线速度，单位m/s     |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_max_line_speed())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -277,16 +353,25 @@ tuple[int,float]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 碰撞等级
+2. 机械臂末端最大线加速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `float`   |    末端最大线加速度，单位m/s^2     |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_max_line_acc())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -310,14 +395,23 @@ tuple[int,float]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 碰撞等级
+2. 机械臂末端最大角加速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `float`   |    末端最大角加速度，单位rad/s^2     |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_max_angular_acc())
+
+arm.rm_delete_robot_arm()
 ```
