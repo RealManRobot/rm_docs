@@ -2,8 +2,6 @@
 
 控制运动的急停、缓停、暂停、继续、清除轨迹以及查询当前规划类型。
 
-
-
 ## 轨迹缓停`rm_set_arm_slow_stop()`
 
 >在当前正在运行的轨迹上停止。
@@ -20,7 +18,7 @@ int rm_set_arm_slow_stop(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -59,7 +57,7 @@ int rm_set_arm_stop(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -98,7 +96,7 @@ int rm_set_arm_pause(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -135,7 +133,7 @@ int rm_set_arm_continue(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -174,7 +172,7 @@ int rm_set_delete_current_trajectory(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -213,7 +211,7 @@ int rm_set_arm_delete_trajectory(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -251,9 +249,9 @@ int rm_get_arm_current_trajectory(rm_robot_handle * handle,rm_arm_current_trajec
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   type  |    `/`    |    返回的规划类型。    |
-|   data  |    `float`    |    无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|   type  |    用户输入    |    返回的规划类型。    |
+|   data  |    输出    |    存放无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿。    |
 
 - **返回值:**
 

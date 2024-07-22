@@ -1,8 +1,6 @@
 # 配置通讯内容
 
-机械臂控制器可通过网口、WIFI、RS232-USB 接口和 RS485 接口与用户通信，用户使用时无需切换，可使用上述任一接口， 控制器收到指令后，若指令格式正确，则会通过相同的接口反馈数据。
-
-
+机械臂控制器可通过网口、WIFI、RS232-USB 接口和 RS485 接口与用户通信，本接口为配置响应的通信模式。
 
 ## 配置WiFi AP模式`rm_set_wifi_ap()`
 
@@ -18,9 +16,9 @@ int rm_set_wifi_ap(rm_robot_handle * handle,const char * wifi_name,const char * 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  wifi_name  |    `const char`    |    网络名称。    |
-|  password  |    `const char`    |    网络密码。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  wifi_name  |    输入参数    |    网络名称。    |
+|  password  |    输入参数    |    网络密码。    |
 
 - **返回值:**
 
@@ -54,9 +52,9 @@ int rm_set_wifi_sta(rm_robot_handle * handle,const char * router_name,const char
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  router_name  |    `const char`    |    网络名称。    |
-|  password  |    `const char`    |    网络密码。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  router_name  |    输入参数    |    网络名称。    |
+|  password  |    输入参数    |    网络密码。    |
 
 - **返回值:**
 
@@ -90,8 +88,8 @@ int rm_set_RS485(rm_robot_handle * handle,int baudrate)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  baudrate  |    `int`    |    波特率：9600,19200,38400,115200和460800，若用户设置其他数据，控制器会默认按照460800处理。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  baudrate  |    输入参数    |    波特率：9600,19200,38400,115200和460800，若用户设置其他数据，控制器会默认按照460800处理。    |
 
 - **返回值:**
 
@@ -126,10 +124,10 @@ int rm_get_wired_net(rm_robot_handle * handle,char * ip,char * mask,char * mac)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  ip  |    `char`    |    网络地址。    |
-|  mask  |    `char`    |    子网掩码。    |
-|  mac  |    `char`    |    MAC地址。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  ip  |    输入参数    |    网络地址。    |
+|  mask  |    输入参数    |    子网掩码。    |
+|  mac  |    输入参数    |    MAC地址。    |
 
 - **返回值:**
 
@@ -167,8 +165,8 @@ int rm_get_wifi_net(rm_robot_handle * handle,rm_wifi_net_t * wifi_net)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  wifi_net  |    `char`    |    无线网卡网络信息结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  wifi_net  |    输入参数    |    无线网卡网络信息结构体。    |
 
 - **返回值:**
 
@@ -204,7 +202,7 @@ int rm_set_net_default(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -239,7 +237,7 @@ int rm_set_wifi_close(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
