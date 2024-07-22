@@ -16,11 +16,11 @@ int rm_get_controller_state(rm_robot_handle * handle,float * voltage,float * cur
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  voltage  |    输出    |    返回的电压。    |
-|  current  |    输出    |    返回的电流。    |
-|  temperature  |    输出    |    返回的温度。    |
-|  err_flag  |    输出    |    控制器运行错误代码。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  voltage  |    输出参数    |    返回的电压。    |
+|  current  |    输出参数    |    返回的电流。    |
+|  temperature  |    输出参数    |    返回的温度。    |
+|  err_flag  |    输出参数    |    控制器运行错误代码。    |
 
 - **返回值:**
 
@@ -57,8 +57,8 @@ int rm_set_arm_power(rm_robot_handle * handle,int arm_power)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  arm_power  |    用户输入    |    1-上电状态，0 断电状态。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  arm_power  |    输入参数    |    1-上电状态，0 断电状态。    |
 
 - **返回值:**
 
@@ -91,8 +91,8 @@ int rm_get_arm_power_state(rm_robot_handle * handle,int * power_state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  power_state  |    输出    |    获取到的机械臂电源状态，1-上电状态，0 断电状态。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  power_state  |    输出参数    |    获取到的机械臂电源状态，1-上电状态，0 断电状态。    |
 
 - **返回值:**
 
@@ -127,11 +127,11 @@ int rm_get_system_runtime(rm_robot_handle * handle,int * day,int * hour,int * mi
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  day  |    输出    |    读取到的时间。    |
-|  hour  |    输出    |    读取到的时间。    |
-|  min  |    输出    |    读取到的时间。    |
-|  sec  |    输出    |    读取到的时间。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  day  |    输出参数    |    读取到的时间。    |
+|  hour  |    输出参数    |    读取到的时间。    |
+|  min  |    输出参数    |    读取到的时间。    |
+|  sec  |    输出参数    |    读取到的时间。    |
 
 - **返回值:**
 
@@ -169,7 +169,7 @@ int rm_clear_system_runtime(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -202,8 +202,8 @@ int rm_get_joint_odom(rm_robot_handle * handle,float * joint_odom)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   joint_odom  |    输出    |    存放各关节累计的转动角度的数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   joint_odom  |    输出参数    |    存放各关节累计的转动角度的数组。    |
 
 - **返回值:**
 
@@ -237,7 +237,7 @@ int rm_clear_joint_odom(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -270,8 +270,8 @@ int rm_set_NetIP(rm_robot_handle * handle,const char * ip)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   ip  |    输出    |    有线网口 IP 地址。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   ip  |    输出参数    |    有线网口 IP 地址。    |
 
 - **返回值:**
 
@@ -304,7 +304,7 @@ int rm_clear_system_err(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -337,8 +337,8 @@ int rm_get_arm_software_info(rm_robot_handle * handle,rm_arm_software_version_t 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   software_info  |    用户输入    |    机械臂软件信息结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   software_info  |    输入参数    |    机械臂软件信息结构体。    |
 
 - **返回值:**
 
@@ -372,10 +372,10 @@ int rm_get_controller_RS485_mode(rm_robot_handle * handle,int * mode,int * baudr
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   mode  |    输出    |    存放模式。0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。    |
-|   baudrate  |    输出    |    存放波特率。    |
-|   timeout  |    用户输入    |    modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   mode  |    输出参数    |    存放模式。0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。    |
+|   baudrate  |    输出参数    |    存放波特率。    |
+|   timeout  |    输入参数    |    modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段。    |
 
 - **返回值:**
 
@@ -410,10 +410,10 @@ int rm_get_tool_RS485_mode(rm_robot_handle * handle,int * mode,int * baudrate,in
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   mode  |    输出    |    存放模式。0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。    |
-|   baudrate  |    输出    |    存放波特率。    |
-|   timeout  |    用户输入    |    modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   mode  |    输出参数    |    存放模式。0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。    |
+|   baudrate  |    输出参数    |    存放波特率。    |
+|   timeout  |    输入参数    |    modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段。    |
 
 - **返回值:**
 
@@ -448,8 +448,8 @@ int rm_get_joint_software_version(rm_robot_handle * handle,int * version)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   version  |    输出    |    获取到的各关节软件版本号数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   version  |    输出参数    |    获取到的各关节软件版本号数组。    |
 
 - **返回值:**
 
@@ -485,8 +485,8 @@ int rm_get_tool_software_version(rm_robot_handle * handle,int * version)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|   version  |    输出    |    获取到的各关节软件版本号数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   version  |    输出参数    |    获取到的各关节软件版本号数组。    |
 
 - **返回值:**
 

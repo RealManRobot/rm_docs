@@ -1,10 +1,8 @@
 # 五指灵巧手
 
-睿尔曼机械臂末端配置因时的五指灵巧手，可通过协议对灵巧手进行设置。
+睿尔曼机械臂末端配置因时的五指灵巧手，可通过本接口对灵巧手进行设置，包含手势动作、动作角度、速度、力控范围等。
 
-
-
-## 设置灵巧手目标手势序列号`rm_set_hand_posture()`
+## 按灵巧手目标手势序列号运动`rm_set_hand_posture()`
 
 - **方法原型：**
 
@@ -18,10 +16,10 @@ int rm_set_hand_posture(rm_robot_handle * handle,int posture_num,bool block,int 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  posture_num  |    `int`    |    预先保存在灵巧手内的手势序号，范围：1~40。    |
-|  block  |    `bool`    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
-|   timeout  |    `int`    |    阻塞模式下超时时间设置，单位：秒。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  posture_num  |    输入参数    |    预先保存在灵巧手内的手势序号，范围：1~40。    |
+|  block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
+|   timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -43,7 +41,7 @@ int posture_num = 1;
 ret = rm_set_hand_posture(robot_handle,posture_num,true,10);
 ```
 
-## 设置灵巧手动作序列`rm_set_hand_seq()`
+## 按灵巧手动作序列号运动`rm_set_hand_seq()`
 
 - **方法原型：**
 
@@ -57,10 +55,10 @@ int rm_set_hand_seq(rm_robot_handle * handle,int seq_num,bool block,int timeout)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  seq_num  |    `int`    |    预先保存在灵巧手内的动作序号，范围：1~40。    |
-|  block  |    `bool`    |    `true`表示阻塞模式，等待灵巧手运动结束后返回；`false`表示非阻塞模式，发送后立即返回。    |
-|   timeout  |    `int`    |    阻塞模式下超时时间设置，单位：秒。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  seq_num  |    输入参数    |    预先保存在灵巧手内的动作序号，范围：1~40。    |
+|  block  |    输入参数    |    `true`表示阻塞模式，等待灵巧手运动结束后返回；`false`表示非阻塞模式，发送后立即返回。    |
+|   timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -98,8 +96,8 @@ int rm_set_hand_angle(rm_robot_handle * handle,const int * hand_angle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  hand_angle  |    `const int`    |    预手指角度数组，范围：0~1000. 另外，-1代表该自由度不执行任何操作，保持当前状态。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  hand_angle  |    输入参数    |    预手指角度数组，范围：0~1000. 另外，-1代表该自由度不执行任何操作，保持当前状态。    |
 
 - **返回值:**
 
@@ -133,8 +131,8 @@ int rm_set_hand_speed(rm_robot_handle * handle,int speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  speed  |    `int`    |    手指速度，范围：1~1000。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  speed  |    输入参数    |    手指速度，范围：1~1000。    |
 
 - **返回值:**
 
@@ -168,8 +166,8 @@ int rm_set_hand_force(rm_robot_handle * handle,int hand_force)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  hand_force  |    `int`    |    手指力，范围：1~1000。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  hand_force  |    输入参数    |    手指力，范围：1~1000。    |
 
 - **返回值:**
 

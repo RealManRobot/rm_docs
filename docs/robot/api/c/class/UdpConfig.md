@@ -1,7 +1,6 @@
 # UDP主动上报配置
 
 睿尔曼机械臂提供 UDP 机械臂状态主动上报接口，使用时需要和机械臂处于同一局域网络下，通过设置主动上报配置接口的目标IP或和机械臂建立 TCP 连接，机械臂即会主动周期性上报机械臂状态数据，数据周期可配置，默认5ms。配置正确并开启三线程模式后，通过注册回调函数可接收并处理主动上报数据。
-线编程文件下发、在线编程文件管理、全局路点管理等相关功能接口。
 
 <div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
 
@@ -19,8 +18,8 @@ int rm_set_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t conf
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    UDP配置结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   config  |    输入参数    |    UDP配置结构体。    |
 
 - **返回值:**
 
@@ -59,8 +58,8 @@ int rm_get_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t * co
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    获取到的UDP机械臂状态主动上报配置。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   config  |    输出参数    |    获取到的UDP机械臂状态主动上报配置。    |
 
 - **返回值:**
 

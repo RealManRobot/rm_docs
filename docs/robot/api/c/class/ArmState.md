@@ -18,8 +18,8 @@ int rm_get_current_arm_state(rm_robot_handle * handle,rm_current_arm_state_t * s
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  state  |    输出    |    机械臂当前状态结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  state  |    输出参数    |    机械臂当前状态结构体。    |
 
 - **返回值:**
 
@@ -69,8 +69,8 @@ int rm_get_current_joint_temperature(rm_robot_handle * handle,float * temperatur
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  temperature  |    输出    |    存放关节1~7温度数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  temperature  |    输出参数    |    存放关节1~7温度数组。    |
 
 - **返回值:**
 
@@ -111,8 +111,8 @@ int rm_get_current_joint_current(rm_robot_handle * handle,float * current)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  current  |    输出    |    存放关节1~7电流数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  current  |    输出参数    |    存放关节1~7电流数组。    |
 
 - **返回值:**
 
@@ -153,8 +153,8 @@ int rm_get_current_joint_voltage(rm_robot_handle * handle,float * voltage)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  voltage  |    输出    |    存放关节1~7电压数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  voltage  |    输出参数    |    存放关节1~7电压数组。    |
 
 - **返回值:**
 
@@ -195,8 +195,8 @@ int rm_get_joint_degree(rm_robot_handle * handle,float * joint)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  joint  |    输出    |    当前7个关节的角度数组。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  joint  |    输出参数    |    当前7个关节的角度数组。    |
 
 - **返回值:**
 
@@ -237,8 +237,8 @@ int rm_get_arm_all_state(rm_robot_handle * handle,rm_arm_all_state_t * state)机
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  state  |    输出    |    存储机械臂信息的结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  state  |    输出参数    |    存储机械臂信息的结构体。    |
 
 - **返回值:**
 

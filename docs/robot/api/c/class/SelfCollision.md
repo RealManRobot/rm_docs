@@ -1,6 +1,6 @@
 # 自碰撞安全检测
 
-睿尔曼机械臂支持自碰撞安全检测，自碰撞安全检测使能状态下，可确保在轨迹规划、示教等运动过程中机械臂的各个部分不会相互碰撞。
+睿尔曼机械臂支持自碰撞安全检测，自碰撞安全检测使能状态下，可确保在轨迹规划、示教等运动过程中机械臂的各个部分不会相互碰撞。通过本接口可以对机械臂自碰撞使能状态进行设置和读取。
 >注意：以上自碰撞安全检测功能目前只在仿真模式下生效，用于进行预演轨迹与轨迹优化。
 <div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
 
@@ -18,8 +18,8 @@ int rm_set_self_collision_enable(rm_robot_handle * handle,bool state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `bool`    |    true代表使能，false代表禁使能。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   state  |    输入参数    |    true代表使能，false代表禁使能。    |
 
 - **返回值:**
 
@@ -52,8 +52,8 @@ int rm_get_self_collision_enable(rm_robot_handle * handle,bool * state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `bool`    |    true代表使能，false代表禁使能。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   state  |    输出参数    |    true代表使能，false代表禁使能。    |
 
 - **返回值:**
 

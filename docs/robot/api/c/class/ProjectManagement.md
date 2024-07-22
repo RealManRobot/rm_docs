@@ -1,6 +1,6 @@
 # 在线编程
 
-包含在线编程文件下发、在线编程文件管理、全局路点管理等相关功能接口。
+本接口包含在线编程文件下发、在线编程文件管理、全局路点管理等相关功能接口。
 
 <div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
 
@@ -18,9 +18,9 @@ int rm_send_project(rm_robot_handle * handle,rm_send_project_t project,int * err
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   project  |    `/`    |    文件下发参数配置结构体。    |
-|   errline  |    `int`    |    若运行失败，该参数返回有问题的工程行数，err_line 为 0，则代表校验数据长度不对，err_line 为 -1，则代表无错误。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   project  |    输入参数    |    文件下发参数配置结构体。    |
+|   errline  |    输入参数    |    若运行失败，该参数返回有问题的工程行数，err_line 为 0，则代表校验数据长度不对，err_line 为 -1，则代表无错误。    |
 
 - **返回值:**
 
@@ -61,8 +61,8 @@ int rm_set_plan_speed(rm_robot_handle * handle,int speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   speed  |    `int`    |    当前进度条的速度数据。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   speed  |    输入参数    |    当前进度条的速度数据。    |
 
 - **返回值:**
 
@@ -95,11 +95,11 @@ int rm_get_program_trajectory_list(rm_robot_handle * handle,int page_num,int pag
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   page_num  |    `int`    |    页码。    |
-|   page_size  |    `int`    |    每页大小。    |
-|   vague_search  |    `int`    |    模糊搜索。    |
-|   trajectorys  |    `int`    |    在线编程程序列表。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   page_num  |    输入参数    |    页码。    |
+|   page_size  |    输入参数    |    每页大小。    |
+|   vague_search  |    输入参数    |    模糊搜索的关键词。    |
+|   trajectorys  |    输出参数    |    在线编程程序列表。    |
 
 - **返回值:**
 
@@ -137,10 +137,10 @@ int rm_set_program_id_run(rm_robot_handle * handle,int id,int speed,int block)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   id  |    `int`    |    页码。    |
-|   speed  |    `int`    |    1-100，需要运行轨迹的速度，若设置为0，则按照存储的速度运行。    |
-|   block  |    `int`    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   id  |    输入参数    |    页码。    |
+|   speed  |    输入参数    |    1-100，需要运行轨迹的速度，若设置为0，则按照存储的速度运行。    |
+|   block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
 
 >注意：使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
 
@@ -177,8 +177,8 @@ int rm_get_program_run_state(rm_robot_handle * handle,rm_program_run_state_t * r
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   run_state   |    `/`    |    在线编程运行状态结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   run_state   |    输出参数    |    在线编程运行状态结构体。    |
 
 - **返回值:**
 
@@ -211,8 +211,8 @@ int rm_delete_program_trajectory(rm_robot_handle * handle,int id)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   id   |    `/`    |    指定轨迹的ID。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   id   |    输入参数    |    指定轨迹的ID。    |
 
 - **返回值:**
 
@@ -245,10 +245,10 @@ int rm_update_program_trajectory(rm_robot_handle * handle,int id,int speed,const
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   id   |    `int`    |    指定在线编程轨迹编号。    |
-|   speed   |    `int`    |    更新后的规划速度比例 1-100。    |
-|   name   |    `const char`    |    更新后的文件名称。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   id   |    输入参数    |    指定在线编程轨迹编号。    |
+|   speed   |    输入参数    |    更新后的规划速度比例 1-100。    |
+|   name   |    输入参数    |    更新后的文件名称。    |
 
 - **返回值:**
 
@@ -281,8 +281,8 @@ int rm_set_default_run_program(rm_robot_handle * handle,int id)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   id   |    `int`    |    设置 IO 默认运行的在线编程文件编号，支持 0-100，0 代表取消设置。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   id   |    输入参数    |    设置 IO 默认运行的在线编程文件编号，支持 0-100，0 代表取消设置。    |
 
 - **返回值:**
 
@@ -316,8 +316,8 @@ int rm_get_default_run_program(rm_robot_handle * handle,int * id)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   id   |    `int`    |    存储 IO 默认运行的在线编程文件编号，支持 0-100，0 代表取消设置。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   id   |    输出参数    |    存储 IO 默认运行的在线编程文件编号，支持 0-100，0 代表取消设置。    |
 
 - **返回值:**
 
@@ -350,8 +350,8 @@ int rm_add_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   waypoint   |    `int`    |    新增全局路点参数（无需输入新增全局路点时间）。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   waypoint   |    输入参数    |    新增全局路点参数（无需输入新增全局路点时间）。    |
 
 - **返回值:**
 
@@ -401,8 +401,8 @@ int rm_update_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   waypoint   |    `int`    |    更新全局路点参数（无需输入更新全局路点时间）。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   waypoint   |    输入参数    |    更新全局路点参数（无需输入更新全局路点时间）。    |
 
 - **返回值:**
 
@@ -452,8 +452,8 @@ int rm_delete_global_waypoint(rm_robot_handle * handle,const char * point_name)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   point_name   |    `const char`    |    全局路点名称。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   point_name   |    输入参数    |    全局路点名称。    |
 
 - **返回值:**
 
@@ -486,9 +486,9 @@ int rm_get_given_global_waypoint(rm_robot_handle * handle,const char * name,rm_w
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   name   |    `const char`    |    指定全局路点名称。    |
-|   point   |    `/`    |    返回指定的全局路点参数。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   name   |    输入参数    |    指定全局路点名称。    |
+|   point   |    输出参数    |    返回指定的全局路点参数。    |
 
 - **返回值:**
 
@@ -522,11 +522,11 @@ int rm_get_global_waypoints_list(rm_robot_handle * handle,int page_num,int page_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   page_num   |    `int`    |    页码。    |
-|   page_size   |    `int`    |    每页大小。    |
-|   vague_search   |    `const char`    |    模糊搜索。    |
-|   point_list   |    `/`    |    返回的全局路点列表。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   page_num   |    输入参数    |    页码。    |
+|   page_size   |    输入参数    |    每页大小。    |
+|   vague_search   |    输入参数    |    模糊搜索的关键词。    |
+|   point_list   |    输出参数    |    返回的全局路点列表。    |
 
 - **返回值:**
 

@@ -16,8 +16,8 @@ int rm_set_auto_tool_frame(rm_robot_handle * handle,int point_num)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  point_num  |    用户输入    |    1~6代表6个标定点。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  point_num  |    输入参数    |    1~6代表6个标定点。    |
 
 - **返回值:**
 
@@ -59,12 +59,12 @@ int rm_generate_auto_tool_frame(rm_robot_handle * handle,const char * name,float
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  name  |    用户输入    |    工具坐标系名称，不能超过十个字节。    |
-|   payload  |    用户输入    |    工具执行末端负载重量,单位kg    |
-|   x  |    用户输入    |    工具执行末端负载x轴方向位置，单位m。    |
-|   y  |    用户输入    |    工具执行末端负载y轴方向位置，单位m。    |
-|   z  |    用户输入    |    工具执行末端负载z轴方向位置，单位m。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  name  |    输入参数    |    工具坐标系名称，不能超过十个字节。    |
+|   payload  |    输入参数    |    工具执行末端负载重量,单位kg    |
+|   x  |    输入参数    |    工具执行末端负载x轴方向位置，单位m。    |
+|   y  |    输入参数    |    工具执行末端负载y轴方向位置，单位m。    |
+|   z  |    输入参数    |    工具执行末端负载z轴方向位置，单位m。    |
 
 - **返回值:**
 
@@ -111,8 +111,8 @@ int rm_set_manual_tool_frame(rm_robot_handle * handle,rm_frame_t frame)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  frame  |    用户输入    |    工具坐标系参数,包含末端负载重量、质心位置坐标等参数。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  frame  |    输入参数    |    工具坐标系参数,包含末端负载重量、质心位置坐标等参数。    |
 
 - **返回值:**
 
@@ -164,8 +164,8 @@ int rm_change_tool_frame(rm_robot_handle * handle,const char * tool_name )
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  tool_name  |    用户输入    |    目标工具坐标系名称。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  tool_name  |    输入参数    |    目标工具坐标系名称。    |
 
 - **返回值:**
 
@@ -206,8 +206,8 @@ int rm_delete_tool_frame(rm_robot_handle * handle,const char * tool_name )
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  tool_name  |    用户输入    |    要删除的工具坐标系名称。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  tool_name  |    输入参数    |    要删除的工具坐标系名称。    |
 
 - **返回值:**
 
@@ -248,8 +248,8 @@ int rm_update_tool_frame(rm_robot_handle * handle,rm_frame_t frame)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  frame  |    用户输入    |    要修改的工具坐标系名称。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  frame  |    输入参数    |    要修改的工具坐标系名称。    |
 
 - **返回值:**
 
@@ -303,9 +303,9 @@ int rm_get_total_tool_frame(rm_robot_handle * handle,rm_frame_name_t * frame_nam
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  frame_names  |    用户输入    |    存放返回的工具坐标系名称字符数组。    |
-|  len  |    输出    |    存放返回的工具坐标系名称长度。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  frame_names  |    输入参数    |    存放返回的工具坐标系名称字符数组。    |
+|  len  |    输出参数    |    存放返回的工具坐标系名称长度。    |
 
 - **返回值:**
 
@@ -350,9 +350,9 @@ int rm_get_given_tool_frame(rm_robot_handle * handle,const char * name,rm_frame_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  name  |    用户输入    |    指定的工具坐标系名称。    |
-|  frame  |    输出    |    存放返回的工具参数。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  name  |    输入参数    |    指定的工具坐标系名称。    |
+|  frame  |    输出参数    |    存放返回的工具参数。    |
 
 - **返回值:**
 
@@ -395,8 +395,8 @@ int rm_get_current_tool_frame(rm_robot_handle * handle,rm_frame_t * tool_frame)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  tool_fram  |    输出    |    存放返回的坐标系。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  tool_fram  |    输出参数    |    存放返回的坐标系。    |
 
 - **返回值:**
 
@@ -438,8 +438,8 @@ int rm_set_tool_envelope(rm_robot_handle * handle,rm_envelope_balls_list_t envel
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  envelope  |    用户输入    |    包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  envelope  |    输入参数    |    包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。    |
 
 - **返回值:**
 
@@ -487,9 +487,9 @@ int rm_get_tool_envelope(rm_robot_handle * 	handle,const char * tool_name,rm_env
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂句柄。    |
-|  tool_name  |    输出    |    控制器中已存在的工具坐标系名称。    |
-|  envelope  |    输出    |    存放返回的包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  tool_name  |    输出参数    |    控制器中已存在的工具坐标系名称。    |
+|  envelope  |    输出参数    |    存放返回的包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。    |
 
 - **返回值:**
 

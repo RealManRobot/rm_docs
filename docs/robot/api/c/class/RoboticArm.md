@@ -282,8 +282,8 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户输入    |    机械臂控制句柄。    |
-|   robot_info  |    用户输入    |    存放机械臂基本信息结构体。    |
+|   handle  |    输入参数    |    机械臂控制句柄。    |
+|   robot_info  |    输入参数    |    存放机械臂基本信息结构体。    |
 
 
 - **返回值:**

@@ -1,9 +1,9 @@
 # 末端传感器六维力
 
 睿尔曼机械臂六维力版末端配备集成式六维力传感器，无需外部走线，用户可直接通过协议对六维力进行操作， 获取六维力数据。如下图所示，正上方为六维力的 Z 轴，航插反方向为六维力的 Y 轴，坐标系符合右手定则。 机械臂位于零位姿态时，工具坐标系与六维力的坐标系方向一致。
+![六维力坐标系](/doc/六维力坐标系.png)
 另外，六维力额定力 200N，额定力矩 8Nm，过载水平 300FS，工作温度 5~80℃，准度 0.5FS。使用过程中 注意使用要求，防止损坏六维力传感器。
-
-
+本接口用于查询和配置六维力的状态信息，包含六维力姿态、零点标定和传感器标定等。
 
 ## 查询六维力信息`rm_get_force_data()`
 
@@ -21,8 +21,8 @@ int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  data  |    `/`    |    力传感器数据结构体。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|  data  |    输出参数    |    力传感器数据结构体。    |
 
 - **返回值:**
 
@@ -65,7 +65,7 @@ int rm_clear_force_data(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -84,7 +84,7 @@ ret = rm_clear_force_data(robot_handle);
 printf("clear force data result : %d\n", ret);
 ```
 
-## 自动设置六维力重心参数`rm_set_force_sensor()`
+## 设置六维力重心参数`rm_set_force_sensor()`
 
 >设置六维力重心参数，六维力重新安装后，必须重新计算六维力所受到的初始力和重心。分别在不同姿态下，获取六维力的数据， 用于计算重心位置。该指令下发后，机械臂以固定的速度运动到各标定点。
 >以RM65机械臂为例，四个标定点的关节角度分别为：
@@ -107,8 +107,8 @@ int rm_set_force_sensor(rm_robot_handle * handle,bool block)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   block  |    `bool`    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   block  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
 
 - **返回值:**
 
@@ -128,7 +128,7 @@ ret = rm_set_force_sensor(robot_handle, true);
 printf("set force sensor result : %d\n", ret);
 ```
 
-## 手动标定六维力数据`rm_manual_set_force()`
+## 标定六维力数据`rm_manual_set_force()`
 
 >六维力重新安装后，必须重新计算六维力所受到的初始力和重心。该手动标定流程，适用于空间狭窄工作区域，以防自动标定过程中 机械臂发生碰撞，用户可以手动选取四个位置下发，当下发完四个点后，机械臂开始自动沿用户设置的目标运动，并在此过程中计算六维力重心。
 
@@ -145,10 +145,10 @@ int rm_manual_set_force(rm_robot_handle * handle,int count,float * joint,bool bl
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   count  |    `int`    |    点位；1~4。    |
-|   joint  |    `float`    |    关节角度，单位：°。    |
-|   block  |    `bool`    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   count  |    输入参数    |    点位；1~4。    |
+|   joint  |    输入参数    |    关节角度，单位：°。    |
+|   block  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
 
 - **返回值:**
 
@@ -226,7 +226,7 @@ int rm_stop_set_force_sensor(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
