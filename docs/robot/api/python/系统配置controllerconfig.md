@@ -8,7 +8,7 @@ tags: ""
 可用于系统配置（机械臂状态、电源）等，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是系统配置`ControllerConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
-## 获取控制器状态`rm_get_controller_state()`
+## 获取控制器状态`rm_get_controller_state()`1
 
 - **方法原型：**
 ```python
@@ -40,10 +40,20 @@ dict[str,any]: 包含以下键值的字典
 
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_controller_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置机械臂电源`rm_set_arm_power()`
@@ -71,10 +81,21 @@ int Robotic_Arm.rm_robot_interface.ControllerConfig.rm_set_arm_power (self, int 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 机械臂上电
+print(arm.rm_set_arm_power(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -104,10 +125,20 @@ tuple[int, int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    获取到的机械臂电源状态，1-上电状态，0 断电状态    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_power_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读取控制器的累计运行时间`rm_get_system_runtime()`
@@ -139,10 +170,20 @@ tuple[int, int]: 包含两个元素的元组
 |   min  |    `int`   |    读取到的时间    |
 |   sec  |    `int`   |    读取到的时间    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_system_runtime())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清零控制器的累计运行时间`rm_clear_system_runtime()`
@@ -163,10 +204,20 @@ int Robotic_Arm.rm_robot_interface.ControllerConfig.rm_clear_system_runtime (sel
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_clear_system_runtime())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读取关节的累计转动角度`rm_get_joint_odom()`
@@ -196,10 +247,20 @@ tuple[int, list[float]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |    各关节累计的转动角度    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_joint_odom())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清零关节累计转动的角度`rm_clear_joint_odom()`
@@ -220,10 +281,20 @@ int Robotic_Arm.rm_robot_interface.ControllerConfig.rm_clear_joint_odom (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_clear_joint_odom())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 读取机械臂软件信息`rm_get_arm_software_info()`
@@ -253,10 +324,20 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   rm_arm_software_version_t  |    `dict[str,any]`   |    机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称 |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_software_info())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 清除系统错误`rm_clear_system_err()`
@@ -284,8 +365,18 @@ int Robotic_Arm.rm_robot_interface.ControllerConfig.rm_clear_system_err (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_clear_system_err())
+
+arm.rm_delete_robot_arm()
 ```

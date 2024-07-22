@@ -36,10 +36,20 @@ tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_curren
 |   rm_current_arm_state_t  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_current_arm_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -70,10 +80,20 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   -  |    `list[float]`   |    关节1~7温度数组，单位：℃    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_current_joint_temperature())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取关节当前电流`rm_get_current_joint_current()`
@@ -103,10 +123,20 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   -  |    `list[float]`   |    关节1~7电流数组，单位：mA   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_current_joint_current())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -137,10 +167,20 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   -  |    `list[float]`   |    关节1~7电压数组，单位：V|
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_current_joint_voltage())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置机械臂的初始位置角度`rm_set_init_pose()`
@@ -168,10 +208,20 @@ int Robotic_Arm.rm_robot_interface.ArmState.rm_set_init_pose (self, list[float] 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_init_pose())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取机械臂初始位置角度`rm_get_init_pose()`
@@ -200,10 +250,20 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_init_pose())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取当前关节角度`rm_get_joint_degree()`
@@ -231,10 +291,20 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_joint_degree())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取机械臂所有状态信息`rm_get_arm_all_state()`
@@ -262,17 +332,27 @@ tuple[int, dict[str, any]]: 包含两个元素的元组
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   rm_arm_all_state_t  |  `dict`   | 机械臂所有状态信息字典，键为rm_arm_all_state_t的参数名。 |
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_all_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询控制器RS485模式`rm_get_controller_rs485_mode()`
 
 - **方法原型：**
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_arm_all_state (self)
+tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_controller_rs485_mode (self)
 ```
 
 - **返回值:** </br>
@@ -306,10 +386,20 @@ dict[str, any]: 包含以下键值的字典
 | :--- | :--- | :---|
 |   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_controller_rs485_mode())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -351,8 +441,18 @@ dict[str, any]: 包含以下键值的字典
 | :--- | :--- | :---|
 |   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_tool_rs485_mode())
+
+arm.rm_delete_robot_arm()
 ```

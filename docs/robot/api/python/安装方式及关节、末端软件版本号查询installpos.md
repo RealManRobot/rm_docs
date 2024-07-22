@@ -41,7 +41,16 @@ float 	z
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_install_pose(0, 90, 0))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取安装方式参数`rm_get_install_pose()`
@@ -72,7 +81,16 @@ dict[str, any] Robotic_Arm.rm_robot_interface.InstallPos.rm_get_install_pose (se
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_install_pose())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询关节软件版本号`rm_get_joint_software_version()`
@@ -97,6 +115,20 @@ tuple[int,list[int]]: 包含两个元素的元组 -int 函数执行的状态码
 |   -3 |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。    |
 | list |    `int`   |   获取到的各关节软件版本号数组。    |
 
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_joint_software_version())
+
+arm.rm_delete_robot_arm()
+```
 ## 查询末端接口板软件版本号`rm_get_tool_software_version()`
 
 > 获取到的末端接口板软件版本号需转换为十六进制，例如获取到版本号393，转换为十六进制为189，则当前关节的版本号为 V1.8.9 。
@@ -122,5 +154,14 @@ tuple[int,int]: 包含两个元素的元组 -int 函数执行的状态码。
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_tool_software_version())
+
+arm.rm_delete_robot_arm()
 ```

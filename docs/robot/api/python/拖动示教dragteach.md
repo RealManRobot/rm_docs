@@ -33,10 +33,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_start_drag_teach (self, int traj
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_start_drag_teach(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 拖动示教结束`rm_stop_drag_teach()`
@@ -57,10 +67,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_stop_drag_teach	(self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_stop_drag_teach())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 开始复合模式拖动示教`rm_start_multi_drag_teach()`
@@ -88,10 +108,21 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_start_multi_drag_teach (self, in
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 电流环拖动示教
+print(arm.rm_start_multi_drag_teach(0, 0))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -129,10 +160,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_start_multi_drag_teach (self, in
 - 使用六维力模式拖动示教时，当前已处于奇异区
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_start_multi_drag_teach())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 运动到轨迹起点`rm_drag_trajectory_origin()`
@@ -163,13 +204,24 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_drag_trajectory_origin (self, in
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 阻塞模式运动到轨迹起点
+print(arm.rm_drag_trajectory_origin(1))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 运动到轨迹起点`rm_drag_trajectory_origin()`
+## 拖动示教复现`rm_run_drag_trajectory()`
 
 > 必须在拖动示教结束后才能使用，同时保证机械臂位于拖动示教的起点位置，可调用rm_drag_trajectory_origin接口运动至起点位置。
 
@@ -197,10 +249,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_run_drag_trajectory (self, int t
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_run_drag_trajectory(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 控制机械臂在轨迹复现过程中的暂停`rm_pause_drag_trajectory()`
@@ -222,17 +284,27 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_pause_drag_trajectory	(	 	self)
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_pause_drag_trajectory())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 控制机械臂在轨迹复现过程中暂停之后的继续`rm_continue_drag_trajectory()`
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.DragTeach.rm_continue_drag_trajector (self)
+int Robotic_Arm.rm_robot_interface.DragTeach.rm_continue_drag_trajectory (self)
 ```
 
 - **返回值:** </br>
@@ -247,13 +319,23 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_continue_drag_trajector (self)
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_continue_drag_trajectory())
+
+arm.rm_delete_robot_arm()
 ```
 
-## 控制机械臂在轨迹复现过程中的停止`rm_continue_drag_trajectory()`
+## 控制机械臂在轨迹复现过程中的停止`rm_stop_drag_trajectory()`
 
 - **方法原型：**
 ```python
@@ -272,10 +354,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_stop_drag_trajectory (self)
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_stop_drag_trajectory())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -310,10 +402,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_set_force_position (self, int se
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_force_position(1, 0, 2, 5))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 结束力位混合控制`rm_stop_force_position()`
@@ -335,10 +437,20 @@ int Robotic_Arm.rm_robot_interface.DragTeach.rm_stop_force_position	(self)
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_stop_force_position())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 保存拖动示教轨迹`rm_save_trajectory()`
@@ -373,8 +485,18 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    轨迹点总数    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_save_trajectory("H:/Desktop/example.txt"))
+
+arm.rm_delete_robot_arm()
 ```

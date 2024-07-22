@@ -33,10 +33,20 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_ap (self, str
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_wifi_ap("robot", "12345678"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 配置WiFi STA模式`rm_set_wifi_sta()`
@@ -65,10 +75,20 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_sta	(	 	self,
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_wifi_sta("robot", "12345678"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 控制器RS485接口波特率设置，设置成功后蜂鸣器响`rm_set_RS485()`
@@ -95,10 +115,20 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_RS485	(	 	self, in
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_RS485(115200))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -130,10 +160,20 @@ dict[str,any]: 包含以下键值的字典
 |   mac  |    `str`   |    MAC地址   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_wired_net())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询无线网卡网络信息`rm_get_wifi_net()`
@@ -163,10 +203,20 @@ dict[str,any]: 包含以下键值的字典
 |   rm_wifi_net_t  |    `dict[str,any]`   |    无线网络信息字典，键为rm_wifi_net_t结构体的字段    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_wifi_net())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 恢复网络出厂设置`rm_set_net_default()`
@@ -187,10 +237,20 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_net_default())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -198,7 +258,7 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
+int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_close (self)
 ```
 
 - **返回值:** </br>
@@ -212,8 +272,18 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_wifi_close())
+
+arm.rm_delete_robot_arm()
 ```

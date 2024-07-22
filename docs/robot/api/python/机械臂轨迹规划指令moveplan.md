@@ -39,10 +39,20 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej (self, list[float] joint, i
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 关节阻塞运动到[0, 20, 70, 0, 90, 0]
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 笛卡尔空间直线运动`rm_movel()`
@@ -76,10 +86,20 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movel (self, list[float] pose, in
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movej_p([0.2, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
+print(arm.rm_movel([0.3, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 样条曲线运动`rm_moves()`
@@ -113,10 +133,22 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_moves (self, list[float] pose, in
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1, 0))
+print(arm.rm_moves([0.3, 0, 0.3, 3.14, 0, 0], 20, 1, 1, 0))
+print(arm.rm_moves([0.3, 0.1, 0.3, 3.14, 0, 0], 20, 1, 1, 0))
+print(arm.rm_moves([0.2, 0.1, 0.3, 3.14, 0, 0], 20, 0, 1, 0))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 笛卡尔空间圆弧运动`rm_movec()`
@@ -152,10 +184,24 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movec (self, list[float]	pose_via
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movej([0, 10, 80, 0, 90, 0], 20, 0, 0, 0))
+ret1 = arm.rm_get_current_arm_state()
+ret2 = arm.rm_get_current_arm_state()
+ret1[1]['pose'][0] += 0.02
+ret2[1]['pose'][1] += 0.02
+print(arm.rm_movec(ret1[1]['pose'], ret2[1]['pose'], 20, 1, 0, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 该函数用于关节空间运动到目标位姿`rm_movej_p()`
@@ -189,10 +235,19 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_p (self, list[float] pose, 
 |  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为关节。   |
 |  -5  |    `int`   |   单线程模式超时未接收到返回，请确保超时时间设置合理。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 角度透传控制`rm_movej_canfd()`
@@ -220,10 +275,19 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_canfd (self, list[float] jo
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movej_canfd([0,0,0,0,0,0], False))
+
+arm.rm_delete_robot_arm()
 ```
 
 > 角度不经规划，直接通过CANFD透传给机械臂。角度透传到 CANFD，若指令正确，机械臂立即执行。</br>透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。</br>
@@ -255,10 +319,19 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_canfd (self, list[float] jo
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_movep_canfd([0,0,0.879,0,0,0],False))
+
+arm.rm_delete_robot_arm()
 ```
 
 > 当目标位姿被透传到机械臂控制器时，控制器首先尝试进行逆解计算。 若逆解成功且计算出的各关节角度与当前角度差异不大，则直接下发至关节执行，跳过额外的轨迹规划步骤。 这一特性适用于需要周期性调整位姿的场景，如视觉伺服等应用。</br>透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。</br>

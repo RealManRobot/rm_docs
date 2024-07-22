@@ -44,10 +44,23 @@ Tuple[int, int]: 包含两个元素的元组
 |   其他值  |    `int`   |   有问题的工程行数    |
 |  -1  |    `int`   |   无错误，文件成功下发    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 将文件保存到控制器，编号为8，规划速度比例系数50%。并且运行文件
+file_path = "../TestDatas/example.txt"
+send_project = rm_send_project_t(file_path, 50, 0, 8, 0, 0)
+print(arm.rm_send_project(send_project))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取在线编程列表`rm_get_program_trajectory_list()`
@@ -85,10 +98,21 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   rm_program_trajectorys_t  |    `dict[str,any]`   |    获取到的在线编程列表字典，键为rm_program_trajectorys_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 模糊搜索“a”在线编程文件
+print(arm.rm_get_program_trajectory_list(1, 10, "a"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 开始运行指定编号轨迹`rm_set_program_id_run()`
@@ -120,10 +144,21 @@ int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_set_program_id_run (self
 |  -4  |    `int`   |   运行状态已停止但未接收到运行成功，是否在外部停止了轨迹。   |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 以20%速度阻塞运行编号为8的在线编程
+print(arm.rm_set_program_id_run(8, 20, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -153,10 +188,20 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   rm_program_run_state_t  |    `dict[str,any]`   |    获取到的在线编程运行状态字典，键为rm_program_run_state_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_program_run_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 删除指定编号轨迹`rm_delete_program_trajectory()`
@@ -184,17 +229,27 @@ int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_delete_program_trajector
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_delete_program_trajectory(8))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 修改指定编号的轨迹信息`rm_update_program_trajectory()`
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_auto_work_frame (self, str name, int point_num)
+int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_update_program_trajectory (self, str name, int point_num)
 ```
 
 - **参数说明:**
@@ -218,17 +273,27 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_auto_work_frame (
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_update_program_trajectory(8, 20, "test"))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置 IO 默认运行编号`rm_set_default_run_program()`
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_set_default_run_progra (self, int tra_id)
+int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_set_default_run_program (self, int tra_id)
 ```
 
 - **参数说明:**
@@ -249,10 +314,20 @@ int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_set_default_run_progra (
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_default_run_program(8))
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -260,7 +335,7 @@ int Robotic_Arm.rm_robot_interface.ProjectManagement.rm_set_default_run_progra (
 
 - **方法原型：**
 ```python
-tuple[int, int] Robotic_Arm.rm_robot_interface.ProjectManagement.rm_get_default_run_progra (self)
+tuple[int, int] Robotic_Arm.rm_robot_interface.ProjectManagement.rm_get_default_run_program (self)
 ```
 
 - **返回值:** </br>
@@ -282,8 +357,18 @@ tuple[int,int]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `int`   |    获取到的在线编程运行状态字典，键为rm_program_run_state_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_default_run_program())
+
+arm.rm_delete_robot_arm()
 ```

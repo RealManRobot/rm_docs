@@ -50,10 +50,20 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 |   rm_force_data_t  |    `dict[str, any]`   |    六维力数据字典，键为rm_force_data_t结构体的字段名称    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_force_data())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 将六维力数据清零，标定当前状态下的零位`rm_clear_force_data()`
@@ -74,10 +84,20 @@ int Robotic_Arm.rm_robot_interface.Force.rm_clear_force_data (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_clear_force_data())
+
+arm.rm_delete_robot_arm()
 ```
 ## 自动设置六维力重心参数`rm_set_force_sensor()`
 
@@ -111,10 +131,20 @@ int Robotic_Arm.rm_robot_interface.Force.rm_set_force_sensor (self, bool block)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_force_sensor(True))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 手动标定六维力数据`rm_manual_set_force()`
@@ -148,10 +178,33 @@ int Robotic_Arm.rm_robot_interface.Force.rm_manual_set_force (self, int point_nu
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
+import time
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+set_force_data = [({'point_num': 1, 'joint': [0, 0, -60, 0, 60, 0], 'block': True},
+                       {'point_num': 2, 'joint': [0, 0, -60, 0, -30, 0], 'block': True},
+                       {'point_num': 3, 'joint': [0, 0, -60, 0, -30, 180], 'block': True},
+                       {'point_num': 4, 'joint': [0, 0, -60, 0, -120, 0], 'block': True})]
+
+print(arm.rm_manual_set_force(**set_force_data[0]))
+time.sleep(1)
+print(arm.rm_manual_set_force(**set_force_data[1]))
+time.sleep(1)
+print(arm.rm_manual_set_force(**set_force_data[2]))
+time.sleep(1)
+print(arm.rm_manual_set_force(**set_force_data[3]))
+time.sleep(1)
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -173,10 +226,20 @@ int Robotic_Arm.rm_robot_interface.Force.rm_stop_set_force_sensor	(self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_stop_set_force_sensor())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -205,10 +268,20 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   rm_fz_data_t  |    `dict[str, any]`   |    一维力数据字典，键为rm_fz_data_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_fz())
+
+arm.rm_delete_robot_arm()
 ```
 ## 清零末端一维力数据，清空一维力数据后，后续所有获取到的数据都是基于当前的偏置。`rm_clear_fz()`
 
@@ -228,10 +301,20 @@ int Robotic_Arm.rm_robot_interface.Force.rm_clear_fz (self)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_clear_fz())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 自动标定一维力数据`rm_auto_set_fz()`
@@ -261,10 +344,20 @@ int Robotic_Arm.rm_robot_interface.Force.rm_auto_set_fz	(self, bool block)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_auto_set_fz(True))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 手动标定一维力数据`rm_manual_set_fz()`
@@ -273,7 +366,7 @@ int Robotic_Arm.rm_robot_interface.Force.rm_auto_set_fz	(self, bool block)
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.Force.rm_auto_set_fz	(self, bool block)
+int Robotic_Arm.rm_robot_interface.Force.rm_manual_set_fz	(self, bool block)
 ```
 
 - **参数说明:**
@@ -297,8 +390,18 @@ int Robotic_Arm.rm_robot_interface.Force.rm_auto_set_fz	(self, bool block)
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_manual_set_fz([0, 0, -60, 0, 60, 0], [0, 0, -60, 0, -30, 0], True))
+
+arm.rm_delete_robot_arm()
 ```

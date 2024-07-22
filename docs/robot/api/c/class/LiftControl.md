@@ -78,7 +78,7 @@ int rm_set_lift_height(rm_robot_handle * handle,int speed,int height,int block)
 //设置目标高度100mm，升降速度50%，阻塞运动，默认线程模式为多线程模式
 int height = 100;
 int speed = 50;
-ret = rm_set_lift_height(robot_handle,height,speed,1);
+ret = rm_set_lift_height(robot_handle,speed,height,1);
 ```
 
 ## 获取升降机构状态`rm_get_lift_state()`

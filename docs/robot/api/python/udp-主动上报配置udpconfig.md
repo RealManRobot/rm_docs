@@ -35,10 +35,22 @@ int Robotic_Arm.rm_robot_interface.UdpConfig.rm_set_realtime_push	(self, rm_real
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置使能UDP上报配置，周期为500ms，端口号8089，系统外受力坐标系为传感器坐标系，上报目标IP地址为"192.168.1.104"
+config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104")
+print(arm.rm_set_realtime_push(config))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 查询 UDP 机械臂状态主动上报配置`rm_get_realtime_push()`
@@ -67,8 +79,18 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 | :--- | :--- | :---|
 |   -  |    `dict[str,any] `   |    返回 UDP 机械臂状态主动上报配置字典，键为rm_realtime_push_config_t结构体的字段名称    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_realtime_push())
+
+arm.rm_delete_robot_arm()
 ```

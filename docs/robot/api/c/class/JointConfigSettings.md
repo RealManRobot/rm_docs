@@ -110,9 +110,9 @@ int rm_set_joint_min_pos(rm_robot_handle * handle,int joint_num,float min_pos)
 - **使用示例**
   
 ```C
-//设置关节6，最小限位度数-360°
-int joint_num = 6;                                                        
-float joint = -360;                                                        
+//设置关节1，最小限位度数-178°
+int joint_num = 1;                                                        
+float joint = -178;                                                        
 ret=rm_set_joint_min_pos(robot_handle,joint_num,joint);
 ```
 

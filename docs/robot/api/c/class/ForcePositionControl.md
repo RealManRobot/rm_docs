@@ -112,7 +112,7 @@ int mode = 0;
 int dir = 2;
 float force = 5;
 bool follow = true;
-ret=Force_Position_Move_Joint(robot_handle,joint,sensor,mode,dir,force,follow);
+ret=rm_force_position_move_joint(robot_handle,joint,sensor,mode,dir,force,follow);
 ```
 
 ## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`

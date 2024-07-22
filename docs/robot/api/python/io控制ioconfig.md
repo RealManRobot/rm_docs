@@ -41,10 +41,21 @@ int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_io_mode (self, int io_num, in
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置IO 1通道为通用输出模式
+print(arm.rm_set_io_mode(1, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置数字IO输出`rm_set_do_state()`
@@ -73,10 +84,21 @@ int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_do_state	(self, int io_num, i
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置IO 1通道输出高
+print(arm.rm_set_do_state(1, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取数字 IO 状态`rm_get_io_state()`
@@ -113,10 +135,21 @@ dict[str,any]: 包含以下键值的字典
 |   IO_state  |    `int`   |     IO 状态    |
 | io_mode | `int` | 模式</br>0-通用输入模式</br>1-通用输出模式</br>2-输入开始功能复用模式</br>3-输入暂停功能复用模式</br>4-输入继续功能复用模式</br>5-输入急停功能复用模式</br>6-输入进入电流环拖动复用模式</br>7-输入进入力只动位置拖动模式（六维力版本可配置）</br>8-输入进入力只动姿态拖动模式（六维力版本可配置）</br>9-输入进入力位姿结合拖动复用模式（六维力版本可配置）</br>10-输入外部轴最大软限位复用模式（外部轴模式可配置）</br>11-输入外部轴最小软限位复用模式（外部轴模式可配置） |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 获取IO 1通道状态
+print(arm.rm_get_io_state(1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取所有 IO 输入状态`rm_get_io_input()`
@@ -146,10 +179,21 @@ tuple[int, list[int]]: 函数执行的状态码
 | :--- | :--- | :---|
 |   -  |    `list[int]`   |     4路数字输入状态列表，1：高，0：低，-1：该端口不是输入模式    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 获取IO输入状态
+print(arm.rm_get_io_input())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -157,7 +201,7 @@ tuple[int, list[int]]: 函数执行的状态码
 
 - **方法原型：**
 ```python
-tuple[int, list[int]] Robotic_Arm.rm_robot_interface.IOConfig.rm_get_io_input	(self)
+tuple[int, list[int]] Robotic_Arm.rm_robot_interface.IOConfig.rm_get_io_output	(self)
 ```
 
 
@@ -180,10 +224,20 @@ tuple[int, list[int]]: 函数执行的状态码
 | :--- | :--- | :---|
 |   -  |    `list[int]`   |     4路数字输出状态列表，1：高，0：低，-1：该端口不是输出模式    |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_io_output())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置控制器电源输出`rm_set_voltage()`
@@ -211,10 +265,21 @@ int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_voltage (self, int voltage_ty
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置控制器电源输出24V
+print(arm.rm_set_voltage(3))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取控制器电源输出类`rm_get_voltage()`
@@ -244,10 +309,20 @@ tuple[int, int]
 |   -  |    `int`   |    电源输出类型，0：0V，2：12V，3：24V    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_voltage())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置工具端数字 IO 输出`rm_set_tool_do_state()`
@@ -276,17 +351,28 @@ int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_tool_do_state (self, int io_n
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置工具端IO 1通道输出高
+print(arm.rm_set_tool_do_state(1, 1))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置工具端数字 IO 模式`rm_set_tool_IO_mode()`
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_tool_IO_mode | ( |   | self, int io_num, int state)
+int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_tool_IO_mode ( self, int io_num, int state)
 ```
 
 - **参数说明:**
@@ -308,13 +394,24 @@ int Robotic_Arm.rm_robot_interface.IOConfig.rm_set_tool_IO_mode | ( |   | self, 
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置工具端数字IO 1端口为输入模式
+print(arm.rm_set_tool_IO_mode(1, 0))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 设置工具端数字 IO 模式`rm_get_tool_io_state()`
+## 获取工具端数字 IO 模式`rm_get_tool_io_state()`
 
 - **方法原型：**
 ```python
@@ -342,10 +439,20 @@ dict[str, any]: 包含以下键值的字典
 |   IO_state  |    `list[int]`   |    0-低，1-高    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_tool_io_state())
+
+arm.rm_delete_robot_arm()
 ```
 
 
@@ -383,13 +490,24 @@ dict[str, any]: 包含以下键值的字典
 |   IO_state  |    `list[int]`   |    0-低，1-高    |
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置工具端电源输出24V
+print(arm.rm_set_tool_voltage(3))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 设置工具端电源输出`rm_get_tool_voltage()`
+## 获取工具端电源输出`rm_get_tool_voltage()`
 
 - **方法原型：**
 ```python
@@ -422,8 +540,18 @@ tuple[int, int]
 |   IO_Mode  |    `list[int]`   |  电源输出类型，0：0V，1：5V，2：12V，3：24V|
 
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_tool_voltage())
+
+arm.rm_delete_robot_arm()
 ```

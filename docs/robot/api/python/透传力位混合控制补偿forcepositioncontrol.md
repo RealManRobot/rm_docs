@@ -26,42 +26,27 @@ int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_start_force_position_
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_start_force_position_move())
+
+arm.rm_delete_robot_arm()
 ```
-
-## 开启透传力位混合控制补偿模式`rm_start_force_position_move()`
-
-- **方法原型：**
-```python
-int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_start_force_position_move (self)	
-```
-
-- **返回值:** </br>
-函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-- **使用使用示例**
-  
-```python
-
-```
-
 
 ## 停止透传力位混合控制补偿模式`rm_stop_force_position_move()`
 
 - **方法原型：**
 ```python
-int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_start_force_position_move (self)	
+int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_stop_force_position_move (self)	
 ```
 
 - **返回值:** </br>
@@ -75,10 +60,20 @@ int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_start_force_position_
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_stop_force_position_move())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 透传力位混合补偿-角度方式`rm_force_position_move_joint()`
@@ -111,13 +106,24 @@ int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_force_position_move_j
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 力控为六维力传感器沿工具坐标系Z轴方向2N的力，高跟随透传角度
+print(arm.rm_force_position_move_joint([0, 0, 0, 0, 0, 0], 1, 1, 2, 2, True))
+
+arm.rm_delete_robot_arm()
 ```
 
-## 透传力位混合补偿-位姿方式`rm_force_position_move_joint()`
+## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`
 
 - **方法原型：**
 ```python
@@ -147,8 +153,23 @@ int Robotic_Arm.rm_robot_interface.ForcePositionControl.rm_force_position_move_p
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-- **使用使用示例**
+- **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 获取当前位姿
+ret = arm.rm_get_current_arm_state()
+print(f"pose{ret[1]['pose']}")
+
+# 力控为六维力传感器沿工具坐标系Z轴方向2N的力，高跟随透传位姿
+print(arm.rm_force_position_move_pose(ret[1]["pose"], 1, 1, 2, 2, True))
+
+arm.rm_delete_robot_arm()
 ```
