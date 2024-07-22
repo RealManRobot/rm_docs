@@ -1,7 +1,8 @@
 # 关节配置
 
-对机械臂的关节参数进行设置，如果关节发生错误，则无法修改关节参数，必须先清除关节错误代码。另外设置关节之前， 必须先将关节掉使能，否则会设置不成功。
-关节所有参数在修改完成后，会自动保存到关节 Flash，立即生效，之后关节处于掉使能状态，修改完参数后必须 发送指令控制关节上使能。
+对机械臂的关节参数进行设置，如速度、加速度、限位、零位、关节报错信息等。
+如果关节发生错误，则无法修改关节参数，必须先清除关节错误代码。另外设置关节之前， 必须先将关节掉使能，否则会设置不成功。
+关节所有参数在修改完成后，会自动保存到关节 Flash，立即生效，之后关节处于掉使能状态，修改完参数后必须发送指令控制关节上使能。
 
 
 
@@ -19,9 +20,9 @@ int rm_set_joint_max_speed(rm_robot_handle * handle,int joint_num,float max_spee
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_speed  |    `float`    |    关节最大速度，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_speed  |    用户输入    |    关节最大速度，单位：°/s。    |
 
 - **返回值:**
 
@@ -55,9 +56,9 @@ int rm_set_joint_max_acc(rm_robot_handle *handle,int joint_num,float max_acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_acc  |    `float`    |    关节最大加速度，单位：°/s²。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_acc  |    用户输入    |    关节最大加速度，单位：°/s²。    |
 
 - **返回值:**
 
@@ -92,9 +93,9 @@ int rm_set_joint_min_pos(rm_robot_handle * handle,int joint_num,float min_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  min_pos  |    `float`    |    关节最小位置，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  min_pos  |    用户输入    |    关节最小位置，单位：°。    |
 
 - **返回值:**
 
@@ -129,9 +130,9 @@ int rm_set_joint_max_pos(rm_robot_handle * handle,int joint_num,float max_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_pos  |    `float`    |    关节最大位置，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_pos  |    用户输入    |    关节最大位置，单位：°。    |
 
 - **返回值:**
 
@@ -166,9 +167,9 @@ int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float ma
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_speed  |    `float`    |    关节最大速度，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_speed  |    用户输入    |    关节最大速度，单位：°/s。    |
 
 - **返回值:**
 
@@ -188,7 +189,7 @@ int ret = rm_set_joint_drive_max_speed(robot_handle,1,180);
 printf("rm_set_joint_drive_max_speed result:%d\n",ret);
 ```
 
-## 设置关节最大加速度(驱动器)`rm_set_joint_drive_max_acc()`
+## 设置关节最大加速度(硬件)`rm_set_joint_drive_max_acc()`
 
 - **方法原型：**
 
@@ -202,9 +203,9 @@ int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float ma
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_acc  |    `float`    |    关节最大加速度，单位：°/s²。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_acc  |    用户输入    |    关节最大加速度，单位：°/s²。    |
 
 - **返回值:**
 
@@ -239,9 +240,9 @@ int rm_set_joint_drive_min_pos(rm_robot_handle * handle,int joint_num,float min_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  min_pos  |    `float`    |    关节最小位置。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  min_pos  |    用户输入    |    关节最小位置。    |
 
 - **返回值:**
 
@@ -276,9 +277,9 @@ int rm_set_joint_drive_max_pos(rm_robot_handle * handle,int joint_num,float max_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  max_pos  |    `float`    |    关节最大位置。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  max_pos  |    用户输入    |    关节最大位置。    |
 
 - **返回值:**
 
@@ -313,9 +314,9 @@ int rm_set_joint_en_state(rm_robot_handle * handle,int joint_num,int en_state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
-|  en_state  |    `int`     |    1：上使能 0：掉使能。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
+|  en_state  |    用户输入     |    1：上使能 0：掉使能。    |
 
 - **返回值:**
 
@@ -349,8 +350,8 @@ int rm_set_joint_zero_pos(rm_robot_handle * handle,int joint_num)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
 
 - **返回值:**
 
@@ -384,8 +385,8 @@ int rm_set_joint_clear_err(rm_robot_handle * handle,int joint_num)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  joint_num  |    `int`    |    关节序号。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  joint_num  |    用户输入    |    关节序号。    |
 
 - **返回值:**
 
@@ -405,7 +406,7 @@ int joint_num = 2;
 ret=rm_set_joint_clear_err(m_sockhand,joint_num);  
 ```
 
-## 一键设置关节限位`rm_auto_set_joint_limit()`
+## 恢复关节出厂限位`rm_auto_set_joint_limit()`
 
 - **方法原型：**
 
@@ -419,8 +420,8 @@ int rm_auto_set_joint_limit(rm_robot_handle *handle,int limit_mode)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  limit_mode  |    `int`    |    1:正式模式，各关节限位为规格参数中的软限位和硬件限位。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  limit_mode  |    用户输入    |    1:正式模式，各关节限位为规格参数中的软限位和硬件限位。    |
 
 - **返回值:**
 
@@ -453,8 +454,8 @@ int rm_get_joint_max_speed(rm_robot_handle * handle,float * max_speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_speed  |    `float`    |    关节1~7转速数组，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_speed  |    用户输入    |    关节1~7转速数组，单位：°/s。    |
 
 - **返回值:**
 
@@ -493,8 +494,8 @@ int rm_get_joint_max_acc(rm_robot_handle * handle,float * max_acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_acc  |    `float`    |    关节1~7加速度数组，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_acc  |    用户输入    |    关节1~7加速度数组，单位：°/s。    |
 
 - **返回值:**
 
@@ -533,8 +534,8 @@ int rm_get_joint_min_pos(rm_robot_handle * handle,float * min_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  min_pos  |    `float`    |    关节1~7最小位置数组，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  min_pos  |    用户输入    |    关节1~7最小位置数组，单位：°。    |
 
 - **返回值:**
 
@@ -573,8 +574,8 @@ int rm_get_joint_max_pos(rm_robot_handle * handle,float * max_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_pos  |    `float`    |    关节1~7最大位置数组，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_pos  |    用户输入    |    关节1~7最大位置数组，单位：°。    |
 
 - **返回值:**
 
@@ -599,7 +600,7 @@ for (int i = 0; i < 6; i++) {
 printf("\n");
 ```
 
-## 查询关节(驱动器)最大速度`rm_get_joint_drive_max_speed()`
+## 查询关节(硬件)最大速度`rm_get_joint_drive_max_speed()`
 
 - **方法原型：**
 
@@ -613,8 +614,8 @@ int rm_get_joint_drive_max_speed(rm_robot_handle * handle,float * max_speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_speed  |    `float`    |    关节1~7转速数组，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_speed  |    用户输入    |    关节1~7转速数组，单位：°/s。    |
 
 - **返回值:**
 
@@ -653,8 +654,8 @@ int rm_get_joint_drive_max_acc(rm_robot_handle * handle,float * max_acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_acc  |    `float`    |    关节1~7加速度数组，单位：°/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_acc  |    用户输入    |    关节1~7加速度数组，单位：°/s。    |
 
 - **返回值:**
 
@@ -693,8 +694,8 @@ int rm_get_joint_drive_min_pos(rm_robot_handle * handle,float * min_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  min_pos  |    `float`    |    关节1~7最小位置数组，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  min_pos  |    用户输入    |    关节1~7最小位置数组，单位：°。    |
 
 - **返回值:**
 
@@ -733,8 +734,8 @@ int rm_get_joint_drive_max_pos(rm_robot_handle * handle,float * max_pos)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  max_pos  |    `float`    |    关节1~7最大位置数组，单位：°。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  max_pos  |    用户输入    |    关节1~7最大位置数组，单位：°。    |
 
 - **返回值:**
 
@@ -773,8 +774,8 @@ int rm_get_joint_en_state(rm_robot_handle * handle,uint8_t * en_state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  en_state  |    `uint8_t`    |    关节1~7使能状态数组，1-使能状态，0-掉使能状态。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  en_state  |    用户输入    |    关节1~7使能状态数组，1-使能状态，0-掉使能状态。    |
 
 - **返回值:**
 
@@ -813,9 +814,9 @@ int rm_get_joint_err_flag(rm_robot_handle * handle,uint16_t * err_flag,uint16_t 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  err_flag  |    `uint16_t`    |    反馈关节错误代码，错误码请参见[机械臂错误码查询](../eeorList.md)。    |
-|  brake_state  |    `uint16_t`    |    反馈关节抱闸状态，1 代表抱闸未打开，0 代表抱闸已打开。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  err_flag  |    用户输入    |    反馈关节错误代码，错误码请参见[机械臂错误码查询](../eeorList.md)。    |
+|  brake_state  |    用户输入    |    反馈关节抱闸状态，1 代表抱闸未打开，0 代表抱闸已打开。    |
 
 - **返回值:**
 

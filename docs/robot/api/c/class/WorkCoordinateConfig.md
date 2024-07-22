@@ -1,10 +1,8 @@
 # 工作坐标系配置
 
-工作坐标系标定、切换、删除、修改、查询等管理。
+工作坐标系标定、切换、删除、修改、查询等配置。
 
-
-
-## 三点法自动设置工作坐标系`rm_set_auto_work_frame()`
+## 三点法设置工作坐标系`rm_set_auto_work_frame()`
 
 - **方法原型：**
 
@@ -18,9 +16,9 @@ int rm_set_auto_work_frame(rm_robot_handle * handle,const char * workname,int po
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  workname  |    `const char`    |    工作坐标系名称，不能超过十个字节。    |
-|  point_num  |    `int`    |    1~3代表3个标定点，依次为原点、X轴一点、Y轴一点，4代表生成坐标系。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  workname  |    用户输入    |    工作坐标系名称，不能超过十个字节。    |
+|  point_num  |    用户输入    |    1~3代表3个标定点，依次为原点、X轴一点、Y轴一点，4代表生成坐标系。    |
 
 - **返回值:**
 
@@ -49,7 +47,7 @@ if (result == 0) {
 }  
 ```
 
-## 手动设置工作坐标系`rm_set_manual_work_frame()`
+## 设置工作坐标系`rm_set_manual_work_frame()`
 
 - **方法原型：**
 
@@ -63,9 +61,9 @@ int rm_set_manual_work_frame(rm_robot_handle * handle,const char * work_name,rm_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  work_name  |    `const char`    |    工作坐标系名称，不能超过十个字节。    |
-|  pose  |    `/`    |    新工作坐标系相对于基坐标系的位姿。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  work_name  |    用户输入    |    工作坐标系名称，不能超过十个字节。    |
+|  pose  |    用户输入    |    新工作坐标系相对于基坐标系的位姿。    |
 
 - **返回值:**
 
@@ -115,8 +113,8 @@ int rm_change_work_frame(rm_robot_handle * handle,const char * work_name)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  work_name  |    `const char`    |    目标工作坐标系名称。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  work_name  |    用户输入    |    目标工作坐标系名称。    |
 
 - **返回值:**
 
@@ -134,7 +132,7 @@ int rm_change_work_frame(rm_robot_handle * handle,const char * work_name)
 // 坐标系名称，应该与已经设置的工作坐标系名称之一相匹配  
 const char *work_name = "Work1";  
 
-// 调用函数更改当前工作坐标系  
+// 调用函数切换当前工作坐标系  
 int result = rm_change_work_frame(robot_handle, work_name);  
 if (result == 0) {  
     printf("Successfully changed to work frame '%s'\n", work_name);  
@@ -157,8 +155,8 @@ int rm_delete_work_frame(rm_robot_handle * handle,const char * work_name)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  work_name  |    `const char`    |    要删除的工作坐标系名称。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  work_name  |    用户输入    |    要删除的工作坐标系名称。    |
 
 - **返回值:**
 
@@ -199,9 +197,9 @@ int rm_update_work_frame(rm_robot_handle * handle,const char * work_name,rm_pose
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  work_name  |    `const char`    |    工作坐标系名称，不能超过十个字节。    |
-|  pose  |    `/`    |    新工作坐标系相对于基坐标系的位姿。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  work_name  |    用户输入    |    工作坐标系名称，不能超过十个字节。    |
+|  pose  |    用户输入    |    新工作坐标系相对于基坐标系的位姿。    |
 
 - **返回值:**
 
@@ -244,9 +242,9 @@ int rm_get_total_work_frame(rm_robot_handle * handle,rm_frame_name_t * frame_nam
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  frame_names  |    `/`    |    存放返回的工作坐标系名称字符数组。    |
-|  len  |    `int`    |    存放返回的工作坐标系名称长度。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  frame_names  |    输出    |    存放返回的工作坐标系名称字符数组。    |
+|  len  |    输出    |    存放返回的工作坐标系名称长度。    |
 
 - **返回值:**
 
@@ -291,9 +289,9 @@ int rm_get_given_work_frame(rm_robot_handle * handle,const char * name,rm_pose_t
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  name  |    `const char`    |    指定的工作坐标系名称。    |
-|  pose  |    `/`    |    存放返回的位姿。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  name  |    用户输入    |    指定的工作坐标系名称。    |
+|  pose  |    输出    |    存放返回的位姿。    |
 
 - **返回值:**
 
@@ -332,8 +330,8 @@ int rm_get_current_work_frame(rm_robot_handle * handle,rm_frame_t * work_frame)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |   机械臂控制句柄 。    |
-|  work_frame  |    `const char`    |    存放返回的坐标系。    |
+|   handle  |    用户输入    |   机械臂控制句柄 。    |
+|  work_frame  |    输出    |    存放返回的坐标系。    |
 
 - **返回值:**
 

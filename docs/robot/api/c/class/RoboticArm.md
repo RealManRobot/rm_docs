@@ -57,7 +57,9 @@ int rm_init(rm_thread_mode_e mode)
 rm_init(RM_TRIPLE_MODE_E);
 ```
 
-## 关闭所有连接，销毁所有线程`rm_destory()`
+## 销毁所有线程`rm_destory()`
+
+> 注意：此操作会关闭所有连接。
 
 - **方法原型：**
 
@@ -77,7 +79,7 @@ int rm_destory(void )
 rm_destory();
 ```
 
-## 日志打印配置`rm_set_log_call_back()`
+## 配置日志打印`rm_set_log_call_back()`
 
 - **方法原型：**
 
@@ -91,7 +93,7 @@ void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback
 
 |  参数    |   说明    |
 | :--- | :--- |
-|   LogCallback  |    日志打印回调函数    |
+|   LogCallback  |    日志打印回调函数。    |
 |   level  |   日志打印等级。0：debug级别；1：info级别；2：warn级别；3.error级别。    |
 
 - **使用示例**
@@ -155,7 +157,7 @@ else if(robot_handle != NULL)
 }
 ```
 
-## 根据句柄删除机械臂`rm_delete_robot_arm()`
+## 删除指定机械臂实例`rm_delete_robot_arm()`
 
 - **方法原型：**
 
@@ -184,7 +186,7 @@ int rm_delete_robot_arm(rm_robot_handle * handle)
 rm_delete_robot_arm(robot_handle);
 ```
 
-## 机械臂仿真/真实模式设置`rm_set_arm_run_mode()`
+## 设置机械臂仿真/真实模式`rm_set_arm_run_mode()`
 
 - **方法原型：**
 
@@ -225,7 +227,7 @@ if (ret == 0) {
 }
 ```
 
-## 机械臂仿真/真实模式获取`rm_get_arm_run_mode()`
+## 获取机械臂仿真/真实模式`rm_get_arm_run_mode()`
 
 - **方法原型：**
 
@@ -278,10 +280,10 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 
 - **参数说明:**
 
-|   参数    |   值    |   说明    |
+|   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   robot_info  |    用户自定义    |    存放机械臂基本信息结构体。    |
+|   handle  |    用户输入    |    机械臂控制句柄。    |
+|   robot_info  |    用户输入    |    存放机械臂基本信息结构体。    |
 
 
 - **返回值:**

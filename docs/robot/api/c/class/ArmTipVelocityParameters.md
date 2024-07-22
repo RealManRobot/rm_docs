@@ -1,8 +1,6 @@
 # 机械臂末端运动参数配置
 
-机械臂末端运动参数设置及获取，包含线速度设置与查询、角速度设置与查询、角加速度设置与查询、碰撞等级设置与查询等。
-
-
+机械臂末端运动参数设置及查询，包含线速度设置与查询、角速度设置与查询、角加速度设置与查询、碰撞等级设置与查询等。
 
 ## 设置机械臂末端最大线速度`rm_set_arm_max_line_speed()`
 
@@ -18,8 +16,8 @@ int rm_set_arm_max_line_speed(rm_robot_handle * handle,float speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  speed  |    `float`    |    末端最大线速度，单位m/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  speed  |    用户输入    |    末端最大线速度，单位m/s。    |
 
 - **返回值:**
 
@@ -53,8 +51,8 @@ int rm_set_arm_max_line_acc(rm_robot_handle * handle,float acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  acc  |    `float`    |    末端最大线加速度，单位m/s^2。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  acc  |    用户输入    |    末端最大线加速度，单位m/s^2。    |
 
 - **返回值:**
 
@@ -88,8 +86,8 @@ int rm_set_arm_max_angular_speed(rm_robot_handle * handle,float speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  speed  |    `float`    |    末端最大角速度，单位rad/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  speed  |    用户输入    |    末端最大角速度，单位rad/s。    |
 
 - **返回值:**
 
@@ -123,8 +121,8 @@ int rm_set_arm_max_angular_acc(rm_robot_handle * handle,float acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  acc  |    `float`    |    末端最大角加速度，单位rad/s^2。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  acc  |    用户输入    |    末端最大角加速度，单位rad/s^2。    |
 
 - **返回值:**
 
@@ -158,7 +156,7 @@ int rm_set_arm_tcp_init(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -193,8 +191,8 @@ int rm_set_collision_state(rm_robot_handle * handle,int collision_stage)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  collision_stage  |    `int`    |    等级：0~8，0-无碰撞检测，8-碰撞检测最灵敏。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  collision_stage  |    用户输入    |    等级：0~8，0-无碰撞检测，8-碰撞检测最灵敏。    |
 
 - **返回值:**
 
@@ -228,8 +226,8 @@ int rm_get_collision_stage(rm_robot_handle * handle,int * collision_stage)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  collision_stage  |    `int`    |    存放返回的碰撞等级值的变量，数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  collision_stage  |    输出    |    存放返回的碰撞等级值的变量，数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
 
 - **返回值:**
 
@@ -263,8 +261,8 @@ int rm_get_arm_max_line_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  speed  |    `int`    |    存放返回的末端最大线速度值的变量，单位m/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  speed  |    输出    |    存放返回的末端最大线速度值的变量，单位m/s。    |
 
 - **返回值:**
 
@@ -298,8 +296,8 @@ int rm_get_arm_max_line_acc(rm_robot_handle * handle,float * acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  acc  |    `int`    |    存放返回的末端最大线加速度值的变量，单位m/s^2。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  acc  |    输出    |    存放返回的末端最大线加速度值的变量，单位m/s^2。    |
 
 - **返回值:**
 
@@ -333,8 +331,8 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  speed  |    `int`    |    存放返回的末端末端最大角速度值的变量，单位rad/s。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  speed  |    输出    |    存放返回的末端末端最大角速度值的变量，单位rad/s。    |
 
 - **返回值:**
 
@@ -368,8 +366,8 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|  acc  |    `int`    |    存放返回的末端最大角加速度值的变量，单位rad/s^2。    |
+|   handle  |    用户输入    |    机械臂句柄。    |
+|  acc  |    输出    |    存放返回的末端最大角加速度值的变量，单位rad/s^2。    |
 
 - **返回值:**
 
