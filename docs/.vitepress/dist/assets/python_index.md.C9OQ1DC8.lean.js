@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as n}from"./chunks/framework.nVtVLczR.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"python/index.md","filePath":"python/index.md","lastUpdated":null}'),a={name:"python/index.md"};function o(r,s,d,c,p,i){return n(),t("div")}const m=e(a,[["render",o]]);export{l as __pageData,m as default};

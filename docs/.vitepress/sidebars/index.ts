@@ -62,105 +62,266 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: false,
         items: [
           {
-            text: "C & C++",
+            text: "快速开始",
+            link: "/robot/api/c/getStarted",
+          },
+          {
+            text: "接口列表",
             collapsed: true,
             items: [
               {
-                text: "类列表",
-                collapsed: true,
-                items: [
-                  {
-                    text: "连接机械臂",
-                    link: "/robot/api/c/class/RoboticArm",
-                  },
-                  {
-                    text: "工具坐标系配置",
-                    link: "/robot/api/c/class/ToolCoordinateConfig",
-                  },
-                  {
-                    text: "工作坐标系配置",
-                    link: "/robot/api/c/class/WorkCoordinateConfig",
-                  },
-                  {
-                    text: "初始位置设置",
-                    link: "/robot/api/c/class/ArmInitPosition",
-                  },
-                  {
-                    text: "机械臂运动控制指令类",
-                    link: "/robot/api/c/class/ArmMotionControl",
-                  },
-                  {
-                    text: "机械臂状态查询",
-                    link: "/robot/api/c/class/ArmState",
-                  },
-                  {
-                    text: "机械臂示教指令类",
-                    link: "/robot/api/c/class/ArmTeachMove",
-                  },
-                  {
-                    text: "机械臂末端运动参数配置",
-                    link: "/robot/api/c/class/ArmTipVelocityParameters",
-                  },
-                  {
-                    text: "通讯配置",
-                    link: "/robot/api/c/class/CommunicationConfig",
-                  },
-                  {
-                    text: "控制器IO配置及获取",
-                    link: "/robot/api/c/class/ControllerIOConfig",
-                  },
-                  {
-                    text: "拖动示教",
-                    link: "/robot/api/c/class/DragTeach",
-                  },
-                  {
-                    text: "末端工具IO控制",
-                    link: "/robot/api/c/class/EffectorIOConfig",
-                  },
-                  {
-                    text: "通用扩展关节控制",
-                    link: "/robot/api/c/class/ExpandControl",
-                  },
-                  {
-                    text: "末端传感器六维力",
-                    link: "/robot/api/c/class/Force",
-                  },
-                  {
-                    text: "透传力位混合控制补偿",
-                    link: "/robot/api/c/class/GripperControl",
-                  },
-                  {
-                    text: "五指灵巧手",
-                    link: "/robot/api/c/class/HandControl",
-                  },
-                  {
-                    text: "系统安装方式",
-                    link: "/robot/api/c/class/InstallPos",
-                  },
-                  {
-                    text: "初始位置设置",
-                    link: "/robot/api/c/class/JointConfigSettings",
-                  },
-                  {
-                    text: "关节配置",
-                    link: "/robot/api/c/class/ArmInitPosition",
-                  },
-                  {
-                    text: "升降机构控制",
-                    link: "/robot/api/c/class/LiftControl",
-                  },
-                  {
-                    text: "Modbus配置",
-                    link: "/robot/api/c/class/ModbusConfig",
-                  },
-                  {
-                    text: "机械臂轨迹指令类",
-                    link: "/robot/api/c/class/MovePlan",
-                  },
-                ],
+                text: "连接机械臂",
+                link: "/robot/api/c/classes/roboticArm",
+              },
+              {
+                text: "工具坐标系配置",
+                link: "/robot/api/c/classes/toolCoordinateConfig",
+              },
+              {
+                text: "工作坐标系配置",
+                link: "/robot/api/c/classes/workCoordinateConfig",
+              },
+              {
+                text: "初始位置设置",
+                link: "/robot/api/c/classes/armInitPosition",
+              },
+              {
+                text: "机械臂运动控制指令类",
+                link: "/robot/api/c/classes/armMotionControl",
+              },
+              {
+                text: "机械臂状态查询",
+                link: "/robot/api/c/classes/armState",
+              },
+              {
+                text: "机械臂示教指令类",
+                link: "/robot/api/c/classes/armTeachMove",
+              },
+              {
+                text: "机械臂末端运动参数配置",
+                link: "/robot/api/c/classes/armTipVelocityParameters",
+              },
+              {
+                text: "通讯配置",
+                link: "/robot/api/c/classes/communicationConfig",
+              },
+              {
+                text: "控制器IO配置及获取",
+                link: "/robot/api/c/classes/controllerIOConfig",
+              },
+              {
+                text: "拖动示教",
+                link: "/robot/api/c/classes/dragTeach",
+              },
+              {
+                text: "末端工具IO控制",
+                link: "/robot/api/c/classes/effectorIOConfig",
+              },
+              {
+                text: "通用扩展关节控制",
+                link: "/robot/api/c/classes/expandControl",
+              },
+              {
+                text: "末端传感器六维力",
+                link: "/robot/api/c/classes/force",
+              },
+              {
+                text: "透传力位混合控制补偿",
+                link: "/robot/api/c/classes/gripperControl",
+              },
+              {
+                text: "五指灵巧手",
+                link: "/robot/api/c/classes/handControl",
+              },
+              {
+                text: "系统安装方式",
+                link: "/robot/api/c/classes/installPos",
+              },
+              {
+                text: "初始位置设置",
+                link: "/robot/api/c/classes/jointConfigSettings",
+              },
+              {
+                text: "关节配置",
+                link: "/robot/api/c/classes/armInitPosition",
+              },
+              {
+                text: "升降机构控制",
+                link: "/robot/api/c/classes/liftControl",
+              },
+              {
+                text: "Modbus配置",
+                link: "/robot/api/c/classes/modbusConfig",
+              },
+              {
+                text: "机械臂轨迹指令类",
+                link: "/robot/api/c/classes/movePlan",
               },
             ],
           },
+          {
+            text: "结构体",
+            collapsed: true,
+            items: [
+              {
+                text: "全部状态",
+                link: "/robot/api/c/struct/allState",
+              },
+              {
+                text: "当前状态",
+                link: "/robot/api/c/struct/currentState",
+              },
+              {
+                text: "关节状态",
+                link: "/robot/api/c/struct/jointStatus",
+              },
+              {
+                text: "机械臂基本信息",
+                link: "/robot/api/c/struct/robotInfo",
+              },
+              {
+                text: "位置姿态",
+                link: "/robot/api/c/struct/pose",
+              },
+              {
+                text: "位置坐标",
+                link: "/robot/api/c/struct/position",
+              },
+              {
+                text: "坐标系",
+                link: "/robot/api/c/struct/frame",
+              },
+              {
+                text: "坐标系名称",
+                link: "/robot/api/c/struct/frameName",
+              },
+              {
+                text: "在线编程运行状态",
+                link: "/robot/api/c/struct/programRunState",
+              },
+              {
+                text: "在线编程列表",
+                link: "/robot/api/c/struct/programTrajectorys",
+              },
+              {
+                text: "在线编程储存",
+                link: "/robot/api/c/struct/trajectoryData",
+              },
+              {
+                text: "全局点位列表",
+                link: "/robot/api/c/struct/waypointList",
+              },
+              {
+                text: "全局点位储存",
+                link: "/robot/api/c/struct/waypoint",
+              },
+              {
+                text: "软件版本",
+                link: "/robot/api/c/struct/softwareVersion",
+              },
+              {
+                text: "夹爪状态",
+                link: "/robot/api/c/struct/gripperState",
+              },
+              {
+                text: "包络球参数列表",
+                link: "/robot/api/c/struct/envelopeBallsList",
+              },
+              {
+                text: "包络球参数",
+                link: "/robot/api/c/struct/envelopesBall",
+              },
+              {
+                text: "包络球集合",
+                link: "/robot/api/c/struct/sendProject",
+              },
+              {
+                text: "升降机/扩展关节状态",
+                link: "/robot/api/c/struct/expandState",
+              },
+              {
+                text: "电子围栏/虚拟墙使能状态",
+                link: "/robot/api/c/struct/electronicFenceEnable",
+              },
+              {
+                text: "动力学模型",
+                link: "/robot/api/c/struct/dynamicVersion",
+              },
+              {
+                text: "几何体模型参数",
+                link: "/robot/api/c/struct/fenceConfig",
+              },
+              {
+                text: "几何体模型长方体",
+                link: "/robot/api/c/struct/fenceConfigCube",
+              },
+              {
+                text: "几何体模型矢量平面",
+                link: "/robot/api/c/struct/fenceConfigPlane",
+              },
+              {
+                text: "几何体模型球体",
+                link: "/robot/api/c/struct/fenceConfigSphere",
+              },
+              {
+                text: "力传感器数据",
+                link: "/robot/api/c/struct/forceSensor",
+              },
+              {
+                text: "六维力传感器数据",
+                link: "/robot/api/c/struct/forceData",
+              },
+              {
+                text: "机械臂控制句柄",
+                link: "/robot/api/c/struct/robotHandle",
+              },
+              {
+                text: "无线网络信息",
+                link: "/robot/api/c/struct/wifiNet",
+              },
+              {
+                text: "外设数据读写",
+                link: "/robot/api/c/struct/peripheralReadWriteParams",
+              },
+              {
+                text: "UPD主动上报",
+                link: "/robot/api/c/struct/realtimeArmJointState",
+              },
+              {
+                text: "UPD主动上报接口配置",
+                link: "/robot/api/c/struct/realtimePushConfig",
+              },
+              {
+                text: "算法库版本",
+                link: "/robot/api/c/struct/algorithmVersion",
+              },
+
+              {
+                text: "欧拉角",
+                link: "/robot/api/c/struct/euler",
+              },
+              {
+                text: "四元数",
+                link: "/robot/api/c/struct/quat",
+              },
+              {
+                text: "旋转矩阵",
+                link: "/robot/api/c/struct/matrix",
+              },
+              {
+                text: "逆解参数",
+                link: "/robot/api/c/struct/inverseKinematicsParams",
+              },
+              {
+                text: "编译说明",
+                link: "/robot/api/c/struct/planinfo",
+              },
+            ],
+          },
+          {
+            text: "枚举",
+            link: "/robot/api/c/type/typeList",
+          }
         ],
       },
       {
@@ -210,62 +371,155 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         link: "/joints/summarize",
       },
       {
-        text: "硬件产品介绍",
-        link: "/joints/hardwareProduct",
+        text: "版本对照表",
+        link: "/joints/versionControl",
       },
       {
         text: "入门指南",
         items: [
           {
-            text: "快速开始",
-            link: "/joints/guide/gettingStarted",
-          },
-          {
             text: "用户手册",
             link: "/joints/guide/manual",
           },
           {
-            text: "版本对照表",
-            link: "/joints/guide/versionControl",
-          },
-          {
-            text: "开发入门",
-            link: "/joints/guide/introduction",
-          },
-          {
-            text: "Demo示例",
-            link: "/joints/guide/example",
+            text: "硬件准备",
+            link: "/joints/guide/hardwarePreparation",
           },
         ],
       },
       {
-        text: "开发指南",
+        text: "Demo示例",
         items: [
           {
-            text: "机械臂协议文档",
-            link: "/joints/developerGuide/protocolDocument",
+            text: "开发指南",
+            link: "/joints/example/guide",
           },
           {
-            text: "API开发文档",
-            collapsed: false,
+            text: "JSON协议",
+            link: "/joints/example/json",
+          },
+          {
+            text: "API",
+            link: "/joints/example/api",
+          },
+          {
+            text: "ROS",
+            link: "/joints/example/ros",
+          },
+          {
+            text: "ROS2",
+            link: "/joints/example/ros2",
+          },
+        ],
+      },
+      {
+        text: "JSON协议",
+        items: [
+          {
+            text: "快速开始",
+            link: "/joints/json/",
+          },
+        ],
+      },
+      {
+        text: "API文档(C)",
+        collapsed: false,
+        items: [
+          {
+            text: "C & C++",
+            collapsed: true,
             items: [
               {
-                text: "C & C++",
+                text: "类列表",
                 collapsed: true,
                 items: [
                   {
-                    text: "类列表",
-                    link: "/joints/developerGuide/c/class/RoboticArm",
+                    text: "连接机械臂",
+                    link: "/joints/api/c/classes/RoboticArm",
                   },
-                ],
-              },
-              {
-                text: "Python",
-                collapsed: true,
-                items: [
                   {
-                    text: "类列表",
-                    link: "/joints/developerGuide/python/index",
+                    text: "工具坐标系配置",
+                    link: "/joints/api/c/classes/ToolCoordinateConfig",
+                  },
+                  {
+                    text: "工作坐标系配置",
+                    link: "/joints/api/c/classes/WorkCoordinateConfig",
+                  },
+                  {
+                    text: "初始位置设置",
+                    link: "/joints/api/c/classes/ArmInitPosition",
+                  },
+                  {
+                    text: "机械臂运动控制指令类",
+                    link: "/joints/api/c/classes/ArmMotionControl",
+                  },
+                  {
+                    text: "机械臂状态查询",
+                    link: "/joints/api/c/classes/ArmState",
+                  },
+                  {
+                    text: "机械臂示教指令类",
+                    link: "/joints/api/c/classes/ArmTeachMove",
+                  },
+                  {
+                    text: "机械臂末端运动参数配置",
+                    link: "/joints/api/c/classes/ArmTipVelocityParameters",
+                  },
+                  {
+                    text: "通讯配置",
+                    link: "/joints/api/c/classes/CommunicationConfig",
+                  },
+                  {
+                    text: "控制器IO配置及获取",
+                    link: "/joints/api/c/classes/ControllerIOConfig",
+                  },
+                  {
+                    text: "拖动示教",
+                    link: "/joints/api/c/classes/DragTeach",
+                  },
+                  {
+                    text: "末端工具IO控制",
+                    link: "/joints/api/c/classes/EffectorIOConfig",
+                  },
+                  {
+                    text: "通用扩展关节控制",
+                    link: "/joints/api/c/classes/ExpandControl",
+                  },
+                  {
+                    text: "末端传感器六维力",
+                    link: "/joints/api/c/classes/Force",
+                  },
+                  {
+                    text: "透传力位混合控制补偿",
+                    link: "/joints/api/c/classes/GripperControl",
+                  },
+                  {
+                    text: "五指灵巧手",
+                    link: "/joints/api/c/classes/HandControl",
+                  },
+                  {
+                    text: "系统安装方式",
+                    link: "/joints/api/c/classes/InstallPos",
+                  },
+                  {
+                    text: "初始位置设置",
+                    link: "/joints/api/c/classes/JointConfigSettings",
+                  },
+                  {
+                    text: "关节配置",
+                    link: "/joints/api/c/classes/ArmInitPosition",
+                  },
+                  {
+                    text: "升降机构控制",
+                    link: "/joints/api/c/classes/LiftControl",
+                  },
+                  {
+                    text: "Modbus配置",
+                    link: "/joints/api/c/classes/ModbusConfig",
+                  },
+                  {
+                    text: "机械臂轨迹指令类",
+                    link: "/joints/api/c/classes/MovePlan",
                   },
                 ],
               },
@@ -274,20 +528,44 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "示例",
-        link: "/joints/example/",
+        text: "API文档(Python)",
+        collapsed: false,
+        items: [
+          {
+            text: "示例",
+            link: "/joints/api/python",
+          },
+        ],
+      },
+      {
+        text: "ROS文档",
+        collapsed: false,
+        items: [
+          {
+            text: "示例",
+            link: "/joints/ros/",
+          },
+        ],
+      },
+      {
+        text: "ROS2文档",
+        collapsed: false,
+        items: [
+          {
+            text: "示例",
+            link: "/joints/ros2/",
+          },
+        ],
       },
       {
         text: "常见问题",
-        link: "/joints/FQA/index",
-      },
-      {
-        text: "相关下载",
-        link: "/joints/download/index",
-      },
-      {
-        text: "历史手册",
-        link: "/joints/handbook/index",
+        collapsed: false,
+        items: [
+          {
+            text: "示例",
+            link: "/joints/FQA/",
+          },
+        ],
       },
     ],
     "/compositeRobot/": [
@@ -390,7 +668,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "软件方案",
-        collapsed:false,
+        collapsed: false,
         items: [
           {
             text: "综合案例",
@@ -408,7 +686,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "硬件生态",
-        collapsed:false,
+        collapsed: false,
         items: [
           {
             text: "介绍",
@@ -418,7 +696,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "常见问题",
-        collapsed:false,
+        collapsed: false,
         items: [
           {
             text: "示例",
@@ -428,25 +706,3 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
     ],
   };
-// [
-//   {
-//     text: "类列表",
-//     collapsed: false,
-//     items: [
-//       {
-//         text: "关节配置",
-//         link: "/python/class/jointConfig.md",
-//       },
-//     ],
-//   },
-//   {
-//     text: "结构体",
-//     collapsed: false,
-//     items: [
-//       {
-//         text: "a",
-//         link: "/python/struct/a.md",
-//       },
-//     ],
-//   },
-// ];

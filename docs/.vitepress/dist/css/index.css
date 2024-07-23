@@ -4,6 +4,7 @@
     border-right: none !important;
     border-left: none !important;
 }
+
 thead,
 tbody {
     border-right: 1px solid var(--vp-c-divider);
@@ -11,9 +12,24 @@ tbody {
 }
 
 /*调整active*/
-
+.VPNavBarMenuLink{
+    padding: 0 !important;
+}
 .VPNavBarMenuLink.active {
     color: #EC6102 !important;
+    padding: 0 !important;
+}
+.VPNavBarMenuLink>span {
+    border: 1px solid transparent;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    border-radius: 18px;
+    padding: 0 16px;
+}
+.VPNavBarMenuLink.active>span {
+    border-color: #EC6102;
+    background-color: #FDEFE5;
 }
 
 .VPNavBarMenuLink:hover {
@@ -42,9 +58,37 @@ tbody {
 .VPSidebarItem.level-2.is-active>.item>.indicator,
 .VPSidebarItem.level-3.is-active>.item>.indicator,
 .VPSidebarItem.level-4.is-active>.item>.indicator,
-.VPSidebarItem.level-5.is-active>.item>.indicator{
+.VPSidebarItem.level-5.is-active>.item>.indicator {
     background-color: #EC6102 !important;
 }
-.title{
+
+.title {
     color: #EC6102 !important;
+}
+
+.VPSidebar {
+    background-color: var(--vp-nav-bg-color) !important;
+}
+
+.curtain {
+    background-color: var(--vp-nav-bg-color) !important;
+}
+
+.VPNavBar.has-sidebar .title {
+    background-color: var(--vp-nav-bg-color);
+    border-bottom-color: transparent !important;
+}
+
+.VPSidebarItem.level-1 .items,
+.VPSidebarItem.level-2 .items,
+.VPSidebarItem.level-3 .items,
+.VPSidebarItem.level-4 .items,
+.VPSidebarItem.level-5 .items {
+    border-left: none !important;
+}
+
+.indicator {
+    position: relative !important;
+    width: 0 !important;
+    border-radius: 0 !important;
 }
