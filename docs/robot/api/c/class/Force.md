@@ -1,7 +1,7 @@
 # 末端传感器六维力
 
 睿尔曼机械臂六维力版末端配备集成式六维力传感器，无需外部走线，用户可直接通过协议对六维力进行操作， 获取六维力数据。如下图所示，正上方为六维力的 Z 轴，航插反方向为六维力的 Y 轴，坐标系符合右手定则。 机械臂位于零位姿态时，工具坐标系与六维力的坐标系方向一致。
-![六维力坐标系](/doc/六维力坐标系.png)
+![六维力坐标系](../doc/sixForce.png)
 另外，六维力额定力 200N，额定力矩 8Nm，过载水平 300FS，工作温度 5~80℃，准度 0.5FS。使用过程中 注意使用要求，防止损坏六维力传感器。
 本接口用于查询和配置六维力的状态信息，包含六维力姿态、零点标定和传感器标定等。
 
@@ -11,11 +11,11 @@
 
 - **方法原型：**
 
-```C
+``` C
 int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_force_data_t](../struct/rm_force_data_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_force_data_t](../struct/forceData.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -36,7 +36,7 @@ int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 
 - **使用示例**
   
-```C
+``` C
 //获取六维力数据
 rm_force_data_t force_data;
 ret = rm_get_force_data(robot_handle, &force_data);
@@ -55,11 +55,11 @@ for(int i = 0; i < 6; i++) {
 
 - **方法原型：**
 
-```C
+``` C
 int rm_clear_force_data(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -79,7 +79,7 @@ int rm_clear_force_data(rm_robot_handle * handle)
 
 - **使用示例**
   
-```C
+``` C
 ret = rm_clear_force_data(robot_handle);
 printf("clear force data result : %d\n", ret);
 ```
@@ -95,11 +95,11 @@ printf("clear force data result : %d\n", ret);
 
 - **方法原型：**
 
-```C
+``` C
 int rm_set_force_sensor(rm_robot_handle * handle,bool block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 >注意：必须保证在机械臂静止状态下标定;
 >注意：该过程不可中断，中断后必须重新标定;
 
@@ -134,11 +134,11 @@ printf("set force sensor result : %d\n", ret);
 
 - **方法原型：**
 
-```C
+``` C
 int rm_manual_set_force(rm_robot_handle * handle,int count,float * joint,bool block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 >注意：上述4个位置必须按照顺序依次下发，当下发完位置4后，机械臂开始自动运行计算重心。
 
 - **参数说明:**
@@ -220,7 +220,7 @@ for (int i = 1; i <= 4; i++) {
 int rm_stop_set_force_sensor(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 

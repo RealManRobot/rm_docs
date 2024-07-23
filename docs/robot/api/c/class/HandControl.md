@@ -10,7 +10,7 @@
 int rm_set_hand_posture(rm_robot_handle * handle,int posture_num,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -49,7 +49,7 @@ ret = rm_set_hand_posture(robot_handle,posture_num,true,10);
 int rm_set_hand_seq(rm_robot_handle * handle,int seq_num,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -90,7 +90,7 @@ ret = rm_set_hand_seq(robot_handle,posture_num,true,15);
 int rm_set_hand_angle(rm_robot_handle * handle,const int * hand_angle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -125,7 +125,7 @@ ret = rm_set_hand_angle(robot_handle,angle);
 int rm_set_hand_speed(rm_robot_handle * handle,int speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -160,7 +160,7 @@ ret = rm_set_hand_speed(robot_handle,speed);
 int rm_set_hand_force(rm_robot_handle * handle,int hand_force)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

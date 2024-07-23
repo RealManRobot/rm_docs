@@ -10,7 +10,7 @@
 int rm_get_expand_state(rm_robot_handle * handle,rm_expand_state_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_expand_state_t](../struct/rm_expand_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_expand_state_t](../struct/expandState)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -45,7 +45,7 @@ int result = rm_get_expand_state(robot_handle, &state);
 int rm_set_expand_speed(rm_robot_handle * handle,int speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -79,7 +79,7 @@ ret = rm_set_expand_speed(robot_handle,speed);
 int rm_set_expand_pos(rm_robot_handle * handle,int speed,int pos,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

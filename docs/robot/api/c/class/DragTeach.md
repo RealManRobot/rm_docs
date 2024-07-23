@@ -10,7 +10,7 @@
 int rm_start_drag_teach(rm_robot_handle * handle,int trajectory_record)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -45,7 +45,7 @@ ret = rm_start_drag_teach(robot_handle,trajectory_record);
 int rm_stop_drag_teach(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -78,7 +78,7 @@ ret = rm_stop_drag_teach(robot_handle);
 int rm_start_multi_drag_teach(rm_robot_handle * handle,int mode,int singular_wall)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -125,7 +125,7 @@ ret = rm_start_multi_drag_teach(robot_handle,mode,singular_wall);
 int rm_drag_trajectory_origin(rm_robot_handle * handle,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -163,7 +163,7 @@ ret = rm_drag_trajectory_origin(robot_handle,1);
 int rm_run_drag_trajectory(rm_robot_handle * handle,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 >必须在拖动示教结束后才能使用，同时保证机械臂位于拖动示教的起点位置，可调用rm_drag_trajectory_origin接口运动至起点位置。
 
 - **参数说明:**
@@ -205,7 +205,7 @@ ret = rm_run_drag_trajectory(robot_handle,block);
 int rm_pause_drag_trajectory(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -240,7 +240,7 @@ ret = rm_pause_drag_trajectory(robot_handle);
 int rm_continue_drag_trajectory(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -275,7 +275,7 @@ ret = rm_continue_drag_trajectory(robot_handle);
 int rm_stop_drag_trajectory(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -308,7 +308,7 @@ ret = rm_stop_drag_trajectory(robot_handle);
 int rm_save_trajectory(rm_robot_handle * handle,char * name,int * num)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -351,7 +351,7 @@ printf("rm_save_trajectory result :%d, num:%d\n", ret, num);
 int rm_set_force_position(rm_robot_handle * handle,int sensor,int mode,int direction,float N)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -392,7 +392,7 @@ ret = rm_set_force_position(robot_handle, sensor, mode, direction, N);
 int rm_stop_force_position(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

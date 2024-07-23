@@ -14,7 +14,7 @@
 int rm_set_joint_max_speed(rm_robot_handle * handle,int joint_num,float max_speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -50,7 +50,7 @@ printf("set_joint_max_speed result:%d\n",ret);
 int rm_set_joint_max_acc(rm_robot_handle *handle,int joint_num,float max_acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -87,7 +87,7 @@ ret = rm_set_joint_max_acc(robot_handle,joint_num,acc);
 int rm_set_joint_min_pos(rm_robot_handle * handle,int joint_num,float min_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -124,7 +124,7 @@ ret=rm_set_joint_min_pos(robot_handle,joint_num,joint);
 int rm_set_joint_max_pos(rm_robot_handle * handle,int joint_num,float max_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -161,7 +161,7 @@ ret = rm_set_joint_max_pos(robot_handle,joint_num,joint);
 int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float max_speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -197,7 +197,7 @@ printf("rm_set_joint_drive_max_speed result:%d\n",ret);
 int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float max_speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -234,7 +234,7 @@ ret = rm_set_joint_drive_max_speed(robot_handle,joint_num,acc);
 int rm_set_joint_drive_min_pos(rm_robot_handle * handle,int joint_num,float min_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -271,7 +271,7 @@ ret=rm_set_joint_drive_min_pos(robot_handle,joint_num,joint);
 int rm_set_joint_drive_max_pos(rm_robot_handle * handle,int joint_num,float max_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -308,7 +308,7 @@ ret = rm_set_joint_drive_max_pos(robot_handle,joint_num,joint);
 int rm_set_joint_en_state(rm_robot_handle * handle,int joint_num,int en_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -344,7 +344,7 @@ ret=rm_set_joint_en_state(m_sockhand,joint_num,true,RM_BLOCK);
 int rm_set_joint_zero_pos(rm_robot_handle * handle,int joint_num)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -379,7 +379,7 @@ ret = rm_set_joint_zero_pos(m_sockhand,joint_num);
 int rm_set_joint_clear_err(rm_robot_handle * handle,int joint_num)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -414,7 +414,7 @@ ret=rm_set_joint_clear_err(m_sockhand,joint_num);
 int rm_auto_set_joint_limit(rm_robot_handle *handle,int limit_mode)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -448,7 +448,7 @@ printf("set joint limit result : %d\n", ret);
 int rm_get_joint_max_speed(rm_robot_handle * handle,float * max_speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -488,7 +488,7 @@ printf("\n");
 int rm_get_joint_max_acc(rm_robot_handle * handle,float * max_acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -528,7 +528,7 @@ printf("\n");
 int rm_get_joint_min_pos(rm_robot_handle * handle,float * min_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -568,7 +568,7 @@ printf("\n");
 int rm_get_joint_max_pos(rm_robot_handle * handle,float * max_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -608,7 +608,7 @@ printf("\n");
 int rm_get_joint_drive_max_speed(rm_robot_handle * handle,float * max_speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -648,7 +648,7 @@ printf("\n");
 int rm_get_joint_drive_max_acc(rm_robot_handle * handle,float * max_acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -688,7 +688,7 @@ printf("\n");
 int rm_get_joint_drive_min_pos(rm_robot_handle * handle,float * min_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -728,7 +728,7 @@ printf("\n");
 int rm_get_joint_drive_max_pos(rm_robot_handle * handle,float * max_pos)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -768,7 +768,7 @@ printf("\n");
 int rm_get_joint_en_state(rm_robot_handle * handle,uint8_t * en_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -808,7 +808,7 @@ printf("\n");
 int rm_get_joint_err_flag(rm_robot_handle * handle,uint16_t * err_flag,uint16_t * brake_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

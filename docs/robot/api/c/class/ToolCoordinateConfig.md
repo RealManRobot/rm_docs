@@ -10,7 +10,7 @@
 int rm_set_auto_tool_frame(rm_robot_handle * handle,int point_num)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -53,7 +53,7 @@ if (ret == 0) {
 int rm_generate_auto_tool_frame(rm_robot_handle * handle,const char * name,float payload,float x,float y,float z)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -105,7 +105,7 @@ if (ret == 0) {
 int rm_set_manual_tool_frame(rm_robot_handle * handle,rm_frame_t frame)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -158,7 +158,7 @@ if (result == 0) {
 int rm_change_tool_frame(rm_robot_handle * handle,const char * tool_name )
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -200,7 +200,7 @@ if (result == 0) {
 int rm_delete_tool_frame(rm_robot_handle * handle,const char * tool_name )
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -242,7 +242,7 @@ if (result == 0) {
 int rm_update_tool_frame(rm_robot_handle * handle,rm_frame_t frame)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -297,7 +297,7 @@ if (result == 0) {
 int rm_get_total_tool_frame(rm_robot_handle * handle,rm_frame_name_t * frame_names,int * len)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_name_t](../struct/rm_frame_name_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_name_t](../struct/frameName.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -344,7 +344,7 @@ else{
 int rm_get_given_tool_frame(rm_robot_handle * handle,const char * name,rm_frame_t * frame)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -389,7 +389,7 @@ if (result == 0) {
 int rm_get_current_tool_frame(rm_robot_handle * handle,rm_frame_t * tool_frame)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -432,7 +432,7 @@ if (result == 0) {
 int rm_set_tool_envelope(rm_robot_handle * handle,rm_envelope_balls_list_t envelope)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_envelope_balls_list_t](../struct/rm_envelope_balls_list_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_envelope_balls_list_t](../struct/envelopeBallsList.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -481,7 +481,7 @@ int rm_get_tool_envelope(rm_robot_handle * 	handle,const char * tool_name,rm_env
 )
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_envelope_balls_list_t](../struct/rm_envelope_balls_list_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_envelope_balls_list_t](../struct/envelopeBallsList.md)查阅结构体详细描述*
 
 - **参数说明:**
 

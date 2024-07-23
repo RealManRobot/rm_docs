@@ -10,7 +10,7 @@
 int rm_set_install_pose(rm_robot_handle * handle,float x,float y,float z)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -49,7 +49,7 @@ ret = rm_set_install_pose(robot_handle,x,y,z);
 int rm_get_install_pose(rm_robot_handle * handle,float * x,float * y,float * z)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

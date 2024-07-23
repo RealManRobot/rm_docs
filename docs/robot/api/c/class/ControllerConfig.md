@@ -10,7 +10,7 @@
 int rm_get_controller_state(rm_robot_handle * handle,float * voltage,float * current,float * temperature,int * err_flag )
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -51,7 +51,7 @@ ret = rm_get_controller_state(robot_handle, &voltage, &current, &temperature, &s
 int rm_set_arm_power(rm_robot_handle * handle,int arm_power)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -85,7 +85,7 @@ ret = rm_set_arm_power(robot_handle, 1);
 int rm_get_arm_power_state(rm_robot_handle * handle,int * power_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -121,7 +121,7 @@ int rm_get_system_runtime(rm_robot_handle * handle,int * day,int * hour,int * mi
 )
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -163,7 +163,7 @@ ret = rm_get_system_runtime(robot_handle, &day, &hour, &min, &sec);
 int rm_clear_system_runtime(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -196,7 +196,7 @@ ret = rm_clear_system_runtime(robot_handle);
 int rm_get_joint_odom(rm_robot_handle * handle,float * joint_odom)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -231,7 +231,7 @@ ret = rm_get_joint_odom(robot_handle,odom);
 int rm_clear_joint_odom(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -264,7 +264,7 @@ ret = rm_clear_joint_odom(robot_handle);
 int rm_set_NetIP(rm_robot_handle * handle,const char * ip)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -298,7 +298,7 @@ ret = rm_set_NetIP(robot_handle,(char*)"192.168.1.19");
 int rm_clear_system_err(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -331,7 +331,7 @@ ret = rm_clear_system_err(robot_handle);
 int rm_get_arm_software_info(rm_robot_handle * handle,rm_arm_software_version_t * software_info)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_arm_software_version_t](../struct/rm_arm_software_version_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_arm_software_version_t](../struct/softwareVersion.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -366,7 +366,7 @@ ret = rm_get_arm_software_info(robot_handle, &info);
 int rm_get_controller_RS485_mode(rm_robot_handle * handle,int * mode,int * baudrate,int * timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -404,7 +404,7 @@ ret = rm_get_controller_RS485_mode(robot_handle, &mode, &baudrate, &timeout);
 int rm_get_tool_RS485_mode(rm_robot_handle * handle,int * mode,int * baudrate,int * timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -442,7 +442,7 @@ ret = rm_get_tool_RS485_mode(robot_handle, &mode, &baudrate, &timeout);
 int rm_get_joint_software_version(rm_robot_handle * handle,int * version)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -479,7 +479,7 @@ ret = rm_get_joint_software_version(robot_handle,ver);
 int rm_get_tool_software_version(rm_robot_handle * handle,int * version)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

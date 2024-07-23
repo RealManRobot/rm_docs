@@ -12,7 +12,7 @@
 int rm_get_current_arm_state(rm_robot_handle * handle,rm_current_arm_state_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_current_arm_state_t](../struct/rm_current_arm_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_current_arm_state_t](../struct/currentState)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -63,7 +63,7 @@ if (rm_get_current_arm_state(robot_handle, &current_state) == 0) {
 int rm_get_current_joint_temperature(rm_robot_handle * handle,float * temperature)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -105,7 +105,7 @@ if (rm_get_current_joint_temperature(robot_handle, temperature) == 0) {
 int rm_get_current_joint_current(rm_robot_handle * handle,float * current)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -147,7 +147,7 @@ if (rm_get_current_joint_current(robot_handle, current) == 0) {
 int rm_get_current_joint_voltage(rm_robot_handle * handle,float * voltage)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -189,7 +189,7 @@ if (rm_get_current_joint_voltage(robot_handle, voltage) == 0) {
 int rm_get_joint_degree(rm_robot_handle * handle,float * joint)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -231,7 +231,7 @@ if (rm_get_joint_degree(robot_handle, degree) == 0) {
 int rm_get_arm_all_state(rm_robot_handle * handle,rm_arm_all_state_t * state)机械臂状态查询
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_arm_all_state_t](../struct/rm_arm_all_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandled)和[rm_arm_all_state_t](../struct/allState)查阅结构体详细描述*
 
 - **参数说明:**
 

@@ -12,7 +12,7 @@
 int rm_set_init_pose(rm_robot_handle * handle,float * joint)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -56,7 +56,7 @@ if (result == 0) {
 int rm_get_init_pose(rm_robot_handle * handle,float * joint)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

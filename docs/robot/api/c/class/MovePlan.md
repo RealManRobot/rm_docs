@@ -10,7 +10,7 @@
 int rm_movej(rm_robot_handle * handle,const float * joint,int v,int r,int trajectory_connect,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述。*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述。*
 
 - **参数说明:**
 
@@ -58,7 +58,7 @@ ret = rm_movej(robot_handle, joint, v, r, trajectory_connect, block);
 int rm_movel(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_connect,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述。*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_pose_t](../struct/pose.md)和查阅结构体详细描述。*
 
 - **参数说明:**
 
@@ -108,7 +108,7 @@ printf("rm_movel result : %d\n", ret);
 int rm_moves(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_connect,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述。*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_pose_t](../struct/pose.md)和查阅结构体详细描述。*
 
 - **参数说明:**
 
@@ -184,7 +184,7 @@ if(result != 0) {
 int rm_movec(rm_robot_handle * handle,rm_pose_t pose_via,rm_pose_t pose_to,int v,int r,int loop,int trajectory_connect,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述。*
+*可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述。*
 
 - **参数说明:**
 
@@ -241,7 +241,7 @@ ret = rm_movec(robot_handle,povia,poto,20,0,0,0,1);
 int rm_movej_p(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_connect,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -294,7 +294,7 @@ ret = rm_movej_p(robot_handle,pose, 20,0,0,1);
 int rm_movej_canfd(rm_robot_handle * handle,float * joint,bool follow,float expand)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
 >透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。
 >用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
 >I系列控制器有线网口周期最快可达2ms，提供了更高的实时性。
@@ -335,7 +335,7 @@ rm_movej_canfd(robot_handle,joint,true,0);
 int rm_movep_canfd(rm_robot_handle * handle,rm_pose_t pose,bool follow)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)[rm_pose_t](../struct/rm_pose_t.md)和查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
 >透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。
 >用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
 >I系列控制器有线网口周期最快可达2ms，提供了更高的实时性。

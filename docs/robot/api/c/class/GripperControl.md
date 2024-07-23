@@ -12,7 +12,7 @@
 int rm_set_gripper_route(rm_robot_handle * handle,int min_limit,int max_limit)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -51,7 +51,7 @@ ret=rm_set_gripper_route(robot_handle,min_limit,max_limit);
 int rm_set_gripper_release(rm_robot_handle * handle,int speed,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -91,7 +91,7 @@ ret = rm_set_gripper_release(robot_handle, speed, true, 10);
 int rm_set_gripper_pick(rm_robot_handle * handle,int speed,int force,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -131,7 +131,7 @@ ret = rm_set_gripper_pick(robot_handle,speed,force,true,10);
 int rm_set_gripper_pick_on(rm_robot_handle * handle,int speed,int force,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -173,7 +173,7 @@ ret =  rm_set_gripper_pick_on(robot_handle,speed,force,true,10);
 int rm_set_gripper_position(rm_robot_handle * handle,int position,bool block,int timeout)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -211,7 +211,7 @@ ret = rm_set_gripper_position(robot_handle,position,true,10);
 int rm_get_gripper_state(rm_robot_handle * handle,rm_gripper_state_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_gripper_state_t](../struct/rm_gripper_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_gripper_state_t](../struct/gripperState)查阅结构体详细描述*
 
 - **参数说明:**
 

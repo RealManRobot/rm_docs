@@ -33,7 +33,7 @@ printf("api version: %s\n", version);
 int rm_init(rm_thread_mode_e mode)
 ```
 
-*可以跳转[rm_thread_mode_e](../type/rm_thread_mode_e.md)查阅枚举类型*
+*可以跳转 [rm_thread_mode_e](../type/typeList.md#rm_thread_mode_e线程模式) 查阅枚举类型*
 
 - **参数说明:**
 
@@ -87,7 +87,7 @@ rm_destory();
 void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback, int level)
 ```
 
-*可以跳转[rm_thread_mode_e](../type/rm_thread_mode_e.md)查阅枚举类型*
+*可以跳转 [rm_thread_mode_e](../type/typeList.md#rm_thread_mode_e线程模式) 查阅枚举类型*
 
 - **参数说明:**
 
@@ -129,7 +129,7 @@ rm_set_log_call_back(api_log, 3);
 rm_robot_handle* rm_create_robot_arm(const char * ip, int port)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -140,7 +140,7 @@ rm_robot_handle* rm_create_robot_arm(const char * ip, int port)
 
 - **返回值:**
 
-创建成功后，返回机械臂控制[rm_robot_handle](../struct/rm_robot_handle.md)句柄id，连接成功id大于0，连接失败返回-1，达到最大连接数5创建失败返回空。
+创建成功后，返回机械臂控制[rm_robot_handle](../struct/robotHandle.md)句柄id，连接成功id大于0，连接失败返回-1，达到最大连接数5创建失败返回空。
 
 - **使用示例**
   
@@ -165,7 +165,7 @@ else if(robot_handle != NULL)
 int rm_delete_robot_arm(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -194,7 +194,7 @@ rm_delete_robot_arm(robot_handle);
 int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -235,7 +235,7 @@ if (ret == 0) {
 int rm_get_arm_run_mode(rm_robot_handle * handle,int * mode)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -276,7 +276,7 @@ if (ret == 0) {
 int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_robot_info_t](../struct/rm_robot_info_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_robot_info_t](../struct/robotInfo.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -312,7 +312,7 @@ printf("Robot info : %d %d %d \n", robot_info.arm_dof,robot_info.arm_model,robot
 void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/rm_realtime_arm_joint_state_t.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
 
 >注意：单线程无法使用该函数获取到位信息。
 
@@ -354,7 +354,7 @@ rm_get_arm_event_call_back(callback_event);
 void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/rm_realtime_arm_joint_state_t.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
 
 - **参数说明:**
 

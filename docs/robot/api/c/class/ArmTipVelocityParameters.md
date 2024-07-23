@@ -10,7 +10,7 @@
 int rm_set_arm_max_line_speed(rm_robot_handle * handle,float speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -45,7 +45,7 @@ ret = rm_set_arm_max_line_speed(robot_handle,speed);
 int rm_set_arm_max_line_acc(rm_robot_handle * handle,float acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -80,7 +80,7 @@ ret = rm_set_arm_max_line_acc(robot_handle,acc);
 int rm_set_arm_max_angular_speed(rm_robot_handle * handle,float speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -115,7 +115,7 @@ ret=rm_set_arm_max_angular_speed(robot_handle,speed);
 int rm_set_arm_max_angular_acc(rm_robot_handle * handle,float acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -150,7 +150,7 @@ ret = rm_set_arm_max_angular_acc(robot_handle,acc);
 int rm_set_arm_tcp_init(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -185,7 +185,7 @@ ret = rm_set_arm_tcp_init(robot_handle);
 int rm_set_collision_state(rm_robot_handle * handle,int collision_stage)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -220,7 +220,7 @@ ret=rm_set_collision_state(robot_handle,stage,RM_BLOCK);
 int rm_get_collision_stage(rm_robot_handle * handle,int * collision_stage)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -255,7 +255,7 @@ ret = rm_get_collision_stage(robot_handle,&stage);
 int rm_get_arm_max_line_speed(rm_robot_handle * handle,float * speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -290,7 +290,7 @@ ret = rm_get_arm_max_line_speed(robot_handle,&speed);
 int rm_get_arm_max_line_acc(rm_robot_handle * handle,float * acc)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -325,7 +325,7 @@ ret = rm_get_arm_max_line_acc(robot_handle,&acc);
 int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -360,7 +360,7 @@ ret = rm_get_arm_max_angular_speed(robot_handle,&speed);
 int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

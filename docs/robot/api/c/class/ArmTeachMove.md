@@ -10,7 +10,7 @@
 int rm_set_joint_step(rm_robot_handle * handle,int joint_num,float step,int v,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -53,8 +53,8 @@ rm_set_joint_step(robot_handle, 1, 10, 50, 1);
 int rm_set_pos_step(rm_robot_handle * handle,rm_pos_teach_type_e type,float step,int v,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
-*可以跳转[rm_pos_teach_type_e](跳转到typc_list的rm_pos_teach_type_e)查阅枚举类型详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+*可以跳转[rm_pos_teach_type_e](../type/typeList#rm-pos-teach-type-e位置示教方向)查阅枚举类型详细描述*
 
 - **参数说明:**
 
@@ -96,11 +96,11 @@ rm_set_pos_step(robot_handle, RM_X_DIR_E, 0.05f, 50, 1);
 - **方法原型：**
 
 ```C
-int rm_set_ort_step(rm_robot_handle * handle,rm_ort_teach_type_e type,float step,int v,int block)
+int rm_set_ort_step(rm_robot_handle * handle,rm-ort-teach-type-e type,float step,int v,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
-*可以跳转[rm_ort_teach_type_e](跳转到typc_list的rm_ort_teach_type_e)查阅枚举类型详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+*可以跳转[rm-ort-teach-type-e](../type/typeList#rm-ort-teach-type-e姿态示教方向)查阅枚举类型详细描述*
 
 - **参数说明:**
 
@@ -143,8 +143,8 @@ rm_set_ort_step(robot_handle, RM_RX_ROTATE_E, -0.5f, 20, 1);
 int rm_set_teach_frame(rm_robot_handle * handle,int frame_type)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
-*可以跳转[rm_ort_teach_type_e](跳转到typc_list的rm_ort_teach_type_e)查阅枚举类型详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm-ort-teach-type-e](../type/typeList.md#rm-ort-teach-type-e姿态示教方向)查阅枚举类型详细描述*
 
 - **参数说明:**
 
@@ -182,8 +182,8 @@ if (rm_set_teach_frame(robot_handle, 1) == 0) {
 int rm_get_teach_frame(rm_robot_handle * handle,int frame_type)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
-*可以跳转[rm_ort_teach_type_e](跳转到typc_list的rm_ort_teach_type_e)查阅枚举类型详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm-ort-teach-type-e](../type/typeList.md#rm-ort-teach-type-e)查阅枚举类型详细描述*
 
 - **参数说明:**
 
@@ -222,7 +222,7 @@ if (rm_get_teach_frame(&handle, &frame_type) == 0) {
 int rm_set_joint_teach(rm_robot_handle * handle,int joint_num,int direction,int v)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -260,7 +260,7 @@ rm_set_joint_teach(robot_handle, 1, 1, 50);
 int rm_set_pos_teach(rm_robot_handle * handle,rm_pos_teach_type_e type,int direction,int v)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pos_teach_type_e](../struct/rm_pos_teach_type_e.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_pos_teach_type_e](/robot/api/c/type/typeList.md#rm-pos-teach-type-e位置示教方向)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -297,11 +297,11 @@ rm_set_pos_teach(robot_handle, RM_X_DIR_E, 1, 50);
 - **方法原型：**
 
 ```C
-int rm_set_ort_teach(rm_robot_handle * handle,rm_ort_teach_type_e type,int direction,int v)
+int rm_set_ort_teach(rm_robot_handle * handle,rm-ort-teach-type-e type,int direction,int v)
 ```
 
 *可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
-*可以跳转[rm_ort_teach_type_e](跳转到typc_list的rm_ort_teach_type_e)查阅枚举类型详细描述*
+*可以跳转[rm-ort-teach-type-e](跳转到typc_list的rm-ort-teach-type-e)查阅枚举类型详细描述*
 
 - **参数说明:**
 

@@ -10,7 +10,7 @@
 int rm_set_wifi_ap(rm_robot_handle * handle,const char * wifi_name,const char * password)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -46,7 +46,7 @@ ret = rm_set_wifi_ap(robot_handle,wifi_name,password);
 int rm_set_wifi_sta(rm_robot_handle * handle,const char * router_name,const char * password)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -82,7 +82,7 @@ ret = rm_set_wifi_sta(robot_handle,router_name,password);
 int rm_set_RS485(rm_robot_handle * handle,int baudrate)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -118,7 +118,7 @@ ret = rm_set_RS485(robot_handle,baudrate);
 int rm_get_wired_net(rm_robot_handle * handle,char * ip,char * mask,char * mac)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -159,7 +159,7 @@ ret = rm_get_wired_net(robot_handle,ip,mask,mac);
 int rm_get_wifi_net(rm_robot_handle * handle,rm_wifi_net_t * wifi_net)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_wifi_net_t](../struct/rm_wifi_net_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_wifi_net_t](../struct/wifiNet)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -196,7 +196,7 @@ ret = rm_get_wifi_net(handle, &wifi);
 int rm_set_net_default(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -231,7 +231,7 @@ ret = rm_set_net_default(robot_handle);
 int rm_set_wifi_close(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

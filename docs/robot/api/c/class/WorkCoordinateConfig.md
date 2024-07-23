@@ -10,7 +10,7 @@
 int rm_set_auto_work_frame(rm_robot_handle * handle,const char * workname,int point_num)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -55,7 +55,7 @@ if (result == 0) {
 int rm_set_manual_work_frame(rm_robot_handle * handle,const char * work_name,rm_pose_t pose)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -107,7 +107,7 @@ if (result == 0) {
 int rm_change_work_frame(rm_robot_handle * handle,const char * work_name)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -149,7 +149,7 @@ if (result == 0) {
 int rm_delete_work_frame(rm_robot_handle * handle,const char * work_name)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -191,7 +191,7 @@ if (result == 0) {
 int rm_update_work_frame(rm_robot_handle * handle,const char * work_name,rm_pose_t pose)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -236,7 +236,7 @@ if (result == 0) {
 int rm_get_total_work_frame(rm_robot_handle * handle,rm_frame_name_t * frame_names,int * len)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_name_t](../struct/rm_frame_name_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_name_t](../struct/frameName.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -283,7 +283,7 @@ else{
 int rm_get_given_work_frame(rm_robot_handle * handle,const char * name,rm_pose_t * pose)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -324,7 +324,7 @@ if (result == 0) {
 int rm_get_current_work_frame(rm_robot_handle * handle,rm_frame_t * work_frame)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 

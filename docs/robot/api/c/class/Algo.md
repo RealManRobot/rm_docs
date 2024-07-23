@@ -83,7 +83,7 @@ rm_algo_get_angle(&x,&y,&z);
 void rm_algo_set_workframe(const rm_frame_t *const coord_work)
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -113,7 +113,7 @@ rm_algo_set_workframe(&coord_work);
 void rm_algo_get_curr_workframe(rm_frame_t * coord_work)
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -136,7 +136,7 @@ rm_algo_get_curr_workframe(&coord_work);
 void rm_algo_set_toolframe(const rm_frame_t *const coord_tool)
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -170,7 +170,7 @@ rm_algo_set_toolframe(&coord_tool);
 void rm_algo_get_curr_toolframe(rm_frame_t * coord_tool)
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t.md)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -361,7 +361,7 @@ rm_algo_get_joint_max_acc(after_joint_alimit);
 int rm_algo_inverse_kinematics(rm_robot_handle * handle,rm_inverse_kinematics_params_t params,float * q_out)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_inverse_kinematics_params_t](../struct/rm_inverse_kinematics_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)和[rm_inverse_kinematics_params_t](../struct/rm_inverse_kinematics_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -417,7 +417,7 @@ if (result == 0) {
 rm_pose_t rm_algo_forward_kinematics(rm_robot_handle * handle,const float *const joint)
 ```
 
-*可以跳转[rm_pose_t](../struct/rm_pose_t.md)和[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_pose_t](../struct/rm_pose_t)和[rm_robot_handle](../struct/rm_robot_handle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -428,7 +428,7 @@ rm_pose_t rm_algo_forward_kinematics(rm_robot_handle * handle,const float *const
 
 - **返回值:**
 
-[rm_pose_t](../struct/rm_pose_t.md)目标位姿，包含机械臂x，y，z，rx，ry，rz的信息。
+[rm_pose_t](../struct/rm_pose_t)目标位姿，包含机械臂x，y，z，rx，ry，rz的信息。
 
 >注意：
 >1.机械臂已连接时，可直接调用该接口进行计算，计算使用的参数均为机械臂当前的参数；
@@ -455,7 +455,7 @@ printf("End effector pose: Position(%.2f, %.2f, %.2f), Quaternion(%.2f, %.2f, %.
 rm_quat_t rm_algo_euler2quaternion(rm_euler_t eu)
 ```
 
-*可以跳转[rm_quat_t](../struct/rm_quat_t.md)和[rm_euler_t](../struct/rm_euler_t.md)查阅结构体详细描述*
+*可以跳转[rm_quat_t](../struct/rm_quat_t)和[rm_euler_t](../struct/rm_euler_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -465,7 +465,7 @@ rm_quat_t rm_algo_euler2quaternion(rm_euler_t eu)
 
 - **返回值:**
 
-返回[rm_quat_t](../struct/rm_quat_t.md)结构体中的四元数。
+返回[rm_quat_t](../struct/rm_quat_t)结构体中的四元数。
 
 - **使用示例**
   
@@ -484,7 +484,7 @@ printf("Quaternion: (w: %.2f, x: %.2f, y: %.2f, z: %.2f)\n", quat.w, quat.x, qua
 rm_euler_t rm_algo_quaternion2euler(rm_quat_t qua)
 ```
 
-*可以跳转[rm_quat_t](../struct/rm_quat_t.md)和[rm_euler_t](../struct/rm_euler_t.md)查阅结构体详细描述*
+*可以跳转[rm_quat_t](../struct/rm_quat_t)和[rm_euler_t](../struct/rm_euler_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -494,7 +494,7 @@ rm_euler_t rm_algo_quaternion2euler(rm_quat_t qua)
 
 - **返回值:**
 
-返回[rm_euler_t](../struct/rm_euler_t.md)结构体中的欧拉角。
+返回[rm_euler_t](../struct/rm_euler_t)结构体中的欧拉角。
 
 - **使用示例**
   
@@ -513,7 +513,7 @@ printf("Euler angles: (rx: %.2f, ry: %.2f, rz: %.2f)\n", euler.rx, euler.ry, eul
 rm_matrix_t rm_algo_euler2matrix(rm_euler_t state)
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t.md)和[rm_euler_t](../struct/rm_euler_t.md)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_euler_t](../struct/rm_euler_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -523,7 +523,7 @@ rm_matrix_t rm_algo_euler2matrix(rm_euler_t state)
 
 - **返回值:**
 
-返回[rm_euler_t](../struct/rm_euler_t.md)结构体中旋转矩阵。
+返回[rm_euler_t](../struct/rm_euler_t)结构体中旋转矩阵。
 
 - **使用示例**
   
@@ -545,7 +545,7 @@ matrix = rm_algo_euler2matrix(eu);
 rm_matrix_t rm_algo_pos2matrix(rm_pose_t state)
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -555,7 +555,7 @@ rm_matrix_t rm_algo_pos2matrix(rm_pose_t state)
 
 - **返回值:**
 
-返回[rm_matrix_t](../struct/rm_matrix_t.md)结构体中旋转矩阵。
+返回[rm_matrix_t](../struct/rm_matrix_t)结构体中旋转矩阵。
 
 - **使用示例**
   
@@ -579,7 +579,7 @@ matrix = rm_algo_pos2matrix(pose);
 rm_pose_t rm_algo_matrix2pos(rm_matrix_t matrix)
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -589,7 +589,7 @@ rm_pose_t rm_algo_matrix2pos(rm_matrix_t matrix)
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿。
 
 - **使用示例**
   
@@ -614,7 +614,7 @@ rm_pose_t pose = rm_algo_matrix2pos(matrix);
 rm_pose_t rm_algo_base2workframe(rm_matrix_t matrix,rm_pose_t state)
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -625,7 +625,7 @@ rm_pose_t rm_algo_base2workframe(rm_matrix_t matrix,rm_pose_t state)
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿，表示基坐标系在工作坐标系下的位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿，表示基坐标系在工作坐标系下的位姿。
 
 - **使用示例**
   
@@ -656,7 +656,7 @@ printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.pos
 rm_pose_t rm_algo_workframe2base(rm_matrix_t matrix,rm_pose_t state)
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -667,7 +667,7 @@ rm_pose_t rm_algo_workframe2base(rm_matrix_t matrix,rm_pose_t state)
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿，表示工作坐标系在基坐标系下的位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿，表示工作坐标系在基坐标系下的位姿。
 
 - **使用示例**
   
@@ -698,7 +698,7 @@ printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.pos
 rm_pose_t rm_algo_RotateMove(rm_robot_handle * handle,const float *const curr_joint,int rotate_axis,float rotate_angle,rm_pose_t choose_axis)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -712,7 +712,7 @@ rm_pose_t rm_algo_RotateMove(rm_robot_handle * handle,const float *const curr_jo
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿。
 
 - **使用示例**
   
@@ -740,7 +740,7 @@ printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.pos
 rm_pose_t rm_algo_cartesian_tool(rm_robot_handle * handle,const float *const curr_joint,float move_lengthx,float move_lengthy,float move_lengthz)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -754,7 +754,7 @@ rm_pose_t rm_algo_cartesian_tool(rm_robot_handle * handle,const float *const cur
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿,表示工作坐标系下的位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿,表示工作坐标系下的位姿。
 
 - **使用示例**
   
@@ -772,7 +772,7 @@ printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.pos
 rm_pose_t rm_algo_end2tool(rm_robot_handle * handle,rm_pose_t eu_end)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -783,7 +783,7 @@ rm_pose_t rm_algo_end2tool(rm_robot_handle * handle,rm_pose_t eu_end)
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿,表示基于工作坐标系和工具坐标系的末端位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿,表示基于工作坐标系和工具坐标系的末端位姿。
 
 - **使用示例**
   
@@ -808,7 +808,7 @@ printf("Pose:  %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.po
 rm_pose_t rm_algo_tool2end(rm_robot_handle * handle,rm_pose_t eu_tool)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -819,7 +819,7 @@ rm_pose_t rm_algo_tool2end(rm_robot_handle * handle,rm_pose_t eu_tool)
 
 - **返回值:**
 
-返回[rm_pose_t](../struct/rm_pose_t.md)结构体中位姿,表示基于世界坐标系和默认工具坐标系的末端位姿。
+返回[rm_pose_t](../struct/rm_pose_t)结构体中位姿,表示基于世界坐标系和默认工具坐标系的末端位姿。
 
 - **使用示例**
   
