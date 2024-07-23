@@ -300,7 +300,7 @@ rm_set_pos_teach(robot_handle, RM_X_DIR_E, 1, 50);
 int rm_set_ort_teach(rm_robot_handle * handle,rm-ort-teach-type-e type,int direction,int v)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 *可以跳转[rm-ort-teach-type-e](跳转到typc_list的rm-ort-teach-type-e)查阅枚举类型详细描述*
 
 - **参数说明:**
@@ -339,7 +339,7 @@ rm_set_ort_teach(robot_handle, RM_RX_ROTATE_E, 0, 20);
 int rm_set_stop_teach(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

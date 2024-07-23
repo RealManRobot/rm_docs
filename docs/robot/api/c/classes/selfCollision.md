@@ -12,7 +12,7 @@
 int rm_set_self_collision_enable(rm_robot_handle * handle,bool state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -46,7 +46,7 @@ ret = rm_set_self_collision_enable(robot_handle, false);
 int rm_get_self_collision_enable(rm_robot_handle * handle,bool * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

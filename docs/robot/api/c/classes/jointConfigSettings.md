@@ -815,7 +815,7 @@ int rm_get_joint_err_flag(rm_robot_handle * handle,uint16_t * err_flag,uint16_t 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
-|  err_flag  |    输入参数    |    反馈关节错误代码，错误码请参见[机械臂错误码查询](../eeorList.md)。    |
+|  err_flag  |    输入参数    |    反馈关节错误代码，错误码请参见[机械臂错误码查询](../eeorList)。    |
 |  brake_state  |    输入参数    |    反馈关节抱闸状态，1 代表抱闸未打开，0 代表抱闸已打开。    |
 
 - **返回值:**
