@@ -24,7 +24,7 @@
     rm_fence_config_cube_t rm_fence_config_t::cube
     ```
 
-    *可以跳转[rm_fence_config_cube_t](../struct/rm_fence_config_cube_t.md)查阅结构体详细描述*
+    *可以跳转[rm_fence_config_cube_t](../struct/fenceConfigCube)查阅结构体详细描述*
 
 - ### 点面矢量平面参数`plan`
 
@@ -32,7 +32,7 @@
     rm_fence_config_plane_t rm_fence_config_t::plan
     ```
 
-    *可以跳转[rm_fence_config_plane_t](../struct/rm_fence_config_plane_t.md)查阅结构体详细描述*
+    *可以跳转[rm_fence_config_plane_t](../struct/fenceConfigPlane)查阅结构体详细描述*
 
 - ### 球体参数`sphere`
 
@@ -40,4 +40,4 @@
     rm_fence_config_sphere_t rm_fence_config_t::sphere
     ```
 
-    *可以跳转[rm_fence_config_sphere_t](../struct/rm_fence_config_sphere_t.md)查阅结构体详细描述*
+    *可以跳转[rm_fence_config_sphere_t](../struct/fenceConfigSphere.md)查阅结构体详细描述*

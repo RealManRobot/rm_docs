@@ -14,7 +14,7 @@
     rm_algorithm_version_t rm_arm_software_version_t::algorithm_info
     ```
 
-    *可以跳转[rm_algorithm_version_t](../struct/rm_algorithm_version_t.md)查阅结构体详细描述*
+    *可以跳转[rm_algorithm_version_t](../struct/algorithmVersion)查阅结构体详细描述*
 
 - ### ctrl 层软件信息`ctrl_info`
 
@@ -28,7 +28,7 @@
     rm_dynamic_version_t rm_arm_software_version_t::dynamic_info
     ```
 
-    *可以跳转[rm_dynamic_version_t](../struct/rm_dynamic_version_t.md)查阅结构体详细描述*
+    *可以跳转[rm_dynamic_version_t](../struct/dynamicVersion)查阅结构体详细描述*
 
 - ### plan 层软件信息`plan_info`
 
@@ -36,4 +36,4 @@
     rm_planinfo_t rm_arm_software_version_t::plan_info
     ```
 
-    *可以跳转[rm_planinfo_t](../struct/rm_planinfo_t.md)查阅结构体详细描述*
+    *可以跳转[rm_planinfo_t](../struct/planinfo)查阅结构体详细描述*

@@ -10,7 +10,7 @@
     rm_envelopes_ball_t rm_envelope_balls_list_t::balls[5]
     ```
 
-    *可以跳转[rm_envelopes_ball_t](../struct/rm_envelopes_ball_t.md)查阅结构体详细描述*
+    *可以跳转[rm_envelopes_ball_t](../struct/envelopesBall)查阅结构体详细描述*
 
 - ### 包络球数量`size`
 

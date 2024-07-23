@@ -20,7 +20,7 @@
     rm_pose_t rm_waypoint_t::pose
     ```
 
-    *可以跳转[rm_pose_t](../struct/rm_pose_t.md)查阅结构体类型详细描述*
+    *可以跳转[rm_pose_t](../struct/pose)查阅结构体类型详细描述*
 
 - ### 工作坐标系名称 `work_frame`
 

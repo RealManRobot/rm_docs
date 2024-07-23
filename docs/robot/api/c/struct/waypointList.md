@@ -38,4 +38,4 @@
     rm_waypoint_t rm_waypoint_list_t::points_list[100]
     ```
 
-    *可以跳转[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体类型详细描述*
+    *可以跳转[rm_waypoint_t](../struct/waypoint)查阅结构体类型详细描述*

@@ -28,7 +28,7 @@
     rm_joint_status_t rm_realtime_arm_joint_state_t::joint_status
     ```
 
-    *可以跳转[rm_joint_status_t](../struct/rm_joint_status_t.md)查阅结构体详细描述*
+    *可以跳转[rm_joint_status_t](../struct/jointStatus)查阅结构体详细描述*
 
 - ### 力数据（六维力或一维力版本支持）`force_sensor`
 
@@ -36,7 +36,7 @@
     rm_force_sensor_t rm_realtime_arm_joint_state_t::force_sensor
     ```
 
-    *可以跳转[rm_force_sensor_t](../struct/rm_force_sensor_t.md)查阅结构体详细描述*
+    *可以跳转[rm_force_sensor_t](../struct/forceSensor)查阅结构体详细描述*
 
 - ### 系统错误码`sys_err`
 
@@ -50,4 +50,4 @@
     rm_pose_t rm_realtime_arm_joint_state_t::waypoint
     ```
 
-    *可以跳转[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+    *可以跳转[rm_pose_t](../struct/pose)查阅结构体详细描述*
