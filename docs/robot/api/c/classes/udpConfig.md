@@ -12,7 +12,7 @@
 int rm_set_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_realtime_push_config_t](../struct/rm_realtime_push_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_realtime_push_config_t](../struct/realtimePushConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -52,7 +52,7 @@ printf("rm_set_realtime_push result %d\n",ret);
 int rm_get_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t * config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_realtime_push_config_t](../struct/rm_realtime_push_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_realtime_push_config_t](../struct/realtimePushConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
