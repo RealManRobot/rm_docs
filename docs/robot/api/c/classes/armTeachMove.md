@@ -100,7 +100,7 @@ int rm_set_ort_step(rm_robot_handle * handle,rm-ort-teach-type-e type,float step
 ```
 
 *可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
-*可以跳转[rm-ort-teach-type-e](../type/typeList#rm-ort-teach-type-e姿态示教方向)查阅枚举类型详细描述*
+*可以跳转[rm-ort-teach-type-e](../type/typeList.md#rm_ort_teach_type_e姿态示教方向)查阅枚举类型详细描述*
 
 - **参数说明:**
 
