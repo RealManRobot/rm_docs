@@ -71,91 +71,91 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             items: [
               {
                 text: "连接机械臂",
-                link: "/robot/api/c/class/roboticArm",
+                link: "/robot/api/c/classes/roboticArm",
               },
               {
                 text: "工具坐标系配置",
-                link: "/robot/api/c/class/toolCoordinateConfig",
+                link: "/robot/api/c/classes/toolCoordinateConfig",
               },
               {
                 text: "工作坐标系配置",
-                link: "/robot/api/c/class/workCoordinateConfig",
+                link: "/robot/api/c/classes/workCoordinateConfig",
               },
               {
                 text: "初始位置设置",
-                link: "/robot/api/c/class/armInitPosition",
+                link: "/robot/api/c/classes/armInitPosition",
               },
               {
                 text: "机械臂运动控制指令类",
-                link: "/robot/api/c/class/armMotionControl",
+                link: "/robot/api/c/classes/armMotionControl",
               },
               {
                 text: "机械臂状态查询",
-                link: "/robot/api/c/class/armState",
+                link: "/robot/api/c/classes/armState",
               },
               {
                 text: "机械臂示教指令类",
-                link: "/robot/api/c/class/armTeachMove",
+                link: "/robot/api/c/classes/armTeachMove",
               },
               {
                 text: "机械臂末端运动参数配置",
-                link: "/robot/api/c/class/armTipVelocityParameters",
+                link: "/robot/api/c/classes/armTipVelocityParameters",
               },
               {
                 text: "通讯配置",
-                link: "/robot/api/c/class/communicationConfig",
+                link: "/robot/api/c/classes/communicationConfig",
               },
               {
                 text: "控制器IO配置及获取",
-                link: "/robot/api/c/class/controllerIOConfig",
+                link: "/robot/api/c/classes/controllerIOConfig",
               },
               {
                 text: "拖动示教",
-                link: "/robot/api/c/class/dragTeach",
+                link: "/robot/api/c/classes/dragTeach",
               },
               {
                 text: "末端工具IO控制",
-                link: "/robot/api/c/class/effectorIOConfig",
+                link: "/robot/api/c/classes/effectorIOConfig",
               },
               {
                 text: "通用扩展关节控制",
-                link: "/robot/api/c/class/expandControl",
+                link: "/robot/api/c/classes/expandControl",
               },
               {
                 text: "末端传感器六维力",
-                link: "/robot/api/c/class/force",
+                link: "/robot/api/c/classes/force",
               },
               {
                 text: "透传力位混合控制补偿",
-                link: "/robot/api/c/class/gripperControl",
+                link: "/robot/api/c/classes/gripperControl",
               },
               {
                 text: "五指灵巧手",
-                link: "/robot/api/c/class/handControl",
+                link: "/robot/api/c/classes/handControl",
               },
               {
                 text: "系统安装方式",
-                link: "/robot/api/c/class/installPos",
+                link: "/robot/api/c/classes/installPos",
               },
               {
                 text: "初始位置设置",
-                link: "/robot/api/c/class/jointConfigSettings",
+                link: "/robot/api/c/classes/jointConfigSettings",
               },
               {
                 text: "关节配置",
-                link: "/robot/api/c/class/armInitPosition",
+                link: "/robot/api/c/classes/armInitPosition",
               },
               {
                 text: "升降机构控制",
-                link: "/robot/api/c/class/liftControl",
+                link: "/robot/api/c/classes/liftControl",
               },
               {
                 text: "Modbus配置",
-                link: "/robot/api/c/class/modbusConfig",
+                link: "/robot/api/c/classes/modbusConfig",
               },
               {
                 text: "机械臂轨迹指令类",
-                link: "/robot/api/c/class/movePlan",
+                link: "/robot/api/c/classes/movePlan",
               },
             ],
           },
@@ -435,91 +435,91 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 items: [
                   {
                     text: "连接机械臂",
-                    link: "/joints/api/c/class/RoboticArm",
+                    link: "/joints/api/c/classes/RoboticArm",
                   },
                   {
                     text: "工具坐标系配置",
-                    link: "/joints/api/c/class/ToolCoordinateConfig",
+                    link: "/joints/api/c/classes/ToolCoordinateConfig",
                   },
                   {
                     text: "工作坐标系配置",
-                    link: "/joints/api/c/class/WorkCoordinateConfig",
+                    link: "/joints/api/c/classes/WorkCoordinateConfig",
                   },
                   {
                     text: "初始位置设置",
-                    link: "/joints/api/c/class/ArmInitPosition",
+                    link: "/joints/api/c/classes/ArmInitPosition",
                   },
                   {
                     text: "机械臂运动控制指令类",
-                    link: "/joints/api/c/class/ArmMotionControl",
+                    link: "/joints/api/c/classes/ArmMotionControl",
                   },
                   {
                     text: "机械臂状态查询",
-                    link: "/joints/api/c/class/ArmState",
+                    link: "/joints/api/c/classes/ArmState",
                   },
                   {
                     text: "机械臂示教指令类",
-                    link: "/joints/api/c/class/ArmTeachMove",
+                    link: "/joints/api/c/classes/ArmTeachMove",
                   },
                   {
                     text: "机械臂末端运动参数配置",
-                    link: "/joints/api/c/class/ArmTipVelocityParameters",
+                    link: "/joints/api/c/classes/ArmTipVelocityParameters",
                   },
                   {
                     text: "通讯配置",
-                    link: "/joints/api/c/class/CommunicationConfig",
+                    link: "/joints/api/c/classes/CommunicationConfig",
                   },
                   {
                     text: "控制器IO配置及获取",
-                    link: "/joints/api/c/class/ControllerIOConfig",
+                    link: "/joints/api/c/classes/ControllerIOConfig",
                   },
                   {
                     text: "拖动示教",
-                    link: "/joints/api/c/class/DragTeach",
+                    link: "/joints/api/c/classes/DragTeach",
                   },
                   {
                     text: "末端工具IO控制",
-                    link: "/joints/api/c/class/EffectorIOConfig",
+                    link: "/joints/api/c/classes/EffectorIOConfig",
                   },
                   {
                     text: "通用扩展关节控制",
-                    link: "/joints/api/c/class/ExpandControl",
+                    link: "/joints/api/c/classes/ExpandControl",
                   },
                   {
                     text: "末端传感器六维力",
-                    link: "/joints/api/c/class/Force",
+                    link: "/joints/api/c/classes/Force",
                   },
                   {
                     text: "透传力位混合控制补偿",
-                    link: "/joints/api/c/class/GripperControl",
+                    link: "/joints/api/c/classes/GripperControl",
                   },
                   {
                     text: "五指灵巧手",
-                    link: "/joints/api/c/class/HandControl",
+                    link: "/joints/api/c/classes/HandControl",
                   },
                   {
                     text: "系统安装方式",
-                    link: "/joints/api/c/class/InstallPos",
+                    link: "/joints/api/c/classes/InstallPos",
                   },
                   {
                     text: "初始位置设置",
-                    link: "/joints/api/c/class/JointConfigSettings",
+                    link: "/joints/api/c/classes/JointConfigSettings",
                   },
                   {
                     text: "关节配置",
-                    link: "/joints/api/c/class/ArmInitPosition",
+                    link: "/joints/api/c/classes/ArmInitPosition",
                   },
                   {
                     text: "升降机构控制",
-                    link: "/joints/api/c/class/LiftControl",
+                    link: "/joints/api/c/classes/LiftControl",
                   },
                   {
                     text: "Modbus配置",
-                    link: "/joints/api/c/class/ModbusConfig",
+                    link: "/joints/api/c/classes/ModbusConfig",
                   },
                   {
                     text: "机械臂轨迹指令类",
-                    link: "/joints/api/c/class/MovePlan",
+                    link: "/joints/api/c/classes/MovePlan",
                   },
                 ],
               },
