@@ -15,7 +15,7 @@
 int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_force_data_t](../struct/forceData.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_force_data_t](../struct/forceData)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -59,7 +59,7 @@ for(int i = 0; i < 6; i++) {
 int rm_clear_force_data(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -84,22 +84,26 @@ ret = rm_clear_force_data(robot_handle);
 printf("clear force data result : %d\n", ret);
 ```
 
-## 设置六维力重心参数`rm_set_force_sensor()`
+## 设置六维力重心参数 `rm_set_force_sensor()`
 
->设置六维力重心参数，六维力重新安装后，必须重新计算六维力所受到的初始力和重心。分别在不同姿态下，获取六维力的数据， 用于计算重心位置。该指令下发后，机械臂以固定的速度运动到各标定点。
->以RM65机械臂为例，四个标定点的关节角度分别为：
->位置1关节角度：{0,0,-60,0,60,0}
->位置2关节角度：{0,0,-60,0,-30,0}
->位置3关节角度：{0,0,-60,0,-30,180}
->位置4关节角度：{0,0,-60,0,-120,0}
+> 设置六维力重心参数，六维力重新安装后，必须重新计算六维力所受到的初始力和重心。分别在不同姿态下，获取六维力的数据， 用于计算重心位置。该指令下发后，机械臂以固定的速度运动到各标定点。
 
+> 以RM65机械臂为例，四个标定点的关节角度分别为：
+
+> 位置1关节角度： 0,0,-60,0,60,0
+
+> 位置2关节角度： 0,0,-60,0,-30,0 
+
+> 位置3关节角度： 0,0,-60,0,-30,180 
+
+> 位置4关节角度： 0,0,-60,0,-120,0 
 - **方法原型：**
 
 ``` C
 int rm_set_force_sensor(rm_robot_handle * handle,bool block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 >注意：必须保证在机械臂静止状态下标定;
 >注意：该过程不可中断，中断后必须重新标定;
 
@@ -138,7 +142,7 @@ printf("set force sensor result : %d\n", ret);
 int rm_manual_set_force(rm_robot_handle * handle,int count,float * joint,bool block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 >注意：上述4个位置必须按照顺序依次下发，当下发完位置4后，机械臂开始自动运行计算重心。
 
 - **参数说明:**
@@ -220,7 +224,7 @@ for (int i = 1; i <= 4; i++) {
 int rm_stop_set_force_sensor(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
