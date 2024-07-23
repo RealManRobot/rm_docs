@@ -1,10 +1,5 @@
-<div align="right">
  
-[简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README_CN.md){target="_self"}|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README.md){target="_self"}
-
-</div>
-
-<div align="center">
+<!-- [简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README_CN.md){target="_self"}|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README.md){target="_self"} -->
 
 # 睿尔曼机器人rm_gazebo使用说明书V1.0
  
@@ -15,7 +10,6 @@
 | :---: | :-----: | :---: |
 |V1.0    |2024-2-19  |拟制 |
 
-</div>
 
 ## 目录
 * 1.[rm_bringup功能包说明](#rm_bringup功能包说明)
