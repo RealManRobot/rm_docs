@@ -11,7 +11,7 @@
 int rm_start_force_position_move(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -44,7 +44,7 @@ ret = rm_start_force_position_move(robot_handle);
 int rm_stop_force_position_move(rm_robot_handle * handle)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -76,7 +76,7 @@ ret = rm_stop_force_position_move(robot_handle);
 int rm_force_position_move_joint(rm_robot_handle * handle,const float * joint,int sensor,int mode,int dir,float force,bool follow)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -121,7 +121,7 @@ ret=rm_force_position_move_joint(robot_handle,joint,sensor,mode,dir,force,follow
 int rm_force_position_move_pose(rm_robot_handle * handle,rm_pose_t pose,int sensor,int mode,int dir,float force,bool follow)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_pose_t](../struct/rm_pose_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_pose_t](../struct/pose)查阅结构体详细描述*
 
 - **参数说明:**
 

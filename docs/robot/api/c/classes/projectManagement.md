@@ -12,7 +12,7 @@
 int rm_send_project(rm_robot_handle * handle,rm_send_project_t project,int * errline)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_send_project_t](../struct/rm_send_project_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_send_project_t](../struct/sendProject)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -55,7 +55,7 @@ printf("send project result: %d, err_line: %d\n", ret, errline);
 int rm_set_plan_speed(rm_robot_handle * handle,int speed)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_send_project_t](../struct/rm_send_project_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_send_project_t](../struct/sendProject)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -89,7 +89,7 @@ ret = rm_set_plan_speed(robot_handle,speed);
 int rm_get_program_trajectory_list(rm_robot_handle * handle,int page_num,int page_size,const char * vague_search,rm_program_trajectorys_t * trajectorys)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_program_trajectorys_t](../struct/rm_program_trajectorys_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_program_trajectorys_t](../struct/programTrajectorys)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -131,7 +131,7 @@ printf("rm_get_program_trajectory_list result : %d\n", result);
 int rm_set_program_id_run(rm_robot_handle * handle,int id,int speed,int block)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -171,7 +171,7 @@ printf("rm_set_program_id_run result :%d\n", ret);
 int rm_get_program_run_state(rm_robot_handle * handle,rm_program_run_state_t * run_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_program_run_state_t](../struct/rm_program_run_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_program_run_state_t](../struct/programRunState)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -205,7 +205,7 @@ ret = rm_get_program_run_state(robot_handle, &state);
 int rm_delete_program_trajectory(rm_robot_handle * handle,int id)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_program_run_state_t](../struct/rm_program_run_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_program_run_state_t](../struct/programRunState)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -239,7 +239,7 @@ printf("delete program trajectory result : %d\n", ret);
 int rm_update_program_trajectory(rm_robot_handle * handle,int id,int speed,const char * name)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -275,7 +275,7 @@ printf("update program trajectory result : %d\n", ret);
 int rm_set_default_run_program(rm_robot_handle * handle,int id)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -310,7 +310,7 @@ ret = rm_set_default_run_program(robot_handle, 1);
 int rm_get_default_run_program(rm_robot_handle * handle,int * id)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -344,7 +344,7 @@ ret = rm_get_default_run_program(robot_handle, id);
 int rm_add_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_waypoint_t](../struct/waypoint)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -395,7 +395,7 @@ ret = rm_add_global_waypoint(robot_handle, waypoint);
 int rm_update_global_waypoint(rm_robot_handle * handle,rm_waypoint_t waypoint)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_waypoint_t](../struct/waypoint)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -446,7 +446,7 @@ ret = rm_update_global_waypoint(robot_handle, waypoint);
 int rm_delete_global_waypoint(rm_robot_handle * handle,const char * point_name)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_waypoint_t](../struct/waypoint)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -480,7 +480,7 @@ rm_delete_global_waypoint(robot_handle, "p3");
 int rm_get_given_global_waypoint(rm_robot_handle * handle,const char * name,rm_waypoint_t * point)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_waypoint_t](../struct/waypoint)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -516,7 +516,7 @@ ret = rm_get_given_global_waypoint(robot_handle, "p3", &point);
 int rm_get_global_waypoints_list(rm_robot_handle * handle,int page_num,int page_size,const char * vague_search,rm_waypoint_list_t * point_list)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_waypoint_t](../struct/rm_waypoint_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_waypoint_t](../struct/waypoint)查阅结构体详细描述*
 
 - **参数说明:**
 
