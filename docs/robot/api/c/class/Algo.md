@@ -690,7 +690,7 @@ pose = rm_algo_workframe2base(matrix,state);
 printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
-## 计算环绕运动位姿计算环绕运动位姿`rm_algo_RotateMove()`
+## 计算环绕运动位姿`rm_algo_RotateMove()`
 
 - **方法原型：**
 
