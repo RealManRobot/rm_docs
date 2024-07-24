@@ -10,7 +10,7 @@
 int rm_set_IO_mode(rm_robot_handle * handle,int io_num,int io_mode)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -47,7 +47,7 @@ ret = rm_set_IO_mode (robot_handle,io_num,io_mode);
 int rm_set_DO_state(rm_robot_handle * handle,int io_num,int state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -84,7 +84,7 @@ ret = rm_set_DO_state(robot_handle,io_num,state);
 int rm_get_IO_state(rm_robot_handle * handle,int io_num,int * state,int * mode)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -123,7 +123,7 @@ ret = rm_get_IO_state(robot_handle,num,&state,&mode);
 int rm_get_IO_input(rm_robot_handle * handle,int * DI_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -158,7 +158,7 @@ ret = rm_get_IO_input(robot_handle,DI_state);
 int rm_get_IO_output(rm_robot_handle * handle,int * DO_state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -193,7 +193,7 @@ ret = rm_get_IO_output(robot_handle,DO_state);
 int rm_set_voltage(rm_robot_handle * handle,int voltage_type)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -228,7 +228,7 @@ ret = rm_set_voltage(robot_handle, type);
 int rm_get_voltage(rm_robot_handle * handle,int * voltage_type)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
 
 - **参数说明:**
 

@@ -231,7 +231,7 @@ if (rm_get_joint_degree(robot_handle, degree) == 0) {
 int rm_get_arm_all_state(rm_robot_handle * handle,rm_arm_all_state_t * state)机械臂状态查询
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandled)和[rm_arm_all_state_t](../struct/allState)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_arm_all_state_t](../struct/allState)查阅结构体详细描述*
 
 - **参数说明:**
 

@@ -1,10 +1,5 @@
-<div align="right">
  
-[简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README_CN.md)|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README.md)
-
-</div>
-
-<div align="center">
+[简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README_CN.md){target="_self"}|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_bringup/README.md){target="_self"}
 
 # 睿尔曼机器人rm_gazebo使用说明书V1.0
  
@@ -15,7 +10,6 @@
 | :---: | :-----: | :---: |
 |V1.0    |2024-2-19  |拟制 |
 
-</div>
 
 ## 目录
 * 1.[rm_bringup功能包说明](#rm_bringup功能包说明)
@@ -48,7 +42,7 @@ rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_bringup.launch.py
 ```
 节点启动成功后，将弹出以下画面。
 ![image](doc/rm_bringup1.png)  
-实际该launch文件启动的为moveit2控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看《[rm_moveit2_config详解]((https://github.com/kaola-zero/ros2_rm_robot/blob/main/rm_moveit2_config/README_CN.md))》相关内容。
+实际该launch文件启动的为moveit2控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看《[rm_moveit2_config详解](https://github.com/kaola-zero/ros2_rm_robot/blob/main/rm_moveit2_config/README_CN.md){target="_self"}》相关内容。
 ### 控制gazebo仿真机械臂
 我们可以通过以下命令运行rm_bringup功能包中的launch.py文件，直接启动其中的gzaebo仿真节点。
 ```
@@ -83,4 +77,4 @@ rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_gazebo.launch.py
 └── src
 ```
 ## rm_bringup话题说明
-该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit2相关话题可查看《[rm_moveit2_config详解](https://github.com/kaola-zero/ros2_rm_robot/blob/main/rm_moveit2_config/README_CN.md)》相关内容。
+该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit2相关话题可查看《[rm_moveit2_config详解](https://github.com/kaola-zero/ros2_rm_robot/blob/main/rm_moveit2_config/README_CN.md){target="_self"}》相关内容。

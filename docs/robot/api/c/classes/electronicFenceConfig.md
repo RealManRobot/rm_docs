@@ -19,7 +19,7 @@ I系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制�
 int rm_add_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -63,7 +63,7 @@ printf("rm_add_electronic_fence_config:%d\n", result);
 int rm_update_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -107,7 +107,7 @@ printf("rm_update_electronic_fence_config :%d\n", result);
 int rm_delete_electronic_fence_config(rm_robot_handle * handle,const char * form_name)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -141,7 +141,7 @@ int rm_delete_electronic_fence_config(rm_robot_handle * handle,const char * form
 int rm_get_electronic_fence_list_names(rm_robot_handle * handle,rm_fence_names_t * names,int * len)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_names_t](../struct/rm_fence_names_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_names_t](../struct/frameName)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -181,7 +181,7 @@ for (int i = 0; i < len_fence; i++) {
 int rm_get_given_electronic_fence_config(rm_robot_handle * handle,const char * name,rm_fence_config_t * config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -224,7 +224,7 @@ fence_config_given.cube.z_min_limit);
 int rm_get_electronic_fence_list_infos(rm_robot_handle * handle,rm_fence_config_list_t * config_list,int * len)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_list_t](../struct/rm_fence_config_list_t.md)查阅结构体详细描述*
+<!-- *可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_list_t](../struct/rm_fence_config_list_t.md)查阅结构体详细描述* -->
 
 - **参数说明:**
 
@@ -265,7 +265,7 @@ for (int i = 0; i < len; i++) {
 int rm_set_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_enable_t state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_electronic_fence_enable_t](../struct/rm_electronic_fence_enable_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_electronic_fence_enable_t](../struct/electronicFenceEnable)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -306,7 +306,7 @@ printf("set electronic fence enable result : %d\n", ret);
 int rm_get_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_enable_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_electronic_fence_enable_t](../struct/rm_electronic_fence_enable_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_electronic_fence_enable_t](../struct/electronicFenceEnable)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -343,7 +343,7 @@ printf("fence in/out side : %d\n", fence_state.in_out_side);
 int rm_set_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -386,7 +386,7 @@ printf("set electronic fence config result : %d\n", ret);
 int rm_get_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t * config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -427,7 +427,7 @@ printf("fence z_min_limit : %f\n", set_fence_config.cube.z_min_limit);
 int rm_set_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enable_t state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_electronic_fence_enable_t](../struct/rm_electronic_fence_enable_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_electronic_fence_enable_t](../struct/electronicFenceEnable)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -466,7 +466,7 @@ printf("set electronic fence enable result : %d\n", ret);
 int rm_get_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enable_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_electronic_fence_enable_t](../struct/rm_electronic_fence_enable_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_electronic_fence_enable_t](../struct/electronicFenceEnable)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -503,7 +503,7 @@ printf("fence in/out side : %d\n", fence_state.in_out_side);
 int rm_set_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -546,7 +546,7 @@ printf("set virtual wall config result : %d\n", ret);
 int rm_get_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t * config)
 ```
 
-*可以跳转[rm_robot_handle](../struct/rm_robot_handle.md)和[rm_fence_config_t](../struct/rm_fence_config_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_fence_config_t](../struct/fenceConfig)查阅结构体详细描述*
 
 - **参数说明:**
 

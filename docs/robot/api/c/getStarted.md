@@ -98,7 +98,7 @@ int main(int argc,char **argv)
 
 输出结果如下所示：
 
-![输出结果图片](../python/doc/image-20240703144125280.png)
+![输出结果图片](../c/doc/image-20240710104820423.png)
 
 ## 五、支持渠道
 

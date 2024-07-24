@@ -87,7 +87,7 @@ ret = rm_set_lift_height(robot_handle,speed,height,1);
 int rm_get_lift_state(rm_robot_handle * handle,rm_expand_state_t * state)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_expand_state_t](../struct/rm_expand_state_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_expand_state_t](../struct/expandState)查阅结构体详细描述*
 
 - **参数说明:**
 

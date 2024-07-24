@@ -162,7 +162,7 @@ ret = rm_close_modbustcp_mode(robot_handle);
 int rm_read_coils(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -328,7 +328,7 @@ printf("read input registers data : %d\n", data);
 int rm_write_single_coil(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -368,7 +368,7 @@ printf("write single coil result : %d\n", ret);
 int rm_write_single_register(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -408,7 +408,7 @@ printf("write single register result : %d\n", ret);
 int rm_write_registers(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -449,7 +449,7 @@ printf("write registers result : %d\n", ret);
 int rm_write_coils(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -490,7 +490,7 @@ printf("write coils result : %d\n", ret);
 int rm_read_multiple_coils(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -535,7 +535,7 @@ for(int i = 0; i < params_coils.num/8; i++)
 int rm_read_multiple_holding_registers(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -580,7 +580,7 @@ for(int i = 0; i < params_coils.num*2; i++)
 int rm_read_multiple_input_registers(rm_robot_handle * handle,rm_peripheral_read_write_params_t params,int * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t.md)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams)查阅结构体详细描述*
 
 - **参数说明:**
 
