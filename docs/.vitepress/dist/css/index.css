@@ -65,7 +65,10 @@ tbody {
 .title {
     color: #EC6102 !important;
 }
-
+.box .title{
+    color: var(--vp-c-text-1) !important;
+    text-align: center;
+}
 .VPSidebar {
     background-color: var(--vp-nav-bg-color) !important;
 }
@@ -91,4 +94,29 @@ tbody {
     position: relative !important;
     width: 0 !important;
     border-radius: 0 !important;
+}
+.icon{
+    width: 100% !important;
+    height: 118px !important;
+    background-color: transparent !important;
+}
+
+.clip{
+    -webkit-text-fill-color:var(--vp-c-text-1) !important;
+}
+.titleP{
+    display: inline-block;
+    -webkit-text-fill-color: #EC6102 !important;
+}
+.VPButton.brand{
+    background-color: #EC6102 !important;
+}
+.message a{
+    text-decoration: none;
+    text-decoration-line:none !important;
+    -webkit-backface-visibility: hidden;
+}
+.message:hover a{
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
 }
