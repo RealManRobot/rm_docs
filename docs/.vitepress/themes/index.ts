@@ -2,7 +2,10 @@ import type { DefaultTheme } from "vitepress";
 import { navsList } from "../nav";
 import { sidebars } from "../sidebars";
 export const themeConfig: DefaultTheme.Config = {
-  logo: "/assets/logo.png",
+  logo: {
+    light:"/assets/light_logo.png",
+    dark:"/assets/dark_logo.png"
+  },
   i18nRouting: false,
   nav: navsList,
   sidebar: sidebars,
