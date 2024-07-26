@@ -1,3 +1,4 @@
+
 /*去除表格边框*/
 .vp-doc th,
 .vp-doc td {
@@ -16,7 +17,7 @@ tbody {
     padding: 0 !important;
 }
 .VPNavBarMenuLink.active {
-    color: #EC6102 !important;
+    color: var(--vp-c-brand-1);
     padding: 0 !important;
 }
 .VPNavBarMenuLink>span {
@@ -28,12 +29,12 @@ tbody {
     padding: 0 16px;
 }
 .VPNavBarMenuLink.active>span {
-    border-color: #EC6102;
+    border-color: var(--vp-c-brand-1);
     background-color: #FDEFE5;
 }
 
 .VPNavBarMenuLink:hover {
-    color: #EC6102 !important;
+    color: var(--vp-c-brand-1);
 }
 
 /**/
@@ -43,7 +44,7 @@ tbody {
 .VPSidebarItem.level-3.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-4.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-5.is-link>.item>.link:hover .text {
-    color: #EC6102 !important;
+    color: var(--vp-c-brand-1);
 }
 
 .VPSidebarItem.level-0.is-active>.item .link>.text,
@@ -52,29 +53,29 @@ tbody {
 .VPSidebarItem.level-3.is-active>.item .link>.text,
 .VPSidebarItem.level-4.is-active>.item .link>.text,
 .VPSidebarItem.level-5.is-active>.item .link>.text {
-    color: #EC6102 !important;
+    color: var(--vp-c-brand-1);
 }
 
 .VPSidebarItem.level-2.is-active>.item>.indicator,
 .VPSidebarItem.level-3.is-active>.item>.indicator,
 .VPSidebarItem.level-4.is-active>.item>.indicator,
 .VPSidebarItem.level-5.is-active>.item>.indicator {
-    background-color: #EC6102 !important;
+    background-color: var(--vp-c-brand-1);
 }
 
 .title {
-    color: #EC6102 !important;
+    color: var(--vp-c-brand-1);
 }
 .box .title{
-    color: var(--vp-c-text-1) !important;
+    color: var(--vp-c-text-1);
     text-align: center;
 }
 .VPSidebar {
-    background-color: var(--vp-nav-bg-color) !important;
+    background-color: var(--vp-nav-bg-color);
 }
 
 .curtain {
-    background-color: var(--vp-nav-bg-color) !important;
+    background-color: var(--vp-nav-bg-color);
 }
 
 .VPNavBar.has-sidebar .title {
@@ -106,10 +107,10 @@ tbody {
 }
 .titleP{
     display: inline-block;
-    -webkit-text-fill-color: #EC6102 !important;
+    -webkit-text-fill-color: var(--vp-c-brand-1) !important;
 }
 .VPButton.brand{
-    background-color: #EC6102 !important;
+    background-color: var(--vp-c-brand-1) !important;
 }
 .message a{
     text-decoration: none;
@@ -119,4 +120,7 @@ tbody {
 .message:hover a{
     text-decoration: none;
     -webkit-backface-visibility: hidden;
+}
+.pager-link:hover{
+    border-color:var(--vp-c-brand-1) !important;
 }
