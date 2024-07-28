@@ -1,5 +1,7 @@
 # UDP 主动上报（I 系列）
 
+<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 ## UDP 机械臂状态主动上报接口
 
 I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需要和机械臂处于同一局域网络下，通过设置主动上报配置接口的目标 IP或和机械臂建立 TCP 连接，机械臂即会主动周期性上报机械臂状态数据，广播的默认目标端口为 8089（可配置），使用 UDP 协议监听本机的 8089 端口，即可收到数据，数据周期可配置，默认 5ms。
@@ -8,25 +10,25 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|state|string|realtime_arm_joint_state 实时机械臂状态上报
-|arm_err|int|机械臂错误码
-|sys_err|int|系统错误码
-|joint_status|int|当前关节状态
-|joint_current|int|当前关节电流，精度 0.001mA
-|joint_en_flag|int|当前关节使能状态 ，1 为上使能，0 为掉使能
-|joint_err_code|int|当前关节错误码
-|joint_position|int|当前关节角度，精度 0.001°
-|joint_temperature|int|当前关节温度，精度 0.001℃
-|joint_voltage|int|当前关节电压，精度 0.001V
-|waypoint|object|当前路点信息
-|position|int|当前路点位置，精度 0.000001M
-|euler|object|当前路点姿态欧拉角，精度 0.001rad
-|quat|object|当前路点四元数，精度 0.000001
-|six_force_sensor|object|六维力数据（六维力版本支持）
-|one_force_sensor|object|一维力数据（一维力版本支持）
-|force|object|当前力传感器原始数据 0.001N 或 0.001Nm
-|zero_force|object|当前力传感器系统外受力数据 0.001N 或 0.001Nm
-|coordinate|int|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系
+|state|`string`|realtime_arm_joint_state 实时机械臂状态上报。|
+|arm_err|`int`|机械臂错误码。|
+|sys_err|`int`|系统错误码。|
+|joint_status|`int`|当前关节状态。|
+|joint_current|`int`|当前关节电流，精度 0.001mA。|
+|joint_en_flag|`int`|当前关节使能状态 ，1 为上使能，0 为掉使能。|
+|joint_err_code|`int`|当前关节错误码。|
+|joint_position|`int`|当前关节角度，精度 0.001°。|
+|joint_temperature|`int`|当前关节温度，精度 0.001℃。|
+|joint_voltage|`int`|当前关节电压，精度 0.001V。|
+|waypoint|`object`|当前路点信息。|
+|position|`int`|当前路点位置，精度 0.000001M。|
+|euler|`object`|当前路点姿态欧拉角，精度 0.001rad。|
+|quat|`object`|当前路点四元数，精度 0.000001。|
+|six_force_sensor|`object`|六维力数据（六维力版本支持）。|
+|one_force_sensor|`object`|一维力数据（一维力版本支持）。|
+|force|`object`|当前力传感器原始数据 0.001N 或 0.001Nm。|
+|zero_force|`object`|当前力传感器系统外受力数据 0.001N 或 0.001Nm。|
+|coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。|
 
 **使用示例：**
 实现：UDP数据上报
@@ -37,16 +39,14 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 
 ## 查询 UDP 机械臂状态主动上报配置
 
-查询 UDP 机械臂状态主动上报配置
-
 **参数说明：**
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|   `get_realtime_push`     |   string   |   查询 UDP 机械臂状态主动上报配置     |
+|   `get_realtime_push`     |   `string`   |   查询 UDP 机械臂状态主动上报配置     |
 
 **使用示例：**
-实现：用于查询 UDP 机械臂状态主动上报配置
+实现：用于查询 UDP 机械臂状态主动上报配置。
 
 ```json
 {"command":"get_realtime_push"}
@@ -60,26 +60,24 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|port|int|设置广播的端口号|
-|cycle|int|设置广播周期，为 5ms 的倍数|
-|enable|bool|设置使能，是否使能主动上报|
-|force_coordinate|int|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）|
-|ip|string|自定义的上报目标 IP 地址|
+|port|`int`|设置广播的端口号。|
+|cycle|`int`|设置广播周期，为 5ms 的倍数。|
+|enable|`bool`|设置使能，是否使能主动上报。|
+|force_coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
+|ip|`string`|自定义的上报目标 IP 地址。|
 
 ## 设置 UDP 机械臂状态主动上报配置
-
-设置 UDP 机械臂状态主动上报配置
 
 **参数说明：**
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|   `set_realtime_push`     |   string   |   设置 UDP 机械臂状态主动上报配置     |
-|port|int|设置广播的端口号|
-|cycle|int|设置广播周期，为 5ms 的倍数|
-|enable|bool|设置使能，是否使能主动上报|
-|force_coordinate|int|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）|
-|ip|string|自定义的上报目标 IP 地址|
+|   `set_realtime_push`     |   `string`   |   设置 UDP 机械臂状态主动上报配置     |
+|port|`int`|设置广播的端口号。|
+|cycle|`int`|设置广播周期，为 5ms 的倍数。|
+|enable|`bool`|设置使能，是否使能主动上报。|
+|force_coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
+|ip|`string`|自定义的上报目标 IP 地址。|
 
 **使用示例：**
 实现：用于设置 UDP 机械臂状态主动上报配置
@@ -96,4 +94,4 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|set_realtime_push|bool|true 成功  false  失败|
+|set_realtime_push|`bool`|true 成功  false  失败。|
