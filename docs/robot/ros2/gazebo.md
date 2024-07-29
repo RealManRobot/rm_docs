@@ -1,13 +1,5 @@
 # 睿尔曼机器人rm_gazebo使用说明
 
-## 目录
-
-* 1.[rm_gazebo功能包说明](#rm_gazebo功能包说明)
-* 2.[rm_gazebo功能包运行](#rm_gazebo功能包运行)
-* 2.1[控制仿真机械臂](#控制仿真机械臂)
-* 3.[rm_gazebo功能包架构说明](#rm_gazebo功能包架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-
 ## rm_gazebo功能包说明
 
 rm_gazebo的主要作用为帮助我们实现机械臂Moveit2规划的仿真功能，我们将在gazebo的仿真环境中搭建一个虚拟机械臂，然后通过Moveit2控制gazebo中的虚拟机械臂。

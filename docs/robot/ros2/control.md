@@ -1,14 +1,5 @@
 # rm_control使用说明
 
-## 目录
-* 1.[rm_control功能包说明](#rm_control功能包说明)
-* 2.[rm_control功能包使用](#rm_control功能包使用)
-* 2.1[功能包基础使用](#功能包基础使用)
-* 2.2[功能包进阶使用](#功能包进阶使用)
-* 3.[rm_control功能包架构说明](#rm_control功能包架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-* 4.[rm_control话题说明](#rm_control话题说明)
-
 ## rm_control功能包说明
 
 rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功能包，该功能包的主要作用为将moveit2规划好的路径点进行进一步的细分，将细分后的路径点以透传的方式给到rm_driver，实现机械臂的规划运行。

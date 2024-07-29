@@ -1,15 +1,5 @@
 # 睿尔曼机器人rm_moveit2_config使用说明
 
-## 目录
-
-* 1.[rm_moveit2_config说明](#rm_moveit2_config说明)
-* 2.[rm_moveit2_config使用](#rm_moveit2_config使用)
-* 2.1[moveit2控制虚拟机械臂](#moveit2控制虚拟机械臂)
-* 2.2[moveit2控制真实机械臂](#moveit2控制真实机械臂)
-* 3.[rm_moveit2_config架构说明](#rm_moveit2_config架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-* 4.[rm_moveit2_config话题说明](#rm_moveit2_config话题说明)
-
 ## rm_moveit2_config说明
 
 rm_moveit2_config文件夹为实现moveit2控制真实机械臂的功能包，该功能包的主要作用为调用官方的moveit2框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit2的配置和启动文件，通过该功能包我们可以实现moveit2控制虚拟机械臂和控制真实机械臂。
