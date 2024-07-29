@@ -1,23 +1,7 @@
-<div align="right">
- 
-[简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_driver/README_CN.md)|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_driver/README.md)
-
-</div>
-
-<div align="center">
-
-# 睿尔曼机器人rm_driver使用说明书V1.0
- 
-睿尔曼智能科技（北京）有限公司 
-文件修订记录：
-
-| 版本号| 时间   | 备注  | 
-| :---: | :-----: | :---: |
-|V1.0    |2024-2-7  |拟制 |
-
-</div>
+# 睿尔曼机器人rm_driver使用说明
 
 ## 目录
+
 * 1.[rm_driver功能包说明](#rm_driver功能包说明)
 * 2.[rm_driver功能包使用](#rm_driver功能包使用)
 * 2.1[功能包基础使用](#功能包基础使用)
@@ -27,16 +11,21 @@
 * 4.[rm_driver话题说明](#rm_driver话题说明)
 
 ## rm_driver功能包说明
+
 rm_driver功能包在机械臂ROS2功能包中是十分重要的，该功能包实现了通过ROS与机械臂进行通信控制机械臂的功能，在下文中将通过以下几个方面详细介绍该功能包。  
+
 * 1.功能包使用。  
 * 2.功能包架构说明。  
 * 3.功能包话题说明。
 
 通过这三部分内容的介绍可以帮助大家：  
+
 * 1.了解该功能包的使用。  
 * 2.熟悉功能包中的文件构成及作用。  
 * 3.熟悉功能包相关的话题，方便开发和使用  
+
 ## rm_driver功能包使用
+
 ### 功能包基础使用
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，控制机械臂。  
 当前的控制基于我们没有改变过机械臂的IP即当前机械臂的IP仍为192.168.1.18。  
@@ -44,7 +33,9 @@ rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
 底层驱动启动成功后，将显示以下画面。  
 ![image](doc/rm_driver1.png)  
+
 ### 功能包进阶使用
+
 当我们的机械臂IP被改变后我们的启动指令就失效了，再直接使用如上指令就无法成功连接到机械臂了，我们可以通过修改如下配置文件，重新建立连接。  
 该配置文件位于我们的rm_driver功能包下的config文件夹下。  
 ![image](doc/rm_driver4.png)  
@@ -67,6 +58,7 @@ rm_driver:
 ```
 
 其中主要有以下几个参数。
+
 * arm_ip：改参数代表机械臂当前的IP
 * tcp_port：设置TCP连接时的端口。
 * arm_type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RML_63（63系列）、RM_75（75系列）。
@@ -83,8 +75,11 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 ```
 
 * 编译成功后可按如上指令进行功能包启动。
+
 ## rm_driver功能包架构说明
+
 ### 功能包文件总览
+
 当前rm_driver功能包的文件构成如下。
 
 ```
@@ -124,6 +119,7 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 ```
 
 ## rm_driver话题说明
+
 rm_driver的话题较多，可以通过如下指令了解其话题信息。
 ![image](doc/rm_driver2.png)
 ![image](doc/rm_driver3.png)  
