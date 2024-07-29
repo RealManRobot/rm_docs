@@ -1,0 +1,3466 @@
+[20240701 03:21:56] Begin API Testing.
+[20240701 03:21:56]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:21:56]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:21:56]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:21:56]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:21:56]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:21:56]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:21:56]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:21:56]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:21:56]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:21:56]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:21:56]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:21:56]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:21:56]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:21:56]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:21:56]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:21:56]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:21:56]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:21:56]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:21:56]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:21:56]:  0
+
+[20240701 03:21:56]:  0
+
+[20240701 03:21:56]:  0
+
+[20240701 03:21:56]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:21:56]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:21:56]:  -108000
+
+[20240701 03:21:56]:  -130000
+
+[20240701 03:21:56]:  -135000
+
+[20240701 03:21:56]:  -178000
+
+[20240701 03:21:56]:  -128000
+
+[20240701 03:21:56]:  -360000
+
+[20240701 03:21:56]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:21:56]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:21:56]:  178000
+
+[20240701 03:21:56]:  130000
+
+[20240701 03:21:56]:  135000
+
+[20240701 03:21:56]:  178000
+
+[20240701 03:21:56]:  128000
+
+[20240701 03:21:56]:  360000
+
+[20240701 03:21:56]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:21:56]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:21:56]:  50000
+
+[20240701 03:21:56]:  100000
+
+[20240701 03:21:56]:  100000
+
+[20240701 03:21:56]:  100000
+
+[20240701 03:21:56]:  100000
+
+[20240701 03:21:56]:  100000
+
+[20240701 03:21:56]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:21:56]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:21:56]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:21:56]:  15000
+
+[20240701 03:21:56]:  30000
+
+[20240701 03:21:56]:  37500
+
+[20240701 03:21:56]:  37500
+
+[20240701 03:21:56]:  37500
+
+[20240701 03:21:56]:  37500
+
+[20240701 03:23:51] Begin API Testing.
+[20240701 03:23:51]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:23:51]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:23:51]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:23:51]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:23:51]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:23:51]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:23:51]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:23:51]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:23:51]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:23:51]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:23:51]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:23:51]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:23:51]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:23:51]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:23:51]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:23:51]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:23:51]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:23:51]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:23:51]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:23:51]:  0
+
+[20240701 03:23:51]:  0
+
+[20240701 03:23:51]:  0
+
+[20240701 03:23:51]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:23:51]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:23:51]:  -108000
+
+[20240701 03:23:51]:  -130000
+
+[20240701 03:23:51]:  -135000
+
+[20240701 03:23:51]:  -178000
+
+[20240701 03:23:51]:  -128000
+
+[20240701 03:23:51]:  -360000
+
+[20240701 03:23:51]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:23:51]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:23:51]:  178000
+
+[20240701 03:23:51]:  130000
+
+[20240701 03:23:51]:  135000
+
+[20240701 03:23:51]:  178000
+
+[20240701 03:23:51]:  128000
+
+[20240701 03:23:51]:  360000
+
+[20240701 03:23:51]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:23:51]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:23:51]:  50000
+
+[20240701 03:23:51]:  100000
+
+[20240701 03:23:51]:  100000
+
+[20240701 03:23:51]:  100000
+
+[20240701 03:23:51]:  100000
+
+[20240701 03:23:51]:  100000
+
+[20240701 03:23:51]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:23:51]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:23:51]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:23:51]:  15000
+
+[20240701 03:23:51]:  30000
+
+[20240701 03:23:51]:  37500
+
+[20240701 03:23:51]:  37500
+
+[20240701 03:23:51]:  37500
+
+[20240701 03:23:51]:  37500
+
+[20240701 03:23:58] Begin API Testing.
+[20240701 03:23:58]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:23:58]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:23:58]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:23:58]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:23:58]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:23:58]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:23:58]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:23:58]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:23:58]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:23:58]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:23:58]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:23:58]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:23:58]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:23:58]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:23:58]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:23:58]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:23:58]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:23:58]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:23:58]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:23:58]:  0
+
+[20240701 03:23:58]:  0
+
+[20240701 03:23:58]:  0
+
+[20240701 03:23:58]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:23:58]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:23:58]:  -108000
+
+[20240701 03:23:58]:  -130000
+
+[20240701 03:23:58]:  -135000
+
+[20240701 03:23:58]:  -178000
+
+[20240701 03:23:58]:  -128000
+
+[20240701 03:23:58]:  -360000
+
+[20240701 03:23:58]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:23:58]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:23:58]:  178000
+
+[20240701 03:23:58]:  130000
+
+[20240701 03:23:58]:  135000
+
+[20240701 03:23:58]:  178000
+
+[20240701 03:23:58]:  128000
+
+[20240701 03:23:58]:  360000
+
+[20240701 03:23:58]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:23:58]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:23:58]:  50000
+
+[20240701 03:23:58]:  100000
+
+[20240701 03:23:58]:  100000
+
+[20240701 03:23:58]:  100000
+
+[20240701 03:23:58]:  100000
+
+[20240701 03:23:58]:  100000
+
+[20240701 03:23:58]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:23:58]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:23:58]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:23:58]:  15000
+
+[20240701 03:23:58]:  30000
+
+[20240701 03:23:58]:  37500
+
+[20240701 03:23:58]:  37500
+
+[20240701 03:23:58]:  37500
+
+[20240701 03:23:58]:  37500
+
+[20240701 03:28:11] Begin API Testing.
+[20240701 03:28:11]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:28:11]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:28:11]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:28:11]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:28:11]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:28:11]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:28:11]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:28:11]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:28:11]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:28:11]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:28:11]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:28:11]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:28:11]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:28:11]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:28:11]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:28:11]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:28:11]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:28:11]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:28:11]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:28:11]:  0
+
+[20240701 03:28:11]:  0
+
+[20240701 03:28:11]:  0
+
+[20240701 03:28:11]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:28:11]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:28:11]:  -108000
+
+[20240701 03:28:11]:  -130000
+
+[20240701 03:28:11]:  -135000
+
+[20240701 03:28:11]:  -178000
+
+[20240701 03:28:11]:  -128000
+
+[20240701 03:28:11]:  -360000
+
+[20240701 03:28:11]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:28:11]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:28:11]:  178000
+
+[20240701 03:28:11]:  130000
+
+[20240701 03:28:11]:  135000
+
+[20240701 03:28:11]:  178000
+
+[20240701 03:28:11]:  128000
+
+[20240701 03:28:11]:  360000
+
+[20240701 03:28:11]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:28:11]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:28:11]:  50000
+
+[20240701 03:28:11]:  100000
+
+[20240701 03:28:11]:  100000
+
+[20240701 03:28:11]:  100000
+
+[20240701 03:28:11]:  100000
+
+[20240701 03:28:11]:  100000
+
+[20240701 03:28:11]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:28:11]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:28:11]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:28:11]:  15000
+
+[20240701 03:28:11]:  30000
+
+[20240701 03:28:11]:  37500
+
+[20240701 03:28:11]:  37500
+
+[20240701 03:28:11]:  37500
+
+[20240701 03:28:11]:  37500
+
+[20240701 03:37:01] Begin API Testing.
+[20240701 03:37:01]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:37:01]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:37:01]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:37:01]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:37:01]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:37:01]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:37:01]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:37:01]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:37:01]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:37:01]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:37:01]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:37:01]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:37:01]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:37:01]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:37:01]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:37:01]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:37:01]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:37:01]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:37:01]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:37:01]:  0
+
+[20240701 03:37:01]:  0
+
+[20240701 03:37:01]:  0
+
+[20240701 03:37:01]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:37:01]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:37:01]:  -108000
+
+[20240701 03:37:01]:  -130000
+
+[20240701 03:37:01]:  -135000
+
+[20240701 03:37:01]:  -178000
+
+[20240701 03:37:01]:  -128000
+
+[20240701 03:37:01]:  -360000
+
+[20240701 03:37:01]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:37:01]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:37:01]:  178000
+
+[20240701 03:37:01]:  130000
+
+[20240701 03:37:01]:  135000
+
+[20240701 03:37:01]:  178000
+
+[20240701 03:37:01]:  128000
+
+[20240701 03:37:01]:  360000
+
+[20240701 03:37:01]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:37:01]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:37:01]:  50000
+
+[20240701 03:37:01]:  100000
+
+[20240701 03:37:01]:  100000
+
+[20240701 03:37:01]:  100000
+
+[20240701 03:37:01]:  100000
+
+[20240701 03:37:01]:  100000
+
+[20240701 03:37:01]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:37:01]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:37:01]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:37:01]:  15000
+
+[20240701 03:37:01]:  30000
+
+[20240701 03:37:01]:  37500
+
+[20240701 03:37:01]:  37500
+
+[20240701 03:37:01]:  37500
+
+[20240701 03:37:01]:  37500
+
+[20240701 03:41:39] Begin API Testing.
+[20240701 03:41:39]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:41:39]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:41:39]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:41:39]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:41:39]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:41:39]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:41:39]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:41:39]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:41:39]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:41:39]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:41:39]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:41:39]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:41:39]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:41:39]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:41:39]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:41:39]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:41:39]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:41:39]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:41:39]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:41:39]:  0
+
+[20240701 03:41:39]:  0
+
+[20240701 03:41:39]:  0
+
+[20240701 03:41:39]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:41:39]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:41:39]:  -108000
+
+[20240701 03:41:39]:  -130000
+
+[20240701 03:41:39]:  -135000
+
+[20240701 03:41:39]:  -178000
+
+[20240701 03:41:39]:  -128000
+
+[20240701 03:41:39]:  -360000
+
+[20240701 03:41:39]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:41:39]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:41:39]:  178000
+
+[20240701 03:41:39]:  130000
+
+[20240701 03:41:39]:  135000
+
+[20240701 03:41:39]:  178000
+
+[20240701 03:41:39]:  128000
+
+[20240701 03:41:39]:  360000
+
+[20240701 03:41:39]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:41:39]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:41:39]:  50000
+
+[20240701 03:41:39]:  100000
+
+[20240701 03:41:39]:  100000
+
+[20240701 03:41:39]:  100000
+
+[20240701 03:41:39]:  100000
+
+[20240701 03:41:39]:  100000
+
+[20240701 03:41:39]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:41:39]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:41:39]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:41:39]:  15000
+
+[20240701 03:41:39]:  30000
+
+[20240701 03:41:39]:  37500
+
+[20240701 03:41:39]:  37500
+
+[20240701 03:41:39]:  37500
+
+[20240701 03:41:39]:  37500
+
+[20240701 03:54:02] Begin API Testing.
+[20240701 03:54:02]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:54:02]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:54:02]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:54:02]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:54:02]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:54:02]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:54:02]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:54:02]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:54:02]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:54:02]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:54:02]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:54:02]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:54:02]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:54:02]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:54:02]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:54:02]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:54:02]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:54:02]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:54:02]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:54:02]:  0
+
+[20240701 03:54:02]:  0
+
+[20240701 03:54:02]:  0
+
+[20240701 03:54:02]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:54:02]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:54:02]:  -108000
+
+[20240701 03:54:02]:  -130000
+
+[20240701 03:54:02]:  -135000
+
+[20240701 03:54:02]:  -178000
+
+[20240701 03:54:02]:  -128000
+
+[20240701 03:54:02]:  -360000
+
+[20240701 03:54:02]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:54:02]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:54:02]:  178000
+
+[20240701 03:54:02]:  130000
+
+[20240701 03:54:02]:  135000
+
+[20240701 03:54:02]:  178000
+
+[20240701 03:54:02]:  128000
+
+[20240701 03:54:02]:  360000
+
+[20240701 03:54:02]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:54:02]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:54:02]:  50000
+
+[20240701 03:54:02]:  100000
+
+[20240701 03:54:02]:  100000
+
+[20240701 03:54:02]:  100000
+
+[20240701 03:54:02]:  100000
+
+[20240701 03:54:02]:  100000
+
+[20240701 03:54:02]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:54:02]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:54:02]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:54:02]:  15000
+
+[20240701 03:54:02]:  30000
+
+[20240701 03:54:02]:  37500
+
+[20240701 03:54:02]:  37500
+
+[20240701 03:54:02]:  37500
+
+[20240701 03:54:02]:  37500
+
+[20240701 03:54:46] Begin API Testing.
+[20240701 03:54:47]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:54:47]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/20 20:07:01","commit_id":"95e4b22","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/20 20:07:16","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/20 20:07:01
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 03:54:47]: [rm_get_arm_software_info] Plan build Time: 2024/06/20 20:07:01
+
+[20240701 03:54:47]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:54:47]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240701 03:54:47]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240701 03:54:47]: [rm_get_realtime_push] port parse result: 8089
+
+[20240701 03:54:47]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 03:54:47]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 03:54:47]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 73 robot_handle: 1 message:{"frame_name":"Base","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 03:54:47]: [get_current_work_frame] Work frame Name: Base
+
+[20240701 03:54:47]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 03:54:47]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 116 robot_handle: 1 message:{"payload":0,"pose":[292557,0,298570,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"testABC"}
+
+
+[20240701 03:54:47]: [get_current_tool_frame] Tool frame Name: testABC
+
+[20240701 03:54:47]: [get_current_tool_frame] Tool frame pose: (0.293, 0.000, 0.299, 0.000, 0.000, 0.000)
+
+[20240701 03:54:47]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 03:54:47]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 03:54:47]: send is: {"command":"get_install_pose"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 03:54:47]: [rm_get_install_pose] pose parse result:
+
+[20240701 03:54:47]:  0
+
+[20240701 03:54:47]:  0
+
+[20240701 03:54:47]:  0
+
+[20240701 03:54:47]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-108000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 03:54:47]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 03:54:47]:  -108000
+
+[20240701 03:54:47]:  -130000
+
+[20240701 03:54:47]:  -135000
+
+[20240701 03:54:47]:  -178000
+
+[20240701 03:54:47]:  -128000
+
+[20240701 03:54:47]:  -360000
+
+[20240701 03:54:47]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 03:54:47]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 03:54:47]:  178000
+
+[20240701 03:54:47]:  130000
+
+[20240701 03:54:47]:  135000
+
+[20240701 03:54:47]:  178000
+
+[20240701 03:54:47]:  128000
+
+[20240701 03:54:47]:  360000
+
+[20240701 03:54:47]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 82 robot_handle: 1 message:{"joint_acc":[50000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 03:54:47]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 03:54:47]:  50000
+
+[20240701 03:54:47]:  100000
+
+[20240701 03:54:47]:  100000
+
+[20240701 03:54:47]:  100000
+
+[20240701 03:54:47]:  100000
+
+[20240701 03:54:47]:  100000
+
+[20240701 03:54:47]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:54:47]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[15000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 03:54:47]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 03:54:47]:  15000
+
+[20240701 03:54:47]:  30000
+
+[20240701 03:54:47]:  37500
+
+[20240701 03:54:47]:  37500
+
+[20240701 03:54:47]:  37500
+
+[20240701 03:54:47]:  37500
+
+[20240701 23:07:42] Begin API Testing.
+[20240701 23:07:42]: send is: {"command":"get_arm_software_info"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 23:07:42]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Product version: RM75-6FI
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/24 20:34:04
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240701 23:07:42]: [rm_get_arm_software_info] Plan build Time: 2024/06/24 20:34:04
+
+[20240701 23:07:42]: send is: {"command":"get_realtime_push"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240701 23:07:42]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240701 23:07:42]: [rm_get_realtime_push] cycle parse result: 1
+
+[20240701 23:07:42]: [rm_get_realtime_push] port parse result: 8098
+
+[20240701 23:07:42]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240701 23:07:42]: [rm_get_realtime_push] enable parse result: 1
+
+[20240701 23:07:42]: [rm_get_realtime_push] force_coordinate parse result: 0
+
+[20240701 23:07:42]: send is: {"command":"get_current_work_frame"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240701 23:07:42]: [get_current_work_frame] Work frame Name: World
+
+[20240701 23:07:42]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 23:07:42]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240701 23:07:42]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240701 23:07:42]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240701 23:07:42]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240701 23:07:42]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240701 23:07:42]: send is: {"command":"get_install_pose"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240701 23:07:42]: [rm_get_install_pose] pose parse result:
+
+[20240701 23:07:42]:  0
+
+[20240701 23:07:42]:  0
+
+[20240701 23:07:42]:  0
+
+[20240701 23:07:42]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240701 23:07:42]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240701 23:07:42]:  -178000
+
+[20240701 23:07:42]:  -130000
+
+[20240701 23:07:42]:  -178000
+
+[20240701 23:07:42]:  -135000
+
+[20240701 23:07:42]:  -178000
+
+[20240701 23:07:42]:  -128000
+
+[20240701 23:07:42]:  -360000
+
+[20240701 23:07:42]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240701 23:07:42]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240701 23:07:42]:  178000
+
+[20240701 23:07:42]:  130000
+
+[20240701 23:07:42]:  178000
+
+[20240701 23:07:42]:  135000
+
+[20240701 23:07:42]:  178000
+
+[20240701 23:07:42]:  128000
+
+[20240701 23:07:42]:  360000
+
+[20240701 23:07:42]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240701 23:07:42]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]:  100000
+
+[20240701 23:07:42]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 23:07:42]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240701 23:07:42]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240701 23:07:42]:  30000
+
+[20240701 23:07:42]:  30000
+
+[20240701 23:07:42]:  37500
+
+[20240701 23:07:42]:  37500
+
+[20240701 23:07:42]:  37500
+
+[20240701 23:07:42]:  37500
+
+[20240701 23:07:42]:  37500
+
+[20240702 00:02:06] Begin API Testing.
+[20240702 00:02:06]: send is: {"command":"get_arm_software_info"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240702 00:02:06]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Product version: RM75-6FI
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/24 20:34:04
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240702 00:02:06]: [rm_get_arm_software_info] Plan build Time: 2024/06/24 20:34:04
+
+[20240702 00:02:06]: send is: {"command":"get_realtime_push"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240702 00:02:06]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240702 00:02:06]: [rm_get_realtime_push] cycle parse result: 1
+
+[20240702 00:02:06]: [rm_get_realtime_push] port parse result: 8098
+
+[20240702 00:02:06]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240702 00:02:06]: [rm_get_realtime_push] enable parse result: 1
+
+[20240702 00:02:06]: [rm_get_realtime_push] force_coordinate parse result: 0
+
+[20240702 00:02:06]: send is: {"command":"get_current_work_frame"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240702 00:02:06]: [get_current_work_frame] Work frame Name: World
+
+[20240702 00:02:06]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240702 00:02:06]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240702 00:02:06]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240702 00:02:06]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240702 00:02:06]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240702 00:02:06]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240702 00:02:06]: send is: {"command":"get_install_pose"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240702 00:02:06]: [rm_get_install_pose] pose parse result:
+
+[20240702 00:02:06]:  0
+
+[20240702 00:02:06]:  0
+
+[20240702 00:02:06]:  0
+
+[20240702 00:02:06]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240702 00:02:06]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240702 00:02:06]:  -178000
+
+[20240702 00:02:06]:  -130000
+
+[20240702 00:02:06]:  -178000
+
+[20240702 00:02:06]:  -135000
+
+[20240702 00:02:06]:  -178000
+
+[20240702 00:02:06]:  -128000
+
+[20240702 00:02:06]:  -360000
+
+[20240702 00:02:06]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240702 00:02:06]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240702 00:02:06]:  178000
+
+[20240702 00:02:06]:  130000
+
+[20240702 00:02:06]:  178000
+
+[20240702 00:02:06]:  135000
+
+[20240702 00:02:06]:  178000
+
+[20240702 00:02:06]:  128000
+
+[20240702 00:02:06]:  360000
+
+[20240702 00:02:06]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240702 00:02:06]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]:  100000
+
+[20240702 00:02:06]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240702 00:02:06]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240702 00:02:06]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240702 00:02:06]:  30000
+
+[20240702 00:02:06]:  30000
+
+[20240702 00:02:06]:  37500
+
+[20240702 00:02:06]:  37500
+
+[20240702 00:02:06]:  37500
+
+[20240702 00:02:06]:  37500
+
+[20240702 00:02:06]:  37500
+
+[20240702 00:03:21] Begin API Testing.
+[20240702 00:03:21]: send is: {"command":"get_arm_software_info"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240702 00:03:21]: thread_socket_receive len 316 robot_handle: 1 message:{"Product_version":"RM75-6FI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Product version: RM75-6FI
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/24 20:34:04
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240702 00:03:21]: [rm_get_arm_software_info] Plan build Time: 2024/06/24 20:34:04
+
+[20240702 00:03:21]: send is: {"command":"get_realtime_push"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240702 00:03:21]: thread_socket_receive len 110 robot_handle: 1 message:{"command":"get_realtime_push","cycle":1,"enable":true,"force_coordinate":0,"ip":"192.168.1.88","port":8098}
+
+
+[20240702 00:03:21]: [rm_get_realtime_push] cycle parse result: 1
+
+[20240702 00:03:21]: [rm_get_realtime_push] port parse result: 8098
+
+[20240702 00:03:21]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240702 00:03:21]: [rm_get_realtime_push] enable parse result: 1
+
+[20240702 00:03:21]: [rm_get_realtime_push] force_coordinate parse result: 0
+
+[20240702 00:03:21]: send is: {"command":"get_current_work_frame"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240702 00:03:21]: [get_current_work_frame] Work frame Name: World
+
+[20240702 00:03:21]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240702 00:03:21]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240702 00:03:21]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240702 00:03:21]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240702 00:03:21]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240702 00:03:21]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240702 00:03:21]: send is: {"command":"get_install_pose"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240702 00:03:21]: [rm_get_install_pose] pose parse result:
+
+[20240702 00:03:21]:  0
+
+[20240702 00:03:21]:  0
+
+[20240702 00:03:21]:  0
+
+[20240702 00:03:21]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 95 robot_handle: 1 message:{"min_pos":[-178000,-130000,-178000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240702 00:03:21]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240702 00:03:21]:  -178000
+
+[20240702 00:03:21]:  -130000
+
+[20240702 00:03:21]:  -178000
+
+[20240702 00:03:21]:  -135000
+
+[20240702 00:03:21]:  -178000
+
+[20240702 00:03:21]:  -128000
+
+[20240702 00:03:21]:  -360000
+
+[20240702 00:03:21]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 88 robot_handle: 1 message:{"max_pos":[178000,130000,178000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240702 00:03:21]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240702 00:03:21]:  178000
+
+[20240702 00:03:21]:  130000
+
+[20240702 00:03:21]:  178000
+
+[20240702 00:03:21]:  135000
+
+[20240702 00:03:21]:  178000
+
+[20240702 00:03:21]:  128000
+
+[20240702 00:03:21]:  360000
+
+[20240702 00:03:21]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 90 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240702 00:03:21]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]:  100000
+
+[20240702 00:03:21]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240702 00:03:21]: thread_socket_receive len 87 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240702 00:03:21]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240702 00:03:21]:  30000
+
+[20240702 00:03:21]:  30000
+
+[20240702 00:03:21]:  37500
+
+[20240702 00:03:21]:  37500
+
+[20240702 00:03:21]:  37500
+
+[20240702 00:03:21]:  37500
+
+[20240702 00:03:21]:  37500
+
+[20240707 08:30:31] Begin API Testing.
+[20240707 08:30:31]: send is: {"command":"get_arm_software_info"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 08:30:31]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240707 08:30:31]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240707 08:30:31]: send is: {"command":"get_realtime_push"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 08:30:31]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 08:30:31]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240707 08:30:31]: [rm_get_realtime_push] port parse result: 8089
+
+[20240707 08:30:31]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240707 08:30:31]: [rm_get_realtime_push] enable parse result: 1
+
+[20240707 08:30:31]: send is: {"command":"get_current_work_frame"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 08:30:31]: [get_current_work_frame] Work frame Name: World
+
+[20240707 08:30:31]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 08:30:31]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 08:30:31]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240707 08:30:31]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 08:30:31]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240707 08:30:31]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240707 08:30:31]: send is: {"command":"get_install_pose"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 08:30:31]: [rm_get_install_pose] pose parse result:
+
+[20240707 08:30:31]:  0
+
+[20240707 08:30:31]:  0
+
+[20240707 08:30:31]:  0
+
+[20240707 08:30:31]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 08:30:31]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240707 08:30:31]:  -178000
+
+[20240707 08:30:31]:  -130000
+
+[20240707 08:30:31]:  -135000
+
+[20240707 08:30:31]:  -178000
+
+[20240707 08:30:31]:  -128000
+
+[20240707 08:30:31]:  -360000
+
+[20240707 08:30:31]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 08:30:31]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240707 08:30:31]:  178000
+
+[20240707 08:30:31]:  130000
+
+[20240707 08:30:31]:  135000
+
+[20240707 08:30:31]:  178000
+
+[20240707 08:30:31]:  128000
+
+[20240707 08:30:31]:  360000
+
+[20240707 08:30:31]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 08:30:31]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]:  100000
+
+[20240707 08:30:31]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 08:30:31]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 08:30:31]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240707 08:30:31]:  30000
+
+[20240707 08:30:31]:  30000
+
+[20240707 08:30:31]:  37500
+
+[20240707 08:30:31]:  37500
+
+[20240707 08:30:31]:  37500
+
+[20240707 08:30:31]:  37500
+
+[20240707 08:40:02] Begin API Testing.
+[20240707 08:40:02]: send is: {"command":"get_arm_software_info"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 08:40:02]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240707 08:40:02]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240707 08:40:02]: send is: {"command":"get_realtime_push"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 08:40:02]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 08:40:02]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240707 08:40:02]: [rm_get_realtime_push] port parse result: 8089
+
+[20240707 08:40:02]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240707 08:40:02]: [rm_get_realtime_push] enable parse result: 1
+
+[20240707 08:40:02]: send is: {"command":"get_current_work_frame"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 08:40:02]: [get_current_work_frame] Work frame Name: World
+
+[20240707 08:40:02]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 08:40:02]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 08:40:02]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240707 08:40:02]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 08:40:02]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240707 08:40:02]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240707 08:40:02]: send is: {"command":"get_install_pose"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 08:40:02]: [rm_get_install_pose] pose parse result:
+
+[20240707 08:40:02]:  0
+
+[20240707 08:40:02]:  0
+
+[20240707 08:40:02]:  0
+
+[20240707 08:40:02]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 08:40:02]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240707 08:40:02]:  -178000
+
+[20240707 08:40:02]:  -130000
+
+[20240707 08:40:02]:  -135000
+
+[20240707 08:40:02]:  -178000
+
+[20240707 08:40:02]:  -128000
+
+[20240707 08:40:02]:  -360000
+
+[20240707 08:40:02]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 08:40:02]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240707 08:40:02]:  178000
+
+[20240707 08:40:02]:  130000
+
+[20240707 08:40:02]:  135000
+
+[20240707 08:40:02]:  178000
+
+[20240707 08:40:02]:  128000
+
+[20240707 08:40:02]:  360000
+
+[20240707 08:40:02]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 08:40:02]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]:  100000
+
+[20240707 08:40:02]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 08:40:02]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 08:40:02]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240707 08:40:02]:  30000
+
+[20240707 08:40:02]:  30000
+
+[20240707 08:40:02]:  37500
+
+[20240707 08:40:02]:  37500
+
+[20240707 08:40:02]:  37500
+
+[20240707 08:40:02]:  37500
+
+[20240707 23:55:52] Begin API Testing.
+[20240707 23:55:52]: send is: {"command":"get_arm_software_info"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 23:55:52]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240707 23:55:52]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240707 23:55:52]: send is: {"command":"get_realtime_push"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 23:55:52]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240707 23:55:52]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240707 23:55:52]: [rm_get_realtime_push] port parse result: 8089
+
+[20240707 23:55:52]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240707 23:55:52]: [rm_get_realtime_push] enable parse result: 1
+
+[20240707 23:55:52]: send is: {"command":"get_current_work_frame"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240707 23:55:52]: [get_current_work_frame] Work frame Name: World
+
+[20240707 23:55:52]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 23:55:52]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240707 23:55:52]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240707 23:55:52]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240707 23:55:52]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240707 23:55:52]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240707 23:55:52]: send is: {"command":"get_install_pose"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240707 23:55:52]: [rm_get_install_pose] pose parse result:
+
+[20240707 23:55:52]:  0
+
+[20240707 23:55:52]:  0
+
+[20240707 23:55:52]:  0
+
+[20240707 23:55:52]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240707 23:55:52]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240707 23:55:52]:  -178000
+
+[20240707 23:55:52]:  -130000
+
+[20240707 23:55:52]:  -135000
+
+[20240707 23:55:52]:  -178000
+
+[20240707 23:55:52]:  -128000
+
+[20240707 23:55:52]:  -360000
+
+[20240707 23:55:52]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240707 23:55:52]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240707 23:55:52]:  178000
+
+[20240707 23:55:52]:  130000
+
+[20240707 23:55:52]:  135000
+
+[20240707 23:55:52]:  178000
+
+[20240707 23:55:52]:  128000
+
+[20240707 23:55:52]:  360000
+
+[20240707 23:55:52]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240707 23:55:52]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]:  100000
+
+[20240707 23:55:52]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 23:55:52]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240707 23:55:52]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240707 23:55:52]:  30000
+
+[20240707 23:55:52]:  30000
+
+[20240707 23:55:52]:  37500
+
+[20240707 23:55:52]:  37500
+
+[20240707 23:55:52]:  37500
+
+[20240707 23:55:52]:  37500
+
+[20240708 08:57:20] Begin API Testing.
+[20240708 08:57:20]: send is: {"command":"get_arm_software_info"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 08:57:20]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240708 08:57:20]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240708 08:57:20]: send is: {"command":"get_realtime_push"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 08:57:20]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 08:57:20]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240708 08:57:20]: [rm_get_realtime_push] port parse result: 8089
+
+[20240708 08:57:20]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240708 08:57:20]: [rm_get_realtime_push] enable parse result: 1
+
+[20240708 08:57:20]: send is: {"command":"get_current_work_frame"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 08:57:20]: [get_current_work_frame] Work frame Name: World
+
+[20240708 08:57:20]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 08:57:20]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 08:57:20]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240708 08:57:20]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 08:57:20]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240708 08:57:20]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240708 08:57:20]: send is: {"command":"get_install_pose"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 08:57:20]: [rm_get_install_pose] pose parse result:
+
+[20240708 08:57:20]:  0
+
+[20240708 08:57:20]:  0
+
+[20240708 08:57:20]:  0
+
+[20240708 08:57:20]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 08:57:20]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240708 08:57:20]:  -178000
+
+[20240708 08:57:20]:  -130000
+
+[20240708 08:57:20]:  -135000
+
+[20240708 08:57:20]:  -178000
+
+[20240708 08:57:20]:  -128000
+
+[20240708 08:57:20]:  -360000
+
+[20240708 08:57:20]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 08:57:20]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240708 08:57:20]:  178000
+
+[20240708 08:57:20]:  130000
+
+[20240708 08:57:20]:  135000
+
+[20240708 08:57:20]:  178000
+
+[20240708 08:57:20]:  128000
+
+[20240708 08:57:20]:  360000
+
+[20240708 08:57:20]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 08:57:20]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]:  100000
+
+[20240708 08:57:20]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 08:57:20]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 08:57:20]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240708 08:57:20]:  30000
+
+[20240708 08:57:20]:  30000
+
+[20240708 08:57:20]:  37500
+
+[20240708 08:57:20]:  37500
+
+[20240708 08:57:20]:  37500
+
+[20240708 08:57:20]:  37500
+
+[20240708 08:58:17] Begin API Testing.
+[20240708 08:58:17]: send is: {"command":"get_arm_software_info"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 08:58:17]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240708 08:58:17]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240708 08:58:17]: send is: {"command":"get_realtime_push"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 08:58:17]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 08:58:17]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240708 08:58:17]: [rm_get_realtime_push] port parse result: 8089
+
+[20240708 08:58:17]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240708 08:58:17]: [rm_get_realtime_push] enable parse result: 1
+
+[20240708 08:58:17]: send is: {"command":"get_current_work_frame"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 08:58:17]: [get_current_work_frame] Work frame Name: World
+
+[20240708 08:58:17]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 08:58:17]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 08:58:17]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240708 08:58:17]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 08:58:17]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240708 08:58:17]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240708 08:58:17]: send is: {"command":"get_install_pose"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 08:58:17]: [rm_get_install_pose] pose parse result:
+
+[20240708 08:58:17]:  0
+
+[20240708 08:58:17]:  0
+
+[20240708 08:58:17]:  0
+
+[20240708 08:58:17]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 08:58:17]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240708 08:58:17]:  -178000
+
+[20240708 08:58:17]:  -130000
+
+[20240708 08:58:17]:  -135000
+
+[20240708 08:58:17]:  -178000
+
+[20240708 08:58:17]:  -128000
+
+[20240708 08:58:17]:  -360000
+
+[20240708 08:58:17]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 08:58:17]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240708 08:58:17]:  178000
+
+[20240708 08:58:17]:  130000
+
+[20240708 08:58:17]:  135000
+
+[20240708 08:58:17]:  178000
+
+[20240708 08:58:17]:  128000
+
+[20240708 08:58:17]:  360000
+
+[20240708 08:58:17]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 08:58:17]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]:  100000
+
+[20240708 08:58:17]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 08:58:17]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 08:58:17]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240708 08:58:17]:  30000
+
+[20240708 08:58:17]:  30000
+
+[20240708 08:58:17]:  37500
+
+[20240708 08:58:17]:  37500
+
+[20240708 08:58:17]:  37500
+
+[20240708 08:58:17]:  37500
+
+[20240708 09:03:36] Begin API Testing.
+[20240708 09:03:36]: send is: {"command":"get_arm_software_info"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 09:03:36]: thread_socket_receive len 330 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"future_blend_2024070"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/07/02 09:56:55","commit_id":"3292c76","version":"V1.5.3"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Algorithm version: future_blend_2024070
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Ctrl version: V1.5.3
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Ctrl build Time: 2024/07/02 09:56:55
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Plan version: V1.5.3
+
+[20240708 09:03:36]: [rm_get_arm_software_info] Plan build Time: 2024/07/02 09:56:55
+
+[20240708 09:03:36]: send is: {"command":"get_realtime_push"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 09:03:36]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240708 09:03:36]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240708 09:03:36]: [rm_get_realtime_push] port parse result: 8089
+
+[20240708 09:03:36]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240708 09:03:36]: [rm_get_realtime_push] enable parse result: 1
+
+[20240708 09:03:36]: send is: {"command":"get_current_work_frame"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240708 09:03:36]: [get_current_work_frame] Work frame Name: World
+
+[20240708 09:03:36]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 09:03:36]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240708 09:03:36]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240708 09:03:36]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240708 09:03:36]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240708 09:03:36]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240708 09:03:36]: send is: {"command":"get_install_pose"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240708 09:03:36]: [rm_get_install_pose] pose parse result:
+
+[20240708 09:03:36]:  0
+
+[20240708 09:03:36]:  0
+
+[20240708 09:03:36]:  0
+
+[20240708 09:03:36]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240708 09:03:36]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240708 09:03:36]:  -178000
+
+[20240708 09:03:36]:  -130000
+
+[20240708 09:03:36]:  -135000
+
+[20240708 09:03:36]:  -178000
+
+[20240708 09:03:36]:  -128000
+
+[20240708 09:03:36]:  -360000
+
+[20240708 09:03:36]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240708 09:03:36]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240708 09:03:36]:  178000
+
+[20240708 09:03:36]:  130000
+
+[20240708 09:03:36]:  135000
+
+[20240708 09:03:36]:  178000
+
+[20240708 09:03:36]:  128000
+
+[20240708 09:03:36]:  360000
+
+[20240708 09:03:36]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240708 09:03:36]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]:  100000
+
+[20240708 09:03:36]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 09:03:36]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240708 09:03:36]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240708 09:03:36]:  30000
+
+[20240708 09:03:36]:  30000
+
+[20240708 09:03:36]:  37500
+
+[20240708 09:03:36]:  37500
+
+[20240708 09:03:36]:  37500
+
+[20240708 09:03:36]:  37500
+
+[20240709 13:38:28] Begin API Testing.
+[20240709 13:38:28]: send is: {"command":"get_arm_software_info"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240709 13:38:28]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/24 20:34:04
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240709 13:38:28]: [rm_get_arm_software_info] Plan build Time: 2024/06/24 20:34:04
+
+[20240709 13:38:28]: send is: {"command":"get_realtime_push"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240709 13:38:28]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240709 13:38:28]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240709 13:38:28]: [rm_get_realtime_push] port parse result: 8089
+
+[20240709 13:38:28]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240709 13:38:28]: [rm_get_realtime_push] enable parse result: 1
+
+[20240709 13:38:28]: send is: {"command":"get_current_work_frame"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240709 13:38:28]: [get_current_work_frame] Work frame Name: World
+
+[20240709 13:38:28]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240709 13:38:28]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240709 13:38:28]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240709 13:38:28]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240709 13:38:28]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240709 13:38:28]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240709 13:38:28]: send is: {"command":"get_install_pose"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240709 13:38:28]: [rm_get_install_pose] pose parse result:
+
+[20240709 13:38:28]:  0
+
+[20240709 13:38:28]:  0
+
+[20240709 13:38:28]:  0
+
+[20240709 13:38:28]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240709 13:38:28]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240709 13:38:28]:  -178000
+
+[20240709 13:38:28]:  -130000
+
+[20240709 13:38:28]:  -135000
+
+[20240709 13:38:28]:  -178000
+
+[20240709 13:38:28]:  -128000
+
+[20240709 13:38:28]:  -360000
+
+[20240709 13:38:28]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240709 13:38:28]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240709 13:38:28]:  178000
+
+[20240709 13:38:28]:  130000
+
+[20240709 13:38:28]:  135000
+
+[20240709 13:38:28]:  178000
+
+[20240709 13:38:28]:  128000
+
+[20240709 13:38:28]:  360000
+
+[20240709 13:38:28]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240709 13:38:28]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]:  100000
+
+[20240709 13:38:28]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240709 13:38:28]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240709 13:38:28]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240709 13:38:28]:  30000
+
+[20240709 13:38:28]:  30000
+
+[20240709 13:38:28]:  37500
+
+[20240709 13:38:28]:  37500
+
+[20240709 13:38:28]:  37500
+
+[20240709 13:38:28]:  37500
+
+[20240709 14:16:41] Begin API Testing.
+[20240709 14:16:41]: send is: {"command":"get_arm_software_info"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240709 14:16:41]: thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.3.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/06/24 20:34:04","commit_id":"8fdd9ee","version":"V1.5.6"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/06/24 20:34:18","commit_id":"8d1269e","version":"V1.5.6"}}
+
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Product version: RM65-BI
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Algorithm version: 1.3.4
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Ctrl version: V1.5.6
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Ctrl build Time: 2024/06/24 20:34:04
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Dynamic model version: 2
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Plan version: V1.5.6
+
+[20240709 14:16:41]: [rm_get_arm_software_info] Plan build Time: 2024/06/24 20:34:04
+
+[20240709 14:16:41]: send is: {"command":"get_realtime_push"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240709 14:16:41]: thread_socket_receive len 89 robot_handle: 1 message:{"command":"get_realtime_push","cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+
+[20240709 14:16:41]: [rm_get_realtime_push] cycle parse result: 5
+
+[20240709 14:16:41]: [rm_get_realtime_push] port parse result: 8089
+
+[20240709 14:16:41]: [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+[20240709 14:16:41]: [rm_get_realtime_push] enable parse result: 1
+
+[20240709 14:16:41]: send is: {"command":"get_current_work_frame"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+
+[20240709 14:16:41]: [get_current_work_frame] Work frame Name: World
+
+[20240709 14:16:41]: [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240709 14:16:41]: send is: {"command":"get_current_tool_frame"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+
+[20240709 14:16:41]: [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+[20240709 14:16:41]: [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+[20240709 14:16:41]: [get_current_tool_frame] Tool frame payloda: 0.000
+
+[20240709 14:16:41]: [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+[20240709 14:16:41]: send is: {"command":"get_install_pose"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+
+[20240709 14:16:41]: [rm_get_install_pose] pose parse result:
+
+[20240709 14:16:41]:  0
+
+[20240709 14:16:41]:  0
+
+[20240709 14:16:41]:  0
+
+[20240709 14:16:41]: send is: {"command":"get_joint_min_pos"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+
+[20240709 14:16:41]: [rm_get_joint_min_pos] min_pos parse result:
+
+[20240709 14:16:41]:  -178000
+
+[20240709 14:16:41]:  -130000
+
+[20240709 14:16:41]:  -135000
+
+[20240709 14:16:41]:  -178000
+
+[20240709 14:16:41]:  -128000
+
+[20240709 14:16:41]:  -360000
+
+[20240709 14:16:41]: send is: {"command":"get_joint_max_pos"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+
+[20240709 14:16:41]: [rm_get_joint_max_pos] max_pos parse result:
+
+[20240709 14:16:41]:  178000
+
+[20240709 14:16:41]:  130000
+
+[20240709 14:16:41]:  135000
+
+[20240709 14:16:41]:  178000
+
+[20240709 14:16:41]:  128000
+
+[20240709 14:16:41]:  360000
+
+[20240709 14:16:41]: send is: {"command":"get_joint_max_acc"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+
+[20240709 14:16:41]: [rm_get_joint_max_acc] joint_acc parse result:
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]:  100000
+
+[20240709 14:16:41]: send is: {"command":"get_joint_max_speed"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240709 14:16:41]: thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+
+[20240709 14:16:41]: [rm_get_joint_max_speed] joint_speed parse result:
+
+[20240709 14:16:41]:  30000
+
+[20240709 14:16:41]:  30000
+
+[20240709 14:16:41]:  37500
+
+[20240709 14:16:41]:  37500
+
+[20240709 14:16:41]:  37500
+
+[20240709 14:16:41]:  37500
+
+[20240711 13:57:19] Begin API Testing.
+[20240711 13:58:27] Begin API Testing.
+[20240711 14:06:01] Begin API Testing.
+[20240711 14:12:18] Begin API Testing.
+[20240711 14:13:51] Begin API Testing.
+[20240711 14:19:18] Begin API Testing.
+[20240711 14:22:12] Begin API Testing.
+[20240711 19:13:16] Begin API Testing.
+[20240712 13:37:03] Begin API Testing.
+[20240712 13:50:10] Begin API Testing.
+[20240712 14:25:33] Begin API Testing.
+[20240712 15:21:10] Begin API Testing.
+[20240712 15:25:34] Begin API Testing.
+[20240712 15:33:35] Begin API Testing.
+[20240712 15:50:31] Begin API Testing.
+[20240713 17:38:34] Begin API Testing.

@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 242.16677.29\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 242.16677.29/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\dell\Videos\710\RMDemo_OnlineProgram -B C:\Users\dell\Videos\710\RMDemo_OnlineProgram\cmake
+-- RMAN_API_LIB: C:/Users/dell/Videos/710/RMDemo_OnlineProgram/Robotic_Arm/lib/api_c.lib
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/dell/Videos/710/RMDemo_OnlineProgram/cmake
