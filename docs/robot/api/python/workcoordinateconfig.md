@@ -1,18 +1,15 @@
----
-title: "工作坐标系WorkCoordinateConfig"
-tags: ""
----
-
 # 工作坐标系`WorkCoordinateConfig`
 
-可用于自动/手动设置、删除、切换工作坐标系等，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是工作坐标系`WorkCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于自动/手动设置、删除、切换工作坐标系等，可以查阅[WorkCoordinateConfig继承关系图](../python/InheritanceDiagram/WorkCoordinateConfig.md)了解与其相关的类的关系。下面是工作坐标系`WorkCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 三点法自动设置工作坐标系`rm_set_auto_work_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_auto_work_frame (self, str name, int point_num)
+rm_set_auto_work_frame(self, name: str, point_num: int) -> int:
 ```
 
 - **参数说明:**
@@ -21,7 +18,6 @@ int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_auto_work_frame (
 | :-------- | :---- | :----------------------------------- |
 | name      | `str` | 工作坐标系名称，不能超过十个字节。                    |
 | point_num | `int` | 1~3代表3个标定点，依次为原点、X轴一点、Y轴一点，4代表生成坐标系。 |
-
 
 - **返回值:** </br>
 函数执行的状态码
@@ -62,8 +58,9 @@ arm.rm_delete_robot_arm()
 ## 手动设置工作坐标系`rm_set_manual_work_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_set_manual_work_frame (self, str name, list pose)
+rm_set_manual_work_frame(self, name: str, pose: list) -> int:
 ```
 
 - **参数说明:**
@@ -102,8 +99,9 @@ arm.rm_delete_robot_arm()
 ## 切换当前工作坐标系`rm_change_work_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_change_work_frame (self, str tool_name)
+rm_change_work_frame(self, tool_name: str) -> int:
 ```
 
 - **参数说明:**
@@ -141,8 +139,9 @@ arm.rm_delete_robot_arm()
 ## 删除指定工作坐标系`rm_delete_work_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_delete_work_frame (self, str tool_name)
+rm_delete_work_frame(self, tool_name: str) -> int:
 ```
 
 - **参数说明:**
@@ -180,8 +179,9 @@ arm.rm_delete_robot_arm()
 ## 修改指定工作坐标系`rm_update_work_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_update_work_frame (self, str name, list pose)
+rm_update_work_frame(self, name: str, pose: list) -> int:
 ```
 
 - **参数说明:**
@@ -220,8 +220,9 @@ arm.rm_delete_robot_arm()
 ## 获取所有工作坐标系名称`rm_get_total_work_frame()`
 
 - **方法原型：**
+
 ```python
-dict[str, any] Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_get_total_work_frame (self)
+rm_get_total_work_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
@@ -266,8 +267,9 @@ print(arm.rm_get_total_work_frame())
 ## 获取指定工作坐标系`rm_get_given_work_frame()`
 
 - **方法原型：**
+
 ```python
-dict[str, any] Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_get_given_work_frame (self)
+rm_get_given_work_frame(self, name: str) -> tuple[int, list[float]]:
 ```
 
 - **参数说明:**
@@ -295,7 +297,6 @@ tuple[int, list[float]]: 包含两个元素的元组
 | :--- | :--- | :--- |
 |   pose  |    `list[float]`    |    工作坐标系位姿列表   |
 
-
 - **使用示例**
   
 ```python
@@ -314,8 +315,9 @@ arm.rm_delete_robot_arm()
 ## 获取当前工作坐标系`rm_get_current_work_frame()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.WorkCoordinateConfig.rm_get_current_work_frame (self)	
+rm_get_current_work_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
@@ -336,7 +338,6 @@ tuple[int, dict[str, any]]: 包含两个元素的元组
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   rm_frame_t  |    `dict[str, any]`    |    工作坐标系字典，键为rm_frame_t的参数名。   |
-
 
 - **使用示例**
   
