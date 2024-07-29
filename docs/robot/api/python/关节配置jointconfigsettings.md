@@ -1,11 +1,6 @@
----
-title: "关节配置JointConfigSettings"
-tags: ""
----
-
 # 关节配置`JointConfigSettings`
 
-可用于配置关节的速度、加速度、限位、使能、零位、清除错误等，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是关节配置`JointConfigSettings`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于配置关节的速度、加速度、限位、使能、零位、清除错误等，可以查阅[JointConfigSettings继承关系图](../python/InheritanceDiagram/JointConfigSettings.md)了解与其相关的类的关系。下面是关节配置`JointConfigSettings`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 ## 设置指定关节的最大速度`rm_set_joint_max_speed()`
