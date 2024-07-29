@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 242.19890.26\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\dell\715\example_c\RMDemo_MovejCANFD -B C:\Users\dell\715\example_c\RMDemo_MovejCANFD\cmake
+-- RMAN_API_LIB: C:/Users/dell/715/example_c/RMDemo_MovejCANFD/Robotic_Arm/lib/api_c.lib
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/dell/715/example_c/RMDemo_MovejCANFD/cmake

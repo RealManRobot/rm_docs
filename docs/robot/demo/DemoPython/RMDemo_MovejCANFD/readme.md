@@ -1,0 +1,149 @@
+# 角度透传示例MovejCANFD
+
+---
+
+## 1. 项目介绍
+
+本项目是一个使用睿尔曼Python开发包完成工程完成读取demo下的关节角度轨迹文件，按照10ms的周期进行透传，机械臂可以稳定运行，不同型号机械臂的透传轨迹文件，注册机械臂实时状态的回调函数，透传过程中，可以实时获取机械臂当前角度。
+
+## 2. 代码结构
+
+```
+RMDemo_MovejCANFD/
+│
+├── README.md        <- 项目的核心文档
+├── requirements.txt    <- 项目的依赖列表
+├── setup.py        <- 项目的安装脚本
+│
+├── src/          <- 项目的源代码
+│  ├── main.py       <- 程序的主入口
+│  └── core/        <- 核心功能或业务逻辑代码
+│    └── demo_movej_canfd.py      <- 读取demo下的关节角度轨迹文件，按照10ms的周期进行透传，机械臂可以稳定运行，不同型号机械臂的透传轨迹文件，注册机械臂实时状态的回调函数，透传过程中，可以实时获取机械臂当前角度的示例。
+└── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
+```
+
+## 3.环境与依赖
+
+* Python 3.9+
+
+## 4. 安装说明
+
+1. 安装Python 3.9
+
+2. 进入项目目录：`cd RMDemo_MovejCANFD`
+
+3. 安装依赖：`pip install -r requirements.txt`
+
+## 5. 注意事项
+
+1. 该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据，项目data中有不同机械臂的轨迹文件，请根据实际情况修改代码中的数据使用正确数据文件。
+2. 数据均只支持低跟随，不支持高跟随，高跟随需要自行规划合适轨迹。
+
+## 6. 使用指南
+
+### 1. 快速运行
+
+按照以下步骤快速运行代码：
+
+1. **配置机械臂IP地址**：打开 `demo_movej_canfd.py` 文件，在 `main` 函数中修改 `RobotArmController` 类的初始化参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
+
+    ```python
+    # Create a robot arm controller instance and connect to the robot arm
+    robot_controller = RobotArmController("192.168.1.18", 8080, 3)
+    ```
+2. **选择对应型号轨迹文件**：
+   - 在方法中`demo_movej_canfd`中：
+       ```python
+       try:
+           # Read file contents, the points in the file are obtained by drag teaching
+           with open('../data/RM65&RM63_canfd_data.txt', 'r') as f:
+               lines = f.readlines()
+       ```
+     - ECO65：ECO65_canfd_data.txt
+     - RM65&RML63-Ⅱ：RM65&RM63_canfd_data.txt
+     - RM75：RM75_canfd_data.txt
+
+3. **命令行运行**：在终端进入 `RMDemo_MovejCANFD` 目录，输入以下命令运行Python脚本：
+
+    ```bash
+    python ./src/main.py
+    ```
+
+### 2. 代码说明
+
+下面是 `demo_movej_canfd.py` 文件的主要功能：
+
+- **连接机械臂**
+
+    ```python
+    robot_controller = RobotArmController("192.168.1.18", 8080, 3)
+    ```
+    连接到指定IP和端口的机械臂。
+
+- **获取API版本**
+
+    ```python
+    print("\nAPI Version: ", rm_api_version(), "\n")
+    ```
+    获取并显示API版本。
+
+- **配置实时推送**
+
+    ```python
+    config = rm_realtime_push_config_t(1, True, 8098, 0, '192.168.1.88')
+    robot_controller.robot.rm_set_realtime_push(config)
+    ```
+
+- **读取关节角度轨迹文件并进行透传**
+
+    ```python
+    robot_controller.demo_movej_canfd()
+    ```
+
+- **断开机械臂连接**
+
+    ```python
+    robot_controller.disconnect()
+    ```
+
+### 3. 运行结果示例
+
+运行脚本后，输出结果如下所示：
+
+```
+current api version:  0.2.9
+
+Successfully connected to the robot arm: 1
+
+API Version:  0.2.9
+
+Total points: 100
+
+Moving to point 0: [0, 0, 0, 0, 0, 0]
+
+...
+
+Pass-through completed
+
+movej_cmd joint movement 1: 0
+
+Successfully disconnected from the robot arm
+```
+
+* **支持渠道**：
+
+	+ 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
+
+## 7. 许可证信息**
+
+* 本项目遵循MIT许可证。
+
+## 8. 常见问题解答（FAQ）**
+
+- **Q1：机械臂连接失败**
+
+  答案：修改过机械臂IP。
+
+- **Q2：UDP数据推送接口收不到数据**
+
+  答案：检查线程模式、是否使能推送数据、IP以及防火墙。

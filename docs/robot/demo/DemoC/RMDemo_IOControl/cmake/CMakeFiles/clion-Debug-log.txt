@@ -1,0 +1,13 @@
+"C:\Program Files\JetBrains\CLion 242.16677.29\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 242.16677.29/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\dell\Videos\710\RMDemo_IOControl -B C:\Users\dell\Videos\710\RMDemo_IOControl\cmake
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- RMAN_API_LIB: C:/Users/dell/Videos/710/RMDemo_IOControl/Robotic_Arm/lib/api_c.lib
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/dell/Videos/710/RMDemo_IOControl/cmake
