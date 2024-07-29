@@ -114,7 +114,7 @@ int rm_get_program_trajectory_list(rm_robot_handle * handle,int page_num,int pag
 - **使用示例**
   
 ```C
-// 查询所有在线编程列表
+// 查询第1页10个在线编程文件
 int page_num = 1;
 int page_size = 10;
 const char *vague_search;
@@ -227,6 +227,7 @@ int rm_delete_program_trajectory(rm_robot_handle * handle,int id)
 - **使用示例**
   
 ```C
+// 删除编号50的在线编程文件
 ret = rm_delete_program_trajectory(robot_handle, 50);
 printf("delete program trajectory result : %d\n", ret);
 ```
@@ -263,6 +264,7 @@ int rm_update_program_trajectory(rm_robot_handle * handle,int id,int speed,const
 - **使用示例**
   
 ```C
+// 更新编号1的在线编程文件，规划速度为50%，文件名称为“test”
 ret = rm_update_program_trajectory(robot_handle,1,50,"test");
 printf("update program trajectory result : %d\n", ret);
 ```
@@ -422,7 +424,7 @@ rm_waypoint_t waypoint;
 strcpy(waypoint.point_name,"p3");
 waypoint.joint[0] = 20;
 waypoint.joint[1] = 30;
-// 剩余关节角度均为 10
+// 剩余关节角度均为 0
 for (int i = 2; i < 6; ++i) {
     waypoint.joint[i] = 0.0;
 }
@@ -503,7 +505,7 @@ int rm_get_given_global_waypoint(rm_robot_handle * handle,const char * name,rm_w
 - **使用示例**
   
 ```C
-// 获取全局路点p1参数
+// 获取全局路点p3参数
 rm_waypoint_t point;
 ret = rm_get_given_global_waypoint(robot_handle, "p3", &point);
 ```
@@ -541,6 +543,7 @@ int rm_get_global_waypoints_list(rm_robot_handle * handle,int page_num,int page_
 - **使用示例**
   
 ```C
+// 查询第一页10个全局路点信息
 rm_waypoint_list_t point_list;
 int page_num = 1;
 int page_size = 10;

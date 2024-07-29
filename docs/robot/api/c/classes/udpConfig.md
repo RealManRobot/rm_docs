@@ -34,10 +34,12 @@ int rm_set_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t conf
 - **使用示例**
   
 ```C
+// 使能UDP主动上报接口，500ms上报周期，系统外受力数据的坐标系为传感器坐标系
+// 上报目标IP为"192.168.1.108"，广播端口号8089
 rm_realtime_push_config_t config;
-config.cycle = 5;
+config.cycle = 100;
 config.enable = true;
-config.force_coordinate = 1;
+config.force_coordinate = 0;
 config.port = 8089;
 strcpy(config.ip, "192.168.1.108");
 int ret = rm_set_realtime_push(robot_handle, config);
