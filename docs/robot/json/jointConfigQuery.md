@@ -1,7 +1,6 @@
 # 关节配置查询集
 
 查询关节的速度、加速度、限位及错误等信息。
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
 
 ## 查询关节最大速度
 

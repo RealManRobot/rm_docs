@@ -50,16 +50,165 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "JSON协议",
+        collapsed:true,
         items: [
           {
-            text: "快速开始",
-            link: "/robot/json/",
+            text: "机械臂初始状态",
+            link: "/robot/json/armInit",
+          },
+          {
+            text: "坐标系查询",
+            link: "/robot/json/coordinateQuery",
+          },
+          {
+            text: "运动参数命令集",
+            link: "/robot/json/motionParameterCommand",
+          },
+          {
+            text: "运动参数查询",
+            link: "/robot/json/motionParameterQuery",
+          },
+          {
+            text: "运动类指令",
+            link: "/robot/json/armMotionControl",
+          },
+          {
+            text: "示教运动类指令",
+            link: "/robot/json/armTeachMove",
+          },
+          {
+            text: "轨迹类指令",
+            link: "/robot/json/movePlan",
+          },
+          {
+            text:'步进类指令',
+            link:'/robot/json/stepControl'
+          },
+          {
+            text: "状态查询",
+            link: "/robot/json/statusQuery",
+          },
+          {
+            text: "工具坐标系命令集",
+            link: "/robot/json/toolCoordinateCommand",
+          },
+          {
+            text: "工作坐标系命令集",
+            link: "/robot/json/wrokingCoordinateCommand",
+          },
+          {
+            text: "关节配置",
+            link: "/robot/json/jointConfigCommand",
+          },
+          {
+            text: "关节配置查询",
+            link: "/robot/json/jointConfigQuery",
+          },
+          {
+            text: "机械臂状态查询",
+            link: "/robot/json/armState",
+          },
+          {
+            text: "通讯配置",
+            link: "/robot/json/communicationConfig",
+          },
+          {
+            text: "控制器IO",
+            link: "/robot/json/controllerIOConfig",
+          },
+          {
+            text: "拖动示教",
+            link: "/robot/json/dragTeach",
+          },
+          {
+            text: "末端IO",
+            link: "/robot/json/effectorIOConfig",
+          },
+          {
+            text: "六维力传感器",
+            link: "/robot/json/force",
+          },
+          {
+            text: "一维力传感器",
+            link: "/robot/json/oneForce",
+          },
+          {
+            text: "透传力位混合控制补偿",
+            link: "/robot/json/forcePositionControl",
+          },
+          {
+            text: "手爪控制",
+            link: "/robot/json/gripperControl",
+          },
+          {
+            text: "五指灵巧手",
+            link: "/robot/json/handControl",
+          },
+          {
+            text: "modbus",
+            link: "/robot/json/modbusSet",
+          },
+          {
+            text: "系统指令",
+            link: "/robot/json/systemCommand",
+          },
+          {
+            text: "系统查询和反馈",
+            link: "/robot/json/systemQuery",
+          },
+          {
+            text: "udp主动上报",
+            link: "/robot/json/udpConfig",
+          },
+          {
+            text: "数据管理",
+            link: "/robot/json/dataManagement",
+          },
+          {
+            text: "电子围栏",
+            link: "/robot/json/electronicFence",
+          },
+          {
+            text: "虚拟墙",
+            link: "/robot/json/virtualWall",
+          },
+          {
+            text: "在线编程储存列表",
+            link: "/robot/json/onlineProgrammingStoresList",
+          },
+          {
+            text: "文件传输",
+            link: "/robot/json/fileTransfer",
+          },
+          {
+            text: "全局路点",
+            link: "/robot/json/globalWaypoint",
+          },
+          {
+            text: "提示框",
+            link: "/robot/json/promptBox",
+          },
+          {
+            text: "自碰撞安全检测",
+            link: "/robot/json/selfCollision",
+          },
+          {
+            text: "通用扩展关节",
+            link: "/robot/json/expandControl",
+          },
+          {
+            text: "升降机",
+            link: "/robot/json/liftControl",
+          },
+          {
+            text: "错误码列表",
+            link: "/robot/json/errorList",
           },
         ],
       },
       {
         text: "API文档(C)",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "快速开始",
@@ -406,7 +555,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       // },
       {
         text: "ROS2文档",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "快速开始",
@@ -446,6 +595,15 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
+      {
+        text: "modbus",
+        items:[
+          {
+            text:'modbus从站地址表',
+            link:'/robot/modbus/index'
+          }
+        ]
+      }
       // {
       //   text: "常见问题",
       //   collapsed: false,

@@ -1,7 +1,5 @@
 # 附录：错误代码
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 1.系统错误代码
 
 |序号|错误代码（16进制）|错误内容|

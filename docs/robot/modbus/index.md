@@ -1,7 +1,5 @@
 # RM机械臂modbus从站地址表
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 # 1.简介
 
 睿尔曼机械臂支持modbus从站功能，并且从站功能在modbus-rtu和modbus-tcp上均支持，所有的从站共享地址表和相应功能。
