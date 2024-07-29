@@ -146,17 +146,17 @@ int block = 1; // 阻塞模式（默认线程模式为多线程）
 rm_pose_t pose1 = {
         .position = {0.1, 0.2, 0.5},
         .euler = {0.0, 0.0, 0.0}
-};// 示例位姿
+};// 示例位姿1
 rm_pose_t pose2 = {
         .position = {0.3, 0.5, 0.5},
         .euler = {0.0, 0.0, 0.0}
-};// 示例位姿
+};// 示例位姿2
 rm_pose_t pose3 = {
         .position = {0.4, 0.5, 0.5},
         .euler = {0.0, 0.0, 0.0}
-};// 示例位姿
+};// 示例位姿3
 
-// 发出第一个点位
+// 发出第一个点位，轨迹连接标志设为1以进行样条曲线连接
 result = rm_moves(robot_handle, pose1, v, r, trajectory_connect, block);
 if(result != 0) { 
     printf("rm_moves result : %d\n", result);
@@ -168,7 +168,7 @@ if(result != 0) {
     printf("rm_moves result : %d\n", result);
 }
 
-// 发出第三个点位，立即规划
+// 发出第三个点位，轨迹连接标志设为0立即规划
 result = rm_moves(robot_handle, pose3, v, r, 0, block);
 if(result != 0) { 
     printf("rm_moves result : %d\n", result);
@@ -216,6 +216,7 @@ int rm_movec(rm_robot_handle * handle,rm_pose_t pose_via,rm_pose_t pose_to,int v
 - **使用示例**
   
 ```C
+// 圆弧运动
 rm_pose_t povia;                                                        
 povia.position.x=-0.300;                                                   
 povia.position.y=-0.03;                                                   

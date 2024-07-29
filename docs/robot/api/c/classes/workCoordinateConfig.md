@@ -88,7 +88,7 @@ pose.euler.rx = 0.0f;
 pose.euler.ry = 0.0f;
 pose.euler.rz = 0.0f;
 
-// 调用函数设置工作框架  
+// 调用函数设置工作坐标系  
 int result = rm_set_manual_work_frame(handle, work_name, pose);  
 
 // 检查结果  
