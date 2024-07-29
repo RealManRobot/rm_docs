@@ -1,32 +1,29 @@
----
-title: "工具坐标系ToolCoordinateConfig"
-tags: ""
----
-
 # 工具坐标系`ToolCoordinateConfig`
 
-可用于自动/手动设置、删除、切换工具坐标系等，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是工具坐标系`ToolCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于自动/手动设置、删除、切换工具坐标系等，可以查阅[ToolCoordinateConfig继承关系图](../python/InheritanceDiagram/ToolCoordinateConfig.md)了解与其相关的类的关系。下面是工具坐标系`ToolCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 六点法自动设置工具坐标系 标记点位`rm_set_auto_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_set_auto_tool_frame	(self, int point_num)	
+rm_set_auto_tool_frame(self, point_num: int) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   point_num  |    `int`    |    1~6代表6个标定点    |
+|   point_num  |    `int`    |    1~6代表6个标定点。    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -51,8 +48,9 @@ arm.rm_delete_robot_arm()
 ## 六点法自动设置工具坐标系 提交`rm_generate_auto_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_generate_auto_tool_frame	(self, str tool_name, float payload, float x, float y, float z)	
+rm_generate_auto_tool_frame(self, tool_name: str, payload: float, x: float, y: float, z: float) -> int:
 ```
 
 - **参数说明:**
@@ -65,9 +63,8 @@ int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_generate_auto_tool_fr
 |   y  |    `float`    |    新工具执行末端负载位置y 单位m 。    |
 |   z  |    `float`    |    新工具执行末端负载位置 位置z 单位m 。    |
 
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -96,23 +93,23 @@ arm.rm_delete_robot_arm()
 ## 手动设置工具坐标系`rm_set_manual_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_set_manual_tool_frame (self, rm_frame_t frame)
+rm_set_manual_tool_frame(self, frame: rm_frame_t) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   frame  |    `rm_frame_t`    |    新工具坐标系参数结构体   |
-
+|   frame  |    `rm_frame_t`    |    新工具坐标系参数结构体。   |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -137,19 +134,19 @@ arm.rm_delete_robot_arm()
 ## 切换当前工具坐标系`rm_change_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_change_tool_frame (self, str tool_name)
+rm_change_tool_frame(self, tool_name: str) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `str`    |    目标工具坐标系名称   |
-
+|   tool_name  |    `str`    |    目标工具坐标系名称。   |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -177,8 +174,9 @@ arm.rm_delete_robot_arm()
 ## 删除指定工具坐标系`rm_delete_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_delete_tool_frame (self, str tool_name)
+rm_delete_tool_frame(self, tool_name: str) -> int:
 ```
 
 - **参数说明:**
@@ -188,7 +186,7 @@ int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_delete_tool_frame (se
 |   tool_name  |    `str`    |    要删除的工具坐标系名称   |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -213,26 +211,26 @@ print(arm.rm_delete_tool_frame("test"))
 arm.rm_delete_robot_arm()
 ```
 
-
 ## 修改指定工具坐标系`rm_update_tool_frame()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_update_tool_frame (self, rm_frame_t frame)
+rm_update_tool_frame(self, frame: rm_frame_t) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   frame  |    `rm_frame_t`    |    要修改的工具坐标系名称   |
+|   frame  |    `rm_frame_t`    |    要修改的工具坐标系名称。   |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -257,8 +255,9 @@ arm.rm_delete_robot_arm()
 ## 获取所有工具坐标系名称`rm_get_total_tool_frame()`
 
 - **方法原型：**
+
 ```python
-dict[str, any] Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_get_total_tool_frame (self)
+rm_get_total_tool_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
@@ -279,7 +278,6 @@ dict[str, any]: 包含以下键值的字典:
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   tool_names  |    `list[str]`    |    字符串列表，表示所有工具坐标系名称。    |
-
 
 3. 工具坐标系名称数量
 
@@ -305,8 +303,9 @@ arm.rm_delete_robot_arm()
 ## 获取指定工具坐标系`rm_get_given_tool_frame()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_get_given_tool_frame (self, str tool_name)
+rm_get_given_tool_frame(self, tool_name: str) -> tuple[int, dict[str, any]]:
 ```
 
 - **参数说明:**
@@ -330,11 +329,9 @@ tuple: 包含两个元素的元组。
 
 2. 工具坐标系字典
 
-
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
-
 
 - **使用示例**
   
@@ -354,8 +351,9 @@ arm.rm_delete_robot_arm()
 ## 获取当前工具坐标系`rm_get_current_tool_frame()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_get_current_tool_frame (self)
+rm_get_current_tool_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
@@ -373,11 +371,9 @@ tuple: 包含两个元素的元组。
 
 2. 工具坐标系字典
 
-
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
-
 
 - **使用示例**
   
@@ -397,8 +393,9 @@ arm.rm_delete_robot_arm()
 ## 设置工具坐标系的包络参数`rm_set_tool_envelope()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_set_tool_envelope (self, rm_envelope_balls_list_t envelope)
+rm_set_tool_envelope(self, envelope: rm_envelope_balls_list_t) -> int:
 ```
 
 - **参数说明:**
@@ -439,8 +436,9 @@ arm.rm_delete_robot_arm()
 ## 获取工具坐标系的包络参数`rm_get_tool_envelope()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ToolCoordinateConfig.rm_get_tool_envelope (self, str tool_name)
+rm_get_tool_envelope(self, tool_name: str) -> tuple[int, dict[str, any]]:
 ```
 
 - **参数说明:**
@@ -467,6 +465,7 @@ tuple: 包含两个元素的元组。
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
+
 - **使用示例**
   
 ```python

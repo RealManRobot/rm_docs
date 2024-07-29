@@ -3,11 +3,13 @@
 可用于配置关节的速度、加速度、限位、使能、零位、清除错误等，可以查阅[JointConfigSettings继承关系图](../python/InheritanceDiagram/JointConfigSettings.md)了解与其相关的类的关系。下面是关节配置`JointConfigSettings`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 设置指定关节的最大速度`rm_set_joint_max_speed()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_max_speed(self, int joint_num, float speed)
+rm_set_joint_max_speed(self, joint_num: int, speed: float) -> int:
 ```
 
 - **参数说明:**
@@ -48,7 +50,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_max_acc(self, int joint_num, float acc)
+rm_set_joint_max_acc(self, joint_num: int, acc: float) -> int:
 ```
 
 - **参数说明:**
@@ -89,7 +91,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_min_pos(self, int joint_num, float min_pos)
+rm_set_joint_min_pos(self, joint_num: int, min_pos: float) -> int:
 ```
 
 - **参数说明:**
@@ -114,7 +116,6 @@ int: 函数执行的状态码
   
 ```python
 from Robotic_Arm.rm_robot_interface import *
-
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
@@ -130,7 +131,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_max_pos(self, joint_num: int, max_pos: float)
+rm_set_joint_max_pos(self, joint_num: int, max_pos: float) -> int:
 ```
 
 - **参数说明:**
@@ -171,7 +172,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_drive_max_speed(self, joint_num: int, speed: float)
+rm_set_joint_drive_max_speed(self, joint_num: int, speed: float) -> int:
 ```
 
 - **参数说明:**
@@ -212,7 +213,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_drive_max_acc(self, joint_num: int, acc: float)
+rm_set_joint_drive_max_acc(self, joint_num: int, acc: float) -> int:
 ```
 
 - **参数说明:**
@@ -253,7 +254,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_drive_min_pos(self, joint_num: int, min_pos: float)
+rm_set_joint_drive_min_pos(self, joint_num: int, min_pos: float) -> int:
 ```
 
 - **参数说明:**
@@ -294,7 +295,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_drive_max_pos(self, joint_num: int, max_pos: float)
+rm_set_joint_drive_max_pos(self, joint_num: int, max_pos: float) -> int:
 ```
 
 - **参数说明:**
@@ -335,7 +336,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_en_state(self, joint_num: int, en_state: int)
+rm_set_joint_en_state(self, joint_num: int, en_state: int) -> int:
 ```
 
 - **参数说明:**
@@ -376,7 +377,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_zero_pos(self, joint_num: int)
+rm_set_joint_zero_pos(self, joint_num: int) -> int:
 ```
 
 - **参数说明:**
@@ -416,7 +417,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_set_joint_clear_err(self, joint_num: int)
+rm_set_joint_clear_err(self, joint_num: int) -> int:
 ```
 
 - **参数说明:**
@@ -451,12 +452,12 @@ print(arm.rm_set_joint_clear_err(1))
 arm.rm_delete_robot_arm()
 ```
 
-## 恢复关节限位的出厂设置`rm_auto_set_joint_limit()`
+## 一键设置关节限位`rm_auto_set_joint_limit()`
 
 - **方法原型：**
 
 ```python
-int Robotic_Arm.rm_robot_interface.JointConfigSettings.rm_auto_set_joint_limit(self, mode: int)
+rm_auto_set_joint_limit(self, mode: int) -> int:
 ```
 
 - **参数说明:**
