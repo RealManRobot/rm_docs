@@ -80,7 +80,7 @@ export const themeConfig: DefaultTheme.Config = {
     next: "下一篇",
   },
   lastUpdatedText: "最后更新",
-  outlineTitle: "文章标题",
+  outlineTitle: "目录",
   outline: [1, 6],
   footer: {
     message: "<a class='footerStyle' href='https://beian.miit.gov.cn/'>京ICP备20031630号-2</a>",

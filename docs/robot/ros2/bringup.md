@@ -6,16 +6,7 @@ rm_bringup功能包为实现多个launch文件同时运行所设计的功能包�
 * 2.熟悉rm_bringup功能包中的文件构成及作用。
 * 3.熟悉rm_bringup功能包相关的话题，方便开发和使用。
 
----
 
-## 目录
-
-* 1.[rm_bringup功能包使用](#rm_bringup功能包使用)
-* 1.1[moveit2控制真实机械臂](#moveit2控制真实机械臂)
-* 1.2[控制gazebo仿真机械臂](#控制gazebo仿真机械臂)
-* 2.[rm_bringup功能包架构说明](#rm_bringup功能包架构说明)
-* 2.1[功能包文件总览](#rm_bringup功能包架构说明)
-* 2.[rm_bringup话题说明](#rm_bringup话题说明)
 
 ## rm_bringup功能包使用
 

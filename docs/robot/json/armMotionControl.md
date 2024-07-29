@@ -1,7 +1,5 @@
 # 运动配置-运动指令类
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 轨迹急停
 
 轨迹急停。

@@ -1,23 +1,5 @@
 # 睿尔曼机器人rm_example使用说明
 
-## 目录
-
-* 1.[rm_example功能包说明](#rm_example功能包说明)
-* 2.[rm_example功能包使用](#rm_example功能包使用)
-* 2.1[更换工作坐标系](#更换工作坐标系)
-* 2.2[得到当前的机械臂状态信息](#得到当前的机械臂状态信息)
-* 2.3[机械臂MoveJ运动](#机械臂MoveJ运动)
-* 2.4[机械臂MoveJ_P运动](#机械臂MoveJ_P运动)
-* 2.5[机械臂MoveL运动](#机械臂MoveL运动)
-* 3.[rm_example功能包架构说明](#rm_example功能包架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-* 4.[rm_example话题说明](#rm_example话题说明)
-* 4.1[rm_change_work_frame话题说明](#rm_change_work_frame话题说明)
-* 4.2[rm_get_state话题说明](#rm_get_state话题说明)
-* 4.3[movej_demo话题说明](#movej_demo话题说明)
-* 4.4[movejp_demo话题说明](#movejp_demo话题说明)
-* 4.5[movel_demo话题说明](#movel_demo话题说明)
-
 ## rm_example功能包说明
 
 rm_bringup功能包为实现了一些基本的机械臂功能，通过该功能包我们可以实现机械臂的一些基本的控制功能，还可以参考代码，实现其他的机械臂功能。

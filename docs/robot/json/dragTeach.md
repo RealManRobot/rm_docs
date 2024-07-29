@@ -1,7 +1,5 @@
 # 拖动示教
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 获取拖动示教轨迹
 
 **参数说明：**

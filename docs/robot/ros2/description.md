@@ -1,13 +1,5 @@
 # 睿尔曼机器人rm_description使用说明
 
-## 目录
-
-* 1.[rm_description功能包说明](#rm_description功能包说明)
-* 2.[rm_description功能包使用](#rm_description功能包使用)
-* 3.[rm_description功能包架构说明](#rm_description功能包架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-* 4.[rm_description话题说明](#rm_description话题说明)
-
 ## rm_description功能包说明
 
 rm_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
@@ -15,7 +7,9 @@ rm_description功能包为显示机器人模型和TF变换的功能包，通过�
 * 1.功能包使用。
 * 2.功能包架构说明。
 * 3.功能包话题说明。
+<br/>
 通过这三部分内容的介绍可以帮助大家：
+<br/>
 * 1.了解该功能包的使用。
 * 2.熟悉功能包中的文件构成及作用。
 * 3.熟悉功能包相关的话题，方便开发和使用

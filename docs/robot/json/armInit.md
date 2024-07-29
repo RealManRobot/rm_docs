@@ -1,7 +1,5 @@
 # 机械臂配置-初始状态
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 设置初始状态
 
 **参数说明：**

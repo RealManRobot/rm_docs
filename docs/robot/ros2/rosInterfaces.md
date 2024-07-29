@@ -9,10 +9,6 @@
 
 # 睿尔曼机器人rm_ros_interface使用说明书V1.0
 
-
- 
-
-
 睿尔曼智能科技(北京)有限公司
  
 文件修订记录：
@@ -22,41 +18,6 @@
 |V1.0 | 2024-2-18 | 拟制|
 		
 </div>
-
-## 目录
-* 1[rm_ros_interface功能包说明](#rm_ros_interface功能包说明)
-* 2[rm_ros_interface功能包使用](#rm_ros_interface功能包使用)
-* 3[rm_ros_interface功能包架构说明](#rm_ros_interface功能包架构说明)
-* 3.1[功能包文件总览](#功能包文件总览)
-* 4[rm_ros_interface消息说明](#rm_ros_interface消息说明)
-* 4.1[关节错误代码Jointerrorcode_msg](#关节错误代码Jointerrorcode_msg)
-* 4.2[清除关节错误代码Jointerrclear_msg](#清除关节错误代码Jointerrclear_msg)
-* 4.3[所有坐标系名称Getallframe_msg](#所有坐标系名称Getallframe_msg)
-* 4.4[关节运动Movej_msg](#关节运动Movej_msg)
-* 4.5[直线运动Movel_msg](#直线运动Movel_msg)
-* 4.6[圆弧运动Movec_msg](#圆弧运动Movec_msg)
-* 4.7[关节空间规划到目标位姿Movejp_msg](#关节空间规划到目标位姿Movejp_msg)
-* 4.8[角度透传Jointpos_msg](#角度透传Jointpos_msg)
-* 4.9[位姿透传Cartepos_msg](#位姿透传Cartepos_msg)
-* 4.10[机械臂当前状态-角度和欧拉角Armoriginalstate_msg](#机械臂当前状态-角度和欧拉角Armoriginalstate_msg)
-* 4.11[机械臂当前状态-弧度和四元数Armstate_msg](#机械臂当前状态-弧度和四元数Armstate_msg)
-* 4.12[读取软件版本号Armsoftversion_msg](#读取软件版本号Armsoftversion_msg)
-* 4.13[手爪力控夹取Gripperpick_msg](#手爪力控夹取Gripperpick_msg)
-* 4.14[手爪力控夹取-持续力控夹取Gripperpick_msg](#手爪力控夹取-持续力控夹取Gripperpick_msg)
-* 4.15[手爪到达指定位置Gripperset_msg](#手爪到达指定位置Gripperset_msg)
-* 4.16[力位混合控制Setforceposition_msg](#力位混合控制Setforceposition_msg)
-* 4.17[六维力数据Sixforce_msg](#六维力数据Sixforce_msg)
-* 4.18[设置灵巧手手势Handposture_msg](#设置灵巧手手势Handposture_msg)
-* 4.19[设置灵巧手动作序列Handseq_msg](#设置灵巧手动作序列Handseq_msg)
-* 4.20[设置灵巧手各自由度角度Handangle_msg](#设置灵巧手各自由度角度Handangle_msg)
-* 4.21[设置灵巧手速度Handspeed_msg](#设置灵巧手速度Handspeed_msg)
-* 4.22[设置灵巧手力阈值Handforce_msg](#设置灵巧手力阈值Handforce_msg)
-* 4.23[透传力位混合补偿-角度Forcepositionmovejoint_msg](#透传力位混合补偿-角度Forcepositionmovejoint_msg)
-* 4.24[透传力位混合补偿-位姿Forcepositionmovejoint_msg](#透传力位混合补偿-位姿Forcepositionmovejoint_msg)
-* 4.25[速度开环控制-升降机构Liftspeed_msg](#速度开环控制-升降机构Liftspeed_msg)
-* 4.26[位置闭环控制-升降机构Liftheight_msg](#位置闭环控制-升降机构Liftheight_msg)
-* 4.27[获取升降机构状态-升降机构Liftstate_msg](#获取升降机构状态-升降机构Liftstate_msg)
-* 4.28[查询或设置UDP机械臂状态主动上报配置Setrealtimepush_msg](#查询或设置UDP机械臂状态主动上报配置Setrealtimepush_msg)
 
 ## rm_ros_interface功能包说明
 rm_ros_interface功能包的主要作用为为机械臂在ROS2的框架下运行提供必要的 消息文件，在下文中将通过以下几个方面详细介绍该功能包。
