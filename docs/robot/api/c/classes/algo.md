@@ -52,7 +52,7 @@ void rm_algo_set_angle(float x,float y,float z)
 rm_algo_set_angle(0, 90, 0)
 ```
 
-## 获取安装角度`rm_algo_get_angle()`
+## 设置工作坐标系`rm_algo_get_angle()`
 
 - **方法原型：**
 

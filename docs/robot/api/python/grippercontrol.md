@@ -1,29 +1,27 @@
+# 夹爪控制及状态获取`GripperControl`
+
+可用于夹爪控制及状态获取。睿尔曼机械臂末端配备了因时机器人公司的 EG2-4C2 手爪，为了便于用户操作手爪，机械臂控制器 对用户开放了手爪的控制协议（手爪控制协议与末端modbus 功能互斥）。下面是夹爪控制及状态获取`GripperControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+
 ---
-title: "配置通讯内容CommunicationConfig"
-tags: ""
----
 
-# 配置通讯内容`CommunicationConfig`
+## 设置手爪行程`rm_set_gripper_route()`
 
-机械臂控制器可通过网口、WIFI、RS232-USB 接口和 RS485 接口与用户通信，用户使用时无需切换，可使用上述任一接口， 控制器收到指令后，若指令格式正确，则会通过相同的接口反馈数据。可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是配置通讯内容`CommunicationConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
-
-## 配置 wifiAP 模式`rm_set_wifi_ap()`
+即手爪开口的最大值和最小值，设置成功后会自动保存，手爪断电不丢失。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_ap (self, str wifi_name, str password)
+rm_set_gripper_route(self, min_route: int, max_route: int) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| wifi_name      | `str` | wifi名称                    |
-| password | `str` | wifi密码 |
-
+| min_route      | `int` | 手爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 手爪开口最大值，范围：0~1000，无单位量纲                    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -32,6 +30,7 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_ap (self, str
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+|  -4  |    `int`   |    超时   |
 
 - **使用示例**
   
@@ -44,25 +43,28 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_wifi_ap("robot", "12345678"))
+print(arm.rm_set_gripper_route(70, 200))
 
 arm.rm_delete_robot_arm()
 ```
 
-## 配置WiFi STA模式`rm_set_wifi_sta()`
+## 松开手爪`rm_set_gripper_release()`
+
+即手爪以指定的速度运动到开口最大处。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_sta	(	 	self, str 	router_name, str password)
+rm_set_gripper_release(self, speed: int, block: bool, timeout: int) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| router_name      | `str` | 路由器名称                    |
-| password | `str` | 路由器wifi密码 |
-
+| speed      | `int` | 手爪松开速度，范围 1~1000，无单位量纲    |
+| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
 - **返回值:** </br>
 函数执行的状态码
@@ -74,6 +76,7 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_sta	(	 	self,
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+|  -4  |    `int`   |    超时   |
 
 - **使用示例**
   
@@ -86,34 +89,41 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_wifi_sta("robot", "12345678"))
+print(arm.rm_set_gripper_release(500, True, 10))
 
 arm.rm_delete_robot_arm()
 ```
 
-## 控制器RS485接口波特率设置，设置成功后蜂鸣器响`rm_set_RS485()`
+## 手爪力控夹取`rm_set_gripper_pick()`
+
+手爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_RS485	(	 	self, int baudrate)
+rm_set_gripper_pick(self, speed: int, force: int, block: bool, timeout: int) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| baudrate      | `int` | 波特率：9600,19200,38400,115200和460800，若用户设置其他数据，控制器会默认按照460800处理。                    |
+| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲    |
+| force      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
+| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+|  -4  |    `int`   |    超时。   |
 
 - **使用示例**
   
@@ -126,22 +136,30 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_RS485(115200))
+print(arm.rm_set_gripper_pick(500, 200, True, 10))
 
 arm.rm_delete_robot_arm()
 ```
 
-
-## 获取有线网卡信息，未连接有线网卡则会返回无效数据`rm_get_wired_net()`
+## 手爪持续力控夹取`rm_set_gripper_pick_on()`
 
 - **方法原型：**
+
 ```python
-dict[str, any] Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_get_wired_net (self)
+rm_set_gripper_pick_on(self, speed: int, force: int, block: bool, timeout: int) -> int:
 ```
 
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲。    |
+| force      | `int` | 力控阈值，范围：50~1000，无单位量纲。    |
+| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式。    |
+| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒。    |
+
 - **返回值:** </br>
-dict[str,any]: 包含以下键值的字典
-1. 'return_code' (int): 函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -150,15 +168,7 @@ dict[str,any]: 包含以下键值的字典
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 网络地址
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   ip  |    `str`   |    网络地址    |
-|   mask  |    `str`   |   子网掩码    |
-|   mac  |    `str`   |    MAC地址   |
-
+|  -4  |    `int`   |    超时   |
 
 - **使用示例**
   
@@ -171,22 +181,29 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_wired_net())
+print(arm.rm_set_gripper_pick_on(500, 200, True, 10))
 
 arm.rm_delete_robot_arm()
 ```
 
-## 查询无线网卡网络信息`rm_get_wifi_net()`
+## 设置手爪达到指定位置`rm_set_gripper_position()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_get_wifi_net	(self)
+rm_set_gripper_position(self, position: int, block: bool, timeout: int) -> int:
 ```
 
-- **返回值:** </br>
-dict[str,any]: 包含以下键值的字典
+- **参数说明:**
 
-1. 'return_code' (int): 函数执行的状态码
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| position      | `int` | 手爪开口位置，范围：1~1000，无单位量纲    |
+| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
+
+- **返回值:** </br>
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -195,13 +212,7 @@ dict[str,any]: 包含以下键值的字典
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 无线网络信息
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   rm_wifi_net_t  |    `dict[str,any]`   |    无线网络信息字典，键为rm_wifi_net_t结构体的字段    |
-
+|  -4  |    `int`   |    超时   |
 
 - **使用示例**
   
@@ -214,20 +225,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_wifi_net())
+print(arm.rm_set_gripper_position(500, True, 10))
 
 arm.rm_delete_robot_arm()
 ```
 
-## 恢复网络出厂设置`rm_set_net_default()`
+## 查询夹爪状态`rm_get_gripper_state()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
+rm_get_gripper_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-函数执行的状态码
+tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状态码
+
+1. int: 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -236,6 +250,12 @@ int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_net_default (self)
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. 夹爪状态信息
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   rm_gripper_state_t  |    `dict[str, any]`   |    夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称    |
 
 - **使用示例**
   
@@ -248,42 +268,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_net_default())
-
-arm.rm_delete_robot_arm()
-```
-
-
-## 配置关闭 wifi 功能，需要重启后生效`rm_set_wifi_close()`
-
-- **方法原型：**
-```python
-int Robotic_Arm.rm_robot_interface.CommunicationConfig.rm_set_wifi_close (self)
-```
-
-- **返回值:** </br>
-函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_set_wifi_close())
+print(arm.rm_get_gripper_state())
 
 arm.rm_delete_robot_arm()
 ```

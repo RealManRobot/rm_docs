@@ -1,18 +1,15 @@
----
-title: "五指灵巧手控制HandControl"
-tags: ""
----
-
 # 五指灵巧手控制`HandControl`
 
-可用于设置五指灵巧手控制，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是五指灵巧手控制`HandControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+该接口可用于设置五指灵巧手控制，下面是五指灵巧手控制`HandControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 设置灵巧手目标手势序列号`rm_set_hand_posture()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_posture (self, int posture_num, bool block, int timeout)	
+rm_set_hand_posture(self, posture_num: int, block: bool, timeout: int) -> int:
 ```
 
 - **参数说明:**
@@ -23,20 +20,18 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_posture (self, int po
 | block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
 
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手   |
-|  -5  |    `int`   |   超时未返回   |
-
+|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手。   |
+|  -5  |    `int`   |   超时未返回。   |
 
 - **使用示例**
   
@@ -57,9 +52,9 @@ arm.rm_delete_robot_arm()
 ## 设置灵巧手目标手势序列号`rm_set_hand_seq()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_seq (self,
-int seq_num, bool block, int timeout)
+rm_set_hand_seq(self, seq_num: int, block: bool, timeout: int) -> int:
 ```
 
 - **参数说明:**
@@ -70,20 +65,18 @@ int seq_num, bool block, int timeout)
 | block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
 
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |   成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手   |
-|  -5  |    `int`   |   超时未返回   |
-
+|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手。   |
+|  -5  |    `int`   |   超时未返回。   |
 
 - **使用示例**
   
@@ -104,8 +97,9 @@ arm.rm_delete_robot_arm()
 ## 设置灵巧手各自由度角度`rm_set_hand_angle()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_angle (self, list[int] hand_angle)
+rm_set_hand_angle(self, hand_angle: list[int]) -> int:
 ```
 
 - **参数说明:**
@@ -116,9 +110,8 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_angle (self, list[int
 | block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
 
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -128,7 +121,6 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_angle (self, list[int
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 |  -4  |    `int`   |   超时未返回   |
-
 
 - **使用示例**
   
@@ -150,8 +142,9 @@ arm.rm_delete_robot_arm()
 ## 设置灵巧手速度`rm_set_hand_speed()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_speed (self, int speed)
+rm_set_hand_speed(self, speed: int) -> int:
 ```
 
 - **参数说明:**
@@ -161,7 +154,7 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_speed (self, int spee
 | speed   | `int` | 手指速度，范围：1~1000    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -188,12 +181,12 @@ print(arm.rm_set_hand_speed(500))
 arm.rm_delete_robot_arm()
 ```
 
-
 ## 设置灵巧手力阈值`rm_set_hand_force()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_force (self, int force)
+rm_set_hand_force(self, force: int) -> int:
 ```
 
 - **参数说明:**
@@ -203,7 +196,7 @@ int Robotic_Arm.rm_robot_interface.HandControl.rm_set_hand_force (self, int forc
 | force   | `int` | 手指力，范围：1~1000    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|

@@ -1,32 +1,29 @@
----
-title: "全局路点管理GlobalWaypointManage"
-tags: ""
----
-
 # 全局路点管理`GlobalWaypointManage`
 
-可用于新增、查询或者更新全局路点，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是全局路点管理`GlobalWaypointManage`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于新增、查询或者更新全局路点，可以查阅[GlobalWaypointManage继承关系图](../python/InheritanceDiagram/GlobalWaypointManage.md)了解与其相关的类的关系。下面是全局路点管理`GlobalWaypointManage`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 新增全局路点`rm_add_global_waypoint()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GlobalWaypointManage.rm_add_global_waypoint (self, rm_waypoint_t waypoint)
+rm_add_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| waypoint      | `rm_waypoint_t` | 新增全局路点参数（无需输入新增全局路点时间）  |
+| waypoint      | `rm_waypoint_t` | 新增全局路点参数（无需输入新增全局路点时间）。  |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -53,22 +50,23 @@ arm.rm_delete_robot_arm()
 ## 更新全局路点`rm_update_global_waypoint()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GlobalWaypointManage.rm_update_global_waypoint (self, rm_waypoint_t waypoint)	
+rm_update_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| waypoint      | `rm_waypoint_t` | 更新全局路点参数（无需输入更新全局路点时间）  |
+| waypoint      | `rm_waypoint_t` | 更新全局路点参数（无需输入更新全局路点时间）。  |
 
 - **返回值:** </br>
 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -95,22 +93,23 @@ arm.rm_delete_robot_arm()
 ## 删除全局路点`rm_delete_global_waypoint()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GlobalWaypointManage.rm_delete_global_waypoint (self, str point_name)
+rm_delete_global_waypoint(self, point_name: str) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_name      | `str` | 全局路点名称  |
+| point_name      | `str` | 全局路点名称。  |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -135,15 +134,16 @@ arm.rm_delete_robot_arm()
 ## 查询指定全局路点`rm_get_given_global_waypoint()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.GlobalWaypointManage.rm_get_given_global_waypoint	(self, str point_name)	
+rm_get_given_global_waypoint(self, point_name: str) -> tuple[int, dict[str, any]]:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_name      | `str` | 指定全局路点名称  |
+| point_name      | `str` | 指定全局路点名称。  |
 
 - **返回值:** </br>
 tuple[int,dict[str,any]]: 包含两个元素的元组
@@ -152,7 +152,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -162,7 +162,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_waypoint_t  |    `dict[str,any]`   |    返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称    |
+|   rm_waypoint_t  |    `dict[str,any]`   |    返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称。    |
 
 - **使用示例**
   
@@ -183,8 +183,9 @@ arm.rm_delete_robot_arm()
 ## 查询多个全局路点`rm_get_global_waypoints_list()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.GlobalWaypointManage.rm_get_global_waypoints_list (self, int page_num, int page_size, str vague_search)
+rm_get_global_waypoints_list(self, page_num: int, page_size: int, vague_search: str) -> tuple[int, dict[str, any]]:
 ```
 
 - **参数说明:**

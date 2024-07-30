@@ -1,39 +1,29 @@
----
-title: "夹爪控制及状态获取GripperControl"
-tags: ""
----
+# 机械臂运动的急停、暂停、继续等控制`ArmMotionControl`
 
-# 夹爪控制及状态获取`GripperControl`
-
-可用于夹爪控制及状态获取。睿尔曼机械臂末端配备了因时机器人公司的 EG2-4C2 手爪，为了便于用户操作手爪，机械臂控制器 对用户开放了手爪的控制协议（手爪控制协议与末端modbus 功能互斥）可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是夹爪控制及状态获取`GripperControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于机械臂运动的急停、暂停、继续等控制。下面是机械臂运动的急停、暂停、继续等控制`ArmMotionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
-## 设置手爪行程，即手爪开口的最大值和最小值，设置成功后会自动保存，手爪断电不丢失`rm_set_gripper_route()`
+
+## 轨迹缓停`rm_set_arm_slow_stop()`
+
+在当前正在运行的轨迹上停止。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_route (self, int min_route, int max_route)
+rm_set_arm_slow_stop(self) -> int:
 ```
 
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| min_route      | `int` | 手爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 手爪开口最大值，范围：0~1000，无单位量纲                    |
-
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |    超时   |
-
 
 - **使用示例**
   
@@ -46,30 +36,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_gripper_route(70, 200))
+print(arm.rm_set_arm_slow_stop())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 松开手爪，即手爪以指定的速度运动到开口最大处`rm_set_gripper_release()`
+## 轨迹急停`rm_set_arm_stop()`
+
+关节最快速度停止，轨迹不可恢复。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_release (self, int speed, bool block, int timeout)
+rm_set_arm_stop(self) -> int:
 ```
 
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪松开速度，范围 1~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
-
-
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -78,8 +61,6 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_release (self, 
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |    超时   |
-
 
 - **使用示例**
   
@@ -92,31 +73,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_gripper_release(500, True, 10))
+print(arm.rm_set_arm_stop())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 手爪力控夹取，手爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取`rm_set_gripper_pick()`
+## 轨迹暂停`rm_set_arm_pause()`
+
+暂停在规划轨迹上，轨迹可恢复。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick (self, int speed, int force, bool block, int timeout)
+rm_set_arm_pause(self) -> int:
 ```
 
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲    |
-| force      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
-
-
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -125,8 +98,6 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick (self, int
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |    超时   |
-
 
 - **使用示例**
   
@@ -139,31 +110,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_gripper_pick(500, 200, True, 10))
+print(arm.rm_set_arm_pause())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 手爪持续力控夹取`rm_set_gripper_pick_on()`
+## 继续当前轨迹运动`rm_set_arm_continue()`
+
+轨迹暂停后，继续当前轨迹运动。
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick_on (self, int speed, int force, bool block, int timeout)
+rm_set_arm_continue(self) -> int:
 ```
 
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲    |
-| force      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
-
-
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -172,8 +135,6 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_pick_on (self, 
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |    超时   |
-
 
 - **使用示例**
   
@@ -186,30 +147,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_gripper_pick_on(500, 200, True, 10))
+print(arm.rm_set_arm_continue())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 设置手爪达到指定位置`rm_set_gripper_position()`
+## 清除当前轨迹`rm_set_delete_current_trajectory()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_position (self, int position, bool block, int timeout)
+rm_set_delete_current_trajectory(self) -> int:
 ```
 
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| position      | `int` | 手爪开口位置，范围：1~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
-
-
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -218,8 +170,6 @@ int Robotic_Arm.rm_robot_interface.GripperControl.rm_set_gripper_position (self,
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |    超时   |
-
 
 - **使用示例**
   
@@ -232,23 +182,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_gripper_position(500, True, 10))
+print(arm.rm_set_delete_current_trajectory())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 查询夹爪状态`rm_get_gripper_state()`
+## 清除所有轨迹`rm_set_arm_delete_trajectory()`
 
 - **方法原型：**
+
 ```python
-tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.GripperControl.rm_get_gripper_state	(self)
+rm_set_arm_delete_trajectory(self) -> int:
 ```
 
-
 - **返回值:** </br>
-tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状态码
-
-1. int: 函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -257,12 +205,6 @@ tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状�
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 夹爪状态信息
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   rm_gripper_state_t  |    `dict[str, any]`   |    夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称    |
 
 - **使用示例**
   
@@ -275,7 +217,56 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_gripper_state())
+print(arm.rm_set_arm_delete_trajectory())
+
+arm.rm_delete_robot_arm()
+```
+
+## 获取当前正在规划的轨迹信息`rm_get_arm_current_trajectory()`
+
+- **方法原型：**
+
+```python
+rm_get_arm_current_trajectory(self) -> dict[str, any]:
+```
+
+- **返回值:** </br>
+ dict[str,any]: 包含以下键值的字典
+ 
+1. 'return_code' (int): 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. 返回的规划类型
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   trajectory_type  |    `rm_arm_current_trajectory_e`   |    返回的规划类型    |
+
+3. 规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   data  |    `list[float]`   |    无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_current_trajectory())
 
 arm.rm_delete_robot_arm()
 ```

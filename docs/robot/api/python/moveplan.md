@@ -1,37 +1,33 @@
----
-title: "机械臂轨迹规划指令MovePlan"
-tags: ""
----
-
 # 机械臂轨迹规划指令`MovePlan`
 
-可用于规划机械臂的运动轨迹，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是机械臂轨迹规划指令`MovePlan`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于规划机械臂的运动轨迹，可以查阅[MovePlan继承关系图](../python/InheritanceDiagram/MovePlan.md)了解与其相关的类的关系。下面是机械臂轨迹规划指令`MovePlan`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
+
 ## 关节空间运动`rm_movej()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej (self, list[float] joint, int v, int connect, int block, int r = 0)
+rm_movej(self, joint: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint  |    `list`    |    各关节目标角度数组，单位：°度    |
-|   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比    |
-|   r  |    `int, optional`    |   轨迹交融半径，目前默认0  |
+|   joint  |    `list`    |    各关节目标角度数组，单位：°度。    |
+|   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比。    |
+|   r  |    `int, optional`    |   轨迹交融半径，目前默认0。  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
-
 
 - **返回值:** </br>
 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |   成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -58,8 +54,9 @@ arm.rm_delete_robot_arm()
 ## 笛卡尔空间直线运动`rm_movel()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movel (self, list[float] pose, int v, int connect, int block, int r = 0)
+rm_movel(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
 ```
 
 - **参数说明:**
@@ -105,8 +102,9 @@ arm.rm_delete_robot_arm()
 ## 样条曲线运动`rm_moves()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_moves (self, list[float] pose, int v, int connect, int block, int r = 0)	
+rm_moves(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
 ```
 
 - **参数说明:**
@@ -119,9 +117,8 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_moves (self, list[float] pose, in
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
-
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -154,8 +151,9 @@ arm.rm_delete_robot_arm()
 ## 笛卡尔空间圆弧运动`rm_movec()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movec (self, list[float]	pose_via, list[float] pose_to, int v, int loop, int connect, int block, int r = 0)	
+rm_movec(self, pose_via: list[float], pose_to: list[float], v: int, loop: int, connect: int, block: int, r: int = 0) -> int:
 ```
 
 - **参数说明:**
@@ -169,7 +167,6 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movec (self, list[float]	pose_via
 |   r  |    `int, optional`    |   轨迹交融半径，目前默认0  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
-
 
 - **返回值:** </br>
 函数执行的状态码
@@ -207,8 +204,9 @@ arm.rm_delete_robot_arm()
 ## 该函数用于关节空间运动到目标位姿`rm_movej_p()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_p (self, list[float] pose, int v, int connect, int block, int r = 0)
+rm_movej_p(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
 ```
 
 - **参数说明:**
@@ -220,7 +218,6 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_p (self, list[float] pose, 
 |   r  |    `int, optional`    |   轨迹交融半径，目前默认0  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
-
 
 - **返回值:** </br>
 函数执行的状态码
@@ -253,18 +250,18 @@ arm.rm_delete_robot_arm()
 ## 角度透传控制`rm_movej_canfd()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_canfd (self, list[float] joint, bool follow, float expand = 0)
+rm_movej_canfd(self, joint: list[float], follow: bool, expand: float = 0) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint  |    `list[float]`    |    关节1~7目标角度数组,单位：°度   |
+|   joint  |    `list[float]`    |    关节1~7目标角度数组,单位：°度。   |
 |   follow  |    `bool`   | true-高跟随，false-低跟随。若使用高跟随，透传周期要求不超过 10ms。  |
 |   expand  |    `int, optional`    |   如果存在通用扩展轴，并需要进行透传，可使用该参数进行透传发送，默认为0。 |
-
 
 - **返回值:** </br>
 函数执行的状态码
@@ -297,8 +294,9 @@ arm.rm_delete_robot_arm()
 ## 位姿透传（CANFD）`rm_movep_canfd()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_canfd (self, list[float] joint, bool follow, float expand = 0)
+rm_movep_canfd(self, pose: list[float], follow: bool) -> int:
 ```
 
 - **参数说明:**
@@ -307,8 +305,6 @@ int Robotic_Arm.rm_robot_interface.MovePlan.rm_movej_canfd (self, list[float] jo
 | :--- | :--- | :--- |
 |   joint  |    `list[float]`    |    关节1~7目标角度数组,单位：°度   |
 |   follow  |    `bool`   | true-高跟随，false-低跟随。若使用高跟随，透传周期要求不超过 10ms。  |
-
-
 
 - **返回值:** </br>
 函数执行的状态码

@@ -1,35 +1,31 @@
----
-title: "自碰撞安全检测SelfCollision"
-tags: ""
----
-
 # 自碰撞安全检测`SelfCollision`
 
-可用于自碰撞安全检测，睿尔曼机械臂支持自碰撞安全检测，自碰撞安全检测使能状态下，可确保在轨迹规划、示教等运动过程中机械臂的各个部分不会相互碰撞。可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是自碰撞安全检测`SelfCollision`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于自碰撞安全检测，睿尔曼机械臂支持自碰撞安全检测，自碰撞安全检测使能状态下，可确保在轨迹规划、示教等运动过程中机械臂的各个部分不会相互碰撞。可以查阅[SelfCollision继承关系图](../python/InheritanceDiagram/SelfCollision.md)了解与其相关的类的关系。下面是自碰撞安全检测`SelfCollision`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 > **注意**</br>以上自碰撞安全检测功能目前只在仿真模式下生效，用于进行预演轨迹与轨迹优化。
 
 ---
+
 ## 设置自碰撞安全检测使能状态`rm_set_self_collision_enable()`
 
 - **方法原型：**
+
 ```python
-int Robotic_Arm.rm_robot_interface.SelfCollision.rm_set_self_collision_enable (self, bool enable)	
+rm_set_self_collision_enable(self, enable: bool) -> int:
 ```
 
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| enable      | `bool` | True代表使能，False代表禁使能                    |
+| enable      | `bool` | True代表使能，False代表禁使能。                    |
 
-
-- **返回值:** </br>
-函数执行的状态码
+- **返回值:**
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -54,12 +50,12 @@ arm.rm_delete_robot_arm()
 ## 获取自碰撞安全检测使能状态`rm_get_self_collision_enable()`
 
 - **方法原型：**
+
 ```python
-tuple[int, bool] Robotic_Arm.rm_robot_interface.SelfCollision.rm_get_self_collision_enable (self)
+rm_get_self_collision_enable(self) -> tuple[int, bool]:
 ```
 
-
-- **返回值:** </br>
+- **返回值:** 
 tuple[int,bool]: 包含两个元素的元组
 
 1. int: 函数执行的状态码
