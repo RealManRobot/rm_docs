@@ -12,13 +12,15 @@ tags: ""
 ## 设置安装方式参数`rm_set_install_pose()`
 
 - **方法原型：**
+
 ```python
 int Robotic_Arm.rm_robot_interface.InstallPos.rm_set_install_pose (self,
-float 	x,
-float 	y,
-float 	z 
-)	
+float x,
+float y,
+float z 
+)
 ```
+
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |

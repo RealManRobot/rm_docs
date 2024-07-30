@@ -45,8 +45,8 @@ RMDemo_AlgoInterface/
    打开`demo_algo_interface.py` 文件，在main函数中可修改以下配置：
 
    - 配置机械臂及末端版本（默认为RM65标准版机械臂）：如果需要调用其它型号机械臂的算法，可配置`AlgoController`类的初始化参数。
-     - `arm_model`参数指定了机械臂的型号，例如RM75机械臂则修改为：`rm_robot_arm_model_e.RM_MODEL_RM_65_E`。
-     - `force_type`参数指定了机械臂末端版本，例如六维力版本则修改该参数为`rm_force_type_e.RM_MODEL_RM_SF_E`。
+   - `arm_model`参数指定了机械臂的型号，例如RM75机械臂则修改为：`rm_robot_arm_model_e.RM_MODEL_RM_65_E`。
+   - `force_type`参数指定了机械臂末端版本，例如六维力版本则修改该参数为`rm_force_type_e.RM_MODEL_RM_SF_E`。
    - 配置基座安装角度（默认为正装）：通过`set_angle`方法设置机械臂的初始安装姿态
    - 配置工作坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_workframe`方法修改工作坐标系。
    - 配置工具坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_toolframe`方法修改工具坐标系。

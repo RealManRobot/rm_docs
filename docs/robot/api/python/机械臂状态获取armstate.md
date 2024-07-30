@@ -1,8 +1,3 @@
----
-title: "机械臂状态获取ArmState"
-tags: ""
----
-
 # 机械臂状态获取`ArmState`
 
 可用于机械臂状态获取，可以查阅[JointConfigSettings继承关系图](../继承关系图/关节配置JointConfigSettings.md)了解与其相关的类的关系。下面是机械臂状态获取`ArmState`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
@@ -12,18 +7,19 @@ tags: ""
 ## 获取机械臂当前状态`rm_get_current_arm_state()`
 
 - **方法原型：**
+
 ```python
 tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_current_arm_state(self)
 ```
 
 - **返回值:** </br>
  tuple[int, dict[str,any]]: 包含两个元素的元组。
- 
+
 1. 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |   成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
@@ -34,7 +30,6 @@ tuple[int, dict[str, any]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_curren
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   rm_current_arm_state_t  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
-
 
 - **使用示例**
   
@@ -52,17 +47,17 @@ print(arm.rm_get_current_arm_state())
 arm.rm_delete_robot_arm()
 ```
 
-
 ## 获取关节当前温度`rm_get_current_joint_temperature()`
 
 - **方法原型：**
+
 ```python
 tuple[int, list[float]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_current_joint_temperature (self)
 ```
 
 - **返回值:** </br>
 tuple[int, list[float]]: 包含两个元素的元组。
- 
+
 1. 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
@@ -79,9 +74,8 @@ tuple[int, list[float]]: 包含两个元素的元组。
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |    关节1~7温度数组，单位：℃    |
 
-
 - **使用示例**
-  
+
 ```python
 from Robotic_Arm.rm_robot_interface import *
 
@@ -99,6 +93,7 @@ arm.rm_delete_robot_arm()
 ## 获取关节当前电流`rm_get_current_joint_current()`
 
 - **方法原型：**
+
 ```python
 tuple[int, list[float]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_current_joint_current (self)	
 ```
@@ -122,7 +117,6 @@ tuple[int, list[float]]: 包含两个元素的元组。
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |    关节1~7电流数组，单位：mA   |
 
-
 - **使用示例**
   
 ```python
@@ -139,10 +133,10 @@ print(arm.rm_get_current_joint_current())
 arm.rm_delete_robot_arm()
 ```
 
-
 ## 获取关节当前电压`rm_get_current_joint_voltage()`
 
 - **方法原型：**
+
 ```python
 tuple[int, list[float]] Robotic_Arm.rm_robot_interface.ArmState.rm_get_current_joint_voltage (self)
 ```
