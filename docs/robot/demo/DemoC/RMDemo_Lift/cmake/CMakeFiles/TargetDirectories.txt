@@ -1,3 +1,0 @@
-C:/Users/dell/Videos/710/RMDemo_Lift/cmake/CMakeFiles/demo_lift.dir
-C:/Users/dell/Videos/710/RMDemo_Lift/cmake/CMakeFiles/edit_cache.dir
-C:/Users/dell/Videos/710/RMDemo_Lift/cmake/CMakeFiles/rebuild_cache.dir

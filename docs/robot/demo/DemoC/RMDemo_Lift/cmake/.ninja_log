@@ -1,7 +1,0 @@
-# ninja log v6
-574	655	7424038743009369	demo_force_control.exe	c160bd8f5c4daf81
-2	252	7427061704737884	build.ninja	1b6dcd23f3fe7e2d
-8	551	7424644566217795	CMakeFiles/demo_lift.dir/src/utils.c.obj	d9bd3e85ec6b3c3d
-522	596	7425655730595197	demo_lift.exe	991aebd3669a5c29
-7	522	7425655725442219	CMakeFiles/demo_lift.dir/src/main.c.obj	7ba0b0d925d0ee2
-13	573	7425652856517887	CMakeFiles/demo_lift.dir/src/demo_lift.c.obj	c3f5f8bcd4a24257

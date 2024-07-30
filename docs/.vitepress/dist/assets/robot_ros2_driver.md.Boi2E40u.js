@@ -1,0 +1,45 @@
+import{_ as a,c as s,o as n,a3 as p}from"./chunks/framework.DpFyhY0e.js";const r="/assets/rm_driver1.BJQ3EfYQ.png",e="/assets/rm_driver4.nv12ZNJD.png",i="/assets/rm_driver2.xhiiVSOg.png",l="/assets/rm_driver3.D660lUE6.png",P=JSON.parse('{"title":"睿尔曼机器人rm_driver使用说明","description":"","frontmatter":{},"headers":[],"relativePath":"robot/ros2/driver.md","filePath":"robot/ros2/driver.md","lastUpdated":1722230700000}'),t={name:"robot/ros2/driver.md"},c=p('<h1 id="睿尔曼机器人rm-driver使用说明" tabindex="-1">睿尔曼机器人rm_driver使用说明 <a class="header-anchor" href="#睿尔曼机器人rm-driver使用说明" aria-label="Permalink to &quot;睿尔曼机器人rm_driver使用说明&quot;">​</a></h1><h2 id="rm-driver功能包说明" tabindex="-1">rm_driver功能包说明 <a class="header-anchor" href="#rm-driver功能包说明" aria-label="Permalink to &quot;rm_driver功能包说明&quot;">​</a></h2><p>rm_driver功能包在机械臂ROS2功能包中是十分重要的，该功能包实现了通过ROS与机械臂进行通信控制机械臂的功能，在下文中将通过以下几个方面详细介绍该功能包。</p><ul><li>1.功能包使用。</li><li>2.功能包架构说明。</li><li>3.功能包话题说明。</li></ul><p>通过这三部分内容的介绍可以帮助大家：</p><ul><li>1.了解该功能包的使用。</li><li>2.熟悉功能包中的文件构成及作用。</li><li>3.熟悉功能包相关的话题，方便开发和使用</li></ul><h2 id="rm-driver功能包使用" tabindex="-1">rm_driver功能包使用 <a class="header-anchor" href="#rm-driver功能包使用" aria-label="Permalink to &quot;rm_driver功能包使用&quot;">​</a></h2><h3 id="功能包基础使用" tabindex="-1">功能包基础使用 <a class="header-anchor" href="#功能包基础使用" aria-label="Permalink to &quot;功能包基础使用&quot;">​</a></h3><p>首先配置好环境完成连接后我们可以通过以下命令直接启动节点，控制机械臂。<br> 当前的控制基于我们没有改变过机械臂的IP即当前机械臂的IP仍为192.168.1.18。<br> rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py<br> 在实际使用时需要将以上的&lt;arm_type&gt;更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。<br> 底层驱动启动成功后，将显示以下画面。<br><img src="'+r+'" alt="image"></p><h3 id="功能包进阶使用" tabindex="-1">功能包进阶使用 <a class="header-anchor" href="#功能包进阶使用" aria-label="Permalink to &quot;功能包进阶使用&quot;">​</a></h3><p>当我们的机械臂IP被改变后我们的启动指令就失效了，再直接使用如上指令就无法成功连接到机械臂了，我们可以通过修改如下配置文件，重新建立连接。<br> 该配置文件位于我们的rm_driver功能包下的config文件夹下。<br><img src="'+e+`" alt="image"><br> 其配置文件内容如下：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>rm_driver:   </span></span>
+<span class="line"><span>  ros__parameters:  </span></span>
+<span class="line"><span>    #robot param  </span></span>
+<span class="line"><span>    arm_ip: &quot;192.168.1.18&quot;        #设置TCP连接时的IP  </span></span>
+<span class="line"><span>    tcp_port: 8080                #设置TCP连接时的端口  </span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    arm_type: &quot;RM_65&quot;             #机械臂型号设置    </span></span>
+<span class="line"><span>    arm_dof: 6                    #机械臂自由度设置  </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    udp_ip: &quot;192.168.1.10&quot;        #设置udp主动上报IP  </span></span>
+<span class="line"><span>    udp_cycle: 5                  #udp主动上报周期，需要是5的倍数  </span></span>
+<span class="line"><span>    udp_port: 8089                #设置udp主动上报端口  </span></span>
+<span class="line"><span>    udp_force_coordinate: 0       #设置系统受力时六维力的基准坐标，0为传感器坐标系 1为当前工作坐标系 2为当前工具坐标系</span></span></code></pre></div><p>其中主要有以下几个参数。</p><ul><li>arm_ip：改参数代表机械臂当前的IP</li><li>tcp_port：设置TCP连接时的端口。</li><li>arm_type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RML_63（63系列）、RM_75（75系列）。</li><li>arm_dof: 机械臂自由度设置。6为6自由度，7为7自由度。</li><li>udp_ip: 设置udp主动上报目标IP。</li><li>udp_cycle：udp主动上报周期，需要是5的倍数。</li><li>udp_port：设置udp主动上报端口。</li><li>udp_force_coordinate：设置系统受力时六维力的基准坐标，0为传感器坐标系（原始数据） 1为当前工作坐标系 2为当前工具坐标系。</li><li>再实际使用时，我们选择对应的launch文件启动时会自动选择正确的型号，若有特殊要求可在此处进行相应的参数修改，修改之后需要在工作空间目录下进行重新编译，之后修改的配置才会生效。</li><li>在工作空间目录运行colcon build指令。</li></ul><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>rm@rm-desktop: ~/ros2_ws$ colcon build</span></span></code></pre></div><ul><li>编译成功后可按如上指令进行功能包启动。</li></ul><h2 id="rm-driver功能包架构说明" tabindex="-1">rm_driver功能包架构说明 <a class="header-anchor" href="#rm-driver功能包架构说明" aria-label="Permalink to &quot;rm_driver功能包架构说明&quot;">​</a></h2><h3 id="功能包文件总览" tabindex="-1">功能包文件总览 <a class="header-anchor" href="#功能包文件总览" aria-label="Permalink to &quot;功能包文件总览&quot;">​</a></h3><p>当前rm_driver功能包的文件构成如下。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>├── CMakeLists.txt                 #编译规则文件</span></span>
+<span class="line"><span>├── config                         #配置文件夹</span></span>
+<span class="line"><span>│   ├── rm_63_config.yaml          #63配置文件</span></span>
+<span class="line"><span>│   ├── rm_65_config.yaml          #65配置文件</span></span>
+<span class="line"><span>│   ├── rm_75_config.yaml          #75配置文件</span></span>
+<span class="line"><span>│   └── rm_eco65_config.yaml       #eco65配置文件</span></span>
+<span class="line"><span>├── include                        #依赖头文件文件夹</span></span>
+<span class="line"><span>│   └── rm_driver</span></span>
+<span class="line"><span>│       ├── cJSON.h                #API头文件</span></span>
+<span class="line"><span>│       ├── constant_define.h      #API头文件</span></span>
+<span class="line"><span>│       ├── rman_int.h             #API头文件</span></span>
+<span class="line"><span>│       ├── rm_base_global.h       #API头文件</span></span>
+<span class="line"><span>│       ├── rm_base.h              #API头文件</span></span>
+<span class="line"><span>│       ├── rm_define.h            #API头文件</span></span>
+<span class="line"><span>│       ├── rm_driver.h            #rm_driver.cpp头文件</span></span>
+<span class="line"><span>│       ├── rm_praser_data.h       #API头文件</span></span>
+<span class="line"><span>│       ├── rm_queue.h             #API头文件</span></span>
+<span class="line"><span>│       ├── rm_service_global.h    #API头文件</span></span>
+<span class="line"><span>│       ├── rm_service.h           #API头文件</span></span>
+<span class="line"><span>│       └── robot_define.h         #API头文件</span></span>
+<span class="line"><span>├── launch</span></span>
+<span class="line"><span>│   ├── rm_63_driver.launch.py     #63启动文件</span></span>
+<span class="line"><span>│   ├── rm_65_driver.launch.py     #65启动文件</span></span>
+<span class="line"><span>│   ├── rm_75_driver.launch.py     #75启动文件</span></span>
+<span class="line"><span>│   └── rm_eco65_driver.launch.py  #eco65启动文件</span></span>
+<span class="line"><span>├── lib</span></span>
+<span class="line"><span>│   ├── libRM_Service.so -&gt; libRM_Service.so.1.0.0        #API库文件</span></span>
+<span class="line"><span>│   ├── libRM_Service.so.1 -&gt; libRM_Service.so.1.0.0      #API库文件</span></span>
+<span class="line"><span>│   ├── libRM_Service.so.1.0 -&gt; libRM_Service.so.1.0.0    #API库文件</span></span>
+<span class="line"><span>│   └── libRM_Service.so.1.0.0                            #API库文件</span></span>
+<span class="line"><span>├── package.xml                                           #依赖声明文件</span></span>
+<span class="line"><span>└── src</span></span>
+<span class="line"><span>    └── rm_driver.cpp                                     #驱动代码源文件</span></span></code></pre></div><h2 id="rm-driver话题说明" tabindex="-1">rm_driver话题说明 <a class="header-anchor" href="#rm-driver话题说明" aria-label="Permalink to &quot;rm_driver话题说明&quot;">​</a></h2><p>rm_driver的话题较多，可以通过如下指令了解其话题信息。 <img src="`+i+'" alt="image"><img src="'+l+'" alt="image"><br> 主要为套用API实现的一些机械臂本体的功能，其详细介绍和使用在此不详细展开，可以通过专门的文档《<a href="https://github.com/RealManRobot/ros2_rm_robot/blob/humble1.0.1/rm_driver/doc/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E6%A2%B0%E8%87%82ROS2rm_driver%E8%AF%9D%E9%A2%98%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E.md" target="_blank" rel="noreferrer">睿尔曼机械臂ROS2话题详细说明</a>》进行查看。</p>',22),o=[c];function d(_,m,h,u,v,b){return n(),s("div",null,o)}const f=a(t,[["render",d]]);export{P as __pageData,f as default};

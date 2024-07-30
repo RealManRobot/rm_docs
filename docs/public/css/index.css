@@ -1,3 +1,6 @@
+:root{
+    --vp-c-indigo-1:#EC6102;
+}
 
 /*去除表格边框*/
 .vp-doc th,
@@ -30,7 +33,7 @@ tbody {
 }
 .VPNavBarMenuLink.active>span {
     border-color: var(--vp-c-brand-1);
-    background-color: #FDEFE5;
+    background-color: #FDEFE5 !important;
 }
 
 .VPNavBarMenuLink:hover {

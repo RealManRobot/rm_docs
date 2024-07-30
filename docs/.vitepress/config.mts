@@ -10,5 +10,5 @@ export default defineConfig({
   lastUpdated: true,
   head,
   themeConfig,
-  cleanUrls:true
+  ignoreDeadLinks:true,
 });
