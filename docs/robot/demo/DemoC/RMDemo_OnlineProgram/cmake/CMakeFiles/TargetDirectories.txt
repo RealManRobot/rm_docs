@@ -1,3 +1,0 @@
-C:/Users/dell/Videos/710/RMDemo_OnlineProgram/cmake/CMakeFiles/demo_online_program.dir
-C:/Users/dell/Videos/710/RMDemo_OnlineProgram/cmake/CMakeFiles/edit_cache.dir
-C:/Users/dell/Videos/710/RMDemo_OnlineProgram/cmake/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,0 @@
-# ninja log v6
-18	671	7424813155738617	CMakeFiles/demo_movej_canfd.dir/src/demo_movej_canfd.c.obj	cb83d97717e07725
-692	799	7424813162477754	demo_movej_canfd.exe	4ce46a346eb3c506
-5	243	7425688620232184	build.ninja	fc0aabeace7b80b5
-21	692	7424813155768619	CMakeFiles/demo_movej_canfd.dir/src/utils.c.obj	44658d42e341a414
-23	670	7424813155788622	CMakeFiles/demo_movej_canfd.dir/src/main.c.obj	b7fa1c3aff92d6ed

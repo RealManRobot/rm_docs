@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 242.16677.29\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\demo_moves.dir/objects.a
-C:\PROGRA~1\JETBRA~1\CLION2~1.29\bin\mingw\bin\ar.exe qc CMakeFiles\demo_moves.dir/objects.a @CMakeFiles\demo_moves.dir\objects1.rsp
-C:\PROGRA~1\JETBRA~1\CLION2~1.29\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\demo_moves.dir/objects.a -Wl,--no-whole-archive -o demo_moves.exe -Wl,--out-implib,libdemo_moves.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\demo_moves.dir\linkLibs.rsp

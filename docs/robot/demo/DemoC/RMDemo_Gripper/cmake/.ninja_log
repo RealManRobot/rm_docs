@@ -1,8 +1,0 @@
-# ninja log v6
-574	655	7424038743009369	demo_force_control.exe	c160bd8f5c4daf81
-2	252	7427071720866526	build.ninja	1b6dcd23f3fe7e2d
-522	596	7425655730595197	demo_lift.exe	991aebd3669a5c29
-2	770	7427078732210455	CMakeFiles/demo_gripper.dir/src/demo_gripper.c.obj	2fc1f33ca057f796
-9	772	7427078732280475	CMakeFiles/demo_gripper.dir/src/main.c.obj	1efbde7137bb4886
-7	772	7427078732260467	CMakeFiles/demo_gripper.dir/src/utils.c.obj	ebaa7bc318a96fe3
-772	909	7427078739913341	demo_gripper.exe	326a71cc8aa1bcd4
