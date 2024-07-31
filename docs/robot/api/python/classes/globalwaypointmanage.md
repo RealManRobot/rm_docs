@@ -1,6 +1,6 @@
 # 全局路点管理`GlobalWaypointManage`
 
-可用于新增、查询或者更新全局路点，可以查阅[GlobalWaypointManage继承关系图](../python/InheritanceDiagram/GlobalWaypointManage.md)了解与其相关的类的关系。下面是全局路点管理`GlobalWaypointManage`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于新增、查询或者更新全局路点。下面是全局路点管理`GlobalWaypointManage`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 

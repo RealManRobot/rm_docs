@@ -1,7 +1,6 @@
 # 关节配置查询`JointConfigReader`
 
-可用于查询关节、驱动器的最大速度、加速度或者限位等，可以查阅[JointConfigReader继承关系图](../python/InheritanceDiagram/JointConfigReader.md)了解与其相关的类的关系。下面是关节配置查询`JointConfigReader`
-的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于查询关节、驱动器的最大速度、加速度或者限位等。下面是关节配置查询`JointConfigReader`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 
