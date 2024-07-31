@@ -581,71 +581,124 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "API文档(Python)",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "快速开始",
             link: "/robot/api/python/getStarted",
           },
           {
+            text: "工具坐标系",
+            link: "/robot/api/python/toolCoordinateConfig",
+          },
+          {
+            text: "工作坐标系",
+            link: "/robot/api/python/workCoordinateConfig",
+          },
+          {
+            text: "机械臂运动参数",
+            link: "/robot/api/python/tipVelocityParameters",
+          },
+          {
+            text: "机械臂运动的急停、暂停、继续等控制",
+            link: "/robot/api/python/motionControl",
+          },
+          {
+            text: "机械臂状态",
+            link: "/robot/api/python/armState",
+          },
+          {
+            text: "示教运动",
+            link: "/robot/api/python/teachMove",
+          },
+          
+          {
+            text: "拖动示教",
+            link: "/robot/api/python/dragTeach",
+          },
+          {
             text: "系统配置",
             link: "/robot/api/python/controllerConfig",
           },
           {
-            text: "拖动示教",
-            link: "/robot/api/python/dragTeach",
+            text: "通讯配置",
+            link: "/robot/api/python/communicationConfig",
+          },
+          {
+            text: "安装方式及关节、末端软件版本号查询",
+            link: "/robot/api/python/installPos",
+          },
+          {
+            text: "扩展关节",
+            link: "/robot/api/python/expandControl",
+          },
+          {
+            text: "升降机控制",
+            link: "/robot/api/python/liftControl",
+          },
+          {
+            text: "末端六维力传感器",
+            link: "/robot/api/python/force",
+          },
+          {
+            text: "电子围栏和虚拟墙",
+            link: "/robot/api/python/electronicFenceConfig",
           },
           {
             text: "透传力位混合控制补偿",
             link: "/robot/api/python/forcePositionControl",
           },
           {
-            text: "全局点位管理",
+            text: "全局路点管理",
             link: "/robot/api/python/globalWaypointManage",
           },
           {
-            text: "灵巧手",
+            text: "夹爪控制",
+            link: "/robot/api/python/gripperControl",
+          },
+          {
+            text: "五指灵巧手控制",
             link: "/robot/api/python/handControl",
           },
           {
-            text: "IO",
-            link: "/robot/api/python/ioconfig",
+            text: "IO控制",
+            link: "/robot/api/python/ioConfig",
           },
           {
-            text: "升降机",
-            link: "/robot/api/python/liftcontrol",
+            text: "关节配置",
+            link: "/robot/api/python/jointsConfig",
           },
           {
-            text: "modbus",
-            link: "/robot/api/python/modbusconfig",
+            text: "关节配置查询",
+            link: "/robot/api/python/jointsConfigQuery",
           },
           {
-            text: "图形化编程管理",
-            link: "/robot/api/python/projectmanagement",
+            text: "Modbus配置",
+            link: "/robot/api/python/modbusConfig",
+          },
+          {
+            text: "机械臂运动的急停、暂停、继续等控制",
+            link: "/robot/api/python/motionControl",
+          },
+          {
+            text: "轨迹规划指令",
+            link: "/robot/api/python/movePlan",
           },
           {
             text: "自碰撞安全检测",
-            link: "/robot/api/python/selfcollision",
+            link: "/robot/api/python/selfCollision",
+          },
+          {
+            text: "在线编程",
+            link: "/robot/api/python/programManagement",
+          },
+          {
+            text: "算法",
+            link: "/robot/api/python/alog",
           },
           {
             text: "UDP主动上报",
-            link: "/robot/api/python/udpconfig",
-          },
-          {
-            text: "配置通讯内容",
-            link: "/robot/api/python/communicationConfig",
-          },
-          {
-            text: "图形化编程管理",
-            link: "/robot/api/python/projectmanagement",
-          },
-          {
-            text: "图形化编程管理",
-            link: "/robot/api/python/projectmanagement",
-          },
-          {
-            text: "图形化编程管理",
-            link: "/robot/api/python/projectmanagement",
+            link: "/robot/api/python/udpConfig",
           },
         ],
       },
