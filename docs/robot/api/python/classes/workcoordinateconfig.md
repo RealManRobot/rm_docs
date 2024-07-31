@@ -1,6 +1,6 @@
 # 工作坐标系`WorkCoordinateConfig`
 
-可用于自动/手动设置、删除、切换工作坐标系等，可以查阅[WorkCoordinateConfig继承关系图](../python/InheritanceDiagram/WorkCoordinateConfig.md)了解与其相关的类的关系。下面是工作坐标系`WorkCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于自动/手动设置、删除、切换工作坐标系等。下面是工作坐标系`WorkCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 

@@ -1,35 +1,38 @@
-# 机械臂状态获取`ArmState`
+# 系统配置`ControllerConfig`
 
-可用于机械臂状态获取，可以查阅[ArmState继承关系图](../python/InheritanceDiagram/ArmState.md)了解与其相关的类的关系。下面是机械臂状态获取`ArmState`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于系统配置（机械臂状态、电源）等。下面是系统配置`ControllerConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 
-## 获取机械臂当前状态`rm_get_current_arm_state()`
+## 获取控制器状态`rm_get_controller_state()`1
 
 - **方法原型：**
 
 ```python
-rm_get_current_arm_state(self) -> tuple[int, dict[str, any]]:
+rm_get_controller_state(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
- tuple[int, dict[str,any]]: 包含两个元素的元组。
+dict[str,any]: 包含以下键值的字典
 
-1. 函数执行的状态码
+1. int: 函数执行的状态码。
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |   成功。    |
+|   0  |    `int`   |    成功    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂当前状态
+2. 系统状态
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_current_arm_state_t  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
+|   voltage  |    `float`   |    返回的电压    |
+|   current  |    `float`   |    返回的电流    |
+|   temperature  |    `float`   |    返回的温度    |
+|   sys_err  |    `int`   |    控制器运行错误代码    |
 
 - **使用示例**
   
@@ -42,155 +45,149 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_current_arm_state())
+print(arm.rm_get_controller_state())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取关节当前温度`rm_get_current_joint_temperature()`
+## 设置机械臂电源`rm_set_arm_power()`
 
 - **方法原型：**
 
 ```python
-rm_get_current_joint_temperature(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节温度
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7温度数组，单位：℃    |
-
-- **使用示例**
-
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_temperature())
-
-arm.rm_delete_robot_arm()
-```
-
-## 获取关节当前电流`rm_get_current_joint_current()`
-
-- **方法原型：**
-
-```python
-rm_get_current_joint_current(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节电流
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7电流数组，单位：mA   |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_current())
-
-arm.rm_delete_robot_arm()
-```
-
-## 获取关节当前电压`rm_get_current_joint_voltage()`
-
-- **方法原型：**
-
-```python
-rm_get_current_joint_voltage(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节电压
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7电压数组，单位：V|
-
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_voltage())
-
-arm.rm_delete_robot_arm()
-```
-
-## 设置机械臂的初始位置角度`rm_set_init_pose()`
-
-- **方法原型：**
-
-```python
-int rm_set_init_pose(self, joint: list[float]) -> int:
+rm_set_arm_power(self, power: int) -> int:
 ```
 
 - **参数说明:**
 
-|   名称    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   joint  |    `list[float]`    |    机械臂初始位置关节角度数组    |
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| power      | `int` | 1-上电状态，0 断电状态                    |
 
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 机械臂上电
+print(arm.rm_set_arm_power(1))
+
+arm.rm_delete_robot_arm()
+```
+
+## 读取机械臂电源状态`rm_get_arm_power_state()`
+
+- **方法原型：**
+
+```python
+rm_get_arm_power_state(self) -> tuple[int, int]:
+```
+
+- **返回值:** </br>
+tuple[int, int]: 包含两个元素的元组
+
+1. int: 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. 机械臂电源状态
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   -  |    `int`   |    获取到的机械臂电源状态，1-上电状态，0 断电状态    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_power_state())
+
+arm.rm_delete_robot_arm()
+```
+
+## 读取控制器的累计运行时间`rm_get_system_runtime()`
+
+- **方法原型：**
+
+```python
+rm_get_system_runtime(self) -> dict[str, any]:
+```
+
+- **返回值:** </br>
+tuple[int, int]: 包含两个元素的元组
+
+1. int: 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. 控制器运行时间
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   day  |    `int`   |    读取到的时间    |
+|   hour  |    `int`   |    读取到的时间    |
+|   min  |    `int`   |    读取到的时间    |
+|   sec  |    `int`   |    读取到的时间    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_system_runtime())
+
+arm.rm_delete_robot_arm()
+```
+
+## 清零控制器的累计运行时间`rm_clear_system_runtime()`
+
+- **方法原型：**
+
+```python
+rm_clear_system_runtime(self) -> int:
+```
 
 - **返回值:** </br>
 函数执行的状态码
@@ -214,23 +211,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_init_pose())
+print(arm.rm_clear_system_runtime())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取机械臂初始位置角度`rm_get_init_pose()`
+## 读取关节的累计转动角度`rm_get_joint_odom()`
 
 - **方法原型：**
 
 ```python
-rm_get_init_pose(self) -> tuple[int, list[float]]:
+rm_get_joint_odom(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+tuple[int, list[float]]: 包含两个元素的元组
 
-1. 函数执行的状态码
+1. int: 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -240,11 +237,11 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂初始位置关节角度
+2. 关节累计的转动角度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
+|   -  |    `list[float]`   |    各关节累计的转动角度    |
 
 - **使用示例**
   
@@ -257,23 +254,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_init_pose())
+print(arm.rm_get_joint_odom())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取当前关节角度`rm_get_joint_degree()`
+## 清零关节累计转动的角度`rm_clear_joint_odom()`
 
 - **方法原型：**
 
 ```python
-rm_get_joint_degree(self) -> tuple[int, list[float]]:
+int rm_clear_joint_odom(self) -> int:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
+函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -283,12 +278,6 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂初始位置关节角度
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
-
 - **使用示例**
   
 ```python
@@ -300,23 +289,23 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_joint_degree())
+print(arm.rm_clear_joint_odom())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取机械臂所有状态信息`rm_get_arm_all_state()`
+## 读取机械臂软件信息`rm_get_arm_software_info()`
 
 - **方法原型：**
 
 ```python
-rm_get_arm_all_state(self) -> tuple[int, dict[str, any]]:
+rm_get_arm_software_info(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str, any]]: 包含两个元素的元组。
+tuple[int, dict[str,any]]: 包含两个元素的元组
 
-1. 函数执行的状态码
+1. int: 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -326,11 +315,12 @@ tuple[int, dict[str, any]]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂所有状态信息
+2. 机械臂软件版本信息
+
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_arm_all_state_t  |  `dict`   | 机械臂所有状态信息字典，键为rm_arm_all_state_t的参数名。 |
+|   rm_arm_software_version_t  |    `dict[str,any]`   |    机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称 |
 
 - **使用示例**
   
@@ -343,78 +333,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_arm_all_state())
+print(arm.rm_get_arm_software_info())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 查询控制器RS485模式`rm_get_controller_rs485_mode()`
+## 配置有线网口IP地址`rm_set_netip()`
 
 - **方法原型：**
 
 ```python
-rm_get_controller_rs485_mode(self) -> dict[str, any]:
+rm_set_netip(self, ip: str) -> int:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |   成功。    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂状态模式
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   mode  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。 |
-
-3. 波特率
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   baudrate  |    `int`   |    波特率    |
-
-4. Timeout
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_controller_rs485_mode())
-
-arm.rm_delete_robot_arm()
-```
-
-## 查询工具端 RS485 模式`rm_get_tool_rs485_mode()`
-
-- **方法原型：**
-
-```python
-rm_get_tool_rs485_mode(self) -> dict[str, any]:
-```
-
-- **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
-
-1. 函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -424,23 +357,36 @@ dict[str, any]: 包含以下键值的字典
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂状态模式
+- **使用示例**
+  
+```python
+
+```
+
+## 清除系统错误`rm_clear_system_err()`
+
+- **方法原型：**
+
+```python
+rm_clear_system_err(self) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| ip      | `str` | description                    |
+
+- **返回值:** </br>
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   mode  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式。 |
-
-3. 波特率
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   baudrate  |    `int`   |    波特率    |
-
-4. Timeout
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 - **使用示例**
   
@@ -453,7 +399,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_tool_rs485_mode())
+print(arm.rm_clear_system_err())
 
 arm.rm_delete_robot_arm()
 ```

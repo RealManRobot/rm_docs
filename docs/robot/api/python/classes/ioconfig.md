@@ -1,6 +1,6 @@
 # IO控制`IOConfig`
 
-可用于IO控制，可以查阅[IOConfig继承关系图](../python/InheritanceDiagram/IOConfig.md)了解与其相关的类的关系。下面是IO控制`IOConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于IO控制。下面是IO控制`IOConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 **末端工具IO**
 机械臂末端工具端提供多种IO端口，用于与外部设备交互。数量和分类如下所示：</br>

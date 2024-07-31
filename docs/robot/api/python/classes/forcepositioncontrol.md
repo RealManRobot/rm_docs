@@ -1,6 +1,6 @@
 # 透传力位混合控制补偿`ForcePositionControl`
 
-可用于设置透传力位混合控制补偿等，可以查阅[ForcePositionControl继承关系图](../python/InheritanceDiagram/ForcePositionControl.md)了解与其相关的类的关系。下面是透传力位混合控制补偿`ForcePositionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于设置透传力位混合控制补偿等。下面是透传力位混合控制补偿`ForcePositionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 ---
 
