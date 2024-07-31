@@ -28,9 +28,15 @@ RMDemo_AlgoInterface/
 
 1. 安装Python 3.9
 
-2. 进入项目目录：`cd RMDemo_AlgoInterface`
+2. 进入项目目录：
+```
+cd RMDemo_AlgoInterface
+```
 
-3. 安装依赖：`pip install -r requirements.txt`
+3. 安装依赖：
+```
+pip install -r requirements.txt
+```
 
 ## 5. 注意事项
 

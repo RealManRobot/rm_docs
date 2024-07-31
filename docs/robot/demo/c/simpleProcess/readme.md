@@ -41,41 +41,33 @@ RMDemo_SimpleProcess
 - 一台 Realman 机械臂
 - 一台安装了 Visual Studio 的 Windows 系统
 
+## 4. 环境配置
 
-## **4. 安装说明**
+### Linux环境配置
 
-以Linux为例，项目的安装说明如下所示：
-4.1. 配置环境：
+**1. 编译器（GCC）**
+在大多数Linux发行版中，GCC是默认安装的，但可能版本不是最新的。如果需要安装特定版本的GCC（如7.5或更高版本），可以使用包管理器进行安装。以Ubuntu为例，可以使用以下命令安装或更新GCC：
 
+```bash
+# 检查GCC版本
+gcc --version
 
-- Linux 安装cmake依赖：
+sudo apt update
+sudo apt install gcc-7 g++-7  
+```
 
-  ```bash
-  sudo apt-get update
-  sudo apt-get install build-essential
-  sudo apt-get install cmake
-  ```
+注意：如果系统默认安装的GCC版本已满足或高于要求，则无需进行额外安装。
 
-  检查和安装依赖项：
+**2. CMake**
+CMake在大多数Linux发行版中也可以通过包管理器安装。以Ubuntu为例：
 
-  ```
-  gcc --version
-  cmake --version
-  Windows 安装cmake依赖
-  ```
-  CMake：确保已安装最新版本的 CMake。可以从 CMake官网 下载并安装。
-  编译器：安装 MinGW 或 Visual Studio (MSVC) 以进行构建。MinGW 是一个开源编译器套件，可以从 MinGW官网 下载。Visual Studio 包含 MSVC，可以从 Visual Studio官网 下载并安装。
-  依赖库：
-  api_c.dll 和 api_c.lib：确保这些库文件存在于 Robotic_Arm/lib 目录中。
-  确保项目中的 include 目录和其他源文件路径正确设置。
-  ```
+```bash
+sudo apt update
+sudo apt install cmake
 
-4.2. 克隆项目到本地：
-
-   ```
-   
-   ```
-   
+# 检查CMake版本
+cmake --version
+```
 
 ## **5. 注意事项**
 

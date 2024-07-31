@@ -38,53 +38,33 @@ RMDemo_Moves
   - CMake 3.10或更高版本
   - RMAPI库(包含在 `Robotic_Arm/lib`目录中)
 
+## 4. 环境配置
 
-## **4. 安装说明**
+### Linux环境配置
 
-1. 克隆项目到本地：
+**1. 编译器（GCC）**
+在大多数Linux发行版中，GCC是默认安装的，但可能版本不是最新的。如果需要安装特定版本的GCC（如7.5或更高版本），可以使用包管理器进行安装。以Ubuntu为例，可以使用以下命令安装或更新GCC：
 
-   ```bash
+```bash
+# 检查GCC版本
+gcc --version
 
-   ```
+sudo apt update
+sudo apt install gcc-7 g++-7  
+```
 
-2. 构建项目：
-   Linux下：
-   cmake:
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
-   
-   ```
+注意：如果系统默认安装的GCC版本已满足或高于要求，则无需进行额外安装。
 
-   如果是GC编译的话 ：
-   ```bash
-   #!/bin/bash
-    # 编译并链接
-    
-    gcc -I./Robotic_Arm/include -I./include -L./Robotic_Arm/lib -Wl,-rpath=./Robotic_Arm/lib -o RMDemo_Moves src/main.c -lapi_c
-   
-    -I./Robotic_Arm/include：包含机器人臂头文件目录。
-    -I./include：包含通用头文件目录。
-    -L./Robotic_Arm/lib：指定库文件目录。
-    -Wl,-rpath=./Robotic_Arm/lib：设置运行时库的搜索路径。
-    -o RMDemo_Moves：指定输出可执行文件的名称。
-    src/main.c：包含所有源文件。
-    -lapi_c：链接 api_c 库。
-    
-    # 检查编译是否成功
-    if [ $? -eq 0 ]; then
-    # 设置LD_LIBRARY_PATH环境变量
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./Robotic_Arm/lib
-    
-    # 运行编译后的可执行文件
-    ./RMDemo_Moves
-    else
-    echo "编译失败"
-    fi
-   ```
+**2. CMake**
+CMake在大多数Linux发行版中也可以通过包管理器安装。以Ubuntu为例：
 
+```bash
+sudo apt update
+sudo apt install cmake
+
+# 检查CMake版本
+cmake --version
+```
 
 ## **5. 注意事项**
 

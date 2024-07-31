@@ -1,9 +1,11 @@
 # 坐标系操作
 
 ## **1. 项目介绍**
-本项目是一个使用C语言开发包，基于 Cmake 项目构建的项目，演示工作坐标系的新建、删除、修改、查询等功能
+
+本项目演示了RM65-B机械臂工作坐标系的新建、删除、修改、查询等接口的使用，实现机械臂新工作坐标系的设定。项目基于Cmake构建，使用了睿尔曼提供的机械臂C语言开发包。
 
 ## **2. 代码结构**
+
 ```
 RMDemo_CoordinateSystem/
 ├── build/                  # CMake构建生成的输出目录
@@ -23,60 +25,72 @@ RMDemo_CoordinateSystem/
 ├── run.sh                   # linux快速运行脚本
 ├── CMakeLists.txt           # 项目的CMake配置文件
 ├── README.md                # 项目说明文档
-
 ```
 
-## **3. 环境与依赖**
+## **3.项目下载**
+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
+
+## 4. 环境配置
 
 在Windows和Linux环境下运行时需要的环境和依赖项：
-|  | Linux | Windows |
-| :--: | :--: | :--: |
-| 编译器 | GCC 7.5或更高版本 | MSVC2015或更高版本 |
+| 项目 | Linux | Windows |
+| :-- | :-- | :-- |
+| 系统架构 | x86架构 | - |
+| 编译器 | GCC 7.5或更高版本 | MSVC2015或更高版本 64bit |
 | CMake版本 | 3.10或更高版本 | 3.10或更高版本 |
 | 特定依赖 | RMAPI Linux版本库（位于`Robotic_Arm/lib`目录） | RMAPI Windows版本库（位于`Robotic_Arm/lib`目录） |
 
-## **4. 安装说明**
+### Linux环境配置
 
-以Linux为例，项目的安装说明如下所示：
-1. 配置环境：
+**1. 编译器（GCC）**
+在大多数Linux发行版中，GCC是默认安装的，但可能版本不是最新的。如果需要安装特定版本的GCC（如7.5或更高版本），可以使用包管理器进行安装。以Ubuntu为例，可以使用以下命令安装或更新GCC：
 
+```bash
+# 检查GCC版本
+gcc --version
 
-- Linux 安装cmake依赖：
+sudo apt update
+sudo apt install gcc-7 g++-7  
+```
 
-  ```bash
-  sudo apt-get update
-  sudo apt-get install build-essential
-  sudo apt-get install cmake
-  ```
+注意：如果系统默认安装的GCC版本已满足或高于要求，则无需进行额外安装。
 
-  检查和安装依赖项：
+**2. CMake**
+CMake在大多数Linux发行版中也可以通过包管理器安装。以Ubuntu为例：
 
-  ```
-  gcc --version
-  cmake --version
-  Windows 安装cmake依赖
-  ```
-  CMake：确保已安装最新版本的 CMake。可以从 CMake官网 下载并安装。
-  编译器：安装 MinGW 或 Visual Studio (MSVC) 以进行构建。MinGW 是一个开源编译器套件，可以从 MinGW官网 下载。Visual Studio 包含 MSVC，可以从 Visual Studio官网 下载并安装。
-  依赖库：
-  api_c.dll 和 api_c.lib：确保这些库文件存在于 Robotic_Arm/lib 目录中。
-  确保项目中的 include 目录和其他源文件路径正确设置。
-  ```
+```bash
+sudo apt update
+sudo apt install cmake
 
-2. 克隆项目到本地：
+# 检查CMake版本
+cmake --version
+```
 
-   ```
-   
-   ```
+### Windows环境配置
 
+**1. 编译器（MSVC2015或更高版本）**
+MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可以按照以下步骤安装：
 
-## **5. 注意事项**
+1. 访问[Visual Studio官网](https://visualstudio.microsoft.com/)下载并安装Visual Studio。
+2. 在安装过程中，选择“使用C++的桌面开发”工作负载，这将包括MSVC编译器。
+3. 根据需要选择其他组件，如CMake（如果尚未安装）。
+4. 完成安装后，打开Visual Studio命令提示符（可在开始菜单中找到），输入`cl`命令检查MSVC编译器是否安装成功。
 
-该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
+**2. CMake**
+如果Visual Studio安装过程中未包含CMake，可以单独下载并安装CMake。
 
-## **6. 使用指南**
+1. 访问[CMake官网](https://cmake.org/download/)下载适用于Windows的安装程序。
+2. 运行安装程序，按照提示进行安装。
+3. 安装完成后，将CMake的bin目录添加到系统的PATH环境变量中（通常在安装过程中会询问是否添加）。
+4. 打开命令提示符或PowerShell，输入`cmake --version`检查CMake是否安装成功。
+4.2. 克隆项目到本地：
 
-### **6.1. 快速运行**
+## **5. 使用指南**
+
+实现RM65-B机械臂成功完成机械臂新工作坐标系的设定。过程中包含连接机械臂，设定机械臂的工作坐标系，并进行更新保存，最后进行查询确认。
+
+### **5.1. 快速运行**
 
 按照以下步骤快速运行代码：
 
@@ -96,58 +110,60 @@ RMDemo_CoordinateSystem/
     chmod +x run.sh
     ./run.sh
     ```
+    运行结果如下：
+
     
 3. **Windows 运行**： 双击run.bat脚本运行
+    运行结果如下：
 
-### **6.2. 代码说明**
+### **5.2. 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
 - **连接机械臂**
-  
+    连接到指定IP和端口的机械臂。
+
     ```C
     rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
     ```
-  连接到指定IP和端口的机械臂。
 
 - **获取API版本**
+  获取并显示API版本。
 
     ```C
     char *api_version = rm_api_version();
     printf("API Version: %s.\n", api_version);
     ```
-  获取并显示API版本。
 
 - **手动设置工作坐标系**
+  手动设置名为 `"WorkTest"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
 
     ```C
     const char *workFrameName = "WorkTest";
     rm_pose_t initial_pose = {.position = {0, 0, 0}, .euler = {0, 0, 0}};
     rm_set_manual_work_frame(handle, workFrameName, initial_pose);
     ```
-  手动设置名为 `"WorkTest"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
 
 - **更新工作坐标系**
+  更新名为 `"WorkTest"` 的工作坐标系，位姿为 `[0.3, 0, 0.3, 3.142, 0, 0]`。
 
     ```C
     rm_pose_t updated_pose = {.position = {0.3, 0, 0.3}, .euler = {3.142, 0, 0}};
     rm_update_work_frame(handle, workFrameName, updated_pose);
     ```
-  更新名为 `"WorkTest"` 的工作坐标系，位姿为 `[0.3, 0, 0.3, 3.142, 0, 0]`。
 
 - **查询指定工作坐标系**
+  查询名为 `"WorkTest"` 的工作坐标系并显示结果。
 
     ```C
     rm_get_given_work_frame(handle, workFrameName);
     ```
-  查询名为 `"WorkTest"` 的工作坐标系并显示结果。
 
-## **7. 许可证信息**
+## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
+- 本项目遵循MIT许可证。
 
-## **8. 常见问题解答（FAQ）**
-
+## **7. 常见问题解答（FAQ）**
 
 - **Q:** 如何解决编译错误？
   **A:** 请确保您的编译器版本和依赖库满足系统要求，并按照安装说明重新配置环境。

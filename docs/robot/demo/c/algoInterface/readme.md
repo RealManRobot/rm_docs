@@ -1,8 +1,10 @@
 # 算法示例
+
 ## 1. 项目介绍
-本项目是一个使用睿尔曼 C开发包完成工程完成 演示不连接机械臂,独立使用算法,进行算法初始化、机械臂型号设置、坐标系设置,运动学正解、运动学逆解,欧拉角转四元数、四元数转欧拉角等功能。
+本项目是基于睿尔曼C开发包完成的。实现不连接机械臂、独立使用算法、进行算法初始化、机械臂型号设置、坐标系设置、运动学正解、运动学逆解,欧拉角转四元数、四元数转欧拉角等功能。
 
 ## 2. 代码结构
+
 ```
 RMDemo_AlgoInterface
 ├── build              # CMake构建生成的输出目录（如Makefile、构建文件等）
@@ -36,33 +38,53 @@ RMDemo_AlgoInterface
   - CMake 3.10或更高版本
   - RMAPI库(包含在 `Robotic_Arm/lib`目录中)
 
+## 4. 环境配置
 
-## **4. 安装说明**
+### Linux环境配置
 
-以Linux为例，项目的安装说明如下所示：
-4.1. 配置环境：
+**1. 编译器（GCC）**
 
-- Linux 安装cmake依赖：
+在大多数Linux发行版中，GCC是默认安装的，但可能版本不是最新的。如果需要安装特定版本的GCC（如7.5或更高版本），可以使用包管理器进行安装。以Ubuntu为例，可以使用以下命令安装或更新GCC：
 
-  ```bash
-  sudo apt-get update
-  sudo apt-get install build-essential
-  sudo apt-get install cmake
-  ```
+```bash
+# 检查GCC版本
+gcc --version
 
-  检查和安装依赖项：
+sudo apt update
+sudo apt install gcc-7 g++-7  
+```
 
-  ```
-  gcc --version
-  cmake --version
-  Windows 安装cmake依赖
-  ```
-  CMake：确保已安装最新版本的 CMake。可以从 CMake官网 下载并安装。
-  编译器：安装 MinGW 或 Visual Studio (MSVC) 以进行构建。MinGW 是一个开源编译器套件，可以从 MinGW官网 下载。Visual Studio 包含 MSVC，可以从 Visual Studio官网 下载并安装。
-  依赖库：
-  api_c.dll 和 api_c.lib：确保这些库文件存在于 Robotic_Arm/lib 目录中。
-  确保项目中的 include 目录和其他源文件路径正确设置。
+注意：如果系统默认安装的GCC版本已满足或高于要求，则无需进行额外安装。
 
+**2. CMake**
+
+CMake在大多数Linux发行版中也可以通过包管理器安装。以Ubuntu为例：
+
+```bash
+sudo apt update
+sudo apt install cmake
+
+# 检查CMake版本
+cmake --version
+```
+
+### Windows环境配置
+
+**1. 编译器（MSVC2015或更高版本）**
+MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可以按照以下步骤安装：
+
+1. 访问[Visual Studio官网](https://visualstudio.microsoft.com/)下载并安装Visual Studio。
+2. 在安装过程中，选择“使用C++的桌面开发”工作负载，这将包括MSVC编译器。
+3. 根据需要选择其他组件，如CMake（如果尚未安装）。
+4. 完成安装后，打开Visual Studio命令提示符（可在开始菜单中找到），输入`cl`命令检查MSVC编译器是否安装成功。
+
+**2. CMake**
+如果Visual Studio安装过程中未包含CMake，可以单独下载并安装CMake。
+
+1. 访问[CMake官网](https://cmake.org/download/)下载适用于Windows的安装程序。
+2. 运行安装程序，按照提示进行安装。
+3. 安装完成后，将CMake的bin目录添加到系统的PATH环境变量中（通常在安装过程中会询问是否添加）。
+4. 打开命令提示符或PowerShell，输入`cmake --version`检查CMake是否安装成功。
 4.2. 克隆项目到本地：
 
 ## 5. 注意事项
@@ -83,31 +105,35 @@ RMDemo_AlgoInterface
 
 ### 2.快速运行
 
-按照以下步骤快速运行代码：
+**1.配置机械臂IP地址**
 
-1. **配置机械臂IP地址**：打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 类的初始化参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
+- 打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 类的初始化参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
 
-    ```C
-    const char *robot_ip_address = "192.168.1.18";
-    int robot_port = 8080;
-    rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
-    ```
-2. **命令行运行**：在终端进入 `RMDemo_SimpleProcess` 目录，输入以下命令运行 C程序：
+  ```C
+  const char *robot_ip_address = "192.168.1.18";
+  int robot_port = 8080;
+  rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
+  ```
 
-2.1 Linux下
-* ```bash
-    chmod +x run.sh
-   ./run.sh
-    ```
+**2.运行**
 
-2.2  Windows下: 双击运行 run.bat
+- Linux下
+在终端进入 `RMDemo_SimpleProcess` 目录，输入以下命令运行C程序：
+
+  ```bash
+  chmod +x run.sh
+  ./run.sh
+  ```
+
+- Windows下
+  进入 `RMDemo_SimpleProcess` 目录，双击运行run.bat文件。
 
 ### 3.代码说明
 
 下面是 `main.c` 文件的主要功能：
 
 - **手动设置工作坐标系**
-
+  实现手动设置名为 `"WorkTest"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
     ```C
     rm_frame_t coord_work;
     coord_work.pose.position.x = 0.0f;
@@ -123,10 +149,9 @@ RMDemo_AlgoInterface
     coord_work.payload = 0.0f;
     rm_algo_set_workframe(&coord_work);
     ```
-  手动设置名为 `"WorkTest"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
-
 
 - **逆解函数**
+  实现xxxxxxxxxx。
     ```C
     rm_inverse_kinematics_params_t inverse_params;
     float q_in_joint[6] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
@@ -166,16 +191,16 @@ RMDemo_AlgoInterface
   Euler to Quaternion:: [w: 0.000296, x: 1.000000, y: 0.000000, z: 0.000000]
   Quaternion to Euler: [rx: 0.000000, ry: -0.000000, rz: 3.141593]
 ```
-```
-* **支持渠道**：
 
-  + 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
+**支持渠道**：
+
+- 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
 
 - API文档：详见`rm_interface.h`文件。
 
 ## 6. 许可证信息
 
-* 本项目遵循MIT许可证。
+- 本项目遵循MIT许可证。
 
 ## 7. 常见问题解答（FAQ）
 
@@ -186,5 +211,4 @@ RMDemo_AlgoInterface
   **A:** 请参考示例代码中的连接步骤，确保机器人IP地址和端口正确配置。
 
 - **Q:** 需要连接真实机械臂吗 有啥前置条件？
-  **A:** 算法接口有两种用法，一种连机械臂用、一种不连。基于这两个用法去测，连接机械臂后可以直接调用正逆解计算接口，会自动获取机械臂当前坐标系、安装角度进行计算。
-- 不连接机械臂时，需要调用algo_init_sys_data以及其他其他设置坐标系等接口之后，再去计算
+  **A:** 算法接口有两种用法，一种连机械臂用、一种不连。基于这两个用法去测，连接机械臂后可以直接调用正逆解计算接口，会自动获取机械臂当前坐标系、安装角度进行计算。不连接机械臂时，需要调用algo_init_sys_data以及其他其他设置坐标系等接口之后，再去计算。
