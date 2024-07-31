@@ -61,7 +61,7 @@ tbody {
 }
 .VPNavBarMenuLink.active>span {
     border-color: var(--vp-c-brand-1);
-    background-color: #FDEFE5 !important;
+    background-color: var(--vp-c-bg) !important;
 }
 
 .VPNavBarMenuLink:hover {
