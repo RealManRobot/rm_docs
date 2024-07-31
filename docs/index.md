@@ -67,7 +67,12 @@ tbody {
 .VPNavBarMenuLink:hover {
     color: var(--vp-c-brand-1) !important;
 }
-
+.curtain{
+    background-color:var(--vp-c-bg) !important;
+}
+.VPSidebar{
+    background-color:var(--vp-c-bg) !important;
+}
 /**/
 .VPSidebarItem.level-0.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-1.is-link>.item>.link:hover .text,
