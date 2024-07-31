@@ -222,7 +222,7 @@ Successfully disconnected from the robot arm
 ```
 
 运行脚本后，运行如下图所示：
-![demo_gripper](demo_gripper.gif)
+![demo_gripper](./gripper.gif)
 
   
 * **支持渠道**：
