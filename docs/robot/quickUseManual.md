@@ -11,16 +11,14 @@
 ## 一、产品组成
 
 一套完整的睿尔曼协作机器人产品组成如下所示：
-
-**配置表**
 |  名称  |  数量  |
-| --- | --- |
+| :--- | :--- |
 |  机器人本体  |  1  |
 |  电源连接线  |  1  |
 |  6芯工具端IO连接线  |  1  |
 |  16芯IO连接线  |  1  |
 |  网线  |  1  |
-|  M6\*20固定螺丝  |  4  |
+|  M6*20固定螺丝  |  4  |
 |  平板示教器（选配）  |  1  |
 
 ![图片 3](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/478ebb1d-38a5-4eb8-9081-c2fcd8ac59f2.png)
@@ -46,10 +44,8 @@
 
 RM65机器人安装简要步骤：
 
-1.  准备四个M6的内六角螺栓和M6的内六角扳手。
-    
-2.  从包装箱中取出RM65机器人，安装到底座。
-    
+1. 准备四个M6的内六角螺栓和M6的内六角扳手。
+2. 从包装箱中取出RM65机器人，安装到底座。
 
 ![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/34df18e3-f699-4f84-b8b9-8c3cbb37910d.png)
 

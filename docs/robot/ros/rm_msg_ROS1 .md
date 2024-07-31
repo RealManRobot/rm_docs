@@ -1,25 +1,23 @@
-**<font size=" 5">目录</font>**
-
-[TOC]
-
-# 1.rm\_ msg功能包说明
+# rm\_ msg功能包说明
 
 rm\_msgs功能包的主要作用为为机械臂在ROS的框架下运行提供必要的 消息文件，在下文中将通过以下几个方面详细介绍该功能包。
 
 - 功能包使用。
 - 功能包架构说明。
+
 通过这三部分内容的介绍可以帮助大家：
 - 了解该功能包的使用。
 - 熟悉功能包中的文件构成及作用。
 
 代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_msgs](https://github.com/RealManRobot/rm_robot/tree/main/rm_msgs)。
 
-# 2.rm\_msgs功能包使用
+## 2.rm\_msgs功能包使用
 
 该功能包并没有可执行的使用命令，其主要作用为为其他功能包提供必须的消息文件。
 
-# 3.rm\_msgs功能包架构说明
-## 3.1功能包文件总览
+## 3.rm\_msgs功能包架构说明
+
+### 3.1功能包文件总览
 
 当前rm\_driver功能包的文件构成如下。
 
@@ -86,5 +84,3 @@ rm\_msgs功能包的主要作用为为机械臂在ROS的框架下运行提供必
     ├── package.xml                       #依赖声明文件
     └── src
 ```
-
-有关以上消息文件的详细说明就不在此详细展开了，详情可查看《睿尔曼机械臂ROS1rm\_driver话题详细说明V1.0.0》进行查看。
