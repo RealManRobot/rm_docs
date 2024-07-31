@@ -310,7 +310,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "API文档(C)",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "快速开始",
@@ -577,7 +577,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "API文档(Python)",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "快速开始",
@@ -708,16 +708,48 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
-      // {
-      //   text: "ROS文档",
-      //   collapsed: false,
-      //   items: [
-      //     {
-      //       text: "示例",
-      //       link: "/robot/ros/",
-      //     },
-      //   ],
-      // },
+      {
+        text: "ROS文档",
+        collapsed: true,
+        items: [
+          {
+            text: "driverDetailDescription",
+            link: "/robot/ros/driverDetailDescription",
+          },
+          {
+            text: "bringup",
+            link: "/robot/ros/bringup",
+          },
+          {
+            text: "control",
+            link: "/robot/ros/control",
+          },
+          {
+            text: "driver",
+            link: "/robot/ros/driver",
+          },
+          {
+            text: "description",
+            link: "/robot/ros/description",
+          },
+          {
+            text: "example",
+            link: "/robot/ros/example",
+          },
+          {
+            text: "gazebo",
+            link: "/robot/ros/gazebo",
+          },
+          {
+            text: "moveitConfig",
+            link: "/robot/ros/moveitConfig",
+          },
+          {
+            text: "msg",
+            link: "/robot/ros/msg",
+          },
+        ],
+      },
       {
         text: "ROS2文档",
         collapsed: true,
