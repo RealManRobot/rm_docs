@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="H:\0_API_2.0\Example\715RMDemo_CAPI\RMDemo_CoordinateSystem\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\0_API_2.0\Example\715RMDemo_CAPI\RMDemo_CoordinateSystem\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8B3FE7BA-6D4D-37EE-9B02-E4A8C32E5B1E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

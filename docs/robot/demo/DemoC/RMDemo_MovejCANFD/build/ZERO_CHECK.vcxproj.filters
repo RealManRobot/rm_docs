@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\0_API_2.0\Example\715RMDemo_CAPI\RMDemo_MovejCANFD\build\CMakeFiles\f6785ed0d462c45d7abde9246b835d9c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3095B05D-6DE6-3633-8F4C-11EE5B106C08}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

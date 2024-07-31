@@ -1,0 +1,10 @@
+^H:\0_API_2.0\EXAMPLE\715RMDEMO_CAPI\RMDEMO_ALGOINTERFACE\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe -SH:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_AlgoInterface -BH:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_AlgoInterface/build --check-stamp-file H:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_AlgoInterface/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^H:\0_API_2.0\EXAMPLE\715RMDEMO_CAPI\RMDEMO_COORDINATESYSTEM\BUILD\CMAKEFILES\68728CA2B25AC7BDAA38F71D552472ED\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SH:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_CoordinateSystem -BH:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_CoordinateSystem/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file H:/0_API_2.0/Example/715RMDemo_CAPI/RMDemo_CoordinateSystem/build/RMDemo_CoordinateSystem.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
