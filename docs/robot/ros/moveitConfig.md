@@ -1,4 +1,4 @@
-# 1.rm\_moveit\_config说明
+# rm\_moveit\_config说明
 
 rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，该功能包的主要作用为调用官方的moveit框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit的配置和启动文件，通过该功能包我们可以实现moveit控制虚拟机械臂和控制真实机械臂。
 
@@ -53,6 +53,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 控制真实机械臂需要的控制指令相对较多一些，如下为详细的控制方式。
 
 首先运行底盘驱动节点。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
@@ -63,6 +64,7 @@ rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch.py
 ```
 
 最终需要启动控制真实机械臂的moveit节点。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_config demo_realrobot.launch
 ```
@@ -70,6 +72,7 @@ rm@rm-desktop:~$ roslaunch rm_<arm_type>_config demo_realrobot.launch
 注意以上指令均需要将<arm\_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65\_6f、eco65\_6f、75\_6f。
 
 注意在使用63时应使用如下启动指令，若使用六维力设备时，应将63更换为63\_6f。
+
 ```
 rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 ```

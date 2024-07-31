@@ -1,4 +1,4 @@
-# 1.rm\_description功能包说明
+# rm\_description功能包说明
 
 rm\_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
 
@@ -14,11 +14,11 @@ rm\_description功能包为显示机器人模型和TF变换的功能包，通过
 
 代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_description](https://github.com/RealManRobot/rm_robot/tree/main/rm_description)。
 
-# 2.rm\_description功能包使用
+## 1.rm\_description功能包使用
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm\_description功能包。
 
-```
+```ros
 m@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
 ```
 
@@ -26,7 +26,7 @@ m@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
 
 例如65机械臂的启动命令：
 
-```
+```ros
 rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 ```
 
@@ -42,13 +42,13 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorL4GLmyqawZ/img/2da503d1-ca29-4f89-8299-0940df18c005.png)
 
-# 3.rm\_description功能包架构说明
+## 2.rm\_description功能包架构说明
 
-## 3.1功能包文件总览
+### 2.1功能包文件总览
 
 当前rm\_driver功能包的文件构成如下。
 
-```
+```ros
 
     ├── CMakeLists.txt                     #编译规则文件
     ├── config                             #配置文件主要是RVIZ显示配置
@@ -191,11 +191,11 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
             └── rm_63_6f_descriptio.urdf.xacro
 ```
 
-# 4. rm\_description话题说明
+## 3. rm\_description话题说明
 
 如下为该功能包的话题说明。
 
-```
+```ros
     /clicked_point
     /initialpose
     /joint_states
