@@ -1,4 +1,4 @@
-# 1.rm\_example功能包说明
+# rm\_example功能包说明
 
 rm\_bringup功能包为实现了一些基本的机械臂功能，通过该功能包我们可以实现机械臂的一些基本的控制功能，还可以参考代码，实现其他的机械臂功能，在下文中将通过以下几个方面详细介绍该功能包。
 
@@ -14,9 +14,9 @@ rm\_bringup功能包为实现了一些基本的机械臂功能，通过该功能
 
 源码地址：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_demo。](https://github.com/RealManRobot/rm_robot/tree/main/rm_demo。)
 
-# 2.rm\_example功能包使用
+## 1.rm\_example功能包使用
 
-## 2.1 更换工作坐标系
+### 1.1 更换工作坐标系
 
 首先需要运行机械臂的底层驱动节点rm\_driver。
 
@@ -27,6 +27,7 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
 ```
@@ -41,9 +42,10 @@ rm@rm-desktop:~$ rosrun rm_demo api_ChangeWorkFrame_demo
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/d564b490-314d-4845-9131-c440082e6bd4.png)
 
-## 2.2 更换工具坐标系
+### 1.2 更换工具坐标系
 
 首先需要运行机械臂的底层驱动节点rm\_driver。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
@@ -51,11 +53,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令运行我们更换工作坐标系的节点。
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo api_ChangeToolFrame_demo
 ```
@@ -64,9 +68,10 @@ rm@rm-desktop:~$ rosrun rm_demo api_ChangeToolFrame_demo
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/86f12eb0-f177-460f-bfa5-e92dacc41151.png)
 
-## 2.3 得到当前的机械臂状态信息
+### 1.3 得到当前的机械臂状态信息
 
 首先需要运行机械臂的底层驱动节点rm\_driver。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
@@ -74,11 +79,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令运行获得机械臂当前状态的节点。
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo api_Get_Arm_State_demo
 ```
@@ -89,7 +96,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_Get_Arm_State_demo
 
 界面中现实的为机械臂当前的角度信息，以及机械臂当前的末端坐标位置和欧拉角姿态信息。
 
-## 2.4 机械臂MoveJ运动
+### 1.4 机械臂MoveJ运动
 
 通过如下指令可以控制机械臂进行MoveJ关节运动。
 
@@ -125,11 +132,12 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/836688ec-48de-4eda-9ed9-f21edac7186d.png)
 
-## 2.5 机械臂MoveJ\_P运动
+### 1.5 机械臂MoveJ\_P运动
 
 通过如下指令可以控制机械臂进行MoveJ\_P关节运动。
 
 首先需要运行机械臂的底层驱动节点rm\_driver。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
@@ -137,11 +145,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo api_moveJ_P_demo
 ```
@@ -150,11 +160,12 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveJ_P_demo
 
  ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/e3d4eea6-4399-40fa-a6ed-048c4b56ba13.png)
 
-## 2.6 机械臂MoveL运动
+### 1.6 机械臂MoveL运动
 
 通过如下指令可以控制机械臂进行MoveL关节运动。
 
 首先需要运行机械臂的底层驱动节点rm\_driver。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
@@ -162,10 +173,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
 ```
+
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo api_moveL_demo
 ```
@@ -174,16 +188,18 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveL_demo
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/704a5680-49f5-4eb7-addb-f64fba9909de.png)
 
-## 2.7 机械臂场景规划
+### 1.7 机械臂场景规划
 
 通过如下指令可以控制机械臂进行场景规划运动。
 
 首先需要运行虚拟机械臂的moveit控制节点。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+
 ```
 rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 ```
@@ -191,6 +207,7 @@ rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 其中<arm\_type>可选择的型号有65、63、75、eco65。
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ```
@@ -208,6 +225,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/c1c741e1-afe6-48a2-9249-54874ab5e84c.png)
 
 打开一个新的终端，执行以下命令启动场景规划节点
+
 ```
 rm@rm-desktop:~$ roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
 ```
@@ -218,7 +236,7 @@ rm@rm-desktop:~$ roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
 
 多次点击Next，执行完成后，会退出场景规划节点。
 
-## 2.8 机械臂避障规划
+### 1.8 机械臂避障规划
 
 通过如下指令可以控制机械臂进行避障规划运动。
 
@@ -229,11 +247,13 @@ rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+
 ```
 rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 ```
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ```
@@ -243,6 +263,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/da2797f3-aedb-490b-a1c5-25e50c792fb7.png)
 
 再打开一个新的终端，执行以下命令启动避障规划节点：
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 ```
@@ -253,21 +274,24 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/1f8f8124-1a25-4156-82eb-dafc2d181ec2.png)
 
-## 2.9 机械臂pick and place
+### 1.9 机械臂pick and place
 
 通过如下指令可以控制机械臂进行拾取运动。
 
 首先需要运行虚拟机械臂的moveit控制节点。
+
 ```
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+
 ```
 rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 ```
 
 例如65机械臂的启动命令：
+
 ```
 rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ```
@@ -277,6 +301,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/15bcf080-5db6-41ee-8ab6-907142265b98.png)
 
 再打开一个新的终端，执行以下命令运行pick\_place\_demo节点
+
 ```
 rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 ```
@@ -285,9 +310,9 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 节点运行后，在rviz中可以看到场景中添加了三个物体，分别代表两个桌子和一个抓取的目标物，然后机器人运动到目标物的位置将目标物附着到机器人上模拟抓取物体，接着进行运动规划将目标物体放置到另一个桌子上然后解除附着，最后机器人返回zero姿态。
 
-# 3.rm\_example功能包架构说明
+## 2.rm\_example功能包架构说明
 
-## 3.1功能包文件总览
+### 2.1功能包文件总览
 
 当前rm\_driver功能包的文件构成如下。
 ```
@@ -325,9 +350,9 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
         └── test_api_movel.cpp
 ```
 
-# 4.rm\_example话题说明
+## 3.rm\_example话题说明
 
-## 4.1切换工作坐标系话题说明
+### 3.1切换工作坐标系话题说明
 
 以下为该节点的数据通信图：
 
@@ -335,7 +360,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/api\_ChangeWorkFrame\_demo节点和/rm\_driver之间的主要通信话题为/rm\_driver/ChangeWorkFrame\_State和/rm\_driver/ChangeWorkFrame\_Cmd。/rm\_driver/ChangeWorkFrame\_Cmd为切换请求和切换目标坐标的发布，/rm\_driver/ChangeWorkFrame\_State为切换结果。
 
-## 4.2切换工具坐标系话题说明
+### 3.2切换工具坐标系话题说明
 
 以下为该节点的数据通信图：
 
@@ -343,7 +368,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/api\_ChangeToolName\_demo节点和/rm\_driver之间的主要通信话题为/rm\_driver/ChangeTool\_State和/rm\_driver/ChangeToolName\_Cmd。/rm\_driver/ChangeToolName\_Cmd为切换请求和切换目标坐标的发布，/rm\_driver/ChangeTool\_State为切换结果。
 
-## 4.3rm\_get\_state话题说明
+### 3.3rm\_get\_state话题说明
 
 以下为该节点的数据通信图：
 
@@ -351,7 +376,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/api\_Get\_Arm\_State\_demo节点和/rm\_driver之间的主要通信话题为/rm\_driver/Arm\_Current\_State和/rm\_driver/GetArmState\_Cmd。/rm\_driver/GetArmState\_Cmd为获取机械臂当前状态请求，/rm\_driver/Arm\_Current\_State为当前状态结果。
 
-## 4.4movej\_demo话题说明
+### 3.4movej\_demo话题说明
 
 以下为该节点的数据通信图：
 
@@ -359,7 +384,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/api\_moveJ\_demo节点和/rm\_driver之间的主要通信话题为/rm\_driver/MoveJ\_Cmd和/rm\_driver/Plan\_State。/rm\_driver/MoveJ\_Cmd为控制机械臂运动的请求，将发布需要运动到的各关节的弧度信息，/rm\_driver/Plan\_State为运动结果。
 
-## 4.5moveJ\_P\_demo话题说明
+### 3.5moveJ\_P\_demo话题说明
 
 以下为该节点的数据通信图：
 
@@ -367,7 +392,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/api\_moveJ\_P\_demo节点和/rm\_driver之间的主要通信话题为/rm\_driver/MoveJ\_P\_Cmd和/rm\_driver/Plan\_State。/rm\_driver/MoveJ\_P\_Cmd为控制机械臂运动规划的请求，将发布需要运动到的目标点的坐标，/rm\_driver/Plan\_State为运动结果。
 
-## 4.6movel\_demo话题说明
+### 3.6movel\_demo话题说明
 
 以下为该节点的数据通信图：
 
@@ -375,7 +400,7 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/Movel\_demo\_node节点和/rm\_driver之间的主要通信话题为/rm\_driver/MoveJ\_P\_Cmd和/rm\_driver/MoveL\_Cmd还有/rm\_driver/Plan\_State。/rm\_driver/MoveJ\_P\_Cmd为控制机械臂运动规划的请求，将发布机械臂首先需要运动到的目标点的坐标， /rm\_driver/Plan\_State为运动结果，到达第一个点位后我们通过直线运动到达第二个点位，就可以通过/rm\_driver/MoveL\_Cmd发布第二个点位的位姿，/rm\_driver/Plan\_State话题代表运动的结果。
 
-## 4.7机械臂场景规划
+### 3.7机械臂场景规划
 
 话题节点的通信图如下：
 
@@ -383,13 +408,13 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 可以看到/planning\_scene\_ros\_api\_demo节点和/move\_group之间的主要通信话题为/planning\_scene，其为添加障碍物的话题，详细信息可查看其源码，其中有较详细的说明。
 
-## 4.8机械臂避障规划
+### 3.8机械臂避障规划
 
 话题节点通信如下。
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/8oLl9y4PrdVglapY/img/bfab8257-e93c-4ef0-aee8-3e14fa194f59.png)
 
-## 4.9机械臂pick and place
+### 3.9机械臂pick and place
 
 话题节点通信如下。
 
