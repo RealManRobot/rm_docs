@@ -10,7 +10,6 @@
 
 此外，I系列控制器还支持modbus-TCP主站配置，允许用户配置使用modbus-TCP主站，以连接外部设备的modbus-TCP从站。
 
----
 
 ## 配置通讯端口ModbusRTU模式`rm_set_modbus_mode()`
 

@@ -18,8 +18,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           //   link: "/robot/guide/manual",
           // },
           {
-            text: "硬件准备",
-            link: "/robot/guide/hardwarePreparation",
+            text: "快速开始",
+            link: "/robot/quickUseManual",
           },
         ],
       },
@@ -36,113 +36,113 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
           {
             text: "API",
-            collapsed:false,
-            items:[
+            collapsed: false,
+            items: [
               {
-                text:'API(C)',
-                collapsed:true,
-                items:[
+                text: "API(C)",
+                collapsed: true,
+                items: [
                   {
-                    text:'基础示例',
-                    link:'/robot/demo/c/simpleProcess/readme',
+                    text: "基础示例",
+                    link: "/robot/demo/c/simpleProcess/readme",
                   },
                   {
-                    text:'坐标系操作',
-                    link:'/robot/demo/c/coordinateSystem/readme',
+                    text: "坐标系操作",
+                    link: "/robot/demo/c/coordinateSystem/readme",
                   },
                   {
-                    text:'力控',
-                    link:'/robot/demo/c/forceControl/readme',
+                    text: "力控",
+                    link: "/robot/demo/c/forceControl/readme",
                   },
                   {
-                    text:'抓取',
-                    link:'/robot/demo/c/gripper/readme',
+                    text: "抓取",
+                    link: "/robot/demo/c/gripper/readme",
                   },
                   {
-                    text:'IO功能',
-                    link:'/robot/demo/c/IOControl/readme',
+                    text: "IO功能",
+                    link: "/robot/demo/c/IOControl/readme",
                   },
                   {
-                    text:'升降机控制',
-                    link:'/robot/demo/c/lift/readme',
+                    text: "升降机控制",
+                    link: "/robot/demo/c/lift/readme",
                   },
                   {
-                    text:'ModbusRTU',
-                    link:'/robot/demo/c/modbusRTU/readme',
+                    text: "ModbusRTU",
+                    link: "/robot/demo/c/modbusRTU/readme",
                   },
                   {
-                    text:'样条曲线运动',
-                    link:'/robot/demo/c/moves/readme',
+                    text: "样条曲线运动",
+                    link: "/robot/demo/c/moves/readme",
                   },
                   {
-                    text:'角度透传',
-                    link:'/robot/demo/c/movejCANFD/readme',
+                    text: "角度透传",
+                    link: "/robot/demo/c/movejCANFD/readme",
                   },
                   {
-                    text:'在线编程',
-                    link:'/robot/demo/c/onlineProgram/readme',
+                    text: "在线编程",
+                    link: "/robot/demo/c/onlineProgram/readme",
                   },
                   {
-                    text:'算法',
-                    link:'/robot/demo/c/algoInterface/readme',
+                    text: "算法",
+                    link: "/robot/demo/c/algoInterface/readme",
                   },
-                ]
+                ],
               },
               {
-                text:'API(Python)',
-                collapsed:true,
-                items:[
+                text: "API(Python)",
+                collapsed: true,
+                items: [
                   {
-                    text:'基础示例',
-                    link:'/robot/demo/python/simpleProcess/readme',
+                    text: "基础示例",
+                    link: "/robot/demo/python/simpleProcess/readme",
                   },
                   {
-                    text:'坐标系操作',
-                    link:'/robot/demo/python/coordinateSystem/readme',
+                    text: "坐标系操作",
+                    link: "/robot/demo/python/coordinateSystem/readme",
                   },
                   {
-                    text:'机械臂版本操作',
-                    link:'/robot/demo/python/doubleRoboticArm/readme',
+                    text: "机械臂版本操作",
+                    link: "/robot/demo/python/doubleRoboticArm/readme",
                   },
                   {
-                    text:'力控',
-                    link:'/robot/demo/python/forceControl/readme',
+                    text: "力控",
+                    link: "/robot/demo/python/forceControl/readme",
                   },
                   {
-                    text:'抓取',
-                    link:'/robot/demo/python/gripper/readme',
+                    text: "抓取",
+                    link: "/robot/demo/python/gripper/readme",
                   },
                   {
-                    text:'IO功能',
-                    link:'/robot/demo/python/IOControl/readme',
+                    text: "IO功能",
+                    link: "/robot/demo/python/IOControl/readme",
                   },
                   {
-                    text:'升降机控制',
-                    link:'/robot/demo/python/lift/readme',
+                    text: "升降机控制",
+                    link: "/robot/demo/python/lift/readme",
                   },
                   {
-                    text:'ModbusRTU',
-                    link:'/robot/demo/python/modbusRTU/readme',
+                    text: "ModbusRTU",
+                    link: "/robot/demo/python/modbusRTU/readme",
                   },
                   {
-                    text:'样条曲线运动',
-                    link:'/robot/demo/python/moves/readme',
+                    text: "样条曲线运动",
+                    link: "/robot/demo/python/moves/readme",
                   },
                   {
-                    text:'角度透传',
-                    link:'/robot/demo/python/movejCANFD/readme',
+                    text: "角度透传",
+                    link: "/robot/demo/python/movejCANFD/readme",
                   },
                   {
-                    text:'在线编程',
-                    link:'/robot/demo/python/onlineProgram/readme',
+                    text: "在线编程",
+                    link: "/robot/demo/python/onlineProgram/readme",
                   },
                   {
-                    text:'算法',
-                    link:'/robot/demo/python/algoInterface/readme',
+                    text: "算法",
+                    link: "/robot/demo/python/algoInterface/readme",
                   },
-                ]
+                ],
               },
-            ]
+            ],
           },
           {
             text: "ROS",
@@ -156,7 +156,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "JSON协议",
-        collapsed:true,
+        collapsed: true,
         items: [
           {
             text: "机械臂初始状态",
@@ -187,8 +187,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/movePlan",
           },
           {
-            text:'步进类指令',
-            link:'/robot/json/stepControl'
+            text: "步进类指令",
+            link: "/robot/json/stepControl",
           },
           {
             text: "状态查询",
@@ -233,10 +233,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "六维力传感器",
             link: "/robot/json/force",
-          },
-          {
-            text: "一维力传感器",
-            link: "/robot/json/oneForce",
           },
           {
             text: "透传力位混合控制补偿",
@@ -576,7 +572,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "枚举",
             link: "/robot/api/c/type/typeList",
-          }
+          },
         ],
       },
       {
@@ -588,117 +584,127 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/api/python/getStarted",
           },
           {
-            text: "工具坐标系",
-            link: "/robot/api/python/toolCoordinateConfig",
-          },
-          {
-            text: "工作坐标系",
-            link: "/robot/api/python/workCoordinateConfig",
-          },
-          {
-            text: "机械臂运动参数",
-            link: "/robot/api/python/tipVelocityParameters",
-          },
-          {
-            text: "机械臂运动的急停、暂停、继续等控制",
-            link: "/robot/api/python/motionControl",
-          },
-          {
-            text: "机械臂状态",
-            link: "/robot/api/python/armState",
-          },
-          {
-            text: "示教运动",
-            link: "/robot/api/python/teachMove",
-          },
-          
-          {
-            text: "拖动示教",
-            link: "/robot/api/python/dragTeach",
-          },
-          {
-            text: "系统配置",
-            link: "/robot/api/python/controllerConfig",
-          },
-          {
-            text: "通讯配置",
-            link: "/robot/api/python/communicationConfig",
-          },
-          {
-            text: "安装方式及关节、末端软件版本号查询",
-            link: "/robot/api/python/installPos",
-          },
-          {
-            text: "扩展关节",
-            link: "/robot/api/python/expandControl",
-          },
-          {
-            text: "升降机控制",
-            link: "/robot/api/python/liftControl",
-          },
-          {
-            text: "末端六维力传感器",
-            link: "/robot/api/python/force",
-          },
-          {
-            text: "电子围栏和虚拟墙",
-            link: "/robot/api/python/electronicFenceConfig",
-          },
-          {
-            text: "透传力位混合控制补偿",
-            link: "/robot/api/python/forcePositionControl",
-          },
-          {
-            text: "全局路点管理",
-            link: "/robot/api/python/globalWaypointManage",
-          },
-          {
-            text: "夹爪控制",
-            link: "/robot/api/python/gripperControl",
-          },
-          {
-            text: "五指灵巧手控制",
-            link: "/robot/api/python/handControl",
-          },
-          {
-            text: "IO控制",
-            link: "/robot/api/python/ioConfig",
-          },
-          {
-            text: "关节配置",
-            link: "/robot/api/python/jointsConfig",
-          },
-          {
-            text: "关节配置查询",
-            link: "/robot/api/python/jointsConfigQuery",
-          },
-          {
-            text: "Modbus配置",
-            link: "/robot/api/python/modbusConfig",
-          },
-          {
-            text: "机械臂运动的急停、暂停、继续等控制",
-            link: "/robot/api/python/motionControl",
-          },
-          {
-            text: "轨迹规划指令",
-            link: "/robot/api/python/movePlan",
-          },
-          {
-            text: "自碰撞安全检测",
-            link: "/robot/api/python/selfCollision",
-          },
-          {
-            text: "在线编程",
-            link: "/robot/api/python/programManagement",
-          },
-          {
-            text: "算法",
-            link: "/robot/api/python/alog",
-          },
-          {
-            text: "UDP主动上报",
-            link: "/robot/api/python/udpConfig",
+            text: "接口列表",
+            collapsed: true,
+            items: [
+              {
+                text: "机械臂连接",
+                link: "/robot/api/python/classes/roboticArm",
+              },
+              {
+                text: "工具坐标系",
+                link: "/robot/api/python/classes/toolCoordinateConfig",
+              },
+
+              {
+                text: "工作坐标系",
+                link: "/robot/api/python/classes/workCoordinateConfig",
+              },
+              {
+                text: "机械臂状态",
+                link: "/robot/api/python/classes/armState",
+              },
+
+              {
+                text: "机械臂运动参数",
+                link: "/robot/api/python/classes/tipVelocityParameters",
+              },
+              {
+                text: "示教运动",
+                link: "/robot/api/python/classes/teachMove",
+              },
+
+              {
+                text: "拖动示教",
+                link: "/robot/api/python/classes/dragTeach",
+              },
+              {
+                text: "机械臂运动的急停、暂停、继续等控制",
+                link: "/robot/api/python/classes/motionControl",
+              },
+
+              {
+                text: "通讯配置",
+                link: "/robot/api/python/classes/communicationConfig",
+              },
+
+              {
+                text: "系统配置",
+                link: "/robot/api/python/classes/controllerConfig",
+              },
+              {
+                text: "安装方式及关节、末端软件版本号查询",
+                link: "/robot/api/python/classes/installPos",
+              },
+              {
+                text: "扩展关节",
+                link: "/robot/api/python/classes/expandControl",
+              },
+              {
+                text: "升降机控制",
+                link: "/robot/api/python/classes/liftControl",
+              },
+              {
+                text: "末端六维力传感器",
+                link: "/robot/api/python/classes/force",
+              },
+              {
+                text: "电子围栏和虚拟墙",
+                link: "/robot/api/python/classes/electronicFenceConfig",
+              },
+              {
+                text: "透传力位混合控制补偿",
+                link: "/robot/api/python/classes/forcePositionControl",
+              },
+              {
+                text: "全局路点管理",
+                link: "/robot/api/python/classes/globalWaypointManage",
+              },
+              {
+                text: "夹爪控制",
+                link: "/robot/api/python/classes/gripperControl",
+              },
+              {
+                text: "五指灵巧手控制",
+                link: "/robot/api/python/classes/handControl",
+              },
+              {
+                text: "IO控制",
+                link: "/robot/api/python/classes/ioConfig",
+              },
+              {
+                text: "关节配置",
+                link: "/robot/api/python/classes/jointsConfig",
+              },
+              {
+                text: "关节配置查询",
+                link: "/robot/api/python/classes/jointsConfigQuery",
+              },
+              {
+                text: "Modbus配置",
+                link: "/robot/api/python/classes/modbusConfig",
+              },
+              {
+                text: "轨迹规划指令",
+                link: "/robot/api/python/classes/movePlan",
+              },
+              {
+                text: "自碰撞安全检测",
+                link: "/robot/api/python/classes/selfCollision",
+              },
+              {
+                text: "在线编程",
+                link: "/robot/api/python/classes/programManagement",
+              },
+              {
+                text: "算法",
+                link: "/robot/api/python/classes/alog",
+              },
+              {
+                text: "UDP主动上报",
+                link: "/robot/api/python/classes/udpConfig",
+              },
+            ],
           },
         ],
       },
@@ -756,13 +762,13 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "modbus",
-        items:[
+        items: [
           {
-            text:'modbus从站地址表',
-            link:'/robot/modbus/index'
-          }
-        ]
-      }
+            text: "modbus从站地址表",
+            link: "/robot/modbus/index",
+          },
+        ],
+      },
       // {
       //   text: "常见问题",
       //   collapsed: false,

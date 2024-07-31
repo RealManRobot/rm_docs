@@ -1,198 +1,104 @@
-# 机械臂状态获取`ArmState`
+# 机械臂运动参数`ArmTipVelocityParameters`
 
-可用于机械臂状态获取。下面是机械臂状态获取`ArmState`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于设置、获取机械臂运动参数。下面是机械臂运动参数`ArmTipVelocityParameters`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
 
-## 获取机械臂当前状态`rm_get_current_arm_state()`
-
-- **方法原型：**
-
-```python
-rm_get_current_arm_state(self) -> tuple[int, dict[str, any]]:
-```
-
-- **返回值:** </br>
- tuple[int, dict[str,any]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |   成功。    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂当前状态
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   rm_current_arm_state_t  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_arm_state())
-
-arm.rm_delete_robot_arm()
-```
-
-## 获取关节当前温度`rm_get_current_joint_temperature()`
+## 设置机械臂末端最大线速度`rm_set_arm_max_line_speed()`
 
 - **方法原型：**
 
 ```python
-rm_get_current_joint_temperature(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节温度
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7温度数组，单位：℃    |
-
-- **使用示例**
-
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_temperature())
-
-arm.rm_delete_robot_arm()
-```
-
-## 获取关节当前电流`rm_get_current_joint_current()`
-
-- **方法原型：**
-
-```python
-rm_get_current_joint_current(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节电流
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7电流数组，单位：mA   |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_current())
-
-arm.rm_delete_robot_arm()
-```
-
-## 获取关节当前电压`rm_get_current_joint_voltage()`
-
-- **方法原型：**
-
-```python
-rm_get_current_joint_voltage(self) -> tuple[int, list[float]]:
-```
-
-- **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂关节电压
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   -  |    `list[float]`   |    关节1~7电压数组，单位：V|
-
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_current_joint_voltage())
-
-arm.rm_delete_robot_arm()
-```
-
-## 设置机械臂的初始位置角度`rm_set_init_pose()`
-
-- **方法原型：**
-
-```python
-int rm_set_init_pose(self, joint: list[float]) -> int:
+rm_set_arm_max_line_speed(self, speed: float) -> int:
 ```
 
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint  |    `list[float]`    |    机械臂初始位置关节角度数组    |
-
+|   speed  |    `float`    |    末端最大线速度，单位m/s。    |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_line_speed(0.25))
+
+arm.rm_delete_robot_arm()
+```
+
+## 设置机械臂末端最大线加速度`rm_set_arm_max_line_acc()`
+
+- **方法原型：**
+
+```python
+rm_set_arm_max_line_acc(self, acc: float) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   acc  |    `float`    |    末端最大线加速度，单位m/s^2。    |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_line_acc(1.6))
+
+arm.rm_delete_robot_arm()
+```
+
+## 设置机械臂末端最大角速度`rm_set_arm_max_angular_speed()`
+
+- **方法原型：**
+
+```python
+rm_set_arm_max_angular_speed(self, speed: float) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   speed  |    `float`    |    末端最大角速度，单位rad/s。    |
+
+- **返回值:** </br>
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -209,25 +115,143 @@ from Robotic_Arm.rm_robot_interface import *
 
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_init_pose())
+print(arm.rm_set_arm_max_angular_speed(0.6))
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取机械臂初始位置角度`rm_get_init_pose()`
+## 设置机械臂末端最大角速度`rm_set_arm_max_angular_acc()`
 
 - **方法原型：**
 
 ```python
-rm_get_init_pose(self) -> tuple[int, list[float]]:
+rm_set_arm_max_angular_acc(self, acc: float) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   acc  |    `float`    |    末端最大角加速度，单位rad/s^2    |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_max_angular_acc(4))
+
+arm.rm_delete_robot_arm()
+```
+
+## 设置机械臂末端参数为默认值`rm_set_arm_tcp_init()`
+
+- **方法原型：**
+
+```python
+rm_set_arm_tcp_init(self) -> int:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 初始化机械臂参数，机械臂的末端参数恢复到默认值。默认参数为：
+# 末端线速度：0.1m/s末端线加速度：0.5m/s²
+# 末端角速度：0.2rad/s末端角加速度：1rad/s²
+print(arm.rm_set_arm_tcp_init())
+
+arm.rm_delete_robot_arm()
+```
+
+## 设置机械臂动力学碰撞检测等级`rm_set_collision_state()`
+
+- **方法原型：**
+
+```python
+rm_set_collision_state(self, stage: int) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   stage  |    `int`    |    等级：0~8，0-无碰撞，8-碰撞最灵敏。    |
+
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+# 设置机械臂碰撞防护等级为1
+print(arm.rm_set_collision_state(1))
+
+arm.rm_delete_robot_arm()
+```
+
+## 查询碰撞防护等级`rm_get_collision_stage()`
+
+- **方法原型：**
+
+```python
+rm_get_collision_stage(self) -> tuple[int, int]:
+```
+
+- **返回值:** </br>
+tuple[int,int]: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -239,11 +263,11 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂初始位置关节角度
+2. 碰撞等级
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
+|   0～8  |    `int`   |    等级：0~8，0-无碰撞，8-碰撞最灵敏。     |
 
 - **使用示例**
   
@@ -252,41 +276,40 @@ from Robotic_Arm.rm_robot_interface import *
 
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_init_pose())
+print(arm.rm_get_collision_stage())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取当前关节角度`rm_get_joint_degree()`
+## 获取机械臂末端最大线速度`rm_get_arm_max_line_speed()`
 
 - **方法原型：**
 
 ```python
-rm_get_joint_degree(self) -> tuple[int, list[float]]:
+rm_get_arm_max_line_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+tuple[int,int]: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂初始位置关节角度
+2. 机械臂末端最大线速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   -  |    `list[float]`   |   机械臂初始位置关节角度数组，单位：°度 |
+|   -  |    `float`   |    末端最大线速度，单位m/s。     |
 
 - **使用示例**
   
@@ -295,41 +318,40 @@ from Robotic_Arm.rm_robot_interface import *
 
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_joint_degree())
+print(arm.rm_get_arm_max_line_speed())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 获取机械臂所有状态信息`rm_get_arm_all_state()`
+## 获取机械臂末端最大线加速度`rm_get_arm_max_line_acc()`
 
 - **方法原型：**
 
 ```python
-rm_get_arm_all_state(self) -> tuple[int, dict[str, any]]:
+rm_get_arm_max_line_acc(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str, any]]: 包含两个元素的元组。
+`tuple[int,float]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
+|   0  |    `int`   |    成功。    |
 |   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂所有状态信息
+2. 机械臂末端最大线加速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_arm_all_state_t  |  `dict`   | 机械臂所有状态信息字典，键为rm_arm_all_state_t的参数名。 |
+|   -  |    `float`   |    末端最大线加速度，单位m/s^2。     |
 
 - **使用示例**
   
@@ -338,121 +360,83 @@ from Robotic_Arm.rm_robot_interface import *
 
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_arm_all_state())
+print(arm.rm_get_arm_max_line_acc())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 查询控制器RS485模式`rm_get_controller_rs485_mode()`
+## 获取机械臂末端最大角速度`rm_get_arm_max_angular_speed()`
 
 - **方法原型：**
 
 ```python
-rm_get_controller_rs485_mode(self) -> dict[str, any]:
+rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
+tuple[int,float]: 包含两个元素的元组。
+
+1. 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+1. 机械臂末端最大角速度
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   -  |    `float`   |    末端最大角速度，单位rad/s。     |
+
+- **使用示例**
+
+```python
+
+```
+
+## 获取机械臂末端最大角加速度`rm_get_arm_max_angular_acc()`
+
+- **方法原型：**
+
+```python
+rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
+```
+
+- **返回值:** </br>
+`tuple[int,float]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   0  |    `int`   |   成功。    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
-2. 机械臂状态模式
+1. 机械臂末端最大角加速度
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   mode  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式，2-代表 modbus-RTU 从站模式。 |
-
-3. 波特率
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   baudrate  |    `int`   |    波特率    |
-
-4. Timeout
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
+|   -  |    `float`   |    末端最大角加速度，单位rad/s^2。     |
 
 - **使用示例**
-  
+
 ```python
 from Robotic_Arm.rm_robot_interface import *
 
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_get_controller_rs485_mode())
-
-arm.rm_delete_robot_arm()
-```
-
-## 查询工具端 RS485 模式`rm_get_tool_rs485_mode()`
-
-- **方法原型：**
-
-```python
-rm_get_tool_rs485_mode(self) -> dict[str, any]:
-```
-
-- **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
-
-1. 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 机械臂状态模式
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   mode  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式。 |
-
-3. 波特率
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   baudrate  |    `int`   |    波特率    |
-
-4. Timeout
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_tool_rs485_mode())
+print(arm.rm_get_arm_max_angular_acc())
 
 arm.rm_delete_robot_arm()
 ```

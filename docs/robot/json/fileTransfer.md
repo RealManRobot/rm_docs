@@ -1,6 +1,6 @@
 # 文件传输
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 下发前准备
 

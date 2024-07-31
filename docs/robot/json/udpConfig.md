@@ -1,6 +1,6 @@
 # UDP 主动上报（I 系列）
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## UDP 机械臂状态主动上报接口
 

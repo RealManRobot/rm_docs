@@ -1,23 +1,16 @@
-# 五指灵巧手控制`HandControl`
+# 机械臂运动的急停、暂停、继续等控制`ArmMotionControl`
 
-该接口可用于设置五指灵巧手控制，下面是五指灵巧手控制`HandControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于机械臂运动的急停、暂停、继续等控制。下面是机械臂运动的急停、暂停、继续等控制`ArmMotionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
+## 轨迹缓停`rm_set_arm_slow_stop()`
 
-## 设置灵巧手目标手势序列号`rm_set_hand_posture()`
+在当前正在运行的轨迹上停止。
 
 - **方法原型：**
 
 ```python
-rm_set_hand_posture(self, posture_num: int, block: bool, timeout: int) -> int:
+rm_set_arm_slow_stop(self) -> int:
 ```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| posture_num      | `int` | 预先保存在灵巧手内的手势序号，范围：1~40    |
-| block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -29,8 +22,6 @@ rm_set_hand_posture(self, posture_num: int, block: bool, timeout: int) -> int:
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手。   |
-|  -5  |    `int`   |   超时未返回。   |
 
 - **使用示例**
   
@@ -43,71 +34,20 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_hand_posture(1, True, 10))
+print(arm.rm_set_arm_slow_stop())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 设置灵巧手目标手势序列号`rm_set_hand_seq()`
+## 轨迹急停`rm_set_arm_stop()`
+
+关节最快速度停止，轨迹不可恢复。
 
 - **方法原型：**
 
 ```python
-rm_set_hand_seq(self, seq_num: int, block: bool, timeout: int) -> int:
+rm_set_arm_stop(self) -> int:
 ```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| seq_num   | `int` | 预先保存在灵巧手内的手势序号，范围：1~40    |
-| block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
-
-- **返回值:** </br>
-函数执行的状态码：
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |   成功。    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   当前到位设备校验失败，即当前到位设备不为灵巧手。   |
-|  -5  |    `int`   |   超时未返回。   |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_set_hand_seq(1, True, 15))
-
-arm.rm_delete_robot_arm()
-```
-
-## 设置灵巧手各自由度角度`rm_set_hand_angle()`
-
-- **方法原型：**
-
-```python
-rm_set_hand_angle(self, hand_angle: list[int]) -> int:
-```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| seq_num   | `int` | 预先保存在灵巧手内的手势序号，范围：1~40    |
-| block | `bool` | true 表示阻塞模式，等待灵巧手运动结束后返回</br>false 表示非阻塞模式，发送后立即返回  |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -119,7 +59,6 @@ rm_set_hand_angle(self, hand_angle: list[int]) -> int:
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   超时未返回   |
 
 - **使用示例**
   
@@ -132,25 +71,20 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-# 设置灵巧手各手指角度
-print(arm.rm_set_hand_angle([-1,100,200,300,400,500]))
+print(arm.rm_set_arm_stop())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 设置灵巧手速度`rm_set_hand_speed()`
+## 轨迹暂停`rm_set_arm_pause()`
+
+暂停在规划轨迹上，轨迹可恢复。
 
 - **方法原型：**
 
 ```python
-rm_set_hand_speed(self, speed: int) -> int:
+rm_set_arm_pause(self) -> int:
 ```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| speed   | `int` | 手指速度，范围：1~1000    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -162,7 +96,6 @@ rm_set_hand_speed(self, speed: int) -> int:
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   超时未返回   |
 
 - **使用示例**
   
@@ -175,24 +108,20 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_hand_speed(500))
+print(arm.rm_set_arm_pause())
 
 arm.rm_delete_robot_arm()
 ```
 
-## 设置灵巧手力阈值`rm_set_hand_force()`
+## 继续当前轨迹运动`rm_set_arm_continue()`
+
+轨迹暂停后，继续当前轨迹运动。
 
 - **方法原型：**
 
 ```python
-rm_set_hand_force(self, force: int) -> int:
+rm_set_arm_continue(self) -> int:
 ```
-
-- **参数说明:**
-
-| 名称        | 类型    | 说明                                   |
-| :-------- | :---- | :----------------------------------- |
-| force   | `int` | 手指力，范围：1~1000    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -204,7 +133,6 @@ rm_set_hand_force(self, force: int) -> int:
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-|  -4  |    `int`   |   超时未返回   |
 
 - **使用示例**
   
@@ -217,7 +145,126 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-print(arm.rm_set_hand_force(500))
+print(arm.rm_set_arm_continue())
+
+arm.rm_delete_robot_arm()
+```
+
+## 清除当前轨迹`rm_set_delete_current_trajectory()`
+
+- **方法原型：**
+
+```python
+rm_set_delete_current_trajectory(self) -> int:
+```
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_delete_current_trajectory())
+
+arm.rm_delete_robot_arm()
+```
+
+## 清除所有轨迹`rm_set_arm_delete_trajectory()`
+
+- **方法原型：**
+
+```python
+rm_set_arm_delete_trajectory(self) -> int:
+```
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_set_arm_delete_trajectory())
+
+arm.rm_delete_robot_arm()
+```
+
+## 获取当前正在规划的轨迹信息`rm_get_arm_current_trajectory()`
+
+- **方法原型：**
+
+```python
+rm_get_arm_current_trajectory(self) -> dict[str, any]:
+```
+
+- **返回值:** </br>
+ dict[str,any]: 包含以下键值的字典
+ 
+1. 'return_code' (int): 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. 返回的规划类型
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   trajectory_type  |    `rm_arm_current_trajectory_e`   |    返回的规划类型    |
+
+3. 规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   data  |    `list[float]`   |    无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+
+print(arm.rm_get_arm_current_trajectory())
 
 arm.rm_delete_robot_arm()
 ```

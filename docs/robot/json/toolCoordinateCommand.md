@@ -1,7 +1,7 @@
 # 机械臂配置-工具坐标系命令集
 
 本命令集用于配置机械臂的工具坐标系，包含计算工具坐标系、输入工具坐标系、切换当前工具坐标系、删除工具坐标系、修改工具坐标系、设置和查询工具坐标系包络参数等。
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 自动计算工具坐标系（标定参考点）
 

@@ -1,6 +1,6 @@
 # 运动配置-轨迹反馈集
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 当前轨迹结束返回标志
 

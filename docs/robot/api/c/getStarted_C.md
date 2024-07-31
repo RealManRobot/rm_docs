@@ -1,6 +1,6 @@
 # 睿尔曼机械臂C/C++ API 开发文档
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 1.引言
 

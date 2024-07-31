@@ -1,7 +1,7 @@
 # 机械臂配置-运动参数查询集
 
 本命令集用于查询机械臂末端的最大线速度、线加速度、角速度、角加速度。
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
+
 
 ## 查询机械臂末端最大线速度
 

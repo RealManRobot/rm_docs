@@ -2,8 +2,6 @@
 
 机械臂连接、断开、日志设置等操作。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 构造函数：初始化线程模式`__init__()`
 
 - **方法原型：**

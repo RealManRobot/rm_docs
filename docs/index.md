@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /robot/guide/gettingStarted
+      link: /robot/summarize
 
 features:
   - title: 核心能力 深度开放

@@ -2,8 +2,6 @@
 
 针对睿尔曼机械臂，提供正逆解、各种位姿参数转换等工具接口。
 
-<div style="height: 2px; background-image: linear-gradient(to right, #ccc, #ccc); margin: 1em 0;"></div>
-
 ## 初始化算法依赖数据`__init__()`
 
 - **方法原型：**
