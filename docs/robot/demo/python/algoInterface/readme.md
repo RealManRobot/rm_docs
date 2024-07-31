@@ -2,7 +2,7 @@
 
 ## 1. 项目介绍
 
-本项目是一个使用睿尔曼Python开发包完成工程完成不连接机械臂，独立使用算法，进行算法初始化、机械臂型号设置、坐标系设置，运动学正解、运动学逆解，欧拉角转四元数、四元数转欧拉角。
+本项目演示了RM65-B机械臂在不进行连接时独立使用算法、进行算法初始化、机械臂型号设置、坐标系设置、运动学正解、运动学逆解、欧拉角转四元数、四元数转欧拉角等接口的使用方法。项目基于Python构建，使用了睿尔曼提供的机械臂Python语言开发包。
 
 ## 2. 代码结构
 
@@ -20,50 +20,52 @@ RMDemo_AlgoInterface/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-## 4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
+| 项目 | Linux | Windows |
+| :-- | :-- | :-- |
+| 系统架构 | x86架构 | - |
+| python | 3.9以上 | 3.9以上 |
+| 特定依赖 |  |  |
 
-2. 进入项目目录：
-```
-cd RMDemo_AlgoInterface
-```
+### Linux环境配置
 
-3. 安装依赖：
-```
+   1. 参考[python官网-linux](wwwwwwwwwwwwww)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
 pip install -r requirements.txt
 ```
 
-## 5. 注意事项
+### Windows环境配置
 
-该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
+   1. 参考[python官网-Windows](wwwwwwwwwwwwww)下载安装python3.9。
 
-## 6. 使用指南
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
 
-1. **参数配置**
+```bash
+pip install -r requirements.txt
+```
 
-   打开`demo_algo_interface.py` 文件，在main函数中可修改以下配置：
+## 5. 使用指南
 
-   - 配置机械臂及末端版本（默认为RM65标准版机械臂）：如果需要调用其它型号机械臂的算法，可配置`AlgoController`类的初始化参数。
-     - `arm_model`参数指定了机械臂的型号，例如RM75机械臂则修改为：`rm_robot_arm_model_e.RM_MODEL_RM_65_E`。
-     - `force_type`参数指定了机械臂末端版本，例如六维力版本则修改该参数为`rm_force_type_e.RM_MODEL_RM_SF_E`。
-   - 配置基座安装角度（默认为正装）：通过`set_angle`方法设置机械臂的初始安装姿态
-   - 配置工作坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_workframe`方法修改工作坐标系。
-   - 配置工具坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_toolframe`方法修改工具坐标系。
+### 5.1快速运行
 
-2. **命令行运行**：
+**运行步骤：**
 
-   在终端进入RMDemo_AlgoInterface目录，输入以下命令运行Python脚本：
+   进入RMDemo_AlgoInterface项目目录后，运行终端输入以下命令运行程序：
 
    ```
    python ./src/main.py
    ```
 
-3. **运行结果如下所示**：
+**运行结果**：
 
    ```
    Algorithm initialized, handle ID:  0
@@ -87,16 +89,19 @@ pip install -r requirements.txt
    Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
    ```
 
-* **支持渠道**：
-  + 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
+### 5.2 主要参数配置
 
-## 7. 许可证信息
+打开`demo_algo_interface.py` 文件，在main函数中可修改以下配置：
 
+   - 配置机械臂及末端版本（默认为RM65标准版机械臂）：如果需要调用其它型号机械臂的算法，可配置`AlgoController`类的初始化参数。
+  
+     - `arm_model`参数指定了机械臂的型号，例如RM75机械臂则修改为：`rm_robot_arm_model_e.RM_MODEL_RM_65_E`。
+     - `force_type`参数指定了机械臂末端版本，例如六维力版本则修改该参数为`rm_force_type_e.RM_MODEL_RM_SF_E`。
 
-* 本项目遵循MIT许可证。
+   - 配置基座安装角度（默认为正装）：通过`set_angle`方法设置机械臂的初始安装姿态
+   - 配置工作坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_workframe`方法修改工作坐标系。
+   - 配置工具坐标系（不设置则按照出厂默认的参数进行计算）：通过`set_toolframe`方法修改工具坐标系。
 
-## 8. 常见问题解答（FAQ）
+## 6. 许可证信息
 
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP。
+- 本项目遵循MIT许可证。

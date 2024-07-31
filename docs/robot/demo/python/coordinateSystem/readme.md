@@ -1,11 +1,12 @@
 # 坐标系操作示例
+
 ## 1. 项目介绍
 
-本项目是一个使用睿尔曼Python开发包演示坐标系的新建、删除、修改、查询。
+本项目演示了RM65-B机械臂工作坐标系的新建、删除、修改、查询等接口的使用，实现机械臂新工作坐标系的设定。项目基于Python构建，使用了睿尔曼提供的机械臂Python语言开发包。
 
 ## 2. 代码结构
 
-```
+```python
 RMDemo_CoordinateSystem/
 │
 ├── README.md        <- 项目的核心文档
@@ -19,27 +20,42 @@ RMDemo_CoordinateSystem/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-##  4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
+| 项目 | Linux | Windows |
+| :-- | :-- | :-- |
+| 系统架构 | x86架构 | - |
+| python | 3.9以上 | 3.9以上 |
+| 特定依赖 |  |  |
 
-2. 进入项目目录：`cd RMDemo_CoordinateSystem`
+### Linux环境配置
 
-3. 安装依赖：`pip install -r requirements.txt`
+   1. 参考[python官网-linux](wwwwwwwwwwwwww)下载安装python3.9。
 
-## 5. 注意事项
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
 
-该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
+```bash
+pip install -r requirements.txt
+```
 
-## 6. 使用指南
+### Windows环境配置
 
-### 1. 快速运行
+   1. 参考[python官网-Windows](wwwwwwwwwwwwww)下载安装python3.9。
 
-按照以下步骤快速运行代码：
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+## 5. 使用指南
+
+### 5.1 快速运行
 
 1. **配置机械臂IP地址**：打开 `demo_coordinate_system.py` 文件，在 `main` 函数中修改 `RobotArmController` 类的初始化参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
 
@@ -53,98 +69,83 @@ RMDemo_CoordinateSystem/
     python ./src/main.py
     ```
 
-### **2. 代码说明**
+3. **运行结果示例及说明**
+
+    ```python
+    current api version:  0.2.9
+    //API版本号
+    Successfully connected to the robot arm: 1
+    //机械臂连接成功
+    API Version:  0.2.9 
+    //API版本号
+    Manually set work frame succeeded
+    //
+    Update work frame succeeded
+    //
+    Get work frame succeeded:  [0.30000001192092896, 0.0, 0.30000001192092896, 3.1419999599456787, 0.0, 0.0] 
+    //
+    Delete work frame succeeded
+    //
+    Successfully disconnected from the robot arm
+    //
+    ```
+
+    **运行结果说明：**
+
+
+### 5.2 关键代码说明
 
 下面是 `demo_coordinate_system.py` 文件的主要功能：
 
 - **连接机械臂**
+连接到指定IP和端口的机械臂。
 
     ```python
     robot_controller = RobotArmController("192.168.1.18", 8080, 3)
     ```
 
-    连接到指定IP和端口的机械臂。
-
 - **获取API版本**
+获取并显示API版本。
 
     ```python
     print("\nAPI Version: ", rm_api_version(), "\n")
     ```
 
-    获取并显示API版本。
-
 - **手动设置工作坐标系**
+手动设置名为 `"test"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
 
     ```python
     robot_controller.set_manual_work_frame("test", [0, 0, 0, 0, 0, 0])
     ```
 
-    手动设置名为 `"test"` 的工作坐标系，位姿为 `[0, 0, 0, 0, 0, 0]`。
-
 - **更新工作坐标系**
+更新名为 `"test"` 的工作坐标系，位姿为 `[0.3, 0, 0.3, 3.142, 0, 0]`。
 
     ```python
     robot_controller.update_work_frame("test", [0.3, 0, 0.3, 3.142, 0, 0])
     ```
 
-    更新名为 `"test"` 的工作坐标系，位姿为 `[0.3, 0, 0.3, 3.142, 0, 0]`。
-
 - **查询指定工作坐标系**
+查询名为 `"test"` 的工作坐标系并显示结果。
 
     ```python
     robot_controller.get_given_work_frame("test")
     ```
 
-    查询名为 `"test"` 的工作坐标系并显示结果。
-
 - **删除工作坐标系**
+删除名为 `"test"` 的工作坐标系。
 
     ```python
     robot_controller.delete_work_frame("test")
     ```
 
-    删除名为 `"test"` 的工作坐标系。
-
 - **断开机械臂连接**
+断开与机械臂的连接。
 
     ```python
     robot_controller.disconnect()
     ```
 
-    断开与机械臂的连接。
+## 6. 许可证信息
 
-### 3. 运行结果示例
-
-运行脚本后，输出结果如下所示：
-
-```
-current api version:  0.2.9
-
-Successfully connected to the robot arm: 1
-
-API Version:  0.2.9 
-
-Manually set work frame succeeded
-
-Update work frame succeeded
-
-Get work frame succeeded:  [0.30000001192092896, 0.0, 0.30000001192092896, 3.1419999599456787, 0.0, 0.0] 
-
-Delete work frame succeeded
-
-Successfully disconnected from the robot arm
-```
-
-* **支持渠道**：
-
-	+ 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
-
-## 7. 许可证信息**
-
-* 本项目遵循MIT许可证。
-
-## 8. 常见问题解答（FAQ）**
-
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP
+- 本项目遵循MIT许可证。
