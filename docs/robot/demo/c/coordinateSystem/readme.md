@@ -9,9 +9,8 @@
 ```C
 RMDemo_CoordinateSystem/
 ├── build/                  # CMake构建生成的输出目录
-├── cmake/                  # Windows下CMake构建生成的输出目录
 ├── include/                # 自定义头文件存放目录
-├── Robotic_Arm/               睿尔曼机械臂二次开发包
+├── Robotic_Arm/               # 睿尔曼机械臂二次开发包
 │   ├── include/
 │   │   ├── rm_define.h        # 机械臂二次开发包头文件，包含了定义的数据类型、结构体
 │   │   └── rm_interface.h     # 机械臂二次开发包头文件，声明了机械臂所有操作接口
@@ -34,12 +33,13 @@ RMDemo_CoordinateSystem/
 ## 4. 环境配置
 
 在Windows和Linux环境下运行时需要的环境和依赖项：
-| 项目 | Linux | Windows |
-| :-- | :-- | :-- |
-| 系统架构 | x86架构 | - |
-| 编译器 | GCC 7.5或更高版本 | MSVC2015或更高版本 64bit |
-| CMake版本 | 3.10或更高版本 | 3.10或更高版本 |
-| 特定依赖 | RMAPI Linux版本库（位于`Robotic_Arm/lib`目录） | RMAPI Windows版本库（位于`Robotic_Arm/lib`目录） |
+
+| 项目      | Linux                                          | Windows                                          |
+| :-------- | :--------------------------------------------- | :----------------------------------------------- |
+| 系统架构  | x86架构                                        | -                                                |
+| 编译器    | GCC 7.5或更高版本                              | MSVC2015或更高版本 64bit                         |
+| CMake版本 | 3.10或更高版本                                 | 3.10或更高版本                                   |
+| 特定依赖  | RMAPI Linux版本库（位于`Robotic_Arm/lib`目录） | RMAPI Windows版本库（位于`Robotic_Arm/lib`目录） |
 
 ### Linux环境配置
 
@@ -84,7 +84,6 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 2. 运行安装程序，按照提示进行安装。
 3. 安装完成后，将CMake的bin目录添加到系统的PATH环境变量中（通常在安装过程中会询问是否添加）。
 4. 打开命令提示符或PowerShell，输入`cmake --version`检查CMake是否安装成功。
-4.2. 克隆项目到本地：
 
 ## **5. 使用指南**
 
@@ -95,37 +94,39 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 按照以下步骤快速运行代码：
 
 1. **配置机械臂IP地址**：
-    打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
+   打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
 
-    ```C
-    const char *robot_ip_address = "192.168.1.18";
-    int robot_port = 8080;
-    rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
-    ```
+   ```C
+   const char *robot_ip_address = "192.168.1.18";
+   int robot_port = 8080;
+   rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
+   ```
 
 2. **linux 命令行运行**：
-    在终端进入 `RMDemo_CoordinateSystem` 目录，输入以下命令运行C程序： 
-   
-    ```bash
-    chmod +x run.sh
-    ./run.sh
-    ```
-    运行结果如下：
+   在终端进入 `RMDemo_CoordinateSystem` 目录，输入以下命令运行C程序： 
 
-    
+   ```bash
+   chmod +x run.sh
+   ./run.sh
+   ```
+
+   运行结果如下：
+
+![alt text](image-1.png)
 3. **Windows 运行**： 双击run.bat脚本运行
-    运行结果如下：
+   运行结果如下：
 
+![alt text](image.png)
 ### **5.2. 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
 - **连接机械臂**
-    连接到指定IP和端口的机械臂。
+  连接到指定IP和端口的机械臂。
 
-    ```C
-    rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
-    ```
+  ```C
+  rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
+  ```
 
 - **获取API版本**
   获取并显示API版本。
@@ -161,4 +162,8 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **6. 许可证信息**
 
+<<<<<<< HEAD
 - 本项目遵循MIT许可证。
+=======
+- 本项目遵循MIT许可证。
+>>>>>>> 488d273127ef7ff712d57240d09dd37737fcc1c9
