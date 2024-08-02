@@ -1,44 +1,45 @@
-# 样条曲线运动示例
+# 样条曲线运动
 
 ## **1. 项目介绍**
-本项目是一个使用睿尔曼C开发包, 演示了样条曲线运动的使用。该项目使用 CMake 构建，支持使用三个或更多点来演示样条曲线运动
+本项目演示了样条曲线运动的使用，项目基于Cmake构建，使用了睿尔曼提供的机械臂C语言开发包。
 
 
 ## **2. 代码结构**
 ```
 RMDemo_Moves
 ├── build              # CMake构建生成的输出目录（如Makefile、构建文件等）
-├── cmake              # CMake模块和脚本的存放目录
-│   ├── ...
-├── data
-│   └── robot_log.txt    # 日志、轨迹文件等数据文件目录（在执行过程中生成）
 ├── include              # 自定义头文件存放目录
-├── Robotic_Arm          睿尔曼机械臂二次开发包
+├── Robotic_Arm          # 睿尔曼机械臂二次开发包
 │   ├── include
-│   │   ├── rm_define.h  # 机械臂的定义
-│   │   └── rm_interface.h # 机械臂 API 的接口头文件
-│   ├── lib
-│   │   ├── api_c.dll    # Windows 的 API 库
-│   │   ├── api_c.lib    # Windows 的 API 库
-│   │   └── libapi_c.so  # Linux 的 API 库
+│   │   ├── rm_define.h  # 机械臂二次开发包头文件，包含了定义的数据类型、结构体
+│   │   └── rm_interface.h # 机械臂二次开发包头文件，声明了机械臂所有操作接口
+│   └── lib
+│       ├── api_c.dll    # Windows 64bit 的 API 库
+│       ├── api_c.lib    # Windows 64bit 的 API 库
+│       └── libapi_c.so  # Linux x86 的 API 库
 ├── src
-│   ├── main.c           # 主函数
+│   └── main.c           # 主函数
 ├── CMakeLists.txt       # 项目的顶层CMake配置文件
-├── readme.md            # 为示例工程提供详细的文档
-├── run.bat              # 快速运行脚本， Windows为bat脚本
-└── run.sh               # 快速运行脚本， linux为shell脚本
+├── readme.md            # 项目说明文档
+├── run.bat              # Windows快速运行脚本
+└── run.sh               # linux快速运行脚本
 
 ```
 
-## **3. 系统要求**
+## **3.项目下载**
 
-- 操作系统：Ubuntu 18.04或更高版本
-- 编译器：GCC 7.5或更高版本 (或任何其他兼容的C编译器)
-- 依赖库：
-  - CMake 3.10或更高版本
-  - RMAPI库(包含在 `Robotic_Arm/lib`目录中)
+通过项目链接下载本项目工程 文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-## 4. 环境配置
+## **4. 环境配置**
+
+在Windows和Linux环境下运行时需要的环境和依赖项：
+
+| 项目      | Linux                                          | Windows                                          |
+| :-------- | :--------------------------------------------- | :----------------------------------------------- |
+| 系统架构  | x86架构                                        | -                                                |
+| 编译器    | GCC 7.5或更高版本                              | MSVC2015或更高版本 64bit                         |
+| CMake版本 | 3.10或更高版本                                 | 3.10或更高版本                                   |
+| 特定依赖  | RMAPI Linux版本库（位于`Robotic_Arm/lib`目录） | RMAPI Windows版本库（位于`Robotic_Arm/lib`目录） |
 
 ### Linux环境配置
 
@@ -66,36 +67,58 @@ sudo apt install cmake
 cmake --version
 ```
 
-## **5. 注意事项**
+### Windows环境配置
 
-1. 该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
-2. moves样条曲线运动，其中的轨迹连接标志最后一个为0，前面的均为1，如果都为0则为movel直线运动。
+**1. 编译器（MSVC2015或更高版本）**
+MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可以按照以下步骤安装：
 
-## **6. 使用指南**
+1. 访问[Visual Studio官网](https://visualstudio.microsoft.com/)下载并安装Visual Studio。
+2. 在安装过程中，选择“使用C++的桌面开发”工作负载，这将包括MSVC编译器。
+3. 根据需要选择其他组件，如CMake（如果尚未安装）。
+4. 完成安装后，打开Visual Studio命令提示符（可在开始菜单中找到），输入`cl`命令检查MSVC编译器是否安装成功。
 
-### **6.1. 快速运行**
+**2. CMake**
+如果Visual Studio安装过程中未包含CMake，可以单独下载并安装CMake。
+
+1. 访问[CMake官网](https://cmake.org/download/)下载适用于Windows的安装程序。
+2. 运行安装程序，按照提示进行安装。
+3. 安装完成后，将CMake的bin目录添加到系统的PATH环境变量中（通常在安装过程中会询问是否添加）。
+4. 打开命令提示符或PowerShell，输入`cmake --version`检查CMake是否安装成功。
+
+## **5. 使用指南**
+
+### **5.1. 快速运行**
 
 按照以下步骤快速运行代码：
 
-1. **配置机械臂IP地址**：打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 类的初始化参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
+1. **配置机械臂IP地址**：
+   打开 `main.c` 文件，在 `main` 函数中修改 `robot_ip_address` 参数为当前机械臂的IP地址，默认IP地址为 `"192.168.1.18"`。
 
-    ```C
-    const char *robot_ip_address = "192.168.1.18";
-    int robot_port = 8080;
-    rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
-    ```
+   ```C
+   const char *robot_ip_address = "192.168.1.18";
 
-2. **命令行运行**：在终端进入 `RMDemo_Moves` 目录，输入以下命令运行C程序：
-   2.1 Linux下
-* ```bash
-    chmod +x run.sh
+   int robot_port = 8080;
+   rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
+   ```
+
+2. **linux 命令行运行**：
+   在终端进入 `RMDemo_Moves` 目录，输入以下命令运行C程序： 
+
+   ```bash
+   chmod +x run.sh
    ./run.sh
-    ```
+   ```
 
-2.2  Windows下: 双击运行 run.bat
+   运行结果如下：
 
+![alt text](image.png)
 
-### **6.2. 代码说明**
+3. **Windows 运行**： 双击run.bat脚本运行
+   运行结果如下：
+
+![alt text](image.png)
+
+### **5.2. 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
@@ -163,59 +186,7 @@ cmake --version
     disconnect_robot_arm(robot_handle);
     ```
 
-### **6.3. 运行结果示例**
-
-运行脚本后，输出结果如下所示：
-```
-API Version: 0.3.0.
-Robot handle created successfully: 1
-movej motion succeeded
-INFO: movej: Operation successful
-movej_p motion succeeded
-INFO: movej_p: Operation successful
-INFO: moves: Operation successful
-moves motion succeeded
-INFO: moves: Operation successful
-moves motion succeeded
-INFO: moves: Operation successful
-moves motion succeeded
-INFO: moves: Operation successful
-moves motion succeeded
-INFO: moves: Operation successful
-moves motion succeeded
-moves operation succeeded
-INFO: get_robot_pose: Operation successful
-Current robot pose: Position [-0.238786, 0.166277, 0.275834], Orientation [3.140000, -0.002000, 0.000000]
-INFO: disconnect_robot_arm: Operation successful
-```
-
-
-
-* **支持渠道**：
-
-  + 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
-  +
-
-- API文档：详见`rm_interface.h`文件。
-
-
-## **7. 许可证信息**
+## **6. 许可证信息**
 
 * 本项目遵循MIT许可证。
 
-## **8. 常见问题解答（FAQ）**
-
-
-- **Q:** 如何解决编译错误？
-  **A:** 请确保您的编译器版本和依赖库满足系统要求，并按照安装说明重新配置环境。
-
-- **Q:** 如何连接机器人？
-  **A:** 请参考示例代码中的连接步骤，确保机器人IP地址和端口正确配置。
-
-- **Q:** 样条曲线运动3个点以上？
-  **A:** 对于样条曲线运动，最后一段轨迹的连接标志应为 0，而之前的应为 1。如果全部为 0，将进行线性运动。样条曲线运动需至少连续下发三个点位（trajectory_connect设置为1），否则运动轨迹为直线
-
-- **Q:** libapi_c.so 未找到？
-  **A:** 请参考示例代码 路径问题：确保所有路径（包括头文件目录和库文件目录）都是正确的。
-  库文件问题：确保 libapi_c.so（在 Unix 系统上）或 api_c.dll（在 Windows 系统上）位于 ./Robotic_Arm/lib 目录下。
-  权限问题：确保你有权限读取所有相关文件和目录。
