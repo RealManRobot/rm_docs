@@ -18,7 +18,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           //   link: "/robot/guide/manual",
           // },
           {
-            text: "快速开始",
+            text: "硬件准备",
             link: "/robot/quickUseManual",
           },
         ],
@@ -26,14 +26,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       {
         text: "Demo示例",
         items: [
-          {
-            text: "开发指南",
-            link: "/robot/example/guide",
-          },
-          {
-            text: "JSON协议",
-            link: "/robot/example/json",
-          },
           {
             text: "API",
             collapsed: false,
@@ -794,12 +786,17 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "modbus",
+        collapsed:false,
         items: [
           {
             text: "modbus从站地址表",
             link: "/robot/modbus/index",
           },
         ],
+      },
+      {
+        text: "相关下载",
+        link:"/robot/download"
       },
       // {
       //   text: "常见问题",
@@ -811,345 +808,5 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       //     },
       //   ],
       // },
-    ],
-    "/joints/": [
-      {
-        text: "概述",
-        link: "/joints/summarize",
-      },
-      {
-        text: "版本对照表",
-        link: "/joints/versionControl",
-      },
-      {
-        text: "入门指南",
-        items: [
-          {
-            text: "用户手册",
-            link: "/joints/guide/manual",
-          },
-          {
-            text: "硬件准备",
-            link: "/joints/guide/hardwarePreparation",
-          },
-        ],
-      },
-      {
-        text: "Demo示例",
-        items: [
-          {
-            text: "开发指南",
-            link: "/joints/example/guide",
-          },
-          {
-            text: "JSON协议",
-            link: "/joints/example/json",
-          },
-          {
-            text: "API",
-            link: "/joints/example/api",
-          },
-          {
-            text: "ROS",
-            link: "/joints/example/ros",
-          },
-          {
-            text: "ROS2",
-            link: "/joints/example/ros2",
-          },
-        ],
-      },
-      {
-        text: "JSON协议",
-        items: [
-          {
-            text: "快速开始",
-            link: "/joints/json/",
-          },
-        ],
-      },
-      {
-        text: "API文档(C)",
-        collapsed: false,
-        items: [
-          {
-            text: "C & C++",
-            collapsed: true,
-            items: [
-              {
-                text: "类列表",
-                collapsed: true,
-                items: [
-                  {
-                    text: "连接机械臂",
-                    link: "/joints/api/c/classes/RoboticArm",
-                  },
-                  {
-                    text: "工具坐标系配置",
-                    link: "/joints/api/c/classes/ToolCoordinateConfig",
-                  },
-                  {
-                    text: "工作坐标系配置",
-                    link: "/joints/api/c/classes/WorkCoordinateConfig",
-                  },
-                  {
-                    text: "初始位置设置",
-                    link: "/joints/api/c/classes/ArmInitPosition",
-                  },
-                  {
-                    text: "机械臂运动控制指令类",
-                    link: "/joints/api/c/classes/ArmMotionControl",
-                  },
-                  {
-                    text: "机械臂状态查询",
-                    link: "/joints/api/c/classes/ArmState",
-                  },
-                  {
-                    text: "机械臂示教指令类",
-                    link: "/joints/api/c/classes/ArmTeachMove",
-                  },
-                  {
-                    text: "机械臂末端运动参数配置",
-                    link: "/joints/api/c/classes/ArmTipVelocityParameters",
-                  },
-                  {
-                    text: "通讯配置",
-                    link: "/joints/api/c/classes/CommunicationConfig",
-                  },
-                  {
-                    text: "控制器IO配置及获取",
-                    link: "/joints/api/c/classes/ControllerIOConfig",
-                  },
-                  {
-                    text: "拖动示教",
-                    link: "/joints/api/c/classes/DragTeach",
-                  },
-                  {
-                    text: "末端工具IO控制",
-                    link: "/joints/api/c/classes/EffectorIOConfig",
-                  },
-                  {
-                    text: "通用扩展关节控制",
-                    link: "/joints/api/c/classes/ExpandControl",
-                  },
-                  {
-                    text: "末端传感器六维力",
-                    link: "/joints/api/c/classes/Force",
-                  },
-                  {
-                    text: "透传力位混合控制补偿",
-                    link: "/joints/api/c/classes/GripperControl",
-                  },
-                  {
-                    text: "五指灵巧手",
-                    link: "/joints/api/c/classes/HandControl",
-                  },
-                  {
-                    text: "系统安装方式",
-                    link: "/joints/api/c/classes/InstallPos",
-                  },
-                  {
-                    text: "初始位置设置",
-                    link: "/joints/api/c/classes/JointConfigSettings",
-                  },
-                  {
-                    text: "关节配置",
-                    link: "/joints/api/c/classes/ArmInitPosition",
-                  },
-                  {
-                    text: "升降机构控制",
-                    link: "/joints/api/c/classes/LiftControl",
-                  },
-                  {
-                    text: "Modbus配置",
-                    link: "/joints/api/c/classes/ModbusConfig",
-                  },
-                  {
-                    text: "机械臂轨迹指令类",
-                    link: "/joints/api/c/classes/MovePlan",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        text: "API文档(Python)",
-        collapsed: false,
-        items: [
-          {
-            text: "示例",
-            link: "/joints/api/python",
-          },
-        ],
-      },
-      {
-        text: "ROS文档",
-        collapsed: false,
-        items: [
-          {
-            text: "示例",
-            link: "/joints/ros/",
-          },
-        ],
-      },
-      {
-        text: "ROS2文档",
-        collapsed: false,
-        items: [
-          {
-            text: "示例",
-            link: "/joints/ros2/",
-          },
-        ],
-      },
-      {
-        text: "常见问题",
-        collapsed: false,
-        items: [
-          {
-            text: "示例",
-            link: "/joints/FQA/",
-          },
-        ],
-      },
-    ],
-    "/compositeRobot/": [
-      {
-        text: "快速开始",
-        items: [
-          {
-            text: "示例",
-            link: "/compositeRobot/",
-          },
-        ],
-      },
-    ],
-    "/AI/": [
-      {
-        text: "概述",
-        link: "/AI/intro",
-      },
-      {
-        text: "Demo演示",
-        link: "/AI/demo/",
-      },
-      {
-        text: "SDK开发指南",
-        items: [
-          {
-            text: "yolo",
-            collapsed: false,
-            items: [
-              {
-                text: "简要介绍",
-                link: "/AI/developerGuide/yolo/introduction",
-              },
-              {
-                text: "快速开始",
-                link: "/AI/developerGuide/yolo/gettingStarted",
-              },
-              {
-                text: "环境配置",
-                link: "/AI/developerGuide/yolo/developmentEnvironmentConfig",
-              },
-              {
-                text: "接口示例",
-                link: "/AI/developerGuide/yolo/interfaceExample",
-              },
-              {
-                text: "资源下载",
-                link: "/AI/developerGuide/yolo/download",
-              },
-              {
-                text: "故障排除",
-                link: "/AI/developerGuide/yolo/troubleshooting",
-              },
-              {
-                text: "常见问题",
-                link: "/AI/developerGuide/yolo/fqa",
-              },
-            ],
-          },
-          {
-            text: "视觉伺服",
-            collapsed: false,
-            items: [
-              {
-                text: "介绍",
-                link: "/AI/visualServo/index",
-              },
-            ],
-          },
-          {
-            text: "6D姿态",
-            collapsed: false,
-            items: [
-              {
-                text: "介绍",
-                link: "/AI/6D-Attitude/index",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        text: "常见问题",
-        items: [
-          {
-            text: "cuda环境安装",
-            link: "/AI/FQA/environmentalInstallation",
-          },
-        ],
-      },
-      {
-        text: "相关下载",
-        link: "/AI/download",
-      },
-    ],
-    "/symbiosis/": [
-      {
-        text: "概述",
-        link: "/symbiosis/",
-      },
-      {
-        text: "软件方案",
-        collapsed: false,
-        items: [
-          {
-            text: "综合案例",
-            link: "/symbiosis/scheme/software",
-          },
-          {
-            text: "机械臂案例",
-            link: "/symbiosis/scheme/robot",
-          },
-          {
-            text: "ROS案例",
-            link: "/symbiosis/scheme/ros",
-          },
-        ],
-      },
-      {
-        text: "硬件生态",
-        collapsed: false,
-        items: [
-          {
-            text: "介绍",
-            link: "/symbiosis/hardware/",
-          },
-        ],
-      },
-      {
-        text: "常见问题",
-        collapsed: false,
-        items: [
-          {
-            text: "示例",
-            link: "/symbiosis/FQA/",
-          },
-        ],
-      },
     ],
   };
