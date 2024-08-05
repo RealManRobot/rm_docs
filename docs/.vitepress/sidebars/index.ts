@@ -691,18 +691,38 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
+        text: "常见问题",
+        collapsed: false,
+        items: [
+          {
+            text: "SDK",
+            link: "/robot/FQA/sdk",
+          },
+          {
+            text: "机械臂",
+            link: "/robot/FQA/arm",
+          },
+          {
+            text: "通讯配置",
+            link: "/robot/FQA/communicationConfig",
+          },
+          {
+            text: "电路连接",
+            link: "/robot/FQA/electricalConnections",
+          },
+          {
+            text: "ROS",
+            link: "/robot/FQA/ROS",
+          },
+          {
+            text: "其他",
+            link: "/robot/FQA/nounConcept",
+          },
+        ],
+      },
+      {
         text: "相关下载",
         link:"/robot/download"
       },
-      // {
-      //   text: "常见问题",
-      //   collapsed: false,
-      //   items: [
-      //     {
-      //       text: "示例",
-      //       link: "/robot/FQA/",
-      //     },
-      //   ],
-      // },
     ],
   };
