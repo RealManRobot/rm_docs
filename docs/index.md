@@ -168,4 +168,7 @@ tbody {
 .pager-link:hover{
     border-color:var(--vp-c-brand-1) !important;
 }
+.vp-doc .header-anchor::before{
+    content:none !important;
+}
 </style>
