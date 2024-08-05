@@ -2,10 +2,10 @@ import type { DefaultTheme } from "vitepress";
 export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
   {
     "/robot/": [
-      {
-        text: "概述",
-        link: "/robot/summarize",
-      },
+      // {
+      //   text: "概述",
+      //   link: "/robot/summarize",
+      // },
       {
         text: "版本对照表",
         link: "/robot/versionComparisonTable",
@@ -136,19 +136,19 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
-          {
-            text: "ROS",
-            link: "/robot/example/ros",
-          },
-          {
-            text: "ROS2",
-            link: "/robot/example/ros2",
-          },
+          // {
+          //   text: "ROS",
+          //   link: "/robot/example/ros",
+          // },
+          // {
+          //   text: "ROS2",
+          //   link: "/robot/example/ros2",
+          // },
         ],
       },
       {
         text: "JSON协议",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text:'关节配置',
@@ -692,7 +692,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "常见问题",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "SDK",
