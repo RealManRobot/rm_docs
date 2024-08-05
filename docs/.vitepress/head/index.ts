@@ -1,20 +1,20 @@
 import type { HeadConfig } from "vitepress";
 export const head: HeadConfig[] = [
-  ["link", { rel: "icon", href: "/assets/logo.png" }],
   ["link", { rel: "stylesheet", href: "/css/index.css" }],
+  [
+    'link',
+    { href: 'https://font.sec.miui.com/font/css?family=Source_Han_Serif:400,600:Source_Han_Serif', rel: 'stylesheet' }
+  ],
+  [
+    'link',
+    { href: 'https://font.sec.miui.com/font/css?family=MiSans:400,700:MiSans', rel: 'stylesheet' }
+  ],
+  ["link", { rel: "icon", href: "/assets/logo.png" }],
   ["meta", { name: "keywords", content: "睿尔曼智能科技" }],
-  [
-    'link',
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
-  ],
-  [
-    'link',
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
-  ],
-  [
-    'link',
-    { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
-  ],
+  // [
+  //   'link',
+  //   { href: 'https://font.sec.miui.com/font/css?family=MiSans:400,700:MiSan', rel: 'stylesheet' }
+  // ],
   [
     "script",
     {},

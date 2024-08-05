@@ -1,17 +1,22 @@
-:root{
-    --vp-c-indigo-1:#EC6102;
+:root {
+    --vp-c-indigo-1: #EC6102;
+    --vp-font-family-base:'MiSans','Source Han Serif','Punctuation SC', 'Inter', ui-sans-serif, system-ui, 'PingFang SC', 'Noto Sans CJK SC', 'Noto Sans SC', 'Heiti SC', 'Microsoft YaHei', 'DengXian', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-.VPFeature{
-    background-color:transparent !important;
-    border:none !important;
-    
+
+.VPFeature {
+    background-color: transparent !important;
+    border: none !important;
+
 }
-.item:nth-of-type(1) .VPFeature{
-    border-right:3px dashed var(--vp-c-bg-soft) !important;
+
+.item:nth-of-type(1) .VPFeature {
+    border-right: 3px dashed var(--vp-c-bg-soft) !important;
 }
-.item:nth-of-type(2) .VPFeature{
-    border-right:3px dashed var(--vp-c-bg-soft) !important;
+
+.item:nth-of-type(2) .VPFeature {
+    border-right: 3px dashed var(--vp-c-bg-soft) !important;
 }
+
 /*去除表格边框*/
 .vp-doc th,
 .vp-doc td {
@@ -26,13 +31,15 @@ tbody {
 }
 
 /*调整active*/
-.VPNavBarMenuLink{
+.VPNavBarMenuLink {
     padding: 0 !important;
 }
+
 .VPNavBarMenuLink.active {
     color: var(--vp-c-brand-1);
     padding: 0 !important;
 }
+
 .VPNavBarMenuLink>span {
     border: 1px solid transparent;
     height: 36px;
@@ -41,6 +48,7 @@ tbody {
     border-radius: 18px;
     padding: 0 16px;
 }
+
 .VPNavBarMenuLink.active>span {
     border-color: var(--vp-c-brand-1);
     background-color: var(--vp-c-bg) !important;
@@ -49,12 +57,15 @@ tbody {
 .VPNavBarMenuLink:hover {
     color: var(--vp-c-brand-1) !important;
 }
-.curtain{
-    background-color:var(--vp-c-bg) !important;
+
+.curtain {
+    background-color: var(--vp-c-bg) !important;
 }
-.VPSidebar{
-    background-color:var(--vp-c-bg) !important;
+
+.VPSidebar {
+    background-color: var(--vp-c-bg) !important;
 }
+
 /**/
 .VPSidebarItem.level-0.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-1.is-link>.item>.link:hover .text,
@@ -84,13 +95,16 @@ tbody {
 .title {
     color: var(--vp-c-brand-1);
 }
-.box .title{
+
+.box .title {
     color: var(--vp-c-text-1);
     font-size: 24px !important;
 }
-.details{
-    padding-top:16px !important;
+
+.details {
+    padding-top: 16px !important;
 }
+
 .VPSidebar {
     background-color: var(--vp-nav-bg-color);
 }
@@ -117,40 +131,53 @@ tbody {
     width: 0 !important;
     border-radius: 0 !important;
 }
-.icon{
+
+.icon {
     background-color: transparent !important;
-    justify-content:start !important;
+    justify-content: start !important;
 }
 
-.clip{
-    -webkit-text-fill-color:var(--vp-c-text-1) !important;
+.clip {
+    -webkit-text-fill-color: var(--vp-c-text-1) !important;
 }
-.titleP{
+
+.titleP {
     display: inline-block;
     -webkit-text-fill-color: var(--vp-c-brand-1) !important;
 }
-.VPButton.brand{
+
+.VPButton.brand {
     background-color: var(--vp-c-brand-1) !important;
-    padding:0 32px !important;
+    padding: 0 32px !important;
 }
-.message a{
+
+.message a {
     text-decoration: none;
-    text-decoration-line:none !important;
+    text-decoration-line: none !important;
     -webkit-backface-visibility: hidden;
 }
-.message:hover a{
+
+.message:hover a {
     text-decoration: none;
     -webkit-backface-visibility: hidden;
 }
-.pager-link:hover{
-    border-color:var(--vp-c-brand-1) !important;
+
+.pager-link:hover {
+    border-color: var(--vp-c-brand-1) !important;
 }
-.vp-doc .header-anchor::before{
-    content:none !important;
+
+.vp-doc .header-anchor::before {
+    content: none !important;
 }
-.logo{
-    height:32px !important;
+
+.logo {
+    height: 32px !important;
 }
-.icon{
-    margin-bottom:32px !important;
+
+.icon {
+    margin-bottom: 32px !important;
+}
+
+.vp-doc p {
+    color: var(--vp-c-text-2) !important;
 }
