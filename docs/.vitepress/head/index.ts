@@ -4,6 +4,18 @@ export const head: HeadConfig[] = [
   ["link", { rel: "stylesheet", href: "/css/index.css" }],
   ["meta", { name: "keywords", content: "睿尔曼智能科技" }],
   [
+    'link',
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
+  ],
+  [
+    'link',
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+  ],
+  [
+    'link',
+    { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
+  ],
+  [
     "script",
     {},
     `var _hmt = _hmt || [];
