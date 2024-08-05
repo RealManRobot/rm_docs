@@ -111,12 +111,12 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
    运行结果如下：
 
-![alt text](image.png)
+<!-- ![alt text](image.png) -->
 
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
-![alt text](image.png)
+<!-- ![alt text](image.png) -->
 
 ### **5.2. 关键代码说明**
 
