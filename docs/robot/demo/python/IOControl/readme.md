@@ -21,23 +21,47 @@ RMDemo_IOControl/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-##  4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
 
-2. 进入项目目录：`cd RMDemo_IOControl`
+| 项目         | Linux     | Windows   |
+| :--          | :--       | :--       |
+| 系统架构     | x86架构   | -         |
+| python       | 3.9以上   | 3.9以上   |
+| 特定依赖     | -         | -         |
 
-3. 安装依赖：`pip install -r requirements.txt`
+### Linux环境配置
+
+   1. 参考[python官网-linux](https://www.python.org/downloads/source/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+### Windows环境配置
+
+   1. 参考[python官网-Windows](https://www.python.org/downloads/windows/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
 
 ## 5. 注意事项
 
 该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
 
 ## 6. 使用指南
+
+### 6.1 快速运行
 
 1. **参数配置**
    
@@ -75,21 +99,95 @@ python ./src/main.py
    
    IO为高电平触发，参考 `9. 控制器和末端接口图` 完成IO接线后，即可通过对应IO端口高电平实现相应的IO功能。
 
-* **支持渠道**：
-  * 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
+5. **运行结果**
+
+运行脚本后，输出结果如下所示：
+
+```
+Successfully connected to the robot arm: 1
+
+API Version:  0.3.0 
+
+Drag teaching started
+Drag teaching has started, complete the drag operation and press Enter to continue...
+Drag teaching stopped
+Trajectory saved successfully, total number of points: 100
+Project send successfully but not run, data length verification failed
+Set default running program successfully: Program ID 100
+IO mode set successfully: IO number 1
+IO mode set successfully: IO number 2
+IO mode set successfully: IO number 3
+IO mode set successfully: IO number 4
+Successfully disconnected from the robot arm
+```
+
+#### 6.2 代码说明
+下面是 `demo_io_control.py` 文件的主要功能：
+
+- **拖动示教**
+
+    ```python
+    robot_controller.drag_teach(1)
+    ```
+    开始拖动示教并记录轨迹。
+
+- **保存轨迹**
+
+    ```python
+    lines = robot_controller.save_trajectory(file_path_test)
+    ```
+    将记录的轨迹保存到文件。
+
+- **添加文件头信息**
+
+    ```python
+    robot_controller.add_lines_to_file(file_path_test, 6, lines)
+    ```
+    将指定信息添加到轨迹文件中。
+
+- **发送项目文件**
+
+    ```python
+    robot_controller.send_project(file_path_test, only_save=1, save_id=test_id)
+    ```
+    将项目文件发送到机械臂。
+
+- **设置默认运行程序**
+
+    ```python
+    robot_controller.set_default_run_program(test_id)
+    ```
+    设置默认的在线编程文件。
+
+- **设置IO模式**
+
+    ```python
+    robot_controller.set_io_mode(1, 2)  # Set IO mode to input start function multiplexing mode
+    robot_controller.set_io_mode(2, 3)  # Set IO mode to input pause function multiplexing mode
+    robot_controller.set_io_mode(3, 4)  # Set IO mode to input continue function multiplexing mode
+    robot_controller.set_io_mode(4, 5)  # Set IO mode to input emergency stop function multiplexing mode
+    ```
+    设置IO端口的模式。
+
+- **设置数字IO输出状态**
+
+    ```python
+    robot_controller.set_do_state(io_num, io_state)
+    ```
+    设置数字IO端口的输出状态。
+
+- **获取数字IO输入状态**
+
+    ```python
+    robot_controller.get_io_input(io_num)
+    ```
+    获取数字IO端口的输入状态。
 
 ## 7. 许可证信息
 
+- 本项目遵循MIT许可证。
 
-* 本项目遵循MIT许可证。
-
-## 8. 常见问题解答（FAQ）
-
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP
-
-## 9. 控制器和末端接口图
+## 8. 控制器和末端接口图
 
 ### 控制器IO接口图1
 ![控制器_IO接口图1](控制器_IO接口图1.png)

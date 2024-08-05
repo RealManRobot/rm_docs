@@ -20,22 +20,45 @@ RMDemo_Lift/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-##  4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
 
-2. 进入项目目录：`cd RMDemo_Lift`
+| 项目         | Linux     | Windows   |
+| :--          | :--       | :--       |
+| 系统架构     | x86架构   | -         |
+| python       | 3.9以上   | 3.9以上   |
+| 特定依赖     | -         | -         |
 
-3. 安装依赖：`pip install -r requirements.txt`
+### Linux环境配置
+
+   1. 参考[python官网-linux](https://www.python.org/downloads/source/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+### Windows环境配置
+
+   1. 参考[python官网-Windows](https://www.python.org/downloads/windows/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
 
 ## 5. 注意事项
 
 1. 该Demo以RM65-B型号机械臂为例，请根据实际情况修改代码中的数据。
 2. 安装角度必须为侧装，以及搭配升降机设备。
+
 ## **6. 使用指南**
 
 ### 1. 快速运行
@@ -54,6 +77,39 @@ RMDemo_Lift/
     ```bash
     python ./src/main.py
     ```
+3. **运行结果**：
+
+运行脚本后，输出结果如下所示：
+
+```
+current api version:  0.2.9
+
+Successfully connected to the robot arm: 1
+
+API Version:  0.2.9
+
+Change work frame:  0
+
+Lift motion succeeded
+
+movej_p motion succeeded
+
+movel motion succeeded
+
+Gripper continuous force control gripping succeeded
+
+movel motion succeeded
+
+Lift motion succeeded
+
+movel motion succeeded
+
+Gripper release succeeded
+
+movel motion succeeded
+
+Successfully disconnected from the robot arm
+```
 
 ### 2. 代码说明
 
@@ -128,50 +184,6 @@ RMDemo_Lift/
     robot_controller.disconnect()
     ```
 
-### 3. 运行结果示例
+## 7. 许可证信息
 
-运行脚本后，输出结果如下所示：
-
-```
-current api version:  0.2.9
-
-Successfully connected to the robot arm: 1
-
-API Version:  0.2.9
-
-Change work frame:  0
-
-Lift motion succeeded
-
-movej_p motion succeeded
-
-movel motion succeeded
-
-Gripper continuous force control gripping succeeded
-
-movel motion succeeded
-
-Lift motion succeeded
-
-movel motion succeeded
-
-Gripper release succeeded
-
-movel motion succeeded
-
-Successfully disconnected from the robot arm
-```
-
-* **支持渠道**：
-
-	+ 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
-
-## 7. 许可证信息**
-
-* 本项目遵循MIT许可证。
-
-## 8. 常见问题解答（FAQ）**
-
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP。
+- 本项目遵循MIT许可证。

@@ -20,17 +20,39 @@ RMDemo_ForceControl/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-## 4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
 
-2. 进入项目目录：`cd RMDemo_ForceControl`
+| 项目         | Linux     | Windows   |
+| :--          | :--       | :--       |
+| 系统架构     | x86架构   | -         |
+| python       | 3.9以上   | 3.9以上   |
+| 特定依赖     | -         | -         |
 
-3. 安装依赖：`pip install -r requirements.txt`
+### Linux环境配置
+
+   1. 参考[python官网-linux](https://www.python.org/downloads/source/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+### Windows环境配置
+
+   1. 参考[python官网-Windows](https://www.python.org/downloads/windows/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
 
 ## **5. 注意事项**
 
@@ -55,6 +77,50 @@ RMDemo_ForceControl/
     ```bash
     python ./src/main.py
     ```
+   
+3. **运行结果**：在终端中可以看到机械臂执行的结果。
+
+    (1)运行脚本后，输出结果如下所示：
+
+```
+current api version:  0.2.9
+
+Successfully connected to the robot arm: 1
+
+API Version:  0.2.9 
+
+movej motion succeeded
+
+movej_p motion succeeded
+
+Set force control mode succeeded
+
+movel motion succeeded
+
+movel motion succeeded
+
+Stop force control mode succeeded
+Set force control mode succeeded
+
+movel motion succeeded
+
+movel motion succeeded
+
+Stop force control mode succeeded
+Set force control mode succeeded
+
+movel motion succeeded
+
+movel motion succeeded
+
+Stop force control mode succeeded
+
+Successfully disconnected from the robot arm
+```
+
+   (2)运行脚本后，运行轨迹从上至下如下图所示：
+
+![ForceControl_trajectory](ForceControl_trajectory.png)
 
 ### 2. 代码说明
 
@@ -112,61 +178,7 @@ RMDemo_ForceControl/
     robot_controller.disconnect()
     ```
 
-### 3. 运行结果示例
-
-#### 1)运行脚本后，输出结果如下所示：
-
-```
-current api version:  0.2.9
-
-Successfully connected to the robot arm: 1
-
-API Version:  0.2.9 
-
-movej motion succeeded
-
-movej_p motion succeeded
-
-Set force control mode succeeded
-
-movel motion succeeded
-
-movel motion succeeded
-
-Stop force control mode succeeded
-Set force control mode succeeded
-
-movel motion succeeded
-
-movel motion succeeded
-
-Stop force control mode succeeded
-Set force control mode succeeded
-
-movel motion succeeded
-
-movel motion succeeded
-
-Stop force control mode succeeded
-
-Successfully disconnected from the robot arm
-```
-
-#### 2）运行脚本后，运行轨迹从上至下如下图所示：
-
-![ForceControl_trajectory](ForceControl_trajectory.png)
-
-* **支持渠道**：
-
-	+ 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
 
 ## 7. 许可证信息
 
-
-* 本项目遵循MIT许可证。
-
-## 8. 常见问题解答（FAQ）
-
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP。
+- 本项目遵循MIT许可证。

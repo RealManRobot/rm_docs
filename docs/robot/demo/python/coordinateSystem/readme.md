@@ -6,7 +6,7 @@
 
 ## 2. 代码结构
 
-```python
+```
 RMDemo_CoordinateSystem/
 │
 ├── README.md        <- 项目的核心文档
@@ -27,15 +27,16 @@ RMDemo_CoordinateSystem/
 ## 4. 环境配置
 
 在Windows和Linux环境下运行时需要的环境和依赖项：
-| 项目 | Linux | Windows |
-| :-- | :-- | :-- |
-| 系统架构 | x86架构 | - |
-| python | 3.9以上 | 3.9以上 |
-| 特定依赖 |  |  |
+
+| 项目         | Linux     | Windows   |
+| :--          | :--       | :--       |
+| 系统架构     | x86架构   | -         |
+| python       | 3.9以上   | 3.9以上   |
+| 特定依赖     | -         | -         |
 
 ### Linux环境配置
 
-   1. 参考[python官网-linux](wwwwwwwwwwwwww)下载安装python3.9。
+   1. 参考[python官网-linux](https://www.python.org/downloads/source/)下载安装python3.9。
 
    2. 进入项目目录后打开终端运行以下指令安装依赖：
 
@@ -45,7 +46,7 @@ pip install -r requirements.txt
 
 ### Windows环境配置
 
-   1. 参考[python官网-Windows](wwwwwwwwwwwwww)下载安装python3.9。
+   1. 参考[python官网-Windows](https://www.python.org/downloads/windows/)下载安装python3.9。
 
    2. 进入项目目录后打开终端运行以下指令安装依赖：
 

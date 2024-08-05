@@ -20,17 +20,39 @@ RMDemo_ModbusRTU/
 └── Robotic_Arm/      <- 睿尔曼机械臂二次开发包
 ```
 
-## 3.环境与依赖
+## 3.项目下载
 
-* Python 3.9+
+通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-## 4. 安装说明
+## 4. 环境配置
 
-1. 安装Python 3.9
+在Windows和Linux环境下运行时需要的环境和依赖项：
 
-2. 进入项目目录：`cd RMDemo_ModbusRTU`
+| 项目         | Linux     | Windows   |
+| :--          | :--       | :--       |
+| 系统架构     | x86架构   | -         |
+| python       | 3.9以上   | 3.9以上   |
+| 特定依赖     | -         | -         |
 
-3. 安装依赖：`pip install -r requirements.txt`
+### Linux环境配置
+
+   1. 参考[python官网-linux](https://www.python.org/downloads/source/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+### Windows环境配置
+
+   1. 参考[python官网-Windows](https://www.python.org/downloads/windows/)下载安装python3.9。
+
+   2. 进入项目目录后打开终端运行以下指令安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
 
 ## 5. 注意事项
 
@@ -54,6 +76,31 @@ RMDemo_ModbusRTU/
     ```bash
     python ./src/main.py
     ```
+3. **运行结果**：运行成功后，终端会显示机械臂的运行状态。
+
+运行脚本后，输出结果如下所示：
+
+```
+current api version:  0.2.9
+
+Successfully connected to the robot arm: 1
+
+API Version:  0.2.9
+
+Successfully set the Modbus mode
+
+Successfully wrote the single coil
+
+Successfully read the coils, data: [1]
+
+Successfully wrote the single register
+
+Successfully read the holding registers, data: [180]
+
+Successfully closed the Modbus mode
+
+Successfully disconnected from the robot arm
+```
 
 ### 2. 代码说明
 
@@ -115,47 +162,11 @@ RMDemo_ModbusRTU/
     robot_controller.disconnect()
     ```
 
-### 3. 运行结果示例
-
-运行脚本后，输出结果如下所示：
-
-```
-current api version:  0.2.9
-
-Successfully connected to the robot arm: 1
-
-API Version:  0.2.9
-
-Successfully set the Modbus mode
-
-Successfully wrote the single coil
-
-Successfully read the coils, data: [1]
-
-Successfully wrote the single register
-
-Successfully read the holding registers, data: [180]
-
-Successfully closed the Modbus mode
-
-Successfully disconnected from the robot arm
-```
-
-* **支持渠道**：
-
-	+ 开发者论坛/社区：[链接地址](https://bbs.realman-robotics.cn)
-
 ## 7. 许可证信息
 
 * 本项目遵循MIT许可证。
 
-## 8. 常见问题解答（FAQ）**
-
-- **Q1：机械臂连接失败**
-
-  答案：修改过机械臂IP
-
-## 9. 控制器和末端接口图
+## 8. 控制器和末端接口图
 
 ### 控制器IO接口图1
 ![控制器_IO接口图1](控制器_IO接口图1.png)
