@@ -1,7 +1,17 @@
 :root{
     --vp-c-indigo-1:#EC6102;
 }
-
+.VPFeature{
+    background-color:transparent !important;
+    border:none !important;
+    
+}
+.item:nth-of-type(1) .VPFeature{
+    border-right:3px dashed var(--vp-c-bg-soft) !important;
+}
+.item:nth-of-type(2) .VPFeature{
+    border-right:3px dashed var(--vp-c-bg-soft) !important;
+}
 /*去除表格边框*/
 .vp-doc th,
 .vp-doc td {
@@ -31,12 +41,6 @@ tbody {
     border-radius: 18px;
     padding: 0 16px;
 }
-.curtain{
-    background-color:var(--vp-c-bg) !important;
-}
-.VPSidebar{
-    background-color:var(--vp-c-bg) !important;
-}
 .VPNavBarMenuLink.active>span {
     border-color: var(--vp-c-brand-1);
     background-color: var(--vp-c-bg) !important;
@@ -45,7 +49,12 @@ tbody {
 .VPNavBarMenuLink:hover {
     color: var(--vp-c-brand-1) !important;
 }
-
+.curtain{
+    background-color:var(--vp-c-bg) !important;
+}
+.VPSidebar{
+    background-color:var(--vp-c-bg) !important;
+}
 /**/
 .VPSidebarItem.level-0.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-1.is-link>.item>.link:hover .text,
@@ -72,6 +81,16 @@ tbody {
     background-color: var(--vp-c-brand-1) !important;
 }
 
+.title {
+    color: var(--vp-c-brand-1);
+}
+.box .title{
+    color: var(--vp-c-text-1);
+    font-size: 24px !important;
+}
+.details{
+    padding-top:16px !important;
+}
 .VPSidebar {
     background-color: var(--vp-nav-bg-color);
 }
@@ -98,7 +117,10 @@ tbody {
     width: 0 !important;
     border-radius: 0 !important;
 }
-
+.icon{
+    background-color: transparent !important;
+    justify-content:start !important;
+}
 
 .clip{
     -webkit-text-fill-color:var(--vp-c-text-1) !important;
@@ -109,6 +131,7 @@ tbody {
 }
 .VPButton.brand{
     background-color: var(--vp-c-brand-1) !important;
+    padding:0 32px !important;
 }
 .message a{
     text-decoration: none;
@@ -121,4 +144,7 @@ tbody {
 }
 .pager-link:hover{
     border-color:var(--vp-c-brand-1) !important;
+}
+.vp-doc .header-anchor::before{
+    content:none !important;
 }
