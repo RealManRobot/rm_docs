@@ -148,3 +148,9 @@ tbody {
 .vp-doc .header-anchor::before{
     content:none !important;
 }
+.logo{
+    height:32px !important;
+}
+.icon{
+    margin-bottom:32px !important;
+}
