@@ -7,6 +7,11 @@ export default defineConfig({
   title: " ",
   description: "睿尔曼智能科技有限公司-在线文档",
   lang: "zh-CN",
+  markdown:{
+    image:{
+      lazyLoading:true
+    }
+  },
   lastUpdated: true,
   head,
   themeConfig,

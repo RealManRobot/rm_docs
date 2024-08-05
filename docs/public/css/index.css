@@ -148,7 +148,19 @@ tbody {
 
 .VPButton.brand {
     background-color: var(--vp-c-brand-1) !important;
-    padding: 0 32px !important;
+    padding: 0 42px 0 28px !important;
+    position: relative;
+}
+.VPButton.brand::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url('../assets/enter.svg') no-repeat center center;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .message a {
