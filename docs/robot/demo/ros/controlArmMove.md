@@ -1,6 +1,5 @@
 # 机械臂运动控制`API_CONTROL_ARM_MOVE_DEMO`
 
----
 
 ## **1.项目介绍**
 

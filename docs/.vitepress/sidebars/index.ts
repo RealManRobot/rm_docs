@@ -136,10 +136,24 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
-          // {
-          //   text: "ROS",
-          //   link: "/robot/example/ros",
-          // },
+          {
+            text: "ROS",
+            collapsed: true,
+            items:[
+              {
+                text:"机械臂运动控制",
+                link:"/robot/demo/ros/controlArmMove",
+              },
+              {
+                text:"力位混合控制规划",
+                link:"/robot/demo/ros/forcePositionControl",
+              },
+              {
+                text:"机械臂状态",
+                link:"/robot/demo/ros/armState",
+              },
+            ]
+          },
           // {
           //   text: "ROS2",
           //   link: "/robot/example/ros2",
