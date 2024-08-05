@@ -24,10 +24,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "Demo示例",
+        text: "Demo演示",
         items: [
           {
-            text: "API",
+            text: "SDK演示",
             collapsed: false,
             items: [
               {

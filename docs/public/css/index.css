@@ -72,13 +72,6 @@ tbody {
     background-color: var(--vp-c-brand-1) !important;
 }
 
-.title {
-    color: var(--vp-c-brand-1);
-}
-.box .title{
-    color: var(--vp-c-text-1);
-    text-align: center;
-}
 .VPSidebar {
     background-color: var(--vp-nav-bg-color);
 }
@@ -105,11 +98,7 @@ tbody {
     width: 0 !important;
     border-radius: 0 !important;
 }
-.icon{
-    width: 100% !important;
-    height: 118px !important;
-    background-color: transparent !important;
-}
+
 
 .clip{
     -webkit-text-fill-color:var(--vp-c-text-1) !important;
