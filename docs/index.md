@@ -25,6 +25,15 @@ features:
     details: 为了适配多样的开发者场景和不同的开发环境，睿尔曼支持ROS、ROS2;JSON、C、C++、C#、Python、MATLAB等。
 ---
 
+<script>
+    var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4e8bfd1617a02c2841e7282af583cc0f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})()
+</script>
 <style>
   :root{
     --vp-c-indigo-1:#EC6102;
