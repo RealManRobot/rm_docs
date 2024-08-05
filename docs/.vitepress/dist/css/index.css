@@ -31,9 +31,15 @@ tbody {
     border-radius: 18px;
     padding: 0 16px;
 }
+.curtain{
+    background-color:var(--vp-c-bg) !important;
+}
+.VPSidebar{
+    background-color:var(--vp-c-bg) !important;
+}
 .VPNavBarMenuLink.active>span {
     border-color: var(--vp-c-brand-1);
-    background-color: #FDEFE5 !important;
+    background-color: var(--vp-c-bg) !important;
 }
 
 .VPNavBarMenuLink:hover {
