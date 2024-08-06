@@ -27,11 +27,13 @@
     ```C  
     char rm_wifi_net_t::mode[5]
     ```
+
 - ### 密码`password`
 
     ```C  
     char rm_wifi_net_t::password[16]
     ```
+
 - ### MAC 地址`ssid`
 
     ```C  
