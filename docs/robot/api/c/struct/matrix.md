@@ -2,20 +2,20 @@
 
 ## 类成员变量说明
 
-- ### `irow`
+### `irow`
 
-    ```C  
-    short rm_matrix_t::irow
-    ```
+```C  
+short rm_matrix_t::irow
+```
 
 ### `iline`
 
-    ```C  
-    short rm_matrix_t::iline
-    ```
+```C
+short rm_matrix_t::iline
+```
 
 ### `data`
 
-    ```C  
-    float rm_matrix_t::data[4][4]
-    ```
+```C
+float rm_matrix_t::data[4][4]
+```
