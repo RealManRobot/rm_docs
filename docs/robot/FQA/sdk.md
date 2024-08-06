@@ -37,7 +37,7 @@
 
 ### 八：ROS与API可以同时使用吗？
 
-可以在ROS中调用API中的算法接口，参考链接 https://blog.csdn.net/realman\_Rop
+可以在ROS中调用API中的算法接口，参考链接 https://blog.csdn.net/realman_Rop
 
 ### 九：如何在API中引用在线编程文件?
 
