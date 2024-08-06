@@ -1,6 +1,6 @@
 # ROS2快速开始
 
-机械臂的ROS2支持是基于`ros2_rm_robot`功能包，以下为使用环境。
+机械臂的ROS2支持是基于`ros2_rm_robot`功能包，以下为使用环境：
 * 当前支持的机械臂有RM65系列、RM75系列、ECO65系列、RML63系列，详细可参考网址 [RealMan robots](http://www.realman-robotics.com/)。
 * 版本1.0.1.
 * 支持的机械臂控制器版本1.4.3以上。
@@ -13,14 +13,7 @@
 
 ## 1.搭建环境
 
-在使用功能包之前我们首先需要进行如下操作。
-
-* 1.[安装ROS2](#安装ROS2)
-* 2.[安装Moveit2](#安装Moveit2)
-* 3.[配置功能包环境](#配置功能包环境)
-* 4.[编译](#编译)
-  
-### 安装ROS2
+### 1.1安装ROS2
 
 我们提供了ROS2的安装脚本ros2_install.sh，该脚本位于rm_install功能包中的scripts文件夹下，在实际使用时我们需要移动到该路径执行如下指令。
 
@@ -30,7 +23,7 @@ sudo bash ros2_install.sh
 
 如果不想使用脚本安装也可以参考网址 [ROS2_INSTALL](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)。
 
-### 安装Moveit2
+### 1.2安装Moveit2
 
 我们提供了Moveit2的安装脚本moveit2_install.sh，该脚本位于rm_install功能包中的scripts文件夹下，在实际使用时我们需要移动到该路径执行如下指令。
 
@@ -40,7 +33,7 @@ sudo bash moveit2_install.sh
 
 如果不想使用脚本安装也可以参考网址 [Moveit2_INSTALL](https://moveit.ros.org/install-moveit2/binary/)进行安装。
 
-### 配置功能包环境
+### 1.3配置功能包环境
 
 该脚本位于rm_driver功能包中的lib文件夹下，在实际使用时我们需要移动到该路径执行如下指令。
 
@@ -48,7 +41,7 @@ sudo bash moveit2_install.sh
 sudo bash lib_install.sh
 ```
 
-### 编译
+### 1.4编译
 
 以上执行成功后，可以执行如下指令进行功能包编译，首先需要构建工作空间，并将功能包文件导入工作空间下的src文件夹下，之后使用colcon build指令进行编译。
 
@@ -65,7 +58,7 @@ colcon build
 
 ## 2.功能运行
 
-**功能包简介:**
+### 2.1功能包简介
 
 1.	安装与环境配置([rm_install](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_install))
 * 该功能包为机械臂使用辅助功能包，主要作用为介绍功能包使用环境安装与搭建方式，功能包的依赖库安装和功能包编译方法。
@@ -90,7 +83,7 @@ colcon build
 
 以上为当前的十个功能包，每个功能包都有其独特的作用，详情请参考rm_doc功能包下的doc文件夹中的文档进行详细了解。
 
-### 2.1运行虚拟机械臂
+### 2.2运行虚拟机械臂
 
 使用如下指令可以启动gazebo显示仿真机械臂，并同时启动moveit2进行仿真机械臂的规划操控。
 
@@ -99,15 +92,15 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch rm_bringup rm_<arm_type>_gazebo.launch.py
 ```
 
-<arm_type>需要使用65、75、eco65、63字符进行代替，如使用RM65机械臂时，命令如下:
+`<arm_type>`需要使用`65`、`75`、`eco65`、`63`字符进行代替，如使用RM65机械臂时，命令如下:
 
 ```ros
 ros2 launch rm_bringup rm_65_gazebo.launch.py
 ```
 
-启动成功后即可使用moveit2进行虚拟机械臂的控制。
+启动成功后即可使用MoveIt2进行虚拟机械臂的控制。
 
-### 2.2控制真实机械臂
+### 2.3控制真实机械臂
 
 使用如下指令可以启动机械臂硬件驱动，并同时启动moveit2进行机械臂的规划操控。
 
@@ -124,7 +117,7 @@ ros2 launch rm_bringup rm_65_bringup.launch.py
 
 启动成功后即可使用moveit2进行真实机械臂的控制。
 
-### 安全提示
+## 3.安全提示
 
 在使用机械臂时，为保证使用者安全，请参考如下操作规范。
 * 每次使用前检查机械臂的安装情况，包括固定螺丝是否松动，机械臂是否存在震动、晃动的情况。

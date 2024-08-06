@@ -14,9 +14,9 @@ rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，�
 
 代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_moveit\_config。](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config。)
 
-# 2.rm\_moveit\_config使用
+## 1.rm\_moveit\_config使用
 
-## 2.1moveit控制虚拟机械臂
+### 1.1moveit控制虚拟机械臂
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点。
 
@@ -48,7 +48,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/1c844bd8-688b-4e68-a1b9-1203ff3e5c21.png)
 
-## 2.2 moveit控制真实机械臂
+### 1.2 moveit控制真实机械臂
 
 控制真实机械臂需要的控制指令相对较多一些，如下为详细的控制方式。
 
@@ -81,9 +81,9 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/29a5d9f5-84f5-4e59-baed-915bc3ca59f4.png)
 
-# 3.rm\_moveit\_config架构说明
+## 2.rm\_moveit\_config架构说明
 
-## 3.1功能包文件总览
+### 2.1功能包文件总览
 
 当前rm\_driver功能包的文件构成如下。
 ```
@@ -266,7 +266,7 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
         └── package.xml
 ```
 
-# 4.rm\_moveit\_config话题说明
+## 3.rm\_moveit\_config话题说明
 
 关于moveit的话题说明，为使其话题结构更加清晰明白在这里以节点话题的数据流图的方式进行查看和讲解。
 

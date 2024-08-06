@@ -1,20 +1,15 @@
-# rm_control使用说明
-
-## rm_control功能包说明
+# rm_control功能包说明
 
 rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功能包，该功能包的主要作用为将moveit2规划好的路径点进行进一步的细分，将细分后的路径点以透传的方式给到rm_driver，实现机械臂的规划运行。
+这里将从以下三个方面整体介绍该功能包：
 
-* 1.功能包使用。
-* 2.功能包架构说明。
-* 3.功能包话题说明。  
-通过这三部分内容的介绍可以帮助大家：
-* 1.了解该功能包的使用。
-* 2.熟悉功能包中的文件构成及作用。
-* 3.熟悉功能包相关的话题，方便开发和使用
+* 1.功能包使用:了解该功能包的使用。
+* 2.功能包架构说明：熟悉功能包中的文件构成及作用。
+* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。  
 
-## rm_control功能包使用
+## 1.rm_control功能包使用
 
-### 功能包基础使用
+### 1.1功能包基础使用
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_control功能包。
 
@@ -33,7 +28,7 @@ rm@rm-desktop:~$ ros2 launch  rm_control rm_65_control.launch.py
 ![image](doc/rm_control1.png)
 在单独启动该功能包的节点时并不发挥作用，需要结合rm_driver功能包和moveit2的相关节点一起使用才能发挥作用，详细请查看《rm_moveit2_config详解》相关内容。
 
-### 功能包进阶使用
+### 1.2功能包进阶使用
 
 在rm_control功能包中也有一些参数可以进行配置，由于参数并不是很多，这边将参数直接在launch文件中进行了配置。
 ![image](doc/rm_control2.png)
@@ -49,9 +44,9 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 
 编译成功后可按如上指令进行功能包启动。
 
-## rm_control功能包架构说明
+## 2.rm_control功能包架构说明
 
-### 功能包文件总览
+### 2.1功能包文件总览
 
 当前rm_driver功能包的文件构成如下。
 
@@ -70,7 +65,7 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
     └── rm_control.cpp              #代码源文件
 ```
 
-## rm_control话题说明
+## 3.rm_control话题说明
 
 如下为该功能包的话题说明：
 
@@ -103,4 +98,3 @@ Action Servers:代表其接受和发布的动作信息：
 
 - rm_group_controller/follow_joint_trajectory动作为rm_control与moveit2进行通信的桥梁，通过该动作rm_control接收到moveit2规划的路径，rm_control会将这些路径进行进一步细分由以上话题给到rm_driver。
 
-剩余话题和服务使用场景较少，这里不做详细介绍，大家可自行了解。

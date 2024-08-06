@@ -1,20 +1,13 @@
-# 睿尔曼机器人rm_description使用说明
-
-## rm_description功能包说明
+# rm_description功能包说明
 
 rm_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
+这里将从以下三个方面整体介绍该功能包：
 
-* 1.功能包使用。
-* 2.功能包架构说明。
-* 3.功能包话题说明。
-<br/>
-通过这三部分内容的介绍可以帮助大家：
-<br/>
-* 1.了解该功能包的使用。
-* 2.熟悉功能包中的文件构成及作用。
-* 3.熟悉功能包相关的话题，方便开发和使用
+* 1.功能包使用：了解该功能包的使用。
+* 2.功能包架构说明：熟悉功能包中的文件构成及作用。
+* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
 
-## rm_description功能包使用
+## 1.rm_description功能包使用
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_description功能包。  
 
@@ -50,11 +43,7 @@ rm@rm-desktop:~$ rviz2
 加载后就可以在rviz2的界面中看到当前的机械臂状态了。  
 ![image](doc/rm_description1.png)
 
-## rm_description功能包架构说明
-
-## 功能包文件总览
-
-当前rm_driver功能包的文件构成如下：
+## 2.rm_description功能包架构总览
 
 ```
 ├── CMakeLists.txt                #编译规则文件
@@ -120,7 +109,7 @@ rm@rm-desktop:~$ rviz2
     └── rml_63.urdf                      #63 urdf描述文件
 ```
 
-## rm_description话题说明
+## 3.rm_description话题说明
 
 如下为该功能包的话题说明：
 
@@ -148,10 +137,10 @@ rm@rm-desktop:~$ rviz2
   Action Clients:
 ```
 
-Subscribers:代表其订阅的话题：
+**Subscribers(订阅话题)：**
 
-- joint_states代表机械臂当前的状态，我们的rm_driver功能包运行时会发布该话题，这样rviz中的模型就会根据实际的机械臂状态进行运动。
+- `joint_states`代表机械臂当前的状态，我们的rm_driver功能包运行时会发布该话题，这样rviz中的模型就会根据实际的机械臂状态进行运动。
 
-Publishers:代表其当前发布的话题：
+**Publishers（发布话题）：**
 
-- /tf和/tf_static，这两个话题描述了机械臂关节与关节之间的坐标变换关系，也就是TF变换。剩余话题和服务使用场景较少，大家可自行了解。
+- `/tf`和`/tf_static`，这两个话题描述了机械臂关节与关节之间的坐标变换关系，也就是TF变换。剩余话题和服务使用场景较少，大家可自行了解。

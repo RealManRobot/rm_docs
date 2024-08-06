@@ -1,20 +1,15 @@
-# 睿尔曼机器人rm_moveit2_config使用说明
+# rm_moveit2_config功能包说明
 
-## rm_moveit2_config说明
+rm_moveit2_config是实现Moveit2控制真实机械臂的功能包，该功能包的主要作用为调用官方的Moveit2框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit2的配置和启动文件，通过该功能包我们可以实现moveit2控制虚拟机械臂和控制真实机械臂。
+这里将从以下三个方面整体介绍该功能包：
 
-rm_moveit2_config文件夹为实现moveit2控制真实机械臂的功能包，该功能包的主要作用为调用官方的moveit2框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit2的配置和启动文件，通过该功能包我们可以实现moveit2控制虚拟机械臂和控制真实机械臂。
+* 1.功能包使用：了解该功能包的使用。
+* 2.功能包架构说明：熟悉功能包中的文件构成及作用。
+* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
 
-* 1.功能包使用。
-* 2.功能包架构说明。
-* 3.功能包话题说明。
-通过这三部分内容的介绍可以帮助大家：
-* 1.了解该功能包的使用。
-* 2.熟悉功能包中的文件构成及作用。
-* 3.熟悉功能包相关的话题，方便开发和使用。
+## 1.rm_moveit2_config使用
 
-## rm_moveit2_config使用
-
-### moveit2控制虚拟机械臂
+### 1.1moveit2控制虚拟机械臂
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点。
 
@@ -22,7 +17,7 @@ rm_moveit2_config文件夹为实现moveit2控制真实机械臂的功能包，�
 rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config demo.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
 例如65机械臂的启动命令：  
 
 ```
@@ -36,7 +31,7 @@ rm@rm-desktop:~$ ros2 launch rm_65_config demo.launch.py
 规划执行。  
 ![image](doc/rm_moveit2_config3.png)
 
-### moveit2控制真实机械臂
+### 1.2moveit2控制真实机械臂
 
 控制真实机械臂需要的控制指令相对较多一些，如下为详细的控制方式。  
 首先运行底盘驱动节点。  
@@ -67,11 +62,7 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 完成以上操作后将会出现以下界面，我们可以通过拖动控制球的方式控制机械臂运动。  
 ![image](doc/rm_moveit2_config4.png)
 
-## rm_moveit2_config架构说明
-
-### 功能包文件总览
-
-当前rm_driver功能包的文件构成如下：
+## 2.rm_moveit2_config功能包架构文件总览
 
 ```
 ├── rm_63_config                                    #63机械臂moveit2功能包
@@ -176,10 +167,10 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
     └── package.xml
 ```
 
-## rm_moveit2_config话题说明
+## 3.rm_moveit2_config话题说明
 
-关于moveit2的话题说明，为使其话题结构更加清晰明白在这里以节点话题的数据流图的方式进行查看和讲解。
-在启动如上控制真实机器人的节点后可以运行如下指令查看当前话题的对接情况。
+这里以节点话题的数据流图的方式进行查看和讲解，使大家能够更清晰的了解话题结构。
+先启动如上控制真实机器人的节点，再运行如下指令查看当前话题的对接情况：
 
 ```
 rm@rm-desktop:~$ ros2 run rqt_graph rqt_graph
