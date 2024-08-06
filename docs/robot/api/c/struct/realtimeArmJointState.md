@@ -30,7 +30,7 @@
 
     *可以跳转[rm_joint_status_t](../struct/jointStatus)查阅结构体详细描述*
 
-- ### 力数据（六维力或一维力版本支持）`force_sensor`
+- ### 力数据（六维力版本支持）`force_sensor`
 
     ```C  
     rm_force_sensor_t rm_realtime_arm_joint_state_t::force_sensor
