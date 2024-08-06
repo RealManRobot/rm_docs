@@ -2,10 +2,10 @@ import type { DefaultTheme } from "vitepress";
 export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
   {
     "/robot/": [
-      // {
-      //   text: "概述",
-      //   link: "/robot/summarize",
-      // },
+      {
+        text: "概述",
+        link: "/robot/summarize",
+      },
       {
         text: "版本对照表",
         link: "/robot/versionComparisonTable",
@@ -736,7 +736,13 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "相关下载",
-        link:"/robot/download"
+        collapsed: true,
+        items:[
+          {
+            text: "其他",
+            link: "/robot/download/other",
+          },
+        ]
       },
     ],
   };
