@@ -14,7 +14,7 @@
 
 排查方法：分批次下发。
 
-### 四：get current arm state查询到的当前位姿pose中的姿态是xyz相对欧拉角还是zyx相对欧拉角？
+### 四：get_current_arm_state查询到的当前位姿pose中的姿态是xyz相对欧拉角还是zyx相对欧拉角？
 
 我们用的是roll-pitch-yaw表示法，对应的是ZYX欧拉角内旋。
 

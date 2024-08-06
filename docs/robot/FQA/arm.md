@@ -32,7 +32,6 @@ I系列机械臂支持WEB端示教器，建立网络连接后打开浏览器即�
 
 <div align=center><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mD6wz6nJbv/img/2603dde4-be84-4809-9e0a-477e1eb5f69d.png"></div>
 
-
 ### 七：机械臂的末端可以接什么型号的执行器？
 
 机械臂末端可对外输出5V/12V/24V，最大输出电流1.5A。具备RS485通信接口，可支持标准的Modbus RTU协议的设备。同时，我们将因时的两指夹爪和五指灵巧手的驱动写在末端控制板了，可以直接使用。
