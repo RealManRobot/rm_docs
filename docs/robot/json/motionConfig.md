@@ -633,10 +633,10 @@
 
 ```json
 //六自由度：
-{"state":"arm_current_trajectory","type":"movj","data":
+{"state":"arm_current_trajectory","type":"movej","data":
 [0,0,0,0,0,0]}
 //七自由度：
-{"state":"arm_current_trajectory","type":"movj","data":
+{"state":"arm_current_trajectory","type":"movej","data":
 [0,0,0,0,0,0,0]}
 ```
 
@@ -645,7 +645,7 @@
 ```json
 {
   "state": "arm_current_trajectory",
-  "type": "movl",
+  "type": "movel",
   "data": [0, 0, 0, 0, 0, 0]
 }
 ```
@@ -655,7 +655,7 @@
 ```json
 {
   "state": "arm_current_trajectory",
-  "type": "movc",
+  "type": "movec",
   "data": [0, 0, 0, 0, 0, 0]
 }
 ```
@@ -664,9 +664,9 @@
 
 ```json
 //六自由度：
-{"state":"arm_current_trajectory","type":"movj","data":[0,0,0,0,0,0]}
+{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0]}
 //七自由度：
-{"state":"arm_current_trajectory","type":"movj","data":[0,0,0,0,0,0,0]}
+{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0,0]}
 ```
 
 **参数说明：**
