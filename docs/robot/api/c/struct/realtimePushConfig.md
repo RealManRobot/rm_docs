@@ -28,7 +28,7 @@
     int rm_realtime_push_config_t::port
     ```
 
-    - ### 自定义的上报目标IP地址`ip`
+- ### 自定义的上报目标IP地址`ip`
 
     ```C  
     char rm_realtime_push_config_t::ip[28]
