@@ -139,25 +139,63 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "ROS",
             collapsed: true,
-            items:[
+            items: [
               {
-                text:"机械臂运动控制",
-                link:"/robot/demo/ros/controlArmMove",
+                text: "机械臂运动控制",
+                link: "/robot/demo/ros/controlArmMove",
               },
               {
-                text:"力位混合控制规划",
-                link:"/robot/demo/ros/forcePositionControl",
+                text: "力位混合控制规划",
+                link: "/robot/demo/ros/forcePositionControl",
               },
               {
-                text:"机械臂状态",
-                link:"/robot/demo/ros/armState",
+                text: "机械臂状态",
+                link: "/robot/demo/ros/armState",
               },
-            ]
+            ],
           },
-          // {
-          //   text: "ROS2",
-          //   link: "/robot/example/ros2",
-          // },
+          {
+            text: "ROS2",
+            collapsed: false,
+            items: [
+              {
+                text: "Foxy",
+                collapsed: true,
+                items: [
+                  {
+                    text: "机械臂运动控制",
+                    link: "/robot/demo/ros2/foxy/controlArmMove",
+                  },
+                  {
+                    text: "力位混合控制规划",
+                    link: "/robot/demo/ros2/foxy/forcePositionControl",
+                  },
+                  {
+                    text: "获取机械臂状态",
+                    link: "/robot/demo/ros2/foxy/getArmState",
+                  },
+                ],
+              },
+              {
+                text: "Humble",
+                collapsed: true,
+                items: [
+                  {
+                    text: "机械臂运动控制",
+                    link: "/robot/demo/ros2/humble/controlArmMove",
+                  },
+                  {
+                    text: "力位混合控制规划",
+                    link: "/robot/demo/ros2/humble/forcePositionControl",
+                  },
+                  {
+                    text: "获取机械臂状态",
+                    link: "/robot/demo/ros2/humble/getArmState",
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {
@@ -165,20 +203,20 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text:'关节配置',
-            link:'/robot/json/jointConfig',
+            text: "关节配置",
+            link: "/robot/json/jointConfig",
           },
           {
-            text:'机械臂配置',
-            link:'/robot/json/armConfig',
+            text: "机械臂配置",
+            link: "/robot/json/armConfig",
           },
           {
-            text:'运动配置',
-            link:'/robot/json/motionConfig',
+            text: "运动配置",
+            link: "/robot/json/motionConfig",
           },
           {
-            text:'系统配置',
-            link:'/robot/json/systemConfig',
+            text: "系统配置",
+            link: "/robot/json/systemConfig",
           },
           {
             text: "升降机",
@@ -685,18 +723,18 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/gazebo",
           },
           {
-            text: "moveit2_config",
+            text: "moveit2Config",
             link: "/robot/ros2/moveit2Config",
           },
           {
-            text: "ros_interfaces",
+            text: "rosInterfaces",
             link: "/robot/ros2/rosInterfaces",
           },
         ],
       },
       {
         text: "Modbus",
-        collapsed:false,
+        collapsed: false,
         items: [
           {
             text: "Modbus从站地址表",
@@ -737,12 +775,12 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       {
         text: "相关下载",
         collapsed: true,
-        items:[
+        items: [
           {
             text: "其他",
             link: "/robot/download/other",
           },
-        ]
+        ],
       },
     ],
   };
