@@ -2,11 +2,11 @@
 
 ---
 
-## **1.项目介绍**
+## 1.项目介绍
 
 本项目是一个基于机械臂机械臂本体和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在执行成功或失败时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
-## **2. 代码结构**
+## 2.代码结构
 
 ```
 ├── CMakeLists.txt                           <-CMake编译文件
@@ -19,11 +19,12 @@
 └── src                                      <-C++源码文件夹
     └── api_Move_demo.cpp                    <-源码文件
 ```
-## 3. 项目下载
+
+## 3.项目下载
 
 通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 
-## 4. 环境配置
+## 4.环境配置
 
 | 项目 | 内容 |
 | :-- | :-- |
@@ -92,7 +93,7 @@
     source ~/demo_ws/install/setup.bash
     ```
 
-## **5. 使用指南**
+## 5.使用指南
 
 * **命令行使用**：
 
@@ -123,7 +124,7 @@
     [move_demo-1]  
     [move_demo-1] [INFO] [1722921194.075138936] [Move_demo_sub_node]: *******MoveC succeeded   //MoveC运动成功时的提示信息
     ```
-### 关键代码说明：
+## 6.关键代码说明
 
 下面是 `api_Move_demo.cpp` 文件的主要功能：
 
@@ -226,6 +227,6 @@
     this->movec_publisher_->publish(moveC_TargetPose);
     ```
 
-## **6. 许可证信息**
+## 7.许可证信息
 
 * 具体许可证内容请参见`LICENSE`文件。
