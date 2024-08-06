@@ -6,10 +6,10 @@ export const head: HeadConfig[] = [
   //   'link',
   //   { href: 'https://font.sec.miui.com/font/css?family=Source_Han_Serif:400,600:Source_Han_Serif', rel: 'stylesheet' }
   // ],
-  [
-    'link',
-    { href: 'https://font.sec.miui.com/font/css?family=MiSans:500:MiSans', rel: 'stylesheet' }
-  ],
+  // [
+  //   'link',
+  //   { href: 'https://font.sec.miui.com/font/css?family=MiSans:500:MiSans', rel: 'stylesheet' }
+  // ],
   ["link", { rel: "icon", href: "/assets/logo.png" }],
   ["meta", { name: "keywords", content: "睿尔曼智能科技" }],
   // [
