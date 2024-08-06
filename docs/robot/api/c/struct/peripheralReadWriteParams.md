@@ -4,7 +4,7 @@
 
 - ### 通讯端口`port`
 
-0-控制器RS485端口，1-末端接口板RS485接口，3-控制器ModbusTCP设备
+    0-控制器RS485端口，1-末端接口板RS485接口，3-控制器ModbusTCP设备
 
     ```C  
     int rm_peripheral_read_write_params_t::port
@@ -12,7 +12,7 @@
 
 - ### 数据起始地址`poaddressrt`
 
-    ``````C
+    ```C
     int rm_peripheral_read_write_params_t::address
     ```
 
