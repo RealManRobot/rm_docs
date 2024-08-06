@@ -2,7 +2,9 @@
 
 ## 类成员变量说明
 
-- ### 上一时刻关节角度，单位°`q_in`
+- ### 上一时刻关节角度`q_in`
+
+  单位°。
 
     ```C  
     float rm_inverse_kinematics_params_t::q_in[ARM_DOF]
@@ -16,7 +18,7 @@
 
 - ### 姿态参数类别`flag`
 
-0-四元数；1-欧拉角
+    0-四元数；1-欧拉角。
 
     ```C
     uint8_t rm_inverse_kinematics_params_t::flag
