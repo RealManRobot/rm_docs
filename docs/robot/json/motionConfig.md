@@ -574,7 +574,7 @@
 
 ```json
 {
-  "command": "set_arm_delete_current_trajectory",
+  "command": "set_delete_current_trajectory",
   "delete_current_trajectory": true
 }
 ```
