@@ -23,3 +23,4 @@ def rm_ctypes_wrap.rm_peripheral_read_write_params_t.__init__(self, port = None,
 |  `address`  |  `int, optional`  |  数据起始地址，默认为 None。  |
 |  `device`  |  `int, optional`  |  外设设备地址，默认为 None。  |
 |  `num`  |  `int, optional`  |  数据数量，默认为 None。  |
+
