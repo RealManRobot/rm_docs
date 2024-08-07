@@ -8,7 +8,7 @@
 |  `quaternion`  |  `rm_quat_t`  |  四元数。  |
 |  `euler`  |  `rm_euler_t`  |  欧拉角，单位：rad。  |
 
-## 构造函数
+## 成员函数
 
 ```python
 rm_ctypes_wrap.rm_pose_t.to_dict(self, recurse = True)
