@@ -475,11 +475,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/struct/peripheralReadWriteParams",
               },
               {
-                text: "UPD主动上报",
+                text: "UDP主动上报",
                 link: "/robot/api/c/struct/realtimeArmJointState",
               },
               {
-                text: "UPD主动上报接口配置",
+                text: "UDP主动上报接口配置",
                 link: "/robot/api/c/struct/realtimePushConfig",
               },
               {
