@@ -15,7 +15,7 @@
 rm_ctypes_wrap.rm_peripheral_read_write_params_t.__init__(self, port = None, address = None, device = None, num = None)
 ```
 
-## 参数说明
+**参数说明：**
 
 |  属性  |  类型  |  说明  |
 | :--- | :--- | :--- |
