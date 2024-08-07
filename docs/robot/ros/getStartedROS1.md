@@ -15,14 +15,15 @@
 
 ### 1.1安装ROS
 
-ROS安装可以参考网址进行安装
+ROS安装可以下面的参考网址进行安装：
 
 * [MELODIC](https://wiki.ros.org/melodic/Installation/Ubuntu)
 * [NOETIC](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
 ### 1.2安装moveit
 
-Moveit可以参考网址进行安装
+Moveit可以参考下面的网址进行安装：
+
 * [Moveit_install](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html)。
 
 ### 1.4编译
