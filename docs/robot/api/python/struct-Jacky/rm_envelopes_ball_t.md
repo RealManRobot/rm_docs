@@ -6,7 +6,7 @@
 rm_ctypes_wrap.rm_envelopes_ball_t.__init__(self, str name = None, float radius = None, float x = None, float y = None, float z = None)
 ```
 
-**参数初始化：**
+**参数说明：**
 
 |  属性  |  类型  |  说明  |
 | :--- | :--- | :--- |
