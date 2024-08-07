@@ -6,7 +6,7 @@
 rm_ctypes_wrap.rm_envelope_balls_list_t.__init__(self, str tool_name = None, balls = None, size = None)
 ```
 
-**参数初始化：**
+**参数说明：**
 
 |  属性  |  类型  |  说明  |
 | :--- | :--- | :--- |
