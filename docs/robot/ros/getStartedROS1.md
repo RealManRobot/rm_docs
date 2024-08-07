@@ -16,8 +16,9 @@
 ### 1.1安装ROS
 
 ROS安装可以参考网址进行安装
-* [MELODIC](https://wiki.ros.org/melodic/Installation/Ubuntu)。
-* [NOETIC](https://wiki.ros.org/noetic/Installation/Ubuntu)。
+
+* [MELODIC](https://wiki.ros.org/melodic/Installation/Ubuntu)
+* [NOETIC](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
 ### 1.2安装moveit
 
