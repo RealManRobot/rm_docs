@@ -14,3 +14,4 @@
 ```Python
 def Robotic_Arm.rm_ctypes_wrap.rm_peripheral_read_write_params_t.__init__(self, port = None, address = None, device = None, num = None)
 ```
+
