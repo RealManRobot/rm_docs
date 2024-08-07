@@ -23,7 +23,7 @@ void rm_algo_init_sys_data(rm_robot_arm_model_e Mode,rm_force_type_e Type)
 |   Type  |    输入参数    |    传感器型号。    |
 
 - **使用示例**
-  
+
 ```C
 rm_robot_arm_model_e Mode = RM_MODEL_RM_75_E;
 rm_force_type_e Type = RM_MODEL_RM_SF_E;
