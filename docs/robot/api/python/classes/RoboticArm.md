@@ -32,6 +32,8 @@ __init__(self, mode: rm_thread_mode_e = None):
 rm_create_robot_arm(self, ip: str, port: int, level: int = 3, log_func: CFUNCTYPE = None) -> rm_robot_handle:
 ```
 
+*可以跳转[rm_robot_handle](../struct/rm_robot_handle)查阅结构体详细描述*
+
 - **参数说明:**
 
 |   参数    |   类型    |   说明    |
