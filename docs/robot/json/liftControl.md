@@ -51,7 +51,7 @@
 成功到位。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":3}
+{"device":3,"state":"current _trajectory_state", "trajectory_connect":0,"trajectory_state":true}
 ```
 
 **参数说明：**
