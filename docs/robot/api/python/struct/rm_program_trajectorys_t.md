@@ -8,7 +8,7 @@
 |  `page_size`  |  `int`  |  每页大小。  |
 |  `list_size`  |  `int`  |  返回总数量。  |
 |  `vague_search`  |  `bytes`  |  模糊搜索字符串。  |
-|  `trajectory_list`  |  `list`  |  符合的在线编程列表（包含`rm_trajectory_data_t`结构体的数组）。  |
+|  `trajectory_list`  |  `list`  |  符合的在线编程列表（包含[rm_trajectory_data_t](../struct/rm_trajectory_data_t)结构体的数组）。  |
 
 ## 成员函数
 
