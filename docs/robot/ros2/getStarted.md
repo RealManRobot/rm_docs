@@ -5,10 +5,10 @@
 * 版本1.0.1.
 * 支持的机械臂控制器版本1.4.3以上。
 * 基于的Ubuntu版本为22.04。
-* ROS2版本支持humble和fox。
+* ROS2版本支持humble和foxy。
 
-Humbe功能包下载地址：[wwwwwwwww]()
-fox功能包下载地址：[wwwwwwwww]()
+humble功能包下载地址：[wwwwwwwww]()
+foxy功能包下载地址：[wwwwwwwww]()
 
 ---
 
