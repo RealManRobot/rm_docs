@@ -180,6 +180,8 @@ arm.rm_delete_robot_arm()
 rm_read_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
 ```
 
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -230,6 +232,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_read_input_status(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -282,6 +286,8 @@ arm.rm_delete_robot_arm()
 rm_read_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
 ```
 
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -332,6 +338,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_read_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -384,6 +392,8 @@ arm.rm_delete_robot_arm()
 rm_write_single_coil(self, write_params: rm_peripheral_read_write_params_t, data: int) -> int:
 ```
 
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -415,6 +425,8 @@ rm_write_single_coil(self, write_params: rm_peripheral_read_write_params_t, data
 ```python
 rm_write_single_register(self, write_params: rm_peripheral_read_write_params_t, data: int) -> int:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -460,6 +472,8 @@ arm.rm_delete_robot_arm()
 rm_write_registers(self, write_params: rm_peripheral_read_write_params_t, data: list[int]) -> int:
 ```
 
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -503,6 +517,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_write_coils(self, write_params: rm_peripheral_read_write_params_t, data: list[int]) -> int:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -548,6 +564,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_read_multiple_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -600,6 +618,8 @@ arm.rm_delete_robot_arm()
 rm_read_multiple_holding_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
 ```
 
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -650,6 +670,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_read_multiple_input_registers(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, list[int]]:
 ```
+
+*可以跳转[rm_peripheral_read_write_params_t](../struct/rm_peripheral_read_write_params_t)查阅结构体详细描述*
 
 - **参数说明:**
 
