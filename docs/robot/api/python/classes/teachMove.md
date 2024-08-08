@@ -57,6 +57,8 @@ arm.rm_delete_robot_arm()
 rm_set_pos_step(self, teach_type: rm_pos_teach_type_e, step: float, v: int, block: int) -> int:
 ```
 
+*可以跳转[typeList](../type/typeList)查阅`rm_pos_teach_type_e`枚举详细描述*
+
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
@@ -102,6 +104,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_set_ort_step(self, teach_type: rm_ort_teach_type_e, step: float, v: int, block: int) -> int:
 ```
+
+*可以跳转[typeList](../type/typeList)查阅`rm_ort_teach_type_e`枚举详细描述*
 
 - **参数说明:**
 
@@ -192,6 +196,8 @@ arm.rm_delete_robot_arm()
 rm_set_pos_teach(self, teach_type: rm_pos_teach_type_e, direction: int, v: int) -> int:
 ```
 
+*可以跳转[typeList](../type/typeList)查阅`rm_pos_teach_type_e`枚举详细描述*
+
 - **参数说明:**
 
 |   名称    |   类型    |   说明    |
@@ -234,6 +240,8 @@ arm.rm_delete_robot_arm()
 ```python
 rm_set_ort_teach(self, teach_type: rm_ort_teach_type_e, direction: int, v: int) -> int:
 ```
+
+*可以跳转[typeList](../type/typeList)查阅`rm_ort_teach_type_e`枚举详细描述*
 
 - **参数说明:**
 
