@@ -4,7 +4,6 @@
 
 > **注意**</br>配置正确并开启三线程模式后，通过注册回调函数可接收并处理主动上报数据。
 
-
 ## 设置UDP机械臂状态主动上报配置`rm_set_realtime_push()`
 
 - **方法原型：**
@@ -12,6 +11,8 @@
 ```python
 rm_set_realtime_push(self, config: rm_realtime_push_config_t) -> int:
 ```
+
+*可以跳转[rm_realtime_push_config_t](../struct/rm_realtime_push_config_t)查阅结构体详细描述*
 
 - **参数说明:**
 
