@@ -10,4 +10,4 @@
 | `joint_status`| [rm_joint_status_t](../struct/rm_joint_status_t)    | 机械臂关节状态结构体 |
 | `force_sensor`| [rm_force_sensor_t](../struct/rm_force_sensor_t)    | 力传感器数据结构体  |
 | `sys_err`     | `uint16_t`         | 系统错误码                                 |
-| `waypoint`    | [rm_pose_t](../struct/rm_pose_t)       | 当前位置姿态结构体     |
+| `waypoint`    | [rm_pose_t](../struct/pose)       | 当前位置姿态结构体     |

@@ -9,7 +9,7 @@
 | `total_size`  | `int`  | 路点列表的总大小（即总路点数量）。 |
 | `vague_search`| `bytes`  | 模糊搜索字符串（用于搜索路径点时的关键字）。 |
 | `list_len`    | `int`    | 返回符合的全局路点列表长度。 |
-| `points_list` | [rm_waypoint_t](../struct/rm_waypoint_t) array[100] | 返回符合的全局路点列表。 |
+| `points_list` | [rm_waypoint_t](../struct/waypoint) array[100] | 返回符合的全局路点列表。 |
 
 ## 成员函数
 
