@@ -4,9 +4,9 @@
 
 |  属性  |  类型  |  说明  |
 | :--- | :--- | :--- |
-|  `position`  |  `rm_position_t`  |  位置，单位：m。 |
-|  `quaternion`  |  `rm_quat_t`  |  四元数。  |
-|  `euler`  |  `rm_euler_t`  |  欧拉角，单位：rad。  |
+|  `position`  |  [rm_position_t](../struct/rm_position_t)  |  位置，单位：m。 |
+|  `quaternion`  |  [rm_quat_t](../struct/rm_quat_t)  |  四元数。  |
+|  `euler`  |  [rm_euler_t](../struct/rm_euler_t)  |  欧拉角，单位：rad。  |
 
 ## 成员函数
 
