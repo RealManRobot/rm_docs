@@ -10,6 +10,8 @@
 __init__(self, mode: rm_thread_mode_e = None):
 ```
 
+*可以跳转[typeList](../type/typeList)查阅`rm_thread_mode_e`枚举详细描述*
+
 - **参数说明:**
 
 |   参数    |   类型    |   说明    |
