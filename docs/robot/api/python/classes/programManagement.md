@@ -10,7 +10,7 @@
 rm_send_project(self, send_project: rm_send_project_t) -> tuple[int, int]:
 ```
 
-*可以跳转[rm_send_project_t](../struct/rm_send_project_t)查阅结构体详细描述*
+*可以跳转[rm_send_project_t](../struct/sendProject.md)查阅结构体详细描述*
 
 - **参数说明:**
 

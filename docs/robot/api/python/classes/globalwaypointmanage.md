@@ -11,7 +11,7 @@
 rm_add_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
-*可以跳转[rm_waypoint_t](../struct/rm_waypoint_t)查阅结构体详细描述*
+*可以跳转[rm_waypoint_t](../struct/waypoint.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -56,7 +56,7 @@ arm.rm_delete_robot_arm()
 rm_update_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
-*可以跳转[rm_waypoint_t](../struct/rm_waypoint_t)查阅结构体详细描述*
+*可以跳转[rm_waypoint_t](../struct/waypoint.md)查阅结构体详细描述*
 
 - **参数说明:**
 

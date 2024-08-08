@@ -77,7 +77,7 @@ rm_algo_get_angle(self) -> tuple[float, float, float]:
 rm_algo_set_workframe(self, frame: rm_frame_t) -> None:
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -430,7 +430,7 @@ rm_algo_quaternion2euler(self, quat: list[float]) -> list[float]:
 rm_algo_euler2matrix(self, eu: list[float]) -> rm_matrix_t:
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/matrix.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -480,7 +480,7 @@ rm_matrix_t: 旋转矩阵。
 rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> list[float]:
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/matrix.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -537,7 +537,7 @@ rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag:
 rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag: int = 1) -> list[float]:
 ```
 
-*可以跳转[rm_matrix_t](../struct/rm_matrix_t)和[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
+*可以跳转[rm_matrix_t](../struct/matrix.md)和[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -567,7 +567,7 @@ rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag:
 rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> list[float]:
 ```
 
-*可以跳转[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
+*可以跳转[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -596,7 +596,7 @@ rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> list[float]:
 rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> list[float]:
 ```
 
-*可以跳转[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
+*可以跳转[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -625,7 +625,7 @@ rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> list[float]:
 rm_algo_RotateMove(self, curr_joint: list[float], rotate_axis: int, rotate_angle: float, choose_axis: rm_pose_t, flag: int = 1) -> list[float]:
 ```
 
-*可以跳转[rm_pose_t](../struct/rm_pose_t)查阅结构体详细描述*
+*可以跳转[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
 
 - **参数说明:**
 

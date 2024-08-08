@@ -96,7 +96,7 @@ arm.rm_delete_robot_arm()
 rm_set_manual_tool_frame(self, frame: rm_frame_t) -> int:
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -219,7 +219,7 @@ arm.rm_delete_robot_arm()
 rm_update_tool_frame(self, frame: rm_frame_t) -> int:
 ```
 
-*可以跳转[rm_frame_t](../struct/rm_frame_t)查阅结构体详细描述*
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 

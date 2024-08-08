@@ -264,8 +264,6 @@ rm_get_arm_event_call_back(self, event_callback: rm_event_callback_ptr):
         >>> arm.rm_get_arm_event_call_back(event_callback)
 ```
 
-*可以跳转[rm_event_push_data_t](../struct/rm_event_push_data_t)查阅结构体详细描述*
-
 ## 注册UDP机械臂实时状态主动上报信息回调函数`rm_realtime_arm_state_call_back()`
 
 该回调函数接收rm_realtime_arm_joint_state_t类型数据作为参数，没有返回值。当使用三线程，并且UDP机械臂状态主动上报正确配置时，数据会以设定的周期返回。

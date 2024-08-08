@@ -22,7 +22,7 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 rm_add_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> int:   
 ```
 
-*可以跳转[rm_fence_config_t](../struct/rm_fence_config_t)查阅结构体详细描述*
+*可以跳转[rm_fence_config_t](../struct/fenceConfig.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -67,7 +67,7 @@ arm.rm_delete_robot_arm()
 rm_update_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> int:
 ```
 
-*可以跳转[rm_fence_config_t](../struct/rm_fence_config_t)查阅结构体详细描述*
+*可以跳转[rm_fence_config_t](../struct/fenceConfig.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -366,7 +366,7 @@ arm.rm_delete_robot_arm()
 rm_set_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> int:
 ```
 
-*可以跳转[rm_fence_config_t](../struct/rm_fence_config_t)查阅结构体详细描述*
+*可以跳转[rm_fence_config_t](../struct/fenceConfig.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -450,7 +450,7 @@ arm.rm_delete_robot_arm()
 rm_set_virtual_wall_enable(self, virtual_wall_enable: rm_electronic_fence_enable_t) -> int:
 ```
 
-*可以跳转[rm_electronic_fence_enable_t](../struct/rm_electronic_fence_enable_t)查阅结构体详细描述*
+*可以跳转[rm_electronic_fence_enable_t](../struct/electronicFenceEnable.md)查阅结构体详细描述*
 
 - **返回值:**
 函数执行的状态码：
@@ -509,7 +509,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。
 rm_set_virtual_wall_config(self, virtual_wall: rm_fence_config_t) -> int:
 ```
 
-*可以跳转[rm_fence_config_t](../struct/rm_fence_config_t)查阅结构体详细描述*
+*可以跳转[rm_fence_config_t](../struct/fenceConfig.md)查阅结构体详细描述*
 
 - **参数说明:**
 

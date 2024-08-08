@@ -12,7 +12,7 @@
 rm_set_realtime_push(self, config: rm_realtime_push_config_t) -> int:
 ```
 
-*可以跳转[rm_realtime_push_config_t](../struct/rm_realtime_push_config_t)查阅结构体详细描述*
+*可以跳转[rm_realtime_push_config_t](../struct/realtimePushConfig.md)查阅结构体详细描述*
 
 - **参数说明:**
 
