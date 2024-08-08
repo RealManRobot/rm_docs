@@ -646,6 +646,184 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
+          {
+            text: "结构体",
+            collapsed: false,
+            items: [
+              {
+                text: "算法库信息",
+                link: "/robot/api/python/struct/algorithmVersion",
+              },
+              {
+                text: "机械臂所有状态参数",
+                link: "/robot/api/python/struct/armAllState",
+              },
+              {
+                text: "机械臂软件版本信息",
+                link: "/robot/api/python/struct/armSoftwareVersion",
+              },
+              {
+                text: "控制器ctrl层软件信息",
+                link: "/robot/api/python/struct/ctrlVersion",
+              },
+              {
+                text: "机械臂当前状态",
+                link: "/robot/api/python/struct/currentArmState",
+              },
+              {
+                text: "动力学版本信息",
+                link: "/robot/api/python/struct/dynamicVersion",
+              },
+              {
+                text: "电子围栏/虚拟墙",
+                link: "/robot/api/python/struct/electronicFenceEnable",
+              },
+              {
+                text: "工具坐标系包络参数",
+                link: "/robot/api/python/struct/envelopeBall",
+              },
+              {
+                text: "工具坐标系包络参数列表",
+                link: "/robot/api/python/struct/envelopeBallsList",
+              },
+              {
+                text: "欧拉角",
+                link: "/robot/api/python/struct/euler",
+              },
+              {
+                text: "机械臂到位事件",
+                link: "/robot/api/python/struct/eventPushData",
+              },
+              {
+                text: "扩展关节状态",
+                link: "/robot/api/python/struct/expandState",
+              },
+              {
+                text: "电子围栏参数",
+                link: "/robot/api/python/struct/fenceConfig",
+              },
+              {
+                text: "几何模型长方体参数",
+                link: "/robot/api/python/struct/fenceConfigCube",
+              },
+              {
+                text: "几何模型参数列表",
+                link: "/robot/api/python/struct/fenceConfigList",
+              },
+              {
+                text: "几何模型点面矢量平面参数",
+                link: "/robot/api/python/struct/fenceConfigPlane",
+              },
+              {
+                text: "几何模型球体参数",
+                link: "/robot/api/python/struct/fenceConfigSphere",
+              },
+              {
+                text: "几何模型名称",
+                link: "/robot/api/python/struct/fenceNames",
+              },
+              {
+                text: "六维力传感器数据",
+                link: "/robot/api/python/struct/forceData",
+              },
+              {
+                text: "力控数据",
+                link: "/robot/api/python/struct/forceSensor",
+              },
+              {
+                text: "机械臂位置姿态",
+                link: "/robot/api/python/struct/frame",
+              },
+              {
+                text: "坐标系名称",
+                link: "/robot/api/python/struct/frameName",
+              },
+              {
+                text: "夹爪状态",
+                link: "/robot/api/python/struct/gripperState",
+              },
+              {
+                text: "逆运动学参数",
+                link: "/robot/api/python/struct/inverseKinematicsParams",
+              },
+              {
+                text: "机械臂关节状态",
+                link: "/robot/api/python/struct/jointStatus",
+              },
+              {
+                text: "矩阵",
+                link: "/robot/api/python/struct/matrix",
+              },
+              {
+                text: "读写外设数据参数",
+                link: "/robot/api/python/struct/peripheralReadWriteParams",
+              },
+              {
+                text: "控制器plan层软件信息",
+                link: "/robot/api/python/struct/planInfo",
+              },
+              {
+                text: "坐标系",
+                link: "/robot/api/python/struct/pose",
+              },
+              {
+                text: "位置",
+                link: "/robot/api/python/struct/position",
+              },
+              {
+                text: "机械臂程序运行状态",
+                link: "/robot/api/python/struct/programRunState",
+              },
+              {
+                text: "查询在线编程列表",
+                link: "/robot/api/python/struct/programTrajectories",
+              },
+              {
+                text: "四元数",
+                link: "/robot/api/python/struct/quat",
+              },
+              {
+                text: "机械臂实时状态推送",
+                link: "/robot/api/python/struct/realtimeArmJointState",
+              },
+              {
+                text: "UDP主动上报机械臂状态",
+                link: "/robot/api/python/struct/realtimePushConfig",
+              },
+              {
+                text: "句柄",
+                link: "/robot/api/python/struct/robotHandle",
+              },
+              {
+                text: "机械臂基本信息",
+                link: "/robot/api/python/struct/robotInfo",
+              },
+              {
+                text: "发送编程文件信息",
+                link: "/robot/api/python/struct/sendProject",
+              },
+              {
+                text: "在线编程存储信息",
+                link: "/robot/api/python/struct/trajectoryData",
+              },
+              {
+                text: "全局路点",
+                link: "/robot/api/python/struct/waypoint",
+              },
+              {
+                text: "全局路点列表",
+                link: "/robot/api/python/struct/waypointList",
+              },
+              {
+                text: "无线网络信息",
+                link: "/robot/api/python/struct/wifiNet",
+              },
+            ],
+          },
+          {
+            text: "枚举",
+            link: "/robot/api/python/type/typeList",
+          },
         ],
       },
       {
