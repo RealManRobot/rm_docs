@@ -11,6 +11,8 @@
 rm_add_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
+*可以跳转[rm_waypoint_t](../struct/rm_waypoint_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -54,6 +56,8 @@ arm.rm_delete_robot_arm()
 rm_update_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 ```
 
+*可以跳转[rm_waypoint_t](../struct/rm_waypoint_t)查阅结构体详细描述*
+
 - **参数说明:**
 
 | 名称        | 类型    | 说明                                   |
@@ -82,8 +86,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
-point = rm_waypoint_t("point1", [0, 40, 50, 0, 90, 0],
-                      [0.3, 0, 0.3, 3.142, 0, 0], 'World', 'Arm_Tip')
+point = rm_waypoint_t("point1", [0, 40, 50, 0, 90, 0],[0.3, 0, 0.3, 3.142, 0, 0], 'World', 'Arm_Tip')
 print(arm.rm_update_global_waypoint(point))
 
 arm.rm_delete_robot_arm()
