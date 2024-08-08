@@ -831,6 +831,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
+            text: "快速开始",
+            link: "/robot/ros/getStarted",
+          },
+          {
             text: "driverDetailDescription",
             link: "/robot/ros/driverDetailDescription",
           },
