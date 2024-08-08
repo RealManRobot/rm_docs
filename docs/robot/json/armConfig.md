@@ -456,11 +456,9 @@
 | :-------------------- | :--- | :--------------------------- |
 | `arm_max_angular_acc` |   `int`   | 反馈机械臂末端最大角加速度。 |
 
-
 ## 工具坐标系
 
 本命令集用于配置机械臂的工具坐标系，包含计算工具坐标系、输入工具坐标系、切换当前工具坐标系、删除工具坐标系、修改工具坐标系、设置和查询工具坐标系包络参数等。
-
 
 ### 自动计算工具坐标系（标定参考点）
 
@@ -479,6 +477,11 @@
 >备注：机械臂上电初始化后，默认无负载。
 
 ```json
+{"command":"set_auto_tool_frame","point_num":1}
+{"command":"set_auto_tool_frame","point_num":2}
+{"command":"set_auto_tool_frame","point_num":3}
+{"command":"set_auto_tool_frame","point_num":4}
+{"command":"set_auto_tool_frame","point_num":5}
 {"command":"set_auto_tool_frame","point_num":6}
 ```
 
