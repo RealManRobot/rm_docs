@@ -4,4 +4,4 @@
 
 |  属性  |  类型  |  说明  |
 | :--- | :--- | :--- |
-| `config`    | `rm_fence_config_t[]`  | 几何模型参数列表，不超过10个。       |
+| `config`    | [rm_fence_config_t](../struct/rm_fence_config_t)[]  | 几何模型参数列表，不超过10个。       |
