@@ -19,7 +19,7 @@ rm\_description功能包为显示机器人模型和TF变换的功能包，通过
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_description功能包。
 
 ```ros
-m@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
+rm@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
 ```
 
 在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
