@@ -10,7 +10,7 @@
     int rm_peripheral_read_write_params_t::port
     ```
 
-- ### 数据起始地址`poaddressrt`
+- ### 数据起始地址`address`
 
     ```C++
     int rm_peripheral_read_write_params_t::address
