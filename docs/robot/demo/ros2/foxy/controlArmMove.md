@@ -56,7 +56,7 @@
 
     编译rm_ros_interfaces功能包
     ```
-    colcon build --packages-select control_arm_move
+    colcon build --packages-select rm_ros_interfaces
     ```
     声明环境变量
     ```
