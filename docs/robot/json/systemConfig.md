@@ -1336,6 +1336,7 @@ I系列数量和分类如下所示：
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
+
 ```json
 {"state":"current_trajectory_state","trajectory_state":true,"device":1}
 ```
