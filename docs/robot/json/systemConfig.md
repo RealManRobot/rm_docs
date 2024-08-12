@@ -37,7 +37,7 @@
 
 ## 系统指令
 
-### 控制机械臂上电、断电
+### 控制机械臂上电、断电`set_arm_power`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -59,7 +59,7 @@
 {"command":"set_arm_power","arm_power":true}
 ```
 
-### 查询机械臂电源状态
+### 查询机械臂电源状态`get_arm_power_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -80,7 +80,7 @@
 {"state":"arm_power_state","power_state":1}
 ```
 
-### 查询软件版本号
+### 查询软件版本号`get_arm_software_version`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -106,7 +106,7 @@
 0309：代表软件版本号为V3.0.9。
 Product_version：机械臂型号，仅I系列机械臂支持。
 
-### 查询控制器的累计运行时间
+### 查询控制器的累计运行时间`get_system_runtime`
 
 查询控制器自出厂以来，累计的运行时间。
 
@@ -129,7 +129,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"get_system_runtime","day":0,"hour":0,"min":0,"sec":0}
 ```
 
-### 清零控制器的累计运行时间
+### 清零控制器的累计运行时间`clear_system_runtime`
 
 清零控制器自出厂以来，累计的运行时间。
 
@@ -152,7 +152,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"clear_system_runtime","clear_state":true}
 ```
 
-### 查询关节的累计转动角度
+### 查询关节的累计转动角度`get_joint_odom`
 
 查询各关节自出厂以来，累计的转动角度。
 
@@ -181,7 +181,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"get_joint_odom","odom":[1000,2000,3000,4000,5000,6000,7000]}
 ```
 
-### 清零关节的累计转动角度
+### 清零关节的累计转动角度`clear_joint_odom`
 
 清零各关节自出厂以来，累计的转动角度。
 
@@ -204,7 +204,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"clear_joint_odom","clear_state":true}
 ```
 
-### 设置高速网口（基础系列）
+### 设置高速网口（基础系列）`set_high_speed_eth`
 
 控制器面板有2个网口，左侧为高速网口，默认为关闭状态，需要通过指令打开；右侧靠近面板边缘的为普通网口，用户无需配置，可直接使用。
 >备注：高速网口的IP地址为：192.168.1.18，端口号为：8080，可修改。
@@ -231,7 +231,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_high_speed_eth","set_state":true}
 ```
 
-### 参数保存（基础系列）
+### 参数保存（基础系列）`set_high_speed_eth`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -252,7 +252,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"save_device_info_all","model":true}
 ```
 
-### 设置有线网IP地址（I系列）
+### 设置有线网IP地址（I系列）`set_NetIP`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -275,7 +275,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_NetIP","status":false} //IP地址设置失败
 ```
 
-### 清除系统错误
+### 清除系统错误`clear_system_err`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -296,7 +296,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"clear_system_err","clear_state":false}  //清除系统错误失败
 ```
 
-### 查询机械臂软件信息
+### 查询机械臂软件信息`get_arm_software_info`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -332,7 +332,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 
 机械臂控制器可通过网口、WIFI、RS232-USB接口和RS485接口与用户通信，用户使用时无需切换，可使用上述任一接口，控制器收到指令后，若指令格式正确，则会通过相同的接口反馈数据。
 
-### 设置wifiAP
+### 设置wifiAP`set_wifi_ap`
 
 配置wifiAP内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFIAP模式。
 
@@ -348,7 +348,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_wifi_ap","wifi_name":"robot","password":"12345678"}
 ```
 
-### 设置wifiSTA
+### 设置wifiSTA`set_wifi_ap`
 
 配置wifiSTA内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFISTA模式。
 **参数说明：**
@@ -363,7 +363,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_wifi_sta","router_name":"robot","password":"12345678"}
 ```
 
-### 设置USB（基础系列）
+### 设置USB（基础系列）`set_usb`
 
 配置UART-USB波特率，无返回。波特率可选范围：9600，19200，38400，115200和460800，若用户设置其他数据，控制器会默认按照460800处理。该指令下发后控制器会记录当前波特率，断电重启后仍会使用该波特率对外通信。
 
@@ -379,7 +379,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_usb","baudrate":460800}
 ```
 
-### 设置RS485
+### 设置RS485`set_RS485`
 
 配置RS485接口波特率，无返回。波特率可选范围：9600，19200，38400，115200和460800，若用户设置其他数据，控制器会默认按照460800处理。该指令下发后，若Modbus模式为打开状态，则会自动关闭，同时控制器会记录当前波特率，断电重启后仍会使用该波特率对外通信。
 
@@ -395,7 +395,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_RS485","baudrate":460800}
 ```
 
-### 设置高速网口IP（基础系列）
+### 设置高速网口IP（基础系列）`set_high_ethernet`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -419,7 +419,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command": "set_high_ethernet", "state": true}
 ```
 
-### 查询高速网口IP（基础系列）
+### 查询高速网口IP（基础系列）`get_high_ethernet`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -447,7 +447,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | gateway | `string` |网关。|
 | mac | `string` |mac地址。|
 
-### 查询有线网卡网络信息（I系列）
+### 查询有线网卡网络信息（I系列）`get_wired_net`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -474,7 +474,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | mask | `string` |子网掩码。|
 | mac | `string` |mac地址。|
 
-### 查询无线网卡网络信息（I系列）
+### 查询无线网卡网络信息（I系列）`get_wifi_net`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -505,7 +505,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | password | `string` |设置或默认的wifi密码。|
 | channel | `int` |如果是AP模式，则存在此字段，标识wifi热点的物理信道号。|
 
-### 恢复网络设置（I系列）
+### 恢复网络设置（I系列）`set_net_default`
 
 恢复网络出厂设置。设置成功后，手动重新启动后生效。
 
@@ -534,7 +534,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"command":"set_net_default","net_default_state":false}
 ```
 
-### 关闭wifi功能（I系列）
+### 关闭wifi功能（I系列）`set_wifi_close`
 
 配置关闭wifi功能，需要重启后生效。
 
@@ -566,7 +566,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 
 ## 查询机械臂状态信息
 
-### 查询机械臂关节角度
+### 查询机械臂关节角度`get_joint_degree`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -593,7 +593,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 {"state":"joint_degree","joint":[10,20,30,40,50,60,70]}
 ```
 
-### 一次性查询机械臂所有状态信息
+### 一次性查询机械臂所有状态信息`get_arm_all_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -629,7 +629,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | err_flag | `string` |关节错误代码。|
 | sys_err | `string` |机械臂错误代码。|
 
-### 查询轨迹规划计数
+### 查询轨迹规划计数`get_arm_plan_num`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -657,7 +657,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | loop_num | `int` |存在循环指令的行数，没有循环指令则返回空。|
 | loop_cont | `int` |循环指令行数对应的运行次数，没有循环指令则返回空。|
 
-### 查询控制器RS485模式（I系列）
+### 查询控制器RS485模式（I系列）`get_controller_RS485_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -684,7 +684,7 @@ Product_version：机械臂型号，仅I系列机械臂支持。
 | baudrate | `int` |波特率。|
 | modbus_timeout | `int` |modbus协议超时时间，单位100ms，仅在modbus-RTU模式下提供此字段。|
 
-### 查询工具端RS485模式（I系列）
+### 查询工具端RS485模式（I系列）`get_tool_RS485_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -727,7 +727,7 @@ I系列数量和分类如下所示：
 | 数字IO：DO/DI复用 | 4路，可配置为0\~24V |
 | :----------- | :------------ |
 
-### 设置数字IO模式（I系列）
+### 设置数字IO模式（I系列）`set_IO_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -756,7 +756,7 @@ I系列数量和分类如下所示：
 {"command":"set_IO_mode","set_state":false}
 ```
 
-### 设置数字IO输出状态
+### 设置数字IO输出状态`set_DO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -784,7 +784,7 @@ I系列数量和分类如下所示：
 {"command":"set_DO_state","set_state":false}
 ```
 
-### 查询数字IO状态（I系列）
+### 查询数字IO状态（I系列）`get_IO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -811,7 +811,7 @@ I系列数量和分类如下所示：
 | state | `int` |IO状态，1-输出高，0-输出低。|
 | IO_mode | `int` |模式，0-通用输入模式，1-通用输出模式、2-输入开始功能复用模式、3-输入暂停功能复用模式、4-输入继续功能复用模式、5-输入急停功能复用模式、6-输入进入电流环拖动复用模式、7-输入进入力只动位置拖动模式（六维力版本可配置）、8-输入进入力只动姿态拖动模式（六维力版本可配置）、9-输入进入力位姿结合拖动复用模式（六维力版本可配置）、10-输入外部轴最大软限位复用模式（外部轴模式可配置）、11-输入外部轴最小软限位复用模式（外部轴模式可配置）。|
 
-### 查询数字IO输出状态（基础系列）
+### 查询数字IO输出状态（基础系列）`get_DO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -837,7 +837,7 @@ I系列数量和分类如下所示：
 | :--- | :------------------------- |:---|
 | state | `int` |IO状态，1-输出高，0-输出低。|
 
-### 查询数字IO输入状态（基础系列）
+### 查询数字IO输入状态（基础系列）`get_DI_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -863,7 +863,7 @@ I系列数量和分类如下所示：
 | :--- | :------------------------- |:---|
 | state | `int` |IO状态，1-输出高，0-输出低。|
 
-### 设置模拟IO输出状态（基础系列）
+### 设置模拟IO输出状态（基础系列）`set_AO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -892,7 +892,7 @@ I系列数量和分类如下所示：
 {"command":"set_AO_state","state":false}
 ```
 
-### 查询模拟IO输出状态（基础系列）
+### 查询模拟IO输出状态（基础系列）`get_AO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -919,7 +919,7 @@ I系列数量和分类如下所示：
 | IO_Num | `int` |IO端口号，范围：1~4。|
 | voltage | `int` |IO输出电压，分辨率0.001V，范围：0-10000，代表输出电压0-10v。|
 
-### 查询模拟IO输入状态（基础系列）
+### 查询模拟IO输入状态（基础系列）`get_AI_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -946,7 +946,7 @@ I系列数量和分类如下所示：
 | IO_Num | `int` |IO端口号，范围：1~4。|
 | voltage | `int` |IO输出电压，分辨率0.001V，范围：0-10000，代表输出电压0-10v。|
 
-### 查询所有IO输入状态
+### 查询所有IO输入状态`get_IO_input`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -972,7 +972,7 @@ I系列数量和分类如下所示：
 | DI | `int` |数字输入状态，1-高，0-低。|
 | AI | `int` |模拟输入电压，精度0.001V，如：1000，代表1V。|
 
-### 查询所有IO输出状态
+### 查询所有IO输出状态`get_IO_output`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -998,7 +998,7 @@ I系列数量和分类如下所示：
 | DO | `int` |数字输出状态，1-高，0-低。|
 | AO | `int` |模拟输出电压，精度0.001V，如：1000，代表1V。|
 
-### 设置电源输出（I系列）
+### 设置电源输出（I系列）`set_voltage`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1026,7 +1026,7 @@ I系列数量和分类如下所示：
 {"command":"set_voltage","state":false}
 ```
 
-### 查询电源输出（I系列）
+### 查询电源输出（I系列）`get_voltage`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1061,7 +1061,7 @@ I系列数量和分类如下所示：
 | 数字IO | 2路，输入输出可配置。          |
 | 通讯接口 | 1路，可配置为RS485。         |
 
-### 设置工具端数字IO输出状态
+### 设置工具端数字IO输出状态`set_tool_DO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1090,7 +1090,7 @@ I系列数量和分类如下所示：
 {"command":"set_tool_DO_state","set_state":false}
 ```
 
-### 设置工具端数字IO模式
+### 设置工具端数字IO模式`set_tool_IO_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1119,7 +1119,7 @@ I系列数量和分类如下所示：
 {"command":"set_tool_IO_mode","set_state":false}
 ```
 
-### 查询工具端数字IO状态
+### 查询工具端数字IO状态`get_tool_IO_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1145,7 +1145,7 @@ I系列数量和分类如下所示：
 | IO_Mode | `int` |0-输入模式，1-输出模式。|
 | IO_State | `int` |IO状态，1-输出高，0-输出低。|
 
-### 设置工具端电源输出
+### 设置工具端电源输出`set_tool_voltage`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1173,7 +1173,7 @@ I系列数量和分类如下所示：
 {"command":"set_tool_voltage","state":false}
 ```
 
-### 查询工具端电源输出
+### 查询工具端电源输出`get_tool_voltage`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1202,7 +1202,7 @@ I系列数量和分类如下所示：
 
 睿尔曼机械臂末端配备了因时机器人公司的EG2-4C2夹爪，为了便于用户操作夹爪，机械臂控制器对用户开放了夹爪的控制协议（夹爪控制协议与末端modbus功能互斥）。
 
-### 设置夹爪行程
+### 设置夹爪行程`set_gripper_route`
 
 设置夹爪行程，即夹爪开口的最大值和最小值，设置成功后会自动保存，夹爪断电不丢失。
 **参数说明：**
@@ -1232,7 +1232,7 @@ I系列数量和分类如下所示：
 {"command":"set_gripper_route","state":false}
 ```
 
-### 松开夹爪
+### 松开夹爪`set_gripper_release`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1269,7 +1269,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":1}
 ```
 
-### 夹爪力控夹取
+### 夹爪力控夹取`set_gripper_pick`
 
 夹爪力控夹取，夹爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取。
 
@@ -1311,7 +1311,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":1}
 ```
 
-### 夹爪持续力控夹取
+### 夹爪持续力控夹取`set_gripper_pick_on`
 
 夹爪力控夹取，夹爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取；当夹持力再次小于力矩阈值时，夹爪再次夹取，直至夹持力超过力控阈值。
 
@@ -1354,7 +1354,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":1}
 ```
 
-### 夹爪到达指定位置
+### 夹爪到达指定位置`set_gripper_position`
 
 夹爪到达指定位置，当当前开口小于指定开口时，夹爪以指定速度松开到指定开口位置；当当前开口大于指定开口时，夹爪以指定速度和力矩闭合往指定开口处闭合，当夹持力超过力矩阈值或者达到指定位置后，夹爪停止。
 
@@ -1390,7 +1390,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":1}
 ```
 
-### 查询夹爪状态
+### 查询夹爪状态`get_gripper_state`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1431,7 +1431,7 @@ I系列数量和分类如下所示：
 
 ![](../api/python/doc/sixForce.png)
 
-### 查询六维力数据
+### 查询六维力数据`get_force_data`
 
 查询当前六维力传感器得到的力和力矩信息：Fx,Fy,Fz,Mx,My,Mz。
 
@@ -1458,7 +1458,7 @@ I系列数量和分类如下所示：
 {"command":"get_force_data","force_data":[1000,2000,3000,400,500,600],"zero_force_data":[500,1000,1500,200,250,300],"work_zero_force_data":[500,1000,1500,200,250,300],"tool_zero_force_data":[500,1000,1500,200,250,300]}
 ```
 
-### 六维力数据清零
+### 六维力数据清零`clear_force_data`
 
 将六维力数据清零，标定当前状态下的零位。
 
@@ -1486,7 +1486,7 @@ I系列数量和分类如下所示：
 {"command":"clear_force_data","clear_state":false}
 ```
 
-### 自动设置六维力重心参数
+### 自动设置六维力重心参数`set_force_sensor`
 
 设置六维力重心参数，六维力重新安装后，必须重新计算六维力所受到的初始力和重心。分别在不同姿态下，获取六维力的数据，用于计算重心位置。该指令下发后，机械臂以固定的速度运动到各标定点，该过程不可中断，中断后必须重新标定。
 
@@ -1521,7 +1521,7 @@ I系列数量和分类如下所示：
 {"command":"set_force_sensor","set_state":false}
 ```
 
-### 手动标定六维力数据
+### 手动标定六维力数据`manual_set_force`
 
 设置六维力重心参数，六维力重新安装后，必须重新计算六维力所受到的初始力和重心。该手动标定流程，适用于空间狭窄工作区域，以防自动标定过程中机械臂发生碰撞，用户可以手动选取四个位姿下发，当下发完四个点后，机械臂开始自动沿用户设置的目标运动，并在此过程中计算六维力重心。
 
@@ -1562,7 +1562,7 @@ I系列数量和分类如下所示：
 {"command":"set_force_sensor","set_state":false} 
 ```
 
-### 停止标定力传感器重心
+### 停止标定力传感器重心`stop_set_force_sensor`
 
 在标定力传感器过程中，如果发生意外，发送该指令，停止机械臂运动，退出标定流程。
 
@@ -1596,7 +1596,7 @@ I系列数量和分类如下所示：
 
 睿尔曼机械臂在拖动示教过程中，可记录拖动的轨迹点，并根据用户的指令对轨迹进行复现。
 
-### 拖动示教开始
+### 拖动示教开始`start_drag_teach`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1618,7 +1618,7 @@ I系列数量和分类如下所示：
 {"command":"start_drag_teach","drag_teach":true}
 ```
 
-### 拖动示教结束
+### 拖动示教结束`stop_drag_teach`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1636,7 +1636,7 @@ I系列数量和分类如下所示：
 {"command":"stop_drag_teach","drag_teach":true}
 ```
 
-### 开始复合模式拖动示教
+### 开始复合模式拖动示教`start_multi_drag_teach`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1665,7 +1665,7 @@ I系列数量和分类如下所示：
 {"command":"start_multi_drag_teach","set_state":false}
 ```
 
-### 轨迹复现开始
+### 轨迹复现开始`run_drag_trajectory`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1691,7 +1691,7 @@ I系列数量和分类如下所示：
 {"command":"run_drag_trajectory","run_state":false}
 ```
 
-### 轨迹复现暂停
+### 轨迹复现暂停`pause_drag_trajectory`
 
 轨迹复现过程中暂停。
 **参数说明：**
@@ -1718,7 +1718,7 @@ I系列数量和分类如下所示：
 {"command":"pasuse_drag_trajectory","pause_state":false}
 ```
 
-### 轨迹复现继续
+### 轨迹复现继续`continue_drag_trajectory`
 
 轨迹复现过程中暂停后继续。
 **参数说明：**
@@ -1745,7 +1745,7 @@ I系列数量和分类如下所示：
 {"command":"continue_drag_trajectory","continue_state":false}
 ```
 
-### 轨迹复现停止
+### 轨迹复现停止`stop_drag_trajectory`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1771,7 +1771,7 @@ I系列数量和分类如下所示：
 {"command":"stop_drag_trajectory","stop_state":false}
 ```
 
-### 运动到轨迹起点
+### 运动到轨迹起点`drag_trajectory_origin`
 
 轨迹复现前，必须控制机械臂运动到轨迹起点，如果设置正确，机械臂将以20%的速度运动到轨迹起点。
 
@@ -1792,7 +1792,7 @@ I系列数量和分类如下所示：
 {"device":0,"state":"current_trajectory_state","trajectory_connect":0, "trajectory_state":true}
 ```
 
-### 力位混合控制
+### 力位混合控制`set_force_position`
 
 在笛卡尔空间轨迹规划时，使用该功能可保证机械臂末端接触力恒定，使用时力的方向与机械臂运动方向不能在同一方向。开启力位混合控制，执行笛卡尔空间运动，接收到运动完成反馈后，需要等待2S后继续下发下一条运动指令。
 
@@ -1824,7 +1824,7 @@ I系列数量和分类如下所示：
 {"command":"set_force_position","set_state":false}
 ```
 
-### 结束力位混合控制
+### 结束力位混合控制`stop_force_position`
 
 退出力位混合控制模式。
 
@@ -1856,7 +1856,7 @@ I系列数量和分类如下所示：
 
 睿尔曼机械臂末端配置因时的五指灵巧手，可通过协议对灵巧手进行设置。
 
-### 设置灵巧手手势
+### 设置灵巧手手势`set_hand_posture`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1890,7 +1890,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":2}
 ```
 
-### 设置灵巧手动作序列
+### 设置灵巧手动作序列`set_hand_seq`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1924,7 +1924,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":2}
 ```
 
-### 设置灵巧手各自由度角度
+### 设置灵巧手各自由度角度`set_hand_angle`
 
 设置灵巧手角度，灵巧手有6个自由度，从1\~6分别为小拇指，无名指，中指，食指，大拇指弯曲，大拇指旋转。
 
@@ -1960,7 +1960,7 @@ I系列数量和分类如下所示：
 {"state":"current_trajectory_state","trajectory_state":true,"device":2}
 ```
 
-### 设置灵巧手速度
+### 设置灵巧手速度`set_hand_speed`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -1987,7 +1987,7 @@ I系列数量和分类如下所示：
 {"command":"set_hand_speed","set_state":false}
 ```
 
-### 设置灵巧手力阈值
+### 设置灵巧手力阈值`set_hand_force`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2023,7 +2023,7 @@ I系列数量和分类如下所示：
 
 同时，I系列控制器支持ModbusTCP主站配置，可配置使用ModbusTCP主站，用于连接外部设备的ModbusTCP从站。
 
-### 配置通讯端口ModbusRTU模式
+### 配置通讯端口ModbusRTU模式`set_modbus_mode`
 
 配置通讯端口ModbusRTU模式，机械臂启动后，要对通讯端口进行任何操作，必须先启动该指令，否则会返回报错信息。
 
@@ -2054,7 +2054,7 @@ I系列数量和分类如下所示：
 {"command":"set_modbus_mode","set_state":false}
 ```
 
-### 关闭通讯端口ModbusRTU模式
+### 关闭通讯端口ModbusRTU模式`close_modbus_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2081,7 +2081,7 @@ I系列数量和分类如下所示：
 {"command":"close_modbus_mode","set_state":false}
 ```
 
-### 配置连接ModbusTCP从站（I系列）
+### 配置连接ModbusTCP从站（I系列）`set_modbustcp_mode`
 
 控制器作为ModbusTCP主站连接外部ModbusTCP从站设备。
 
@@ -2112,7 +2112,7 @@ I系列数量和分类如下所示：
 {"command":"set_modbustcp_mode","set_state":false}
 ```
 
-### 配置关闭ModbusTCP从站（I系列）
+### 配置关闭ModbusTCP从站（I系列）`close_modbustcp_mode`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2138,7 +2138,7 @@ I系列数量和分类如下所示：
 {"command":"close_modbustcp_mode","set_state":false} 
 ```
 
-### 读线圈
+### 读线圈`read_coils`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2168,7 +2168,7 @@ I系列数量和分类如下所示：
 {"command":"read_coils","read_state":false}
 ```
 
-### 读离散量输入
+### 读离散量输入`read_input_status`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2199,7 +2199,7 @@ I系列数量和分类如下所示：
 {"command":"read_input_status","read_state":false}
 ```
 
-### 读保持寄存器
+### 读保持寄存器`read_holding_registers`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2228,7 +2228,7 @@ I系列数量和分类如下所示：
 {"command":"read_holding_registers","read_state":false}
 ```
 
-### 读输入寄存器
+### 读输入寄存器`read_input_registers`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2257,7 +2257,7 @@ I系列数量和分类如下所示：
 {"command":"read_input_registers","read_state":false}
 ```
 
-### 写单圈数据
+### 写单圈数据`write_single_coil`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2287,7 +2287,7 @@ I系列数量和分类如下所示：
 {"command":"write_single_coil","write_state":false}
 ```
 
-### 写单个寄存器
+### 写单个寄存器`write_single_register`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2317,7 +2317,7 @@ I系列数量和分类如下所示：
 {"command":"write_single_register","write_state":false}
 ```
 
-### 写多个寄存器
+### 写多个寄存器`write_registers`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2348,7 +2348,7 @@ I系列数量和分类如下所示：
 {"command":"write_registers","write_state":false}
 ```
 
-### 写多圈数据
+### 写多圈数据`write_coils`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2379,7 +2379,7 @@ I系列数量和分类如下所示：
 {"command":"write_coils","write_state":false}
 ```
 
-### 读多圈数据
+### 读多圈数据`read_multiple_coils`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2409,7 +2409,7 @@ I系列数量和分类如下所示：
 {"command":"read_multiple_coils","read_state":false}
 ```
 
-### 读多个保存寄存器
+### 读多个保存寄存器`read_multiple_holding_registers`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2439,7 +2439,7 @@ I系列数量和分类如下所示：
 {"command":"read_multiple_holding_registers","read_state":false}
 ```
 
-### 读多个输入寄存器
+### 读多个输入寄存器`read_multiple_input_registers`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2474,7 +2474,7 @@ I系列数量和分类如下所示：
 
 睿尔曼机械臂可支持不同形式的安装方式，但是安装方式不同，机器人的动力学模型参数和坐标系的方向也有所差别。
 
-### 设置安装方式参数
+### 设置安装方式参数`set_install_pose`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2501,7 +2501,7 @@ I系列数量和分类如下所示：
 {"command":"set_install_pose","set_state":false}
 ```
 
-### 查询关节软件版本号
+### 查询关节软件版本号`get_joint_software_version`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2522,7 +2522,7 @@ I系列数量和分类如下所示：
 
 531为uint16类型，转化为16进制为：0x0213，则当前关节的版本号为2.13。
 
-### 查询末端接口板软件版本号
+### 查询末端接口板软件版本号`get_tool_software_version`
 
 **参数说明：**
 | 功能描述 | 类型 |说明|
@@ -2543,7 +2543,7 @@ I系列数量和分类如下所示：
 
 531为uint16类型，转化为16进制为：0x0213，则当前末端接口板的版本号为2.13。
 
-## 透传力位混合控制补偿（选配）
+## 透传力位混合控制补偿（选配）`Start_Force_Position_Move`
 
 针对睿尔曼带一维力和六维力版本的机械臂，用户除了可直接使用示教器调用底层的力位混合控制模块外，还可以将自定义的轨迹以周期性透传的形式结合底层的力位混合控制算法进行补偿。
 
