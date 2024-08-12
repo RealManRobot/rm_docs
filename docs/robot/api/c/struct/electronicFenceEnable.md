@@ -6,7 +6,7 @@
 
     true 代表使能，false 代表禁使能。
 
-    ```C  
+    ```C++
     bool rm_electronic_fence_enable_t::enable_state
     ```
 
@@ -14,7 +14,7 @@
 
     0-机器人在电子围栏/虚拟墙内部，1-机器人在电子围栏外部。
 
-    ```C  
+    ```C++
     int rm_electronic_fence_enable_t::in_out_side
     ```
 
@@ -22,6 +22,6 @@
 
     0-电子围栏针对整臂区域生效，1-虚拟墙针对末端生效。
 
-    ```C  
+    ```C++
     int rm_electronic_fence_enable_t::effective_region
     ```

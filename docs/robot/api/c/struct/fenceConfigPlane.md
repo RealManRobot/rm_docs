@@ -6,7 +6,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::x1
     ```
 
@@ -14,7 +14,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::y1
     ```
 
@@ -22,7 +22,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::z1
     ```
 
@@ -30,7 +30,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::x2
     ```
 
@@ -38,7 +38,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::y2
     ```
 
@@ -46,7 +46,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::z2
     ```
 
@@ -54,7 +54,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::x3
     ```
 
@@ -62,7 +62,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::y3
     ```
 
@@ -70,6 +70,6 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_plane_t::z3
     ```

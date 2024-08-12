@@ -4,19 +4,19 @@
 
 - ### 路点名称 `point_name`
 
-    ```C  
+    ```C++
     char rm_waypoint_t::point_name[20]
     ```
 
 - ### 关节角度 `joint`
 
-    ```C  
+    ```C++
     float rm_waypoint_t::joint[ARM_DOF]
     ```
 
 - ### 位姿信息 `pose`
 
-    ```C  
+    ```C++
     rm_pose_t rm_waypoint_t::pose
     ```
 
@@ -24,18 +24,18 @@
 
 - ### 工作坐标系名称 `work_frame`
 
-    ```C
+    ```C++
     char rm_waypoint_t::work_frame[12]
     ```
 
 - ### 工具坐标系名称 `tool_frame`
 
-    ```C
+    ```C++
     char rm_waypoint_t::tool_frame[12]
     ```
 
 - ### 路点新增或修改时间 `time`
 
-    ```C
+    ```C++
     char rm_waypoint_t::time[50]
     ```

@@ -128,7 +128,7 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
-|  voltage_type  |    输出参数    |    电源输出类型，0：0V，1：5V，2：12V，3：24V。    |
+|  voltage_type  |    输出参数    |    电源输出类型，0：0V，2：12V，3：24V。    |
 
 - **返回值:**
 
@@ -165,7 +165,7 @@ iint rm_get_tool_voltage(rm_robot_handle * handle,int voltage_type)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
-|  voltage_type  |    输出参数    |    存放电源输出类型，0：0V，1：5V，2：12V，3：24V。    |
+|  voltage_type  |    输出参数    |    存放电源输出类型，0：0V，2：12V，3：24V。    |
 
 - **返回值:**
 

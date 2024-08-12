@@ -6,7 +6,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_sphere_t::x
     ```
 
@@ -14,7 +14,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_sphere_t::y
     ```
 
@@ -22,7 +22,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_sphere_t::z
     ```
 
@@ -30,6 +30,6 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_sphere_t::radius
     ```

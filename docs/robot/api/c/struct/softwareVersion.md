@@ -4,13 +4,13 @@
 
 - ### 机械臂型号`product_version`
 
-    ```C  
+    ```C++
     char rm_arm_software_version_t::product_version[10]
     ```
 
 - ### 算法库信息`algorithm_info`
 
-    ```C  
+    ```C++
     rm_algorithm_version_t rm_arm_software_version_t::algorithm_info
     ```
 
@@ -18,13 +18,13 @@
 
 - ### ctrl 层软件信息`ctrl_info`
 
-    ```C  
+    ```C++
     rm_ctrl_version_t rm_arm_software_version_t::ctrl_info
     ```
 
 - ### 动力学版本`dynamic_info`
 
-    ```C  
+    ```C++
     rm_dynamic_version_t rm_arm_software_version_t::dynamic_info
     ```
 
@@ -32,7 +32,7 @@
 
 - ### plan 层软件信息`plan_info`
 
-    ```C  
+    ```C++
     rm_planinfo_t rm_arm_software_version_t::plan_info
     ```
 

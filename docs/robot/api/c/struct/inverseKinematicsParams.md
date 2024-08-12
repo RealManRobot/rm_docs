@@ -6,13 +6,13 @@
 
   单位°。
 
-    ```C  
+    ```C++
     float rm_inverse_kinematics_params_t::q_in[ARM_DOF]
     ```
 
 - ### 目标位姿`q_pose`
 
-    ```C  
+    ```C++
     rm_pose_t rm_inverse_kinematics_params_t::q_pose
     ```
 
@@ -20,6 +20,6 @@
 
     0-四元数；1-欧拉角。
 
-    ```C
+    ```C++
     uint8_t rm_inverse_kinematics_params_t::flag
     ```

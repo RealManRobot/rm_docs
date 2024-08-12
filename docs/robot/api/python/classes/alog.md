@@ -105,6 +105,8 @@ rm_algo_get_curr_workframe(self) -> dict[str, any]:
 | :--- | :--- | :--- |
 |   dict[str, any]  |    `rm_frame_t`    |    返回当前工作坐标系字典，键为rm_frame_t结构体的字段名称。    |
 
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
+
 - **使用示例**
   
 ```python
@@ -118,6 +120,8 @@ rm_algo_get_curr_workframe(self) -> dict[str, any]:
 ```python
 rm_algo_set_toolframe(self, frame: rm_frame_t) -> None:
 ```
+
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **参数说明:**
 
@@ -144,6 +148,8 @@ rm_algo_get_curr_toolframe(self) -> dict[str, any]:
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   dict[str, any]  |    `rm_frame_t`    |    返回当前工具坐标系字典，键为rm_frame_t结构体的字段名称。    |
+
+*可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
 - **使用示例**
   
@@ -326,6 +332,8 @@ rm_algo_inverse_kinematics(self, params: rm_inverse_kinematics_params_t) -> tupl
 | :--- | :--- | :--- |
 |   params  |    `rm_inverse_kinematics_params_t`    |    逆解输入参数结构体。    |
 
+*可以跳转[rm_inverse_kinematics_params_t](../struct/inverseKinematicsParams.md)查阅结构体详细描述*
+
 - **返回值:**
 tuple[int,list[float]]: 包含两个元素的元组。
     -int 逆解结果:
@@ -436,7 +444,7 @@ rm_algo_euler2matrix(self, eu: list[float]) -> rm_matrix_t:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   eu  |    list[float]    |    欧拉角列表[rx.ry,rz]，单位：rad。    |
+|   eu  |    `list[float]`    |    欧拉角列表[rx.ry,rz]，单位：rad。    |
 
 - **返回值:**
 
@@ -460,7 +468,7 @@ rm_algo_pos2matrix(self, pose: list[float]) -> rm_matrix_t:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   pose  |    list[float]    |    位置姿态列表[x,y,z,rx,ry,rz]。    |
+|   pose  |    `list[float]`    |    位置姿态列表[x,y,z,rx,ry,rz]。    |
 
 - **返回值:**
 
@@ -516,6 +524,9 @@ rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag:
 |   matrix  |    `rm_matrix_t`    |    工作坐标系在基坐标系下的矩阵。    |
 |   pose_in_base  |    `rm_pose_t`    |    工具端坐标在基坐标系下位姿。    |
 |   flag  |    `int`    |    选择姿态表示方式，默认欧拉角表示姿态;- 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z];- 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]。    |
+
+*可以跳转[rm_matrix_t](../struct/matrix.md)和[rm_pose_t](../struct/pose.md)查阅结构体详细描述*
+
 
 - **返回值:**
 

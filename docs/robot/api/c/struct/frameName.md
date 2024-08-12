@@ -4,6 +4,6 @@
 
 - ### `name`
 
-    ```C  
+    ```C++
     char rm_frame_name_t::name[12]
     ```

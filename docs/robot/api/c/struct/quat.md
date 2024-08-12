@@ -4,24 +4,24 @@
 
 - ### `w`
 
-    ```C  
+    ```C++
     float rm_quat_t::w
     ```
 
 - ### `x`
 
-    ```C  
+    ```C++
     float rm_quat_t::x
     ```
 
 - ### `y`
 
-    ```C  
+    ```C++
     float rm_quat_t::y
     ```
 
 - ### `z`
 
-    ```C  
+    ```C++
     float rm_quat_t::z
     ```

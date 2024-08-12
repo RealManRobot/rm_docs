@@ -6,31 +6,31 @@
 
     0 未开始 1运行中 2暂停中。
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::run_state
     ```
 
 - ### 运行轨迹编号`id`
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::id
     ```
 
 - ### 上次编辑的在线编程编号 id`edit_id`
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::edit_id
     ```
 
 - ### 运行行数`plan_num`
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::plan_num
     ```
 
 - ### 循环指令数量`total_loop`
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::total_loop
     ```
 
@@ -38,7 +38,7 @@
 
     1 为单步模式，0 为非单步模式。
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::step_mode
     ```
 
@@ -46,7 +46,7 @@
 
     比例值1-100。
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::plan_speed
     ```
 
@@ -54,7 +54,7 @@
 
     比例值1-100。
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::loop_num[100]
     ```
 
@@ -62,6 +62,6 @@
 
     比例值1-100。
 
-    ```C  
+    ```C++
     int rm_program_run_state_t::loop_cont[100]
     ```

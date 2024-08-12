@@ -4,24 +4,24 @@
 
 - ### 机械臂当前位姿`pose`
 
-    ```C  
+    ```C++
     rm_pose_t rm_current_arm_state_t::pose
     ```
 
 - ### 机械臂当前关节角度`joint`
 
-    ```C  
+    ```C++
     float rm_current_arm_state_t::joint[ARM_DOF]
     ```
 
 - ### 机械臂错误代码`arm_err`
 
-    ```C  
+    ```C++
     uint8_t rm_current_arm_state_t::arm_err
     ```
 
 - ### 控制器错误代码`sys_err`
 
-    ```C  
+    ```C++
     uint8_t rm_current_arm_state_t::sys_err
     ```

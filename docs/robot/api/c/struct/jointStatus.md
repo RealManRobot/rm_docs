@@ -6,7 +6,7 @@
 
     单位mA，精度：0.001mA。
 
-    ```C  
+    ```C++
     float rm_joint_status_t::joint_current[ARM_DOF]
     ```
 
@@ -14,13 +14,13 @@
 
     1为上使能，0为掉使能。
 
-    ```C  
+    ```C++
     bool rm_joint_status_t::joint_en_flag[ARM_DOF]
     ```
 
 - ### 当前关节错误码`joint_err_code`
 
-    ```C  
+    ```C++
     uint16_t rm_joint_status_t::joint_err_code[ARM_DOF]
     ```
 
@@ -28,7 +28,7 @@
 
     单位°，精度：0.001°。
 
-    ```C  
+    ```C++
     float rm_joint_status_t::joint_position[ARM_DOF]
     ```
 
@@ -36,7 +36,7 @@
 
     精度0.001℃。
 
-    ```C  
+    ```C++
     float rm_joint_status_t::joint_temperature[ARM_DOF]
     ```
 
@@ -44,6 +44,6 @@
 
     精度0.001V。
 
-    ```C  
+    ```C++
     float rm_joint_status_t::joint_voltage[ARM_DOF]
     ```

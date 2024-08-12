@@ -369,6 +369,6 @@ pose.position.y=0;
 pose.position.z=0.85049;                                                         
 pose.euler.rx=0;                                                           
 pose.euler.ry=0;
-pose.euler.rz=3142;                       
+pose.euler.rz=3.142;                       
 rm_movep_canfd(robot_handle,pose,true);  
 ```

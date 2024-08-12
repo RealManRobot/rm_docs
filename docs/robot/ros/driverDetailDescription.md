@@ -230,14 +230,14 @@ rostopic echo /rm_driver/Plan_State
 ```json
 rostopic pub /rm_driver/MoveL_Cmd rm_msgs/MoveL "Pose:
 position:
-x: 0.0
-y: 0.0
-z: 0.0
+  x: 0.0
+  y: 0.0
+  z: 0.0
 orientation:
-x: 0.0
-y: 0.0
-z: 0.0
-w: 0.0
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0
 speed: 0.2
 trajectory_connect: 0"
 ```

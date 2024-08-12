@@ -4,18 +4,18 @@
 
 - ### 位置，单位：m`position`
 
-    ```C  
+    ```C++
     rm_position_t rm_pose_t::position
     ```
 
 - ### 四元数`quaternion`
 
-    ```C  
+    ```C++
     rm_quat_t rm_pose_t::quaternion
     ```
 
 - ### 欧拉角，单位：rad`euler`
 
-    ```C  
+    ```C++
     rm_euler_t rm_pose_t::euler
     ```

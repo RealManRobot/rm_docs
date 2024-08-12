@@ -6,13 +6,13 @@
 
     单位mA。
 
-    ```C
+    ```C++
     float rm_arm_all_state_t::joint_current[ARM_DOF]
     ```
 
 - ### 关节使能状态`joint_en_flag`
 
-    ```C
+    ```C++
     int rm_arm_all_state_t::joint_en_flag[ARM_DOF]
     ```
 
@@ -20,7 +20,7 @@
 
     单位℃。
 
-    ```C
+    ```C++
     float rm_arm_all_state_t::joint_temperature[ARM_DOF]
     ```
 
@@ -28,18 +28,18 @@
 
     单位V。
 
-    ```C
+    ```C++
     float rm_arm_all_state_t::joint_voltage[ARM_DOF]
     ```
 
 - ### 关节错误码`joint_err_code`
 
-    ```C
+    ```C++
     int rm_arm_all_state_t::joint_err_code[ARM_DOF]
     ```
 
 - ### 机械臂错误代码`sys_err`
 
-    ```C
+    ```C++
     int rm_arm_all_state_t::sys_err
     ```

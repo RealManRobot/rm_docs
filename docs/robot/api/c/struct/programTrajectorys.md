@@ -4,30 +4,30 @@
 
 - ### `balpage_numls`
 
-    ```C  
+    ```C++
     int rm_program_trajectorys_t::page_num
     ```
 
 - ### `page_size`
 
-    ```C  
+    ```C++
     int rm_program_trajectorys_t::page_size
     ```
 
 - ### `list_size`
 
-    ```C  
+    ```C++
     int rm_program_trajectorys_t::list_size
     ```
 
 - ### `vague_search`
 
-    ```C  
+    ```C++
     char rm_program_trajectorys_t::vague_search[32]
     ```
 
 - ### `trajectory_list`
 
-    ```C  
+    ```C++
     rm_trajectory_data_t rm_program_trajectorys_t::trajectory_list[100]
     ```

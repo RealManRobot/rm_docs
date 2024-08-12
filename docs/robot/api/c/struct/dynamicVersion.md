@@ -4,12 +4,12 @@
 
 - ### 动力学模型版本号`model_version`
 
-    ```C  
+    ```C++
     char rm_dynamic_version_t::model_version[5]
     ```
 
 - ### 算法库信息`algorithm_info`
 
-    ```C  
+    ```C++
     rm_algorithm_version_t rm_arm_software_version_t::algorithm_info
     ```

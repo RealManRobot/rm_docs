@@ -4,12 +4,12 @@
 
 - ### 编译时间`build_time`
 
-    ```C  
+    ```C++
     char rm_planinfo_t::build_time[20]
     ```
 
 - ### 版本号`version`
 
-    ```C
+    ```C++
     char rm_planinfo_t::version[10]
     ```

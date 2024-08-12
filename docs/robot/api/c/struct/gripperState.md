@@ -6,7 +6,7 @@
 
     0 表示未使能，1 表示使能。
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::enable_state
     ```
 
@@ -14,7 +14,7 @@
 
     0 表示离线， 1表示在线。
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::status
     ```
 
@@ -22,24 +22,24 @@
 
     低8位表示夹爪内部的错误信息bit5-7；保留bit4；内部通bit3；驱动器bit2；过流 bit1；过温bit0；堵转；
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::error
     ```
 
 - ### 夹爪当前的压力，单位g`current_force`
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::current_force
     ```
 
 - ### 当前温度，单位℃`temperature`
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::temperature
     ```
 
 - ### 夹爪开口度`actpos`
 
-    ```C  
+    ```C++
     int rm_gripper_state_t::actpos
     ```
