@@ -362,8 +362,7 @@ rostopic pub /rm_driver/MoveP_Fd_Cmd rm_msgs/CartePos
 **使用示例：**
 
 ```json
-rostopic pub /rm_driver/MoveJ_P_Cmd rm_msgs/MoveJ_P 
-"Pose:
+rostopic pub /rm_driver/MoveJ_P_Cmd rm_msgs/MoveJ_P "Pose:
   position:
     x: 0.0
     y: 0.0
