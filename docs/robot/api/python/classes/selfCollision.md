@@ -38,7 +38,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_self_collision_enable(True))
 
@@ -81,7 +82,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_self_collision_enable())
 

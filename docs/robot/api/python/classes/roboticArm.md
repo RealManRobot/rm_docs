@@ -21,7 +21,17 @@ __init__(self, mode: rm_thread_mode_e = None):
 - **使用示例**
 
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 结束机械臂控制，删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 创建机械臂连接控制句柄`rm_create_robot_arm()`
@@ -50,24 +60,27 @@ rm_create_robot_arm(self, ip: str, port: int, level: int = 3, log_func: CFUNCTYP
 |   /  |    `rm_robot_handle`   |    机械臂句柄，其中包含机械臂id标识。    |
 
 - **使用示例**
-使用RoboticArm类连接和控制机械臂：
+使用RoboticArm类连接两条机械臂，并进行状态查询：
 
 ```python
-    >>> from rm_robot_interface import RoboticArm
-    # 初始化线程模式
-    >>> arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-    # 创建RoboticArm对象
-    >>> handle = arm.rm_create_robot_arm(ip="192.168.1.18", port=8080, level=3)
-    >>> print(handle.id) # 机械臂id标识
-    # 定义零位和目标位置（关节角度）
-    >>> zero_position = [0, 0, 0, 0, 0, 0]
-    >>> target_position = [0, 0, 0, 0, 90.0, 0]
-    # 移动机械臂到零位
-    >>> arm.movej(zero_position, 20, 0, 0, 1)
-    # 移动机械臂到目标位置
-    >>> arm.movej(target_position, 20, 0, 0, 1)
-    # 断开与机械臂的连接
-    >>> arm.rm_delete_robot_arm()
+from Robotic_Arm.rm_robot_interface import *
+
+# 初始化为三线程模式
+arm1 = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+arm2 = RoboticArm()
+
+# 创建机械臂连接，打印连接id
+handle1 = arm1.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle1.id)
+handle2 = arm2.rm_create_robot_arm("192.168.1.19", 8080)
+print(handle2.id)
+
+# 获取当前机械臂状态
+print(arm1.rm_get_current_arm_state())
+print(arm2.rm_get_current_arm_state())
+
+# 断开所有连接，销毁线程
+RoboticArm.rm_destory()
 ```
 
 ## 删除指定机械臂对象`rm_delete_robot_arm()`
@@ -87,7 +100,17 @@ rm_delete_robot_arm(self) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 关闭所有机械臂连接`rm_destory()`
@@ -109,7 +132,17 @@ rm_destory(self) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 断开所有连接
+RoboticArm.rm_destory()
 ```
 
 ## 保存日志到文件`rm_set_log_save()`
@@ -129,7 +162,19 @@ rm_set_log_save(self, path) -> None:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+arm.rm_set_log_save("/home/aisha/work/rm_log.txt")
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置真实/仿真模式`rm_set_arm_run_mode()`
@@ -160,7 +205,20 @@ rm_set_arm_run_mode(self, mode: int) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 设置机械臂为仿真模式
+arm.rm_set_arm_run_mode(0)
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取真实/仿真模式`rm_get_arm_run_mode()`
@@ -191,7 +249,20 @@ tuple[int, int]: 包含两个元素的元组。
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 获取机械臂当前运行模式
+print(arm.rm_set_arm_run_mode(0))
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取机械臂基本信息`rm_get_robot_info()`
@@ -220,7 +291,20 @@ tuple[int, dict[str, any]]: 包含两个元素的元组。
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+# 获取机械臂型号、末端力传感器版本及自由度信息
+print(arm.rm_get_robot_info())
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 注册机械臂事件回调函数`rm_get_arm_event_call_back()`
@@ -239,29 +323,42 @@ rm_get_arm_event_call_back(self, event_callback: rm_event_callback_ptr):
 | :--- | :--- | :--- |
 |event_callback|`rm_event_callback_ptr`|机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。|
 
->注意：单线程无法使用该回调函数。
+>注意：单线程模式无法使用该回调函数。
 
 - **使用示例**
 
 ```python
-    # 下面是一个如何注册机械臂事件回调函数的示例：
-    # 在这个示例中，我们定义了一个名为`event_callback`的函数，用于处理机械臂的事件，并将其注册为回调函数。
-    # 当机械臂事件发生时，`event_callback`函数将被调用，并接收一个包含事件数据的对象作为参数
-        >>> from rm_robot_interface import RoboticArm, rm_event_callback_ptr
-        >>> def event_func(data:rm_event_push_data_t) -> None:
-        ...     print("The motion is complete, the arm is in place.")
-        ...     # 判断接口类型
-        ...     if data.event_type == 1:  # 轨迹规划完成
-        ...         print("运动结果:", data.trajectory_state)
-        ...         print("当前设备:", data.device)
-        ...         print("是否连接下一条轨迹:", data.trajectory_connect)
-        ...     elif data.codeKey == 2:  # 在线编程文件运行完成
-        ...         print("在线编程文件结束id:", data.program_id)
+# 下面是一个如何注册机械臂事件回调函数的示例：
+# 在这个示例中，我们定义了一个名为`event_callback`的函数，用于处理机械臂的事件，并将其注册为回调函数。
+# 当机械臂事件发生时，`event_callback`函数将被调用，并接收一个包含事件数据的对象作为参数
+from Robotic_Arm.rm_robot_interface import *
 
-        >>> rm_init(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-        >>> arm = RoboticArm("192.168.1.18", 8080,level=3)
-        >>> event_callback = rm_event_callback_ptr(event_func)
-        >>> arm.rm_get_arm_event_call_back(event_callback)
+def event_func(data:rm_event_push_data_t) -> None:
+    print("The motion is complete, the arm is in place.")
+    # 判断接口类型
+    if data.event_type == 1:  # 轨迹规划完成
+        print("运动结果:", data.trajectory_state)
+        print("当前设备:", data.device)
+        print("是否连接下一条轨迹:", data.trajectory_connect)
+    elif data.codeKey == 2:  # 在线编程文件运行完成
+        print("在线编程文件结束id:", data.program_id)
+
+# 初始化为三线程模式
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+event_callback = rm_event_callback_ptr(event_func)
+arm.rm_get_arm_event_call_back(event_callback)
+
+# 非阻塞关节运动
+ret = arm.rm_movej([0, 30, 60, 0, 90, 0], 30, 0, 0)
+print("movej: ", ret)
+
+# 删除指定机械臂对象
+arm.rm_delete_robot_arm()
 ```
 
 ## 注册UDP机械臂实时状态主动上报信息回调函数`rm_realtime_arm_state_call_back()`

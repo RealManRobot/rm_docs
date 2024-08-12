@@ -35,7 +35,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置当前位置为第一个标定点 
 print(arm.rm_set_auto_tool_frame(1))
@@ -80,7 +81,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 自动生成坐标系“test”，负载2kg
 print(arm.rm_generate_auto_tool_frame("test", 2, 0, 0, 0))
@@ -123,7 +125,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 frame = rm_frame_t("test", [0, 0, 0, 0, 0, 0], 1, 0, 0, 0)
 print(arm.rm_set_manual_tool_frame(frame))
@@ -164,7 +167,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_change_tool_frame("test"))
 
@@ -204,7 +208,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_delete_tool_frame("test"))
 
@@ -246,7 +251,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 frame = rm_frame_t("test", [0.186350, 0.062099, 0.2, 3.141, 0, 1.569], 5, 1, 1, 1)
 print(arm.rm_update_tool_frame(frame))
@@ -295,7 +301,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_total_tool_frame())
 
@@ -343,7 +350,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_given_tool_frame("test"))
 
@@ -385,7 +393,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_current_tool_frame())
 
@@ -425,7 +434,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 给“test”坐标系设置三个包络
 envelop = rm_envelope_balls_list_t("test", [("L", 0.01, 0.1, 0.01, 0.010), ("R", 0.01, 0.1, 0.010, 0.010),
@@ -476,7 +486,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 获取“test”坐标系的包络参数
 print(arm.rm_get_tool_envelope("test"))

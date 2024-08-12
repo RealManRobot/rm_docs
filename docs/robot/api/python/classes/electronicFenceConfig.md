@@ -49,7 +49,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 config = rm_fence_config_t(
     1, "test", cube=rm_fence_config_cube_t(-1.1, 1.1, -1.1, 1.1, -1.1, 1.1))
@@ -94,7 +95,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 config = rm_fence_config_t(
     1, "test", cube=rm_fence_config_cube_t(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0))
@@ -136,7 +138,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_delete_electronic_fence_config("test"))
 
@@ -184,7 +187,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_electronic_fence_list_names())
 
@@ -225,7 +229,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_given_electronic_fence_config("test"))
 
@@ -274,7 +279,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_electronic_fence_list_infos())
 
@@ -315,10 +321,11 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 electronic_fence_enable = rm_electronic_fence_enable_t(True, 0, 0)
-print(arm.rm_set_electronic_fence_enable())
+print(arm.rm_set_electronic_fence_enable(electronic_fence_enable))
 
 arm.rm_delete_robot_arm()
 ```
@@ -351,7 +358,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_electronic_fence_enable())
 
@@ -393,7 +401,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 config = rm_fence_config_t(1, cube=rm_fence_config_cube_t(-0.9, 0.9, -0.9, 0.9, -0.9, 0.9))
 print(arm.rm_set_electronic_fence_config(config))
@@ -435,7 +444,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_electronic_fence_config())
 
@@ -466,7 +476,18 @@ rm_set_virtual_wall_enable(self, virtual_wall_enable: rm_electronic_fence_enable
 - **使用示例**
 
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+electronic_fence_enable = rm_electronic_fence_enable_t(True, 0, 1)
+print(arm.rm_set_virtual_wall_enable(electronic_fence_enable))
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取虚拟墙使能状态`rm_get_virtual_wall_enable()`
@@ -498,7 +519,17 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。
 - **使用示例**
 
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+print(arm.rm_get_virtual_wall_enable())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置当前虚拟墙参数`rm_set_virtual_wall_config()`
@@ -536,7 +567,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 config = rm_fence_config_t(1, cube=rm_fence_config_cube_t(-0.9, 0.9, -0.9, 0.9, -0.9, 0.9))
 print(arm.rm_set_virtual_wall_config(config))
@@ -573,7 +605,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_virtual_wall_config())
 
