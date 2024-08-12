@@ -29,7 +29,7 @@ __init__(self, arm_model: rm_robot_arm_model_e, force_type: rm_force_type_e):
 
 - **方法原型：**
 
-```C
+```python
 rm_algo_set_angle(self, x: float, y: float, z: float) -> None:
 ```
 
@@ -221,7 +221,7 @@ rm_algo_set_joint_min_limit(self, joint_limit: list[float]) -> None:
 
 - **方法原型：**
 
-```C
+```python
 rm_algo_get_joint_min_limit(self) -> list[float]:
 ```
 
@@ -273,7 +273,7 @@ rm_algo_get_joint_max_speed(self) -> list[float]:
 
 - **使用示例**
   
-```C
+```python
 float after_joint_slimit_max[6];
 rm_algo_get_joint_max_speed(after_joint_slimit_max);
 ```
@@ -513,7 +513,7 @@ rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> list[float]:
 
 - **方法原型：**
 
-```C
+```python
 rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag: int = 1) -> list[float]:
 ```
 
