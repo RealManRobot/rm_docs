@@ -4,7 +4,7 @@
 
 - ### 信道 `channel`
 
-    如果是 AP 模式，则存在此字段，标识 wifi 热点的物理信道号。且在STA模式也存在信道显示
+    如果是 AP 模式，则存在此字段，标识 wifi 热点的物理信道号。
 
     ```C++
     int rm_wifi_net_t::channel
