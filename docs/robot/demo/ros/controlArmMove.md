@@ -2,14 +2,15 @@
 
 ## 1.项目介绍
 
-本项目是一个基于机械臂机械臂本体和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在运动开始和结束时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
+本项目是一个基于RM65、RM75机械臂和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在运动开始和结束时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
 ## 2. 代码结构
 
 ```
 ├── CMakeLists.txt                    <-CMake编译文件
 ├── launch                            <-启动文件夹
-│   └── Control_Arm_Move.launch       <-启动文件
+│   └── rm_65_move_demo.launch      <-启动文件(RM65)
+    └── rm_75_move_demo.launch      <-启动文件(RM75)
 ├── LICENSE                           <-版本说明
 ├── package.xml                       <-依赖描述文件夹
 ├── README.md                         <-说明文档
@@ -100,11 +101,21 @@
     ```
     roslaunch rm_driver rm_<arm_type>_driver.launch
     ```
-    <arm_type>可以为65、63、eco65、75、gen72，可对照自己使用的设备进行实际选择
-    我们需要在另一个终端中启动机械臂的control_arm_move功能包。
+    由于不同构型的机械臂其可到达的点位和位姿各不相同，这里分别对65、75进行了点位的适配，<arm_type>可以为65、75，可对照自己使用的设备进行实际选择。
+    之后我们需要在另一个终端中启动机械臂的control_arm_move功能包。
+    若为RM65系列机械臂执行如下指令:
+
     ```
-    roslaunch control_arm_move Control_Arm_Move.launch
+    roslaunch control_arm_move rm_65_move_demo.launch
     ```
+
+    若为RM75系列机械臂执行如下指令:
+
+    ```
+    roslaunch control_arm_move rm_75_move_demo.launch
+    ```
+
+    >若非RM65、RM75机械臂可能会出现无法到达点位的情况，为正常现象。
 
 * **返回信息**：
 
