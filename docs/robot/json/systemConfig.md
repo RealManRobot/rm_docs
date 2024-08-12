@@ -1788,6 +1788,7 @@ I系列数量和分类如下所示：
 **返回示例：**
 
 ```json
+{"device":0,"state":"current_trajectory_state","trajectory_connect":0, "trajectory_state":true}
 ```
 
 ### 力位混合控制
