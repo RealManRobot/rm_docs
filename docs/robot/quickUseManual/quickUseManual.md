@@ -21,11 +21,11 @@
 |  M6*20固定螺丝  |  4  |
 |  平板示教器（选配）  |  1  |
 
-![图片 3](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/478ebb1d-38a5-4eb8-9081-c2fcd8ac59f2.png)
+![alt text](478ebb1d-38a5-4eb8-9081-c2fcd8ac59f2.png)
 
 **RM65-B机器人整体组成示意图**
 
-![图片 1](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/e6f9a49c-3c33-456d-9732-f2e5acfd1e7a.png?x-oss-process=image/crop,x_0,y_80,w_641,h_366/ignore-error,1)
+![alt text](image.png)
 
 **机器人电气接口功能说明**
 
@@ -47,15 +47,15 @@ RM65机器人安装简要步骤：
 1. 准备四个M6的内六角螺栓和M6的内六角扳手。
 2. 从包装箱中取出RM65机器人，安装到底座。
 
-![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/34df18e3-f699-4f84-b8b9-8c3cbb37910d.png)
+![alt text](34df18e3-f699-4f84-b8b9-8c3cbb37910d.png)
 
-![图片 151](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/6adb38eb-f214-47de-99d4-db9eb9cd039d.png)
+![alt text](6adb38eb-f214-47de-99d4-db9eb9cd039d.png)
 
 基座安装尺寸
 
 对于末端工具的安装，机械臂本体提供的标准法兰接口，用户需要根据安装工具的安装尺寸进行适配。机械臂法兰盘预留均匀分布在Ф49mm分度圆上的6个M4螺纹孔，具体尺寸如下图所示。
 
-![图片 1111](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/1be801bd-ef54-46c6-b638-9f086869ecd8.png)
+![alt text](1be801bd-ef54-46c6-b638-9f086869ecd8.png)
 
 ## 三、机器人接线与开机
 
@@ -67,14 +67,14 @@ RM65机器人安装简要步骤：
 
 4、连接机器人线缆。若无外部设备，只需要连接电源线与网线即可。如下图：
 
-![图片 1](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/23d2d84e-b827-4450-889c-739002c98c29.png)
+![alt text](23d2d84e-b827-4450-889c-739002c98c29.png)
 
 - 检查电源线与电源插头是否连接好。
 - 检查控制器电源开关在未接通时处于关闭状态。
 - 确保机器人不会碰到周围人员或设备。确保电源线已连接24V直流电源。
 - 按下电源开关，①电源开关背景灯变为蓝色，说明机械臂上电。②同时机器人控制器右上角指示灯变为蓝色，说明控制器正在启动，③控制器指示灯变为白色，说明机器人关节等正在进行初始化工作。④控制器指示灯变为绿色闪烁状态，说明机器人启动完成，可正常开始工作。此过程用时大约50s左右。
 
-![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/387b805d-fdce-492e-8e4c-1c404726dda4.png)
+![alt text](387b805d-fdce-492e-8e4c-1c404726dda4.png)
 
 ## 四、示教器连接
 
@@ -86,37 +86,37 @@ RM65机器人安装简要步骤：
 
 Windows系统与机械臂建立有线连接时，首先需要将电脑ip更改到192.168.1.xx网段，xx可为除192.168.1.18中“18”以外的ip，建议配置为192.168.1.100。
 
-![图片 4](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/0b9cf7de-474d-464a-b8bd-a9c2d457c160.png)
+![alt text](0b9cf7de-474d-464a-b8bd-a9c2d457c160.png)
 
 **网口接口**
 
 （1）右击电脑右下方WIFI按钮打开“网络和Internet设置”注：win11点击后须先点击<高级网络设置，再点击更多网络适配器选项后立即进入（3）以太网选项>
 
-![图片 4](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/a33be380-1797-4925-96a8-3be975590cab.png?x-oss-process=image/crop,x_0,y_344,w_367,h_282/ignore-error,1)
+![alt text](image-1.png)
 
 **打开网络****和Internet设置****示意图**
 
 （2）单击“以太网-->更改适配器选项”
 
-![图片 17](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/6709b261-22e6-4859-a2a2-7c13ebd78996.png)
+![alt text](6709b261-22e6-4859-a2a2-7c13ebd78996.png)
 
 **本地连接示意图**
 
 （3）双击“以太网”并打开，并且在弹出的窗口中单击“属性”按钮。
 
-![图片 6](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/5ede079f-e129-49d6-a2ac-2fdf9627f78e.png?x-oss-process=image/crop,x_359,y_0,w_271,h_212/ignore-error,1)![图片 7](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/5c301fac-ea78-41e8-ac30-da57743a910e.png)
+![alt text](image-2.png)![alt text](5c301fac-ea78-41e8-ac30-da57743a910e.png)
 
 **属性示意图**
 
 (4)在弹出的对话框中，第一步选中“Internet协议版本4”，第二步单击“属性”按钮。
 
-![图片 8](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/6acdae4c-4542-484e-8bc0-6540da2758a9.png)
+![alt text](6acdae4c-4542-484e-8bc0-6540da2758a9.png)
 
 **协议版本示意图**
 
 （5）按下图配置网络IP地址，配置完成后点击“确定”按钮，即可完成本地网络设置。
 
-![图片 9](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/344a9e87-8081-46cd-b43f-b122828c9089.png)
+![alt text](344a9e87-8081-46cd-b43f-b122828c9089.png)
 
 **网络IP地址示意图**
 
@@ -124,16 +124,16 @@ Windows系统与机械臂建立有线连接时，首先需要将电脑ip更改�
 
 默认WIFI名称格式如下图所示，密码默认为12345678
 
-![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/7eeca076-bc62-48bf-b481-16b8fde08fe1.png)
+![alt text](7eeca076-bc62-48bf-b481-16b8fde08fe1.png)
 
-1. 打开浏览器，若使用有线连接，则网址输入192.168.1.18。![图片 4](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/6782d5b8-5c9b-43e2-a34a-beb4eee919da.png?x-oss-process=image/crop,x_10,y_32,w_499,h_40/ignore-error,1)
+1. 打开浏览器，若使用有线连接，则网址输入192.168.1.18。![alt text](image-3.png)
 2. 若使用无线的AP模式连接，则网址输入192.168.33.80。
 3. 输入账号：user，密码：123，点击登录即可进入机器人控制界面。
-![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/049f1871-eda1-4e1b-9f87-20101c162592.png)
+![alt text](049f1871-eda1-4e1b-9f87-20101c162592.png)
 
 ## 五、示教器界面
 
-![图片 21](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/8900b960-7537-4d1a-ae4c-a585b044d36c.png)
+![alt text](8900b960-7537-4d1a-ae4c-a585b044d36c.png)
 
 注：若首次连接或升级程序后连接示教器出现页面卡顿后可以Ctrl+F5 刷新页面。
 
@@ -168,7 +168,8 @@ Windows系统与机械臂建立有线连接时，首先需要将电脑ip更改�
 
 ## 六、拖动示教
 
-![图片 2](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/518d0fbd-53ec-4994-9952-b31e98b70bd6.png)![图片 3](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorLEPz5pqawZ/img/35a93cce-461e-44f8-8e68-e45e95783efa.png)
+![alt text](518d0fbd-53ec-4994-9952-b31e98b70bd6.png)
+![alt text](35a93cce-461e-44f8-8e68-e45e95783efa.png)
 
 在机械臂末端法兰外壳上有两个按钮，分别控制机器人进行拖动示教和轨迹复现。
 
