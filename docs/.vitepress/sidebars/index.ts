@@ -321,7 +321,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/force",
               },
               {
-                text: "透传力位混合控制补偿",
+                text: "末端工具夹爪配置",
                 link: "/robot/api/c/classes/gripperControl",
               },
               {
@@ -844,7 +844,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
           {
             text: "bringup",
-            link: "/robot/ros/bringup",
+            link: "/robot/ros/bringup/",
           },
           {
             text: "control",
