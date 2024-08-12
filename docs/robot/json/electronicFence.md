@@ -612,9 +612,16 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 ```
 
 **返回示例：**
+设置成功。
 
 ```json
 { "command": "set_virtual_wall_config", "set_config": true }
+```
+
+设置失败。
+
+```json
+{ "command": "set_virtual_wall_config", "set_config": false }
 ```
 
 **参数说明:**
