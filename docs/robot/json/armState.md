@@ -86,7 +86,7 @@
 | :-------------- | :--- | :----------------------- |
 | `plan_num` |   `int`   | 机械臂轨迹规计数。           |
 
-## 查询控制器RS485模式（I系列）`get_controller_RS485_mode`
+## 查询控制器RS485模式（第三代）`get_controller_RS485_mode`
 
 **参数说明：**
 | 参数            | 类型 | 说明                     |
@@ -106,7 +106,7 @@
 {"command":"get_controller_RS485_mode","controller_RS485_mode":1,"baudrate":460800,"modbus_timeout":1}
 ```
 
-## 查询工具端RS485模式（I系列）`get_tool_RS485_mode`
+## 查询工具端RS485模式（第三代）`get_tool_RS485_mode`
 
 **参数说明：**
 | 参数            | 类型 | 说明                     |

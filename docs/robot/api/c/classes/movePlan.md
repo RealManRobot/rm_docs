@@ -298,7 +298,7 @@ int rm_movej_canfd(rm_robot_handle * handle,float * joint,bool follow,float expa
 *可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
 >透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。
 >用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
->I系列控制器有线网口周期最快可达2ms，提供了更高的实时性。
+>第三代控制器有线网口周期最快可达2ms，提供了更高的实时性。
 
 - **参数说明:**
 
@@ -339,7 +339,7 @@ int rm_movep_canfd(rm_robot_handle * handle,rm_pose_t pose,bool follow)
 *可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
 >透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。
 >用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。
->I系列控制器有线网口周期最快可达2ms，提供了更高的实时性。
+>第三代控制器有线网口周期最快可达2ms，提供了更高的实时性。
 
 - **参数说明:**
 
