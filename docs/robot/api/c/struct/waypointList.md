@@ -4,37 +4,37 @@
 
 - ### 页码 `page_num`
 
-    ```C  
+    ```C++
     int rm_waypoint_list_t::page_num
     ```
 
 - ### 每页大小 `page_size`
 
-    ```C  
+    ```C++
     int rm_waypoint_list_t::page_size
     ```
 
 - ### 列表长度 `total_size`
 
-    ```C  
+    ```C++
     int rm_waypoint_list_t::total_size
     ```
 
 - ### 模糊搜索 `vague_search`
 
-    ```C  
+    ```C++
     char rm_waypoint_list_t::vague_search[32]
     ```
 
 - ### 返回符合的全局路点列表长度 `list_len`
 
-    ```C  
+    ```C++
     int rm_waypoint_list_t::list_len
     ```
 
 - ### 返回符合的全局路点列表 `points_list`
 
-    ```C  
+    ```C++
     rm_waypoint_t rm_waypoint_list_t::points_list[100]
     ```
 

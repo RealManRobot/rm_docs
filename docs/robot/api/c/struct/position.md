@@ -4,18 +4,18 @@
 
 - ### X轴坐标`x`
 
-    ```C  
+    ```C++
     float rm_position_t::x
     ```
 
 - ### Y轴坐标`y`
 
-    ```C  
+    ```C++
     float rm_position_t::y
     ```
 
 - ### Z轴坐标`z`
 
-    ```C  
+    ```C++
     float rm_position_t::z
     ```

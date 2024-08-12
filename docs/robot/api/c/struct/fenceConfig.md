@@ -6,7 +6,7 @@
 
     1 表示长方体，2 表示点面矢量平面，3 表示球体。
 
-    ```C  
+    ```C++
     int rm_fence_config_t::form
     ```
 
@@ -14,13 +14,13 @@
 
     不超过 10 个字节，支持字母、数字、下划线。
 
-    ```C  
+    ```C++
     char rm_fence_config_t::name[12]
     ```
 
 - ### 长方体参数`cube`
 
-    ```C  
+    ```C++
     rm_fence_config_cube_t rm_fence_config_t::cube
     ```
 
@@ -28,7 +28,7 @@
 
 - ### 点面矢量平面参数`plan`
 
-    ```C  
+    ```C++
     rm_fence_config_plane_t rm_fence_config_t::plan
     ```
 
@@ -36,7 +36,7 @@
 
 - ### 球体参数`sphere`
 
-    ```C  
+    ```C++
     rm_fence_config_sphere_t rm_fence_config_t::sphere
     ```
 

@@ -8,7 +8,7 @@
 
     0.001N或0.001Nm。
 
-    ```C  
+    ```C++
     float rm_force_sensor_t::force[6]
     ```
 
@@ -16,7 +16,7 @@
 
     0.001N或0.001Nm。
 
-    ```C  
+    ```C++
     float rm_force_sensor_t::zero_force[6]
     ```
 
@@ -24,6 +24,6 @@
 
     0.001N或0.001Nm。
 
-    ```C  
+    ```C++
     int rm_force_sensor_t::coordinate
     ```

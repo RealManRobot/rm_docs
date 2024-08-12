@@ -6,13 +6,13 @@
 
     每个工具最多支持 5 个包络球，可以没有包络。
 
-    ```C  
+    ```C++
     int rm_robot_info_t::arm_dof
     ```
 
 - ### 机械臂型号`arm_model`
 
-    ```C  
+    ```C++
     rm_robot_arm_model_e rm_robot_info_t::arm_model
     ```
 
@@ -20,7 +20,7 @@
 
 - ### 末端力传感器版本`force_type`
 
-    ```C  
+    ```C++
     rm_force_type_e rm_robot_info_t::force_type
     ```
 

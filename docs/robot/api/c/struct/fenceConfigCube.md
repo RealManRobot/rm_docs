@@ -6,7 +6,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::x_min_limit
     ```
 
@@ -14,7 +14,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::x_max_limit
     ```
 
@@ -22,7 +22,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::y_min_limit
     ```
 
@@ -30,7 +30,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::y_max_limit
     ```
 
@@ -38,7 +38,7 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::z_min_limit
     ```
 
@@ -46,6 +46,6 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     float rm_fence_config_cube_t::z_max_limit
     ```

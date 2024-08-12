@@ -6,7 +6,7 @@
 
     力的单位为N；力矩单位为Nm。
 
-    ```C  
+    ```C++
     float rm_force_data_t::force_data[6]
     ```
 
@@ -14,7 +14,7 @@
 
     力的单位为N；力矩单位为Nm。
 
-    ```C  
+    ```C++
     float rm_force_data_t::zero_force_data[6]
     ```
 
@@ -22,7 +22,7 @@
 
     力的单位为N；力矩单位为Nm。
 
-    ```C  
+    ```C++
     float rm_force_data_t::work_zero_force_data[6]
     ```
 
@@ -30,6 +30,6 @@
 
     力的单位为N；力矩单位为Nm。
 
-    ```C  
+    ```C++
     float rm_force_data_t::tool_zero_force_data[6]
     ```

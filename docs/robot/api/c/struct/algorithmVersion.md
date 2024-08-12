@@ -4,6 +4,6 @@
 
 - ### 算法库版本号`version`
 
-    ```C  
+    ```C++  
     char rm_algorithm_version_t::version[20]
     ```

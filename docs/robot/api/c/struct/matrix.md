@@ -4,18 +4,18 @@
 
 ### `irow`
 
-```C  
+```C++
 short rm_matrix_t::irow
 ```
 
 ### `iline`
 
-```C
+```C++
 short rm_matrix_t::iline
 ```
 
 ### `data`
 
-```C
+```C++
 float rm_matrix_t::data[4][4]
 ```

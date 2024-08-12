@@ -6,7 +6,7 @@
 
     每个工具最多支持 5 个包络球，可以没有包络。
 
-    ```C  
+    ```C++
     rm_envelopes_ball_t rm_envelope_balls_list_t::balls[5]
     ```
 
@@ -14,7 +14,7 @@
 
 - ### 包络球数量`size`
 
-    ```C  
+    ```C++  
     int rm_envelope_balls_list_t::size
     ```
 
@@ -22,6 +22,6 @@
 
     控制器中已存在的工具坐标系名称，如果不存在该字段，则为临时设置当前包络参数
 
-    ```C  
+    ```C++  
     char rm_envelope_balls_list_t::tool_name[12]
     ```

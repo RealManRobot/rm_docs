@@ -6,6 +6,6 @@
 
     单位 m。
 
-    ```C  
+    ```C++
     rm_fence_config_t rm_fence_config_list_t::config[10]
     ```

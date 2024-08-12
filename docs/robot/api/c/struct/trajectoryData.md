@@ -4,24 +4,24 @@
 
 - ### 在线编程文件id `id`
 
-    ```C  
+    ```C++
     int rm_trajectory_data_t::id
     ```
 
 - ### 文件大小 `size`
 
-    ```C  
+    ```C++
     int rm_trajectory_data_t::size
     ```
 
 - ### 默认运行速度 `speed`
 
-    ```C  
+    ```C++
     int rm_trajectory_data_t::speed
     ```
 
 - ### 文件名称 `trajectory_name`
 
-    ```C  
+    ```C++
     char rm_trajectory_data_t::trajectory_name[32]
     ```

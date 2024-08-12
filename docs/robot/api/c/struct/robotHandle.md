@@ -6,6 +6,6 @@
 
     连接成功id大于0，连接失败返回-1。
 
-    ```C  
+    ```C++
     int rm_robot_handle::id
     ```

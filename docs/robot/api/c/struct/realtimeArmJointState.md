@@ -6,25 +6,25 @@
 
     -3为数据解析错误，代表推送的数据不完整或格式不正确。
 
-    ```C  
+    ```C++
     int rm_realtime_arm_joint_state_t::errCode
     ```
 
 - ### 推送数据的机械臂的IP地址`arm_ip`
 
-    ```C  
+    ```C++
     char rm_realtime_arm_joint_state_t::arm_ip[16]
     ```
 
 - ### 机械臂错误码`arm_err`
 
-    ```C  
+    ```C++
     uint16_t rm_realtime_arm_joint_state_t::arm_err
     ```
 
 - ### 关节状态`joint_status`
 
-    ```C  
+    ```C++
     rm_joint_status_t rm_realtime_arm_joint_state_t::joint_status
     ```
 
@@ -32,7 +32,7 @@
 
 - ### 力数据（六维力版本支持）`force_sensor`
 
-    ```C  
+    ```C++
     rm_force_sensor_t rm_realtime_arm_joint_state_t::force_sensor
     ```
 
@@ -40,13 +40,13 @@
 
 - ### 系统错误码`sys_err`
 
-    ```C  
+    ```C++
     uint16_t rm_realtime_arm_joint_state_t::sys_err
     ```
 
 - ### 当前路点信息`waypoint`
 
-    ```C  
+    ```C++
     rm_pose_t rm_realtime_arm_joint_state_t::waypoint
     ```
 

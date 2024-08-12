@@ -6,24 +6,24 @@
 
     0-控制器RS485端口，1-末端接口板RS485接口，3-控制器ModbusTCP设备
 
-    ```C  
+    ```C++
     int rm_peripheral_read_write_params_t::port
     ```
 
 - ### 数据起始地址`poaddressrt`
 
-    ```C
+    ```C++
     int rm_peripheral_read_write_params_t::address
     ```
 
 - ### 外设设备地址`device`
 
-    ```C
+    ```C++
     int rm_peripheral_read_write_params_t::device
     ```
 
 - ### 要读的数据的数量`num`
 
-    ```C
+    ```C++
     int rm_peripheral_read_write_params_t::num
     ```

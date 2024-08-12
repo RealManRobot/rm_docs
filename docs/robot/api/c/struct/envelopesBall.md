@@ -6,7 +6,7 @@
 
     1-10 个字节，支持字母数字下划线。
 
-    ```C
+    ```C++
     char rm_envelopes_ball_t::name[12]
     ```
 
@@ -14,7 +14,7 @@
 
     单位 0.001m。
 
-    ```C
+    ```C++
     float rm_envelopes_ball_t::radius
     ```
 
@@ -22,7 +22,7 @@
 
     单位 m。
 
-    ```C
+    ```C++
     float rm_envelopes_ball_t::x
     ```
 
@@ -30,7 +30,7 @@
 
     单位 m。
 
-    ```C
+    ```C++
     float rm_envelopes_ball_t::y
     ```
 
@@ -38,6 +38,6 @@
 
     单位 m。
 
-    ```C
+    ```C++
     float rm_envelopes_ball_t::z
     ```

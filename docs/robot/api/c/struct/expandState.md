@@ -6,7 +6,7 @@
 
     单位度，精度 0.001°(若为升降机构高度，则单位：mm，精度：1mm，范围：0 ~2300)。
 
-    ```C  
+    ```C++
     int rm_expand_state_t::pos
     ```
 
@@ -14,7 +14,7 @@
 
     单位：mA，精度：1mA。
 
-    ```C  
+    ```C++
     int rm_expand_state_t::current
     ```
 
@@ -22,7 +22,7 @@
 
     错误代码类型参考关节错误代码。
 
-    ```C  
+    ```C++
     int rm_expand_state_t::err_flag
     ```
 
@@ -30,6 +30,6 @@
 
     0-空闲，1-正方向速度运动，2-正方向位置运动，3-负方向速度运动，4-负方向位置运动。
 
-    ```C  
+    ```C++
     int rm_expand_state_t::mode
     ```
