@@ -84,7 +84,7 @@
 
     编译force_position_control功能包
     ```
-    colcon build force_position_control
+    colcon build --packages-select force_position_control
     ```
 
     声明环境变量

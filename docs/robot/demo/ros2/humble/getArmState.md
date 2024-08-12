@@ -83,7 +83,7 @@
 
     编译get_arm_state功能包
     ```
-    colcon build get_arm_state
+    colcon build --packages-select get_arm_state
     ```
 
     声明环境变量

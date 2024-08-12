@@ -85,7 +85,7 @@
 
     编译control_arm_move功能包
     ```
-    colcon build control_arm_move
+    colcon build --packages-select control_arm_move
     ```
 
     声明环境变量
