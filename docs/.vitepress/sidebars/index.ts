@@ -265,6 +265,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/roboticArm",
               },
               {
+                text: "在线编程",
+                link: "/robot/api/c/classes/projectManagement",
+              },
+              {
                 text: "工具坐标系配置",
                 link: "/robot/api/c/classes/toolCoordinateConfig",
               },
