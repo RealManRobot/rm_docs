@@ -33,6 +33,7 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
 
 2. 六维力数据字典
+
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   rm_force_data_t  |    `dict[str, any]`   |    六维力数据字典，键为rm_force_data_t结构体的字段名称    |
@@ -228,48 +229,6 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 print(arm.rm_create_robot_arm("192.168.1.18", 8080))
 
 print(arm.rm_stop_set_force_sensor())
-
-arm.rm_delete_robot_arm()
-```
-
-## 查询末端一维力数据`rm_get_fz()`
-
-- **方法原型：**
-
-```python
-rm_get_fz(self) -> tuple[int, dict[str, any]]:
-```
-
-- **返回值:** </br>
-tuple[int, dict[str,any]]: 包含两个元素的元组
-
-1. int: 函数执行的状态码
-
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   0  |    `int`   |    成功    |
-|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
-|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
-|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
-|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
-
-2. 一维力数据词典
-|   参数    |  类型   |   说明    |
-| :--- | :--- | :---|
-|   rm_fz_data_t  |    `dict[str, any]`   |    一维力数据字典，键为rm_fz_data_t结构体的字段名称    |
-
-- **使用示例**
-  
-```python
-from Robotic_Arm.rm_robot_interface import *
-
-# 实例化RoboticArm类
-arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
-
-# 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
-
-print(arm.rm_get_fz())
 
 arm.rm_delete_robot_arm()
 ```
