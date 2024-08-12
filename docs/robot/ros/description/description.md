@@ -191,7 +191,7 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
             └── rm_63_6f_descriptio.urdf.xacro
 ```
 
-## 3. rm\_description话题说明
+## 3. rm_description话题说明
 
 如下为该功能包的话题说明。
 
