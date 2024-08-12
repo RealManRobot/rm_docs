@@ -12,7 +12,7 @@ rm_bringup功能包为实现了一些基本的机械臂功能，通过该功能�
 2. 熟悉功能包中的文件构成及作用。
 3. 熟悉功能包相关的话题，方便开发和使用
 
-源码地址：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_demo。](https://github.com/RealManRobot/rm_robot/tree/main/rm_demo。)
+源码地址：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_demo](https://github.com/RealManRobot/rm_robot/tree/main/rm_demo。)
 
 ## 1.rm_example功能包使用
 

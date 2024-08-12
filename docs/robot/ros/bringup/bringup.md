@@ -12,7 +12,7 @@ rm\_bringup功能包为实现多个launch文件同时运行所设计的功能包
 2. 熟悉功能包中的文件构成及作用。
 3. 悉功能包相关的话题，方便开发和使用
 
-代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_bringup。](https://github.com/RealManRobot/rm_robot/tree/main/rm_bringup)
+代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_bringup](https://github.com/RealManRobot/rm_robot/tree/main/rm_bringup)
 
 ## 1.rm_bringup功能包使用
 

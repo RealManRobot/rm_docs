@@ -12,7 +12,7 @@ rm\_control功能包为实现moveit控制真实机械臂时所必须的一个功
 2. 熟悉功能包中的文件构成及作用。
 3. 熟悉功能包相关的话题，方便开发和使用
 
-代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_control。](https://github.com/RealManRobot/rm_robot/tree/main/rm_control。)
+代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_control](https://github.com/RealManRobot/rm_robot/tree/main/rm_control。)
 
 ## 1.rm\_control功能包使用
 

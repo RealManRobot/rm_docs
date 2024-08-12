@@ -1,7 +1,7 @@
 # ROS快速开始
 
 机械臂的ROS支持是基于`rm_robot`功能包，以下为使用环境：
-* 当前支持的机械臂有RM65系列、RM75系列、ECO65系列、RML63系列，详细可参考网址 [RealMan robots](http://www.realman-robotics.com/)。
+* 当前支持的机械臂有RM65系列、RM75系列、ECO65系列、RML63系列，详细可参考网址 [RealMan robots](http://www.realman-robotics.cn/)。
 * 版本2.1.0.
 * 支持的机械臂控制器版本1.4.3以上。
 * 基于的Ubuntu版本为18.04或20.04。
