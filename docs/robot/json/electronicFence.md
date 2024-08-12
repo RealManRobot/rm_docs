@@ -415,16 +415,17 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 |x3，y3，z3|`int`|点面矢量平面三点法中的第三个点坐标，单位 0.001m，示例中表示 x-0.7m，y-1.2m，z-0.3m。|
 
 **使用示例：**
+
 实现：设置当前电子围栏参数-长方体。
 
 ```json
-{"command":"set_electronic_fence_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_ min_limit":500"z_max_limit":1000}
+{"command":"set_electronic_fence_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_ min_limit":500,"z_max_limit":1000}
 ```
 
 实现：设置当前电子围栏参数-点面矢量平面。
 
 ```json
-{"command":"set_electronic_fence_config","form":2,"form_name": "my_form","x1":500,"y1":1000"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
+{"command":"set_electronic_fence_config","form":2,"form_name": "my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 **返回示例：**
