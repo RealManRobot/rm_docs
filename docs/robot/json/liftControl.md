@@ -78,7 +78,7 @@
 成功到位。
 
 ```json
-{"current":2554,"en_flag":"1","err_flag":"0","height":0,"ioint_id":1,"mode":0,"current":"lift_state"}
+{"current":2554,"en_flag":"1","err_flag":"0","height":0,"joint_id":1,"mode":0,"current":"lift_state"}
 ```
 
 **参数说明：**
