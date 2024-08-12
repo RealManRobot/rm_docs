@@ -34,7 +34,7 @@
     char rm_wifi_net_t::password[16]
     ```
 
-- ### MAC 地址`ssid`
+- ### SSID 参数`ssid`
 
     ```C++
     char rm_wifi_net_t::ssid[32]
