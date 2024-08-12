@@ -41,7 +41,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 关节5步进3°
 print(arm.rm_set_joint_step(5, 3, 20, 1))
@@ -89,7 +90,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 当前工作坐标系X轴方向步进0.05m
 print(arm.rm_set_pos_step(rm_pos_teach_type_e.RM_X_DIR_E, 0.05, 20, 1))
@@ -137,7 +139,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 绕当前工作坐标系X轴旋转0.01rad
 print(arm.rm_set_ort_step(rm_ort_teach_type_e.RM_RX_ROTATE_E, 0.01, 20, 1))
@@ -180,7 +183,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 关节5正方向示教
 print(arm.rm_set_joint_teach(5, 1, 20))
@@ -225,7 +229,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 当前工作坐标系X轴正方向示教
 print(arm.rm_set_pos_teach(rm_pos_teach_type_e.RM_X_DIR_E, 1, 20))
@@ -270,7 +275,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 绕当前工作坐标系X轴正方向示教
 print(arm.rm_set_ort_teach(rm_ort_teach_type_e.RM_RX_ROTATE_E, 1, 20))
@@ -313,7 +319,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_stop_teach())
 
@@ -353,7 +360,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 切换示教坐标系为当前工具坐标系
 print(arm.rm_set_teach_frame(1))
@@ -397,7 +405,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_teach_frame())
 

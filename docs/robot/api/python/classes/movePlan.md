@@ -41,7 +41,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 关节阻塞运动到[0, 20, 70, 0, 90, 0]
 print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
@@ -89,7 +90,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movej_p([0.2, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
 print(arm.rm_movel([0.3, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
@@ -136,7 +138,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1, 0))
 print(arm.rm_moves([0.3, 0, 0.3, 3.14, 0, 0], 20, 1, 1, 0))
@@ -187,7 +190,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movej([0, 10, 80, 0, 90, 0], 20, 0, 0, 0))
 ret1 = arm.rm_get_current_arm_state()
@@ -238,7 +242,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1))
 
@@ -278,7 +283,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movej_canfd([0,0,0,0,0,0], False))
 
@@ -321,7 +327,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_movep_canfd([0,0,0.879,0,0,0],False))
 

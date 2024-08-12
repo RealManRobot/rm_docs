@@ -36,7 +36,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_arm_max_line_speed(0.25))
 
@@ -76,7 +77,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_arm_max_line_acc(1.6))
 
@@ -116,7 +118,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_arm_max_angular_speed(0.6))
 
@@ -156,7 +159,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_arm_max_angular_acc(4))
 
@@ -190,7 +194,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 初始化机械臂参数，机械臂的末端参数恢复到默认值。默认参数为：
 # 末端线速度：0.1m/s末端线加速度：0.5m/s²
@@ -234,7 +239,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置机械臂碰撞防护等级为1
 print(arm.rm_set_collision_state(1))
@@ -277,7 +283,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_collision_stage())
 
@@ -319,7 +326,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_arm_max_line_speed())
 
@@ -361,7 +369,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_arm_max_line_acc())
 
@@ -397,7 +406,17 @@ tuple[int,float]: 包含两个元素的元组。
 - **使用示例**
 
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+print(arm.rm_get_arm_max_angular_speed())
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 获取机械臂末端最大角加速度`rm_get_arm_max_angular_acc()`
@@ -434,7 +453,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_arm_max_angular_acc())
 

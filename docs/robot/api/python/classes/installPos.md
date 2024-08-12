@@ -37,7 +37,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_install_pose(0, 90, 0))
 
@@ -80,7 +81,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_install_pose())
 
@@ -117,7 +119,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_joint_software_version())
 
@@ -154,7 +157,8 @@ from Robotic_Arm.rm_robot_interface import *
 # 实例化RoboticArm类
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_tool_software_version())
 

@@ -39,7 +39,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 point = rm_waypoint_t("point1", [0, 20, 70, 0, 90, 0],
                       [0.3, 0, 0.3, 3.142, 0, 0], 'World', 'Arm_Tip')
@@ -84,7 +85,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 point = rm_waypoint_t("point1", [0, 40, 50, 0, 90, 0],[0.3, 0, 0.3, 3.142, 0, 0], 'World', 'Arm_Tip')
 print(arm.rm_update_global_waypoint(point))
@@ -126,7 +128,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_delete_global_waypoint("point"))
 
@@ -175,7 +178,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_given_global_waypoint("point"))
 
@@ -224,7 +228,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 模糊查询“test”路点
 print(arm.rm_get_global_waypoints_list(1, 10, "test"))

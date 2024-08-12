@@ -40,7 +40,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置使能UDP上报配置，周期为500ms，端口号8089，系统外受力坐标系为传感器坐标系，上报目标IP地址为"192.168.1.104"
 config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104")
@@ -85,7 +86,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_realtime_push())
 

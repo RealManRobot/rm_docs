@@ -25,7 +25,7 @@ RMDemo_AlgoInterface
 └── run.sh               # linux快速运行脚本
 
 ```
-## 3.项目下载
+## 3. 项目下载
 
 通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
 

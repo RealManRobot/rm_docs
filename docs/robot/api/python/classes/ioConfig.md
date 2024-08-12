@@ -53,7 +53,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置IO 1通道为通用输出模式
 print(arm.rm_set_io_mode(1, 1))
@@ -96,7 +97,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置IO 1通道输出高
 print(arm.rm_set_do_state(1, 1))
@@ -147,7 +149,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 获取IO 1通道状态
 print(arm.rm_get_io_state(1))
@@ -191,7 +194,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 获取IO输入状态
 print(arm.rm_get_io_input())
@@ -235,7 +239,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_io_output())
 
@@ -277,7 +282,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置控制器电源输出24V
 print(arm.rm_set_voltage(3))
@@ -321,7 +327,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_voltage())
 
@@ -363,7 +370,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置工具端IO 1通道输出高
 print(arm.rm_set_tool_do_state(1, 1))
@@ -406,7 +414,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置工具端数字IO 1端口为输入模式
 print(arm.rm_set_tool_IO_mode(1, 0))
@@ -451,7 +460,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_tool_io_state())
 
@@ -501,7 +511,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 设置工具端电源输出24V
 print(arm.rm_set_tool_voltage(3))
@@ -551,7 +562,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_tool_voltage())
 

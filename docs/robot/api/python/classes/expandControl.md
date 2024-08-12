@@ -37,7 +37,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 # 扩展关节速度50% 反向运动
 print(arm.rm_set_expand_speed(-50))
@@ -81,7 +82,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_set_expand_pos(200, 20, 1))
 
@@ -123,7 +125,8 @@ from Robotic_Arm.rm_robot_interface import *
 arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 
 # 创建机械臂连接，打印连接id
-print(arm.rm_create_robot_arm("192.168.1.18", 8080))
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
 
 print(arm.rm_get_expand_state())
 
