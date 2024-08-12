@@ -1,4 +1,4 @@
-# rm\_description功能包说明
+# rm_description功能包说明
 
 rm\_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
 
@@ -12,11 +12,11 @@ rm\_description功能包为显示机器人模型和TF变换的功能包，通过
 2. 熟悉功能包中的文件构成及作用。
 3. 熟悉功能包相关的话题，方便开发和使用
 
-代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_description](https://github.com/RealManRobot/rm_robot/tree/main/rm_description)。
+代码链接：[https://github.com/RealManRobot/rm/robot/tree/main/rm/description](https://github.com/RealManRobot/rm_robot/tree/main/rm_description)
 
-## 1.rm\_description功能包使用
+## 1.rm_description功能包使用
 
-首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm\_description功能包。
+首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_description功能包。
 
 ```ros
 m@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
@@ -32,15 +32,15 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 
 节点启动成功后，将显示以下画面。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorL4GLmyqawZ/img/bc8f677b-97fe-471e-9063-833c695b4971.png)
+![alt text](image.png)
 
 启动成功后我们就可以在rviz中，查看机械臂状态了。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorL4GLmyqawZ/img/b5e30348-4acc-49a8-8879-39d9f93df948.png)
+![alt text](image-1.png)
 
 我们也可以通过拖动左边的滑块的方式控制机械臂运动。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/ABmOorL4GLmyqawZ/img/2da503d1-ca29-4f89-8299-0940df18c005.png)
+![alt text](image-2.png)
 
 ## 2.rm\_description功能包架构说明
 
