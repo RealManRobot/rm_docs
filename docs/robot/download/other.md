@@ -117,17 +117,18 @@
     justify-content: end;
     align-items: center;
 }
+
 .wrap h2{
-    font-size:24px;
-    line-height:32px;
-    letter-spacing: -0.02em;
-    height:32px;
-    margin:0;
-    border-top:none;
-    padding-top:0;
+    font-size:24px !important;
+    line-height:32px !important;
+    letter-spacing: -0.02em !important;
+    height:32px !important;
+    margin:0 !important;
+    border-top:none !important;
+    padding-top:0 !important;
 }
 .wrap p{
-    color:var(--vp-c-text-2);
+    color:var(--vp-c-text-2) !important;
 }
 .btnStyle{
     width: 100px;
