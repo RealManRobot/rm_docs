@@ -4,15 +4,15 @@
 
 ## 1.项目介绍
 
-本项目是一个基于机械臂机械臂本体和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在执行成功或失败时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
+本项目是一个基于RM65、RM75机械臂和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在执行成功或失败时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
 ## 2.代码结构
 
 ```
 ├── CMakeLists.txt                           <-CMake编译文件
 ├── launch                                   <-启动文件夹
-│   ├── rm_6dof_move.launch.py               <-启动文件
-│   └── rm_7dof_move.launch.py               <-启动文件
+│   ├── rm_65_move.launch.py               <-启动文件(RM65)
+│   └── rm_75_move.launch.py               <-启动文件(RM75)
 ├── LICENSE                                  <-版本说明
 ├── package.xml                              <-依赖描述文件夹
 ├── README.md                                <-说明文档
@@ -55,7 +55,7 @@
 
     编译rm_ros_interfaces功能包
     ```
-    colcon build --packages-select rm_ros_interfaces
+    colcon build --packages-select control_arm_move
     ```
     声明环境变量
     ```
@@ -98,18 +98,26 @@
 * **命令行使用**：
 
     我们需要在一个终端中启动机械臂的rm_driver功能包。
+
     ```
     ros2 launch rm_driver rm_<arm_type>_driver.launch.py
     ```
+
     <arm_type>可以为65、63、eco65、75、gen72，可对照自己使用的设备进行实际选择
-    若我们的机械臂为RM65、RML63、ECO65等6关节机械臂时应使用如下启动指令。
+    若我们的机械臂为RM65机械臂时应使用如下启动指令。
+
     ```
-    ros2 launch control_arm_move rm_6dof_move.launch.py
+    ros2 launch control_arm_move rm_65_move.launch.py
     ```
-    若为RM75等7关节机械臂时应使用如下启动指令。
+
+    若为RM75机械臂时应使用如下启动指令。
+
     ```
-    ros2 launch control_arm_move rm_7dof_move.launch.py
+    ros2 launch control_arm_move rm_75_move.launch.py
     ```
+
+    > 若非RM65、RM75机械臂可能会出现无法到达点位的情况，为正常现象。
+    
 * **返回信息**：
 
     在程序成功运行时将会出现以下提示信息。
