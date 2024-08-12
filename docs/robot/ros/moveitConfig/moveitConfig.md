@@ -12,7 +12,7 @@ rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，�
 2. 熟悉功能包中的文件构成及作用。
 3. 熟悉功能包相关的话题，方便开发和使用。
 
-代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_moveit\_config。](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config。)
+代码链接：[https://github.com/RealManRobot/rm/robot/tree/main/rm/moveit/config](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config。)
 
 ## 1.rm\_moveit\_config使用
 
@@ -38,15 +38,15 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 
 节点启动成功后，将显示以下画面。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/51b76caa-000d-481d-b159-b41199396fdd.png)
+![alt text](image.png)
 
 接下来我们可以通过拖动控制球使机械臂到达目标位置，然后点击规划执行。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/dfe2b1ff-87b3-4327-986f-7873709d0513.png)
+![alt text](image-1.png)
 
 规划执行。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/1c844bd8-688b-4e68-a1b9-1203ff3e5c21.png)
+![alt text](image-2.png)
 
 ### 1.2 moveit控制真实机械臂
 
@@ -58,7 +58,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-之后需要运行中间功能包rm\_control的相关节点。
+之后需要运行中间功能包rm_control的相关节点。
 ```
 rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch.py
 ```
@@ -69,9 +69,9 @@ rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch.py
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_config demo_realrobot.launch
 ```
 
-注意以上指令均需要将<arm\_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65\_6f、eco65\_6f、75\_6f。
+注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65_6f、eco65_6f、75_6f。
 
-注意在使用63时应使用如下启动指令，若使用六维力设备时，应将63更换为63\_6f。
+注意在使用63时应使用如下启动指令，若使用六维力设备时，应将63更换为63_6f。
 
 ```
 rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
@@ -79,9 +79,9 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 
 完成以上操作后将会出现以下界面，我们可以通过拖动控制球的方式控制机械臂运动。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/29a5d9f5-84f5-4e59-baed-915bc3ca59f4.png)
+![alt text](image-3.png)
 
-## 2.rm\_moveit\_config架构说明
+## 2.rm_moveit_config架构说明
 
 ### 2.1功能包文件总览
 
@@ -271,18 +271,19 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 关于moveit的话题说明，为使其话题结构更加清晰明白在这里以节点话题的数据流图的方式进行查看和讲解。
 
 在启动如上控制真实机器人的节点后可以运行如下指令查看当前话题的对接情况。
+
 ```
 rm@rm-desktop:~$ rosrun rqt_graph rqt_graph
 ```
 
 运行成功后界面将显示如下画面。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/meonaA7KGJ8anXxj/img/1ece6fb3-bc1f-4ebb-9653-e6021ec42b05.png)
+![alt text](image-4.png)
 
-该图反应了当前运行的节点与节点之间的话题通信关系，首先查看/rm\_driver节点，该节点在moveit运行时订阅和发布的话题如下。
+该图反应了当前运行的节点与节点之间的话题通信关系，首先查看/rm_driver节点，该节点在moveit运行时订阅和发布的话题如下。
 
-由图可知，rm\_driver发布的/joint\_states话题在持续被/robot\_state\_publiser节点和/move\_group节点订阅。/robot\_state\_publiser接收/joint\_states是为了持续发布关节间的TF变换；/move\_group是moveit的相关节点，moveit在规划时也需要实时获取当前机械臂的关节状态信息，所以也订阅了该话题。
+由图可知，rm_driver发布的/joint_states话题在持续被/robot_state_publiser节点和/move_group节点订阅。/robot_state_publiser接收/joint_states是为了持续发布关节间的TF变换；/move_group是moveit的相关节点，moveit在规划时也需要实时获取当前机械臂的关节状态信息，所以也订阅了该话题。
 
-由图可知rm\_driver还订阅了rm\_control的/rm\_driver/jointPos话题，该话题是机械臂透传功能的话题，通过该话题rm\_control将规划的关节点位发布给rm\_driver节点控制机械臂进行运动。
+由图可知rm_driver还订阅了rm\_control的/rm\_driver/jointPos话题，该话题是机械臂透传功能的话题，通过该话题rm\_control将规划的关节点位发布给rm\_driver节点控制机械臂进行运动。
 
 rm\_control为rm\_driver与moveit之间通信的桥梁，其通过/rm\_group /follow\_joint\_trajectory动作与/move\_group进行通信，获取规划点，并进行插值运算，将插值之后的数据通过透传的方式给到rm\_driver。
