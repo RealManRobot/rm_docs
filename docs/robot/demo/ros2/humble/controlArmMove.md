@@ -35,7 +35,7 @@
 **配置过程**
 
 1. 首先需要准备好Ubuntu18.04或Ubuntu20.04操作系统的虚拟机或其他设备。
-2. 安装ROS2环境[foxy](#https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html),也可参考ROS2-foxy功能包中的安装说明进行安装。
+2. 安装ROS2环境[humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html),也可参考ROS2-foxy功能包中的安装说明进行安装。
 3. ROS2-Humble功能包安装
 
     新建工作空间和src文件
