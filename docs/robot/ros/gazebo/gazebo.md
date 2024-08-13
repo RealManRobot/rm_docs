@@ -1,6 +1,6 @@
-# rm\_gazebo功能包说明
+# rm_gazebo功能包说明
 
-rm\_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功能，我们将在gazebo的仿真环境中搭建一个虚拟机械臂，然后通过Moveit控制gazebo中的虚拟机械臂，在下文中将通过以下几个方面详细介绍该功能包。
+rm_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功能，我们将在gazebo的仿真环境中搭建一个虚拟机械臂，然后通过Moveit控制gazebo中的虚拟机械臂，在下文中将通过以下几个方面详细介绍该功能包。
 
 1. 功能包使用。
 2. 功能包架构说明。
@@ -10,9 +10,9 @@ rm\_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功�
 1. 了解该功能包的使用。
 2. 熟悉功能包中的文件构成及作用。
 
-源码地址：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_gazebo](https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo。)
+源码地址：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_gazebo](https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo)
 
-## 1.rm\_gazebo功能包运行
+## 1.rm_gazebo功能包运行
 
 ### 1.1控制仿真机械臂
 
@@ -20,7 +20,7 @@ rm\_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功�
 
 在运行之前首先我们需要修改有关配置文件，找到如下路径中的rm\_<arm\_type>\_moveit\_controller\_manager.launch.xml文件，将下方的红框代码取消注释，注释之前的yaml加载代码。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Pd6l2YkePP4NO7Ma/img/be75baa9-494d-437a-9833-cdf5794fd3f3.png)
+![alt text](image.png)
 
 完成上面操作后，使用如下指令启动gazebo虚拟空间和虚拟机械臂。
 
@@ -30,17 +30,17 @@ rm@rm-desktop:~$ roslaunch rm_gazebo arm_<arm_type>_bringup_moveit.launch
 
 运行成功后将弹出如下界面。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Pd6l2YkePP4NO7Ma/img/5d6e47c5-1a21-43a0-84ff-3c0cb887dd08.png)
+![alt text](image-1.png)
 
 弹出rviz的控制界面后就可以进行Moveit和gazebo的仿真控制了。
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Pd6l2YkePP4NO7Ma/img/7a690926-e620-4cb9-a915-ed0f96b1bfe4.png)
+![alt text](image-2.png)
 
-## 2.rm\_gazebo功能包架构说明
+## 2.rm_gazebo功能包架构说明
 
 ### 2.1功能包文件总览
 
-当前rm\_gazebo功能包的文件构成如下。
+当前rm_gazebo功能包的文件构成如下。
 
 ```
     ├── CMakeLists.txt                         #编译规则文件
