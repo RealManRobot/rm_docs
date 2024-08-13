@@ -464,7 +464,7 @@ rostopic echo /rm_driver/Set_Arm_Stop_Result
 六自由度
 
 ```json
-rostopic pub /rm_driver/Arm_JointTeach std_msgs/msg/Empty "{}"
+rostopic pub /rm_driver/Arm_JointTeach rm_msgs/Joint_Teach "teach_joint: 1 direction: 'pos' v: 20"
 ```
 
 **返回示例：**
