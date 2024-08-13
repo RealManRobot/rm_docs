@@ -244,3 +244,6 @@ tbody {
         padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 100px) 48px 84px !important;
     }
 }
+img{
+    margin: 0 auto;
+}
