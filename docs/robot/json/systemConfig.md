@@ -55,8 +55,10 @@
 **返回示例：**
 
 ```json
-
-{"command":"set_arm_power","arm_power":true}
+{
+    "command": "set_arm_power",
+    "arm_power": true
+}
 ```
 
 ### 查询机械臂电源状态`get_arm_power_state`
@@ -77,7 +79,10 @@
 上电状态（1-上电状态，0断电状态）。
 
 ```json
-{"state":"arm_power_state","power_state":1}
+{
+    "state": "arm_power_state",
+    "power_state": 1
+}
 ```
 
 ### 查询软件版本号`get_arm_software_version`
@@ -97,7 +102,17 @@
 **返回示例：**
 
 ```json
-{"Real-time_Kernal2":515,"state":"arm_software_version","Ctrl_version": 7014147,"Plan_version":7013891,"ctrlM4_build_info":"202212282001","Real-time_Kernal1":515,"ctrlM7_build_info":"202212282001", "Plan_build_info": "202212282001", "Product_version": "RM65-BI"}
+{
+    "Real-time_Kernal2": 515,
+    "state": "arm_software_version",
+    "Ctrl_version": 7014147,
+    "Plan_version": 7013891,
+    "ctrlM4_build_info": "202212282001",
+    "Real-time_Kernal1": 515,
+    "ctrlM7_build_info": "202212282001",
+    "Plan_build_info": "202212282001",
+    "Product_version": "RM65-BI"
+}
 ```
 
 **参数说明：**
@@ -126,7 +141,13 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 若系统正常，则返回运行时间。
 
 ```json
-{"command":"get_system_runtime","day":0,"hour":0,"min":0,"sec":0}
+{
+    "command": "get_system_runtime",
+    "day": 0,
+    "hour": 0,
+    "min": 0,
+    "sec": 0
+}
 ```
 
 ### 清零控制器的累计运行时间`clear_system_runtime`
@@ -149,7 +170,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 清除成功（true-清除成功，false-清除失败）。
 
 ```json
-{"command":"clear_system_runtime","clear_state":true}
+{
+    "command": "clear_system_runtime",
+    "clear_state": true
+}
 ```
 
 ### 查询关节的累计转动角度`get_joint_odom`
@@ -172,13 +196,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 若指令正确，返回六自由度各关节累计的转动角度。
 
 ```json
-{"command":"get_joint_odom","odom":[1000,2000,3000,4000,5000,6000]}
+{
+    "command": "get_joint_odom",
+    "odom": [1000,2000,3000,4000,5000,6000]
+}
 ```
 
 若指令正确，返回七自由度各关节累计的转动角度。
 
 ```json
-{"command":"get_joint_odom","odom":[1000,2000,3000,4000,5000,6000,7000]}
+{
+    "command": "get_joint_odom",
+    "odom": [1000,2000,3000,4000,5000,6000,7000]
+}
 ```
 
 ### 清零关节的累计转动角度`clear_joint_odom`
@@ -201,7 +231,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 清除成功（true-清除成功，false-清除失败）。
 
 ```json
-{"command":"clear_joint_odom","clear_state":true}
+{
+    "command": "clear_joint_odom",
+    "clear_state": true
+}
 ```
 
 ### 设置高速网口（第二代）`set_high_speed_eth`
@@ -228,7 +261,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"set_high_speed_eth","set_state":true}
+{
+    "command": "set_high_speed_eth",
+    "set_state": true
+}
 ```
 
 ### 参数保存（第二代）`set_high_speed_eth`
@@ -249,7 +285,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"save_device_info_all","model":true}
+{
+    "command": "save_device_info_all",
+    "model": true
+}
 ```
 
 ### 设置有线网IP地址（第三代）`set_NetIP`
@@ -269,10 +308,22 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 ```
 
 **返回示例：**
+IP地址设置成功：
 
 ```json
-{"command":"set_NetIP","status":true} //IP地址设置成功
-{"command":"set_NetIP","status":false} //IP地址设置失败
+{
+    "command": "set_NetIP",
+    "status": true
+}
+```
+
+IP地址设置失败：
+
+```json
+{
+    "command": "set_NetIP",
+    "status": false
+}
 ```
 
 ### 清除系统错误`clear_system_err`
@@ -290,10 +341,22 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 ```
 
 **返回示例：**
+清除系统错误成功。
 
 ```json
-{"command":"clear_system_err","clear_state":true} //清除系统错误成功
-{"command":"clear_system_err","clear_state":false}  //清除系统错误失败
+{
+    "command": "clear_system_err",
+    "clear_state": true
+}
+```
+
+清除系统错误失败。
+
+```json
+{
+    "command": "clear_system_err",
+    "clear_state": false
+}
 ```
 
 ### 查询机械臂软件信息`get_arm_software_info`
@@ -313,7 +376,24 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"Product_version":"RM65-BI","algorithm_info":{"version":"1.2.3"},"command":"arm_software_info","ctrl_info":{"build_time":"2023/12/13 20:58:10","version":"V1.4.6"},"dynamic_info":{"model_version":"1"},"plan_info":{"build_time":"2023/12/13 20:58:24","version":"V1.4.6"}}
+{
+    "Product_version": "RM65-BI",
+    "algorithm_info": {
+        "version": "1.2.3"
+    },
+    "command": "arm_software_info",
+    "ctrl_info": {
+        "build_time": "2023/12/13 20:58:10",
+        "version": "V1.4.6"
+    },
+    "dynamic_info": {
+        "model_version": "1"
+    },
+    "plan_info": {
+        "build_time": "2023/12/13 20:58:24",
+        "version": "V1.4.6"
+    }
+}
 ```
 
 **参数说明：**
@@ -416,7 +496,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command": "set_high_ethernet", "state": true}
+{
+    "command": "set_high_ethernet",
+    "state": true
+}
 ```
 
 ### 查询高速网口IP（第二代）`get_high_ethernet`
@@ -436,7 +519,13 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command": "get_high_ethernet","mask": "255.255.255.0","ip": "192.168.1.20", "gateway": "192.168.1.1","mac": "11:22:33:44:55:66"}
+{
+    "command": "get_high_ethernet",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.20",
+    "gateway": "192.168.1.1",
+    "mac": "11:22:33:44:55:66"
+}
 ```
 
 **参数说明：**
@@ -464,7 +553,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"get_wired_net","mask": "255.255.255.0","ip": "192.168.1.18","mac": "11:22:33:44:55:66"}
+{
+    "command": "get_wired_net",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.18",
+    "mac": "11:22:33:44:55:66"
+}
 ```
 
 **参数说明：**
@@ -491,7 +585,16 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"get_wifi_net","mode":"ap","mask": "255.255.255.0","ip": "192.168.1.18","mac": "11:22:33:44:55:66","ssid":"realman_ap","password":"12345678","channel":6}
+{
+    "command": "get_wifi_net",
+    "mode": "ap",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.18",
+    "mac": "11:22:33:44:55:66",
+    "ssid": "realman_ap",
+    "password": "12345678",
+    "channel": 6
+}
 ```
 
 **参数说明：**
@@ -525,13 +628,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_net_default","net_default_state":true}
+{
+    "command": "set_net_default",
+    "net_default_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_net_default","net_default_state":false}
+{
+    "command": "set_net_default",
+    "net_default_state": false
+}
 ```
 
 ### 关闭wifi功能（第三代）`set_wifi_close`
@@ -555,13 +664,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_wifi_close","wifi_close_state":true}
+{
+    "command": "set_wifi_close",
+    "wifi_close_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_wifi_close","wifi_close_state":false}
+{
+    "command": "set_wifi_close",
+    "wifi_close_state": false
+}
 ```
 
 ## 查询机械臂状态信息
@@ -584,13 +699,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 反馈六自由度机械臂关节角度，关节精度：0.001°。
 
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60]}  
+{
+    "state": "joint_degree",
+    "joint": [10,20,30,40,50,60]
+}
 ```
 
 反馈七自由度机械臂关节角度，关节精度：0.001°。
 
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60,70]}
+{
+    "state": "joint_degree",
+    "joint": [10,20,30,40,50,60,70]
+}
 ```
 
 ### 一次性查询机械臂所有状态信息`get_arm_all_state`
@@ -611,13 +732,33 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 反馈六自由度机械臂所有信息。
 
 ```json
-{"state":"arm_all_state","all_state":{"temperature":[21,22,23,24,25,26],"current":[11,12,13,14,15,16],"voltage":[31,32,33,34,35,36],"err_flag":[1,2,3,4,5,6],"en_flag":[1,1,1,1,1,1],"sys_err":0}}
+{
+    "state": "arm_all_state",
+    "all_state": {
+        "temperature": [21,22,23,24,25,26],
+        "current": [11,12,13,14,15,16],
+        "voltage": [31,32,33,34,35,36],
+        "err_flag": [1,2,3,4,5,6],
+        "en_flag": [1,1,1,1,1,1],
+        "sys_err": 0
+    }
+}
 ```
 
 反馈七自由度机械臂所有信息。
 
 ```json
-{"state":"arm_all_state","all_state":{"temperature":[21,22,23,24,25,26,27],"current":[11,12,13,14,15,16,17],"voltage":[31,32,33,34,35,36,37],"err_flag":[1,2,3,4,5,6,7],"en_flag":[1,1,1,1,1,1],"sys_err":0}}
+{
+    "state": "arm_all_state",
+    "all_state": {
+        "temperature": [21,22,23,24,25,26,27],
+        "current": [11,12,13,14,15,16,17],
+        "voltage": [31,32,33,34,35,36,37],
+        "err_flag": [1,2,3,4,5,6,7],
+        "en_flag": [1,1,1,1,1,1],
+        "sys_err": 0
+    }
+}
 ```
 
 **参数说明：**
@@ -647,7 +788,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 说明：规划完成第三段轨迹，轨迹规划中不包含循环指令。
 
 ```json
-{"loop_cont":[],"loop_num":[],"plan_num":3,"state":"arm_plan_num"}
+{
+    "loop_cont": [],
+    "loop_num": [],
+    "plan_num": 3,
+    "state": "arm_plan_num"
+}
 ```
 
 **参数说明：**
@@ -674,7 +820,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"get_controller_RS485_mode","controller_RS485_mode":1,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_controller_RS485_mode",
+    "controller_RS485_mode": 1,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```
 
 **参数说明：**
@@ -701,7 +852,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"get_tool_RS485_mode","tool_RS485_mode":0,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_tool_RS485_mode",
+    "tool_RS485_mode": 0,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```
 
 **参数说明：**
@@ -747,13 +903,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_IO_mode","set_state":true}
+{
+    "command": "set_IO_mode",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_IO_mode","set_state":false}
+{
+    "command": "set_IO_mode",
+    "set_state": false
+}
 ```
 
 ### 设置数字IO输出状态`set_DO_state`
@@ -775,13 +937,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_DO_state","set_state":true}
+{
+    "command": "set_DO_state",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_DO_state","set_state":false}
+{
+    "command": "set_DO_state",
+    "set_state": false
+}
 ```
 
 ### 查询数字IO状态（第三代）`get_IO_state`
@@ -802,7 +970,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"IO_state","IO_Num":1,"IO_Mode":1,"IO_state":1}
+{
+    "state": "IO_state",
+    "IO_Num": 1,
+    "IO_Mode": 1,
+    "IO_state": 1
+}
 ```
 
 **参数说明：**
@@ -829,7 +1002,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"DO_state","IO_Num":1,"IO_state":1}
+{
+    "state": "DO_state",
+    "IO_Num": 1,
+    "IO_state": 1
+}
 ```
 
 **参数说明：**
@@ -855,7 +1032,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"DI_state","IO_Num":1,"IO_state":1}
+{
+    "state": "DI_state",
+    "IO_Num": 1,
+    "IO_state": 1
+}
 ```
 
 **参数说明：**
@@ -883,13 +1064,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_AO_state","state":true}
+{
+    "command": "set_AO_state",
+    "state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_AO_state","state":false}
+{
+    "command": "set_AO_state",
+    "state": false
+}
 ```
 
 ### 查询模拟IO输出状态（第二代）`get_AO_state`
@@ -910,7 +1097,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"AO_state","IO_Num":1,"voltage":1000}
+{
+    "state": "AO_state",
+    "IO_Num": 1,
+    "voltage": 1000
+}
 ```
 
 **参数说明：**
@@ -937,7 +1128,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"AI_state","IO_Num":1,"voltage":1000}
+{
+    "state": "AI_state",
+    "IO_Num": 1,
+    "voltage": 1000
+}
 ```
 
 **参数说明：**
@@ -963,7 +1158,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"IO_input_state","DI":[1,1,1],"AI":[1000,2000,3000,4000]}
+{
+    "state": "IO_input_state",
+    "DI": [1,1,1],
+    "AI": [1000,2000,3000,4000]
+}
 ```
 
 **参数说明：**
@@ -989,7 +1188,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"IO_output_state","DO":[1,1,1,1],"AO":[1000,2000,3000,3000]}
+{
+    "state": "IO_output_state",
+    "DO": [1,1,1,1],
+    "AO": [1000,2000,3000,3000]
+}
 ```
 
 **参数说明：**
@@ -1017,13 +1220,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功:
 
 ```json
-{"command":"set_voltage","state":true}
+{
+    "command": "set_voltage",
+    "state": true
+}
 ```
 
 配置失败:
 
 ```json
-{"command":"set_voltage","state":false}
+{
+    "command": "set_voltage",
+    "state": false
+}
 ```
 
 ### 查询电源输出（第三代）`get_voltage`
@@ -1043,7 +1252,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"voltage_state","voltage_type":2}
+{
+    "command": "voltage_state",
+    "voltage_type": 2
+}
 ```
 
 **参数说明：**
@@ -1081,13 +1293,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_tool_DO_state","set_state":true}
+{
+    "command": "set_tool_DO_state",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_tool_DO_state","set_state":false}
+{
+    "command": "set_tool_DO_state",
+    "set_state": false
+}
 ```
 
 ### 设置工具端数字IO模式`set_tool_IO_mode`
@@ -1110,13 +1328,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_tool_IO_mode","set_state":true}
+{
+    "command": "set_tool_IO_mode",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_tool_IO_mode","set_state":false}
+{
+    "command": "set_tool_IO_mode",
+    "set_state": false
+}
 ```
 
 ### 查询工具端数字IO状态`get_tool_IO_state`
@@ -1136,7 +1360,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"tool_IO_state","IO_Mode":[0,1],"IO_State":[0,1]}
+{
+    "state": "tool_IO_state",
+    "IO_Mode": [0,1],
+    "IO_State": [0,1]
+}
 ```
 
 **参数说明：**
@@ -1164,13 +1392,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_tool_voltage","state":true} 
+{
+    "command": "set_tool_voltage",
+    "state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_tool_voltage","state":false}
+{
+    "command": "set_tool_voltage",
+    "state": false
+}
 ```
 
 ### 查询工具端电源输出`get_tool_voltage`
@@ -1190,7 +1424,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"tool_voltage_state","voltage_type":1}
+{
+    "state": "tool_voltage_state",
+    "voltage_type": 1
+}
 ```
 
 **参数说明：**
@@ -1223,13 +1460,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功:
 
 ```json
-{"command":"set_gripper_route","state":true}
+{
+    "command": "set_gripper_route",
+    "state": true
+}
 ```
 
 配置失败:
 
 ```json
-{"command":"set_gripper_route","state":false}
+{
+    "command": "set_gripper_route",
+    "state": false
+}
 ```
 
 ### 松开夹爪`set_gripper_release`
@@ -1253,20 +1496,30 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
 
 夹爪松开失败：
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 夹爪力控夹取`set_gripper_pick`
@@ -1293,22 +1546,30 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
-该指令为阻塞模式下，运动到指定位置的上报信息
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
 
 夹爪松开失败：
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 夹爪持续力控夹取`set_gripper_pick_on`
@@ -1332,26 +1593,30 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
-```
-
-该指令为阻塞模式下，运动到指定位置的上报信息。
-
-```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
 
 夹爪松开失败：
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 夹爪到达指定位置`set_gripper_position`
@@ -1374,20 +1639,30 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
 
 夹爪松开失败。
 >该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 查询夹爪状态`get_gripper_state`
@@ -1407,7 +1682,16 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"command":"get_gripper_state","enable":1,"status":1,"error":0,"mode":1,"current_force":100,"temperature":40,"actpos":150}
+{
+    "command": "get_gripper_state",
+    "enable": 1,
+    "status": 1,
+    "error": 0,
+    "mode": 1,
+    "current_force": 100,
+    "temperature": 40,
+    "actpos": 150
+}
 ```
 
 **参数说明：**
@@ -1455,7 +1739,13 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 >数据精度：0.001。
 
 ```json
-{"command":"get_force_data","force_data":[1000,2000,3000,400,500,600],"zero_force_data":[500,1000,1500,200,250,300],"work_zero_force_data":[500,1000,1500,200,250,300],"tool_zero_force_data":[500,1000,1500,200,250,300]}
+{
+    "command": "get_force_data",
+    "force_data": [1000,2000,3000,400,500,600],
+    "zero_force_data": [500,1000,1500,200,250,300],
+    "work_zero_force_data": [500,1000,1500,200,250,300],
+    "tool_zero_force_data": [500,1000,1500,200,250,300]
+}
 ```
 
 ### 六维力数据清零`clear_force_data`
@@ -1477,13 +1767,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 清空成功：
 
 ```json
-{"command":"clear_force_data","clear_state":true}
+{
+    "command": "clear_force_data",
+    "clear_state": true
+}
 ```
 
 清空失败：
 
 ```json
-{"command":"clear_force_data","clear_state":false}
+{
+    "command": "clear_force_data",
+    "clear_state": false
+}
 ```
 
 ### 自动设置六维力重心参数`set_force_sensor`
@@ -1512,13 +1808,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 配置成功：
 
 ```json
-{"command":"set_force_sensor","set_state":true}
+{
+    "command": "set_force_sensor",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_force_sensor","set_state":false}
+{
+    "command": "set_force_sensor",
+    "set_state": false
+}
 ```
 
 ### 手动标定六维力数据`manual_set_force`
@@ -1553,13 +1855,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 标定成功:
 
 ```json
-{"command":"set_force_sensor","set_state":true} 
+{
+    "command": "set_force_sensor",
+    "set_state": true
+}
 ```
 
 标定失败:
 
 ```json
-{"command":"set_force_sensor","set_state":false} 
+{
+    "command": "set_force_sensor",
+    "set_state": false
+}
 ```
 
 ### 停止标定力传感器重心`stop_set_force_sensor`
@@ -1583,13 +1891,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 计算成功：
 
 ```json
-{"command":"stop_set_force_sensor","stop_state":true}
+{
+    "command": "stop_set_force_sensor",
+    "stop_state": true
+}
 ```
 
 计算失败：
 
 ```json
-{"command":"stop_set_force_sensor","stop_state":false}
+{
+    "command": "stop_set_force_sensor",
+    "stop_state": false
+}
 ```
 
 ## 拖动示教
@@ -1615,7 +1929,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"start_drag_teach","drag_teach":true}
+{
+    "command": "start_drag_teach",
+    "drag_teach": true
+}
 ```
 
 ### 拖动示教结束`stop_drag_teach`
@@ -1633,7 +1950,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"stop_drag_teach","drag_teach":true}
+{
+    "command": "stop_drag_teach",
+    "drag_teach": true
+}
 ```
 
 ### 开始复合模式拖动示教`start_multi_drag_teach`
@@ -1656,13 +1976,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功:
 
 ```json
-{"command":"start_multi_drag_teach","set_state":true}
+{
+    "command": "start_multi_drag_teach",
+    "set_state": true
+}
 ```
 
 设置失败:
 
 ```json
-{"command":"start_multi_drag_teach","set_state":false}
+{
+    "command": "start_multi_drag_teach",
+    "set_state": false
+}
 ```
 
 ### 轨迹复现开始`run_drag_trajectory`
@@ -1682,13 +2008,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 复现成功:
 
 ```json
-{"command":"run_drag_trajectory","run_state":true}
+{
+    "command": "run_drag_trajectory",
+    "run_state": true
+}
 ```
 
 复现失败:
 
 ```json
-{"command":"run_drag_trajectory","run_state":false}
+{
+    "command": "run_drag_trajectory",
+    "run_state": false
+}
 ```
 
 ### 轨迹复现暂停`pause_drag_trajectory`
@@ -1709,13 +2041,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 暂停成功：
 
 ```json
-{"command":"pause_drag_trajectory","pause_state":true}
+{
+    "command": "pause_drag_trajectory",
+    "pause_state": true
+}
 ```
 
 暂停失败：
 
 ```json
-{"command":"pasuse_drag_trajectory","pause_state":false}
+{
+    "command": "pasuse_drag_trajectory",
+    "pause_state": false
+}
 ```
 
 ### 轨迹复现继续`continue_drag_trajectory`
@@ -1736,13 +2074,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 继续成功：
 
 ```json
-{"command":"continue_drag_trajectory","continue_state":true}
+{
+    "command": "continue_drag_trajectory",
+    "continue_state": true
+}
 ```
 
 继续失败：
 
 ```json
-{"command":"continue_drag_trajectory","continue_state":false}
+{
+    "command": "continue_drag_trajectory",
+    "continue_state": false
+}
 ```
 
 ### 轨迹复现停止`stop_drag_trajectory`
@@ -1762,13 +2106,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 停止成功：
 
 ```json
-{"command":"stop_drag_trajectory","stop_state":true}
+{
+    "command": "stop_drag_trajectory",
+    "stop_state": true
+}
 ```
 
 停止失败：
 
 ```json
-{"command":"stop_drag_trajectory","stop_state":false}
+{
+    "command": "stop_drag_trajectory",
+    "stop_state": false
+}
 ```
 
 ### 运动到轨迹起点`drag_trajectory_origin`
@@ -1789,7 +2139,12 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"device":0,"state":"current_trajectory_state","trajectory_connect":0, "trajectory_state":true}
+{
+    "device": 0,
+    "state": "current_trajectory_state",
+    "trajectory_connect": 0,
+    "trajectory_state": true
+}
 ```
 
 ### 力位混合控制`set_force_position`
@@ -1815,13 +2170,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功:
 
 ```json
-{"command":"set_force_position","set_state":false}
+{
+    "command": "set_force_position",
+    "set_state": true
+}
 ```
 
 设置失败:
 
 ```json
-{"command":"set_force_position","set_state":false}
+{
+    "command": "set_force_position",
+    "set_state": false
+}
 ```
 
 ### 结束力位混合控制`stop_force_position`
@@ -1843,13 +2204,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 结束成功：
 
 ```json
-{"command":"stop_force_position","stop_state":true}
+{
+    "command": "stop_force_position",
+    "stop_state": true
+}
 ```
 
 结束失败：
 
 ```json
-{"command":"stop_force_position","stop_state":false}
+{
+    "command": "stop_force_position",
+    "stop_state": false
+}
 ```
 
 ## 五指灵巧手（选配）
@@ -1875,19 +2242,29 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功:
 
 ```json
-{"command":"set_hand_posture","set_state":true}
+{
+    "command": "set_hand_posture",
+    "set_state": true
+}
 ```
 
 设置失败:
 
 ```json
-{"command":"set_hand_posture","set_state":false} 
+{
+    "command": "set_hand_posture",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手动作序列`set_hand_seq`
@@ -1909,19 +2286,29 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"set_hand_seq","set_state":true} 
+{
+    "command": "set_hand_seq",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_seq","set_state":false} 
+{
+    "command": "set_hand_seq",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手各自由度角度`set_hand_angle`
@@ -1945,19 +2332,29 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"set_hand_angle","set_state":true} 
+{
+    "command": "set_hand_angle",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_angle","set_state":false} 
+{
+    "command": "set_hand_angle",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手速度`set_hand_speed`
@@ -1978,13 +2375,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"set_hand_speed","set_state":true}
+{
+    "command": "set_hand_speed",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_speed","set_state":false}
+{
+    "command": "set_hand_speed",
+    "set_state": false
+}
 ```
 
 ### 设置灵巧手力阈值`set_hand_force`
@@ -2006,13 +2409,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"set_hand_force","set_state":true}
+{
+    "command": "set_hand_force",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_force","set_state":false}
+{
+    "command": "set_hand_force",
+    "set_state": false
+}
 ```
 
 ## Modbus配置
@@ -2045,13 +2454,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"set_modbus_mode","set_state":true}
+{
+    "command": "set_modbus_mode",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_modbus_mode","set_state":false}
+{
+    "command": "set_modbus_mode",
+    "set_state": false
+}
 ```
 
 ### 关闭通讯端口ModbusRTU模式`close_modbus_mode`
@@ -2072,13 +2487,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功：
 
 ```json
-{"command":"close_modbus_mode","set_state":true}
+{
+    "command": "close_modbus_mode",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"close_modbus_mode","set_state":false}
+{
+    "command": "close_modbus_mode",
+    "set_state": false
+}
 ```
 
 ### 配置连接ModbusTCP从站（第三代）`set_modbustcp_mode`
@@ -2103,13 +2524,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 连接成功：
 
 ```json
-{"command":"set_modbustcp_mode","set_state":true} 
+{
+    "command": "set_modbustcp_mode",
+    "set_state": true
+}
 ```
 
 连接失败：
 
 ```json
-{"command":"set_modbustcp_mode","set_state":false}
+{
+    "command": "set_modbustcp_mode",
+    "set_state": false
+}
 ```
 
 ### 配置关闭ModbusTCP从站（第三代）`close_modbustcp_mode`
@@ -2129,13 +2556,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 成功：
 
 ```json
-{"command":"close_modbustcp_mode","set_state":true} 
+{
+    "command": "close_modbustcp_mode",
+    "set_state": true
+}
 ```
 
 失败：
 
 ```json
-{"command":"close_modbustcp_mode","set_state":false} 
+{
+    "command": "close_modbustcp_mode",
+    "set_state": false
+}
 ```
 
 ### 读线圈`read_coils`
@@ -2159,13 +2592,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回线圈状态，数据类型：int8。
 
 ```json
-{"command":"read_coils","data":8}
+{
+    "command": "read_coils",
+    "data": 8
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_coils","read_state":false}
+{
+    "command": "read_coils",
+    "read_state": false
+}
 ```
 
 ### 读离散量输入`read_input_status`
@@ -2190,13 +2629,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回离散量，数据类型：int8。
 
 ```json
-{"command":"read_input_status","data":8}
+{
+    "command": "read_input_status",
+    "data": 8
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_input_status","read_state":false}
+{
+    "command": "read_input_status",
+    "read_state": false
+}
 ```
 
 ### 读保持寄存器`read_holding_registers`
@@ -2219,13 +2664,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回寄存器数据，数据类型：int16。
 
 ```json
-{"command":"read_holding_registers","data":8}
+{
+    "command": "read_holding_registers",
+    "data": 8
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_holding_registers","read_state":false}
+{
+    "command": "read_holding_registers",
+    "read_state": false
+}
 ```
 
 ### 读输入寄存器`read_input_registers`
@@ -2248,13 +2699,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回寄存器数据，数据类型：int16。
 
 ```json
-{"command":"read_input_registers","data":8}
+{
+    "command": "read_input_registers",
+    "data": 8
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_input_registers","read_state":false}
+{
+    "command": "read_input_registers",
+    "read_state": false
+}
 ```
 
 ### 写单圈数据`write_single_coil`
@@ -2278,13 +2735,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 写操作成功。
 
 ```json
-{"command":"write_single_coil","write_state":true}
+{
+    "command": "write_single_coil",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_single_coil","write_state":false}
+{
+    "command": "write_single_coil",
+    "write_state": false
+}
 ```
 
 ### 写单个寄存器`write_single_register`
@@ -2308,13 +2771,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 写操作成功。
 
 ```json
-{"command":"write_single_register","write_state":true}
+{
+    "command": "write_single_register",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_single_register","write_state":false}
+{
+    "command": "write_single_register",
+    "write_state": false
+}
 ```
 
 ### 写多个寄存器`write_registers`
@@ -2339,13 +2808,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 写操作成功。
 
 ```json
-{"command":"write_registers","write_state":true}
+{
+    "command": "write_registers",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_registers","write_state":false}
+{
+    "command": "write_registers",
+    "write_state": false
+}
 ```
 
 ### 写多圈数据`write_coils`
@@ -2370,13 +2845,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 写操作成功。
 
 ```json
-{"command":"write_coils","write_state":true}
+{
+    "command": "write_coils",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_coils","write_state":false}
+{
+    "command": "write_coils",
+    "write_state": false
+}
 ```
 
 ### 读多圈数据`read_multiple_coils`
@@ -2400,13 +2881,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回线圈状态，数据类型：int8。
 
 ```json
-{"command":"read_multiple_coils","data":[1,2,3]} 
+{
+    "command": "read_multiple_coils",
+    "data": [1,2,3]
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_multiple_coils","read_state":false}
+{
+    "command": "read_multiple_coils",
+    "read_state": false
+}
 ```
 
 ### 读多个保存寄存器`read_multiple_holding_registers`
@@ -2430,13 +2917,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回寄存器数据，数据类型：int8。
 
 ```json
-{"command":"read_multiple_holding_registers","data":[1,2,3,4,5,6,7,8,9,10]} 
+{
+    "command": "read_multiple_holding_registers",
+    "data": [1,2,3,4,5,6,7,8,9,10]
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_multiple_holding_registers","read_state":false}
+{
+    "command": "read_multiple_holding_registers",
+    "read_state": false
+}
 ```
 
 ### 读多个输入寄存器`read_multiple_input_registers`
@@ -2461,13 +2954,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 读取成功，返回寄存器数据，数据类型：int8。
 
 ```json
-{"command":"read_multiple_input_registers","data":[1,2,3,4,5,6,7,8,9,10]}
+{
+    "command": "read_multiple_input_registers",
+    "data": [1,2,3,4,5,6,7,8,9,10]
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_multiple_input_registers","read_state":false}
+{
+    "command": "read_multiple_input_registers",
+    "read_state": false
+}
 ```
 
 ## 系统安装方式及关节版本信息
@@ -2492,13 +2991,19 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功。
 
 ```json
-{"command":"set_install_pose","set_state":true}
+{
+    "command": "set_install_pose",
+    "set_state": true
+}
 ```
 
 设置失败。
 
 ```json
-{"command":"set_install_pose","set_state":false}
+{
+    "command": "set_install_pose",
+    "set_state": false
+}
 ```
 
 ### 查询关节软件版本号`get_joint_software_version`
@@ -2517,7 +3022,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"joint_software_version","version":[531,531,531,531,531,531]}
+{
+    "state": "joint_software_version",
+    "version": [531,531,531,531,531,531]
+}
 ```
 
 531为uint16类型，转化为16进制为：0x0213，则当前关节的版本号为2.13。
@@ -2538,7 +3046,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 **返回示例：**
 
 ```json
-{"state":"tool_software_version","version":531}
+{
+    "state": "tool_software_version",
+    "version": 531
+}
 ```
 
 531为uint16类型，转化为16进制为：0x0213，则当前末端接口板的版本号为2.13。
@@ -2565,7 +3076,10 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功（true：设置成功，可进行后续透传。False：设置失败，机械臂有错误，不可进行后续透传）。
 
 ```json
-{"command":"Start_Force_Position_Move","set_state":true}
+{
+    "command": "Start_Force_Position_Move",
+    "set_state": true
+}
 ```
 
 ### 透传力位混合补偿
@@ -2618,13 +3132,22 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 六维力：当前关节1~6角度为0.01°~0.06°，力控方向所受到的力或力矩为-1.5N，所有方向的力或力矩为X：1.1N，Y：2.1N，Z：-1.5N，Rx：4.1Nm，Ry：5.1Nm，Rz：6.1Nm。
 
 ```json
-{"state":"Force_Position_State","joint":[10,20,30,40,50,60],"force":-15, "all_direction_force":[11,21,-15,41,51,61],"arm_err":0}
+{
+    "state": "Force_Position_State",
+    "joint": [10,20,30,40,50,60],
+    "force": -15,
+    "all_direction_force": [11,21,-15,41,51,61],
+    "arm_err": 0
+}
 ```
 
 需要注意的是第三代机械臂不再提供返回值，可通过UDP状态主动上报接口采集机械臂实时状态。
 
 ```json
-{"command":"Force_Position_Move", "set_state":false}
+{
+    "command": "Force_Position_Move",
+    "set_state": false
+}
 ```
 
 ### 关闭透传力位混合控制补偿模式
@@ -2645,5 +3168,8 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 设置成功(True：设置成功，False：设置失败)。
 
 ```json
-{"command":"Stop_Force_Position_Move","set_state":true}
+{
+    "command": "Stop_Force_Position_Move",
+    "set_state": true
+}
 ```
