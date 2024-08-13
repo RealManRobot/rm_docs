@@ -30,50 +30,19 @@
 实现：新增集合模型：长方体。
 
 ```json
-{
-  "command": "add_electronic_fence_config",
-  "form": 1,
-  "form_name": "my_form",
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+{"command": "add_electronic_fence_config","form": 1,"form_name": "my_form","x_min_limit": 500,"x_max_limit": 1000,"y_min_limit": 500,"y_max_limit":1000,"z_min_limit": 500,"z_max_limit": 1000}
 ```
 
 实现：新增集合模型：矢量平面。
 
 ```json
-{
-  "command": "add_electronic_fence_config",
-  "form": 2,
-  "form_name": "my_form",
-  "x1": 500,
-  "y1": 1000,
-  "z1": 500,
-  "x2": 900,
-  "y2": 200,
-  "z2": 800,
-  "x3": 700,
-  "y3": 1200,
-  "z3": 300
-}
+{"command": "add_electronic_fence_config","form": 2,"form_name": "my_form","x1": 500,"y1": 1000,"z1": 500,"x2": 900,"y2": 200,"z2": 800,"x3": 700,"y3": 1200,"z3": 300}
 ```
 
 实现：新增集合模型：球形。
 
 ```json
-{
-  "command": "add_electronic_fence_config",
-  "form": 3,
-  "form_name": "my_form",
-  "radius": 500,
-  "x": 1000,
-  "y": 500,
-  "z": 900
-}
+{"command": "add_electronic_fence_config","form": 3,"form_name": "my_form","radius": 500,"x": 1000,"y": 500,"z": 900}
 ```
 
 **返回示例：**
@@ -115,50 +84,20 @@
 实现：新增集合模型：长方体。
 
 ```json
-{
-  "command": "update_electronic_fence_config",
-  "form": 1,
-  "form_name": "my_form",
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+{"command": "update_electronic_fence_config","form": 1,"form_name": "my_form","x_min_limit": 500,"x_max_limit": 1000,"y_min_limit": 500,
+"y_max_limit": 1000,"z_min_limit": 500,"z_max_limit": 1000}
 ```
 
 实现：新增集合模型：矢量平面。
 
 ```json
-{
-  "command": "update_electronic_fence_config",
-  "form": 2,
-  "form_name": "my_form",
-  "x1": 500,
-  "y1": 1000,
-  "z1": 500,
-  "x2": 900,
-  "y2": 200,
-  "z2": 800,
-  "x3": 700,
-  "y3": 1200,
-  "z3": 300
-}
+{"command":"update_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 实现：新增集合模型：球形。
 
 ```json
-{
-  "command": "update_electronic_fence_config",
-  "form": 3,
-  "form_name": "my_form",
-  "radius": 500,
-  "x": 1000,
-  "y": 500,
-  "z": 900
-}
+{"command":"update_electronic_fence_config","form":3,"form_name":"my_form","radius":500,"x":1000,"y":500,"z":900}
 ```
 
 **返回示例：**
@@ -391,12 +330,7 @@
 实现：设置电子围栏使能状态。
 
 ```json
-{
-  "command": "set_electronic_fence_enable",
-  "set_enable": false,
-  "in_out_side": 0,
-  "effective_region": 0
-}
+{"command":"set_electronic_fence_enable","set_enable":false,"in_out_side":0,"effective_region":0}
 ```
 
 **返回示例：**
@@ -521,9 +455,19 @@
 **返回示例-点面矢量平面：**
 
 ```json
-{"command":"get_electronic_fence_config","form":2,"form_name
-":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":8
-00,"x3":700,"y3":1200,"z3":300}
+{
+  "command":"get_electronic_fence_config",
+  "form":2,"form_name":"my_form",
+  "x1":500,
+  "y1":1000,
+  "z1":500,
+  "x2":900,
+  "y2":200,
+  "z2":800,
+  "x3":700,
+  "y3":1200,
+  "z3":300
+}
 ```
 
 **参数说明：**
@@ -561,12 +505,7 @@
 实现：设置虚拟墙使能状态。
 
 ```json
-{
-  "command": "set_virtual_wall_enable",
-  "set_enable": false,
-  "in_out_side": 0,
-  "effective_region": 1
-}
+{"command":"set_virtual_wall_enable","set_enable":false,"in_out_side":0,"effective_region":1}
 ```
 
 **返回示例：**
@@ -641,29 +580,13 @@
 实现：设置当前虚拟墙参数-长方体。
 
 ```json
-{
-  "command": "set_virtual_wall_config",
-  "form": 1,
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+{"command":"set_virtual_wall_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 实现：设置当前虚拟墙参数-球体。
 
 ```json
-{
-  "command": "set_virtual_wall_config",
-  "form": 3,
-  "x": 500,
-  "y": 1000,
-  "z": 500,
-  "radius": 900
-}
+{"command":"set_virtual_wall_config","form":3,"x":500,"y":1000,"z":500,"radius":900}
 ```
 
 **返回示例：**
