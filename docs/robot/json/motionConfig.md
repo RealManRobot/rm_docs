@@ -22,30 +22,31 @@
     速度系数50%；
     交融半径：0。
 
+六自由度：
+
 ```json
-//六自由度：
-{
-    "command":"movej",
-    "joint":[10100,200,20300,30400,500,20600],
-    "v":50,
-    "r":0,
-    "trajectory_connect":0
-}
-//七自由度：
-{
-    "command":"movej",
-    "joint":[10100,200,20300,30400,500,20600,20600],
-    "v":50,
-    "r":0,
-    "trajectory_connect":0
-}
+{"command":"movej","joint":[10100,200,20300,30400,500,20600],"v":50,"r":0,"trajectory_connect":0}
+```
+
+七自由度：
+
+```json
+{"command":"movej","joint":[10100,200,20300,30400,500,20600,20600],"v":50,"r":0,"trajectory_connect":0}
 ```
 
 **返回示例：**
 
 ```json
-{"command":"movej","receive_state":true}
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "movej",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 > trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹。
@@ -77,23 +78,26 @@
     速度系数：50%
     交融半径：不交融。
 
+六自由度：
+
 ```json
-//六自由度：
-{
-  "command": "movel",
-  "pose": [100000, 200000, 30000, 400, 500, 600],
-  "v": 50,
-  "r": 0,
-  "trajectory_connect": 0
-}
+{"command": "movel","pose": [100000, 200000, 30000, 400, 500, 600],"v": 50,  "r": 0,  "trajectory_connect": 0}
 ```
 
 **返回示例：**
+运动到位：
 
 ```json
-{"command":"movel","receive_state":true}
-//运动到位：
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "movel",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 > trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹。
@@ -103,16 +107,19 @@
 | :-------------- | :----- | :------------------------------------ |
 | `receive_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
-### 圆弧运动`movel`
+### 圆弧运动`movec`
 
 **参数说明：**
 
-| 参数                 | 类型     | 说明                                                                                                              |
-| :------------------- | :------- | :---------------------------------------------------------------------------------------------------------------- |
-| `movel`              | `string` | 直线运动指令。                                                                                                    |
-| `pose`               | `int`    | 目标位姿，位置精度：0.001mm，姿态精度：0.001rad。                                                                 |
-| `v`                  | `int`    | 速度百分比例系数，0~100                                                                                           |
-| `r`                  | `int`    | 交融半径百分比系数，0-100                                                                       |
+| 参数                 | 类型     | 说明|
+| :------------------- | :------- | :-------------------------------- |
+| `movec`              | `string` | 圆弧运动|
+| `pose`               | `int`    | 位姿。|
+| `pose_via`               | `int`    | 中间点位姿，位置精度0.001mm，姿态精度0.001rad。|
+| `pose_to`               | `int`    | 目标位姿，位置精度0.001mm，姿态精度0.001rad。|
+| `v`                  | `int`    | 速度百分比例系数，0~100。|
+| `r`                  | `int`    | 交融半径百分比系数，0-100。|
+| `loop`                  | `int`    | 循环圈数，默认0。|
 | `trajectory_connect` | `int`    | 可选参数，代表是否和下一条运动一起规划，0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行。 |
 
 **使用示例：**
@@ -126,25 +133,22 @@
     交融半径：不交融。
 
 ```json
-{
-    "command":"movec",
-    "pose":{
-        "pose_via":[100000,200000,30000,400,500,600],
-        "pose_to":[200000,300000,30000,400,500,600],
-    }
-    "v":50,
-    "r":0,
-    "loop":0,
-    "trajectory_connect":0
-}
+{"command":"movec","pose":{"pose_via":[100000,200000,30000,400,500,600],"pose_to":[200000,300000,30000,400,500,600]},"v":50,"r":0,"loop":0,"trajectory_connect":0}
 ```
 
 **返回示例：**
-
+运动到位：
 ```json
-{"command":"movec","receive_state":true}
-//运动到位：
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "movec",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 > //trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹。
@@ -178,20 +182,36 @@
     六自由度机械臂目标关节角度：[1°,0°,20°,30°,0°,20°]；
     七自由度机械臂目标关节角度：[1°,0°,20°,30°,0°,20°,20°]。
 
+六自由度：
 ```json
-//六自由度
+
 {"command":"movej_canfd","joint":[1000,0,20000,30000,0,20000],"follow":true,"expand":1000}
-//七自由度
+```
+
+七自由度：
+```json
 {"command":"movej_canfd","joint":[1000,0,20000,30000,0,20000,20000],"follow":true,"expand":1000}
 ```
 
 **返回示例：**
+六自由度：
 
 ```json
-//六自由度：
-{"state":"joint_state","joint":[10,20,30,40,50,60], "arm_err":0}
-//七自由度：
-{"state":"joint_state","joint":[10,20,30,40,50,60,70], "arm_err":0}
+{
+    "state": "joint_state",
+    "joint": [10,20,30,40,50,60],
+    "arm_err": 0
+}
+```
+
+七自由度：
+
+```json
+{
+    "state": "joint_state",
+    "joint": [10,20,30,40,50,60,70],
+    "arm_err": 0
+}
 ```
 
 **参数说明：**
@@ -223,22 +243,39 @@
     目标姿态（四元数）：w：0.4，x：0.5，y：0.6，z：0.7。
 
 **使用示例：**
+位姿透传欧拉角方式：
 
 ```json
-//位姿透传欧拉角方式
 {"command":"movep_canfd","pose":[100000,200000,30000,400,500,600],"follow":true}
-//位姿透传四元数方式
+```
+
+位姿透传四元数方式：
+
+```json
 {"command":"movep_canfd","pose_quat":[100000,200000,30000,400000,500000,600000,700000],"follow":true}
 ```
 
 **返回示例：**
+六自由度当前位姿：位置精度：0.001mm，姿态精度：0.001rad；joint：当前关节角度，关节精度：0.001°；
 
 ```json
-//六自由度：
-{"state":"pose_state","pose":[10,20,30,40,50,60],"joint":[10,20,30,40,50,60], "arm_err":0}
-//七自由度：
-{"state":"pose_state","pose":[10,20,30,40,50,60],"joint":[10,20,30,40,50,60,70], "arm_err":0}
-//pose：当前位姿，位置精度：0.001mm，姿态精度：0.001rad；joint：当前关节角度，关节精度：0.001°；arm_err：
+{
+    "state": "pose_state",
+    "pose": [10,20,30,40,50,60],
+    "joint": [10,20,30,40,50,60],
+    "arm_err": 0
+}
+```
+
+七自由度当前位姿：位置精度：0.001mm，姿态精度：0.001rad；joint：当前关节角度，关节精度：0.001°；
+
+```json
+{
+    "state": "pose_state",
+    "pose": [10,20,30,40,50,60],
+    "joint": [10,20,30,40,50,60,70],
+    "arm_err": 0
+}
 ```
 
 | 参数      | 类型     | 说明                                                                                         |
@@ -272,28 +309,28 @@
     交融半径：不交融。
 
 ```json
-{
-  "command": "movej_p",
-  "pose": [100000, 200000, 30000, 400, 500, 600],
-  "v": 50,
-  "r": 0,
-  "trajectory_connect": 0
-}
+{"command": "movej_p","pose": [100000, 200000, 30000, 400, 500, 600],"v": 50,"r": 0,"trajectory_connect": 0}
 ```
 
 **返回示例：**
-
+返回指令接收状态且运动到位：
 ```json
-//返回指令接收状态：
-{"command":"movej_p","receive_state":true}
-//运动到位：
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
-//trajectory_connect：代表是否连接下一条轨迹，0代表全部到位，1代表连接下一条轨迹
+{
+    "command": "movej_p",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 | 参数            | 类型   | 说明                                  |
 | :-------------- | :----- | :------------------------------------ |
 | `receive_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
+| `trajectory_connect` | `int` | 代表是否连接下一条轨迹，0代表全部到位，1代表连接下一条轨迹。 |
 
 ### 样条曲线运动`moves`
 
@@ -327,12 +364,18 @@
 ```
 
 **返回示例：**
-
+返回指令接收状态且运动到位：
 ```json
-//返回指令接收状态：
-{"command":"moves","receive_state":true}
-//运动到位：
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "moves",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 > trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹。
@@ -366,8 +409,16 @@
 指令接收成功，运动到位后连接吓一条轨迹。
 
 ```json
-{"command":"set_joint_step","receive_state":true}
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "set_joint_step",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 **参数说明：**
@@ -399,8 +450,16 @@
 指令接收成功，运动到位后连接吓一条轨迹。
 
 ```json
-{"command":"set_pos_step","receive_state":true}
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "set_pos_step",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 | 参数                 | 类型   | 说明                                                           |
@@ -431,8 +490,16 @@
 指令接收成功，运动到位后连接吓一条轨迹。
 
 ```json
-{"command":"set_ort_step","receive_state":true}
-{"state":"current_trajectory_state","trajectory_state":true,"device":0,"trajectory_connect":1}
+{
+    "command": "set_ort_step",
+    "receive_state": true
+}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 0,
+    "trajectory_connect": 1
+}
 ```
 
 **参数说明：**
@@ -463,7 +530,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_arm_stop", "arm_stop": true }
+{
+    "command": "set_arm_stop",
+    "arm_stop": true
+}
 ```
 
 **参数说明：**
@@ -491,7 +561,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_arm_slow_stop", "arm_slow_stop": true }
+{
+    "command": "set_arm_slow_stop",
+    "arm_slow_stop": true
+}
 ```
 
 **参数说明：**
@@ -519,7 +592,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_arm_pause", "arm_pause": true }
+{
+    "command": "set_arm_pause",
+    "arm_pause": true
+}
 ```
 
 **参数说明：**
@@ -545,7 +621,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_arm_continue", "arm_continue": true }
+{
+    "command": "set_arm_continue",
+    "arm_continue": true
+}
 ```
 
 **参数说明：**
@@ -604,7 +683,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_arm_delete_trajectory", "arm_delete_trajectory": true }
+{
+    "command": "set_arm_delete_trajectory",
+    "arm_delete_trajectory": true
+}
 ```
 
 **参数说明：**
@@ -630,14 +712,22 @@
 **返回示例：**
 
 当前正在运行关节规划，数组内为当前关节角度，精度 0.001°
-
+六自由度：
 ```json
-//六自由度：
-{"state":"arm_current_trajectory","type":"movej","data":
-[0,0,0,0,0,0]}
-//七自由度：
-{"state":"arm_current_trajectory","type":"movej","data":
-[0,0,0,0,0,0,0]}
+{
+    "state": "arm_current_trajectory",
+    "type": "movej",
+    "data": [0,0,0,0,0,0]
+}
+```
+
+七自由度：
+```json
+{
+    "state": "arm_current_trajectory",
+    "type": "movej",
+    "data": [0,0,0,0,0,0,0]
+}
 ```
 
 当前正在运行直线规划，数组内为当前末端位姿，位置精度：0.001mm，姿态精度：0.001rad。
@@ -661,12 +751,22 @@
 ```
 
 当前无规划，数组内为当前关节角度，精度 0.001°。
-
+六自由度：
 ```json
-//六自由度：
-{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0]}
-//七自由度：
-{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0,0]}
+{
+    "state": "arm_current_trajectory",
+    "type": "movej",
+    "data": [0,0,0,0,0,0]
+}
+```
+
+七自由度：
+```json
+{
+    "state": "arm_current_trajectory",
+    "type": "movej",
+    "data": [0,0,0,0,0,0,0]
+}
 ```
 
 **参数说明：**
@@ -698,7 +798,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_joint_teach", "joint_teach": true }
+{
+    "command": "set_joint_teach",
+    "joint_teach": true
+}
 ```
 
 **参数说明：**
@@ -727,7 +830,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_pos_teach", "pos_teach": true }
+{
+    "command": "set_pos_teach",
+    "pos_teach": true
+}
 ```
 
 **参数说明：**
@@ -756,7 +862,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_ort_teach", "ort_teach": true }
+{
+    "command": "set_ort_teach",
+    "ort_teach": true
+}
 ```
 
 **参数说明：**
@@ -782,7 +891,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_stop_teach", "stop_teach": true }
+{
+    "command": "set_stop_teach",
+    "stop_teach": true
+}
 ```
 
 **参数说明：**
@@ -809,7 +921,10 @@
 **返回示例：**
 
 ```json
-{ "command": "set_teach_frame", "set_state": true }
+{
+    "command": "set_teach_frame",
+    "set_state": true
+}
 ```
 
 **参数说明：**
@@ -835,7 +950,10 @@
 **返回示例：**
 
 ```json
-{ "command": "get_teach_frame", "frame_type": 0 }
+{
+    "command": "get_teach_frame",
+    "frame_type": 0
+}
 ```
 
 **参数说明：**
