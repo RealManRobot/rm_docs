@@ -19,7 +19,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_self_collision_enable","set_state":true}
+{
+    "command": "set_self_collision_enable",
+    "set_state": true
+}
 ```
 
 **参数说明：**
@@ -44,7 +47,10 @@
 **返回示例 ：**
 
 ```json
-{"command":"get_self_collision_enable","enable_state":false}
+{
+    "command": "get_self_collision_enable",
+    "enable_state": false
+}
 ```
 
 **参数说明：**
