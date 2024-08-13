@@ -329,7 +329,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_DH_data_default","set_state":true}
+{
+    "command": "set_DH_data_default",
+    "set_state": true
+}
 ```
 
 | 参数        | 类型   | 说明                                  |
@@ -358,7 +361,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_joint_zero_offset","set_state":true}
+{
+    "command": "set_joint_zero_offset",
+    "set_state": true
+}
 ```
 
 | 参数        | 类型   | 说明                                  |
@@ -388,7 +394,10 @@
 反馈机械臂末端最大线速度，0.5m/s，分辨率：0.001m/s。
 
 ```json
-{"state":"arm_max_line_speed","arm_line_speed":500}
+{
+    "state": "arm_max_line_speed",
+    "arm_line_speed": 500
+}
 ```
 
 **参数说明：**
@@ -416,7 +425,10 @@
 反馈机械臂末端最大线加速度，0.2m/s²，分辨率：0.001m/s²。
 
 ```json
-{"state":"arm_max_line_acc","arm_line_acc":200}
+{
+    "state": "arm_max_line_acc",
+    "arm_line_acc": 200
+}
 ```
 
 **参数说明：**
@@ -444,7 +456,10 @@
 反馈机械臂末端最大角速度，1rad/s，分辨率：0.001rad/s。
 
 ```json
-{"state":"arm_max_angular_speed","arm_angular_speed":1000}
+{
+    "state": "arm_max_angular_speed",
+    "arm_angular_speed": 1000
+}
 ```
 
 **参数说明：**
@@ -472,7 +487,10 @@
 实现：反馈机械臂末端最大角加速度，10rad/s²，分辨率：0.001rad/s²。
 
 ```json
-{"state":"arm_max_angular_acc","arm_angular_acc":10000}
+{
+    "state": "arm_max_angular_acc",
+    "arm_angular_acc": 10000
+}
 ```
 
 | 参数                  | 类型 | 说明                         |
@@ -511,7 +529,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_auto_tool_frame","auto_tool_frame":true}
+{
+    "command": "set_auto_tool_frame",
+    "auto_tool_frame": true
+}
 ```
 
 | 参数              | 类型   | 说明                                  |
@@ -543,7 +564,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_auto_tool_frame","auto_tool_frame":true}
+{
+    "command": "set_auto_tool_frame",
+    "auto_tool_frame": true
+}
 ```
 
 | 参数              | 类型   | 说明                                  |
@@ -589,7 +613,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_manual_tool_frame","manual_tool_frame":true}
+{
+    "command": "set_manual_tool_frame",
+    "manual_tool_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -616,7 +643,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_change_tool_frame","change_tool_frame":true}
+{
+    "command": "set_change_tool_frame",
+    "change_tool_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -643,7 +673,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_delete_tool_frame","delete_tool_frame":true}
+{
+    "command": "set_delete_tool_frame",
+    "delete_tool_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -689,7 +722,10 @@
 **返回示例：**
 
 ```json
-{"command":"update_tool_frame","update_state":true}  
+{
+    "command": "update_tool_frame",
+    "update_state": true
+}
 ```
 
 | 参数           | 类型   | 说明                                  |
@@ -730,7 +766,10 @@
 **返回示例：**
 
 ```json
- {"command":"set_tool_envelope","set_state",true} 
+{
+    "command": "set_tool_envelope",
+    "set_state": true
+}
 ```
 
 | 参数        | 类型   | 说明                                  |
@@ -816,7 +855,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_auto_work_frame","auto_work_frame":true}
+{
+    "command": "set_auto_work_frame",
+    "auto_work_frame": true
+}
 ```
 
 | 参数              | 类型   | 说明                                  |
@@ -851,7 +893,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_manual_work_frame","manual_work_frame":true}
+{
+    "command": "set_manual_work_frame",
+    "manual_work_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -877,7 +922,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_change_work_frame","change_work_frame":true}
+{
+    "command": "set_change_work_frame",
+    "change_work_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -903,7 +951,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_delete_work_frame","delete_work_frame":true}
+{
+    "command": "set_delete_work_frame",
+    "delete_work_frame": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -936,7 +987,10 @@
 **返回示例：**
 
 ```json
-{"command":"update_work_frame","update_state":true}
+{
+    "command": "update_work_frame",
+    "update_state": true
+}
 ```
 
 | 参数           | 类型   | 说明                                  |
@@ -1302,7 +1356,7 @@
 ```json
 {
     "state":"total_work_frame",
-    "frame_names":["work1","work2"….,"NULL"]
+    "frame_names":["work1","work2","NULL"]
 }
 ```
 
@@ -1372,9 +1426,15 @@
 
 ```json
 //六自由度：
-{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
+{
+    "command":"set_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000]
+}
 //七自由度：
-{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
+{
+    "command":"set_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000,20000]
+}
 ```
 
 **返回示例：**
@@ -1407,9 +1467,15 @@
 
 ```json
 //六自由度：
-{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
+{
+    "state":"arm_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000]
+}
 //七自由度：
-{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
+{
+    "state":"arm_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000,20000]
+}
 ```
 
 **参数说明：**

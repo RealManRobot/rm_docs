@@ -20,13 +20,19 @@
 六自由度
 
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60]}  
+{
+    "state":"joint_degree",
+    "joint":[10,20,30,40,50,60]
+}  
 ```
 
 七自由度
 
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60,70]}
+{
+    "state":"joint_degree",
+    "joint":[10,20,30,40,50,60,70]
+}
 ```
 
 **参数说明：**
@@ -52,7 +58,9 @@
 说明：反馈机械臂所有信息。
 
 ```json
-{"command":"get_arm_all_state"}
+{
+    "command": "get_arm_all_state"
+}
 ```
 
 **参数说明：**
@@ -78,7 +86,12 @@
 说明：反馈机械臂轨迹规划计数。
 
 ```json
-{"loop_cont":[],"loop_num":[],"plan_num":3,"state":"arm_plan_num"}
+{
+    "loop_cont":[],
+    "loop_num":[],
+    "plan_num":3,
+    "state":"arm_plan_num"
+}
 ```
 
 **参数说明：**
@@ -103,7 +116,12 @@
 **返回示例：**
 
 ```json
-{"command":"get_controller_RS485_mode","controller_RS485_mode":1,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_controller_RS485_mode",
+    "controller_RS485_mode": 1,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```
 
 ## 查询工具端RS485模式（第三代）`get_tool_RS485_mode`
@@ -123,5 +141,10 @@
 **返回示例：**
 
 ```json
-{"command":"get_tool_RS485_mode","tool_RS485_mode":0,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_tool_RS485_mode",
+    "tool_RS485_mode": 0,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```

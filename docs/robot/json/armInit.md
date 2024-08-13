@@ -25,7 +25,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_init_pose","init_pose":true}
+{
+    "command": "set_init_pose",
+    "init_pose": true
+}
 ```
 
 **参数说明：**
@@ -52,9 +55,15 @@
 
 ```json
 //六自由度：
-{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
+{
+    "state":"arm_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000]
+}
 //七自由度：
-{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
+{
+    "state":"arm_init_pose",
+    "init_pose":[10000,0,20000,30000,0,20000,20000]
+}
 ```
 
 **参数说明：**

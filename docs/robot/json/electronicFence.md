@@ -79,7 +79,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "add_electronic_fence_config", "add_config": true }
+{
+    "command": "add_electronic_fence_config",
+    "add_config": true
+}
 ```
 
 | 参数         | 类型   | 说明                                  |
@@ -161,7 +164,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "update_electronic_fence_config", "update_config": true }
+{
+    "command": "update_electronic_fence_config",
+    "update_config": true
+}
 ```
 
 | 参数            | 类型   | 说明                                  |
@@ -187,7 +193,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "delete_electronic_fence_config", "delete_config": true }
+{
+    "command": "delete_electronic_fence_config",
+    "delete_config": true
+}
 ```
 
 | 参数                             | 类型   | 说明                                  |
@@ -287,7 +296,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例-查询失败：**
 
 ```json
-{"command":"given_electronic_fence_config","given_state":false}
+{
+    "command": "given_electronic_fence_config",
+    "given_state": false
+}
 ```
 
 | 参数        | 类型     | 说明                                                                                 |
@@ -325,7 +337,34 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{"command":"get_electronic_fence_list_infos","info_list":[{"form":1, "form_name":"my_form"，"x_min_limit":500,"x_max_limit":1000,"y_ min_limit":500,"y_max_limit":1000"z_min_limit":500"z_max_limit":1000},{"form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}]}
+{
+  "command": "get_electronic_fence_list_infos",
+  "info_list": [
+    {
+      "form": 1,
+      "form_name": "my_form",
+      "x_min_limit": 500,
+      "x_max_limit": 1000,
+      "y_min_limit": 500,
+      "y_max_limit": 1000,
+      "z_min_limit": 500,
+      "z_max_limit": 1000
+    },
+    {
+      "form": 2,
+      "form_name": "my_form",
+      "x1": 500,
+      "y1": 1000,
+      "z1": 500,
+      "x2": 900,
+      "y2": 200,
+      "z2": 800,
+      "x3": 700,
+      "y3": 1200,
+      "z3": 300
+    }
+  ]
+}
 ```
 
 | 参数      | 类型   | 说明                                         |
@@ -363,7 +402,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "set_electronic_fence_enable", "set_state": true }
+{
+    "command": "set_electronic_fence_enable",
+    "set_state": true
+}
 ```
 
 | 参数      | 类型   | 说明                   |
@@ -437,7 +479,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "set_electronic_fence_config", "set_config": false }
+{
+    "command": "set_electronic_fence_config",
+    "set_config": false
+}
 ```
 
 | 参数       | 类型   | 说明                    |
@@ -527,7 +572,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例：**
 
 ```json
-{ "command": "set_virtual_wall_enable", "set_state": true }
+{
+    "command": "set_virtual_wall_enable",
+    "set_state": true
+}
 ```
 
 **参数说明**
@@ -622,13 +670,19 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 设置成功。
 
 ```json
-{ "command": "set_virtual_wall_config", "set_config": true }
+{
+    "command": "set_virtual_wall_config",
+    "set_config": true
+}
 ```
 
 设置失败。
 
 ```json
-{ "command": "set_virtual_wall_config", "set_config": false }
+{
+    "command": "set_virtual_wall_config",
+    "set_config": false
+}
 ```
 
 **参数说明:**
@@ -709,7 +763,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例 ：**
 
 ```json
-{ "command": "set_self_collision_enable", "set_state": true }
+{
+    "command": "set_self_collision_enable",
+    "set_state": true
+}
 ```
 
 **参数说明：**
@@ -733,7 +790,10 @@ I 系列机械臂具备电子围栏与虚拟墙功能，并提供了针对控制
 **返回示例 ：**
 
 ```json
-{ "command": "get_self_collision_enable", "enable_state": false }
+{
+    "command": "get_self_collision_enable",
+    "enable_state": false
+}
 ```
 
 **参数说明：**

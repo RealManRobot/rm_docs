@@ -21,7 +21,15 @@
 **返回示例：**
 
 ```json
- {"state": "expand_state", "pos": 0, "err_flag": 0, "en_flag": 1, "current": 0, " mode": 0, "joint_id": 1}
+{
+    "state": "expand_state",
+    "pos": 0,
+    "err_flag": 0,
+    "en_flag": 1,
+    "current": 0,
+    " mode": 0,
+    "joint_id": 1
+}
 ```
 
 **参数说明：**
@@ -56,9 +64,10 @@
 **返回示例：**
 
 ```json
-
-{"command": "expand_set_speed", "set_speed_state": true}
-
+{
+    "command": "expand_set_speed",
+    "set_speed_state": true
+}
 ```
 
 **参数说明：**
@@ -76,7 +85,6 @@
 |`pos`|   `int`   | 位置。          |
 |`speed`|   `int`   | 速度百分比。          |
 
-
 **使用示例：**
 
 实现：以50%的最大速度运动到0.0100°。
@@ -90,9 +98,10 @@
 **返回示例：**
 
 ```json
-
-{"command": "expand_set_pos", "set_pos_state": true}
-
+{
+    "command": "expand_set_pos",
+    "set_pos_state": true
+}
 ```
 
 **参数说明：**
