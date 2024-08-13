@@ -2,7 +2,7 @@
 
 ## 文件传输
 
-### 下发前准备
+### 下发前准备`run_project`
 
 **参数说明：**
 
@@ -17,18 +17,16 @@
 实现：文件 xxx，大小是 2048，速度是 50%。
 
 ```json
-{
-  "command": "run_project",
-  "project_name": "XXX",
-  "file_size": 2048,
-  "plan_speed": 50
-}
+{"command": "run_project",  "project_name": "XXX",  "file_size": 2048,  "plan_speed": 50}
 ```
 
 **返回示例：**
 
 ```json
-{ "command": "run_project", "project_state": true }
+{
+    "command": "run_project",
+    "project_state": true
+}
 ```
 
 **参数说明：**
@@ -36,7 +34,7 @@
 |:------------------|:-------|:----------------------------------------|
 |`run_project` | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 下发前准备(I 系列 )`run_project`
+### 下发前准备(第三代)`run_project`
 
 **参数说明：**
 
@@ -54,21 +52,16 @@
 实现：文件 xxx，大小是 2048，速度是 50%。
 
 ```json
-{
-  "command": "run_project",
-  "project_name": "XXX",
-  "file_size": 2048,
-  "plan_speed": 50,
-  "step_flag": 0,
-  "only_save": 0,
-  "save_id": 0
-}
+{"command": "run_project","project_name": "XXX","file_size": 2048,"plan_speed": 50,"step_flag": 0,"only_save": 0,"save_id": 0}
 ```
 
 **返回示例：**
 
 ```json
-{ "command": "run_project", "project_state": true }
+{
+    "command": "run_project",
+    "project_state": true
+}
 ```
 
 **参数说明：**
@@ -85,7 +78,10 @@
 **返回示例：**
 
 ```json
-{ "command": "conduct_project", "project_conduct": true }
+{
+    "command": "conduct_project",
+    "project_conduct": true
+}
 ```
 
 **参数说明：**
@@ -107,7 +103,10 @@
 校验成功，示教器弹框提示。
 
 ```json
-{ "command": "download_project", "project_state": true }
+{
+    "command": "download_project",
+    "project_state": true
+}
 ```
 
 **参数说明：**
@@ -119,7 +118,11 @@
 校验失败，err_line 为有问题的工程行数，示教器弹框提示，并将该行轨迹标红。若 err_line 为 0，则代表校验数据长度不对。
 
 ```json
-{ "command": "download_project", "project_state": false, "err_line": 60 }
+{
+    "command": "download_project",
+    "project_state": false,
+    "err_line": 60
+}
 ```
 
 **参数说明：**
@@ -148,7 +151,10 @@
 **返回示例：**
 
 ```json
-{ "command": "plan_speed", "plan_state": true }
+{
+    "command": "plan_speed",
+    "plan_state": true
+}
 ```
 
 **参数说明：**
@@ -176,7 +182,10 @@
 **返回示例：**
 
 ```json
-{"command":"delete_program_trajectory","delete_state",true}
+{
+    "command": "delete_program_trajectory",
+    "delete_state": true
+}
 ```
 
 **参数说明：**
@@ -211,7 +220,10 @@
 **返回示例：**
 
 ```json
-{ "command": "update_program_trajectory", "update_state": true }
+{
+    "command": "update_program_trajectory",
+    "update_state": true
+}
 ```
 
 **参数说明：**
@@ -239,7 +251,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_default_run_program","set_state",true}
+{
+    "command": "set_default_run_program",
+    "set_state": true
+}
 ```
 
 **参数说明：**
@@ -266,7 +281,10 @@
 **返回示例：**
 
 ```json
-{ "command": "get_default_run_program", "id": 1 }
+{
+    "command": "get_default_run_program",
+    "id": 1
+}
 ```
 
 **参数说明：**
@@ -297,7 +315,10 @@
 继续执行。
 
 ```json
-{ "command": "popup", "popup_result": true }
+{
+    "command": "popup",
+    "popup_result": true
+}
 ```
 
 | 参数           | 类型   | 说明                      |
@@ -326,7 +347,9 @@
 **返回示例：**
 
 ```json
-{ "point": [30971, 56885, -3416, 76201, 47121, -4845] }
+{
+    "point": [30971,56885,-3416,76201,47121,-4845]
+}
 ```
 
 **参数说明：**
@@ -352,11 +375,7 @@
 
 ```json
 {
-  "command": "get_program_trajectory_list",
-  "page_num": 1,
-  "page_size": 10,
-  "vague_search": "file"
-}
+  "command": "get_program_trajectory_list",  "page_num": 1,  "page_size": 10,  "vague_search": "file"}
 ```
 
 **返回示例：**
@@ -403,7 +422,17 @@
 **返回示例：**
 
 ```json
-{"command":"get_program_run_state","run_state":1,"id":1,"plan_num":1,"loop_num":[1],"loop_cont":[3],"step_mode",0,"plan_speed",50,"edit_id":1}
+{
+    "command": "get_program_run_state",
+    "run_state": 1,
+    "id": 1,
+    "plan_num": 1,
+    "loop_num": [1],
+    "loop_cont": [3],
+    "step_mode": 0,
+    "plan_speed": 50,
+    "edit_id": 1
+}
 ```
 
 | 参数         | 类型  | 说明                                                            |
@@ -439,7 +468,10 @@
 开始运行成功。
 
 ```json
-{"command":"set_program_id_run","start_state",true}
+{
+    "command": "set_program_id_run",
+    "start_state": true
+}
 ```
 
 **参数说明：**
@@ -450,7 +482,10 @@
 在线编程程序结束后，会主动上报结束的 ID。
 
 ```json
-{ "state": "program_run_finish", "finish_id": 4 }
+{
+    "state": "program_run_finish",
+    "finish_id": 4
+}
 ```
 
 **参数说明：**
@@ -485,7 +520,10 @@
 **返回示例：**
 
 ```json
-{"command":"add_global_waypoint","add_state",true}
+{
+    "command": "add_global_waypoint",
+    "add_state": true
+}
 ```
 
 **参数说明：**
@@ -518,7 +556,10 @@
 **返回示例：**
 
 ```json
-{"command":"update_global_waypoint","update_state",true}
+{
+    "command": "update_global_waypoint",
+    "update_state": true
+}
 ```
 
 **参数说明：**
@@ -546,7 +587,10 @@
 **返回示例：**
 
 ```json
-{"command":"delete_global_waypoint","delete_state",true}
+{
+    "command": "delete_global_waypoint",
+    "delete_state": true
+}
 ```
 
 **参数说明：**
@@ -574,7 +618,15 @@
 **返回示例：**
 
 ```json
-{"command":"given_global_waypoint","point_name":"abc","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"}
+{
+    "command": "given_global_waypoint",
+    "point_name": "abc",
+    "joint": [10,20,30,40,50,60,40],
+    "pose": [100000,200000,30000,400,500,600],
+    "work_frame": "World",
+    "tool_frame": "Arm_Tip",
+    "time": "2022-12-22 15:23:00"
+}
 ```
 
 **参数说明：**
@@ -604,7 +656,28 @@
 **返回示例：**
 
 ```json
-{"command":"get_global_waypoints_list","total_size":50,"list":[{"point_name":"abcd","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"},{"point_name":"1abc","joint":[10,20,30,40, 50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"}]}
+{
+    "command": "get_global_waypoints_list",
+    "total_size": 50,
+    "list": [
+        {
+            "point_name": "abcd",
+            "joint": [10,20,30,40,50,60,40],
+            "pose": [100000,200000,30000,400,500,600],
+            "work_frame": "World",
+            "tool_frame": "Arm_Tip",
+            "time": "2022-12-22 15:23:00"
+        },
+        {
+            "point_name": "1abc",
+            "joint": [10,20,30,40,50,60,40],
+            "pose": [100000,200000,30000,400,500,600],
+            "work_frame": "World",
+            "tool_frame": "Arm_Tip",
+            "time": "2022-12-22 15:23:00"
+        }
+    ]
+}
 ```
 
 **参数说明：**
