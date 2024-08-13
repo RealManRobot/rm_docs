@@ -1,4 +1,4 @@
-# 工作坐标系`WorkCoordinateConfig`
+# 工作坐标系配置`WorkCoordinateConfig`
 
 可用于自动/手动设置、删除、切换工作坐标系等。下面是工作坐标系`WorkCoordinateConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
