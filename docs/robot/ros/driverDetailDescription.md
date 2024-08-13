@@ -489,7 +489,6 @@ rostopic echo /rm_driver/SetJointTeach_Result
 |`v`|   `int16`   | 关节转动速度0-100          |
 
 **使用示例：**
-六自由度
 
 ```json
 rostopic pub /rm_driver/Arm_PosTeach rm_msgs/Pos_Teach "teach_type: 'z' direction: 'pos' v: 10"
