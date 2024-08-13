@@ -957,6 +957,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
+            text: "二次开发",
+            link: "/robot/download/redevelopment",
+          },
+          {
             text: "其他",
             link: "/robot/download/other",
           },

@@ -1,34 +1,34 @@
-# 机械臂配置指令集
+# <p class="hidden">JSON：</p> 机械臂配置指令集
 
 ## 设置运动参数
 
-本命令集用于配置机械臂末端的线速度、线加速度、角速度、角加速度、碰撞等级的设置与查询、初始化机械臂参数、设置、恢复和查询机械臂DH参数、重设机关节零位补偿等。
-机械臂末端参数设置完毕后，第二代需要调用[参数保存（第二代）](../json/systemConfig.md#参数保存第二代)手动保存到控制器Flash，否则断电之后不会保存。
+本命令集用于配置机械臂末端的线速度、线加速度、角速度、角加速度、碰撞等级的设置与查询、初始化机械臂参数、设置、恢复和查询机械臂 DH 参数、重设机关节零位补偿等。
+机械臂末端参数设置完毕后，第二代需要调用[参数保存（第二代）](../json/systemConfig.md#参数保存第二代)手动保存到控制器 Flash，否则断电之后不会保存。
 
 ### 设置末端最大线速度`set_arm_max_line_speed`
 
 **参数说明：**
 
-| 参数                     | 类型 | 说明                       |
-| :----------------------- | :--- | :------------------------- |
-| `set_arm_max_line_speed` |   `string`   | 设置机械臂末端最大线速度。 |
-| `arm_line_speed`           |   `int`   | 目标线速度单位：m/s。      |
+| 参数                     | 类型     | 说明                       |
+| :----------------------- | :------- | :------------------------- |
+| `set_arm_max_line_speed` | `string` | 设置机械臂末端最大线速度。 |
+| `arm_line_speed`         | `int`    | 目标线速度单位：m/s。      |
 
-> 注意：建议使用默认最大线速度，如需更改，设置的机械臂末端最大线加速度与最大线速度的比值需要≥3，否则可能出现运动异常
+> 注意：建议使用默认最大线速度，如需更改，设置的机械臂末端最大线加速度与最大线速度的比值需要 ≥3，否则可能出现运动异常
 
 **使用示例：**
-实现：设置机械臂末端最大线速度0.5m/s，分辨率0.001m/s。
+实现：设置机械臂末端最大线速度 0.5m/s，分辨率 0.001m/s。
 
 ```json
-{"command":"set_arm_max_line_speed","arm_line_speed":500}
+{ "command": "set_arm_max_line_speed", "arm_line_speed": 500 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_arm_max_line_speed",
-    "arm_line_speed": true
+  "command": "set_arm_max_line_speed",
+  "arm_line_speed": true
 }
 ```
 
@@ -40,26 +40,26 @@
 
 **参数说明：**
 
-| 参数                   | 类型 | 说明                         |
-| :--------------------- | :--- | :--------------------------- |
-| `set_arm_max_line_acc` |   `string`   | 设置机械臂末端最大线加速度。 |
-| `arm_line_acc`         |   `int`   | 目标线加速度单位：m/s²。     |
+| 参数                   | 类型     | 说明                         |
+| :--------------------- | :------- | :--------------------------- |
+| `set_arm_max_line_acc` | `string` | 设置机械臂末端最大线加速度。 |
+| `arm_line_acc`         | `int`    | 目标线加速度单位：m/s²。     |
 
-> 注意：建议使用默认最大线加速度，如需更改，设置的机械臂末端最大线加速度与最大线速度的比值需要≥3，否则可能出现运动异常
+> 注意：建议使用默认最大线加速度，如需更改，设置的机械臂末端最大线加速度与最大线速度的比值需要 ≥3，否则可能出现运动异常
 
 **使用示例：**
-实现：设置机械臂末端最大线加速度2m/s²，分辨率0.001m/s²。
+实现：设置机械臂末端最大线加速度 2m/s²，分辨率 0.001m/s²。
 
 ```json
-{"command":"set_arm_max_line_acc","arm_line_acc":2000}
+{ "command": "set_arm_max_line_acc", "arm_line_acc": 2000 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_arm_max_line_acc",
-    "arm_line_acc": true
+  "command": "set_arm_max_line_acc",
+  "arm_line_acc": true
 }
 ```
 
@@ -71,26 +71,26 @@
 
 **参数说明：**
 
-| 参数                        | 类型 | 说明                       |
-| :-------------------------- | :--- | :------------------------- |
-| `set_arm_max_angular_speed` |   `string`   | 设置机械臂末端最大角速度。 |
-| `arm_angular_speed`         |   `int`   | 目标角速度单位：rad/s。   |
+| 参数                        | 类型     | 说明                       |
+| :-------------------------- | :------- | :------------------------- |
+| `set_arm_max_angular_speed` | `string` | 设置机械臂末端最大角速度。 |
+| `arm_angular_speed`         | `int`    | 目标角速度单位：rad/s。    |
 
-> 注意：建议使用默认最大角速度，如需更改，设置的机械臂末端最大角加速度与最大角速度的比值需要≥3，否则可能出现运动异常
+> 注意：建议使用默认最大角速度，如需更改，设置的机械臂末端最大角加速度与最大角速度的比值需要 ≥3，否则可能出现运动异常
 
 **使用示例：**
-实现：设置机械臂末端最大角速度0.2rad/s，分辨率0.001rad/s。
+实现：设置机械臂末端最大角速度 0.2rad/s，分辨率 0.001rad/s。
 
 ```json
-{"command":"set_arm_max_angular_speed","arm_angular_speed":200}
+{ "command": "set_arm_max_angular_speed", "arm_angular_speed": 200 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_arm_max_angular_speed",
-    "arm_angular_speed": true
+  "command": "set_arm_max_angular_speed",
+  "arm_angular_speed": true
 }
 ```
 
@@ -102,26 +102,26 @@
 
 **参数说明：**
 
-| 参数                      | 类型 | 说明                         |
-| :------------------------ | :--- | :--------------------------- |
-| `set_arm_max_angular_acc` |   `string`   | 设置机械臂末端最大角加速度。 |
-| `arm_angular_acc`         |   `int`   | 目标角加速度单位：rad/s²。   |
+| 参数                      | 类型     | 说明                         |
+| :------------------------ | :------- | :--------------------------- |
+| `set_arm_max_angular_acc` | `string` | 设置机械臂末端最大角加速度。 |
+| `arm_angular_acc`         | `int`    | 目标角加速度单位：rad/s²。   |
 
-> 注意：建议使用默认最大角加速度，如需更改，设置的机械臂末端最大角加速度与最大角速度的比值需要≥3，否则可能出现运动异常
+> 注意：建议使用默认最大角加速度，如需更改，设置的机械臂末端最大角加速度与最大角速度的比值需要 ≥3，否则可能出现运动异常
 
 **使用示例：**
-实现：设置机械臂末端最大角加速度4rad/s²，分辨率0.001rad/s²。
+实现：设置机械臂末端最大角加速度 4rad/s²，分辨率 0.001rad/s²。
 
 ```json
-{"command":"set_arm_max_angular_acc","arm_angular_acc":4000}
+{ "command": "set_arm_max_angular_acc", "arm_angular_acc": 4000 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_arm_max_angular_acc",
-    "arm_angular_acc": true
+  "command": "set_arm_max_angular_acc",
+  "arm_angular_acc": true
 }
 ```
 
@@ -133,25 +133,25 @@
 
 **参数说明：**
 
-| 参数                      | 类型 | 说明                       |
-| :------------------------ | :--- | :------------------------- |
-| `set_arm_max_angular_acc` |   `string`   | 初始化机械臂参数。         |
+| 参数                      | 类型     | 说明               |
+| :------------------------ | :------- | :----------------- |
+| `set_arm_max_angular_acc` | `string` | 初始化机械臂参数。 |
 
 **使用示例：**
 实现：初始化机械臂参数，机械臂的末端参数恢复到默认值。
-末端线速度：0.25m/s;    末端线加速度：1.6m/s²;
-末端角速度：0.6rad/s;   末端角加速度：4rad/s²。
+末端线速度：0.25m/s; 末端线加速度：1.6m/s²;
+末端角速度：0.6rad/s; 末端角加速度：4rad/s²。
 
 ```json
-{"command":"set_arm_init"}
+{ "command": "set_arm_init" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_arm_init",
-    "arm_init": true
+  "command": "set_arm_init",
+  "arm_init": true
 }
 ```
 
@@ -163,24 +163,24 @@
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                     |
-| :-------------------- | :--- | :----------------------- |
-| `set_collision_stage` |   `string`   | 设置机械臂碰撞防护等级。 |
-| `collision_stage`     |   `int`   | 等级，范围：0~8。        |
+| 参数                  | 类型     | 说明                     |
+| :-------------------- | :------- | :----------------------- |
+| `set_collision_stage` | `string` | 设置机械臂碰撞防护等级。 |
+| `collision_stage`     | `int`    | 等级，范围：0~8。        |
 
 **使用示例：**
-实现：设置机械臂碰撞防护等级1，等级越高，检测越灵敏。
+实现：设置机械臂碰撞防护等级 1，等级越高，检测越灵敏。
 
 ```json
-{"command":"set_collision_stage","collision_stage":1}
+{ "command": "set_collision_stage", "collision_stage": 1 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_collision_state",
-    "collision_state": true
+  "command": "set_collision_state",
+  "collision_state": true
 }
 ```
 
@@ -192,23 +192,23 @@
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明               |
-| :-------------------- | :--- | :----------------- |
-| `get_collision_stage` |   `string`   | 查询碰撞防护等级。 |
+| 参数                  | 类型     | 说明               |
+| :-------------------- | :------- | :----------------- |
+| `get_collision_stage` | `string` | 查询碰撞防护等级。 |
 
 **使用示例：**
 实现：查询碰撞防护等级。
 
 ```json
-{"command":"get_collision_stage"}
+{ "command": "get_collision_stage" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "state": "get_collision_stage",
-    "collision_stage": 5
+  "state": "get_collision_stage",
+  "collision_stage": 5
 }
 ```
 
@@ -216,34 +216,53 @@
 | :---------------- | :---- | :---------------- |
 | `collision_stage` | `int` | 等级，范围：0~8。 |
 
-### 重新设置DH参数（第三代）`set_DH_data`
+### 重新设置 DH 参数（第三代）`set_DH_data`
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                   |
-| :-------------------- | :--- | :--------------------- |
-| `set_DH_data` |   `int`   | 重新设置机械臂DH参数。 |
+| 参数          | 类型  | 说明                     |
+| :------------ | :---- | :----------------------- |
+| `set_DH_data` | `int` | 重新设置机械臂 DH 参数。 |
 
 > 注意：该指令用户不可自行使用，必须配合测量设备进行绝对精度补偿时方可使用，否则会导致机械臂参数错误！
 
 **使用示例：**
-实现：每个关节有四组数据，分别表示alpha、a、d、offset，示例中表示1°、0.002m、0.003m和4°。
-6自由度机械臂：
+实现：每个关节有四组数据，分别表示 alpha、a、d、offset，示例中表示 1°、0.002m、0.003m 和 4°。
+6 自由度机械臂：
+
 ```json
-{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000]}
+{
+  "command": "set_DH_data",
+  "joint_1": [1000, 2000, 3000, 4000],
+  "joint_2": [1000, 2000, 3000, 4000],
+  "joint_3": [1000, 2000, 3000, 4000],
+  "joint_4": [1000, 2000, 3000, 4000],
+  "joint_5": [1000, 2000, 3000, 4000],
+  "joint_6": [1000, 2000, 3000, 4000]
+}
 ```
 
-7自由度机械臂：
+7 自由度机械臂：
+
 ```json
-{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000],"joint_7":[1000,2000,3000,4000]}
+{
+  "command": "set_DH_data",
+  "joint_1": [1000, 2000, 3000, 4000],
+  "joint_2": [1000, 2000, 3000, 4000],
+  "joint_3": [1000, 2000, 3000, 4000],
+  "joint_4": [1000, 2000, 3000, 4000],
+  "joint_5": [1000, 2000, 3000, 4000],
+  "joint_6": [1000, 2000, 3000, 4000],
+  "joint_7": [1000, 2000, 3000, 4000]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_DH_data",
-    "set_state": true
+  "command": "set_DH_data",
+  "set_state": true
 }
 ```
 
@@ -251,76 +270,76 @@
 | :---------- | :----- | :------------------------------------ |
 | `set_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
-### 查询DH参数（第三代）`get_DH_data`
+### 查询 DH 参数（第三代）`get_DH_data`
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明               |
-| :-------------------- | :--- | :----------------- |
-| `get_DH_data` |   `string`   | 查询机械臂DH参数。 |
+| 参数          | 类型     | 说明                 |
+| :------------ | :------- | :------------------- |
+| `get_DH_data` | `string` | 查询机械臂 DH 参数。 |
 
 **使用示例：**
-实现：查询机械臂DH参数。
+实现：查询机械臂 DH 参数。
 
 ```json
-{"command":"get_DH_data"} 
+{ "command": "get_DH_data" }
 ```
 
 **返回示例：**
-6自由度机械臂：
+6 自由度机械臂：
 
 ```json
 {
-    "command":"get_DH_data",
-    "joint_1":[1000,2000,3000,4000],
-    "joint_2":[1000,2000,3000,4000],
-    "joint_3":[1000,2000,3000,4000],
-    "joint_4":[1000,2000,3000,4000],
-    "joint_5":[1000,2000,3000,4000],
-    "joint_6":[1000,2000,3000,4000]
+  "command": "get_DH_data",
+  "joint_1": [1000, 2000, 3000, 4000],
+  "joint_2": [1000, 2000, 3000, 4000],
+  "joint_3": [1000, 2000, 3000, 4000],
+  "joint_4": [1000, 2000, 3000, 4000],
+  "joint_5": [1000, 2000, 3000, 4000],
+  "joint_6": [1000, 2000, 3000, 4000]
 }
 ```
 
-7自由度机械臂：
+7 自由度机械臂：
 
 ```json
 {
-    "command":"get_DH_data",
-    "joint_1":[1000,2000,3000,4000],
-    "joint_2":[1000,2000,3000,4000],
-    "joint_3":[1000,2000,3000,4000],
-    "joint_4":[1000,2000,3000,4000],
-    "joint_5":[1000,2000,3000,4000],
-    "joint_6":[1000,2000,3000,4000],
-    "joint_7":[1000,2000,3000,4000]
+  "command": "get_DH_data",
+  "joint_1": [1000, 2000, 3000, 4000],
+  "joint_2": [1000, 2000, 3000, 4000],
+  "joint_3": [1000, 2000, 3000, 4000],
+  "joint_4": [1000, 2000, 3000, 4000],
+  "joint_5": [1000, 2000, 3000, 4000],
+  "joint_6": [1000, 2000, 3000, 4000],
+  "joint_7": [1000, 2000, 3000, 4000]
 }
 ```
 
-| 参数      | 类型    | 说明                                                         |
-| :-------- | :------ | :----------------------------------------------------------- |
-| `joint_1` | `array` | 每个关节有四组数据，分别表示alpha、a、d、offset，示例中表示1°、0.002m、0.003m和4°。 |
+| 参数      | 类型    | 说明                                                                                    |
+| :-------- | :------ | :-------------------------------------------------------------------------------------- |
+| `joint_1` | `array` | 每个关节有四组数据，分别表示 alpha、a、d、offset，示例中表示 1°、0.002m、0.003m 和 4°。 |
 
-### 恢复机械臂默认DH参数（第三代）`set_DH_data_default`
+### 恢复机械臂默认 DH 参数（第三代）`set_DH_data_default`
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                   |
-| :-------------------- | :--- | :--------------------- |
-| `set_DH_data_default` |   `string`   | 恢复机械臂默认DH参数。 |
+| 参数                  | 类型     | 说明                     |
+| :-------------------- | :------- | :----------------------- |
+| `set_DH_data_default` | `string` | 恢复机械臂默认 DH 参数。 |
 
 **使用示例：**
-实现：恢复机械臂默认DH参数。
+实现：恢复机械臂默认 DH 参数。
 
 ```json
-{"command":"set_DH_data_default"}
+{ "command": "set_DH_data_default" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_DH_data_default",
-    "set_state": true
+  "command": "set_DH_data_default",
+  "set_state": true
 }
 ```
 
@@ -334,25 +353,28 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                       |
-| :---------------------- | :--- | :------------------------- |
-| `set_joint_zero_offset` |   `int`   | 重新设置关节零位补偿角度。 |
+| 参数                    | 类型  | 说明                       |
+| :---------------------- | :---- | :------------------------- |
+| `set_joint_zero_offset` | `int` | 重新设置关节零位补偿角度。 |
 
 > 注意：该指令用户不可自行使用，必须配合测量设备进行绝对精度补偿时方可使用，否则会导致机械臂参数错误！
 
 **使用示例：**
-实现：设置关节零位偏移，精度：0.001°关节1~6的零位补偿角度：1°，-2°，3°，-4°，5°，-6°。
+实现：设置关节零位偏移，精度：0.001° 关节 1~6 的零位补偿角度：1°，-2°，3°，-4°，5°，-6°。
 
 ```json
-{"command":"set_joint_zero_offset","offset":[1000,-2000,3000,-4000,5000,-6000]}
+{
+  "command": "set_joint_zero_offset",
+  "offset": [1000, -2000, 3000, -4000, 5000, -6000]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_joint_zero_offset",
-    "set_state": true
+  "command": "set_joint_zero_offset",
+  "set_state": true
 }
 ```
 
@@ -368,15 +390,15 @@
 
 **参数说明：**
 
-| 参数                     | 类型 | 说明                       |
-| :----------------------- | :--- | :------------------------- |
-| `get_arm_max_line_speed` |   `string`   | 查询机械臂末端最大线速度。 |
+| 参数                     | 类型     | 说明                       |
+| :----------------------- | :------- | :------------------------- |
+| `get_arm_max_line_speed` | `string` | 查询机械臂末端最大线速度。 |
 
 **使用示例：**
 实现：查询机械臂末端最大线速度。
 
 ```json
-{"command":"get_arm_max_line_speed"}
+{ "command": "get_arm_max_line_speed" }
 ```
 
 **返回示例：**
@@ -384,30 +406,30 @@
 
 ```json
 {
-    "state": "arm_max_line_speed",
-    "arm_line_speed": 500
+  "state": "arm_max_line_speed",
+  "arm_line_speed": 500
 }
 ```
 
 **参数说明：**
 
-| 参数                 | 类型 | 说明                       |
-| :------------------- | :--- | :------------------------- |
-| `arm_max_line_speed` |   `int`   | 反馈机械臂末端最大线速度。 |
+| 参数                 | 类型  | 说明                       |
+| :------------------- | :---- | :------------------------- |
+| `arm_max_line_speed` | `int` | 反馈机械臂末端最大线速度。 |
 
 ### 查询末端最大线加速度`get_arm_max_line_acc`
 
 **参数说明：**
 
-| 参数                   | 类型 | 说明                         |
-| :--------------------- | :--- | :--------------------------- |
-| `get_arm_max_line_acc` |   `string`   | 查询机械臂末端最大线加速度。 |
+| 参数                   | 类型     | 说明                         |
+| :--------------------- | :------- | :--------------------------- |
+| `get_arm_max_line_acc` | `string` | 查询机械臂末端最大线加速度。 |
 
 **使用示例：**
 实现：查询机械臂末端最大线加速度。
 
 ```json
-{"command":"get_arm_max_line_acc"}
+{ "command": "get_arm_max_line_acc" }
 ```
 
 **返回示例：**
@@ -415,30 +437,30 @@
 
 ```json
 {
-    "state": "arm_max_line_acc",
-    "arm_line_acc": 200
+  "state": "arm_max_line_acc",
+  "arm_line_acc": 200
 }
 ```
 
 **参数说明：**
 
-| 参数               | 类型 | 说明                         |
-| :----------------- | :--- | :--------------------------- |
-| `arm_max_line_acc` |   `int`   | 反馈机械臂末端最大线加速度。 |
+| 参数               | 类型  | 说明                         |
+| :----------------- | :---- | :--------------------------- |
+| `arm_max_line_acc` | `int` | 反馈机械臂末端最大线加速度。 |
 
 ### 查询末端最大角速度`get_arm_max_angular_speed`
 
 **参数说明：**
 
-| 参数                        | 类型 | 说明                       |
-| :-------------------------- | :--- | :------------------------- |
-| `get_arm_max_angular_speed` |   `string`   | 查询机械臂末端最大角速度。 |
+| 参数                        | 类型     | 说明                       |
+| :-------------------------- | :------- | :------------------------- |
+| `get_arm_max_angular_speed` | `string` | 查询机械臂末端最大角速度。 |
 
 **使用示例：**
 实现：查询机械臂末端最大角速度。
 
 ```json
-{"command":"get_arm_max_angular_speed"}
+{ "command": "get_arm_max_angular_speed" }
 ```
 
 **返回示例：**
@@ -446,30 +468,30 @@
 
 ```json
 {
-    "state": "arm_max_angular_speed",
-    "arm_angular_speed": 1000
+  "state": "arm_max_angular_speed",
+  "arm_angular_speed": 1000
 }
 ```
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                       |
-| :---------------------- | :--- | :------------------------- |
-| `arm_max_angular_speed` |   `int`   | 反馈机械臂末端最大角速度。 |
+| 参数                    | 类型  | 说明                       |
+| :---------------------- | :---- | :------------------------- |
+| `arm_max_angular_speed` | `int` | 反馈机械臂末端最大角速度。 |
 
 ### 查询末端最大角加速度`get_arm_max_angular_acc`
 
 **参数说明：**
 
-| 参数                      | 类型 | 说明                         |
-| :------------------------ | :--- | :--------------------------- |
-| `get_arm_max_angular_acc` |   `string`   | 查询机械臂末端最大角加速度。 |
+| 参数                      | 类型     | 说明                         |
+| :------------------------ | :------- | :--------------------------- |
+| `get_arm_max_angular_acc` | `string` | 查询机械臂末端最大角加速度。 |
 
 **使用示例：**
 实现：查询机械臂末端最大角加速度。
 
 ```json
-{"command":"get_arm_max_angular_acc"}
+{ "command": "get_arm_max_angular_acc" }
 ```
 
 **返回示例：**
@@ -477,14 +499,14 @@
 
 ```json
 {
-    "state": "arm_max_angular_acc",
-    "arm_angular_acc": 10000
+  "state": "arm_max_angular_acc",
+  "arm_angular_acc": 10000
 }
 ```
 
-| 参数                  | 类型 | 说明                         |
-| :-------------------- | :--- | :--------------------------- |
-| `arm_max_angular_acc` |   `int`   | 反馈机械臂末端最大角加速度。 |
+| 参数                  | 类型  | 说明                         |
+| :-------------------- | :---- | :--------------------------- |
+| `arm_max_angular_acc` | `int` | 反馈机械臂末端最大角加速度。 |
 
 ## 工具坐标系
 
@@ -493,18 +515,20 @@
 ### 自动计算工具坐标系（标定参考点）`set_auto_tool_frame`
 
 将当前机械臂的末端点设置为计算工作坐标系的参考点，参考点基于六点法的要求进行设置。
->注意：机械臂只能存储10个工具坐标系，若超过10个，则新建立工具不成功。
+
+> 注意：机械臂只能存储 10 个工具坐标系，若超过 10 个，则新建立工具不成功。
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明               |
-| :-------------------- | :--- | :----------------- |
-| `set_auto_tool_frame` |   `string`   | 一键设置关节限位。 |
-| `point_num`           |   `int`   | 1~6为标定参考点。  |
+| 参数                  | 类型     | 说明               |
+| :-------------------- | :------- | :----------------- |
+| `set_auto_tool_frame` | `string` | 一键设置关节限位。 |
+| `point_num`           | `int`    | 1~6 为标定参考点。 |
 
 **使用示例：**
-实现：自动计算工具坐标系，标定当前位置为参考点6。
->备注：机械臂上电初始化后，默认无负载。
+实现：自动计算工具坐标系，标定当前位置为参考点 6。
+
+> 备注：机械臂上电初始化后，默认无负载。
 
 ```json
 {"command":"set_auto_tool_frame","point_num":1}
@@ -519,8 +543,8 @@
 
 ```json
 {
-    "command": "set_auto_tool_frame",
-    "auto_tool_frame": true
+  "command": "set_auto_tool_frame",
+  "auto_tool_frame": true
 }
 ```
 
@@ -530,32 +554,39 @@
 
 ### 自动计算工具坐标系（自动计算生成工具）`set_auto_tool_frame`
 
-通过[自动计算工具坐标系（标定参考点）](#自动计算工具坐标系标定参考点set_auto_tool_frame)成功标定6个参考点之后，运行此指令配置工具坐标系。
->自动计算工具坐标系（六点法）：机械臂只能存储10个工具坐标系，若超过10个，则新建立工具不成功。
+通过[自动计算工具坐标系（标定参考点）](#自动计算工具坐标系标定参考点set_auto_tool_frame)成功标定 6 个参考点之后，运行此指令配置工具坐标系。
+
+> 自动计算工具坐标系（六点法）：机械臂只能存储 10 个工具坐标系，若超过 10 个，则新建立工具不成功。
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                               |
-| :-------------------- | :--- | :--------------------------------- |
-| `set_auto_tool_frame` |   `string`   | 自动计算工具坐标系。               |
-| `tool_name`           |   `string`   | 工具坐标系名称，不能超过10个字符。 |
-| `payload`             |   `int`   | 单位：g，最高不超过5000g           |
-| `position`              |   `int`   | 质心位置，单位：mm，精度0.001mm    |
+| 参数                  | 类型     | 说明                                 |
+| :-------------------- | :------- | :----------------------------------- |
+| `set_auto_tool_frame` | `string` | 自动计算工具坐标系。                 |
+| `tool_name`           | `string` | 工具坐标系名称，不能超过 10 个字符。 |
+| `payload`             | `int`    | 单位：g，最高不超过 5000g            |
+| `position`            | `int`    | 质心位置，单位：mm，精度 0.001mm     |
 
 **使用示例：**
-实现：自动计算工具坐标系，名称为tool2_frame，末端负载5000g，质心位置：x-1mm,y-2mm,z-3mm。
->备注：机械臂上电初始化后，默认无负载。
+实现：自动计算工具坐标系，名称为 tool2_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
+
+> 备注：机械臂上电初始化后，默认无负载。
 
 ```json
-{"command":"set_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
+{
+  "command": "set_auto_tool_frame",
+  "tool_name": "tool_frame",
+  "payload": 5000,
+  "position": [1000, 2000, 3000]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_auto_tool_frame",
-    "auto_tool_frame": true
+  "command": "set_auto_tool_frame",
+  "auto_tool_frame": true
 }
 ```
 
@@ -565,16 +596,16 @@
 
 ### 手动输入工具坐标系`set_auto_tool_frame`
 
->手动输入工具坐标系：机械臂只能存储10个工具坐标系，若超过10个，则新建立工具不成功。
+> 手动输入工具坐标系：机械臂只能存储 10 个工具坐标系，若超过 10 个，则新建立工具不成功。
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                               |
-| :-------------------- | :--- | :--------------------------------- |
-| `set_auto_tool_frame` |   `int`   | 自动计算工具坐标系。               |
-| `tool_name`           |   `int`   | 工具坐标系名称，不能超过10个字符。 |
-| `payload`             |   `int`   | 单位：g，最高不超过5000g           |
-| position              |   `int`   | 质心位置，单位：mm，精度0.001mm    |
+| 参数                  | 类型  | 说明                                 |
+| :-------------------- | :---- | :----------------------------------- |
+| `set_auto_tool_frame` | `int` | 自动计算工具坐标系。                 |
+| `tool_name`           | `int` | 工具坐标系名称，不能超过 10 个字符。 |
+| `payload`             | `int` | 单位：g，最高不超过 5000g            |
+| position              | `int` | 质心位置，单位：mm，精度 0.001mm     |
 
 **使用示例：**
 
@@ -587,15 +618,16 @@
     质心位置：x-1mm,y-2mm,z-3mm;
     payload：单位：g，最高不超过5000g；
     position：质心位置，单位：mm，精度0.001mm。
->备注：机械臂上电初始化后，默认无负载。
+
+> 备注：机械臂上电初始化后，默认无负载。
 
 ```json
 {
-    "command":"set_manual_tool_frame",
-    "tool_name":"tool_frame",
-    "tool_pose":[100000,200000,30000,400,500,600],
-    "payload":5000,
-    "position":[1000,2000,3000]
+  "command": "set_manual_tool_frame",
+  "tool_name": "tool_frame",
+  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
+  "payload": 5000,
+  "position": [1000, 2000, 3000]
 }
 ```
 
@@ -603,8 +635,8 @@
 
 ```json
 {
-    "command": "set_manual_tool_frame",
-    "manual_tool_frame": true
+  "command": "set_manual_tool_frame",
+  "manual_tool_frame": true
 }
 ```
 
@@ -616,25 +648,25 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                               |
-| :---------------------- | :--- | :--------------------------------- |
-| `set_change_tool_frame` |   `string`   | 切换当前工具坐标系。               |
-| `tool_name`             |   `string`   | 工具坐标系名称，不能超过10个字符。 |
+| 参数                    | 类型     | 说明                                 |
+| :---------------------- | :------- | :----------------------------------- |
+| `set_change_tool_frame` | `string` | 切换当前工具坐标系。                 |
+| `tool_name`             | `string` | 工具坐标系名称，不能超过 10 个字符。 |
 
 **使用示例：**
 
-实现：切换当前工具坐标系，名称tool2_frame。
+实现：切换当前工具坐标系，名称 tool2_frame。
 
 ```json
-{"command":"set_change_tool_frame","tool_name":"tool2_frame"}
+{ "command": "set_change_tool_frame", "tool_name": "tool2_frame" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_change_tool_frame",
-    "change_tool_frame": true
+  "command": "set_change_tool_frame",
+  "change_tool_frame": true
 }
 ```
 
@@ -646,25 +678,25 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                               |
-| :---------------------- | :--- | :--------------------------------- |
-| `set_delete_tool_frame` |   `string`   | 删除工具坐标系。                   |
-| `tool_name`             |   `string`   | 工具坐标系名称，不能超过10个字符。 |
+| 参数                    | 类型     | 说明                                 |
+| :---------------------- | :------- | :----------------------------------- |
+| `set_delete_tool_frame` | `string` | 删除工具坐标系。                     |
+| `tool_name`             | `string` | 工具坐标系名称，不能超过 10 个字符。 |
 
 **使用示例：**
 
-实现：删除工具坐标系，名称tool2_frame。
+实现：删除工具坐标系，名称 tool2_frame。
 
 ```json
-{"command":"set_delete_tool_frame","tool_name":"tool2_frame"}
+{ "command": "set_delete_tool_frame", "tool_name": "tool2_frame" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_delete_tool_frame",
-    "delete_tool_frame": true
+  "command": "set_delete_tool_frame",
+  "delete_tool_frame": true
 }
 ```
 
@@ -678,11 +710,11 @@
 
 **参数说明：**
 
-| 参数                | 类型 | 说明                               |
-| :------------------ | :--- | :--------------------------------- |
-| `update_tool_frame` |   `string`   | 修改工具坐标系参数。               |
-| `tool_name`         |   `string`   | 工具坐标系名称，不能超过10个字符。 |
-| `tool_pose`         |    `int`  | 工具相对机械臂末端法兰中心位姿     |
+| 参数                | 类型     | 说明                                 |
+| :------------------ | :------- | :----------------------------------- |
+| `update_tool_frame` | `string` | 修改工具坐标系参数。                 |
+| `tool_name`         | `string` | 工具坐标系名称，不能超过 10 个字符。 |
+| `tool_pose`         | `int`    | 工具相对机械臂末端法兰中心位姿       |
 
 **使用示例：**
 
@@ -699,15 +731,21 @@
     position：质心位置，单位：mm，精度0.001mm。
 
 ```json
-{"command":"update_tool_frame","tool_name":"tool_frame","tool_pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
+{
+  "command": "update_tool_frame",
+  "tool_name": "tool_frame",
+  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
+  "payload": 5000,
+  "position": [1000, 2000, 3000]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "update_tool_frame",
-    "update_state": true
+  "command": "update_tool_frame",
+  "update_state": true
 }
 ```
 
@@ -719,31 +757,39 @@
 
 **参数说明：**
 
-| 参数                | 类型 | 说明                               |
-| :------------------ | :--- | :--------------------------------- |
-| `set_tool_envelope` |   `string`   | 设置工具坐标系包络参数。           |
-| `tool_name`         |   `string`   | 控制器中已存在的工具坐标系名称，如果不存在该字段，则为临时设置当前包络参数。 |
-| `list`         |  `int`    | 包络参数列表，每个工具最多支持5个包络球，可以没有包络。     |
-| `name`         |   `string`   | 工具包络球体的名称，1-10个字节，支持字母数字下划线。     |
-| `radius`         |   `int`   | 工具包络球体的半径，单位0.001m。     |
-| `x`         |   `int`   | 工具包络球体球心基于末端法兰坐标系的X轴坐标，单位 0.001m。     |
-| `y`         |   `int`   | 工具包络球体球心基于末端法兰坐标系的Y轴坐标，单位 0.001m。     |
-| `z`         |   `int`   | 工具包络球体球心基于末端法兰坐标系的Z轴坐标，单位 0.001m。     |
+| 参数                | 类型     | 说明                                                                         |
+| :------------------ | :------- | :--------------------------------------------------------------------------- |
+| `set_tool_envelope` | `string` | 设置工具坐标系包络参数。                                                     |
+| `tool_name`         | `string` | 控制器中已存在的工具坐标系名称，如果不存在该字段，则为临时设置当前包络参数。 |
+| `list`              | `int`    | 包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。                    |
+| `name`              | `string` | 工具包络球体的名称，1-10 个字节，支持字母数字下划线。                        |
+| `radius`            | `int`    | 工具包络球体的半径，单位 0.001m。                                            |
+| `x`                 | `int`    | 工具包络球体球心基于末端法兰坐标系的 X 轴坐标，单位 0.001m。                 |
+| `y`                 | `int`    | 工具包络球体球心基于末端法兰坐标系的 Y 轴坐标，单位 0.001m。                 |
+| `z`                 | `int`    | 工具包络球体球心基于末端法兰坐标系的 Z 轴坐标，单位 0.001m。                 |
 
 **使用示例：**
 
-实现：名为left工具包络球的半径为0.02m,球心x坐标0.01m,球心y坐标0.02m,z坐标0.03m;名为right工具包络球的半径为0.03m,球心x坐标0.03m,球心y坐标0.04m,z坐标0.05m;名为center工具包络球的半径为0.04m,球心x坐标0.05m,球心y坐标0.06m,z坐标0.07m;
+实现：名为 left 工具包络球的半径为 0.02m,球心 x 坐标 0.01m,球心 y 坐标 0.02m,z 坐标 0.03m;名为 right 工具包络球的半径为 0.03m,球心 x 坐标 0.03m,球心 y 坐标 0.04m,z 坐标 0.05m;名为 center 工具包络球的半径为 0.04m,球心 x 坐标 0.05m,球心 y 坐标 0.06m,z 坐标 0.07m;
 
 ```json
-{"command":"set_tool_envelope","tool_name":"test","list":[{"name":"left","radius":20,"x":10,"y":20,"z":30},{"name":"right","radius":30,"x":30,"y":40,"z":50},{"name":"center","radius":40,"x":50,"y":60,"z":70}]}
+{
+  "command": "set_tool_envelope",
+  "tool_name": "test",
+  "list": [
+    { "name": "left", "radius": 20, "x": 10, "y": 20, "z": 30 },
+    { "name": "right", "radius": 30, "x": 30, "y": 40, "z": 50 },
+    { "name": "center", "radius": 40, "x": 50, "y": 60, "z": 70 }
+  ]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_tool_envelope",
-    "set_state": true
+  "command": "set_tool_envelope",
+  "set_state": true
 }
 ```
 
@@ -755,17 +801,17 @@
 
 **参数说明：**
 
-| 参数                | 类型 | 说明                               |
-| :------------------ | :--- | :--------------------------------- |
-| `get_tool_envelope` |   `string`   | 查询工具的包络参数.           |
-| `tool_name`         |   `string`   | 指定要查询的工具坐标系名称，如果不存在该字段，则为查询当前包络参数。 |
+| 参数                | 类型     | 说明                                                                 |
+| :------------------ | :------- | :------------------------------------------------------------------- |
+| `get_tool_envelope` | `string` | 查询工具的包络参数.                                                  |
+| `tool_name`         | `string` | 指定要查询的工具坐标系名称，如果不存在该字段，则为查询当前包络参数。 |
 
 **使用示例：**
 
-实现：查询名为tool1工具坐标系的包络参数。
+实现：查询名为 tool1 工具坐标系的包络参数。
 
 ```json
-{"command":"get_tool_envelope","tool_name":"tool1"}
+{ "command": "get_tool_envelope", "tool_name": "tool1" }
 ```
 
 **返回示例：**
@@ -773,40 +819,49 @@
 
 ```json
 {
-    "command":"get_tool_envelope",
-    "tool_name":"test",
-    "list":[
-        {
-            "name":"left",
-            "radius":20,"x":10,"y":20,"z":30
-        },
-        {
-            "name":"right",
-            "radius":30,"x":30,"y":40,"z":50
-        },
-        {
-            "name":"center",
-            "radius":40,"x":50,"y":60,"z":70
-        }
-    ]
+  "command": "get_tool_envelope",
+  "tool_name": "test",
+  "list": [
+    {
+      "name": "left",
+      "radius": 20,
+      "x": 10,
+      "y": 20,
+      "z": 30
+    },
+    {
+      "name": "right",
+      "radius": 30,
+      "x": 30,
+      "y": 40,
+      "z": 50
+    },
+    {
+      "name": "center",
+      "radius": 40,
+      "x": 50,
+      "y": 60,
+      "z": 70
+    }
+  ]
 }
 ```
 
 查询失败:
 
 ```json
-{"command":"get_tool_envelope","get_state":false}
+{ "command": "get_tool_envelope", "get_state": false }
 ```
 
-| 参数        | 类型     | 说明                                                         |
-| :---------- | :------- | :----------------------------------------------------------- |
-| `tool_name` | `string` | 控制器中已存在的工具坐标系名称。                             |
-| `list`      | `array`  | 包络参数列表，每个工具最多支持5个包络球，可以没有包络        |
-| `name`      | `string` | 工具包络球体的名称，1-10个字节，支持字母数字下划线           |
-| `radius`    | `number` | 工具包络球体的半径，单位0.001m，示例中left的半径为0.02m      |
-| `x`         | `number` | 工具包络球体球心基于末端法兰坐标系的X轴坐标，单0.001m，示例中left的球心x坐标0.01m |
-| `y`         | `number` | 工具包络球体球心基于末端法兰坐标系的Y轴坐标，单位0.001m，示例中left的球心y坐标0.02m |
-| `z`         | `number` | 工具包络球体球心基于末端法兰坐标系的Z轴坐标，单位0.001m，示例中left的球心z坐标0.03m |
+| 参数        | 类型     | 说明                                                                                        |
+| :---------- | :------- | :------------------------------------------------------------------------------------------ |
+| `tool_name` | `string` | 控制器中已存在的工具坐标系名称。                                                            |
+| `list`      | `array`  | 包络参数列表，每个工具最多支持 5 个包络球，可以没有包络                                     |
+| `name`      | `string` | 工具包络球体的名称，1-10 个字节，支持字母数字下划线                                         |
+| `radius`    | `number` | 工具包络球体的半径，单位 0.001m，示例中 left 的半径为 0.02m                                 |
+| `x`         | `number` | 工具包络球体球心基于末端法兰坐标系的 X 轴坐标，单 0.001m，示例中 left 的球心 x 坐标 0.01m   |
+| `y`         | `number` | 工具包络球体球心基于末端法兰坐标系的 Y 轴坐标，单位 0.001m，示例中 left 的球心 y 坐标 0.02m |
+| `z`         | `number` | 工具包络球体球心基于末端法兰坐标系的 Z 轴坐标，单位 0.001m，示例中 left 的球心 z 坐标 0.03m |
 
 ## 工作坐标系
 
@@ -814,29 +869,29 @@
 
 ### 自动设置工作坐标系`set_auto_work_frame`
 
->设置工作坐标系：机械臂只能存储10个工作坐标系，若超过10个，则新建立坐标系不成功。
+> 设置工作坐标系：机械臂只能存储 10 个工作坐标系，若超过 10 个，则新建立坐标系不成功。
 
 **参数说明：**
 
-| 参数                  | 类型 | 说明                                                         |
-| :-------------------- | :--- | :----------------------------------------------------------- |
-| `set_auto_work_frame` |   `string`   | 自动设置工作坐标系。                                         |
-| `frame_name`          |   `string`   | 工作坐标系名称，不能超过10个字符                             |
-| `point_num`           |   `int`   | 参考点1~3代表工作坐标系原点、X轴一点和Y轴上一点，4代表根据前三个标定点计算工作坐标系 |
+| 参数                  | 类型     | 说明                                                                                       |
+| :-------------------- | :------- | :----------------------------------------------------------------------------------------- |
+| `set_auto_work_frame` | `string` | 自动设置工作坐标系。                                                                       |
+| `frame_name`          | `string` | 工作坐标系名称，不能超过 10 个字符                                                         |
+| `point_num`           | `int`    | 参考点 1~3 代表工作坐标系原点、X 轴一点和 Y 轴上一点，4 代表根据前三个标定点计算工作坐标系 |
 
 **使用示例：**
-实现：设置工作坐标系，名称work2_frame，将当前位置标定为参考点3（Y轴上一点）。
+实现：设置工作坐标系，名称 work2_frame，将当前位置标定为参考点 3（Y 轴上一点）。
 
 ```json
-{"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
+{ "command": "set_auto_work_frame", "frame_name": "work_frame", "point_num": 3 }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_auto_work_frame",
-    "auto_work_frame": true
+  "command": "set_auto_work_frame",
+  "auto_work_frame": true
 }
 ```
 
@@ -846,15 +901,15 @@
 
 ### 手动输入工作坐标系`set_manual_work_frame`
 
->手动输入工作坐标系：机械臂只能存储10个工作坐标系，若超过10个，则新建立坐标系不成功。
+> 手动输入工作坐标系：机械臂只能存储 10 个工作坐标系，若超过 10 个，则新建立坐标系不成功。
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                             |
-| :---------------------- | :--- | :------------------------------- |
-| `set_manual_work_frame` |   `string`   | 手动输入工作坐标系。             |
-| `frame_name`            |   `string`   | 工作坐标系名称，不能超过10个字符 |
-| `frame_pose`            |   `int`   | 工作位置                         |
+| 参数                    | 类型     | 说明                               |
+| :---------------------- | :------- | :--------------------------------- |
+| `set_manual_work_frame` | `string` | 手动输入工作坐标系。               |
+| `frame_name`            | `string` | 工作坐标系名称，不能超过 10 个字符 |
+| `frame_pose`            | `int`    | 工作位置                           |
 
 **使用示例：**
 实现：手动输入工作坐标系，配置参数如下：
@@ -866,15 +921,19 @@
     姿态精度：0.001rad。
 
 ```json
-{"command":"set_manual_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
+{
+  "command": "set_manual_work_frame",
+  "frame_name": "work_frame",
+  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_manual_work_frame",
-    "manual_work_frame": true
+  "command": "set_manual_work_frame",
+  "manual_work_frame": true
 }
 ```
 
@@ -886,24 +945,24 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                             |
-| :---------------------- | :--- | :------------------------------- |
-| `set_change_work_frame` |   `string`   | 切换当前工作坐标系。             |
-| `frame_name`            |   `string`   | 工作坐标系名称，不能超过10个字符 |
+| 参数                    | 类型     | 说明                               |
+| :---------------------- | :------- | :--------------------------------- |
+| `set_change_work_frame` | `string` | 切换当前工作坐标系。               |
+| `frame_name`            | `string` | 工作坐标系名称，不能超过 10 个字符 |
 
 **使用示例：**
-实现：切换当前工作坐标系，名称work2_frame。
+实现：切换当前工作坐标系，名称 work2_frame。
 
 ```json
-{"command":"set_change_work_frame","frame_name":"work2_frame"}
+{ "command": "set_change_work_frame", "frame_name": "work2_frame" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_change_work_frame",
-    "change_work_frame": true
+  "command": "set_change_work_frame",
+  "change_work_frame": true
 }
 ```
 
@@ -915,24 +974,24 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                             |
-| :---------------------- | :--- | :------------------------------- |
-| `set_delete_work_frame` |   `string`   | 删除工作坐标系。                 |
-| `frame_name`            |   `string`   | 工作坐标系名称，不能超过10个字符 |
+| 参数                    | 类型     | 说明                               |
+| :---------------------- | :------- | :--------------------------------- |
+| `set_delete_work_frame` | `string` | 删除工作坐标系。                   |
+| `frame_name`            | `string` | 工作坐标系名称，不能超过 10 个字符 |
 
 **使用示例：**
-实现：删除工作坐标系，名称work2_frame。
+实现：删除工作坐标系，名称 work2_frame。
 
 ```json
-{"command":"set_delete_work_frame","frame_name":"work2_frame"}
+{ "command": "set_delete_work_frame", "frame_name": "work2_frame" }
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_delete_work_frame",
-    "delete_work_frame": true
+  "command": "set_delete_work_frame",
+  "delete_work_frame": true
 }
 ```
 
@@ -944,11 +1003,11 @@
 
 **参数说明：**
 
-| 参数                | 类型 | 说明                             |
-| :------------------ | :--- | :------------------------------- |
-| `update_work_frame` |   `string`   | 修改工作坐标系。                 |
-| `frame_name`        |   `string`   | 工作坐标系名称，不能超过10个字符 |
-| `frame_pose`        |   `string`   | 工作位置                         |
+| 参数                | 类型     | 说明                               |
+| :------------------ | :------- | :--------------------------------- |
+| `update_work_frame` | `string` | 修改工作坐标系。                   |
+| `frame_name`        | `string` | 工作坐标系名称，不能超过 10 个字符 |
+| `frame_pose`        | `string` | 工作位置                           |
 
 **使用示例：**
 实现：修改指定工作坐标系，配置参数如下：
@@ -960,15 +1019,19 @@
     姿态精度：0.001rad。
 
 ```json
-{"command":"update_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
+{
+  "command": "update_work_frame",
+  "frame_name": "work_frame",
+  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "update_work_frame",
-    "update_state": true
+  "command": "update_work_frame",
+  "update_state": true
 }
 ```
 
@@ -982,15 +1045,15 @@
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明             |
-| :---------------------- | :--- | :--------------- |
-| `get_current_arm_state` |   `string`   | 查询机械臂状态。 |
+| 参数                    | 类型     | 说明             |
+| :---------------------- | :------- | :--------------- |
+| `get_current_arm_state` | `string` | 查询机械臂状态。 |
 
 **使用示例：**
 实现：查询机械臂状态。
 
 ```json
-{"command":"get_current_arm_state"}
+{ "command": "get_current_arm_state" }
 ```
 
 **返回示例：**
@@ -1007,12 +1070,13 @@
 
 ```json
 {
-    "state":"current_arm_state",
-    "arm_state":{
-        "joint":[100,200,300,400,500,600],
-        "pose":[100000,200000,30000,400,500,600],
-        "arm_err":0,"sys_err":0
-    }
+  "state": "current_arm_state",
+  "arm_state": {
+    "joint": [100, 200, 300, 400, 500, 600],
+    "pose": [100000, 200000, 30000, 400, 500, 600],
+    "arm_err": 0,
+    "sys_err": 0
+  }
 }
 ```
 
@@ -1020,38 +1084,39 @@
 
 ```json
 {
-    "state":"current_arm_state",
-    "arm_state":{
-        "joint":[100,200,300,400,500,600,700],
-        "pose":[100000,200000,30000,400,500,600],
-        "arm_err":0,"sys_err":0
-    }
+  "state": "current_arm_state",
+  "arm_state": {
+    "joint": [100, 200, 300, 400, 500, 600, 700],
+    "pose": [100000, 200000, 30000, 400, 500, 600],
+    "arm_err": 0,
+    "sys_err": 0
+  }
 }
 ```
 
 **参数说明：**
 
-| 参数                | 类型 | 说明             |
-| :------------------ | :--- | :--------------- |
-| `current_arm_state` |   `string`   | 反馈机械臂状态。 |
-| `joint`             |   `int`   | 关节角度         |
-| `pose`              |   `int`   | 末端位姿         |
-| `arm_err`           |   `int`   | 机械臂错误代码   |
-| `sys_err`           |   `int`   | 控制器错误代码   |
+| 参数                | 类型     | 说明             |
+| :------------------ | :------- | :--------------- |
+| `current_arm_state` | `string` | 反馈机械臂状态。 |
+| `joint`             | `int`    | 关节角度         |
+| `pose`              | `int`    | 末端位姿         |
+| `arm_err`           | `int`    | 机械臂错误代码   |
+| `sys_err`           | `int`    | 控制器错误代码   |
 
 ### 查询关节温度`get_current_joint_temperature`
 
 **参数说明：**
 
-| 参数                            | 类型 | 说明           |
-| :------------------------------ | :--- | :------------- |
-| `get_current_joint_temperature` |   `string`   | 查询关节温度。 |
+| 参数                            | 类型     | 说明           |
+| :------------------------------ | :------- | :------------- |
+| `get_current_joint_temperature` | `string` | 查询关节温度。 |
 
 **使用示例：**
 实现：查询关节温度。
 
 ```json
-{"command":"get_current_joint_temperature"}
+{ "command": "get_current_joint_temperature" }
 ```
 
 **返回示例：**
@@ -1064,8 +1129,8 @@
 
 ```json
 {
-    "state":"current_joint_temperature",
-    "joint_temperature":[27500,28000,26800,26800,28900,30100]
+  "state": "current_joint_temperature",
+  "joint_temperature": [27500, 28000, 26800, 26800, 28900, 30100]
 }
 ```
 
@@ -1073,30 +1138,30 @@
 
 ```json
 {
-    "state":"current_joint_temperature",
-    "joint_temperature":[27500,28000,26800,26800,28900,30100,31100]
+  "state": "current_joint_temperature",
+  "joint_temperature": [27500, 28000, 26800, 26800, 28900, 30100, 31100]
 }
 ```
 
 **参数说明：**
 
-| 参数                        | 类型 | 说明                  |
-| :-------------------------- | :--- | :-------------------- |
-| `current_joint_temperature` |   `int`   | 反馈关节温度单位：℃，精度：0.001℃ |
+| 参数                        | 类型  | 说明                              |
+| :-------------------------- | :---- | :-------------------------------- |
+| `current_joint_temperature` | `int` | 反馈关节温度单位：℃，精度：0.001℃ |
 
 ### 查询关节当前电流`get_current_joint_current`
 
 **参数说明：**
 
-| 参数                        | 类型 | 说明               |
-| :-------------------------- | :--- | :----------------- |
-| `get_current_joint_current` |   `string`   | 查询关节当前电流。 |
+| 参数                        | 类型     | 说明               |
+| :-------------------------- | :------- | :----------------- |
+| `get_current_joint_current` | `string` | 查询关节当前电流。 |
 
 **使用示例：**
 实现：查询关节当前电流。
 
 ```json
-{"command":"get_current_joint_current"}
+{ "command": "get_current_joint_current" }
 ```
 
 **返回示例：**
@@ -1109,8 +1174,8 @@
 
 ```json
 {
-    "state":"current_joint_current",
-    "joint_current":[65,-200,170,200,-300,168]
+  "state": "current_joint_current",
+  "joint_current": [65, -200, 170, 200, -300, 168]
 }
 ```
 
@@ -1118,30 +1183,30 @@
 
 ```json
 {
-    "state":"current_joint_current",
-    "joint_current":[65,-200,170,200,-300,168,178]
+  "state": "current_joint_current",
+  "joint_current": [65, -200, 170, 200, -300, 168, 178]
 }
 ```
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                                      |
-| :---------------------- | :--- | :---------------------------------------- |
-| `current_joint_current` |   `int`   | 反馈关节当前电流单位：mA，精度：0.001mA。 |
+| 参数                    | 类型  | 说明                                      |
+| :---------------------- | :---- | :---------------------------------------- |
+| `current_joint_current` | `int` | 反馈关节当前电流单位：mA，精度：0.001mA。 |
 
 ### 查询关节当前电压`get_current_joint_voltage`
 
 **参数说明：**
 
-| 参数                        | 类型 | 说明               |
-| :-------------------------- | :--- | :----------------- |
-| `get_current_joint_voltage` |   `string`   | 查询关节当前电压。 |
+| 参数                        | 类型     | 说明               |
+| :-------------------------- | :------- | :----------------- |
+| `get_current_joint_voltage` | `string` | 查询关节当前电压。 |
 
 **使用示例：**
 实现：查询关节当前电压。
 
 ```json
-{"command":"get_current_joint_voltage"}
+{ "command": "get_current_joint_voltage" }
 ```
 
 **返回示例：**
@@ -1151,26 +1216,28 @@
     七自由度机械臂关节1~7电压依次为27.5V,28.0V,26.8V,26.8V,28.9V,30.1V,31.1V。
 
 六自由度：
+
 ```json
 {
-    "state":"current_joint_voltage",
-    "joint_voltage":[27500,28000,26800,26800,28900,30100]
+  "state": "current_joint_voltage",
+  "joint_voltage": [27500, 28000, 26800, 26800, 28900, 30100]
 }
 ```
 
 七自由度：
+
 ```json
 {
-    "state":"current_joint_voltage",
-    "joint_voltage":[27500,28000,26800,26800,28900,30100,31100]
+  "state": "current_joint_voltage",
+  "joint_voltage": [27500, 28000, 26800, 26800, 28900, 30100, 31100]
 }
 ```
 
 **参数说明：**
 
-| 参数                    | 类型 | 说明                                    |
-| :---------------------- | :--- | :-------------------------------------- |
-| `current_joint_voltage` |   `int`   | 反馈关节当前电压单位：V，精度：0.001V。 |
+| 参数                    | 类型  | 说明                                    |
+| :---------------------- | :---- | :-------------------------------------- |
+| `current_joint_voltage` | `int` | 反馈关节当前电压单位：V，精度：0.001V。 |
 
 ## 机械臂配置-坐标系查询集
 
@@ -1178,15 +1245,15 @@
 
 **参数说明：**
 
-| 参数                     | 类型 | 说明           |
-| :----------------------- | :--- | :------------- |
-| `get_current_tool_frame` |   `string`   | 查询当前工具。 |
+| 参数                     | 类型     | 说明           |
+| :----------------------- | :------- | :------------- |
+| `get_current_tool_frame` | `string` | 查询当前工具。 |
 
 **使用示例：**
 实现：查询当前工具。
 
 ```json
-{"command":"get_current_tool_frame"}
+{ "command": "get_current_tool_frame" }
 ```
 
 **返回示例：**
@@ -1203,38 +1270,38 @@
 
 ```json
 {
-    "state":"current_tool_frame",
-    "tool_name":"tool2_frame",
-    "pose":[100000,200000,30000,400,500,600],
-    "payload":5000,
-    "position":[1000,2000,3000]
+  "state": "current_tool_frame",
+  "tool_name": "tool2_frame",
+  "pose": [100000, 200000, 30000, 400, 500, 600],
+  "payload": 5000,
+  "position": [1000, 2000, 3000]
 }
 ```
 
 **参数说明：**
 
-| 参数                 | 类型 | 说明               |
-| :------------------- | :--- | :----------------- |
-| `current_tool_frame` |   `string`   | 返回当前工具信息。 |
+| 参数                 | 类型     | 说明               |
+| :------------------- | :------- | :----------------- |
+| `current_tool_frame` | `string` | 返回当前工具信息。 |
 
 ### 查询已有所有工具名称`get_total_tool_frame`
 
 **参数说明：**
 
-| 参数                   | 类型 | 说明                   |
-| :--------------------- | :--- | :--------------------- |
-| `get_total_tool_frame` |   `string`   | 查询已有所有工具名称。 |
+| 参数                   | 类型     | 说明                   |
+| :--------------------- | :------- | :--------------------- |
+| `get_total_tool_frame` | `string` | 查询已有所有工具名称。 |
 
 **使用示例：**
 实现：查询已有所有工具名称。
 
 ```json
-{"command":"get_total_tool_frame"}
+{ "command": "get_total_tool_frame" }
 ```
 
 **返回示例：**
 
-返回所有工具名称，共10个。工具名称：base_tool1，base_tool2，其中“NULL”为空坐标系，未建立。
+返回所有工具名称，共 10 个。工具名称：base_tool1，base_tool2，其中“NULL”为空坐标系，未建立。
 
 ```json
 {
@@ -1245,24 +1312,24 @@
 
 **参数说明：**
 
-| 参数               | 类型 | 说明               |
-| :----------------- | :--- | :----------------- |
-| `total_tool_frame` |   `string`   | 返回所有工具名称。 |
+| 参数               | 类型     | 说明               |
+| :----------------- | :------- | :----------------- |
+| `total_tool_frame` | `string` | 返回所有工具名称。 |
 
 ### 查询指定工具信息`get_tool_frame`
 
 **参数说明：**
 
-| 参数             | 类型 | 说明               |
-| :--------------- | :--- | :----------------- |
-| `get_tool_frame` |   `string`   | 查询指定工具信息。 |
-| `tool_name`      |   `string`   | 工具名称。           |
+| 参数             | 类型     | 说明               |
+| :--------------- | :------- | :----------------- |
+| `get_tool_frame` | `string` | 查询指定工具信息。 |
+| `tool_name`      | `string` | 工具名称。         |
 
 **使用示例：**
 实现：查询指定工具信息。
 
 ```json
-{"command":"get_tool_frame","tool_name":"tool"}
+{ "command": "get_tool_frame", "tool_name": "tool" }
 ```
 
 **返回示例：**
@@ -1279,11 +1346,11 @@
 
 ```json
 {
-    "state":"given_tool_frame",
-    "tool_name":"tool2_frame",
-    "pose":[100000,200000,30000,400,500,600],
-    "payload":5000,
-    "position":[1000,2000,3000]
+  "state": "given_tool_frame",
+  "tool_name": "tool2_frame",
+  "pose": [100000, 200000, 30000, 400, 500, 600],
+  "payload": 5000,
+  "position": [1000, 2000, 3000]
 }
 ```
 
@@ -1291,30 +1358,30 @@
 
 ```json
 {
-    "command": "get_tool_frame",
-    "get_state": false
+  "command": "get_tool_frame",
+  "get_state": false
 }
 ```
 
 **参数说明：**
 
-| 参数               | 类型 | 说明               |
-| :----------------- | :--- | :----------------- |
-| `given_tool_frame` |   `sting`   | 返回指定工具信息。 |
+| 参数               | 类型    | 说明               |
+| :----------------- | :------ | :----------------- |
+| `given_tool_frame` | `sting` | 返回指定工具信息。 |
 
 ### 查询当前工作坐标系`get_current_work_frame`
 
 **参数说明：**
 
-| 参数                     | 类型 | 说明                 |
-| :----------------------- | :--- | :------------------- |
-| `get_current_work_frame` |   `string`   | 查询当前工作坐标系。 |
+| 参数                     | 类型     | 说明                 |
+| :----------------------- | :------- | :------------------- |
+| `get_current_work_frame` | `string` | 查询当前工作坐标系。 |
 
 **使用示例：**
 实现：查询当前工作坐标系。
 
 ```json
-{"command":"get_current_work_frame"}
+{ "command": "get_current_work_frame" }
 ```
 
 **返回示例：**
@@ -1327,31 +1394,31 @@
 
 ```json
 {
-    "state":"current_work_frame",
-    "frame_name":"work2_frame",
-    "pose":[100000,200000,30000,400,500,600]
+  "state": "current_work_frame",
+  "frame_name": "work2_frame",
+  "pose": [100000, 200000, 30000, 400, 500, 600]
 }
 ```
 
 **参数说明：**
 
-| 参数                 | 类型 | 说明                     |
-| :------------------- | :--- | :----------------------- |
-| `current_work_frame` |   `string`   | 返回当前工作坐标系信息。 |
+| 参数                 | 类型     | 说明                     |
+| :------------------- | :------- | :----------------------- |
+| `current_work_frame` | `string` | 返回当前工作坐标系信息。 |
 
 ### 查询已有所有工作坐标系名称`get_total_work_frame`
 
 **参数说明：**
 
-| 参数                   | 类型 | 说明                         |
-| :--------------------- | :--- | :--------------------------- |
-| `get_total_work_frame` |   `string`   | 查询已有所有工作坐标系名称。 |
+| 参数                   | 类型     | 说明                         |
+| :--------------------- | :------- | :--------------------------- |
+| `get_total_work_frame` | `string` | 查询已有所有工作坐标系名称。 |
 
 **使用示例：**
 实现：查询已有所有工作坐标系名称。
 
 ```json
-{"command":"get_total_work_frame"}
+{ "command": "get_total_work_frame" }
 ```
 
 **返回示例：**
@@ -1360,31 +1427,31 @@
 
 ```json
 {
-    "state":"total_work_frame",
-    "frame_names":["work1","work2","NULL"]
+  "state": "total_work_frame",
+  "frame_names": ["work1", "work2", "NULL"]
 }
 ```
 
 **参数说明：**
 
-| 参数               | 类型 | 说明                     |
-| :----------------- | :--- | :----------------------- |
-| `total_work_frame` |   `string`   | 返回所有工作坐标系名称。 |
+| 参数               | 类型     | 说明                     |
+| :----------------- | :------- | :----------------------- |
+| `total_work_frame` | `string` | 返回所有工作坐标系名称。 |
 
 ### 查询指定工作坐标系`get_work_frame`
 
 **参数说明：**
 
-| 参数             | 类型 | 说明                 |
-| :--------------- | :--- | :------------------- |
-| `get_work_frame` |   `string`   | 查询指定工作坐标系。 |
-| `frame_name`     |   `string`   | 坐标系名称           |
+| 参数             | 类型     | 说明                 |
+| :--------------- | :------- | :------------------- |
+| `get_work_frame` | `string` | 查询指定工作坐标系。 |
+| `frame_name`     | `string` | 坐标系名称           |
 
 **使用示例：**
 实现：查询指定工作坐标系。
 
 ```json
-{"command":"get_work_frame","frame_name":"work1"}
+{ "command": "get_work_frame", "frame_name": "work1" }
 ```
 
 **返回示例：**
@@ -1396,24 +1463,26 @@
     坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad。
 
 成功：
+
 ```json
 {
-    "state":"given_work_frame",
-    "frame_name":"work2_frame",
-    "pose":[100000,200000,30000,400,500,600]
+  "state": "given_work_frame",
+  "frame_name": "work2_frame",
+  "pose": [100000, 200000, 30000, 400, 500, 600]
 }
 ```
 
 失败：
+
 ```json
-{"command":"get_work_frame","get_state":false}
+{ "command": "get_work_frame", "get_state": false }
 ```
 
 **参数说明：**
 
-| 参数               | 类型 | 说明                 |
-| :----------------- | :--- | :------------------- |
-| `given_work_frame` |   `string`   | 返回指定坐标系信息。 |
+| 参数               | 类型     | 说明                 |
+| :----------------- | :------- | :------------------- |
+| `given_work_frame` | `string` | 返回指定坐标系信息。 |
 
 ## 机械臂初始状态
 
@@ -1421,10 +1490,10 @@
 
 **参数说明：**
 
-| 参数            | 类型 | 说明                     |
-| :-------------- | :--- | :----------------------- |
-| `set_init_pose` |   `string`   | 设置初始状态。           |
-| `init_pose`     |   `int`   | 初始状态位置，精度0.001° |
+| 参数            | 类型     | 说明                      |
+| :-------------- | :------- | :------------------------ |
+| `set_init_pose` | `string` | 设置初始状态。            |
+| `init_pose`     | `int`    | 初始状态位置，精度 0.001° |
 
 **使用示例：**
 实现：设置初始状态，参数如下：
@@ -1433,26 +1502,31 @@
     七自由度系机械臂初始状态位置[10°,0°,20°,30°,0°,20°,20°]。
 
 六自由度：
+
 ```json
-{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
+{ "command": "set_init_pose", "init_pose": [10000, 0, 20000, 30000, 0, 20000] }
 ```
 
 七自由度：
+
 ```json
-{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
+{
+  "command": "set_init_pose",
+  "init_pose": [10000, 0, 20000, 30000, 0, 20000, 20000]
+}
 ```
 
 **返回示例：**
 
 ```json
 {
-    "command": "set_init_pose",
-    "init_pose": true
+  "command": "set_init_pose",
+  "init_pose": true
 }
 ```
 
 **参数说明：**
-| 参数        | 类型   | 说明                                  |
+| 参数 | 类型 | 说明 |
 | :---------- | :----- | :------------------------------------ |
 | `init_pose` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
@@ -1460,37 +1534,39 @@
 
 **参数说明：**
 
-| 参数            | 类型 | 说明           |
-| :-------------- | :--- | :------------- |
-| `get_init_pose` |   `string`   | 查询初始位置。 |
+| 参数            | 类型     | 说明           |
+| :-------------- | :------- | :------------- |
+| `get_init_pose` | `string` | 查询初始位置。 |
 
 **使用示例：**
 实现：查询初始位置。
 
 ```json
-{"command":"get_init_pose"}
+{ "command": "get_init_pose" }
 ```
 
 **返回示例：**
 六自由度：
+
 ```json
 {
-    "state":"arm_init_pose",
-    "init_pose":[10000,0,20000,30000,0,20000]
+  "state": "arm_init_pose",
+  "init_pose": [10000, 0, 20000, 30000, 0, 20000]
 }
 ```
 
 七自由度：
+
 ```json
 {
-    "state":"arm_init_pose",
-    "init_pose":[10000,0,20000,30000,0,20000,20000]
+  "state": "arm_init_pose",
+  "init_pose": [10000, 0, 20000, 30000, 0, 20000, 20000]
 }
 ```
 
 **参数说明：**
 
-| 参数            | 类型 | 说明           |
-| :-------------- | :--- | :------------- |
-| `arm_init_pose` |   `string`   | 反馈初始位置。 |
-| `init_pose`     |   `int`   | 精度0.001°     |
+| 参数            | 类型     | 说明           |
+| :-------------- | :------- | :------------- |
+| `arm_init_pose` | `string` | 反馈初始位置。 |
+| `init_pose`     | `int`    | 精度 0.001°    |

@@ -14,7 +14,10 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
-    <div class="d-flex">
+    
+</div>
+<div class="wrap">
+<div class="d-flex">
         <div class="wrap-item1">
             <h2>Web示教器用户手册</h2>
             <p>睿尔曼机器人Web示教器用户手册V1.5  文件格式：PDF</p>
@@ -23,7 +26,7 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
-</div>
+    </div>
 
 ## 3D 模型和尺寸图
 
@@ -46,6 +49,8 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
+</div>
+<div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM75系列</h2>
@@ -54,6 +59,9 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
+</div>
+
+<div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM63系列</h2>
@@ -62,6 +70,9 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
+</div>
+
+<div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>ECO65系列</h2>
@@ -70,6 +81,9 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
+</div>
+
+<div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>ECO62系列</h2>
@@ -78,6 +92,9 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
+</div>
+
+<div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>GEN72系列</h2>
@@ -123,7 +140,7 @@
     line-height:32px !important;
     letter-spacing: -0.02em !important;
     height:32px !important;
-    margin:0 !important;
+    margin:0 0 16px 0 !important;
     border-top:none !important;
     padding-top:0 !important;
 }
