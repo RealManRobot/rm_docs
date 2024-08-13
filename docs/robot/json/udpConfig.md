@@ -1,4 +1,4 @@
-# UDP 主动上报（I 系列）配置指令集
+# UDP 主动上报（第三代）配置指令集
 
 ## UDP 机械臂状态主动上报接口
 
@@ -63,7 +63,19 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 **返回示例：**
 
 ```json
-{"command":"get_realtime_push","custom":{"expand_state":true,"joint_speed":true,"lift_state":true},"cycle":100,"enable":true,"force_coordinate":2,"ip":"192.168.1.10","port":8099}
+{
+    "command": "get_realtime_push",
+    "custom": {
+        "expand_state": true,
+        "joint_speed": true,
+        "lift_state": true
+    },
+    "cycle": 100,
+    "enable": true,
+    "force_coordinate": 2,
+    "ip": "192.168.1.10",
+    "port": 8099
+}
 ```
 
 |   参数    |   类型    |   说明    |
@@ -99,7 +111,10 @@ I 系列机械臂提供 UDP 机械臂状态主动上报接口，使用时，需�
 **返回示例：**
 
 ```json
-{"command":"set_realtime_push","state":true}
+{
+    "command": "set_realtime_push",
+    "state": true
+}
 ```
 
 |   参数    |   类型    |   说明    |
