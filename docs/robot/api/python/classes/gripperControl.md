@@ -1,10 +1,10 @@
 # 末端工具夹爪配置`GripperControl`
 
-可用于夹爪控制及状态获取。睿尔曼机械臂末端配备了因时机器人公司的 EG2-4C2 手爪，为了便于用户操作手爪，机械臂控制器 对用户开放了手爪的控制协议（手爪控制协议与末端modbus 功能互斥）。下面是夹爪控制及状态获取`GripperControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于夹爪控制及状态获取。睿尔曼机械臂末端配备了因时机器人公司的 EG2-4C2 夹爪，为了便于用户操作夹爪，机械臂控制器 对用户开放了夹爪的控制协议（夹爪控制协议与末端modbus 功能互斥）。下面是夹爪控制及状态获取`GripperControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
-## 设置手爪行程`rm_set_gripper_route()`
+## 设置夹爪行程`rm_set_gripper_route()`
 
-即手爪开口的最大值和最小值，设置成功后会自动保存，手爪断电不丢失。
+即夹爪开口的最大值和最小值，设置成功后会自动保存，夹爪断电不丢失。
 
 - **方法原型：**
 
@@ -16,7 +16,7 @@ rm_set_gripper_route(self, min_route: int, max_route: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| min_route      | `int` | 手爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 手爪开口最大值，范围：0~1000，无单位量纲                    |
+| min_route      | `int` | 夹爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 夹爪开口最大值，范围：0~1000，无单位量纲                    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -47,9 +47,9 @@ print(arm.rm_set_gripper_route(70, 200))
 arm.rm_delete_robot_arm()
 ```
 
-## 松开手爪`rm_set_gripper_release()`
+## 松开夹爪`rm_set_gripper_release()`
 
-即手爪以指定的速度运动到开口最大处。
+即夹爪以指定的速度运动到开口最大处。
 
 - **方法原型：**
 
@@ -61,7 +61,7 @@ rm_set_gripper_release(self, speed: int, block: bool, timeout: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪松开速度，范围 1~1000，无单位量纲    |
+| speed      | `int` | 夹爪松开速度，范围 1~1000，无单位量纲    |
 | block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
@@ -94,9 +94,9 @@ print(arm.rm_set_gripper_release(500, True, 10))
 arm.rm_delete_robot_arm()
 ```
 
-## 手爪力控夹取`rm_set_gripper_pick()`
+## 夹爪力控夹取`rm_set_gripper_pick()`
 
-手爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取。
+夹爪以设定的速度和力夹取，当夹持力超过设定的力阈值后，停止夹取。
 
 - **方法原型：**
 
@@ -108,7 +108,7 @@ rm_set_gripper_pick(self, speed: int, force: int, block: bool, timeout: int) -> 
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲    |
+| speed      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲    |
 | force      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
 | block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
@@ -142,7 +142,7 @@ print(arm.rm_set_gripper_pick(500, 200, True, 10))
 arm.rm_delete_robot_arm()
 ```
 
-## 手爪持续力控夹取`rm_set_gripper_pick_on()`
+## 夹爪持续力控夹取`rm_set_gripper_pick_on()`
 
 - **方法原型：**
 
@@ -154,7 +154,7 @@ rm_set_gripper_pick_on(self, speed: int, force: int, block: bool, timeout: int) 
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 手爪夹取速度，范围 1~1000，无单位量纲。    |
+| speed      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲。    |
 | force      | `int` | 力控阈值，范围：50~1000，无单位量纲。    |
 | block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式。    |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒。    |
@@ -188,7 +188,7 @@ print(arm.rm_set_gripper_pick_on(500, 200, True, 10))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置手爪达到指定位置`rm_set_gripper_position()`
+## 设置夹爪达到指定位置`rm_set_gripper_position()`
 
 - **方法原型：**
 
@@ -200,7 +200,7 @@ rm_set_gripper_position(self, position: int, block: bool, timeout: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| position      | `int` | 手爪开口位置，范围：1~1000，无单位量纲    |
+| position      | `int` | 夹爪开口位置，范围：1~1000，无单位量纲    |
 | block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
 | timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
