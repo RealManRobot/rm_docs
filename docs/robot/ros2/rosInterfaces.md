@@ -75,7 +75,7 @@ bool block
 ```
 
 **msg成员：**  
-`joint_num`:对应关节序号，从基座到机械臂手爪端，序号依次为1-6或1-7。  
+`joint_num`:对应关节序号，从基座到机械臂夹爪端，序号依次为1-6或1-7。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 
 ### 2.3所有坐标系名称Getallframe_msg
@@ -230,7 +230,7 @@ string productversion
 `kernal2`:实时内核子核心 2 版本号，string类型。  
 `productversion`:机械臂型号，string类型。
 
-### 手爪力控夹取Gripperpick_msg
+### 夹爪力控夹取Gripperpick_msg
 
 ```
 uint16 speed  
@@ -239,11 +239,11 @@ bool block
 ```
 
 **msg成员：**  
-`speed`:手爪力控夹取速度，unsigned int类型，范围：1-1000。  
-`force`:手爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
+`speed`:夹爪力控夹取速度，unsigned int类型，范围：1-1000。  
+`force`:夹爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
-### 手爪力控夹取-持续力控夹取Gripperpick_msg
+### 夹爪力控夹取-持续力控夹取Gripperpick_msg
 
 ```
 uint16 speed  
@@ -252,11 +252,11 @@ bool block
 ```
 
 **msg成员：**
-`speed`:手爪力控夹取速度，unsigned int类型，范围：1-1000。  
-`force`:手爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
+`speed`:夹爪力控夹取速度，unsigned int类型，范围：1-1000。  
+`force`:夹爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
-### 手爪到达指定位置Gripperset_msg
+### 夹爪到达指定位置Gripperset_msg
 
 ```
 uint16 position  
@@ -264,7 +264,7 @@ bool block
 ```
 
 **msg成员：**
-`position`:手爪目标位置，unsigned int类型，范围：1-1000,代表手爪开口度：0-70mm。  
+`position`:夹爪目标位置，unsigned int类型，范围：1-1000,代表夹爪开口度：0-70mm。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
 ### 力位混合控制Setforceposition_msg

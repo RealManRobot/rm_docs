@@ -87,12 +87,13 @@
 
 ```json
 {
-    "current": "lift_state",
+    "current": 2554,
     "en_flag": "1",
     "err_flag": "0",
     "height": 0,
     "joint_id": 1,
-    "mode": 0
+    "mode": 0,
+    "state":"lift_state"
 }
 ```
 

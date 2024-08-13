@@ -22,7 +22,7 @@ rm\_description功能包为显示机器人模型和TF变换的功能包，通过
 rm@rm-desktop:~$ roslaunch rm_description rm_<arm_type>_display.launch
 ```
 
-在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 例如65机械臂的启动命令：
 

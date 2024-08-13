@@ -17,7 +17,7 @@ rm_moveit2_config是实现Moveit2控制真实机械臂的功能包，该功能�
 rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config demo.launch.py
 ```
 
-在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：  
 
 ```

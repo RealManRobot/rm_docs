@@ -24,7 +24,7 @@ Github代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_dr
 
     rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 
-在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 底层驱动启动成功后，将显示以下画面。
 
@@ -105,5 +105,3 @@ rm\_driver的话题较多，可以通过如下指令了解其话题信息。
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
-
-有关以上话题详细介绍和使用在此不详细展开，可以通过专门的文档《睿尔曼机械臂ROS1话题详细说明》进行查看。
