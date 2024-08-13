@@ -26,7 +26,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_arm_max_line_speed","arm_line_speed":true}
+{
+    "command": "set_arm_max_line_speed",
+    "arm_line_speed": true
+}
 ```
 
 | 参数             | 类型   | 说明                                  |
