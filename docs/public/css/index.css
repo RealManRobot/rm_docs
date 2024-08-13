@@ -194,6 +194,7 @@ tbody {
 
 .logo {
     height: 32px !important;
+    margin: 0 !important;
 }
 
 .icon {

@@ -1,4 +1,4 @@
-# <p class="hidden">JSON：</p> 机械臂配置指令集
+# <p class="hidden">JSON协议：</p> 机械臂配置指令集
 
 ## 设置运动参数
 
