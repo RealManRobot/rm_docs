@@ -52,4 +52,8 @@
 
 ## 联系方式和支持
 
-提供技术支持的方式
+1. [睿尔曼官网](https://www.realman-robotics.cn/)
+2. [睿尔曼学院](https://blog.csdn.net/realman_Rop)
+3. 官方邮箱: sales@realman-robot.com
+4. 微信公众号
+  ![alt text](公众号.jpg)
