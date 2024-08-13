@@ -17,7 +17,7 @@ rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功
 rm@rm-desktop:~$ ros2 launch  rm_control rm_<arm_type>_control.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有RM65、RML63、ECO65和75、GEN72。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：
 
 ```

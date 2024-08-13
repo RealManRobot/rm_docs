@@ -18,7 +18,7 @@ rm_driver功能包在机械臂ROS2功能包中是十分重要的，该功能包�
 rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
-在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有RM65、RML63、ECO65和75、GEN72。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 底层驱动启动成功后，将显示以下画面:
 ![image](doc/rm_driver1.png)  
 
