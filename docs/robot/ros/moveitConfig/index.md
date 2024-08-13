@@ -24,9 +24,9 @@ rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，�
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
-在实际使用时需要将以上的<arm\_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75六维力的型号有65\_6f、eco65\_6f、75\_6f。
+在实际使用时需要将以上的`<arm\_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75六维力的型号有65_6f、eco65_6f、75_6f、gen72。
 
-63机械臂需要使用以下指令启动，63的六维力型号为63\_6f。
+63机械臂需要使用以下指令启动，63的六维力型号为63_6f。
 ```
 rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 ```

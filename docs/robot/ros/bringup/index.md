@@ -24,7 +24,7 @@ rm\_bringup功能包为实现多个launch文件同时运行所设计的功能包
 rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、65_6f、63_6f、eco65_6f、75_6f。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、65_6f、63_6f、eco65_6f、75_6f、gen72。
 
 例如65机械臂的启动命令：
 
