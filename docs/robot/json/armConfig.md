@@ -57,7 +57,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_arm_max_line_acc","arm_line_acc":true}
+{
+    "command": "set_arm_max_line_acc",
+    "arm_line_acc": true
+}
 ```
 
 | 参数           | 类型   | 说明                                  |
@@ -85,7 +88,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_arm_max_angular_speed","arm_angular_speed":true}
+{
+    "command": "set_arm_max_angular_speed",
+    "arm_angular_speed": true
+}
 ```
 
 | 参数                | 类型   | 说明                                  |
@@ -113,7 +119,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_arm_max_angular_acc","arm_angular_acc":true}
+{
+    "command": "set_arm_max_angular_acc",
+    "arm_angular_acc": true
+}
 ```
 
 | 参数              | 类型   | 说明                                  |
@@ -140,7 +149,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_arm_init","arm_init":true}
+{
+    "command": "set_arm_init",
+    "arm_init": true
+}
 ```
 
 | 参数       | 类型   | 说明                                  |
@@ -166,7 +178,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_collision_state","collision_state":true}
+{
+    "command": "set_collision_state",
+    "collision_state": true
+}
 ```
 
 | 参数              | 类型   | 说明                                  |
@@ -191,7 +206,10 @@
 **返回示例：**
 
 ```json
-{"state":"get_collision_stage","collision_stage":5}
+{
+    "state": "get_collision_stage",
+    "collision_stage": 5
+}
 ```
 
 | 参数              | 类型  | 说明              |
@@ -238,7 +256,10 @@
 **返回示例：**
 
 ```json
-{"command":"set_DH_data","set_state":true}
+{
+    "command": "set_DH_data",
+    "set_state": true
+}
 ```
 
 | 参数        | 类型   | 说明                                  |

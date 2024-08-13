@@ -27,14 +27,14 @@
 
 | 项目 | 内容 |
 | :-- | :-- | 
-| 系统 | Ubuntu18.04或20.04 |
+| 系统 | Ubuntu20.04 |
 | ROS版本 | foxy |
 | 依赖 | 机械臂的ROS2-foxy功能包 |
 
 **配置过程**
 
 
-1. 首先需要准备好Ubuntu18.04或Ubuntu20.04操作系统的虚拟机或其他设备。
+1. 首先需要准备好Ubuntu20.04操作系统的虚拟机或其他设备。
 2. 安装ROS2环境[foxy](#https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html),也可参考ROS2-foxy功能包中的安装说明进行安装。
 3. ROS2-Foxy功能包安装
 
