@@ -21,7 +21,10 @@
 设置成功。
 
 ```json
-{"command":"set_lift_speed","set_state":true}
+{
+    "command": "set_lift_speed",
+    "set_state": true
+}
 ```
 
 **参数说明：**
@@ -51,7 +54,12 @@
 成功到位。
 
 ```json
-{"device":3,"state":"current _trajectory_state", "trajectory_connect":0,"trajectory_state":true}
+{
+    "device": 3,
+    "state": "current _trajectory_state",
+    "trajectory_connect": 0,
+    "trajectory_state": true
+}
 ```
 
 **参数说明：**
@@ -78,7 +86,14 @@
 成功到位。
 
 ```json
-{"current":2554,"en_flag":"1","err_flag":"0","height":0,"joint_id":1,"mode":0,"current":"lift_state"}
+{
+    "current": "lift_state",
+    "en_flag": "1",
+    "err_flag": "0",
+    "height": 0,
+    "joint_id": 1,
+    "mode": 0
+}
 ```
 
 **参数说明：**
