@@ -27,117 +27,111 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         text: "Demo演示",
         items: [
           {
-            text: "SDK",
-            collapsed: false,
+            text: "API(C、C++)演示",
+            collapsed: true,
             items: [
               {
-                text: "API(C)",
-                collapsed: true,
-                items: [
-                  {
-                    text: "基础示例",
-                    link: "/robot/demo/c/simpleProcess/readme",
-                  },
-                  {
-                    text: "坐标系操作",
-                    link: "/robot/demo/c/coordinateSystem/readme",
-                  },
-                  {
-                    text: "力控",
-                    link: "/robot/demo/c/forceControl/readme",
-                  },
-                  {
-                    text: "抓取",
-                    link: "/robot/demo/c/gripper/readme",
-                  },
-                  {
-                    text: "IO功能",
-                    link: "/robot/demo/c/IOControl/readme",
-                  },
-                  {
-                    text: "升降机控制",
-                    link: "/robot/demo/c/lift/readme",
-                  },
-                  {
-                    text: "ModbusRTU",
-                    link: "/robot/demo/c/modbusRTU/readme",
-                  },
-                  {
-                    text: "样条曲线运动",
-                    link: "/robot/demo/c/moves/readme",
-                  },
-                  {
-                    text: "角度透传",
-                    link: "/robot/demo/c/movejCANFD/readme",
-                  },
-                  {
-                    text: "在线编程",
-                    link: "/robot/demo/c/onlineProgram/readme",
-                  },
-                  {
-                    text: "算法",
-                    link: "/robot/demo/c/algoInterface/readme",
-                  },
-                ],
+                text: "基础示例",
+                link: "/robot/demo/c/simpleProcess/readme",
               },
               {
-                text: "API(Python)",
-                collapsed: true,
-                items: [
-                  {
-                    text: "基础示例",
-                    link: "/robot/demo/python/simpleProcess/readme",
-                  },
-                  {
-                    text: "坐标系操作",
-                    link: "/robot/demo/python/coordinateSystem/readme",
-                  },
-                  {
-                    text: "机械臂版本操作",
-                    link: "/robot/demo/python/doubleRoboticArm/readme",
-                  },
-                  {
-                    text: "力控",
-                    link: "/robot/demo/python/forceControl/readme",
-                  },
-                  {
-                    text: "抓取",
-                    link: "/robot/demo/python/gripper/readme",
-                  },
-                  {
-                    text: "IO功能",
-                    link: "/robot/demo/python/IOControl/readme",
-                  },
-                  {
-                    text: "升降机控制",
-                    link: "/robot/demo/python/lift/readme",
-                  },
-                  {
-                    text: "ModbusRTU",
-                    link: "/robot/demo/python/modbusRTU/readme",
-                  },
-                  {
-                    text: "样条曲线运动",
-                    link: "/robot/demo/python/moves/readme",
-                  },
-                  {
-                    text: "角度透传",
-                    link: "/robot/demo/python/movejCANFD/readme",
-                  },
-                  {
-                    text: "在线编程",
-                    link: "/robot/demo/python/onlineProgram/readme",
-                  },
-                  {
-                    text: "算法",
-                    link: "/robot/demo/python/algoInterface/readme",
-                  },
-                ],
+                text: "坐标系操作",
+                link: "/robot/demo/c/coordinateSystem/readme",
+              },
+              {
+                text: "力控",
+                link: "/robot/demo/c/forceControl/readme",
+              },
+              {
+                text: "抓取",
+                link: "/robot/demo/c/gripper/readme",
+              },
+              {
+                text: "IO功能",
+                link: "/robot/demo/c/IOControl/readme",
+              },
+              {
+                text: "升降机控制",
+                link: "/robot/demo/c/lift/readme",
+              },
+              {
+                text: "ModbusRTU",
+                link: "/robot/demo/c/modbusRTU/readme",
+              },
+              {
+                text: "样条曲线运动",
+                link: "/robot/demo/c/moves/readme",
+              },
+              {
+                text: "角度透传",
+                link: "/robot/demo/c/movejCANFD/readme",
+              },
+              {
+                text: "在线编程",
+                link: "/robot/demo/c/onlineProgram/readme",
+              },
+              {
+                text: "算法",
+                link: "/robot/demo/c/algoInterface/readme",
               },
             ],
           },
           {
-            text: "ROS",
+            text: "API(Python)演示",
+            collapsed: true,
+            items: [
+              {
+                text: "基础示例",
+                link: "/robot/demo/python/simpleProcess/readme",
+              },
+              {
+                text: "坐标系操作",
+                link: "/robot/demo/python/coordinateSystem/readme",
+              },
+              {
+                text: "机械臂版本操作",
+                link: "/robot/demo/python/doubleRoboticArm/readme",
+              },
+              {
+                text: "力控",
+                link: "/robot/demo/python/forceControl/readme",
+              },
+              {
+                text: "抓取",
+                link: "/robot/demo/python/gripper/readme",
+              },
+              {
+                text: "IO功能",
+                link: "/robot/demo/python/IOControl/readme",
+              },
+              {
+                text: "升降机控制",
+                link: "/robot/demo/python/lift/readme",
+              },
+              {
+                text: "ModbusRTU",
+                link: "/robot/demo/python/modbusRTU/readme",
+              },
+              {
+                text: "样条曲线运动",
+                link: "/robot/demo/python/moves/readme",
+              },
+              {
+                text: "角度透传",
+                link: "/robot/demo/python/movejCANFD/readme",
+              },
+              {
+                text: "在线编程",
+                link: "/robot/demo/python/onlineProgram/readme",
+              },
+              {
+                text: "算法",
+                link: "/robot/demo/python/algoInterface/readme",
+              },
+            ],
+          },
+          {
+            text: "ROS演示",
             collapsed: true,
             items: [
               {
@@ -155,7 +149,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             ],
           },
           {
-            text: "ROS2",
+            text: "ROS2演示",
             collapsed: false,
             items: [
               {
@@ -249,7 +243,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "SDK(C、C++)",
+        text: "API(C、C++)",
         collapsed: false,
         items: [
           {
@@ -520,7 +514,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "API文档(Python)",
+        text: "API(Python)",
         collapsed: false,
         items: [
           {
@@ -831,7 +825,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "ROS文档",
+        text: "ROS开发",
         collapsed: true,
         items: [
           {
@@ -877,7 +871,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "ROS2文档",
+        text: "ROS2开发",
         collapsed: true,
         items: [
           {
