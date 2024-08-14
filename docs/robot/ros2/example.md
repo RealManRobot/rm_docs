@@ -21,13 +21,13 @@ rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+ros2 launch rm_driver rm_65_driver.launch.py
 ```
 
 节点启动成功后，需要执行如下指令运行我们更换工作坐标系的节点。
 
 ```
-rm@rm-desktop:~$ ros2 run rm_example rm_change_work_frame
+ros2 run rm_example rm_change_work_frame
 ```
 
 弹出以下指令代表更换成功：
@@ -35,13 +35,13 @@ rm@rm-desktop:~$ ros2 run rm_example rm_change_work_frame
 首先订阅当前的工作坐标系话题，可以在终端中输入如下指令进行验证：
 
 ```
-rm@rm-desktop:~$ ros2 topic echo /rm_driver/get_curr_workFrame_result
+ros2 topic echo /rm_driver/get_curr_workFrame_result
 ```
 
 之后发布当前坐标系的请求。
 
 ```
-rm@rm-desktop:~$ ros2 topic pub --once /rm_driver/get_curr_workFrame_cmd std_msgs/msg/Empty "{}"
+ros2 topic pub --once /rm_driver/get_curr_workFrame_cmd std_msgs/msg/Empty "{}"
 ```
 
 可以看到终端中弹出如下界面。
@@ -52,20 +52,20 @@ rm@rm-desktop:~$ ros2 topic pub --once /rm_driver/get_curr_workFrame_cmd std_msg
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+ros2 launch rm_driver rm_65_driver.launch.py
 ```
 
 节点启动成功后，需要执行如下指令运行获得机械臂当前状态的节点。
 
 ```
-rm@rm-desktop:~$ ros2 run rm_example rm_get_state
+ros2 run rm_example rm_get_state
 ```
 
 弹出以下指令代表更换成功。
@@ -78,27 +78,27 @@ rm@rm-desktop:~$ ros2 run rm_example rm_get_state
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+ros2 launch rm_driver rm_65_driver.launch.py
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_example rm_<dof>_movej.launch.py
+ros2 launch rm_example rm_<dof>_movej.launch.py
 ```
 
 命令中的dof代表机械当前的自由度信息，可以选的参数有6dof和7dof。  
 例如启动7轴的机械臂时需要使用如下指令。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_example rm_7dof_movej.launch.py
+ros2 launch rm_example rm_7dof_movej.launch.py
 ```
 
 运行成功后，机械臂的关节将发生转动，且界面将显示如下信息。
@@ -110,20 +110,20 @@ rm@rm-desktop:~$ ros2 launch rm_example rm_7dof_movej.launch.py
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有`65`、`63`、`eco65`、`75`。  
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+ros2 launch rm_driver rm_65_driver.launch.py
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ ros2 run rm_example movejp_demo
+ros2 run rm_example movejp_demo
 ```
 
 执行成功后界面将出现如下提示，并且机械臂运动到指定位姿。
@@ -135,7 +135,7 @@ rm@rm-desktop:~$ ros2 run rm_example movejp_demo
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
@@ -148,7 +148,7 @@ rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ ros2 run rm_example movel_demo
+ros2 run rm_example movel_demo
 ```
 
 执行成功后界面将出现如下提示，并且机械臂将进行两次运动，首先通过MoveJP运动到指定位姿，之后通过MoveL进行关节运动。

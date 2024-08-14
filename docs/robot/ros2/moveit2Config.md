@@ -14,14 +14,14 @@ rm_moveit2_config是实现Moveit2控制真实机械臂的功能包，该功能�
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config demo.launch.py
+ros2 launch rm_<arm_type>_config demo.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：  
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_65_config demo.launch.py
+ros2 launch rm_65_config demo.launch.py
 ```
 
 节点启动成功后，将显示以下画面。  
@@ -37,13 +37,13 @@ rm@rm-desktop:~$ ros2 launch rm_65_config demo.launch.py
 首先运行底盘驱动节点。  
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 接下来需要运行rm_description功能包文件。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_description rm_<arm_type>_display.launch.py
+ros2 launch rm_description rm_<arm_type>_display.launch.py
 ```
 
 之后需要运行中间功能包rm_control的相关节点。
@@ -55,7 +55,7 @@ rm@rm-desktop:~$ ros2 launch rm_control rm_<arm_type>_control.launch.py
 最终需要启动控制真实机械臂的moveit2节点。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
+ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 ```
 
 注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、63、eco65、75。  
@@ -198,7 +198,7 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 先启动如上控制真实机器人的节点，再运行如下指令查看当前话题的对接情况：
 
 ```
-rm@rm-desktop:~$ ros2 run rqt_graph rqt_graph
+ros2 run rqt_graph rqt_graph
 ```
 
 运行成功后界面将显示如下画面。

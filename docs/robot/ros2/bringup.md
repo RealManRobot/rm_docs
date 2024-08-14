@@ -15,14 +15,14 @@ rm_bringup功能包为实现多个launch文件同时运行所设计的功能包�
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_bringup功能包中的launch.py文件。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_bringup rm_<arm_type>_bringup.launch.py
+ros2 launch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_bringup.launch.py
+ros2 launch rm_bringup rm_65_bringup.launch.py
 ```
 
 节点启动成功后，将弹出以下画面。
@@ -34,14 +34,14 @@ rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_bringup.launch.py
 我们可以通过以下命令运行rm_bringup功能包中的launch.py文件，直接启动其中的gzaebo仿真节点。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_bringup rm_<arm_type>_gazebo.launch.py
+ros2 launch rm_bringup rm_<arm_type>_gazebo.launch.py
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_gazebo.launch.py
+ros2 launch rm_bringup rm_65_gazebo.launch.py
 ```
 
 节点启动成功后，将弹出以下画面。

@@ -14,14 +14,14 @@ rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_control功能包。
 
 ```
-rm@rm-desktop:~$ ros2 launch  rm_control rm_<arm_type>_control.launch.py
+ros2 launch  rm_control rm_<arm_type>_control.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch  rm_control rm_65_control.launch.py
+ros2 launch  rm_control rm_65_control.launch.py
 ```
 
 节点启动成功后，将显示以下画面。
@@ -39,7 +39,7 @@ rm@rm-desktop:~$ ros2 launch  rm_control rm_65_control.launch.py
 在工作空间目录运行colcon build指令。
 
 ```
-rm@rm-desktop: ~/ros2_ws$ colcon build
+~/ros2_ws$ colcon build
 ```
 
 编译成功后可按如上指令进行功能包启动。

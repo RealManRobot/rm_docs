@@ -12,7 +12,7 @@ rm_gazebo的主要作用是帮助我们实现机械臂Moveit2规划的仿真功�
 使用如下指令启动Gazebo虚拟空间和虚拟机械臂。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_gazebo gazebo_65_demo.launch.py
+ros2 launch rm_gazebo gazebo_65_demo.launch.py
 ```
 
 运行成功后将弹出如下界面。
@@ -20,7 +20,7 @@ rm@rm-desktop:~$ ros2 launch rm_gazebo gazebo_65_demo.launch.py
 之后我们使用如下指令启动moveit2控制gazebo中的仿真机械臂。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_65_config gazebo_moveit_demo.launch.py
+ros2 launch rm_65_config gazebo_moveit_demo.launch.py
 ```
 
 弹出rviz2的控制界面后就可以进行moveit2和gazebo的仿真控制了。
