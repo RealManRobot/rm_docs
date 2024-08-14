@@ -1,4 +1,4 @@
-# 机械臂基本信息结构体`rm_envelope_balls_lirm_robot_info_tst_t`
+# <p class="hidden">C、C++: </p>机械臂基本信息结构体`rm_envelope_balls_lirm_robot_info_tst_t`
 
 ## 类成员变量说明
 

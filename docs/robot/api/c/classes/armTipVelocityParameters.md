@@ -1,4 +1,4 @@
-# 机械臂末端运动参数配置`armTipVelocityParameters`
+# <p class="hidden">C、C++: </p>机械臂末端运动参数配置`armTipVelocityParameters`
 
 机械臂末端运动参数设置及查询，包含线速度设置与查询、角速度设置与查询、角加速度设置与查询、碰撞等级设置与查询等。
 

@@ -1,4 +1,4 @@
-# 升降机构配置`liftControl`
+# <p class="hidden">C、C++: </p>升降机构配置`liftControl`
 
 本接口用于升降机构速度开环控制、位置闭环控制及状态获取。
 

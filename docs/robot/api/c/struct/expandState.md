@@ -1,4 +1,4 @@
-# 升降机构、扩展关节状态结构体`rm_expand_state_t`
+# <p class="hidden">C、C++: </p>升降机构、扩展关节状态结构体`rm_expand_state_t`
 
 ## 类成员变量说明
 

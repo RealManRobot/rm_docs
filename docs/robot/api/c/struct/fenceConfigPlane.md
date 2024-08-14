@@ -1,4 +1,4 @@
-# 几何模型点面矢量平面参数`rm_fence_config_plane_t`
+# <p class="hidden">C、C++: </p>几何模型点面矢量平面参数`rm_fence_config_plane_t`
 
 ## 类成员变量说明
 

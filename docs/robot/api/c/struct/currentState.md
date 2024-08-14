@@ -1,4 +1,4 @@
-# 机械臂当前状态`rm_current_arm_state_t`
+# <p class="hidden">C、C++: </p>机械臂当前状态`rm_current_arm_state_t`
 
 ## 类成员变量说明
 

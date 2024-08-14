@@ -1,4 +1,4 @@
-# 全局路点列表`rm_waypoint_list_t`
+# <p class="hidden">C、C++: </p>全局路点列表`rm_waypoint_list_t`
 
 ## 类成员变量说明
 

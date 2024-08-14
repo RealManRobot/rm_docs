@@ -1,4 +1,4 @@
-# 机械臂状态查询`armState`
+# <p class="hidden">C、C++: </p>机械臂状态查询`armState`
 
 机械臂当前状态、关节温度、电流、电压查询。
 

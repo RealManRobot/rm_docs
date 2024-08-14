@@ -1,4 +1,4 @@
-# 动力学模型版本结构体`rm_dynamic_version_t`
+# <p class="hidden">C、C++: </p>动力学模型版本结构体`rm_dynamic_version_t`
 
 ## 类成员变量说明
 

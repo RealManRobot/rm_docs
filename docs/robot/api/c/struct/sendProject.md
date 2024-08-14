@@ -1,4 +1,4 @@
-# 包络球参数集合结构体`rm_send_project_t`
+# <p class="hidden">C、C++: </p>包络球参数集合结构体`rm_send_project_t`
 
 ## 类成员变量说明
 

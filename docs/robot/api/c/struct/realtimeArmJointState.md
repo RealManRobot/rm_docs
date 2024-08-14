@@ -1,4 +1,4 @@
-# udp主动上报机械臂信息结构体`rm_realtime_arm_joint_state_t`
+# <p class="hidden">C、C++: </p>udp主动上报机械臂信息结构体`rm_realtime_arm_joint_state_t`
 
 ## 类成员变量说明
 

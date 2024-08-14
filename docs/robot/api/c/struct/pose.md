@@ -1,4 +1,4 @@
-# 机械臂位置姿态结构体`rm_pose_t`
+# <p class="hidden">C、C++: </p>机械臂位置姿态结构体`rm_pose_t`
 
 ## 类成员变量说明
 

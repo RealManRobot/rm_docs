@@ -1,4 +1,4 @@
-# 机械臂软件信息结构体`rm_arm_software_version_t`
+# <p class="hidden">C、C++: </p>机械臂软件信息结构体`rm_arm_software_version_t`
 
 ## 类成员变量说明
 

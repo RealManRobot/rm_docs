@@ -1,4 +1,4 @@
-# 机械臂关节状态参数`rm_joint_status_t`
+# <p class="hidden">C、C++: </p>机械臂关节状态参数`rm_joint_status_t`
 
 ## 类成员变量说明
 

@@ -1,4 +1,4 @@
-# 机械臂所有状态参数结构体`rm_algorithm_version_t`
+# <p class="hidden">C、C++: </p>机械臂所有状态参数结构体`rm_algorithm_version_t`
 
 ## 类成员变量说明
 

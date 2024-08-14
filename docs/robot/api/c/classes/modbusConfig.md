@@ -1,4 +1,4 @@
-# Modbus 配置`modbusConfig`
+# <p class="hidden">C、C++: </p>Modbus 配置`modbusConfig`
 
 睿尔曼机械臂在控制器和末端接口板上各提供一个RS485通讯接口，可通过本接口配置为标准的Modbus RTU模式。在Modbus RTU模式下，用户可通过提供的接口对连接在端口上的外设进行读写操作。
 

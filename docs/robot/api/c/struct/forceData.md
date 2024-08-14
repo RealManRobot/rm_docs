@@ -1,4 +1,4 @@
-# 六维力传感器数据结构体`rm_fence_config_t`
+# <p class="hidden">C、C++: </p>六维力传感器数据结构体`rm_fence_config_t`
 
 ## 类成员变量说明
 

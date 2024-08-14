@@ -1,4 +1,4 @@
-# 夹爪状态结构体`rm_gripper_state_t`
+# <p class="hidden">C、C++: </p>夹爪状态结构体`rm_gripper_state_t`
 
 ## 类成员变量说明
 

@@ -1,4 +1,4 @@
-# 全局路点存储信息`rm_waypoint_t`
+# <p class="hidden">C、C++: </p>全局路点存储信息`rm_waypoint_t`
 
 ## 类成员变量说明
 

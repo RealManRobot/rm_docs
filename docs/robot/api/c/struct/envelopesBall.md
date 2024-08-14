@@ -1,4 +1,4 @@
-# 包络球参数`rm_envelopes_ball_t`
+# <p class="hidden">C、C++: </p>包络球参数`rm_envelopes_ball_t`
 
 ## 类成员变量说明
 

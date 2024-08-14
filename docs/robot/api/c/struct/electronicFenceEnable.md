@@ -1,4 +1,4 @@
-# 电子围栏/虚拟墙使能状态参数结构体`rm_electronic_fence_enable_t`
+# <p class="hidden">C、C++: </p>电子围栏/虚拟墙使能状态参数结构体`rm_electronic_fence_enable_t`
 
 ## 类成员变量说明
 

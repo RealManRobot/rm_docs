@@ -1,4 +1,4 @@
-# 编译说明结构体`rm_planinfo_t`
+# <p class="hidden">C、C++: </p>编译说明结构体`rm_planinfo_t`
 
 ## 类成员变量说明
 

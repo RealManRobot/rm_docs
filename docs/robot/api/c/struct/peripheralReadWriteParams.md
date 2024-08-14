@@ -1,4 +1,4 @@
-# 外设数据读写参数结构体`rm_peripheral_read_write_params_t`
+# <p class="hidden">C、C++: </p>外设数据读写参数结构体`rm_peripheral_read_write_params_t`
 
 ## 类成员变量说明
 

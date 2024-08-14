@@ -1,4 +1,4 @@
-# 机械臂主动上报接口配置结构体`rm_realtime_push_config_t`
+# <p class="hidden">C、C++: </p>机械臂主动上报接口配置结构体`rm_realtime_push_config_t`
 
 ## 类成员变量说明
 

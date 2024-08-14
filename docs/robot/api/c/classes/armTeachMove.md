@@ -1,4 +1,4 @@
-# 机械臂示教指令`armTeachMove`
+# <p class="hidden">C、C++: </p>机械臂示教指令`armTeachMove`
 
 机械臂示教控制相关指令，如关节、位置、姿态的步进和示教控制。
 

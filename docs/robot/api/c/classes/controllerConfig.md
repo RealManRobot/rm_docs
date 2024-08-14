@@ -1,4 +1,4 @@
-# 系统配置`controllerConfig`
+# <p class="hidden">C、C++: </p>系统配置`controllerConfig`
 
 控制器状态获取、电源控制、错误清除、有线网口IP地址配置、软件信息获取。
 

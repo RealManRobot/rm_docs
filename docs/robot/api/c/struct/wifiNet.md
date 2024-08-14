@@ -1,4 +1,4 @@
-# 无线网络信息结构体`rm_wifi_net_t`
+# <p class="hidden">C、C++: </p>无线网络信息结构体`rm_wifi_net_t`
 
 ## 类成员变量说明
 

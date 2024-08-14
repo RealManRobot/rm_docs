@@ -1,4 +1,4 @@
-# 机械臂运动状态控制指令`armMotionControl`
+# <p class="hidden">C、C++: </p>机械臂运动状态控制指令`armMotionControl`
 
 控制运动的急停、缓停、暂停、继续、清除轨迹以及查询当前规划类型。
 

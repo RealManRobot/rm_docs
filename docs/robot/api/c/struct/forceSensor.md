@@ -1,4 +1,4 @@
-# 力传感器数据结构体`rm_force_sensor_t`
+# <p class="hidden">C、C++: </p>力传感器数据结构体`rm_force_sensor_t`
 
 >UDP主动上报机械臂信息。
 

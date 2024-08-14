@@ -1,4 +1,4 @@
-# 几何模型球体参数`rm_fence_config_sphere_t`
+# <p class="hidden">C、C++: </p>几何模型球体参数`rm_fence_config_sphere_t`
 
 ## 类成员变量说明
 

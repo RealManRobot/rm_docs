@@ -1,4 +1,4 @@
-# 几何模型参数结构体`rm_fence_config_t`
+# <p class="hidden">C、C++: </p>几何模型参数结构体`rm_fence_config_t`
 
 ## 类成员变量说明
 
