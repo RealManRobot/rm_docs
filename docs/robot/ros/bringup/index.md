@@ -50,24 +50,21 @@ rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 
 ### 3.1功能包文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前rm_bringup功能包的文件构成如下。
 
 ```
-├── CMakeLists.txt                      #编译规则文件
-├── doc                                 #辅助文档、图片存放文件夹
-│   ├── rm_bringup1.png                 #图片1
-│   ├── rm_bringup2.png                 #图片2
-│   └── rm_bringup3.png                 #图片3
-├── launch                              #启动文件
-│   ├── rm_63_bringup.launch.py         #63臂moveit2启动文件
-│   ├── rm_65_bringup.launch.py         #65臂moveit2启动文件
-│   ├── rm_75_bringup.launch.py         #75臂moveit2启动文件
-│   ├── rm_75_gazebo.launch.py          #75臂gazebo启动文件
-│   ├── rm_eco65_bringup.launch.py      #eco65臂moveit2启动文件
-│   └── rm_gen72_bringup.launch.py      #gen72臂moveit2启动文件
-├── package.xml                         #依赖说明文件
-├── README_CN.md                        #中文说明文档
-└── README.md                           #英文说明文档
+├── CMakeLists.txt  # 编译规则文件
+├── launch
+│   ├── rm_63_6f_robot.launch        # 63臂六维力启动文件
+│   ├── rm_63_robot.launch           # 63臂 moveit 启动文件
+│   ├── rm_65_6f_robot.launch        # 65臂六维力启动文件
+│   ├── rm_65_robot.launch           # 65臂 moveit 启动文件
+│   ├── rm_75_6f_robot.launch        # 75臂六维力启动文件
+│   ├── rm_75_robot.launch           # 75臂 moveit 启动文件
+│   ├── rm_eco65_6f_robot.launch     # ECO65臂六维力启动文件
+│   ├── rm_eco65_robot.launch        # ECO65臂 moveit 启动文件
+│   └── rm_gen72_robot.launch        # GEN72臂 moveit 启动文件
+└── package.xml
 ```
 
 ## 4.rm_bringup话题说明

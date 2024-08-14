@@ -46,149 +46,168 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 
 ### 2.1功能包文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前m_description功能包的文件构成如下。
 
 ```ros
-
-    ├── CMakeLists.txt                     #编译规则文件
-    ├── config                             #配置文件主要是RVIZ显示配置
-    │   ├── ECO65.rviz
-    │   ├── joint_names_rm_65_description.yaml
-    │   ├── RM65.rviz
-    │   ├── RM75.rviz
-    │   └── RML63.rviz
-    ├── launch                             #加载URDF、XACRO显示文件
-    │   ├── ECO65
-    │   │   ├── rm_eco65_6f_display.launch
-    │   │   ├── rm_eco65_display.launch        #ECO65显示加载启动节点
-    │   │   ├── rm_eco65_display_xacro.launch
-    │   │   └── rm_eco65_gazebo.launch
-    │   ├── RM65
-    │   │   ├── rm_65_6f_display.launch
-    │   │   ├── rm_65_display.launch            #RM65显示加载启动节点
-    │   │   ├── rm_65_display_y_90.launch
-    │   │   └── rm_65_gazebo.launch
-    │   ├── RM75
-    │   │   ├── rm_75_6f_display.launch
-    │   │   ├── rm_75_display.launch             #RM75显示加载启动节点
-    │   │   └── rm_75_display_urdf.launch
-    │   └── RML63
-    │       ├── display_rml63_bottom.launch
-    │       ├── rm_63_6f_display.launch
-    │       ├── rm_63_display.launch            #RML63显示加载启动节点
-    │       └── rm_63_gazebo.launch
-    ├── meshes                             #机械臂模型放置位置
-    │   ├── ECO65
-    │   │   ├── baselink.STL
-    │   │   ├── Link1.STL
-    │   │   ├── Link2.STL
-    │   │   ├── Link3.STL
-    │   │   ├── Link4.STL
-    │   │   ├── Link5.STL
-    │   │   └── Link6.STL
-    │   ├── ECO65_6F
-    │   │   ├── base_link.STL
-    │   │   ├── Link1.STL
-    │   │   ├── Link2.STL
-    │   │   ├── Link3.STL
-    │   │   ├── Link4.STL
-    │   │   ├── Link5.STL
-    │   │   └── Link6.STL
-    │   ├── RM65
-    │   │   ├── base_link.STL
-    │   │   ├── link1.STL
-    │   │   ├── link2.STL
-    │   │   ├── link3.STL
-    │   │   ├── link4.STL
-    │   │   ├── link5.STL
-    │   │   └── link6.STL
-    │   ├── RM65_6F
-    │   │   ├── base_link.STL
-    │   │   ├── Link1.STL
-    │   │   ├── Link2.STL
-    │   │   ├── Link3.STL
-    │   │   ├── Link4.STL
-    │   │   ├── Link5.STL
-    │   │   └── Link6.STL
-    │   ├── RM75
-    │   │   ├── base_link.STL
-    │   │   ├── link1.STL
-    │   │   ├── link2.STL
-    │   │   ├── link3.STL
-    │   │   ├── link4.STL
-    │   │   ├── link5.STL
-    │   │   ├── link6.STL
-    │   │   └── link7.STL
-    │   ├── RM75_6F
-    │   │   ├── base_link.STL
-    │   │   ├── Link1.STL
-    │   │   ├── Link2.STL
-    │   │   ├── Link3.STL
-    │   │   ├── Link4.STL
-    │   │   ├── Link5.STL
-    │   │   ├── Link6.STL
-    │   │   └── Link7.STL
-    │   ├── RML63
-    │   │   ├── base_link.STL
-    │   │   ├── link1.STL
-    │   │   ├── link2.STL
-    │   │   ├── link3.STL
-    │   │   ├── link4.STL
-    │   │   ├── link5.STL
-    │   │   └── link6.STL
-    │   └── RML63_6F
-    │       ├── base_link.STL
-    │       ├── Link1.STL
-    │       ├── Link2.STL
-    │       ├── Link3.STL
-    │       ├── Link4.STL
-    │       ├── Link5.STL
-    │       └── Link6.STL
-    ├── package.xml
-    └── urdf                        #机械臂URDF、XACRO模型描述文件放置位置
-        ├── ECO65
-        │   ├── eco65.csv
-        │   ├── eco65.urdf
-        │   ├── rm_eco65.gazebo.xacro
-        │   ├── rm_eco65.transmission.xacro
-        │   └── rm_eco65.urdf.xacro
-        ├── ECO65_6F
-        │   ├── eco65.csv
-        │   ├── eco65.urdf
-        │   ├── rm_eco65_6f_description.urdf
-        │   └── rm_eco65_6f_description.urdf.xacro
-        ├── RM65
-        │   ├── rm_65_description.csv
-        │   ├── rm_65.gazebo.xacro
-        │   ├── rm_65.transmission.xacro
-        │   ├── rm_65.urdf
-        │   ├── rm_65.urdf.xacro
-        │   ├── rm_65.urdf（复件）.xacro
-        │   └── rm_65_y_90.urdf.xacro
-        ├── RM65_6F
-        │   ├── rm_65_6f_description.csv
-        │   ├── rm_65_6f_description.urdf
-        │   └── rm_65_6f_description.urdf.xacro
-        ├── RM75
-        │   ├── rm_75_bottom.urdf.xacro
-        │   ├── rm_75_description.csv
-        │   ├── rm_75.gazebo.xacro
-        │   ├── rm_75.transmission.xacro
-        │   └── rm_75.urdf
-        ├── RM75_6F
-        │   ├── rm_75_6f_description.csv
-        │   ├── rm_75_6f_description.urdf
-        │   └── rm_75_6f_description.urdf.xacro
-        ├── RML63
-        │   ├── rml_63_bottom.urdf.xacro
-        │   ├── rml_63_description.csv
-        │   ├── rml_63_description.urdf
-        │   ├── rml_63.gazebo.xacro
-        │   └── rml_63.transmission.xacro
-        └── RML63_6F
-            ├── rm_63_6f_description.csv
-            ├── rm_63_6f_description.urdf
-            └── rm_63_6f_descriptio.urdf.xacro
+├── CMakeLists.txt                               #编译规则文件
+├── config                                       #配置文件主要是 RVIZ 显示配置
+│ ├── ECO65.rviz
+│ ├── GEN72.rviz
+│ ├── joint_names_rm_65_description.yaml
+│ ├── RM65.rviz
+│ ├── RM75.rviz
+│ └── RML63.rviz
+├── launch                                       #加载 URDF、XACRO 显示文件
+│ ├── ECO65
+│ │ ├── rm_eco65_6f_display.launch
+│ │ ├── rm_eco65_display.launch                  #ECO65 显示加载启动节点
+│ │ ├── rm_eco65_display_xacro.launch
+│ │ └── rm_eco65_gazebo.launch
+│ ├── GEN72
+│ │ ├──rm_gen72_gazebo.launch
+│ │ ├── rm_gen72_display.launch                  #GEN72 显示加载启动节点
+│ │ └── rm_gen72_display_xacro.launch
+│ ├── RM65
+│ │ ├── rm_65_6f_display.launch
+│ │ ├── rm_65_display.launch                     #RM65 显示加载启动节点
+│ │ ├── rm_65_display_y_90.launch
+│ │ └── rm_65_gazebo.launch
+│ ├── RM75
+│ │ ├── rm_75_6f_display.launch
+│ │ ├── rm_75_display.launch                     #RM75 显示加载启动节点
+│ │ └── rm_75_display_urdf.launch
+│ └── RML63
+│ ├── display_rml63_bottom.launch
+│ ├── rm_63_6f_display.launch
+│ ├── rm_63_display.launch                       #RML63 显示加载启动节点
+│ └── rm_63_gazebo.launch
+├── meshes                                       #机械臂模型放置位置
+│ ├── ECO65
+│ │ ├── baselink.STL
+│ │ ├── Link1.STL
+│ │ ├── Link2.STL
+│ │ ├── Link3.STL
+│ │ ├── Link4.STL
+│ │ ├── Link5.STL
+│ │ └── Link6.STL
+│ ├── ECO65_6F
+│ │ ├── base_link.STL
+│ │ ├── Link1.STL
+│ │ ├── Link2.STL
+│ │ ├── Link3.STL
+│ │ ├── Link4.STL
+│ │ ├── Link5.STL
+│ │ └── Link6.STL
+│ ├── GEN72
+│ │ ├── base_link.STL
+│ │ ├── Link1.STL
+│ │ ├── Link2.STL
+│ │ ├── Link3.STL
+│ │ ├── Link4.STL
+│ │ ├── Link5.STL
+│ │ ├── Link6.STL
+│ │ └── Link7.STL
+│ ├── RM65
+│ │ ├── base_link.STL
+│ │ ├── link1.STL
+│ │ ├── link2.STL
+│ │ ├── link3.STL
+│ │ ├── link4.STL
+│ │ ├── link5.STL
+│ │ └── link6.STL
+│ ├── RM65_6F
+│ │ ├── base_link.STL
+│ │ ├── Link1.STL
+│ │ ├── Link2.STL
+│ │ ├── Link3.STL
+│ │ ├── Link4.STL
+│ │ ├── Link5.STL
+│ │ └── Link6.STL
+│ ├── RM75
+│ │ ├── base_link.STL
+│ │ ├── link1.STL
+│ │ ├── link2.STL
+│ │ ├── link3.STL
+│ │ ├── link4.STL
+│ │ ├── link5.STL
+│ │ ├── link6.STL
+│ │ └── link7.STL
+│ ├── RM75_6F
+│ │ ├── base_link.STL
+│ │ ├── Link1.STL
+│ │ ├── Link2.STL
+│ │ ├── Link3.STL
+│ │ ├── Link4.STL
+│ │ ├── Link5.STL
+│ │ ├── Link6.STL
+│ │ └── Link7.STL
+│ ├── RML63
+│ │ ├── base_link.STL
+│ │ ├── link1.STL
+│ │ ├── link2.STL
+│ │ ├── link3.STL
+│ │ ├── link4.STL
+│ │ ├── link5.STL
+│ │ └── link6.STL
+│ └── RML63_6F
+│ ├── base_link.STL
+│ ├── Link1.STL
+│ ├── Link2.STL
+│ ├── Link3.STL
+│ ├── Link4.STL
+│ ├── Link5.STL
+│ └── Link6.STL
+├── package.xml
+└── urdf                                             #机械臂 URDF、XACRO 模型描述文件放置位置
+├── ECO65
+│ ├── eco65.csv
+│ ├── eco65.urdf
+│ ├── rm_eco65.gazebo.xacro
+│ ├── rm_eco65.transmission.xacro
+│ └── rm_eco65.urdf.xacro
+├── ECO65_6F
+│ ├── eco65.csv
+│ ├── eco65.urdf
+│ ├── rm_eco65_6f_description.urdf
+│ └── rm_eco65_6f_description.urdf.xacro
+├── GEN72
+│ ├── GEN72.csv
+│ ├── GEN72.urdf
+│ ├── rm_gen72.gazebo.xacro
+│ ├── rm_gen72.transmission.xacro
+│ └── rm_gen72.urdf.xacro
+├── RM65
+│ ├── rm_65_description.csv
+│ ├── rm_65.gazebo.xacro
+│ ├── rm_65.transmission.xacro
+│ ├── rm_65.urdf
+│ ├── rm_65.urdf.xacro
+│ ├── rm_65.urdf（复件）.xacro
+│ └── rm_65_y_90.urdf.xacro
+├── RM65_6F
+│ ├── rm_65_6f_description.csv
+│ ├── rm_65_6f_description.urdf
+│ └── rm_65_6f_description.urdf.xacro
+├── RM75
+│ ├── rm_75_bottom.urdf.xacro
+│ ├── rm_75_description.csv
+│ ├── rm_75.gazebo.xacro
+│ ├── rm_75.transmission.xacro
+│ └── rm_75.urdf
+├── RM75_6F
+│ ├── rm_75_6f_description.csv
+│ ├── rm_75_6f_description.urdf
+│ └── rm_75_6f_description.urdf.xacro
+├── RML63
+│ ├── rml_63_bottom.urdf.xacro
+│ ├── rml_63_description.csv
+│ ├── rml_63_description.urdf
+│ ├── rml_63.gazebo.xacro
+│ └── rml_63.transmission.xacro
+└── RML63_6F
+├── rm_63_6f_description.csv
+├── rm_63_6f_description.urdf
+└── rm_63_6f_descriptio.urdf.xacro
 ```
 
 ## 3. rm_description话题说明

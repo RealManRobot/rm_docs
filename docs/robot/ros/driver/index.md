@@ -82,18 +82,19 @@ Udp_force_coordinate：设置系统受力时六维力的基准坐标，0为传�
 当前rm_driver功能包的文件构成如下。
 
 ```
-    ├── CMakeLists.txt                #编译规则文件
-    ├── launch                       #节点启动+参数配置文件
-    │   ├── rm_63_driver.launch          #RML63启动文件
-    │   ├── rm_65_driver.launch          #RM65启动文件
-    │   ├── rm_75_driver.launch         #RM75启动文件
-    │   └── rm_eco65_driver.launch      #ECO65启动文件
-    ├── package.xml                 #依赖声明文件
-    └── src
-        ├── cJSON.c                   #JSON协议文件
-        ├── cJSON.h                   #JSON协议头文件
-        ├── rm_driver.cpp               #rm_driver节点源文件
-        └── rm_robot.h                 #rm_driver节点头文件
+├── CMakeLists.txt              #编译规则文件
+├── launch                      #节点启动+参数配置文件
+│ ├── rm_63_driver.launch       #RML63 启动文件
+│ ├── rm_65_driver.launch       #RM65 启动文件
+│ ├── rm_75_driver.launch       #RM75 启动文件
+│ ├── rm_eco65_driver.launch    #ECO65 启动文件
+│ └── rm_gen72_driver.launch    #GEN72 启动文件
+├── package.xml #依赖声明文件
+└── src
+├── cJSON.c                     #JSON 协议文件
+├── cJSON.h                     #JSON 协议头文件
+├── rm_driver.cpp               #rm_driver 节点源文件
+└── rm_robot.h                  #rm_driver 节点头文件
 ```
 
 ## 3.rm_driver话题说明

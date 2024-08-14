@@ -314,40 +314,45 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
 
 ### 2.1功能包文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前rm_example功能包的文件构成如下。
 ```
-    ├── CMakeLists.txt                             #编译规则文件
-    ├── launch
-    │   └── planning_scene_ros_api_demo.launch
-    ├── package.xml
-    ├── scripts
-    │   ├── getHSV.py
-    │   ├── moveit_obstacles_demo.py
-    │   ├── moveit_plan_and_stop.py
-    │   ├── rm_63_moveit_obstacles_demo.py        #63机械臂避障程序
-    │   ├── rm_65_moveit_obstacles_demo.py        #65机械臂避障程序
-    │   ├── rm_75_moveit_obstacles_demo.py        #75机械臂避障程序
-    │   ├── rm_eco65_moveit_obstacles_demo.py     #eco65机械臂避障程序
-    │   └── test_rgb.py
-    └── src
-        ├── api_ChangeToolName_demo.cpp         #更换工具坐标系源代码
-        ├── api_ChangeWorkFrame_demo.cpp        #更换工作坐标系源代码
-        ├── api_eco65_pick_place_demo.cpp         # pick_and_place源代码
-        ├── api_getArmCurrentState.cpp             #获取机械臂状态
-        ├── api_Get_Arm_State_demo.cpp           #获取机械臂状态
-        ├── api_moveJ_demo.cpp                   #moveJ运动
-        ├── api_moveJ_P_demo.cpp                 #moveJ_P运动
-        ├── api_moveL_demo.cpp                   #moveL运动
-        ├── api_rm65_pick_place_demo.cpp         # pick_and_place源代码
-        ├── api_rm75_pick_place_demo.cpp         # pick_and_place源代码
-        ├── api_rml63_pick_place_demo.cpp         # pick_and_place源代码
-        ├── api_teach_demo.cpp                    # 示教源代码
-        ├── arm_63_planning_scene_ros_api_demo.cpp #63场景规划源代码
-        ├── arm_65_planning_scene_ros_api_demo.cpp #65场景规划源代码
-        ├── arm_75_planning_scene_ros_api_demo.cpp #75场景规划源代码
-        ├── arm_eco65_planning_scene_ros_api_demo.cpp #eco65场景规划源代码
-        ├── planning_scene_ros_api_demo.cpp
-        └── test_api_movel.cpp
+├── CMakeLists.txt #编译规则文件
+├── launch
+│ └── planning_scene_ros_api_demo.launch
+├── package.xml
+├── scripts
+│ ├── getHSV.py
+│ ├── moveit_obstacles_demo.py
+│ ├── moveit_plan_and_stop.py
+│ ├── rm_63_moveit_obstacles_demo.py #63 机械臂避障程序
+│ ├── rm_65_moveit_obstacles_demo.py #65 机械臂避障程序
+│ ├── rm_75_moveit_obstacles_demo.py #75 机械臂避障程序
+│ ├── rm_eco65_moveit_obstacles_demo.py #ECO65 机械臂避障程序
+│ ├── rm_gen72_moveit_obstacles_demo.py #GEN72 机械臂避障程序
+│ └── test_rgb.py
+└── src
+├── api_ChangeToolName_demo.cpp #更换工具坐标系源代码
+├── api_ChangeWorkFrame_demo.cpp #更换工作坐标系源代码
+├── api_eco65_pick_place_demo.cpp # pick_and_place 源代码
+├── api_gen72_moveJ_P_demo.cpp # GEN72 moveJ_P 源代码
+├── api_gen72_moveL_demo.cpp # GEN72 moveL 源代码
+├── api_gen72_pick_place_demo.cpp #pick_and_place 源代码
+├── api_getArmCurrentState.cpp #获取机械臂状态
+├── api_Get_Arm_State_demo.cpp #获取机械臂状态
+├── api_moveJ_demo.cpp #moveJ 运动
+├── api_moveJ_P_demo.cpp #moveJ_P 运动
+├── api_moveL_demo.cpp #moveL 运动
+├── api_rm65_pick_place_demo.cpp # pick_and_place 源代码
+├── api_rm75_pick_place_demo.cpp # pick_and_place 源代码
+├── api_rml63_pick_place_demo.cpp # pick_and_place 源代码
+├── api_teach_demo.cpp # 示教源代码
+├── arm_63_planning_scene_ros_api_demo.cpp #63 场景规划源代码
+├── arm_65_planning_scene_ros_api_demo.cpp #65 场景规划源代码
+├── arm_75_planning_scene_ros_api_demo.cpp #75 场景规划源代码
+├── arm_eco65_planning_scene_ros_api_demo.cpp #ECO65 场景规划源代码
+├── arm_gen72_planning_scene_ros_api_demo.cpp#GEN72 场景规划源代码
+├── planning_scene_ros_api_demo.cpp
+└── test_api_movel.cpp
 ```
 
 ## 3.rm_example话题说明

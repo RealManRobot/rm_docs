@@ -43,56 +43,69 @@ rm@rm-desktop:~$ roslaunch rm_gazebo arm_<arm_type>_bringup_moveit.launch
 当前rm_gazebo功能包的文件构成如下。
 
 ```
-    ├── CMakeLists.txt                         #编译规则文件
-    ├── config
-    │   ├── ECO65                            #ECO65的仿真配置文件
-    │   │   ├── arm_gazebo_control.yaml
-    │   │   ├── arm_gazebo_joint_states.yam     #关节状态控制器
-    │   │   ├── rm_eco65_trajectory_control.yaml  #关节控制器
-    │   │   └── trajectory_control.yaml
-    │   ├── RM65                              #同ECO65的仿真配置文件
-    │   │   ├── arm_gazebo_control.yaml
-    │   │   ├── arm_gazebo_joint_states.yaml
-    │   │   ├── rm_65_trajectory_control.yaml
-    │   │   ├── rviz_gazebo.rviz
-    │   │   └── trajectory_control.yaml
-    │   ├── RM75                              #同ECO65的仿真配置文件
-    │   │   ├── arm_gazebo_control.yaml
-    │   │   ├── arm_gazebo_joint_states.yaml
-    │   │   ├── rm_75_trajectory_control.yaml
-    │   │   ├── rviz_gazebo_bak.rviz
-    │   │   ├── rviz_gazebo.rviz
-    │   │   └── trajectory_control.yaml
-    │   └── RML63                              #同ECO65的仿真配置文件
-    │       ├── arm_gazebo_control.yaml
-    │       ├── arm_gazebo_joint_states.yaml
-    │       ├── rml_63_trajectory_control.yaml
-    │       ├── rviz_gazebo.rviz
-    │       └── trajectory_control.yaml
-    ├── launch
-    │   ├── arm_63_bringup_moveit.launch             #RML63仿真gazebo启动文件
-    │   ├── arm_65_bringup_moveit.launch             # RM65仿真gazebo启动文件
-    │   ├── arm_75_bringup_moveit.launch             # RM75仿真gazebo启动文件
-    │   ├── arm_eco65_bringup_moveit.launch          # ECO65仿真gazebo启动文件
-    │   ├── ECO65                                  # ECO65相关启动文件
-    │   │   ├── arm_eco65_trajectory_controller.launch   #仿真控制器launch文件
-    │   │   ├── rm_eco65_arm_gazebo_states.launch    #仿真机械臂状态监控launch文件
-    │   │   ├── rm_eco65_arm_trajectory_controller.launch
-    │   │   └── rm_eco65_arm_world.launch       #仿真机械臂gazebo加载launch文件
-    │   ├── RM65                              # RM65gazebo相关启动文件(同eco65)
-    │   │   ├── arm_65_trajectory_controller.launch
-    │   │   ├── rm_65_arm_gazebo_states.launch
-    │   │   ├── rm_65_arm_trajectory_controller.launch
-    │   │   └── rm_65_arm_world.launch
-    │   ├── RM75                              # RM75gazebo相关启动文件(同eco65)
-    │   │   ├── arm_75_trajectory_controller.launch
-    │   │   ├── arm_gazebo_states.launch
-    │   │   ├── arm_trajectory_controller.launch
-    │   │   └── arm_world.launch
-    │   └── RML63                             # RML63gazebo相关启动文件(同eco65)
-    │       ├── arm_gazebo_states.launch
-    │       ├── arm_trajectory_controller.launch
-    │       ├── arm_world.launch
-    │       └── rml_63_trajectory_controller.launch
-    └── package.xml
+├── CMakeLists.txt                                      #编译规则文件
+├── config
+│ ├── ECO65                                             #ECO65 的仿真配置文件
+│ │ ├── arm_gazebo_control.yaml
+│ │ ├── arm_gazebo_joint_states.yam                     #关节状态控制器
+│ │ ├── rm_eco65_trajectory_control.yaml                #关节控制器
+│ │ └── trajectory_control.yaml
+│ ├── GEN72
+│ │ ├── arm_gazebo_control.yaml
+│ │ ├── arm_gazebo_joint_states.yaml
+│ │ ├── gen_72_trajectory_control.yaml
+│ │ ├── rviz_gazebo_bak.rviz
+│ │ ├── rviz_gazebo.rviz
+│ │ └── trajectory_control.yaml
+│ ├── RM65 #同 ECO65 的仿真配置文件
+│ │ ├── arm_gazebo_control.yaml
+│ │ ├── arm_gazebo_joint_states.yaml
+│ │ ├── rm_65_trajectory_control.yaml
+│ │ ├── rviz_gazebo.rviz
+│ │ └── trajectory_control.yaml
+│ ├── RM75 #同 ECO65 的仿真配置文件
+│ │ ├── arm_gazebo_control.yaml
+│ │ ├── arm_gazebo_joint_states.yaml
+│ │ ├── rm_75_trajectory_control.yaml
+│ │ ├── rviz_gazebo_bak.rviz
+│ │ ├── rviz_gazebo.rviz
+│ │ └── trajectory_control.yaml
+│ └── RML63 #同 ECO65 的仿真配置文件
+│ ├── arm_gazebo_control.yaml
+│ ├── arm_gazebo_joint_states.yaml
+│ ├── rml_63_trajectory_control.yaml
+│ ├── rviz_gazebo.rviz
+│ └── trajectory_control.yaml
+├── launch
+│ ├── arm_63_bringup_moveit.launch                      #RML63 仿真 gazebo 启动文件
+│ ├── arm_65_bringup_moveit.launch                      # RM65 仿真 gazebo 启动文件
+│ ├── arm_75_bringup_moveit.launch                      # RM75 仿真 gazebo 启动文件
+│ ├── arm_eco65_bringup_moveit.launch                   # ECO65 仿真 gazebo 启动文件
+│ ├── arm_gen72_bringup_moveit.launch                   #GEN72 仿真 gazebo 启动文件
+│ ├── ECO65 # ECO65 相关启动文件
+│ │ ├── arm_eco65_trajectory_controller.launch          #仿真控制器 launch 文件
+│ │ ├── rm_eco65_arm_gazebo_states.launch               #仿真机械臂状态监控 launch 文件
+│ │ ├── rm_eco65_arm_trajectory_controller.launch
+│ │ └── rm_eco65_arm_world.launch                       #仿真机械臂 gazebo 加载 launch 文件
+│ ├── GEN72 #GEN72gazebo 相关启动文件(同 eco65)
+│ │ ├── arm_gazebo_states.launch
+│ │ ├── arm_gen72_trajectory_controller.launch
+│ │ ├── arm_trajectory_controller.launch
+│ │ └── arm_world.launch
+│ ├── RM65 # RM65gazebo 相关启动文件(同 eco65)
+│ │ ├── arm_65_trajectory_controller.launch
+│ │ ├── rm_65_arm_gazebo_states.launch
+│ │ ├── rm_65_arm_trajectory_controller.launch
+│ │ └── rm_65_arm_world.launch
+│ ├── RM75 # RM75gazebo 相关启动文件(同 eco65)
+│ │ ├── arm_75_trajectory_controller.launch
+│ │ ├── arm_gazebo_states.launch
+│ │ ├── arm_trajectory_controller.launch
+│ │ └── arm_world.launch
+│ └── RML63 # RML63gazebo 相关启动文件(同 eco65)
+│ ├── arm_gazebo_states.launch
+│ ├── arm_trajectory_controller.launch
+│ ├── arm_world.launch
+│ └── rml_63_trajectory_controller.launch
+└── package.xml
 ```
