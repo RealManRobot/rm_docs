@@ -1,4 +1,4 @@
-# 机械臂初始状态配置指令集
+# <p class="hidden">JSON协议：</p>机械臂初始状态配置指令集
 
 ## 设置初始状态`set_init_pose`
 

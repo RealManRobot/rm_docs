@@ -1,5 +1,5 @@
 
-# 机械臂状态信息查询指令集
+# <p class="hidden">JSON协议：</p>机械臂状态信息查询指令集
 
 ## 查询机械臂关节角度`get_joint_degree`
 

@@ -9,21 +9,23 @@
         <div class="wrap-item1">
             <h2>快速使用手册</h2>
             <p>睿尔曼机器人快速使用手册V1.5  文件格式：PDF</p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">快速使用手册（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <p>版本号：V2.1.0</p>
         </div>
     </div>
-    
 </div>
+
 <div class="wrap">
-<div class="d-flex">
+    <div class="d-flex">
         <div class="wrap-item1">
             <h2>Web示教器用户手册</h2>
             <p>睿尔曼机器人Web示教器用户手册V1.5  文件格式：PDF</p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">Web示教器用户手册（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <p>版本号：V2.1.0</p>
         </div>
     </div>
 </div>
@@ -44,9 +46,10 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM65系列</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RM65系列（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <!-- <p>版本号：V2.1.0</p> -->
         </div>
     </div>
 </div>
@@ -54,43 +57,44 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM75系列</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RM75系列（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <!-- <p>版本号：V2.1.0</p> -->
         </div>
     </div>
 </div>
-
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RML63系列</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RML63系列（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <!-- <p>版本号：V2.1.0</p> -->
         </div>
     </div>
 </div>
-
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>ECO65系列</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">ECO65系列（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <!-- <p>版本号：V2.1.0</p> -->
         </div>
     </div>
 </div>
-
 
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>GEN72系列</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">GEN72系列（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
+            <!-- <p>版本号：V2.1.0</p> -->
         </div>
     </div>
 </div>
@@ -116,16 +120,15 @@
     margin-bottom:16px;
 }
 .wrap-item1{
-     width:70%;
+     width:80%;
 }
 .wrap-item2{
-    width:30%;
+    width:20%;
     display:flex;
     justify-content: end;
     align-items: center;
 }
-
-.wrap h2{
+.wrap-item1 h2{
     font-size:24px !important;
     line-height:32px !important;
     letter-spacing: -0.02em !important;
@@ -134,18 +137,17 @@
     border-top:none !important;
     padding-top:0 !important;
 }
-.wrap p{
+.wrap-item1 p{
     color:var(--vp-c-text-2) !important;
+    margin:0 0 8px 0 !important;
 }
-.btnStyle{
-    width: 100px;
-    height: 40px;
-    background: var(--vp-c-brand-1);
-    color:var(--vp-c-white);
-    border-radius: 4px;
-    /* position:absolute;
-    right:16px;
-    top:50%;
-    transform: translateY(-50%); */
+.wrap-item1 p:nth-of-type(2){
+    color:var(--vp-c-text-1) !important;
+    margin: 0 !important;
+}
+.wrap-item2 p{
+    width:100%;
+    text-align:center;
+    color:var(--vp-c-text-2) !important;
 }
 </style>
