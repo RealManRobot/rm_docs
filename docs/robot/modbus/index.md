@@ -1,4 +1,4 @@
-# RM机械臂modbus从站地址表
+# <p class="hidden">Modbus：</p>RM机械臂modbus从站地址表
 
 睿尔曼机械臂支持modbus从站功能，并且从站功能在modbus-rtu和modbus-tcp上均支持，所有的从站共享地址表和相应功能。
 **modbus-tcp**：使用有线网口或无线网口通讯，IP地址为机械臂IP地址，端口为502，设备ID为1。
