@@ -599,10 +599,18 @@ rostopic pub /rm_driver/Get_Arm_Software_Version std_msgs/Empty "{}"
 ```
 
 **返回命令示例：**
-rm_driver节点终端
+
+```
+rostopic echo /rm_driver/Get_Arm_Software_Version_Result
+```
 
 **参数说明：**
-Arm type is RML63-BI Arm version is 3b0146
+`Arm_Software_Version.msg`
+
+```
+string Product_version #机械臂类型
+string Plan_version #软件版本号
+```
 
 ### 3.10.3清除系统错误
 

@@ -12,7 +12,7 @@
 |末端接口板|V1.9.0|
 |API|V4.3.3|
 |ROS1|V2.1.0|
-|ROS2| V1.1.0 `humble` </br> V1.1.0 `foxy`|
+|ROS2| V1.1.0 `humble` <br> V1.1.0 `foxy`|
 
 ## 控制器V1.5.6
 
