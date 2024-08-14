@@ -21,7 +21,7 @@
 
 ## 3.项目下载
 
-通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
+通过项目链接下载本项目工程文件到本地：[ARM_MOVE_DEMO](https://github.com/RealManRobot/ros2_rm_robot/tree/foxy/rm_arm_examples/control_arm_move)
 
 ## 4.环境配置
 
@@ -33,10 +33,9 @@
 
 **配置过程**
 
-
 1. 首先需要准备好Ubuntu20.04操作系统的虚拟机或其他设备。
-2. 安装ROS2环境[foxy](#https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html),也可参考ROS2-foxy功能包中的安装说明进行安装。
-3. ROS2-Foxy功能包安装
+2. 安装ROS2环境[foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html),也可参考ROS2-foxy功能包中的安装说明进行安装。
+3. 参考[链接](https://github.com/RealManRobot/ros2_rm_robot/tree/foxy)将提供的ROS2功能包编译到当前环境，并使用source指令添加该功能包的环境变量。
 
     新建工作空间和src文件
     ```
@@ -70,27 +69,6 @@
     再次声明环境变量
     ```
     source ./install/setup.bash
-    ```
-    
-4. demo功能包安装
-    新建工作空间和src文件，将ROS1文件放入src中
-    ```
-    mkdir -p ~/demo_ws/src
-    ```
-
-    进入工作空间
-    ```
-    cd ~/demo_ws/src
-    ```
-
-    编译control_arm_move功能包
-    ```
-    colcon build --packages-select control_arm_move
-    ```
-
-    声明环境变量
-    ```
-    source ~/demo_ws/install/setup.bash
     ```
 
 ## 5.使用指南
