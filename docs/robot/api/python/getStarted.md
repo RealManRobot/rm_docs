@@ -70,5 +70,5 @@ else:
 
 ## 5.技术支持与社区
 
-- **示例与文档**：[下载链接]()
-- **SDK与库**: [下载链接]()
+- **示例与文档**：[API（Python）演示](/demo/python/simpleProcess/)
+- **SDK与库**: [Python SDK](wwwwwwwwww)

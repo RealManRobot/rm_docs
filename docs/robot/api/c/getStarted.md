@@ -284,6 +284,5 @@ RMDemo_QtExample_C
 
 ## 6.支持渠道
 
-- **示例与文档**：跳转对应API链接。
-- **SDK与库**：下载链接。
-- **社区支持**：跳转链接。
+- **示例与文档**：[API C/C++demo](/demo/c/simpleProcess/)。
+- **SDK与库**：[C/C++ SDK包下载](wwwwwwwwwwwww)。
