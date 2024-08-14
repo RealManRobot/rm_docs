@@ -2,6 +2,18 @@
 
 控制器版本与驱动器版本、末端接口板版本、API版本、ROS版本匹配的对照表。进行软件版本升级时，请参考此表注意软件版本匹配。
 
+## 控制器V1.6.0
+
+更新时间：2024/8/13
+
+|项目|版本号|
+|:--|:--|
+|驱动器|常规驱动器 Vd5.1.0 <br>  多圈驱动器 Ve5.1.0 <br> 软抱闸驱动器 V5.1.0 |
+|末端接口板|V1.9.0|
+|API|V4.3.3|
+|ROS1|V2.1.0|
+|ROS2| V1.1.0 `humble` </br> V1.1.0 `foxy`|
+
 ## 控制器V1.5.6
 
 更新时间：2024/7/26
@@ -12,7 +24,7 @@
 |末端接口板|V1.9.0|
 |API|V4.3.2|
 |ROS1|V2.1.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1 `humble` <br> V1.0.1 `foxy`|
 
 ## 控制器V1.5.5
 
@@ -24,7 +36,7 @@
 |末端接口板|V1.9.0|
 |API|V4.3.1|
 |ROS1|V2.0.1|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1 `humble` <br> V1.0.1 `foxy`|
 
 ## 控制器V1.5.4
 
@@ -36,7 +48,7 @@
 |末端接口板|V1.9.0|
 |API|V4.3.0|
 |ROS1|V2.0.1|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1 `humble` <br> V1.0.1 `foxy`|
 
 ## 控制器V1.5.3
 
@@ -48,7 +60,7 @@
 |末端接口板|V1.9.0|
 |API|V4.3.0|
 |ROS1|V2.0.1|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1 `humble` <br> V1.0.1 `foxy`|
 
 ## 控制器V1.5.2(release version)
 
@@ -60,7 +72,7 @@
 |末端接口板|V1.8.9|
 |API|V4.3.0|
 |ROS1|V2.0.1|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1 `humble`） <br> V1.0.1`foxy`|
 
 ## 控制器V1.5.1(release version)
 
@@ -72,7 +84,7 @@
 |末端接口板|V1.8.9|
 |API|V4.3.0|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1`humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.5.0(release version)
 
@@ -84,7 +96,7 @@
 |末端接口板|V1.8.9|
 |API|V4.3.0|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1`humble`） <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.14(release version)
 
@@ -96,7 +108,7 @@
 |末端接口板|V1.8.9|
 |API|V4.2.9|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1`humble`） <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.13(release version)
 
@@ -108,7 +120,7 @@
 |末端接口板|V1.8.9|
 |API|V4.2.9|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1`humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.12(release version)
 
@@ -120,7 +132,7 @@
 |末端接口板|V1.8.9|
 |API|V4.2.9|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1（humble） <br> V1.0.1（foxy）|
+|ROS2| V1.0.1`humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.11(release version)
 
