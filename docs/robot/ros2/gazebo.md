@@ -31,17 +31,23 @@ rm@rm-desktop:~$ ros2 launch rm_65_config gazebo_moveit_demo.launch.py
 ```
 ├── CMakeLists.txt                           #编译规则文件
 ├── config
-│   ├── gazebo_63_description.urdf.xacro     #63gazebo模型描述文件
-│   ├── gazebo_65_description.urdf.xacro     #65gazebo模型描述文件
-│   ├── gazebo_75_description.urdf.xacro     #75gazebo模型描述文件
-│   └── gazebo_eco65_description.urdf.xacro  #eco65gazebo模型描述文件
+│   ├── gazebo_63_description.urdf.xacro     #RML63gazebo模型描述文件
+│   ├── gazebo_65_description.urdf.xacro     #RM65gazebo模型描述文件
+│   ├── gazebo_75_description.urdf.xacro     #RM75gazebo模型描述文件
+│   ├── gazebo_eco65_description.urdf.xacro  #ECO65gazebo模型描述文件
+│   └── gazebo_gen72_description.urdf.xacro  #GEN72gazebo模型描述文件
+├── doc
+│   ├── rm_gazebo1.png
+│   └── rm_gazebo2.png
 ├── include
 │   └── rm_gazebo
 ├── launch
-│   ├── gazebo_63_demo.launch.py             #63gazebo启动文件
-│   ├── gazebo_65_demo.launch.py             #65gazebo启动文件
-│   ├── gazebo_75_demo.launch.py             #75gazebo启动文件
-│   └── gazebo_eco65_demo.launch.py          #eco65gazebo启动文件
+│   ├── gazebo_63_demo.launch.py             #RML63gazebo启动文件
+│   ├── gazebo_65_demo.launch.py             #RM65gazebo启动文件
+│   ├── gazebo_75_demo.launch.py             #RM75gazebo启动文件
+│   ├── gazebo_eco65_demo.launch.py          #ECO65gazebo启动文件
+│   └── gazebo_gen72_demo.launch.py          #GEN72gazebo启动文件
 ├── package.xml
-└── src
+├── README_CN.md
+└── README.md
 ```

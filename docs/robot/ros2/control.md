@@ -52,6 +52,9 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 
 ```
 ├── CMakeLists.txt                  #编译规则文件
+├── doc                             #辅助文档、图片存放文件夹
+│   ├── rm_control1.png             
+│   └── rm_control2.png             
 ├── include                         #依赖头文件文件夹
 │   ├── cubicSpline.h               #三次样条插值头文件
 │   └── rm_control.h                #rm_control头文件
@@ -59,8 +62,11 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 │   ├── rm_63_control.launch.py     #63启动文件
 │   ├── rm_65_control.launch.py     #65启动文件
 │   ├── rm_75_control.launch.py     #75启动文件
-│   └── rm_eco65_control.launch.py  #eco65启动文件
+│   ├── rm_eco65_control.launch.py  #eco65启动文件
+│   └── rm_gen72_control.launch.py  #gen72启动文件
 ├── package.xml                     #依赖声明文件
+├── README_CN.md
+├── README.md
 └── src
     └── rm_control.cpp              #代码源文件
 ```

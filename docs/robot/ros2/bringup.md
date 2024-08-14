@@ -57,19 +57,20 @@ rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_gazebo.launch.py
 
 ```
 ├── CMakeLists.txt                      #编译规则文件
-├── include
-│   └── rm_bringup
-├── launch
+├── doc                                 #辅助文档、图片存放文件夹
+│   ├── rm_bringup1.png                 #图片1
+│   ├── rm_bringup2.png                 #图片2
+│   └── rm_bringup3.png                 #图片3
+├── launch                              #启动文件
 │   ├── rm_63_bringup.launch.py         #63臂moveit2启动文件
-│   ├── rm_63_gazebo.launch.py          #63臂gazebo启动文件
 │   ├── rm_65_bringup.launch.py         #65臂moveit2启动文件
-│   ├── rm_65_gazebo.launch.py          #65臂gazebo启动文件
 │   ├── rm_75_bringup.launch.py         #75臂moveit2启动文件
 │   ├── rm_75_gazebo.launch.py          #75臂gazebo启动文件
 │   ├── rm_eco65_bringup.launch.py      #eco65臂moveit2启动文件
-│   └── rm_eco65_gazebo.launch.py       #eco65臂gazebo启动文件
-├── package.xml
-└── src
+│   └── rm_gen72_bringup.launch.py      #gen72臂moveit2启动文件
+├── package.xml                         #依赖说明文件
+├── README_CN.md                        #中文说明文档
+└── README.md                           #英文说明文档
 ```
 
 ## 3.rm_bringup话题说明

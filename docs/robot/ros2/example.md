@@ -157,19 +157,34 @@ rm@rm-desktop:~$ ros2 run rm_example movel_demo
 ## 2.rm_example功能包架构文件总览
 
 当前rm_driver功能包的文件构成如下。
+
+```
 ├── CMakeLists.txt                             #编译规则文件
-├── include
-│   └── rm_example
+├── doc
+│   ├── rm_example10.png
+│   ├── rm_example11.png
+│   ├── rm_example1.png
+│   ├── rm_example2.png
+│   ├── rm_example3.png
+│   ├── rm_example4.png
+│   ├── rm_example5.png
+│   ├── rm_example6.png
+│   ├── rm_example7.png
+│   ├── rm_example8.png
+│   └── rm_example9.png
 ├── launch
 │   ├── rm_6dof_movej.launch.py                 #6自由度MoveJ运动启动文件
 │   └── rm_7dof_movej.launch.py                 #7自由度MoveJ运动启动文件
 ├── package.xml
 └── src
     ├── api_ChangeWorkFrame_demo.cpp        #更换工作坐标系源文件
-    ├── api_Get_Arm_State_demo.cpp            #获得机械臂状态源文件
-    ├── api_MoveJ_demo.cpp                    #MoveJ运动源文件
-    ├── api_MoveJP_demo.cpp                  #MoveJP运动源文件
-    └── api_MoveL_demo.cpp                   #MoveL运动源文件
+    ├── api_Get_Arm_State_demo.cpp          #获得机械臂状态源文件
+    ├── api_MoveJ_demo.cpp                  #MoveJ运动源文件
+    ├── api_MoveJP_demo.cpp                 #MoveJP运动源文件
+    ├── api_MoveJP_Gen72_demo.cpp           #适用于Gen72的MoveJP运动源文件
+    └── api_MoveL_demo.cpp                  #MoveL运动源文件
+    └── api_MoveL_Gen72_demo.cpp            #适用于Gen72的MoveL运动源文件
+```
 
 ## 3.rm_example话题说明
 

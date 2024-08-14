@@ -72,7 +72,15 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 │   ├── rm_63_config.yaml          #63配置文件
 │   ├── rm_65_config.yaml          #65配置文件
 │   ├── rm_75_config.yaml          #75配置文件
-│   └── rm_eco65_config.yaml       #eco65配置文件
+│   ├── rm_eco65_config.yaml       #eco65配置文件
+│   └── rm_gen72_config.yaml       #gen725配置文件
+├── doc
+│   ├── RealMan Robotic Arm rm_driver Topic Detailed Description (ROS2).md
+│   ├── rm_driver1.png
+│   ├── rm_driver2.png
+│   ├── rm_driver3.png
+│   ├── rm_driver4.png
+│   └── 睿尔曼机械臂ROS2rm_driver话题详细说明.md
 ├── include                        #依赖头文件文件夹
 │   └── rm_driver
 │       ├── cJSON.h                #API头文件
@@ -91,13 +99,18 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 │   ├── rm_63_driver.launch.py     #63启动文件
 │   ├── rm_65_driver.launch.py     #65启动文件
 │   ├── rm_75_driver.launch.py     #75启动文件
-│   └── rm_eco65_driver.launch.py  #eco65启动文件
+│   ├── rm_eco65_driver.launch.py  #eco65启动文件
+│   └── rm_gen72_driver.launch.py  #gen72启动文件
 ├── lib
 │   ├── libRM_Service.so -> libRM_Service.so.1.0.0        #API库文件
 │   ├── libRM_Service.so.1 -> libRM_Service.so.1.0.0      #API库文件
 │   ├── libRM_Service.so.1.0 -> libRM_Service.so.1.0.0    #API库文件
-│   └── libRM_Service.so.1.0.0                            #API库文件
+│   ├── libRM_Service.so.1.0.0                            #API库文件
+│   ├── linux_arm_service_release_v4.3.2.t1.tar.bz2       #API库文件
+│   └── linux_x86_service_release_v4.3.2.t1.tar.bz2       #API库文件
 ├── package.xml                                           #依赖声明文件
+├── README_CN.md
+├── README.md
 └── src
     └── rm_driver.cpp                                     #驱动代码源文件
 ```

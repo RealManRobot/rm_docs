@@ -115,7 +115,7 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 │   │   ├── static_virtual_joint_tfs.launch.py
 │   │   └── warehouse_db.launch.py
 │   └── package.xml
-├── rm_75_config                #75机械臂moveit2功能包（文件解释参考63）
+├── rm_75_config                                      #75机械臂moveit2功能包（文件解释参考63）
 │   ├── CMakeLists.txt
 │   ├── config
 │   │   ├── initial_positions.yaml
@@ -140,7 +140,32 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 │   │   ├── static_virtual_joint_tfs.launch.py
 │   │   └── warehouse_db.launch.py
 │   └── package.xml
-└── rm_eco65_config              #eco65机械臂moveit2功能包（文件解释参考63）
+└── rm_eco65_config                                    #eco65机械臂moveit2功能包（文件解释参考63）
+│    ├── CMakeLists.txt
+│    ├── config
+│    │   ├── initial_positions.yaml
+│    │   ├── joint_limits.yaml
+│    │   ├── kinematics.yaml
+│    │   ├── moveit_controllers.yaml
+│    │   ├── moveit.rviz
+│    │   ├── pilz_cartesian_limits.yaml
+│    │   ├── rm_eco65_description.ros2_control.xacro
+│    │   ├── rm_eco65_description.srdf
+│    │   ├── rm_eco65_description.urdf.xacro
+│    │   └── ros2_controllers.yaml
+│    ├── launch
+│    │   ├── demo.launch.py
+│    │   ├── gazebo_moveit_demo.launch.py
+│    │   ├── move_group.launch.py
+│    │   ├── moveit_rviz.launch.py
+│    │   ├── real_moveit_demo.launch.py
+│    │   ├── rsp.launch.py
+│    │   ├── setup_assistant.launch.py
+│    │   ├── spawn_controllers.launch.py
+│    │   ├── static_virtual_joint_tfs.launch.py
+│    │   └── warehouse_db.launch.py
+│    └── package.xml
+└── rm_gen72_config             #gen72机械臂moveit2功能包（文件解释参考63）
     ├── CMakeLists.txt
     ├── config
     │   ├── initial_positions.yaml
@@ -149,9 +174,9 @@ rm@rm-desktop:~$ ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
     │   ├── moveit_controllers.yaml
     │   ├── moveit.rviz
     │   ├── pilz_cartesian_limits.yaml
-    │   ├── rm_eco65_description.ros2_control.xacro
-    │   ├── rm_eco65_description.srdf
-    │   ├── rm_eco65_description.urdf.xacro
+    │   ├── rm_gen72_description.ros2_control.xacro
+    │   ├── rm_gen72_description.srdf
+    │   ├── rm_gen72_description.urdf.xacro
     │   └── ros2_controllers.yaml
     ├── launch
     │   ├── demo.launch.py
