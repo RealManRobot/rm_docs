@@ -1,4 +1,4 @@
-#  ModbusRTU模式使用示例
+#  <p class="hidden">Demo演示(C)：</p>ModbusRTU模式使用示例
 
 ## **1. 项目介绍**
 本项目演示如何配置RS485端口为ModbusRTU模式，并通过接口与连接的外设进行读写操作，示例操作流程如下：

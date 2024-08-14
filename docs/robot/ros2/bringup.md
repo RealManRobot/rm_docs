@@ -1,4 +1,4 @@
-# rm_bringup功能包
+# <p class="hidden">ROS2：</p>rm_bringup功能包
 
 rm_bringup功能包为实现多个launch文件同时运行所设计的功能包，使用该功能包可用一条命令实现多个节点结合的复杂功能的启动。
 本节将围绕以下目的进行详细介绍：

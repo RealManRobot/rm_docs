@@ -1,4 +1,4 @@
-# 机械臂力控示例
+# <p class="hidden">Demo演示(python)：</p>机械臂力控示例
 
 ## 1. 项目介绍
 
