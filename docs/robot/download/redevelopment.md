@@ -2,19 +2,6 @@
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择
 
-# JSON 协议
-
-<div class="wrap">
-    <div class="d-flex">
-        <div class="wrap-item1">
-            <p>睿尔曼基于json通信协议提供了下载安装包</p>
-            <p>下载地址： <a href="https://github.com/lucaong/minisearch/">github地址</a></p>
-        </div>
-        <div class="wrap-item2">
-            <p>版本号：V1.1.0</p>
-        </div>
-    </div>
-</div>
 
 # SDK
 
@@ -23,7 +10,7 @@
         <div class="wrap-item1">
             <h2>API 2</h2>
             <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
-            <p>下载地址： <a href="https://github.com/lucaong/minisearch/">github地址</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/RM_API2">github地址</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V1.1.0</p>
