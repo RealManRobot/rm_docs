@@ -842,7 +842,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros/bringup/",
           },
           {
-            text: "路径点透传到rm_driverd",
+            text: "rm_driver与moveit透传通信",
             link: "/robot/ros/control",
           },
           {
@@ -884,7 +884,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/bringup",
           },
           {
-            text: "路径点透传到rm_driverd",
+            text: "rm_driver与moveit透传通信",
             link: "/robot/ros2/control",
           },
           {
