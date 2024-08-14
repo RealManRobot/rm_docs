@@ -924,6 +924,32 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
+        text: "D-H模型及参数",
+        collapsed: true,
+        items: [
+          {
+            text: "ECO65系列D-H模型及参数",
+            link: "/robot/DH/ECO65系列D-H参数模型及参数",
+          },
+          {
+            text: "GEN72系列D-H模型及参数",
+            link: "/robot/DH/GEN72系列D-H参数模型及参数",
+          },
+          {
+            text: "RM65系列D-H模型及参数",
+            link: "/robot/DH/RM65系列D-H参数模型及参数",
+          },
+          {
+            text: "RM75系列D-H模型及参数",
+            link: "/robot/DH/RM75系列D-H参数模型及参数",
+          },
+          {
+            text: "RML63系列D-H模型及参数",
+            link: "/robot/DH/RML63系列D-H参数模型及参数",
+          },
+        ],
+      },
+      {
         text: "常见问题",
         collapsed: true,
         items: [
