@@ -254,3 +254,6 @@ img{
 a{
     target-name: _blank;
 }
+.vp-doc th{
+    text-align: center !important;
+}
