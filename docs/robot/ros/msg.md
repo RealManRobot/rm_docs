@@ -1,12 +1,12 @@
-# rm\_ msg功能包说明
+# <p class="hidden">ROS：</p>rm_ msg功能包说明
 
-rm\_msgs功能包的主要作用为为机械臂在ROS的框架下运行提供必要的消息文件，该功能包并没有可执行的使用命令。在下文中将通过以下几个方面详细介绍该功能包。
+rm_msgs功能包的主要作用为为机械臂在ROS的框架下运行提供必要的消息文件，该功能包并没有可执行的使用命令。在下文中将通过以下几个方面详细介绍该功能包。
 
 - 功能包架构说明:熟悉功能包中的文件构成及作用。
 
-代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_msgs](https://github.com/RealManRobot/rm_robot/tree/main/rm_msgs)。
+代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_msgs](https://github.com/RealManRobot/rm_robot/tree/main/rm_msgs)。
 
-## 1.rm\_msgs功能包架构说明
+## 1.rm_msgs功能包架构说明
 
 ```
     ├── CMakeLists.txt                #编译规则文件

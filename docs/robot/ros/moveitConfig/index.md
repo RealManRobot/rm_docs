@@ -1,6 +1,6 @@
-# rm\_moveit\_config说明
+# <p class="hidden">ROS：</p>rm_moveit_config说明
 
-rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，该功能包的主要作用为调用官方的moveit框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit的配置和启动文件，通过该功能包我们可以实现moveit控制虚拟机械臂和控制真实机械臂。
+rm_moveit_config文件夹为实现moveit控制真实机械臂的功能包，该功能包的主要作用为调用官方的moveit框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit的配置和启动文件，通过该功能包我们可以实现moveit控制虚拟机械臂和控制真实机械臂。
 
 1. 功能包使用。
 2. 功能包架构说明。
@@ -14,7 +14,7 @@ rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，�
 
 代码链接：[https://github.com/RealManRobot/rm/robot/tree/main/rm/moveit/config](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config。)
 
-## 1.rm\_moveit\_config使用
+## 1.rm_moveit_config使用
 
 ### 1.1moveit控制虚拟机械臂
 
@@ -24,7 +24,7 @@ rm\_moveit\_config文件夹为实现moveit控制真实机械臂的功能包，�
 rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
-在实际使用时需要将以上的`<arm\_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75六维力的型号有65_6f、eco65_6f、75_6f、gen72。
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75六维力的型号有65_6f、eco65_6f、75_6f、gen72。
 
 63机械臂需要使用以下指令启动，63的六维力型号为63_6f。
 ```
@@ -85,7 +85,7 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 
 ### 2.1功能包文件总览
 
-当前rm\_driver功能包的文件构成如下。
+当前rm_driver功能包的文件构成如下。
 ```
     ├── rm_65_moveit_config              #65机械臂moveit功能包
     │   ├── CMakeLists.txt                   #65机械臂moveit功能包编译规则
@@ -266,7 +266,7 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
         └── package.xml
 ```
 
-## 3.rm\_moveit\_config话题说明
+## 3.rm_moveit_config话题说明
 
 关于moveit的话题说明，为使其话题结构更加清晰明白在这里以节点话题的数据流图的方式进行查看和讲解。
 
@@ -284,6 +284,6 @@ rm@rm-desktop:~$ rosrun rqt_graph rqt_graph
 
 由图可知，rm_driver发布的/joint_states话题在持续被/robot_state_publiser节点和/move_group节点订阅。/robot_state_publiser接收/joint_states是为了持续发布关节间的TF变换；/move_group是moveit的相关节点，moveit在规划时也需要实时获取当前机械臂的关节状态信息，所以也订阅了该话题。
 
-由图可知rm_driver还订阅了rm\_control的/rm\_driver/jointPos话题，该话题是机械臂透传功能的话题，通过该话题rm\_control将规划的关节点位发布给rm\_driver节点控制机械臂进行运动。
+由图可知rm_driver还订阅了rm_control的/rm_driver/jointPos话题，该话题是机械臂透传功能的话题，通过该话题rm_control将规划的关节点位发布给rm_driver节点控制机械臂进行运动。
 
-rm\_control为rm\_driver与moveit之间通信的桥梁，其通过/rm\_group /follow\_joint\_trajectory动作与/move\_group进行通信，获取规划点，并进行插值运算，将插值之后的数据通过透传的方式给到rm\_driver。
+rm_control为rm_driver与moveit之间通信的桥梁，其通过/rm_group /follow_joint_trajectory动作与/move_group进行通信，获取规划点，并进行插值运算，将插值之后的数据通过透传的方式给到rm_driver。

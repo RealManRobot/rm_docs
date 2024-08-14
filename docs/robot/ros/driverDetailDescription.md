@@ -1,4 +1,4 @@
-# ROS调用机械臂JSON协议
+# <p class="hidden">ROS：</p>ROS调用机械臂JSON协议
 
 为了方便用户通过ROS1控制机械臂，睿尔曼提供了基于JSON的ROS1功能包，可以通过ROS话题查询和控制机械臂。在实际使用机械臂时，用户可通过以太网口与机械臂建立通信控制机械臂。
 
@@ -1420,10 +1420,10 @@ rostopic pub /rm_driver/ForcePositionMoveJiont_Cmd rm_msgs/Force_Position_Move_J
 
 |  功能描述  |  开启透传力位混合控制补偿模式  |
 | --- | --- |
-|  参数说明  |  std\_msgs::Empty  |
-|  命令示例  |  rostopic pub /rm\_driver/StopForcePositionMove\_Cmd std\_msgs/Empty "{}"  |
-|  返回值参数说明  |  std\_msgs::Bool  成功返回：true；失败返回：false。  |
-|  返回值查看  |  rostopic echo /rm\_driver/StopForcePositionMove\_result  |
+|  参数说明  |  std_msgs::Empty  |
+|  命令示例  |  rostopic pub /rm_driver/StopForcePositionMove_Cmd std_msgs/Empty "{}"  |
+|  返回值参数说明  |  std_msgs::Bool  成功返回：true；失败返回：false。  |
+|  返回值查看  |  rostopic echo /rm_driver/StopForcePositionMove_result  |
 
 ## 3.19升降机构
 
@@ -1654,8 +1654,8 @@ rostopic echo /joint_states
 
 |  功能描述  |  机械臂弧度数据  |
 | --- | --- |
-|  参数说明  |  sensor\_msgs::msg::JointState</br>builtin\_interfaces/Time stamp</br>int32 sec：时间信息，秒。</br>uint32 nanosec：时间信息，纳秒。  </br>string frame\_id：坐标系名称。</br> string\[\] name：关节名称。</br> float64\[\] position：关节弧度信息。 </br>float64\[\] velocity：关节速度信息。（暂未使用） </br>float64\[\] effort：关节受力信息。（暂未使用）  |
-|  订阅命令  |  rostopic echo /joint\_states  |
+|  参数说明  |  sensor_msgs::msg::JointState</br>builtin_interfaces/Time stamp</br>int32 sec：时间信息，秒。</br>uint32 nanosec：时间信息，纳秒。  </br>string frame_id：坐标系名称。</br> string[] name：关节名称。</br> float64[] position：关节弧度信息。 </br>float64[] velocity：关节速度信息。（暂未使用） </br>float64[] effort：关节受力信息。（暂未使用）  |
+|  订阅命令  |  rostopic echo /joint_states  |
 
 #### 位姿信息`geometry_msgs::msg::Pose Point`
 

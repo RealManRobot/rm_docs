@@ -1,4 +1,4 @@
-# rm_driver功能包说明
+# <p class="hidden">ROS：</p>rm_driver功能包说明
 
 rm_driver功能包在机械臂ROS功能包中是十分重要的，该功能包实现了通过ROS与机械臂进行通信控制机械臂的功能，在下文中将通过以下几个方面详细介绍该功能包。
 
@@ -12,7 +12,7 @@ rm_driver功能包在机械臂ROS功能包中是十分重要的，该功能包�
 - 熟悉功能包中的文件构成及作用。
 - 熟悉功能包相关的话题，方便开发和使用。
 
-Github代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_driver](https://github.com/RealManRobot/rm_robot/tree/main/rm_driver)
+Github代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_driver](https://github.com/RealManRobot/rm_robot/tree/main/rm_driver)
 
 ## 1.rm_driver功能包使用
 
@@ -63,23 +63,23 @@ Github代码链接：[https://github.com/RealManRobot/rm\_robot/tree/main/rm\_dr
 
 其中主要有以下几个参数。
 
-Arm\_IP：改参数代表机械臂当前的IP
-Arm\_Port：设置TCP连接时的端口。
-Arm\_Type：该参数代表机械臂当前的型号，可以选择的参数有RM\_65（65系列）、RM\_eco65（ECO65系列）、RM\_63（63系列）、RM\_75（75系列）。
-Arm\_Dof: 机械臂自由度设置。6为6自由度，7为7自由度。
+Arm_IP：改参数代表机械臂当前的IP
+Arm_Port：设置TCP连接时的端口。
+Arm_Type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RM_63（63系列）、RM_75（75系列）。
+Arm_Dof: 机械臂自由度设置。6为6自由度，7为7自由度。
 Follow：透传跟随效果参数。false：低跟随，true：高跟随。
-Udp\_IP: 设置udp主动上报目标IP。
-Udp\_cycle：udp主动上报周期，需要是5的倍数，最低为5ms(200Hz)。
-Udp\_Port：设置udp主动上报端口。
-Udp\_force\_coordinate：设置系统受力时六维力的基准坐标，0为传感器坐标系（原始数据） 1为当前工作坐标系 2为当前工具坐标系。
+Udp_IP: 设置udp主动上报目标IP。
+Udp_cycle：udp主动上报周期，需要是5的倍数，最低为5ms(200Hz)。
+Udp_Port：设置udp主动上报端口。
+Udp_force_coordinate：设置系统受力时六维力的基准坐标，0为传感器坐标系（原始数据） 1为当前工作坐标系 2为当前工具坐标系。
 
 再实际使用时，我们选择对应的launch文件启动时会自动选择正确的型号，若有特殊要求可在此处进行相应的参数修改，修改之后需要重新启动该节点，之后修改的配置才会生效。
 
-## 2.rm\_driver功能包架构说明
+## 2.rm_driver功能包架构说明
 
 ### 2.1 功能包文件总览
 
-当前rm\_driver功能包的文件构成如下。
+当前rm_driver功能包的文件构成如下。
 
 ```
     ├── CMakeLists.txt                #编译规则文件
@@ -96,9 +96,9 @@ Udp\_force\_coordinate：设置系统受力时六维力的基准坐标，0为传
         └── rm_robot.h                 #rm_driver节点头文件
 ```
 
-## 3.rm\_driver话题说明
+## 3.rm_driver话题说明
 
-rm\_driver的话题较多，可以通过如下指令了解其话题信息。
+rm_driver的话题较多，可以通过如下指令了解其话题信息。
 
 ![alt text](image-1.png)
 

@@ -1,6 +1,6 @@
-# rm_description功能包说明
+# <p class="hidden">ROS：</p>rm_description功能包说明
 
-rm\_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
+rm_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
 
 1. 功能包使用。
 2. 功能包架构说明。
@@ -42,11 +42,11 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 
 ![alt text](image-2.png)
 
-## 2.rm\_description功能包架构说明
+## 2.rm_description功能包架构说明
 
 ### 2.1功能包文件总览
 
-当前rm\_driver功能包的文件构成如下。
+当前rm_driver功能包的文件构成如下。
 
 ```ros
 
@@ -208,8 +208,8 @@ rm@rm-desktop:~$ roslaunch rm_description rm_65_display.launch
 
 我们主要关注以下几个话题。
 
-/joint\_states:代表其订阅的话题，其中的/joint\_states代表机械臂当前的状态，我们的rm\_driver功能包运行时会发布该话题，这样rviz中的模型就会根据实际的机械臂状态进行运动。在运行rm\_<arm\_type>\_display.launch时我们实际上发布了一个模拟的/joint\_states话题，以供robot\_state\_publisher进行订阅。
+/joint_states:代表其订阅的话题，其中的/joint_states代表机械臂当前的状态，我们的rm_driver功能包运行时会发布该话题，这样rviz中的模型就会根据实际的机械臂状态进行运动。在运行rm_<arm_type>_display.launch时我们实际上发布了一个模拟的/joint_states话题，以供robot_state_publisher进行订阅。
 
-Publishers: 代表其当前发布的话题，其最主要发布的话题为/tf和/tf\_static，这两个话题描述了机械臂关节与关节之间的坐标变换关系，也就是TF变换。
+Publishers: 代表其当前发布的话题，其最主要发布的话题为/tf和/tf_static，这两个话题描述了机械臂关节与关节之间的坐标变换关系，也就是TF变换。
 
 剩余话题和服务使用场景较少，大家可自行了解。

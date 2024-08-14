@@ -1,6 +1,6 @@
-# rm\_bringup功能包
+# <p class="hidden">ROS：</p>rm_bringup功能包
 
-rm\_bringup功能包为实现多个launch文件同时运行所设计的功能包，使用该功能包可用一条命令实现多个节点结合的复杂功能的启动。
+rm_bringup功能包为实现多个launch文件同时运行所设计的功能包，使用该功能包可用一条命令实现多个节点结合的复杂功能的启动。
 
 1. 功能包使用。
 2. 功能包架构说明。
@@ -44,13 +44,13 @@ rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 
 ![alt text](image.png)
 
-实际该launch文件启动的为moveit控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看《rm\_moveit\_config详解》相关内容。
+实际该launch文件启动的为moveit控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看《rm_moveit_config详解》相关内容。
 
-## 3.rm\_bringup功能包架构说明
+## 3.rm_bringup功能包架构说明
 
 ### 3.1功能包文件总览
 
-当前rm\_driver功能包的文件构成如下。
+当前rm_driver功能包的文件构成如下。
 
 ```
     ├── CMakeLists.txt                   #编译规则文件
@@ -66,6 +66,6 @@ rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
     └── package.xml
 ```
 
-## 4.rm\_bringup话题说明
+## 4.rm_bringup话题说明
 
-该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit相关话题可查看《rm\_moveit\_config详解》相关内容。
+该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit相关话题可查看《rm_moveit_config详解》相关内容。
