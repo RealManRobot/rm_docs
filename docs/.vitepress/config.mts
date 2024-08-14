@@ -12,6 +12,9 @@ export default defineConfig({
       lazyLoading:true
     }
   },
+  sitemap:{
+    hostname: 'https://develop.realman-robotics.com/'
+  },
   lastUpdated: true,
   head,
   themeConfig,
