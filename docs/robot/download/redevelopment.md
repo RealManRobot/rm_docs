@@ -2,6 +2,20 @@
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择
 
+# JSON协议
+
+<div class="wrap">
+    <div class="d-flex">
+        <div class="wrap-item1">
+            <h2>API 2</h2>
+            <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs" target="_blank">JSON协议（github）</a></p>
+        </div>
+        <div class="wrap-item2">
+            <p>版本号：V3.7.2</p>
+        </div>
+    </div>
+</div>
 
 # SDK
 
@@ -10,10 +24,10 @@
         <div class="wrap-item1">
             <h2>API 2</h2>
             <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
-            <p>下载地址： <a href="https://github.com/RealManRobot/RM_API2">github地址</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/RM_API2" target="_blank">API2（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <p>版本号：V1.1.0</p>
+            <p>版本号：V1.0.0</p>
         </div>
     </div>
 </div>
@@ -22,10 +36,10 @@
         <div class="wrap-item1">
             <h2>API</h2>
             <p>API I睿尔曼将继续为您更新维护至2024年年底。2025年后，您可以继续使用API，但睿尔曼将停止维护不再升级。</p>
-            <p>下载地址： <a href="https://github.com/lucaong/minisearch/">github地址</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/RM_API" target="_blank">API（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <p>版本号：V1.1.0</p>
+            <p>版本号：V4.3.3</p>
         </div>
     </div>
 </div>
@@ -37,7 +51,7 @@
         <div class="wrap-item1">
             <h2>ROS 2</h2>
             <p>当您使用ROS对机械臂进行操控时，推荐您优先使用ROS2。</p>
-            <p>下载地址： <a href="https://github.com/lucaong/minisearch/">github地址</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/ros2_rm_robot" target="_blank">ROS2（github）</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V1.1.0</p>
@@ -49,10 +63,10 @@
         <div class="wrap-item1">
             <h2>ROS</h2>
             <p>睿尔曼基于ROS的规范同时提供了ROS的下载安装包。</p>
-            <p>下载地址： <a href="https://github.com/lucaong/minisearch/">github地址</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">ROS（github）</a></p>
         </div>
         <div class="wrap-item2">
-            <p>版本号：V1.1.0</p>
+            <p>版本号：V2.1.0</p>
         </div>
     </div>
 </div>

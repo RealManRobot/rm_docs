@@ -111,7 +111,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    运行结果如下：
 
 运行效果如下所示：
-![demo_gripper](./gripper.gif)
+![demo_gripper](./grippers.gif)
 
 
 

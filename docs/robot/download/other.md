@@ -26,7 +26,7 @@
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
         </div>
     </div>
-    </div>
+</div>
 
 ## 3D 模型和尺寸图
 
@@ -64,7 +64,7 @@
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
-            <h2>RM63系列</h2>
+            <h2>RML63系列</h2>
         </div>
         <div class="wrap-item2">
             <button class="btnStyle" @click="handleDownload(0)">下载</button>
@@ -83,16 +83,6 @@
     </div>
 </div>
 
-<div class="wrap">
-    <div class="d-flex">
-        <div class="wrap-item1">
-            <h2>ECO62系列</h2>
-        </div>
-        <div class="wrap-item2">
-            <button class="btnStyle" @click="handleDownload(0)">下载</button>
-        </div>
-    </div>
-</div>
 
 <div class="wrap">
     <div class="d-flex">

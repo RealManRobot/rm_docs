@@ -251,3 +251,6 @@ img{
 .hidden{
     display:none;
 }
+a{
+    target-name: _blank;
+}
