@@ -33,8 +33,8 @@
   
 - **动态链接库（DLLs）**：包含了控制机械臂所需的函数和接口。用户需要在项目中正确配置这些DLLs的路径及版本，以便编译器能够找到并链接它们。包含以下版本：
 
-  - `32bit`：对应Windows 32位编译器（例如MSVC2017 32bit）使用的库，分为`release/debug`版本
-  - `64bit`：对应Windows 64位编译器（例如MSVC2017 64bit）使用的库，分为`release/debug`版本
+  - `32bit`：对应Windows 32位编译器（例如MSVC2017 32bit）使用的库
+  - `64bit`：对应Windows 64位编译器（例如MSVC2017 64bit）使用的库
 
 ### 3.2 Linux 环境使用说明
 
@@ -51,8 +51,8 @@
 
 - **头文件**：与Windows 头文件相同，详见Windows环境的开发包说明
 - **共享库（.so 文件）**：包含了控制机械臂所需的函数和接口。用户需要确保这些库文件在编译和运行时都能被系统找到。包含以下版本的库：
-  - `linux_x86`：包含`release/debug`版本
-  - `linux_arm`：包含`release/debug`版本
+  - `linux_x86_release`版本
+  - `linux_arm_release`版本
 
 ## 4.使用示例-MSVC
 
