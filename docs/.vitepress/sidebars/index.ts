@@ -12,6 +12,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "入门指南",
+        collapsed: true,
         items: [
           // {
           //   text: "用户手册",
