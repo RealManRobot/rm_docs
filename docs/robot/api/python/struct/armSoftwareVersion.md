@@ -1,4 +1,4 @@
-# 机械臂软件版本信息的结构体`rm_arm_software_version_t`
+# <p class="hidden">Python: </p>机械臂软件版本信息的结构体`rm_arm_software_version_t`
 
 ## 属性
 

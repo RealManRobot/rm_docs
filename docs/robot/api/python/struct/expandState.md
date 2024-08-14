@@ -1,4 +1,4 @@
-# 表示扩展关节状态的结构体`rm_expand_state_t`
+# <p class="hidden">Python: </p>表示扩展关节状态的结构体`rm_expand_state_t`
 
 ## 属性
 

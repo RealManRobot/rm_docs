@@ -1,4 +1,4 @@
-# 位置结构体`rm_position_t`
+# <p class="hidden">Python: </p>位置结构体`rm_position_t`
 
 这个结构体通常用于表示机器人、物体或其他任何可以在三维空间中定位的点的位置。
 

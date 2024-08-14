@@ -1,4 +1,4 @@
-# 全局路点管理`GlobalWaypointManage`
+# <p class="hidden">Python: </p>全局路点管理`GlobalWaypointManage`
 
 可用于新增、查询或者更新全局路点。下面是全局路点管理`GlobalWaypointManage`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

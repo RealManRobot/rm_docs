@@ -1,4 +1,4 @@
-# 机械臂全局路点列表获取结构体`rm_waypoint_list_t`
+# <p class="hidden">Python: </p>机械臂全局路点列表获取结构体`rm_waypoint_list_t`
 
 ## 属性
 

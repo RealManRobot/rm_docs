@@ -1,4 +1,4 @@
-# 关节配置`JointConfigSettings`
+# <p class="hidden">Python: </p>关节配置`JointConfigSettings`
 
 可用于配置关节的速度、加速度、限位、使能、零位、清除错误等。下面是关节配置`JointConfigSettings`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

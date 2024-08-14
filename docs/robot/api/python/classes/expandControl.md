@@ -1,4 +1,4 @@
-# 通用扩展关节配置`ExpandControl`
+# <p class="hidden">Python: </p>通用扩展关节配置`ExpandControl`
 
 可用于扩展关节控制。下面是扩展关节控制`ExpandControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

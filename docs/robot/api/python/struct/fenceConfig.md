@@ -1,4 +1,4 @@
-# 电子围栏参数结构体`rm_fence_config_t`
+# <p class="hidden">Python: </p>电子围栏参数结构体`rm_fence_config_t`
 
 ## 构造函数
 

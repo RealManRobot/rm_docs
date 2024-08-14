@@ -1,4 +1,4 @@
-# Modbus 配置`ModbusConfig`
+# <p class="hidden">Python: </p>Modbus 配置`ModbusConfig`
 
 可用于Modbus 配置，睿尔曼机械臂在控制器和末端接口板上各提供一个RS485通讯接口，这些接口可通过接口配置为标准的Modbus RTU模式。在Modbus RTU模式下，用户可通过提供的接口对连接在端口上的外设进行读写操作。下面是Modbus配置`ModbusConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

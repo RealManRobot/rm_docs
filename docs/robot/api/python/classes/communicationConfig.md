@@ -1,4 +1,4 @@
-# 通讯内容配置`CommunicationConfig`
+# <p class="hidden">Python: </p>通讯内容配置`CommunicationConfig`
 
 机械臂控制器可通过网口、WIFI、RS232-USB 接口和 RS485 接口与用户通信，用户使用时无需切换，可使用上述任一接口， 控制器收到指令后，若指令格式正确，则会通过相同的接口反馈数据。下面是配置通讯内容`CommunicationConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

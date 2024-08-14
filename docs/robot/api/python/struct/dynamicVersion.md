@@ -1,4 +1,4 @@
-# 动力学版本信息的结构体`rm_dynamic_version_t`
+# <p class="hidden">Python: </p>动力学版本信息的结构体`rm_dynamic_version_t`
 
 ## 属性
 

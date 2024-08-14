@@ -1,4 +1,4 @@
-# 机械臂所有状态参数结构体`rm_arm_all_state_t`
+# <p class="hidden">Python: </p>机械臂所有状态参数结构体`rm_arm_all_state_t`
 
 ## 属性
 

@@ -1,4 +1,4 @@
-# IO控制`IOConfig`
+# <p class="hidden">Python: </p>IO控制`IOConfig`
 
 可用于IO控制。下面是IO控制`IOConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
