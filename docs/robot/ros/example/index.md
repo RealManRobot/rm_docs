@@ -21,7 +21,7 @@ rm_bringup功能包为实现了一些基本的机械臂功能，通过该功能�
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
@@ -29,13 +29,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令运行我们更换工作坐标系的节点。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_ChangeWorkFrame_demo
+rosrun rm_demo api_ChangeWorkFrame_demo
 ```
 
 弹出以下指令代表更换成功。
@@ -47,7 +47,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_ChangeWorkFrame_demo
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
@@ -55,13 +55,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令运行我们更换工作坐标系的节点。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_ChangeToolFrame_demo
+rosrun rm_demo api_ChangeToolFrame_demo
 ```
 
 弹出以下指令代表更换成功。
@@ -73,7 +73,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_ChangeToolFrame_demo
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
@@ -81,13 +81,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令运行获得机械臂当前状态的节点。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_Get_Arm_State_demo
+rosrun rm_demo api_Get_Arm_State_demo
 ```
 
 弹出以下指令代表获取成功。
@@ -103,7 +103,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_Get_Arm_State_demo
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
@@ -111,13 +111,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_moveJ_demo _Arm_Dof:=6
+rosrun rm_demo api_moveJ_demo _Arm_Dof:=6
 ```
 
 命令中的_Arm_Dof代表机械当前的自由度信息，可以选的参数有6和7
@@ -125,7 +125,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveJ_demo _Arm_Dof:=6
 例如启动7轴的机械臂时需要使用如下指令。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
+rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
 ```
 
 运行成功后，机械臂的关节将发生转动，且界面将显示如下信息。
@@ -139,7 +139,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
@@ -147,13 +147,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_moveJ_P_demo
+rosrun rm_demo api_moveJ_P_demo
 ```
 
 执行成功后界面将出现如下提示，并且机械臂运动到指定位姿。
@@ -167,7 +167,7 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveJ_P_demo
 首先需要运行机械臂的底层驱动节点rm_driver。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
@@ -175,13 +175,13 @@ rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_65_driver.launch
+roslaunch rm_driver rm_65_driver.launch
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo api_moveL_demo
+rosrun rm_demo api_moveL_demo
 ```
 
 执行成功后界面将出现如下提示，并且机械臂将进行两次运动，首先通过MoveJP运动到指定位姿，之后通过MoveL进行关节运动。
@@ -195,13 +195,13 @@ rm@rm-desktop:~$ rosrun rm_demo api_moveL_demo
 首先需要运行虚拟机械臂的moveit控制节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
+roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
 
 ```
-rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
+roslaunch rml_63_moveit_config demo.launch
 ```
 
 其中<arm_type>可选择的型号有65、63、75、eco65。
@@ -209,7 +209,7 @@ rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
+roslaunch rm_65_moveit_config demo.launch
 ```
 
 节点启动成功后，弹出如下rviz界面。
@@ -227,7 +227,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 打开一个新的终端，执行以下命令启动场景规划节点
 
 ```
-rm@rm-desktop:~$ roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
+roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
 ```
 
 场景规划节点启动完成后提示点击rviz中RvizVisualToolsGui面板中的Next按钮开始运行程序。
@@ -243,19 +243,19 @@ rm@rm-desktop:~$ roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
 首先需要运行虚拟机械臂的moveit控制节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
+roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
 
 ```
-rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
+roslaunch rml_63_moveit_config demo.launch
 ```
 
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
+roslaunch rm_65_moveit_config demo.launch
 ```
 
 节点启动成功后，弹出如下rviz界面。
@@ -265,7 +265,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 再打开一个新的终端，执行以下命令启动避障规划节点：
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
+rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 ```
 
 其中<arm_type>可选择的型号有65、63、75、eco65。
@@ -281,19 +281,19 @@ rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 首先需要运行虚拟机械臂的moveit控制节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
+roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
 
 ```
-rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
+roslaunch rml_63_moveit_config demo.launch
 ```
 
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
+roslaunch rm_65_moveit_config demo.launch
 ```
 
 节点启动成功后，弹出如下rviz界面。
@@ -303,7 +303,7 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 再打开一个新的终端，执行以下命令运行pick_place_demo节点
 
 ```
-rm@rm-desktop:~$ rosrun rm_demo rm_<arm_type>_pick_place_demo
+rosrun rm_demo rm_<arm_type>_pick_place_demo
 ```
 
 其中<arm_type>可选择的型号有65、63、75、eco65。

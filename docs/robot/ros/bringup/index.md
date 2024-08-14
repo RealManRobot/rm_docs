@@ -21,7 +21,7 @@ rm_bringup功能包为实现多个launch文件同时运行所设计的功能包�
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_bringup功能包中的launch.py文件。
 
 ```ros
-rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
+roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、65_6f、63_6f、eco65_6f、75_6f、gen72。
@@ -37,7 +37,7 @@ rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch
 之后需要运行bringup节点。
 
 ```ros
-rm@rm-desktop:~$ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
+roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
 节点启动成功后，将弹出以下画面。
