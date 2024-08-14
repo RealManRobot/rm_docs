@@ -21,19 +21,19 @@ rm_moveit_config文件夹为实现moveit控制真实机械臂的功能包，该�
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_<arm_type>_moveit_config demo.launch
+roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75六维力的型号有65_6f、eco65_6f、75_6f、gen72。
 
 63机械臂需要使用以下指令启动，63的六维力型号为63_6f。
 ```
-rm@rm-desktop:~$ roslaunch rml_63_moveit_config demo.launch
+roslaunch rml_63_moveit_config demo.launch
 ```
 
 例如65机械臂的启动命令：
 ```
-rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
+roslaunch rm_65_moveit_config demo.launch
 ```
 
 节点启动成功后，将显示以下画面。
@@ -55,18 +55,18 @@ rm@rm-desktop:~$ roslaunch rm_65_moveit_config demo.launch
 首先运行底盘驱动节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
 之后需要运行中间功能包rm_control的相关节点。
 ```
-rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch.py
+roslaunch rm_control rm_<arm_type>_control.launch.py
 ```
 
 最终需要启动控制真实机械臂的moveit节点。
 
 ```
-rm@rm-desktop:~$ roslaunch rm_<arm_type>_config demo_realrobot.launch
+roslaunch rm_<arm_type>_config demo_realrobot.launch
 ```
 
 注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65_6f、eco65_6f、75_6f。
@@ -74,7 +74,7 @@ rm@rm-desktop:~$ roslaunch rm_<arm_type>_config demo_realrobot.launch
 注意在使用63时应使用如下启动指令，若使用六维力设备时，应将63更换为63_6f。
 
 ```
-rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
+roslaunch rml_63_config demo_realrobot.launch
 ```
 
 完成以上操作后将会出现以下界面，我们可以通过拖动控制球的方式控制机械臂运动。
@@ -273,7 +273,7 @@ rm@rm-desktop:~$ roslaunch rml_63_config demo_realrobot.launch
 在启动如上控制真实机器人的节点后可以运行如下指令查看当前话题的对接情况。
 
 ```
-rm@rm-desktop:~$ rosrun rqt_graph rqt_graph
+rosrun rqt_graph rqt_graph
 ```
 
 运行成功后界面将显示如下画面。

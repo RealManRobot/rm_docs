@@ -22,7 +22,9 @@ Github代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_driv
 
 当前的控制基于我们没有改变过机械臂的IP即当前机械臂的IP仍为192.168.1.18。
 
-    rm@rm-desktop:~$ roslaunch rm_driver rm_<arm_type>_driver.launch
+```
+roslaunch rm_driver rm_<arm_type>_driver.launch
+```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
