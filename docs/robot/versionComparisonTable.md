@@ -72,7 +72,7 @@
 |末端接口板|V1.8.9|
 |API|V4.3.0|
 |ROS1|V2.0.1|
-|ROS2| V1.0.1 `humble`） <br> V1.0.1`foxy`|
+|ROS2| V1.0.1 `humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.5.1(release version)
 
@@ -96,7 +96,7 @@
 |末端接口板|V1.8.9|
 |API|V4.3.0|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1`humble`） <br> V1.0.1`foxy`|
+|ROS2| V1.0.1`humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.14(release version)
 
@@ -108,7 +108,7 @@
 |末端接口板|V1.8.9|
 |API|V4.2.9|
 |ROS1|V2.0.0|
-|ROS2| V1.0.1`humble`） <br> V1.0.1`foxy`|
+|ROS2| V1.0.1`humble` <br> V1.0.1`foxy`|
 
 ## 控制器V1.4.13(release version)
 
