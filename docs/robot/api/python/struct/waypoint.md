@@ -1,4 +1,4 @@
-# 机械臂全局路点结构体`rm_waypoint_t`
+# <p class="hidden">Python: </p>机械臂全局路点结构体`rm_waypoint_t`
 
 ## 构造函数
 

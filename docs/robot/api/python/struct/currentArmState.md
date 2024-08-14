@@ -1,4 +1,4 @@
-# 机械臂当前状态的结构体`rm_current_arm_state_t`
+# <p class="hidden">Python: </p>机械臂当前状态的结构体`rm_current_arm_state_t`
 
 ## 属性
 

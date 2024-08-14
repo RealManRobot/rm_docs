@@ -1,4 +1,4 @@
-# UDP机械臂状态主动上报接口配置`rm_realtime_push_config_t`
+# <p class="hidden">Python: </p>UDP机械臂状态主动上报接口配置`rm_realtime_push_config_t`
 
 ## 属性
 

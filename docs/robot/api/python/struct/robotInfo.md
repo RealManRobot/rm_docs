@@ -1,4 +1,4 @@
-# 机械臂基本信息结构体`rm_robot_info_t`
+# <p class="hidden">Python: </p>机械臂基本信息结构体`rm_robot_info_t`
 
 ## 属性
 

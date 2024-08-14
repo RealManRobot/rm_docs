@@ -1,4 +1,4 @@
-# 算法库信息的结构体`rm_algorithm_version_t`
+# <p class="hidden">Python: </p>算法库信息的结构体`rm_algorithm_version_t`
 
 ## 属性
 

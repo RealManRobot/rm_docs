@@ -1,4 +1,4 @@
-# 表示控制器ctrl层软件信息的结构体`rm_ctrl_version_t`
+# <p class="hidden">Python: </p>表示控制器ctrl层软件信息的结构体`rm_ctrl_version_t`
 
 ## 属性
 

@@ -1,4 +1,4 @@
-# 力控数据结构体`rm_force_sensor_t`
+# <p class="hidden">Python: </p>力控数据结构体`rm_force_sensor_t`
 
 ## 属性
 

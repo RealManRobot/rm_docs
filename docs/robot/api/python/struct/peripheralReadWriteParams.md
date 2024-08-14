@@ -1,4 +1,4 @@
-# 读写外设数据参数结构体`rm_peripheral_read_write_params_t`
+# <p class="hidden">Python: </p>读写外设数据参数结构体`rm_peripheral_read_write_params_t`
 
 ## 属性
 

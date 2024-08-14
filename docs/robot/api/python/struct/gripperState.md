@@ -1,4 +1,4 @@
-# 夹爪状态结构体`rm_gripper_state_t`
+# <p class="hidden">Python: </p>夹爪状态结构体`rm_gripper_state_t`
 
 ## 属性
 

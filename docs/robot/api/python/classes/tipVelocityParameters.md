@@ -1,4 +1,4 @@
-# 机械臂运动参数配置`ArmTipVelocityParameters`
+# <p class="hidden">Python: </p>机械臂运动参数配置`ArmTipVelocityParameters`
 
 可用于设置、获取机械臂运动参数。下面是机械臂运动参数`ArmTipVelocityParameters`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 

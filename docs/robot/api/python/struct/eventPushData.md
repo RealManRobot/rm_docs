@@ -1,4 +1,4 @@
-# 表示机械臂到位等事件信息的结构体`rm_event_push_data_t`
+# <p class="hidden">Python: </p>表示机械臂到位等事件信息的结构体`rm_event_push_data_t`
 
 此结构体用于接收关于机械臂的各类事件信息，如规划轨迹到位、在线编程到位等。通过rm_get_arm_event_call_back接口注册回调函数处理本结构体数据。
 

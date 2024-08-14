@@ -1,4 +1,4 @@
-# 几何模型球体参数`rm_fence_config_sphere_t`
+# <p class="hidden">Python: </p>几何模型球体参数`rm_fence_config_sphere_t`
 
 ## 构造函数
 

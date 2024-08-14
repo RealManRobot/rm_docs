@@ -1,4 +1,4 @@
-# 机械臂连接控制`ArmRobotic`
+# <p class="hidden">Python: </p>机械臂连接控制`ArmRobotic`
 
 机械臂连接、断开、日志设置等操作。
 

@@ -1,4 +1,4 @@
-# 控制器plan 层软件信息的结构体`rm_planinfo_t`
+# <p class="hidden">Python: </p>控制器plan 层软件信息的结构体`rm_planinfo_t`
 
 ## 属性
 

@@ -1,4 +1,4 @@
-# 机械臂关节状态的结构体`rm_joint_status_t`
+# <p class="hidden">Python: </p>机械臂关节状态的结构体`rm_joint_status_t`
 
 ## 属性
 
