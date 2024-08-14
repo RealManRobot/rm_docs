@@ -1,4 +1,4 @@
-# <p class="hidden">ROS：</p>ROS调用机械臂JSON协议
+# <p class="hidden">ROS：</p>调用机械臂JSON协议
 
 为了方便用户通过ROS1控制机械臂，睿尔曼提供了基于JSON的ROS1功能包，可以通过ROS话题查询和控制机械臂。在实际使用机械臂时，用户可通过以太网口与机械臂建立通信控制机械臂。
 
