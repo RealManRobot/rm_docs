@@ -48,7 +48,7 @@ rm@rm-desktop: ~/ros2_ws$ colcon build
 
 ### 2.1功能包文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前rm_control功能包的文件构成如下。
 
 ```
 ├── CMakeLists.txt                  #编译规则文件

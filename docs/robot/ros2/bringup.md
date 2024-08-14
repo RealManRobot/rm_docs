@@ -53,7 +53,7 @@ rm@rm-desktop:~$ ros2 launch rm_bringup rm_65_gazebo.launch.py
 
 ### 2.1功能包文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前rm_bringup功能包的文件构成如下。
 
 ```
 ├── CMakeLists.txt                      #编译规则文件

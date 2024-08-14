@@ -156,7 +156,7 @@ rm@rm-desktop:~$ ros2 run rm_example movel_demo
 
 ## 2.rm_example功能包架构文件总览
 
-当前rm_driver功能包的文件构成如下。
+当前rm_example功能包的文件构成如下。
 
 ```
 ├── CMakeLists.txt                             #编译规则文件
