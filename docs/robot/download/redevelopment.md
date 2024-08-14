@@ -9,7 +9,7 @@
         <div class="wrap-item1">
             <h2>API 2</h2>
             <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs" target="_blank">JSON协议（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/tree/user_public/docs/robot/json" target="_blank">JSON协议（github）</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V3.7.2</p>
