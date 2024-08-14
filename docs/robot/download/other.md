@@ -9,7 +9,7 @@
         <div class="wrap-item1">
             <h2>快速使用手册</h2>
             <p>睿尔曼机器人快速使用手册V1.5  文件格式：PDF</p>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">快速使用手册（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CV1.5.pdf" target="_blank">快速使用手册（github）</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V2.1.0</p>
@@ -22,7 +22,7 @@
         <div class="wrap-item1">
             <h2>Web示教器用户手册</h2>
             <p>睿尔曼机器人Web示教器用户手册V1.5  文件格式：PDF</p>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">Web示教器用户手册（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BAWEB%E7%A4%BA%E6%95%99%E5%99%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-1.6.pdf" target="_blank">Web示教器用户手册（github）</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V2.1.0</p>
@@ -46,7 +46,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM65系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RM65系列（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RM65" target="_blank">RM65系列（github）</a></p>
         </div>
         <div class="wrap-item2">
             <!-- <p>版本号：V2.1.0</p> -->
@@ -57,7 +57,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM75系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RM75系列（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RM75" target="_blank">RM75系列（github）</a></p>
         </div>
         <div class="wrap-item2">
             <!-- <p>版本号：V2.1.0</p> -->
@@ -68,7 +68,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RML63系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">RML63系列（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RML63" target="_blank">RML63系列（github）</a></p>
         </div>
         <div class="wrap-item2">
             <!-- <p>版本号：V2.1.0</p> -->
@@ -79,7 +79,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>ECO65系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">ECO65系列（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/ECO65" target="_blank">ECO65系列（github）</a></p>
         </div>
         <div class="wrap-item2">
             <!-- <p>版本号：V2.1.0</p> -->
@@ -91,7 +91,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>GEN72系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_robot" target="_blank">GEN72系列（github）</a></p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/GEN72" target="_blank">GEN72系列（github）</a></p>
         </div>
         <div class="wrap-item2">
             <!-- <p>版本号：V2.1.0</p> -->
