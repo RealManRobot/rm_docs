@@ -1,4 +1,4 @@
-# rm_control功能包说明
+# <p class="hidden">ROS2：</p>rm_control功能包说明
 
 rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功能包，该功能包的主要作用为将moveit2规划好的路径点进行进一步的细分，将细分后的路径点以透传的方式给到rm_driver，实现机械臂的规划运行。
 这里将从以下三个方面整体介绍该功能包：

@@ -1,4 +1,4 @@
-# rm_gazebo功能包说明
+# <p class="hidden">ROS2：</p>rm_gazebo功能包说明
 
 rm_gazebo的主要作用是帮助我们实现机械臂Moveit2规划的仿真功能，我们将在Gazebo的仿真环境中搭建一个虚拟机械臂，然后通过Moveit2控制Gazebo中的虚拟机械臂。
 这里将从以下两个方面整体介绍该功能包：

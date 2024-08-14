@@ -1,6 +1,5 @@
-# 机械臂运动控制`ARM_MOVE_DEMO`
+# <p class="hidden">Demo演示(ROS2)：</p>机械臂运动控制`ARM_MOVE_DEMO`
 
----
 
 ## 1.项目介绍
 

@@ -1,4 +1,4 @@
-# rm_description功能包说明
+# <p class="hidden">ROS2：</p>rm_description功能包说明
 
 rm_description功能包为显示机器人模型和TF变换的功能包，通过该功能包，我们可以实现电脑中的虚拟机械臂与现实中的实际机械臂的联动的效果，在之后的moveit2的控制中我们也需要该功能包的支持。
 这里将从以下三个方面整体介绍该功能包：

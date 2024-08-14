@@ -1,4 +1,4 @@
-# rm_moveit2_config功能包说明
+# <p class="hidden">ROS2：</p>rm_moveit2_config功能包说明
 
 rm_moveit2_config是实现Moveit2控制真实机械臂的功能包，该功能包的主要作用为调用官方的Moveit2框架，结合我们机械臂本身的URDF生成适配于我们机械臂的moveit2的配置和启动文件，通过该功能包我们可以实现moveit2控制虚拟机械臂和控制真实机械臂。
 这里将从以下三个方面整体介绍该功能包：

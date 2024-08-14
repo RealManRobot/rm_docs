@@ -1,4 +1,4 @@
-# 获取机械臂状态`GET_ARM_STATE_DEMO`
+# <p class="hidden">Demo演示(ROS)：</p>获取机械臂状态`GET_ARM_STATE_DEMO`
 
 ## 1.项目介绍
 

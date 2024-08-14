@@ -1,4 +1,4 @@
-# rm_ros_interface功能包说明
+# <p class="hidden">ROS2：</p>rm_ros_interface功能包说明
 
 rm_ros_interface功能包的主要作用为RM机械臂在ROS2的框架下运行提供必要的消息文件，没有可执行的使用命令。
 这里将从以下三个方面整体介绍该功能包：
