@@ -20,7 +20,7 @@
 
 ## 3. 项目下载
 
-通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
+通过项目链接下载本项目工程文件到本地：[API_CONTROL_ARM_MOVE_DEMO](https://github.com/RealManRobot/rm_robot/tree/main/rm_arm_examples/control_arm_move)
 
 ## 4. 环境配置
 
@@ -64,28 +64,6 @@
     ```
     source ~/workspace_ws/devel/setup.bash
     ```
-
-4. demo功能包安装
-    新建工作空间和src文件，将ROS1文件放入src中
-    ```
-    mkdir -p ~/demo_ws/src
-    ```
-
-    进入工作空间
-    ```
-    cd ~/demo_ws/src
-    ```
-
-    编译control_arm_move功能包
-    ```
-    catkin build control_arm_move
-    ```
-
-    声明环境变量
-    ```
-    source ~/demo_ws/devel/setup.bash
-    ```
-
 
 ## 5. 快速使用
 

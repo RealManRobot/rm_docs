@@ -19,7 +19,7 @@
 
 ## 3. 项目下载
 
-通过项目链接下载本项目工程文件到本地：[wwwwwwwwwwwwwwwwwww]()
+通过项目链接下载本项目工程文件到本地：[ARM_FORCE_POSITION_CONTROL_DEMO](https://github.com/RealManRobot/rm_robot/tree/main/rm_arm_examples/force_position_control)
 
 ## 4. 环境配置
 
@@ -62,27 +62,6 @@
     再次声明环境变量
     ```
     source ~/workspace_ws/devel/setup.bash
-    ```
-
-4. demo功能包安装
-  新建工作空间和src文件，将ROS1文件放入src中
-    ```
-    mkdir -p ~/demo_ws/src
-    ```
-
-    进入工作空间
-    ```
-    cd ~/demo_ws/src
-    ```
-
-    编译force_position_control功能包
-    ```
-    catkin build force_position_control
-    ```
-
-    声明环境变量
-    ```
-    source ~/demo_ws/devel/setup.bash
     ```
 
 ## 5. 使用指南
