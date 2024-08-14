@@ -21,7 +21,7 @@
 
 ## 3.项目下载
 
-通过项目链接下载本项目工程文件到本地：[ARM_MOVE_DEMO](https://github.com/RealManRobot/ros2_rm_robot/tree/humble/rm_arm_examples/control_arm_move)
+通过项目链接下载本项目工程文件到本地：[ros2_rm_robot](https://github.com/RealManRobot/ros2_rm_robot/tree/humble)
 
 ## 4.环境配置
 
