@@ -25,9 +25,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "Demo演示",
+        collapsed: true,
         items: [
           {
-            text: "API(C、C++)演示",
+            text: "API(C、C++)示例",
             collapsed: true,
             items: [
               {
@@ -35,49 +36,49 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/demo/c/simpleProcess/readme",
               },
               {
-                text: "坐标系操作",
+                text: "坐标系操作示例",
                 link: "/robot/demo/c/coordinateSystem/readme",
               },
               {
-                text: "力控",
+                text: "力位混合控制示例",
                 link: "/robot/demo/c/forceControl/readme",
               },
               {
-                text: "抓取",
+                text: "末端控制夹爪示例",
                 link: "/robot/demo/c/gripper/readme",
               },
               {
-                text: "IO功能",
+                text: "IO端口使用示例",
                 link: "/robot/demo/c/IOControl/readme",
               },
               {
-                text: "升降机控制",
+                text: "升降机控制示例",
                 link: "/robot/demo/c/lift/readme",
               },
               {
-                text: "ModbusRTU",
+                text: "Modbus RTU使用示例",
                 link: "/robot/demo/c/modbusRTU/readme",
               },
               {
-                text: "样条曲线运动",
+                text: "样条曲线运动示例",
                 link: "/robot/demo/c/moves/readme",
               },
               {
-                text: "角度透传",
+                text: "关节角度透传示例",
                 link: "/robot/demo/c/movejCANFD/readme",
               },
               {
-                text: "在线编程",
+                text: "在线编程示例",
                 link: "/robot/demo/c/onlineProgram/readme",
               },
               {
-                text: "算法",
+                text: "算法示例",
                 link: "/robot/demo/c/algoInterface/readme",
               },
             ],
           },
           {
-            text: "API(Python)演示",
+            text: "API(Python)示例",
             collapsed: true,
             items: [
               {
@@ -85,53 +86,53 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/demo/python/simpleProcess/readme",
               },
               {
-                text: "坐标系操作",
+                text: "坐标系操作示例",
                 link: "/robot/demo/python/coordinateSystem/readme",
               },
               {
-                text: "机械臂版本操作",
+                text: "机械臂版本操作示例",
                 link: "/robot/demo/python/doubleRoboticArm/readme",
               },
               {
-                text: "力控",
+                text: "力位混合控制示例",
                 link: "/robot/demo/python/forceControl/readme",
               },
               {
-                text: "抓取",
+                text: "末端控制夹爪示例",
                 link: "/robot/demo/python/gripper/readme",
               },
               {
-                text: "IO功能",
+                text: "IO端口使用示例",
                 link: "/robot/demo/python/IOControl/readme",
               },
               {
-                text: "升降机控制",
+                text: "升降机控制示例",
                 link: "/robot/demo/python/lift/readme",
               },
               {
-                text: "ModbusRTU",
+                text: "Modbus RTU使用示例",
                 link: "/robot/demo/python/modbusRTU/readme",
               },
               {
-                text: "样条曲线运动",
+                text: "样条曲线运动示例",
                 link: "/robot/demo/python/moves/readme",
               },
               {
-                text: "角度透传",
+                text: "关节角度透传示例",
                 link: "/robot/demo/python/movejCANFD/readme",
               },
               {
-                text: "在线编程",
+                text: "在线编程示例",
                 link: "/robot/demo/python/onlineProgram/readme",
               },
               {
-                text: "算法",
+                text: "算法示例",
                 link: "/robot/demo/python/algoInterface/readme",
               },
             ],
           },
           {
-            text: "ROS演示",
+            text: "ROS示例",
             collapsed: true,
             items: [
               {
@@ -149,8 +150,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             ],
           },
           {
-            text: "ROS2演示",
-            collapsed: false,
+            text: "ROS2示例",
+            collapsed: true,
             items: [
               {
                 text: "Foxy",
@@ -197,54 +198,54 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "关节配置",
+            text: "关节配置指令集",
             link: "/robot/json/jointConfig",
           },
           {
-            text: "机械臂配置",
+            text: "机械臂配置指令集",
             link: "/robot/json/armConfig",
           },
           {
-            text: "运动配置",
+            text: "运动配置指令集",
             link: "/robot/json/motionConfig",
           },
           {
-            text: "系统配置",
+            text: "系统配置指令集",
             link: "/robot/json/systemConfig",
           },
           {
-            text: "升降机",
+            text: "升降机构（选配）配置指令集",
             link: "/robot/json/liftControl",
           },
           {
-            text: "通用扩展关节",
+            text: "通用扩展关节（选配）配置指令集",
             link: "/robot/json/expandControl",
           },
           {
-            text: "在线编程",
+            text: "在线编程配置指令集",
             link: "/robot/json/onlineProgram",
           },
           {
-            text: "udp主动上报",
+            text: "UDP 主动上报（第三代）配置指令集",
             link: "/robot/json/udpConfig",
           },
           {
-            text: "电子围栏和虚拟墙",
+            text: "电子围栏和虚拟墙配置指令集",
             link: "/robot/json/electronicFence",
           },
           {
-            text: "自碰撞安全检测",
+            text: "自碰撞安全检测（第三代）配置指令集",
             link: "/robot/json/selfCollision",
           },
           {
-            text: "错误码列表",
+            text: "附录：错误代码",
             link: "/robot/json/errorList",
           },
         ],
       },
       {
         text: "API(C、C++)",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "快速开始",
@@ -255,11 +256,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             collapsed: true,
             items: [
               {
-                text: "连接机械臂",
+                text: "连接机械臂配置",
                 link: "/robot/api/c/classes/roboticArm",
               },
               {
-                text: "在线编程",
+                text: "在线编程配置",
                 link: "/robot/api/c/classes/projectManagement",
               },
               {
@@ -271,11 +272,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/workCoordinateConfig",
               },
               {
-                text: "初始位置设置",
+                text: "初始位置配置",
                 link: "/robot/api/c/classes/armInitPosition",
               },
               {
-                text: "机械臂运动控制指令类",
+                text: "机械臂运动状态控制指令",
                 link: "/robot/api/c/classes/armMotionControl",
               },
               {
@@ -283,7 +284,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armState",
               },
               {
-                text: "机械臂示教指令类",
+                text: "机械臂示教指令",
                 link: "/robot/api/c/classes/armTeachMove",
               },
               {
@@ -291,27 +292,27 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armTipVelocityParameters",
               },
               {
-                text: "通讯配置",
+                text: "通讯内容配置",
                 link: "/robot/api/c/classes/communicationConfig",
               },
               {
-                text: "控制器IO配置及获取",
+                text: "控制器IO配置及查询",
                 link: "/robot/api/c/classes/controllerIOConfig",
               },
               {
-                text: "拖动示教",
+                text: "拖动示教配置",
                 link: "/robot/api/c/classes/dragTeach",
               },
               {
-                text: "末端工具IO控制",
+                text: "末端工具IO配置",
                 link: "/robot/api/c/classes/effectorIOConfig",
               },
               {
-                text: "通用扩展关节控制",
+                text: "通用扩展关节配置",
                 link: "/robot/api/c/classes/expandControl",
               },
               {
-                text: "末端传感器六维力",
+                text: "末端六维力配置",
                 link: "/robot/api/c/classes/force",
               },
               {
@@ -319,31 +320,31 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/gripperControl",
               },
               {
-                text: "五指灵巧手",
+                text: "五指灵巧手配置",
                 link: "/robot/api/c/classes/handControl",
               },
               {
-                text: "系统安装方式",
+                text: "系统安装方式配置",
                 link: "/robot/api/c/classes/installPos",
               },
               {
-                text: "初始位置设置",
+                text: "关节配置",
                 link: "/robot/api/c/classes/jointConfigSettings",
               },
               {
-                text: "关节配置",
+                text: "初始位置配置",
                 link: "/robot/api/c/classes/armInitPosition",
               },
               {
-                text: "升降机构控制",
+                text: "升降机构配置",
                 link: "/robot/api/c/classes/liftControl",
               },
               {
-                text: "Modbus配置",
+                text: "Modbus 配置",
                 link: "/robot/api/c/classes/modbusConfig",
               },
               {
-                text: "机械臂轨迹指令类",
+                text: "机械臂轨迹指令",
                 link: "/robot/api/c/classes/movePlan",
               },
             ],
@@ -515,7 +516,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "API(Python)",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "快速开始",
@@ -526,43 +527,43 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             collapsed: true,
             items: [
               {
-                text: "机械臂连接",
+                text: "机械臂连接控制",
                 link: "/robot/api/python/classes/roboticArm",
               },
               {
-                text: "工具坐标系",
+                text: "工具坐标系配置",
                 link: "/robot/api/python/classes/toolCoordinateConfig",
               },
 
               {
-                text: "工作坐标系",
+                text: "工作坐标系配置",
                 link: "/robot/api/python/classes/workCoordinateConfig",
               },
               {
-                text: "机械臂状态",
+                text: "机械臂状态查询",
                 link: "/robot/api/python/classes/armState",
               },
 
               {
-                text: "机械臂运动参数",
+                text: "机械臂运动参数配置",
                 link: "/robot/api/python/classes/tipVelocityParameters",
               },
               {
-                text: "示教运动",
+                text: "机械臂示教及步进运动控制",
                 link: "/robot/api/python/classes/teachMove",
               },
 
               {
-                text: "拖动示教",
+                text: "拖动示教配置",
                 link: "/robot/api/python/classes/dragTeach",
               },
               {
-                text: "机械臂运动的急停、暂停、继续等控制",
+                text: "机械臂运动状态控制",
                 link: "/robot/api/python/classes/motionControl",
               },
 
               {
-                text: "通讯配置",
+                text: "通讯内容配置",
                 link: "/robot/api/python/classes/communicationConfig",
               },
 
@@ -571,27 +572,27 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/controllerConfig",
               },
               {
-                text: "安装方式及关节、末端软件版本号查询",
+                text: "系统安装方式配置",
                 link: "/robot/api/python/classes/installPos",
               },
               {
-                text: "扩展关节",
+                text: "通用扩展关节配置",
                 link: "/robot/api/python/classes/expandControl",
               },
               {
-                text: "升降机控制",
+                text: "升降机构配置",
                 link: "/robot/api/python/classes/liftControl",
               },
               {
-                text: "末端六维力传感器",
+                text: "末端六维力配置",
                 link: "/robot/api/python/classes/force",
               },
               {
-                text: "电子围栏和虚拟墙",
+                text: "电子围栏和虚拟墙配置",
                 link: "/robot/api/python/classes/electronicFenceConfig",
               },
               {
-                text: "透传力位混合控制补偿",
+                text: "力位混合控制补偿配置",
                 link: "/robot/api/python/classes/forcePositionControl",
               },
               {
@@ -599,11 +600,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/globalWaypointManage",
               },
               {
-                text: "夹爪控制",
+                text: "末端工具夹爪配置",
                 link: "/robot/api/python/classes/gripperControl",
               },
               {
-                text: "五指灵巧手控制",
+                text: "五指灵巧手配置",
                 link: "/robot/api/python/classes/handControl",
               },
               {
@@ -619,34 +620,34 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/jointsConfigQuery",
               },
               {
-                text: "Modbus配置",
+                text: "Modbus 配置",
                 link: "/robot/api/python/classes/modbusConfig",
               },
               {
-                text: "轨迹规划指令",
+                text: "机械臂轨迹控制",
                 link: "/robot/api/python/classes/movePlan",
               },
               {
-                text: "自碰撞安全检测",
+                text: "自碰撞安全检测接口配置",
                 link: "/robot/api/python/classes/selfCollision",
               },
               {
-                text: "在线编程",
+                text: "在线编程文件管理",
                 link: "/robot/api/python/classes/programManagement",
               },
               {
-                text: "算法",
-                link: "/robot/api/python/classes/alog",
+                text: "算法接口配置",
+                link: "/robot/api/python/classes/algo",
               },
               {
-                text: "UDP主动上报",
+                text: "UDP 主动上报配置",
                 link: "/robot/api/python/classes/udpConfig",
               },
             ],
           },
           {
             text: "结构体",
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: "算法库信息",
@@ -833,39 +834,39 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros/getStarted",
           },
           {
-            text: "driverDetailDescription",
+            text: "ROS调用机械臂JSON协议",
             link: "/robot/ros/driverDetailDescription",
           },
           {
-            text: "bringup",
+            text: "快速启动",
             link: "/robot/ros/bringup/",
           },
           {
-            text: "control",
+            text: "路径点透传到rm_driverd",
             link: "/robot/ros/control",
           },
           {
-            text: "driver",
+            text: "ROS 通信控制机械臂",
             link: "/robot/ros/driver",
           },
           {
-            text: "description",
+            text: "虚拟和实际机械臂的联动",
             link: "/robot/ros/description",
           },
           {
-            text: "example",
+            text: "实现机械臂的控制功能",
             link: "/robot/ros/example",
           },
           {
-            text: "gazebo",
+            text: "实现Moveit规划的仿真功能",
             link: "/robot/ros/gazebo",
           },
           {
-            text: "moveitConfig",
+            text: "moveit控制机械臂",
             link: "/robot/ros/moveitConfig",
           },
           {
-            text: "msg",
+            text: "ROS 框架消息文件",
             link: "/robot/ros/msg",
           },
         ],
@@ -879,42 +880,42 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/getStarted",
           },
           {
-            text: "bringup",
+            text: "快速启动",
             link: "/robot/ros2/bringup",
           },
           {
-            text: "control",
+            text: "路径点透传到rm_driverd",
             link: "/robot/ros2/control",
           },
           {
-            text: "description",
+            text: "虚拟和实际机械臂的联动",
             link: "/robot/ros2/description",
           },
           {
-            text: "driver",
+            text: "ROS 通信控制机械臂",
             link: "/robot/ros2/driver",
           },
           {
-            text: "example",
+            text: "实现机械臂的控制功能",
             link: "/robot/ros2/example",
           },
           {
-            text: "gazebo",
+            text: "实现Moveit2规划的仿真功能",
             link: "/robot/ros2/gazebo",
           },
           {
-            text: "moveit2Config",
+            text: "实现Moveit2控制真实机械臂",
             link: "/robot/ros2/moveit2Config",
           },
           {
-            text: "rosInterfaces",
+            text: "ROS2 框架消息文件",
             link: "/robot/ros2/rosInterfaces",
           },
         ],
       },
       {
         text: "Modbus",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: "Modbus从站地址表",
