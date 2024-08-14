@@ -251,9 +251,10 @@ img{
 .hidden{
     display:none;
 }
-a{
-    target-name: _blank;
-}
 .vp-doc th{
     text-align: center !important;
+}
+.VPLink .text{
+    color: var(--vp-c-text-1) !important;
+    font-weight: 700 !important;
 }
