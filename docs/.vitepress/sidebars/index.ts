@@ -928,28 +928,12 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "SDK",
-            link: "/robot/FQA/sdk",
-          },
-          {
-            text: "机械臂",
-            link: "/robot/FQA/arm",
-          },
-          {
-            text: "通讯配置",
-            link: "/robot/FQA/communicationConfig",
-          },
-          {
-            text: "电路连接",
-            link: "/robot/FQA/electricalConnections",
-          },
-          {
-            text: "ROS",
-            link: "/robot/FQA/ROS",
-          },
-          {
-            text: "其他",
+            text: "快速使用常见问题",
             link: "/robot/FQA/nounConcept",
+          },
+          {
+            text: "机械臂API开发常见问题",
+            link: "/robot/FQA/sdk",
           },
         ],
       },
