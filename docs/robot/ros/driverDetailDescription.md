@@ -1361,7 +1361,7 @@ rostopic pub /rm_driver/StartForcePositionMove_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/StartForcePositionMove_result
+rostopic echo /rm_driver/StartForcePositionMove_Result
 ```
 
 **参数说明：**
@@ -1422,7 +1422,7 @@ rostopic pub /rm_driver/ForcePositionMoveJiont_Cmd rm_msgs/Force_Position_Move_J
 |  参数说明  |  std_msgs::Empty  |
 |  命令示例  |  rostopic pub /rm_driver/StopForcePositionMove_Cmd std_msgs/Empty "{}"  |
 |  返回值参数说明  |  std_msgs::Bool  成功返回：true；失败返回：false。  |
-|  返回值查看  |  rostopic echo /rm_driver/StopForcePositionMove_result  |
+|  返回值查看  |  rostopic echo /rm_driver/StopForcePositionMove_Result  |
 
 ## 升降机构
 
