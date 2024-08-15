@@ -69,7 +69,7 @@
 2.ping机械臂IP地址，查看是否返回ping值。
 3.检查是否更改过机械臂默认IP地址（默认为192.168.1.18），如更改过机械臂IP，需在ROS资料包中，rm\_driver>>src>>rm\_robot.h文件中重新定义新的IP地址。
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mD6wz6nJbv/img/2c935fea-e451-462c-b036-807b26c6dc0e.png)
+![alt text](image-2.png)
 
 ### 2.如何在ROS里引用正逆解函数库？
 
