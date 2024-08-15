@@ -1152,7 +1152,7 @@ IP地址设置失败：
 说明：获取所有IO输入状态。
 
 ```json
- {"command":"get_IO_input"}   
+{"command":"get_IO_input"}   
 ```
 
 **返回示例：**
@@ -1213,7 +1213,7 @@ IP地址设置失败：
 说明：设置电源输出。
 
 ```json
- {"command":"set_voltage","voltage_type":2}   
+{"command":"set_voltage","voltage_type":2}   
 ```
 
 **返回示例：**
@@ -1673,7 +1673,6 @@ IP地址设置失败：
 | get_gripper_state | `string` |查询夹爪状态。|
 
 **使用示例：**
-说明：
 
 ```json
 {"command":"get_gripper_state"}
@@ -1881,8 +1880,6 @@ IP地址设置失败：
 
 **使用示例：**
 
-说明：
-
 ```json
 {"command":"stop_set_force_sensor"}
 ```
@@ -1966,7 +1963,6 @@ IP地址设置失败：
 | singular_wall | `int` |可选参数，仅在六维力模式拖动示教中生效，用于指定是否开启拖动奇异墙，0表示关闭拖动奇异墙，1表示开启拖动奇异墙，若无配置参数，默认启动拖动奇异墙。|
 
 **使用示例：**
-说明：
 
 ```json
 {"command":"start_multi_drag_teach","mode":0,"singular_wall":0}
@@ -2399,7 +2395,6 @@ IP地址设置失败：
 | hand_force | `int` |手指力，范围：1~1000。|
 
 **使用示例：**
-说明：
 
 ```json
 {"command":"set_hand_force","hand_force":500}
@@ -2619,7 +2614,6 @@ IP地址设置失败：
 | device | `int` |外设设备地址。|
 
 **使用示例：**
-说明：
 
 ```json
 {"command":"read_input_status","port":0,"address":10,"num":2,"device":2}
@@ -2944,7 +2938,6 @@ IP地址设置失败：
 | device | `int` |外设设备地址。|
 
 **使用示例：**
-说明：
 
 ```json
 {"command":"read_multiple_input_registers","port":0,"address":0,"num":5,"device":2}

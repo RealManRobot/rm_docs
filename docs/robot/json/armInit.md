@@ -17,18 +17,12 @@
 
 六自由度：
 ```json
-{
-    "command":"set_init_pose",
-    "init_pose":[10000,0,20000,30000,0,20000]
-}
+{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
 ```
 
 七自由度：
 ```json
-{
-    "command":"set_init_pose",
-    "init_pose":[10000,0,20000,30000,0,20000,20000]
-}
+{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```
 
 **返回示例：**

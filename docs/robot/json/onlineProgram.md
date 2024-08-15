@@ -209,12 +209,7 @@
 实现：修改指定编号轨迹的信息
 
 ```json
-{
-  "command": "update_program_trajectory",
-  "id": 1,
-  "plan_speed": 66,
-  "project_name": "file"
-}
+{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```
 
 **返回示例：**

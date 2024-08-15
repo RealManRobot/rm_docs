@@ -357,6 +357,7 @@
     速度系数：50%；
     交融半径：不交融。
 
+>以下指令需逐行运行。
 ```json
 {"command":"moves","pose":[100000,200000,30000,400,500,600],"v":50,"r":0,"trajectory_connect":1}
 {"command":"moves","pose":[100000,300000,30000,400,500,600],"v":50,"r":0,"trajectory_connect":1}
