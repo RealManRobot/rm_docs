@@ -4,7 +4,7 @@
 
 > **注意**</br>以上自碰撞安全检测功能目前只在仿真模式下生效，用于进行预演轨迹与轨迹优化。
 
-## 设置自碰撞安全检测使能状态`rm_set_self_collision_enable()`
+## 设置自碰撞安全检测使能`rm_set_self_collision_enable()`
 
 - **方法原型：**
 
@@ -46,7 +46,7 @@ print(arm.rm_set_self_collision_enable(True))
 arm.rm_delete_robot_arm()
 ```
 
-## 获取自碰撞安全检测使能状态`rm_get_self_collision_enable()`
+## 获取自碰撞安全检测使能`rm_get_self_collision_enable()`
 
 - **方法原型：**
 

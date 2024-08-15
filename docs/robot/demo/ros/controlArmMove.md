@@ -1,4 +1,4 @@
-# <p class="hidden">Demo演示(ROS)：</p>机械臂运动控制`API_CONTROL_ARM_MOVE_DEMO`
+# <p class="hidden">Demo演示(ROS)：</p>机械臂运动控制示例`API_Control_Arm_Move_Demo`
 
 ## 1.项目介绍
 

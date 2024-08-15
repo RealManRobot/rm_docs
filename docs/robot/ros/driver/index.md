@@ -65,15 +65,14 @@ roslaunch rm_driver rm_<arm_type>_driver.launch
 
 其中主要有以下几个参数。
 
-Arm_IP：改参数代表机械臂当前的IP
-Arm_Port：设置TCP连接时的端口。
-Arm_Type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RM_63（63系列）、RM_75（75系列）。
-Arm_Dof: 机械臂自由度设置。6为6自由度，7为7自由度。
-Follow：透传跟随效果参数。false：低跟随，true：高跟随。
-Udp_IP: 设置udp主动上报目标IP。
-Udp_cycle：udp主动上报周期，需要是5的倍数，最低为5ms(200Hz)。
-Udp_Port：设置udp主动上报端口。
-Udp_force_coordinate：设置系统受力时六维力的基准坐标，0为传感器坐标系（原始数据） 1为当前工作坐标系 2为当前工具坐标系。
+Arm_IP：改参数代表机械臂当前的 IP
+Arm_Port：设置 TCP 连接时的端口。
+Arm_Type：该参数代表机械臂当前的型号，可以选择的参数有 RM65（RM65 系列）、 ECO65（ECO65 系列）、RML63（RML63 系列）、RM75（RM75 系列）、GEN72（GEN72 系列）。
+Arm_Dof: 机械臂自由度设置。6 为 6 自由度，7 为 7 自由度。
+Follow：透传跟随效果参数。false：低跟随，true：高跟随。 
+Udp_IP: 设置 udp 主动上报目标 IP。 
+Udp_cycle：udp 主动上报周期，需要是 5 的倍数，最低为 5ms(200Hz)。 Udp_Port：设置 udp 主动上报端口。 
+Udp_force_coordinate：设置系统受力时六维力的基准坐标，0 为传感器坐标系（原 始数据） 1 为当前工作坐标系 2 为当前工具坐标系。
 
 再实际使用时，我们选择对应的launch文件启动时会自动选择正确的型号，若有特殊要求可在此处进行相应的参数修改，修改之后需要重新启动该节点，之后修改的配置才会生效。
 

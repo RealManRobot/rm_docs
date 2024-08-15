@@ -253,7 +253,7 @@ print(arm.rm_set_joint_drive_max_acc(1, 600))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置指定关节(驱动器)最小限位`rm_set_joint_drive_min_pos()`
+## 设置指定关节最小限位(驱动器)`rm_set_joint_drive_min_pos()`
 
 - **方法原型：**
 
@@ -295,7 +295,7 @@ print(arm.rm_set_joint_drive_min_pos(1, -178))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置指定关节(驱动器)最大限位`rm_set_joint_drive_max_pos()`
+## 设置指定关节最大限位(驱动器)`rm_set_joint_drive_max_pos()`
 
 - **方法原型：**
 
@@ -379,7 +379,7 @@ print(arm.rm_set_joint_en_state(1, 1))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置指定关节当前位置为零位`rm_set_joint_zero_pos()`
+## 指定关节当前位置为零位`rm_set_joint_zero_pos()`
 
 - **方法原型：**
 

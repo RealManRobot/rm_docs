@@ -9,9 +9,9 @@
 
 ---
 
-## 查询当前六维力传感器得到的力和力矩信息`rm_get_force_data()`
+## 查询六维力传感器力信息`rm_get_force_data()`
 
-包含Fx,Fy,Fz,Mx,My,Mz。
+查询当前六维力传感器得到的力和力矩信息，包含Fx,Fy,Fz,Mx,My,Mz。
 
 - **方法原型：**
 
@@ -55,7 +55,9 @@ print(arm.rm_get_force_data())
 arm.rm_delete_robot_arm()
 ```
 
-## 将六维力数据清零，标定当前状态下的零位`rm_clear_force_data()`
+## 标定当前状态下的零位`rm_clear_force_data()`
+
+将六维力数据清零，标定当前状态下的零位。
 
 - **方法原型：**
 

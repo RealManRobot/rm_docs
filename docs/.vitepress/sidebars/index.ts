@@ -215,11 +215,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/systemConfig",
           },
           {
-            text: "升降机构（选配）配置指令集",
+            text: "升降机构配置指令集",
             link: "/robot/json/liftControl",
           },
           {
-            text: "通用扩展关节（选配）配置指令集",
+            text: "通用扩展关节配置指令集",
             link: "/robot/json/expandControl",
           },
           {
@@ -227,7 +227,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/onlineProgram",
           },
           {
-            text: "UDP 主动上报（第三代）配置指令集",
+            text: "UDP 主动上报配置指令集",
             link: "/robot/json/udpConfig",
           },
           {
@@ -235,7 +235,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/electronicFence",
           },
           {
-            text: "自碰撞安全检测（第三代）配置指令集",
+            text: "自碰撞安全检测配置指令集",
             link: "/robot/json/selfCollision",
           },
           {
@@ -277,7 +277,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armInitPosition",
               },
               {
-                text: "机械臂运动状态控制指令",
+                text: "运动状态控制指令",
                 link: "/robot/api/c/classes/armMotionControl",
               },
               {
@@ -289,7 +289,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armTeachMove",
               },
               {
-                text: "机械臂末端运动参数配置",
+                text: "末端运动参数配置",
                 link: "/robot/api/c/classes/armTipVelocityParameters",
               },
               {
@@ -486,7 +486,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 text: "算法库版本",
                 link: "/robot/api/c/struct/algorithmVersion",
               },
-
               {
                 text: "欧拉角",
                 link: "/robot/api/c/struct/euler",
@@ -835,39 +834,39 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros/getStarted",
           },
           {
-            text: "ROS机械臂驱动功能说明",
+            text: "RM-机械臂驱动功能包",
             link: "/robot/ros/driver",
           },
           {
-            text: "快速启动",
+            text: "RM-快速启动功能包",
             link: "/robot/ros/bringup/",
           },
           {
-            text: "moveit通信功能说明",
+            text: "RM-Moveit通信功能包",
             link: "/robot/ros/control",
           },
           {
-            text: "机械臂模型展示功能说明",
+            text: "RM-机械臂模型功能包",
             link: "/robot/ros/description",
           },
           {
-            text: "机械臂使用示例",
+            text: "RM-机械臂ROS示例",
             link: "/robot/ros/example",
           },
           {
-            text: "虚拟机械臂使用说明",
+            text: "RM-Gazebo功能包",
             link: "/robot/ros/gazebo",
           },
           {
-            text: "moveit控制机械臂使用说明",
+            text: "RM-Moveit控制功能包",
             link: "/robot/ros/moveitConfig",
           },
           {
-            text: "机械臂ROS话题说明",
+            text: "RM-机械臂ROS话题说明",
             link: "/robot/ros/driverDetailDescription",
           },
           {
-            text: "ROS 框架消息文件",
+            text: "RM-ROS包消息列表",
             link: "/robot/ros/msg",
           },
         ],
@@ -881,35 +880,39 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/getStarted",
           },
           {
-            text: "快速启动",
-            link: "/robot/ros2/bringup",
-          },
-          {
-            text: "moveit通信功能说明",
-            link: "/robot/ros2/control",
-          },
-          {
-            text: "机械臂模型展示功能说明",
-            link: "/robot/ros2/description",
-          },
-          {
-            text: "ROS机械臂驱动功能说明",
+            text: "RM-机械臂驱动功能包",
             link: "/robot/ros2/driver",
           },
           {
-            text: "机械臂使用示例",
+            text: "RM-快速启动功能包",
+            link: "/robot/ros2/bringup",
+          },
+          {
+            text: "RM-Moveit通信功能包",
+            link: "/robot/ros2/control",
+          },
+          {
+            text: "RM-机械臂模型功能包",
+            link: "/robot/ros2/description",
+          },
+          {
+            text: "RM-机械臂ROS2示例",
             link: "/robot/ros2/example",
           },
           {
-            text: "虚拟机械臂使用说明",
+            text: "Gazebo功能包",
             link: "/robot/ros2/gazebo",
           },
           {
-            text: "moveit2控制机械臂使用说明",
+            text: "RM-Moveit2控制功能包",
             link: "/robot/ros2/moveit2Config",
           },
           {
-            text: "自定义消息说明",
+            text: "RM-机械臂ROS2话题说明",
+            link: "/robot/ros2/ros2Description",
+          },
+          {
+            text: "RM-自定义消息说明",
             link: "/robot/ros2/rosInterfaces",
           },
         ],

@@ -49,7 +49,9 @@ print(arm.rm_set_joint_step(5, 3, 20, 1))
 arm.rm_delete_robot_arm()
 ```
 
-## 当前工作坐标系下，位置步进`rm_set_pos_step()`
+## 位置步进`rm_set_pos_step()`
+
+>当前工作坐标系下。
 
 - **方法原型：**
 
@@ -98,7 +100,9 @@ print(arm.rm_set_pos_step(rm_pos_teach_type_e.RM_X_DIR_E, 0.05, 20, 1))
 arm.rm_delete_robot_arm()
 ```
 
-## 当前工作坐标系下，姿态步进`rm_set_ort_step()`
+## 姿态步进`rm_set_ort_step()`
+
+>当前工作坐标系下。
 
 - **方法原型：**
 
@@ -191,7 +195,9 @@ print(arm.rm_set_joint_teach(5, 1, 20))
 arm.rm_delete_robot_arm()
 ```
 
-## 当前工作坐标系下，笛卡尔空间位置示教`rm_set_pos_teach()`
+## 笛卡尔空间位置示教`rm_set_pos_teach()`
+
+>当前工作坐标系下。
 
 - **方法原型：**
 
@@ -237,7 +243,9 @@ print(arm.rm_set_pos_teach(rm_pos_teach_type_e.RM_X_DIR_E, 1, 20))
 arm.rm_delete_robot_arm()
 ```
 
-## 当前工作坐标系下，笛卡尔空间姿态示教`rm_set_ort_teach()`
+## 笛卡尔空间姿态示教`rm_set_ort_teach()`
+
+>当前工作坐标系下。
 
 - **方法原型：**
 

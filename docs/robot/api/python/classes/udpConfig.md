@@ -50,7 +50,7 @@ print(arm.rm_set_realtime_push(config))
 arm.rm_delete_robot_arm()
 ```
 
-## 查询 UDP 机械臂状态主动上报配置`rm_get_realtime_push()`
+## 查询UDP机械臂状态主动上报配置`rm_get_realtime_push()`
 
 - **方法原型：**
 

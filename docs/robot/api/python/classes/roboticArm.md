@@ -2,7 +2,9 @@
 
 机械臂连接、断开、日志设置等操作。
 
-## 构造函数：初始化线程模式`__init__()`
+## 初始化线程模式`__init__()`
+
+>此为构造函数。
 
 - **方法原型：**
 
@@ -364,7 +366,7 @@ time.sleep(10)
 arm.rm_delete_robot_arm()
 ```
 
-## 注册UDP机械臂实时状态主动上报信息回调函数`rm_realtime_arm_state_call_back()`
+## UDP注册机械臂实时状态`rm_realtime_arm_state_call_back()`
 
 该回调函数接收rm_realtime_arm_joint_state_t类型数据作为参数，没有返回值。当使用三线程，并且UDP机械臂状态主动上报正确配置时，数据会以设定的周期返回。
 

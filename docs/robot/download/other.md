@@ -21,7 +21,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>Web示教器用户手册</h2>
-            <p>睿尔曼机器人Web示教器用户手册V1.5  文件格式：PDF</p>
+            <p>睿尔曼机器人Web示教器用户手册V1.6  文件格式：PDF</p>
             <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BAWEB%E7%A4%BA%E6%95%99%E5%99%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-1.6.pdf" target="_blank">Web示教器用户手册（github）</a></p>
         </div>
         <div class="wrap-item2">

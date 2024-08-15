@@ -119,7 +119,7 @@ print(arm.rm_get_joint_max_pos())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大速度`rm_get_joint_drive_max_speed()`
+## 查询关节最大速度(驱动器)`rm_get_joint_drive_max_speed()`
 
 - **方法原型：**
 
@@ -151,7 +151,7 @@ print(arm.rm_get_joint_drive_max_speed())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大加速度`rm_get_joint_drive_max_acc()`
+## 查询关节最大加速度(驱动器)`rm_get_joint_drive_max_acc()`
 
 - **方法原型：**
 
@@ -183,7 +183,7 @@ print(arm.rm_get_joint_drive_max_acc())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最小限位`rm_get_joint_drive_min_pos()`
+## 查询关节最小限位(驱动器)`rm_get_joint_drive_min_pos()`
 
 - **方法原型：**
 
@@ -215,7 +215,7 @@ print(arm.rm_get_joint_drive_min_pos())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大限位`rm_get_joint_drive_max_pos()`
+## 查询关节最大限位(驱动器)`rm_get_joint_drive_max_pos()`
 
 - **方法原型：**
 
