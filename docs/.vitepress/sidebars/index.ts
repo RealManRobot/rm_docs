@@ -317,6 +317,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/force",
               },
               {
+                text: "力位混合控制补偿配置",
+                link: "/robot/api/c/classes/forcePositionControl",
+              },
+              {
                 text: "末端工具夹爪配置",
                 link: "/robot/api/c/classes/gripperControl",
               },
@@ -331,10 +335,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               {
                 text: "关节配置",
                 link: "/robot/api/c/classes/jointConfigSettings",
-              },
-              {
-                text: "初始位置配置",
-                link: "/robot/api/c/classes/armInitPosition",
               },
               {
                 text: "升降机构配置",

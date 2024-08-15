@@ -78,7 +78,7 @@ rostopic pub /rm_driver/Joint_Enable rm_msgs/Joint_Enable "joint_num: 1 state: t
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/set_joint_err_clear_result
+rostopic echo /rm_driver/Joint_En_State_Result
 ```
 
 **参数说明：**
@@ -403,8 +403,7 @@ rostopic pub /rm_driver/SetJointStep rm_msgs/Joint_Step "joint_num: 6 step_angle
 七自由度
 
 ```json
-rostopic pub /rm_driver/MoveJ_Cmd rm_msgs/MoveJ 
-"joint:  [0, 0, 0, 0, 0, 0, 0] speed: 0.2"
+rostopic pub /rm_driver/SetJointStep rm_msgs/Joint_Step "joint_num: 7 step_angle: 90.0 speed: 0.2"
 ```
 
 **返回命令示例：**
@@ -602,12 +601,9 @@ rostopic echo /rm_driver/Get_Arm_Software_Version_Result
 ```
 
 **参数说明：**
-`Arm_Software_Version.msg`
-
-```
-string Product_version #机械臂类型
-string Plan_version #软件版本号
-```
+| 参数                | 类型     | 说明      |
+|:------------------|:-------|:----------------------------------------|
+|`Arm_Software_Version.msg`            | `string` |Product_version #机械臂类型</br> Plan_version #软件版本号|
 
 ### 3.10.3清除系统错误
 
@@ -1007,7 +1003,7 @@ rostopic pub /rm_driver/ClearForceData_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/ClearForceData_result
+rostopic echo /rm_driver/ClearForceData_Result
 ```
 
 **参数说明：**
@@ -1033,7 +1029,7 @@ rostopic pub /rm_driver/SetForceSensor_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/ForceSensorSet_result
+rostopic echo /rm_driver/ForceSensorSet_Result
 ```
 
 **参数说明：**
@@ -1066,7 +1062,7 @@ rostopic pub /rm_driver/ManualSetForcePose_Cmd rm_msgs/Manual_Set_Force_Pose "po
 **返回命令示例：**
 
 ```json
-/rm_driver/ForceSensorSet_result
+rostopic echo /rm_driver/ForceSensorSet_Result
 ```
 
 **参数说明：**

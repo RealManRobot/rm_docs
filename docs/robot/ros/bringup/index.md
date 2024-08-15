@@ -18,10 +18,10 @@ rm_bringup功能包为实现多个launch文件同时运行所设计的功能包�
 
 ### 1.1 moveit控制真实机械臂
 
-首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_bringup功能包中的launch.py文件。
+首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行 rm_bringup 功能包中的 launch 文件。
 
 ```ros
-roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
+roslaunch rm_bringup rm_<arm_type>_robot.launch
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、65_6f、63_6f、eco65_6f、75_6f、gen72。
@@ -31,13 +31,13 @@ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 首先需要运行rm_control节点。
 
 ```ros
-rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch
+roslaunch rm_control rm_65_control.launch
 ```
 
 之后需要运行bringup节点。
 
 ```ros
-roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
+roslaunch rm_bringup rm_65_robot.launch
 ```
 
 节点启动成功后，将弹出以下画面。
