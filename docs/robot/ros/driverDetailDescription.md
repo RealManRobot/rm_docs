@@ -602,12 +602,9 @@ rostopic echo /rm_driver/Get_Arm_Software_Version_Result
 ```
 
 **参数说明：**
-`Arm_Software_Version.msg`
-
-```
-string Product_version #机械臂类型
-string Plan_version #软件版本号
-```
+| 参数                | 类型     | 说明      |
+|:------------------|:-------|:----------------------------------------|
+|`Arm_Software_Version.msg`            | `string` |Product_version #机械臂类型</br> Plan_version #软件版本号|
 
 ### 3.10.3清除系统错误
 
