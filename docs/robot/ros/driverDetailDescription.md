@@ -403,8 +403,7 @@ rostopic pub /rm_driver/SetJointStep rm_msgs/Joint_Step "joint_num: 6 step_angle
 七自由度
 
 ```json
-rostopic pub /rm_driver/MoveJ_Cmd rm_msgs/MoveJ 
-"joint:  [0, 0, 0, 0, 0, 0, 0] speed: 0.2"
+rostopic pub /rm_driver/SetJointStep rm_msgs/Joint_Step "joint_num: 7 step_angle: 90.0 speed: 0.2"
 ```
 
 **返回命令示例：**
