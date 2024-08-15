@@ -835,8 +835,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros/getStarted",
           },
           {
-            text: "机械臂ROS话题说明",
-            link: "/robot/ros/driverDetailDescription",
+            text: "ROS机械臂驱动功能说明",
+            link: "/robot/ros/driver",
           },
           {
             text: "快速启动",
@@ -845,10 +845,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "moveit通信功能说明",
             link: "/robot/ros/control",
-          },
-          {
-            text: "ROS机械臂驱动功能说明",
-            link: "/robot/ros/driver",
           },
           {
             text: "机械臂模型展示功能说明",
@@ -865,6 +861,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "moveit控制机械臂使用说明",
             link: "/robot/ros/moveitConfig",
+          },
+          {
+            text: "机械臂ROS话题说明",
+            link: "/robot/ros/driverDetailDescription",
           },
           {
             text: "ROS 框架消息文件",
