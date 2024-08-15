@@ -24,6 +24,7 @@ int rm_movej(rm_robot_handle * handle,const float * joint,int v,int r,int trajec
 |  block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
 
 >注意:使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
+>注意：trajectory_connect参数为1交融半径才生效，如果为0则交融半径不生效。
 
 - **返回值:**
 
@@ -72,6 +73,7 @@ int rm_movel(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_
 |  block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
 
 >注意:使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
+>注意：trajectory_connect参数为1交融半径才生效，如果为0则交融半径不生效。
 
 - **返回值:**
 
@@ -123,6 +125,7 @@ int rm_moves(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajectory_
 
 >注解:样条曲线运动需至少连续下发三个点位（trajectory_connect设置为1），否则运动轨迹为直线。
 >注意:使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
+>注意：trajectory_connect参数为1交融半径才生效，如果为0则交融半径不生效。
 
 - **返回值:**
 
@@ -200,6 +203,7 @@ int rm_movec(rm_robot_handle * handle,rm_pose_t pose_via,rm_pose_t pose_to,int v
 |  block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
 
 >注意:使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
+>注意：trajectory_connect参数为1交融半径才生效，如果为0则交融半径不生效。
 
 - **返回值:**
 
@@ -256,6 +260,7 @@ int rm_movej_p(rm_robot_handle * handle,rm_pose_t pose,int v,int r,int trajector
 |  block  |    输入参数    |    阻塞设置：<br>多线程模式：0，非阻塞模式，发送指令后立即返回；1，阻塞模式，等待机械臂到达目标位置或规划失败后返回。<br>单线程模式：0，非阻塞模式；其他值，阻塞模式并设置超时时间，根据运动时间设置，单位为秒。    |
 
 >注意:使用单线程阻塞模式时，请设置超时时间确保轨迹在超时时间内运行结束返回。
+>注意：trajectory_connect参数为1交融半径才生效，如果为0则交融半径不生效。
 
 - **返回值:**
 
