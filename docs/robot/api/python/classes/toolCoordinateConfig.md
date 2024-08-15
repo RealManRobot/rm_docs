@@ -90,6 +90,8 @@ print("点6标定完成")
 print(arm.rm_generate_auto_tool_frame("test", 2, 0, 0, 0))
 print("坐标系已生成")
 
+print(arm.rm_change_work_frame("World"))
+
 arm.rm_delete_robot_arm()
 ```
 
