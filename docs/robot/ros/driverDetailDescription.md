@@ -1087,7 +1087,7 @@ rostopic pub /rm_driver/StopSetForceSensor_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/StopSetForceSensor_result
+rostopic echo /rm_driver/StopSetForceSensor_Result
 ```
 
 **参数说明：**
