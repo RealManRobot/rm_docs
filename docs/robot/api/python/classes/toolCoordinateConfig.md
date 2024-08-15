@@ -38,8 +38,57 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 设置当前位置为第一个标定点 
-print(arm.rm_set_auto_tool_frame(1))
+print(arm.rm_change_work_frame("Base"))
+
+# 该点位为末端竖直向下，工具末端接触参考末端
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+# 记录参考末端点位姿
+result = arm.rm_get_current_arm_state()
+# 变换任意姿态，工具末端接触参考末端，标定点1、2、3
+result[1]["pose"][3] += 0.1
+move_res = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
+time.sleep(1)
+print(arm.rm_set_auto_tool_frame(1))    # 点1
+print("点1标定完成")
+
+result[1]["pose"][4] += 0.2
+move_res = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
+time.sleep(1)
+print(arm.rm_set_auto_tool_frame(2))    # 点2
+print("点2标定完成")
+
+result[1]["pose"][5] += 0.3
+move_res = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
+time.sleep(1)
+print(arm.rm_set_auto_tool_frame(3))    # 点3
+print("点3标定完成")
+
+# 工具末端竖直向下，接触参考末端，标定点4
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+time.sleep(1)
+print(arm.rm_set_auto_tool_frame(4))    # 点4
+print("点4标定完成")
+
+# 保持4的姿态，从点4沿基坐标系X轴负方向移动到某一位置，与点4的距离尽可能大于10cm，标定点5
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][0] += 0.1
+move_res = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
+time.sleep(1)
+print(arm.rm_set_auto_tool_frame(5))    # 点5
+print("点5标定完成")
+
+# 保持4的姿态，从点4沿基坐标系Z轴正方向移动到某一位置，与点4的距离尽可能大于10cm，标定点6
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][2] += 0.1
+move_res = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
+time.sleep(1)
+result = arm.rm_set_auto_tool_frame(6)  # 点6
+print("点6标定完成")
+
+# 自动生成坐标系“test”，负载2kg（需确保坐标系数量不超过10，且不存在该名称，否则会生成失败）
+print(arm.rm_generate_auto_tool_frame("test", 2, 0, 0, 0))
+print("坐标系已生成")
 
 arm.rm_delete_robot_arm()
 ```
@@ -84,7 +133,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 自动生成坐标系“test”，负载2kg
+# 自动生成坐标系“test”，负载2kg（完整生成过程请参考rm_set_auto_tool_frame使用示例）
 print(arm.rm_generate_auto_tool_frame("test", 2, 0, 0, 0))
 
 arm.rm_delete_robot_arm()

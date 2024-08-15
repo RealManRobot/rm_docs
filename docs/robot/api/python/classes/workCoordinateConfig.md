@@ -39,14 +39,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 设置关节角度[0, 20, 70, 0, 90, 0]的位置为原点
-print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+# 设置关节角度[0, 20, 70, 0, 90, 0]的位置为工作坐标系原点
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
 print(arm.rm_set_auto_work_frame("test_work", 1))
-# 设置关节角度[0, 30, 60, 0, 90, 0]的位置为X轴一点
-print(arm.rm_movej([0, 30, 60, 0, 90, 0], 20, 0, 0, True))
+# 设置工作坐标系X轴一点
+time.sleep(1)
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][0] += 0.1    # X轴0.1m
+result = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
 print(arm.rm_set_auto_work_frame("test_work", 2))
-# 设置关节角度[0, 40, 50, 0, 90, 0]的位置为Y轴一点
-print(arm.rm_movej([0, 40, 50, 0, 90, 0], 20, 0, 0, True))
+# 设置工作坐标系Y轴一点
+time.sleep(1)
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][1] += 0.1    # Y轴0.1m
+result = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
 print(arm.rm_set_auto_work_frame("test_work", 3))
 # 生成“test_work”坐标系
 print(arm.rm_set_auto_work_frame("test_work", 4))
