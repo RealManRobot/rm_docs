@@ -1004,7 +1004,7 @@ rostopic pub /rm_driver/ClearForceData_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/ClearForceData_result
+rostopic echo /rm_driver/ClearForceData_Result
 ```
 
 **参数说明：**
