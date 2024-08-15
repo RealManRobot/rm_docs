@@ -26,7 +26,7 @@ RMDemo_Gripper/
 
 ## **3.项目下载**
 
-通过项目链接下载本项目工程 文件到本地：[https://github.com/RealManRobot/RM_API2/tree/main/Demo/RMDemo_CAPI]()
+通过链接下载 `RM_API2` 到本地：[https://github.com/RealManRobot/RM_API2.git]()，进入`RM_API2\Demo\RMDemo_C`目录，可找到对应的Demo。
 
 ## **4. 环境配置**
 
