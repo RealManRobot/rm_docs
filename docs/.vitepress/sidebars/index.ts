@@ -219,7 +219,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/liftControl",
           },
           {
-            text: "通用扩展关节（选配）配置指令集",
+            text: "通用扩展关节配置指令集",
             link: "/robot/json/expandControl",
           },
           {
@@ -854,15 +854,15 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros/example",
           },
           {
-            text: "Gazebo功能包",
+            text: "RM-Gazebo功能包",
             link: "/robot/ros/gazebo",
           },
           {
-            text: "Moveit控制功能包",
+            text: "RM-Moveit控制功能包",
             link: "/robot/ros/moveitConfig",
           },
           {
-            text: "机械臂ROS话题说明",
+            text: "RM-机械臂ROS话题说明",
             link: "/robot/ros/driverDetailDescription",
           },
           {
@@ -904,15 +904,15 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/gazebo",
           },
           {
-            text: "Moveit2控制功能包",
+            text: "RM-Moveit2控制功能包",
             link: "/robot/ros2/moveit2Config",
           },
           {
-            text: "机械臂ROS2话题说明",
+            text: "RM-机械臂ROS2话题说明",
             link: "/robot/ros2/ros2Description",
           },
           {
-            text: "自定义消息说明",
+            text: "RM-自定义消息说明",
             link: "/robot/ros2/rosInterfaces",
           },
         ],
