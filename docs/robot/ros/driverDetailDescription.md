@@ -1499,7 +1499,7 @@ rostopic pub /rm_driver/get_lift_state_cmd std_msgs/msg/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/LiftState
+rostopic pub /rm_driver/Lift_GetState std_msgs/Empty "{}"
 ```
 
 **参数说明：**
