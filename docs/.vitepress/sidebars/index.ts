@@ -4,7 +4,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     "/robot/": [
       {
         text: "概述",
-        link: "/robot/summarize/",
+        link: "/robot/summarize/summarize",
       },
       {
         text: "版本对照表",
