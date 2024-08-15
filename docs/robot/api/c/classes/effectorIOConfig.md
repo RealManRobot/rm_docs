@@ -140,8 +140,6 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 |  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
 |  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
 
->注意：电源输出设置为 5V 时，工具端的IO 暂不支持输入输出功能。
-
 - **使用示例**
   
 ```C
