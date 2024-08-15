@@ -7,7 +7,7 @@
 - **方法原型：**
 
 ```python
-rm_movej(self, joint: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
+rm_movej(self, joint: list[float], v: int, r: int, connect: int, block: int) -> int:
 ```
 
 - **参数说明:**
@@ -16,7 +16,7 @@ rm_movej(self, joint: list[float], v: int, connect: int, block: int, r: int = 0)
 | :--- | :--- | :--- |
 |   joint  |    `list`    |    各关节目标角度数组，单位：°度。    |
 |   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比。    |
-|   r  |    `int, optional`    |   交融半径百分比系数，0-100。  |
+|   r  |    `int`    |   交融半径百分比系数，0-100。  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
@@ -55,7 +55,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-rm_movel(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
+rm_movel(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
 ```
 
 - **参数说明:**
@@ -64,7 +64,7 @@ rm_movel(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) 
 | :--- | :--- | :--- |
 |   pose  |    `list[float]`    |    目标位姿,位置单位：米，姿态单位：弧度   |
 |   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比    |
-|   r  |    `int, optional`    |   交融半径百分比系数，0-100  |
+|   r  |    `int`    |   交融半径百分比系数，0-100  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
@@ -93,8 +93,8 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-print(arm.rm_movej_p([0.2, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
-print(arm.rm_movel([0.3, 0, 0.4, 3.141, 0, 0], 20, 1, 1, 0))
+print(arm.rm_movej_p([0.2, 0, 0.4, 3.141, 0, 0], 20, 0, 0, 1))
+print(arm.rm_movel([0.3, 0, 0.4, 3.141, 0, 0], 20, 0, 0, 1))
 
 arm.rm_delete_robot_arm()
 ```
@@ -104,7 +104,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-rm_moves(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
+rm_moves(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
 ```
 
 - **参数说明:**
@@ -113,7 +113,7 @@ rm_moves(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) 
 | :--- | :--- | :--- |
 |   pose  |    `list[float]`    |    目标位姿，位置单位：米，姿态单位：弧度   |
 |   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比    |
-|   r  |    `int, optional`    |   交融半径百分比系数，0-100  |
+|   r  |    `int`    |   交融半径百分比系数，0-100  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
@@ -141,10 +141,10 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1, 0))
-print(arm.rm_moves([0.3, 0, 0.3, 3.14, 0, 0], 20, 1, 1, 0))
-print(arm.rm_moves([0.3, 0.1, 0.3, 3.14, 0, 0], 20, 1, 1, 0))
-print(arm.rm_moves([0.2, 0.1, 0.3, 3.14, 0, 0], 20, 0, 1, 0))
+print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 0, 1))
+print(arm.rm_moves([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1, 1))
+print(arm.rm_moves([0.3, 0.1, 0.3, 3.14, 0, 0], 20, 0, 1, 1))
+print(arm.rm_moves([0.2, 0.1, 0.3, 3.14, 0, 0], 20, 0, 0, 1))
 
 arm.rm_delete_robot_arm()
 ```
@@ -154,7 +154,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-rm_movec(self, pose_via: list[float], pose_to: list[float], v: int, loop: int, connect: int, block: int, r: int = 0) -> int:
+rm_movec(self, pose_via: list[float], pose_to: list[float], v: int, r: int, loop: int, connect: int, block: int) -> int:
 ```
 
 - **参数说明:**
@@ -165,7 +165,7 @@ rm_movec(self, pose_via: list[float], pose_to: list[float], v: int, loop: int, c
 |   pose_to  |    `list[float]`    |    终点位姿，位置单位：米，姿态单位：弧度   |
 |   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比    |
 |   loop  |    `int`    |    规划圈数    |
-|   r  |    `int, optional`    |   交融半径百分比系数，0-100  |
+|   r  |    `int`    |   交融半径百分比系数，0-100  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
@@ -198,7 +198,7 @@ ret1 = arm.rm_get_current_arm_state()
 ret2 = arm.rm_get_current_arm_state()
 ret1[1]['pose'][0] += 0.02
 ret2[1]['pose'][1] += 0.02
-print(arm.rm_movec(ret1[1]['pose'], ret2[1]['pose'], 20, 1, 0, 1))
+print(arm.rm_movec(ret1[1]['pose'], ret2[1]['pose'], 20, 0, 0, 0, 1))
 
 arm.rm_delete_robot_arm()
 ```
@@ -208,7 +208,7 @@ arm.rm_delete_robot_arm()
 - **方法原型：**
 
 ```python
-rm_movej_p(self, pose: list[float], v: int, connect: int, block: int, r: int = 0) -> int:
+rm_movej_p(self, pose: list[float], v: int, r: int, connect: int, block: int) -> int:
 ```
 
 - **参数说明:**
@@ -217,7 +217,7 @@ rm_movej_p(self, pose: list[float], v: int, connect: int, block: int, r: int = 0
 | :--- | :--- | :--- |
 |   pose  |    `list[float]`    |    目标位姿，位置单位：米，姿态单位：弧度   |
 |   v  |    `int`    |    速度比例1~100，即规划速度和加速度占关节最大线转速和加速度的百分比    |
-|   r  |    `int, optional`    |   交融半径百分比系数，0-100  |
+|   r  |    `int`    |   交融半径百分比系数，0-100  |
 |   connect  |    `int`    |   轨迹连接标志</br>0：立即规划并执行轨迹，不与后续轨迹连接。</br> 1：将当前轨迹与下一条轨迹一起规划，但不立即执行。阻塞模式下，即使发送成功也会立即返回。 |
 |   block  |    `int`    |   阻塞设置</br>多线程模式：</br>0：非阻塞模式，发送指令后立即返回。</br> 1：阻塞模式，等待机械臂到达目标位置或规划失败后才返回。</br>单线程模式</br>0：非阻塞模式。</br>其他值：阻塞模式并设置超时时间，单位为秒。 |
 
@@ -245,7 +245,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 1))
+print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 0, 1))
 
 arm.rm_delete_robot_arm()
 ```
