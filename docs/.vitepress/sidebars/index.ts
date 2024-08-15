@@ -881,6 +881,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/getStarted",
           },
           {
+            text: "ROS2机械臂驱动功能说明",
+            link: "/robot/ros2/driver",
+          },
+          {
             text: "快速启动",
             link: "/robot/ros2/bringup",
           },
@@ -893,10 +897,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/description",
           },
           {
-            text: "ROS机械臂驱动功能说明",
-            link: "/robot/ros2/driver",
-          },
-          {
             text: "机械臂使用示例",
             link: "/robot/ros2/example",
           },
@@ -907,6 +907,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "moveit2控制机械臂使用说明",
             link: "/robot/ros2/moveit2Config",
+          },
+          {
+            text: "机械臂ROS2话题说明",
+            link: "/robot/ros2/ros2Decription",
           },
           {
             text: "自定义消息说明",
