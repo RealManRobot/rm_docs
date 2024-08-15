@@ -4,7 +4,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     "/robot/": [
       {
         text: "概述",
-        link: "/robot/summarize",
+        link: "/robot/summarize/",
       },
       {
         text: "版本对照表",
@@ -20,7 +20,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           // },
           {
             text: "硬件准备",
-            link: "/robot/quickUseManual",
+            link: "/robot/quickUseManual/",
           },
         ],
       },
