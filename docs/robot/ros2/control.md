@@ -39,7 +39,7 @@ ros2 launch  rm_control rm_65_control.launch.py
 在工作空间目录运行colcon build指令。
 
 ```
-~/ros2_ws$ colcon build
+colcon build
 ```
 
 编译成功后可按如上指令进行功能包启动。
