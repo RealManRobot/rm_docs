@@ -1063,7 +1063,7 @@ rostopic pub /rm_driver/ManualSetForcePose_Cmd rm_msgs/Manual_Set_Force_Pose "po
 **返回命令示例：**
 
 ```json
-/rm_driver/ForceSensorSet_result
+rostopic echo /rm_driver/ForceSensorSet_Result
 ```
 
 **参数说明：**
