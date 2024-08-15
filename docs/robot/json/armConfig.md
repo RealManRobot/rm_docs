@@ -231,30 +231,13 @@
 6 自由度机械臂：
 
 ```json
-{
-  "command": "set_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000]
-}
+{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000]}
 ```
 
 7 自由度机械臂：
 
 ```json
-{
-  "command": "set_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000],
-  "joint_7": [1000, 2000, 3000, 4000]
-}
+{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000],"joint_7":[1000,2000,3000,4000]}
 ```
 
 **返回示例：**
@@ -363,10 +346,7 @@
 实现：设置关节零位偏移，精度：0.001° 关节 1~6 的零位补偿角度：1°，-2°，3°，-4°，5°，-6°。
 
 ```json
-{
-  "command": "set_joint_zero_offset",
-  "offset": [1000, -2000, 3000, -4000, 5000, -6000]
-}
+{"command":"set_joint_zero_offset","offset":[1000,-2000,3000,-4000,5000,-6000]}
 ```
 
 **返回示例：**
@@ -528,7 +508,7 @@
 **使用示例：**
 实现：自动计算工具坐标系，标定当前位置为参考点 6。
 
-> 备注：机械臂上电初始化后，默认无负载。
+> 备注：机械臂上电初始化后，默认无负载。以下指令需逐行运行。
 
 ```json
 {"command":"set_auto_tool_frame","point_num":1}
@@ -573,12 +553,7 @@
 > 备注：机械臂上电初始化后，默认无负载。
 
 ```json
-{
-  "command": "set_auto_tool_frame",
-  "tool_name": "tool_frame",
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+{"command":"set_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
 ```
 
 **返回示例：**
@@ -622,13 +597,7 @@
 > 备注：机械臂上电初始化后，默认无负载。
 
 ```json
-{
-  "command": "set_manual_tool_frame",
-  "tool_name": "tool_frame",
-  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+{"command":"set_manual_tool_frame","tool_name":"tool_frame","tool_pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
 ```
 
 **返回示例：**
@@ -731,13 +700,7 @@
     position：质心位置，单位：mm，精度0.001mm。
 
 ```json
-{
-  "command": "update_tool_frame",
-  "tool_name": "tool_frame",
-  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+{"command":"update_tool_frame","tool_name":"tool_frame","tool_pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
 ```
 
 **返回示例：**
@@ -773,15 +736,7 @@
 实现：名为 left 工具包络球的半径为 0.02m,球心 x 坐标 0.01m,球心 y 坐标 0.02m,z 坐标 0.03m;名为 right 工具包络球的半径为 0.03m,球心 x 坐标 0.03m,球心 y 坐标 0.04m,z 坐标 0.05m;名为 center 工具包络球的半径为 0.04m,球心 x 坐标 0.05m,球心 y 坐标 0.06m,z 坐标 0.07m;
 
 ```json
-{
-  "command": "set_tool_envelope",
-  "tool_name": "test",
-  "list": [
-    { "name": "left", "radius": 20, "x": 10, "y": 20, "z": 30 },
-    { "name": "right", "radius": 30, "x": 30, "y": 40, "z": 50 },
-    { "name": "center", "radius": 40, "x": 50, "y": 60, "z": 70 }
-  ]
-}
+{"command":"set_tool_envelope","tool_name":"test","list":[{"name":"left","radius":20,"x":10,"y":20,"z":30},{"name":"right","radius":30,"x":30,"y":40,"z":50},{"name":"center","radius":40,"x":50,"y":60,"z":70}]}
 ```
 
 **返回示例：**
@@ -921,11 +876,7 @@
     姿态精度：0.001rad。
 
 ```json
-{
-  "command": "set_manual_work_frame",
-  "frame_name": "work_frame",
-  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
-}
+{"command":"set_manual_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
 ```
 
 **返回示例：**
@@ -1019,11 +970,7 @@
     姿态精度：0.001rad。
 
 ```json
-{
-  "command": "update_work_frame",
-  "frame_name": "work_frame",
-  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
-}
+{"command":"update_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
 ```
 
 **返回示例：**
@@ -1510,10 +1457,7 @@
 七自由度：
 
 ```json
-{
-  "command": "set_init_pose",
-  "init_pose": [10000, 0, 20000, 30000, 0, 20000, 20000]
-}
+{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```
 
 **返回示例：**
