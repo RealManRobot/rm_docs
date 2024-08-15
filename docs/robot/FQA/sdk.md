@@ -40,7 +40,7 @@
 
 1.通过API形式：目前C\C++\C#\python\JSON\matlab六种开发环境。
 2.通过ROS进行控制，目前支持ROS1的melodic与noetic两个版本和ROS2的humble和foxy两个版本。
-3.是通过JSON协议进行控制，此种方式不限制开发语言与开发系统。
+3.通过JSON协议进行控制，此种方式不限制开发语言与开发系统。同时在Json协议中，支持TCP协议与485串行通讯协议
 4.通过MODBUS-RTU/TCP控制机械臂。
 
 ### 8.ROS与API可以同时使用吗？
