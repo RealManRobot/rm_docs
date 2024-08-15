@@ -2,7 +2,8 @@
 
 **MDH模型坐标系：**
 
-<div align="center"> <img src="../DH/doc/image-GEN72.png" width = 300 /> </div>
+<div align="center"> <img src="../DH/doc/GEN72.png" width = 500 /> </div>
+
 
 <br>
 
