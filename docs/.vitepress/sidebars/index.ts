@@ -910,7 +910,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
           {
             text: "机械臂ROS2话题说明",
-            link: "/robot/ros2/ros2Decription",
+            link: "/robot/ros2/ros2Description",
           },
           {
             text: "自定义消息说明",
