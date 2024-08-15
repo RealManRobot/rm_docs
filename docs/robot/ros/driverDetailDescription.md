@@ -150,10 +150,7 @@ rostopic echo /rm_driver/ChangeWorkFrame_State
 rostopic pub /rm_driver/GetTotalWorkFrame std_msgs/Empty "{}"
 ```
 
-**返回命令示例：**
-```json
-"frame_names":["World","Base","t1","new","11"],"state":"total_work_frame"
-```
+**返回值查看：** 根据rm_driver节点打印信息查看。
 
 ## 3.5获取机械臂关节当前电流
 
