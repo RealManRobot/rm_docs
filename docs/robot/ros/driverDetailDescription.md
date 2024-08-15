@@ -1030,7 +1030,7 @@ rostopic pub /rm_driver/SetForceSensor_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/ForceSensorSet_result
+rostopic echo /rm_driver/ForceSensorSet_Result
 ```
 
 **参数说明：**
