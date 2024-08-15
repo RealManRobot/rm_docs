@@ -333,10 +333,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/jointConfigSettings",
               },
               {
-                text: "初始位置配置",
-                link: "/robot/api/c/classes/armInitPosition",
-              },
-              {
                 text: "升降机构配置",
                 link: "/robot/api/c/classes/liftControl",
               },
