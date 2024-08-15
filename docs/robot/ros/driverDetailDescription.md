@@ -2,7 +2,7 @@
 
 为了方便用户通过ROS1控制机械臂，睿尔曼提供了基于JSON的ROS1功能包，可以通过ROS话题查询和控制机械臂。在实际使用机械臂时，用户可通过以太网口与机械臂建立通信控制机械臂。
 
-## 1.控制器错误代码
+## 控制器错误代码
 
 |  **序号**  |  **错误代码（16进制）**  |  **错误内容**  |
 | :--- | :--- | :--- |
@@ -36,7 +36,7 @@
 |  28  |  0x5008  |  控制器欠压  |
 |  29  |  0x5009  |  实时内核通讯错误  |
 
-## 2.关节错误代码
+## 关节错误代码
 
 |  **序号**  |  **错误代码（16进制）**  |  **错误内容**  |
 | :--- | :--- | :--- |
@@ -59,7 +59,7 @@
 |  17  |  0x8000  |  多圈关节丢圈数  |
 |  18  |  0xF000  |  通信丢帧  |
 
-## 3.设置关节使能状态
+## 设置关节使能状态
 
 **参数说明：**
 `Joint_Enable.msg` 对指定关节进行使能操作
@@ -86,7 +86,7 @@ rostopic echo /rm_driver/Joint_En_State_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.2切换当前工具坐标系
+## 切换当前工具坐标系
 
 **参数说明：**
 
@@ -111,7 +111,7 @@ rostopic echo /rm_driver/ChangeTool_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.3切换当前工作坐标系
+## 切换当前工作坐标系
 
 **参数说明：**
 
@@ -136,7 +136,7 @@ rostopic echo /rm_driver/ChangeWorkFrame_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.4查询当前工作坐标系
+## 查询当前工作坐标系
 
 **参数说明：**
 
@@ -152,7 +152,7 @@ rostopic pub /rm_driver/GetTotalWorkFrame std_msgs/Empty "{}"
 
 **返回值查看：** 根据rm_driver节点打印信息查看。
 
-## 3.5获取机械臂关节当前电流
+## 获取机械臂关节当前电流
 
 **参数说明：**
 
@@ -178,9 +178,9 @@ rostopic echo /rm_driver/Joint_Current
 |:------------------|:-------|:----------------------------------------|
 |`joint_current`     | `float32[]` |关节电流（单位：uA） |
 
-## 3.6机械臂运动规划
+## 机械臂运动规划
 
-### 3.6.1关节空间运动`MoveJ.msg`
+### 关节空间运动`MoveJ.msg`
 
 **参数说明：**
 
@@ -189,7 +189,6 @@ rostopic echo /rm_driver/Joint_Current
 |`joint`|   `float32[]`   | 关节角度，单位：弧度。          |
 |`speed`|   `float32`   | 速度比例系数，0~1。          |
 |`trajectory_connect`|   `uint8`   | 可选参数，代表是否和下一条运动一起规划，</br>0代表立即规划，</br>1代表和下一条轨迹一起规划，当为1时，轨迹不会立即执行。          |
-
 
 **使用命令示例：**
 
@@ -214,7 +213,7 @@ rostopic echo /rm_driver/Plan_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.6.2笛卡尔空间直线运动`MoveL.msg`
+### 笛卡尔空间直线运动`MoveL.msg`
 
 **参数说明：**
 
@@ -252,7 +251,7 @@ rostopic echo /rm_driver/Plan_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.6.3笛卡尔空间圆弧运动`MoveC.msg`
+### 笛卡尔空间圆弧运动`MoveC.msg`
 
 **参数说明：**
 
@@ -301,7 +300,7 @@ rostopic echo /rm_driver/Plan_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.6.4关节角度CANFD透传`JointPos.msg`
+### 关节角度CANFD透传`JointPos.msg`
 
 **参数说明：**
 
@@ -320,7 +319,7 @@ rostopic pub /rm_driver/JointPos rm_msgs/JointPos "joint: [0, 0, 0, 0, 0, 0] exp
 **返回参数说明：**
 成功：无返回值；失败返回：driver终端返回错误码。
 
-### 3.6.5位姿CANFD透传`CartePos.msg`
+### 位姿CANFD透传`CartePos.msg`
 
 **参数说明：**
 
@@ -348,7 +347,7 @@ rostopic pub /rm_driver/MoveP_Fd_Cmd rm_msgs/CartePos
 **返回参数说明：**
 成功：无返回值；失败返回：driver终端返回错误码。
 
-### 3.6.6关节空间规划到目标位姿`MoveJ_P.msg`
+### 关节空间规划到目标位姿`MoveJ_P.msg`
 
 **参数说明：**
 
@@ -381,9 +380,9 @@ trajectory_connect: 0"
 rostopic echo /rm_driver/Plan_State
 ```
 
-## 3.7机械臂运动配置-步进指令
+## 机械臂运动配置-步进指令
 
-### 3.7.1关节步进`Joint_Step.msg`
+### 关节步进`Joint_Step.msg`
 
 **参数说明：**
 
@@ -417,9 +416,9 @@ rostopic echo /rm_driver/Plan_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.8机械臂运动配置-运动指令
+## 机械臂运动配置-运动指令
 
-### 3.8.1轨迹急停`Stop.msg`
+### 轨迹急停`Stop.msg`
 
 **参数说明：**
 
@@ -444,9 +443,9 @@ rostopic echo /rm_driver/Set_Arm_Stop_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.9机械臂运动配置-示教指令类
+## 机械臂运动配置-示教指令类
 
-### 3.9.1关节示教`Joint_Teach.msg`
+### 关节示教`Joint_Teach.msg`
 
 **参数说明：**
 
@@ -501,7 +500,7 @@ rostopic echo /rm_driver/SetPosTeach_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.9.3姿态示教`Ort_Teach.msg`
+### 姿态示教`Ort_Teach.msg`
 
 **参数说明：**
 
@@ -528,7 +527,7 @@ rostopic echo /rm_driver/SetOrtTeach_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.9.4示教停止`Stop_Teach.msg`
+### 示教停止`Stop_Teach.msg`
 
 **参数说明：**
 
@@ -553,9 +552,9 @@ rostopic echo /rm_driver/SetStopTeach_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.10系统配置
+## 系统配置
 
-### 3.10.1控制机械臂上电断电
+### 控制机械臂上电断电
 
 **参数说明：**
 
@@ -580,7 +579,7 @@ rostopic echo /rm_driver/Set_Arm_Power_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.10.2读取软件版本号
+### 读取软件版本号
 
 **参数说明：**
 
@@ -605,7 +604,7 @@ rostopic echo /rm_driver/Get_Arm_Software_Version_Result
 |:------------------|:-------|:----------------------------------------|
 |`Arm_Software_Version.msg`            | `string` |Product_version #机械臂类型</br> Plan_version #软件版本号|
 
-### 3.10.3清除系统错误
+### 清除系统错误
 
 **参数说明：**
 
@@ -630,9 +629,9 @@ rostopic echo /rm_driver/System_En_State_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-## 3.11查询机械臂状态信息
+## 查询机械臂状态信息
 
-### 3.11.1获取机械臂关节当前电流`Joint_Current.msg`
+### 获取机械臂关节当前电流`Joint_Current.msg`
 
 **参数说明：**
 
@@ -657,7 +656,7 @@ rostopic echo /rm_driver/Joint_Current
 |:------------------|:-------|:----------------------------------------|
 |`joint_current`            | `float32[]` |关节电流（单位：uA） |
 
-### 3.11.2查询机械臂关节角度
+### 查询机械臂关节角度
 
 **参数说明：**
 
@@ -682,7 +681,7 @@ rostopic echo /joint_states
 |:------------------|:-------|:----------------------------------------|
 |`sensor_msgs`            | `JointState` |/ |
 
-### 3.11.3查询机械臂状态（弧度+四元数）`GetArmState_Command.msg`
+### 查询机械臂状态（弧度+四元数）`GetArmState_Command.msg`
 
 **参数说明：**
 
@@ -713,7 +712,7 @@ rostopic echo /rm_driver/ArmCurrentState
 |`sys_err`            | `bool` |系统错误信息 |
 |`dof`            | `bool` |机械臂自由度 |
 
-## 3.11.4查询机械臂状态（角度+欧拉角）`GetArmState_Command.msg`
+## 查询机械臂状态（角度+欧拉角）`GetArmState_Command.msg`
 
 **参数说明：**
 
@@ -744,9 +743,9 @@ rostopic echo /rm_driver/Arm_Current_State
 |`sys_err`            | `bool` |系统错误信息 |
 |`dof`            | `bool` |机械臂自由度 |
 
-## 3.12控制器IO配置及获取
+## 控制器IO配置及获取
 
-### 3.12.1设置机械臂数字IO输出状态`Arm_Digital_Output.msg`
+### 设置机械臂数字IO输出状态`Arm_Digital_Output.msg`
 
 **参数说明：**
 
@@ -773,7 +772,7 @@ rostopic echo /rm_driver/Set_DO_State_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.12.2获取所有IO输入状态`IO_Update.msg`
+### 获取所有IO输入状态`IO_Update.msg`
 
 **参数说明：**
 
@@ -800,9 +799,9 @@ rostopic echo /rm_driver/Arm_IO_State
 |:------------------|:-------|:----------------------------------------|
 |`Arm_Digital_Input`            | `nt8[4]` |   1代表高；-1代表为输出状态 |
 
-## 3.13工具端IO配置及获取
+## 工具端IO配置及获取
 
-### 3.13.1设置工具端数字IO输出状态`Tool_Digital_Output.msg`
+### 设置工具端数字IO输出状态`Tool_Digital_Output.msg`
 
 **参数说明：**
 
@@ -829,7 +828,7 @@ rostopic echo /rm_driver/Set_Tool_DO_State_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.13.2获取工具端数字IO状态`IO_Update.msg`
+### 获取工具端数字IO状态`IO_Update.msg`
 
 **参数说明：**
 
@@ -857,11 +856,11 @@ rostopic echo /rm_driver/Tool_IO_State
 |`Tool_IO_Mode`            | `bool[2]` |数字I/O输入/输出状态  0-输入模式，1-输出模式 |
 |`Tool_IO_State`            | `bool[2]` |数字I/O电平状态      0-低，1-高 |
 
-## 3.14末端夹爪控制（选配）
+## 末端夹爪控制（选配）
 
 睿尔曼机械臂末端配备了因时的EG2-4C2夹爪，为了便于用户操作夹爪，机械臂控制器对用户适配了夹爪的ROS控制方式。
 
-### 3.14.1设置夹爪持续力控夹取`Gripper_Pick.msg`
+### 设置夹爪持续力控夹取`Gripper_Pick.msg`
 
 夹爪以设定的速度力控夹取，当受力超过设定力后，停止运动
 
@@ -890,7 +889,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.14.2设置夹爪力控夹取`Gripper_Pick.msg`
+### 设置夹爪力控夹取`Gripper_Pick.msg`
 
 夹爪以设定的速度力控夹取，当受力超过设定力后，停止运动。
 
@@ -919,7 +918,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.14.3夹爪到达指定位置`Gripper_Set.msg`
+### 夹爪到达指定位置`Gripper_Set.msg`
 
 设置夹爪到固定位置，夹爪到位置后或者所受力超过阈值后停止。
 
@@ -951,7 +950,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 
 睿尔曼RM-65F机械臂末端配备集成式六维力传感器，无需外部走线，用户可直接通过ROS话题对六维力进行操作。
 
-### 3.15.1查询六维力数据
+### 查询六维力数据
 
 **参数说明：**
 
@@ -986,7 +985,7 @@ rostopic echo /rm_driver/ToolZeroForce   #工具坐标系下的传感器数据
 |`force_My`            | `float32` |/ |
 |`force_Mz`            | `float32` |/ |
 
-### 3.15.2清空六维力数据
+### 清空六维力数据
 
 **参数说明：**
 
@@ -1012,7 +1011,7 @@ rostopic echo /rm_driver/ClearForceData_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.15.3自动设置六维力重心参数
+### 自动设置六维力重心参数
 
 **参数说明：**
 
@@ -1038,7 +1037,7 @@ rostopic echo /rm_driver/ForceSensorSet_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.15.4手动标定六维力数据
+### 手动标定六维力数据
 
 **参数说明：**
 
@@ -1097,9 +1096,9 @@ rostopic echo /rm_driver/StopSetForceSensor_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-## 3.16拖动示教
+## 拖动示教
 
-### 3.16.1拖动示教结束
+### 拖动示教结束
 
 **参数说明：**
 
@@ -1116,7 +1115,7 @@ rostopic pub /rm_driver/StartMultiDragTeach_result std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/StopDragTeach_result
+rostopic echo /rm_driver/StopDragTeach_Result
 ```
 
 **参数说明：**
@@ -1125,7 +1124,7 @@ rostopic echo /rm_driver/StopDragTeach_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.16.2开启复合拖动示教
+### 开启复合拖动示教
 
 **参数说明：**
 `Start_Multi_Drag_Teach.msg`
@@ -1143,7 +1142,7 @@ rostopic pub /rm_driver/StartMultiDragTeach_Cmd rm_msgs/Start_Multi_Drag_Teach "
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/StartMultiDragTeach_result
+rostopic echo /rm_driver/StartMultiDragTeach_Result
 ```
 
 **参数说明：**
@@ -1152,7 +1151,7 @@ rostopic echo /rm_driver/StartMultiDragTeach_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.16.3力位混合控制`Set_Force_Position.msg`
+### 力位混合控制`Set_Force_Position.msg`
 
 **参数说明：**
 
@@ -1171,7 +1170,7 @@ rostopic pub /rm_driver/SetForcePosition_Cmd rm_msgs/Set_Force_Position "sensor:
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/SetForcePosition_result
+rostopic echo /rm_driver/SetForcePosition_Result
 ```
 
 **参数说明：**
@@ -1180,7 +1179,7 @@ rostopic echo /rm_driver/SetForcePosition_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.16.4结束力位混合控制
+### 结束力位混合控制
 
 **参数说明：**
 
@@ -1197,7 +1196,7 @@ rostopic pub /rm_driver/StopForcePostion_Cmd std_msgs/Empty "{}"
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/StopForcePostion_result
+rostopic echo /rm_driver/StopForcePostion_Result
 ```
 
 **参数说明：**
@@ -1206,11 +1205,11 @@ rostopic echo /rm_driver/StopForcePostion_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-## 3.17末端五指灵巧手控制（选配）
+## 末端五指灵巧手控制（选配）
 
 睿尔曼机械臂末端配备了五指灵巧手，可通过ROS对灵巧手进行设置。
 
-### 3.17.1设置灵巧手手势序号`Hand_Posture.msg`
+### 设置灵巧手手势序号`Hand_Posture.msg`
 
 **参数说明：**
 
@@ -1236,7 +1235,7 @@ rostopic echo /rm_driver/Set_Hand_Posture_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.17.2设置灵巧手动作序列`Hand_Seq.msg`
+### 设置灵巧手动作序列`Hand_Seq.msg`
 
 **参数说明：**
 
@@ -1262,7 +1261,7 @@ rostopic echo /rm_driver/Set_Hand_Seq_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.17.3设置灵巧手各自由度角度`Hand_Angle.msg`
+### 设置灵巧手各自由度角度`Hand_Angle.msg`
 
 设置灵巧手角度，灵巧手有 6 个自由度，从 1~6 分别为小拇指，无名指，中指，食指，大拇指弯曲，大拇指旋转。
 **参数说明：**
@@ -1289,7 +1288,7 @@ rostopic echo /rm_driver/Set_Hand_Angle_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.17.4设置灵巧手速度`Hand_Speed.msg`
+### 设置灵巧手速度`Hand_Speed.msg`
 
 **参数说明：**
 
@@ -1315,7 +1314,7 @@ rostopic echo /rm_driver/Set_Hand_Speed_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.17.5设置灵巧手力阈值`Hand_Force.msg`
+### 设置灵巧手力阈值`Hand_Force.msg`
 
 **参数说明：**
 
@@ -1341,11 +1340,11 @@ rostopic echo /rm_driver/Set_Hand_Force_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-## 3.18透传力位混合控制补偿模式
+## 透传力位混合控制补偿模式
 
 针对睿尔曼带一维力和六维力版本的机械臂，用户除了可直接使用示教器调用底层的力位混合控制模块外，还可以将自定义的轨迹以周期性透传的形式结合底层的力位混合控制算法进行补偿。
 
-### 3.18.1开启透传力位混合控制补偿模式
+### 开启透传力位混合控制补偿模式
 
 **参数说明：**
 
@@ -1371,7 +1370,7 @@ rostopic echo /rm_driver/StartForcePositionMove_result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.18.2透传力位混合控制补偿(位姿)`Force_Position_Move_Pose.msg`
+### 透传力位混合控制补偿(位姿)`Force_Position_Move_Pose.msg`
 
 **参数说明：**
 
@@ -1393,7 +1392,7 @@ rostopic pub /rm_driver/ForcePositionMovePose_Cmd rm_msgs/Force_Position_Move_Po
 
 成功：无返回，失败：报错信息查看rm_driver节点。
 
-### 3.18.3透传力位混合控制补偿(弧度)`Force_Position_Move_Joint.msg`
+### 透传力位混合控制补偿(弧度)`Force_Position_Move_Joint.msg`
 
 **参数说明：**
 
@@ -1405,7 +1404,6 @@ rostopic pub /rm_driver/ForcePositionMovePose_Cmd rm_msgs/Force_Position_Move_Po
 |`dir`|   `geometry_msgs/Pose`   |  力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，其中一维力类型时默认方向为Z方向。       |
 |`force`|   `geometry_msgs/Pose`   |  力的大小，精度0.1N或者0.1Nm。       |
 |`dof`|   `uint8`   |  机械臂自由度信息。      |
-
 
 **使用命令示例：**
 
@@ -1426,11 +1424,11 @@ rostopic pub /rm_driver/ForcePositionMoveJiont_Cmd rm_msgs/Force_Position_Move_J
 |  返回值参数说明  |  std_msgs::Bool  成功返回：true；失败返回：false。  |
 |  返回值查看  |  rostopic echo /rm_driver/StopForcePositionMove_result  |
 
-## 3.19升降机构
+## 升降机构
 
 睿尔曼机械臂可集成自主研发升降机构。
 
-### 3.19.1升降机构速度开环控制`Lift_Speed.msg`
+### 升降机构速度开环控制`Lift_Speed.msg`
 
 **参数说明：**
 
@@ -1456,7 +1454,7 @@ rostopic echo /rm_driver/Set_Lift_Speed_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.19.2升降机构位置闭环控制`Lift_Height.msg`
+### 升降机构位置闭环控制`Lift_Height.msg`
 
 升降机构运行到指定高度。
 **参数说明：**
@@ -1484,7 +1482,7 @@ rostopic echo /rm_driver/Plan_State
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.19.3获取升降机构状态
+### 获取升降机构状态
 
 **参数说明：**
 
@@ -1513,9 +1511,9 @@ rostopic echo /rm_driver/LiftState
 |`err_flag`            | `uint16` |驱动错误代码。 |
 |`mode`            | `byte` |当前升降状态</br>0-空闲</br>1-正方向速度运动</br>2-正方向位置运动</br>3-负方向速度运动</br>4-负方向位置运动。 |
 
-## 3.20机械臂状态主动上报
+## 机械臂状态主动上报
 
-### 3.20.1设置 UDP 机械臂状态主动上报配置`Set_Realtime_Push.msg`
+### 设置 UDP 机械臂状态主动上报配置`Set_Realtime_Push.msg`
 
 **参数说明：**
 
@@ -1544,7 +1542,7 @@ rostopic echo /rm_driver/Set_Realtime_Push_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.20.2查询 UDP 机械臂状态主动上报配置
+### 查询 UDP 机械臂状态主动上报配置
 
 **参数说明：**
 
@@ -1570,7 +1568,7 @@ rostopic echo /rm_driver/Get_Realtime_Push_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
-### 3.20.3UDP机械臂状态主动上报
+### UDP机械臂状态主动上报
 
 #### 六维力`Six_Force.msg`
 
