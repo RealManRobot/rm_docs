@@ -95,7 +95,7 @@
 |   :--     |   :--     |   :--     |
 |set_realtime_push|   `string`   |   设置 UDP 机械臂状态主动上报配置。     |
 |port|`int`|设置广播的端口号。|
-|cycle|`int`|设置广播周期，单位为 5ms。|
+|cycle|`int`|设置广播周期，单位为5ms，如参数为1则表示5ms，参数为2则表示10ms。|
 |enable|`bool`|设置使能，是否使能主动上报。|
 |force_coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
 |ip|`string`|自定义的上报目标 IP 地址。|
