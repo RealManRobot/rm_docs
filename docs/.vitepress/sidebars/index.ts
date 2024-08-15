@@ -215,7 +215,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/systemConfig",
           },
           {
-            text: "升降机构（选配）配置指令集",
+            text: "升降机构配置指令集",
             link: "/robot/json/liftControl",
           },
           {
@@ -227,7 +227,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/onlineProgram",
           },
           {
-            text: "UDP 主动上报（第三代）配置指令集",
+            text: "UDP 主动上报配置指令集",
             link: "/robot/json/udpConfig",
           },
           {
@@ -235,7 +235,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/electronicFence",
           },
           {
-            text: "自碰撞安全检测（第三代）配置指令集",
+            text: "自碰撞安全检测配置指令集",
             link: "/robot/json/selfCollision",
           },
           {
@@ -277,7 +277,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armInitPosition",
               },
               {
-                text: "机械臂运动状态控制指令",
+                text: "运动状态控制指令",
                 link: "/robot/api/c/classes/armMotionControl",
               },
               {
@@ -289,7 +289,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/armTeachMove",
               },
               {
-                text: "机械臂末端运动参数配置",
+                text: "末端运动参数配置",
                 link: "/robot/api/c/classes/armTipVelocityParameters",
               },
               {
@@ -486,7 +486,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 text: "算法库版本",
                 link: "/robot/api/c/struct/algorithmVersion",
               },
-
               {
                 text: "欧拉角",
                 link: "/robot/api/c/struct/euler",
