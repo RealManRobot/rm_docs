@@ -2,7 +2,7 @@
 
 **MDH模型坐标系：**
 
-<div align="center"> <img src="../DH/doc/RML63.png" width = 500 /> </div>
+<div align="center"> <img src="../robotParameter/doc/RML63.png" width = 500 /> </div>
 
 **MDH参数(改进D-H参数)：**
 

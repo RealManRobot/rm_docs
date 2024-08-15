@@ -2,7 +2,7 @@
 
 **MDH模型坐标系：**
 
-<div align="center"> <img src="../DH//doc/ECO65.png" width = 500 /> </div>
+<div align="center"> <img src="../robotParameter/doc/ECO65.png" width = 500 /> </div>
 
 
 <br>
