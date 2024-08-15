@@ -31,7 +31,7 @@ roslaunch rm_bringup rm_<arm_type>_bringup.launch.py
 首先需要运行rm_control节点。
 
 ```ros
-rm@rm-desktop:~$ roslaunch rm_control rm_<arm_type>_control.launch
+roslaunch rm_control rm_<arm_type>_control.launch
 ```
 
 之后需要运行bringup节点。
