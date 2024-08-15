@@ -78,7 +78,7 @@ rostopic pub /rm_driver/Joint_Enable rm_msgs/Joint_Enable "joint_num: 1 state: t
 **返回命令示例：**
 
 ```json
-rostopic echo /rm_driver/set_joint_err_clear_result
+rostopic echo /rm_driver/Joint_En_State_Result
 ```
 
 **参数说明：**
