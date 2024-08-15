@@ -74,7 +74,7 @@ char* password = (char*)"12345678";
 ret = rm_set_wifi_sta(robot_handle,router_name,password);
 ```
 
-## 控制器RS485接口波特率设置`rm_set_RS485()`
+## 控制器RS485波特率设置`rm_set_RS485()`
 
 - **方法原型：**
 

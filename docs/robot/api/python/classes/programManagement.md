@@ -112,7 +112,7 @@ print(arm.rm_get_program_trajectory_list(1, 10, "a"))
 arm.rm_delete_robot_arm()
 ```
 
-## 开始运行指定编号轨迹`rm_set_program_id_run()`
+## 开始运行指定轨迹`rm_set_program_id_run()`
 
 - **方法原型：**
 
@@ -202,7 +202,7 @@ print(arm.rm_get_program_run_state())
 arm.rm_delete_robot_arm()
 ```
 
-## 删除指定编号轨迹`rm_delete_program_trajectory()`
+## 删除指定轨迹`rm_delete_program_trajectory()`
 
 - **方法原型：**
 
@@ -244,7 +244,7 @@ print(arm.rm_delete_program_trajectory(8))
 arm.rm_delete_robot_arm()
 ```
 
-## 修改指定编号的轨迹信息`rm_update_program_trajectory()`
+## 修改指定轨迹信息`rm_update_program_trajectory()`
 
 - **方法原型：**
 
@@ -288,7 +288,7 @@ print(arm.rm_update_program_trajectory(8, 20, "test"))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置 IO 默认运行编号`rm_set_default_run_program()`
+## 设置IO默认运行编号`rm_set_default_run_program()`
 
 - **方法原型：**
 
@@ -330,7 +330,7 @@ print(arm.rm_set_default_run_program(8))
 arm.rm_delete_robot_arm()
 ```
 
-## 获取 IO 默认运行编号`rm_get_default_run_program()`
+## 获取IO默认运行编号`rm_get_default_run_program()`
 
 - **方法原型：**
 

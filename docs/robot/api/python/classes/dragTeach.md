@@ -213,7 +213,7 @@ print(arm.rm_run_drag_trajectory(1))
 arm.rm_delete_robot_arm()
 ```
 
-## 控制机械臂在轨迹复现过程中的暂停`rm_pause_drag_trajectory()`
+## 控制轨迹复现过程中暂停`rm_pause_drag_trajectory()`
 
 - **方法原型：**
 
@@ -249,7 +249,9 @@ print(arm.rm_pause_drag_trajectory())
 arm.rm_delete_robot_arm()
 ```
 
-## 控制机械臂在轨迹复现过程中暂停之后的继续`rm_continue_drag_trajectory()`
+## 控制轨迹复现过程的继续`rm_continue_drag_trajectory()`
+
+控制轨迹复现过程中暂停之后的继续。
 
 - **方法原型：**
 
@@ -285,7 +287,9 @@ print(arm.rm_continue_drag_trajectory())
 arm.rm_delete_robot_arm()
 ```
 
-## 控制机械臂在轨迹复现过程中的停止`rm_stop_drag_trajectory()`
+## 控制轨迹复现过程中的停止`rm_stop_drag_trajectory()`
+
+控制机械臂在轨迹复现过程中的停止。
 
 - **方法原型：**
 

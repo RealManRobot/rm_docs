@@ -88,7 +88,7 @@ print(arm.rm_set_wifi_sta("robot", "12345678"))
 arm.rm_delete_robot_arm()
 ```
 
-## 控制器RS485接口波特率设置`rm_set_RS485()`
+## 控制器RS485波特率设置`rm_set_RS485()`
 
 >设置成功后蜂鸣器响。
 

@@ -74,7 +74,7 @@ print(arm.rm_stop_force_position_move())
 arm.rm_delete_robot_arm()
 ```
 
-## 透传力位混合补偿-角度方式`rm_force_position_move_joint()`
+## 透传力位混合角度补偿`rm_force_position_move_joint()`
 
 - **方法原型：**
 
@@ -123,7 +123,7 @@ print(arm.rm_force_position_move_joint([0, 0, 0, 0, 0, 0], 1, 1, 2, 2, True))
 arm.rm_delete_robot_arm()
 ```
 
-## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`
+## 透传力位混合位姿补偿`rm_force_position_move_pose()`
 
 - **方法原型：**
 

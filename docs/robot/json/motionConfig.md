@@ -964,8 +964,9 @@
 
 ## 轨迹反馈集
 
-### 当前轨迹结束返回标志`current_trajectory_state`
+### 轨迹结束返回标志`current_trajectory_state`
 
+轨迹为当前轨迹。
 **参数说明：**
 
 | 参数                       | 类型     | 说明                                                                |

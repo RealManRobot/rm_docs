@@ -203,7 +203,7 @@ print(arm.rm_movec(ret1[1]['pose'], ret2[1]['pose'], 20, 0, 0, 0, 1))
 arm.rm_delete_robot_arm()
 ```
 
-## 该函数用于关节空间运动到目标位姿`rm_movej_p()`
+## 关节空间运动到目标位姿`rm_movej_p()`
 
 - **方法原型：**
 

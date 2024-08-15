@@ -1,4 +1,4 @@
-# <p class="hidden">JSON协议：</p>升降机构（选配）配置指令集
+# <p class="hidden">JSON协议：</p>升降机构配置指令集
 
 ## 速度开环控制`set_lift_speed`
 
