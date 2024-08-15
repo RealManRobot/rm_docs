@@ -3,10 +3,14 @@
     --vp-font-family-base: 'Source Han Serif', 'MiSans', 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, 'PingFang SC', 'Noto Sans CJK SC', 'Noto Sans SC', 'Heiti SC', 'Microsoft YaHei', 'DengXian', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+.group:nth-of-type(1) .VPLink .text {
+    color: var(--vp-c-text-1) !important;
+    font-weight: 700 !important;
+}
+
 .VPFeature {
     background-color: transparent !important;
     border: none !important;
-
 }
 
 body {
@@ -74,7 +78,6 @@ tbody {
     background-color: var(--vp-c-bg) !important;
 }
 
-/**/
 .VPSidebarItem.level-0.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-1.is-link>.item>.link:hover .text,
 .VPSidebarItem.level-2.is-link>.item>.link:hover .text,
@@ -93,7 +96,7 @@ tbody {
     color: var(--vp-c-brand-1) !important;
 }
 
-.VPSidebarItem.level-2.is-active>.item>.indicator,
+
 .VPSidebarItem.level-3.is-active>.item>.indicator,
 .VPSidebarItem.level-4.is-active>.item>.indicator,
 .VPSidebarItem.level-5.is-active>.item>.indicator {
@@ -259,8 +262,4 @@ img {
 
 .vp-doc th {
     text-align: center !important;
-}
- .group:nth-of-type(1) .VPLink .text{
-    color: var(--vp-c-text-1) !important;
-    font-weight: 700 !important;
 }

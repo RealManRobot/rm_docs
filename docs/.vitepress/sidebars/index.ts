@@ -920,7 +920,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         items: [
           {
             text: "Modbus从站地址表",
-            link: "/robot/modbus/index",
+            link: "/robot/modbus/",
           },
         ],
       },
