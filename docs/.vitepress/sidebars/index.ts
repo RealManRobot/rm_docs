@@ -960,7 +960,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
           {
             text: "机械臂API开发常见问题",
-            link: "/robot/FQA/sdk",
+            link: "/robot/FQA/sdk/",
           },
         ],
       },

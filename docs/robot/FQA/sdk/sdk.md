@@ -53,11 +53,11 @@
 
 1. 保存在线编程文件,如果在线编程文件中包含拖动示教轨迹，需要连接机械臂运行一遍，在示教器文件夹下寻找GJTMP.txt文件保存。
 
-<div align=center><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mD6wz6nJbv/img/2ce7d608-01a1-4f89-956a-8d6b4ed5087d.png"></div>
+![alt text](image.png)
 
 2. 在程序中写入引用的在线编程文件路径（包括文件名），如果为第三代，则该接口支持设置默认在线编程文件以及设置单步模式。如下所示：
 
-<div align=center><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mD6wz6nJbv/img/875e5133-d5a6-4fb3-b774-4c48a7a4988e.png"></div>
+![alt text](image-1.png)
 
 **第三代机械臂：** 在线编程文件可直接保存到控制器中，使用JSON协议、API、ROS、MODBUS-RTU/TCP、IO均可触发。
 
