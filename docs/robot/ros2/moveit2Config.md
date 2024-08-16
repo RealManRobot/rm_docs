@@ -49,7 +49,7 @@ ros2 launch rm_description rm_<arm_type>_display.launch.py
 之后需要运行中间功能包rm_control的相关节点。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_control rm_<arm_type>_control.launch.py
+ros2 launch rm_control rm_<arm_type>_control.launch.py
 ```
 
 最终需要启动控制真实机械臂的moveit2节点。
