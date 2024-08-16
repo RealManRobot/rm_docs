@@ -1415,14 +1415,31 @@ rostopic pub /rm_driver/ForcePositionMoveJiont_Cmd rm_msgs/Force_Position_Move_J
 
 成功：无返回，失败：报错信息查看rm_driver节点
 
-### 3.18.4开启透传力位混合控制补偿模式
+### 开启透传力位混合控制补偿模式
 
-|  功能描述  |  开启透传力位混合控制补偿模式  |
-| --- | --- |
-|  参数说明  |  std_msgs::Empty  |
-|  命令示例  |  rostopic pub /rm_driver/StopForcePositionMove_Cmd std_msgs/Empty "{}"  |
-|  返回值参数说明  |  std_msgs::Bool  成功返回：true；失败返回：false。  |
-|  返回值查看  |  rostopic echo /rm_driver/StopForcePositionMove_Result  |
+**参数说明：**
+
+| 参数                    | 类型 | 说明                            |
+|:----------------------|:---|:------------------------------|
+|`std_msgs`|   `Empty`   |  /       |
+
+**使用命令示例：**
+
+```json
+rostopic pub /rm_driver/StopForcePositionMove_Cmd std_msgs/Empty "{}"
+```
+
+**返回命令示例：**
+
+```json
+rostopic echo /rm_driver/StopForcePositionMove_Result
+```
+
+**参数说明：**
+
+| 参数                | 类型     | 说明      |
+|:------------------|:-------|:----------------------------------------|
+|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
 
 ## 升降机构
 
