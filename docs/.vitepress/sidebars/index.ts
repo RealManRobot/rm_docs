@@ -317,7 +317,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/force",
               },
               {
-                text: "力位混合控制补偿配置",
+                text: "透传力位混合控制补偿配置",
                 link: "/robot/api/c/classes/forcePositionControl",
               },
               {
@@ -592,7 +592,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/electronicFenceConfig",
               },
               {
-                text: "力位混合控制补偿配置",
+                text: "透传力位混合控制补偿配置",
                 link: "/robot/api/python/classes/forcePositionControl",
               },
               {
