@@ -11,7 +11,7 @@ rm_get_controller_state(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str,any]: 包含以下键值的字典。<br>
+`dict[str,any]`: 包含以下键值的字典。<br>
 
 1. int: 函数执行的状态码。
 
@@ -27,10 +27,10 @@ dict[str,any]: 包含以下键值的字典。<br>
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   voltage  |    `float`   |    返回的电压    |
-|   current  |    `float`   |    返回的电流    |
-|   temperature  |    `float`   |    返回的温度    |
-|   sys_err  |    `int`   |    控制器运行错误代码    |
+|   `voltage`  |    `float`   |    返回的电压    |
+|   `current`  |    `float`   |    返回的电流    |
+|   `temperature`  |    `float`   |    返回的温度    |
+|   `sys_err`  |    `int`   |    控制器运行错误代码    |
 
 - **使用示例**
   
@@ -61,7 +61,7 @@ rm_set_arm_power(self, power: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| power      | `int` | 1-上电状态，0 断电状态                    |
+| `power`      | `int` | 1-上电状态，0 断电状态                    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -101,7 +101,7 @@ rm_get_arm_power_state(self) -> tuple[int, int]:
 ```
 
 - **返回值:** </br>
-tuple[int, int]: 包含两个元素的元组
+`tuple[int, int]`: 包含两个元素的元组
 
 1. int: 函数执行的状态码
 
@@ -145,7 +145,7 @@ rm_get_system_runtime(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-tuple[int, int]: 包含两个元素的元组
+`tuple[int, int]`: 包含两个元素的元组
 
 1. int: 函数执行的状态码
 
@@ -161,10 +161,10 @@ tuple[int, int]: 包含两个元素的元组
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   day  |    `int`   |    读取到的时间    |
-|   hour  |    `int`   |    读取到的时间    |
-|   min  |    `int`   |    读取到的时间    |
-|   sec  |    `int`   |    读取到的时间    |
+|   `day`  |    `int`   |    读取到的时间    |
+|   `hour`  |    `int`   |    读取到的时间    |
+|   `min`  |    `int`   |    读取到的时间    |
+|   `sec`  |    `int`   |    读取到的时间    |
 
 - **使用示例**
   
@@ -228,7 +228,7 @@ rm_get_joint_odom(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。<br>
+`tuple[int, list[float]]`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -308,7 +308,7 @@ rm_get_arm_software_info(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str,any]]: 包含两个元素的元组
+`tuple[int, dict[str,any]]`: 包含两个元素的元组
 
 1. int: 函数执行的状态码
 
@@ -324,7 +324,7 @@ tuple[int, dict[str,any]]: 包含两个元素的元组
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_arm_software_version_t  |    `dict[str,any]`   |    机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称 |
+|   `rm_arm_software_version_t`  |    `dict[str,any]`   |    机械臂软件版本信息字典，键为rm_arm_software_version_t结构体的字段名称 |
 
 - **使用示例**
   
@@ -392,7 +392,7 @@ rm_clear_system_err(self) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| ip      | `str` | description                    |
+| `ip`      | `str` | description                    |
 
 - **返回值:** </br>
 函数执行的状态码：

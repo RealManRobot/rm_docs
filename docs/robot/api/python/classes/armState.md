@@ -11,7 +11,7 @@ rm_get_current_arm_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
- tuple[int, dict[str,any]]: 包含两个元素的元组。
+`tuple[int, dict[str,any]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -27,7 +27,7 @@ rm_get_current_arm_state(self) -> tuple[int, dict[str, any]]:
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_current_arm_state_t  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
+|   `rm_current_arm_state_t`  |    `dict`   |    机械臂当前状态字典，键为rm_current_arm_state_t的参数名。    |
 
 - **使用示例**
   
@@ -55,7 +55,7 @@ rm_get_current_joint_temperature(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+`tuple[int, list[float]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -99,7 +99,7 @@ rm_get_current_joint_current(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+`tuple[int, list[float]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -143,7 +143,7 @@ rm_get_current_joint_voltage(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+`tuple[int, list[float]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -160,7 +160,6 @@ tuple[int, list[float]]: 包含两个元素的元组。
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
 |   -  |    `list[float]`   |    关节1~7电压数组，单位：V|
-
 
 - **使用示例**
   
@@ -231,7 +230,7 @@ rm_get_init_pose(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+`tuple[int, list[float]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -275,7 +274,7 @@ rm_get_joint_degree(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组。
+`tuple[int, list[float]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -319,7 +318,7 @@ rm_get_arm_all_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str, any]]: 包含两个元素的元组。
+`tuple[int, dict[str, any]]`: 包含两个元素的元组。
 
 1. 函数执行的状态码
 
@@ -335,7 +334,7 @@ tuple[int, dict[str, any]]: 包含两个元素的元组。
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_arm_all_state_t  |  `dict`   | 机械臂所有状态信息字典，键为rm_arm_all_state_t的参数名。 |
+|   `rm_arm_all_state_t`  |  `dict`   | 机械臂所有状态信息字典，键为rm_arm_all_state_t的参数名。 |
 
 - **使用示例**
   
@@ -363,7 +362,7 @@ rm_get_controller_rs485_mode(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
+`dict[str, any]`: 包含以下键值的字典
 
 1. 函数执行的状态码
 
@@ -419,7 +418,7 @@ rm_get_tool_rs485_mode(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典
+`dict[str, any]`: 包含以下键值的字典
 
 1. 函数执行的状态码
 

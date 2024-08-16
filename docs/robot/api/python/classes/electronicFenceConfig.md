@@ -28,7 +28,7 @@ rm_add_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> int
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   electronic_fence |    `(rm_fence_config_t)`    |  几何模型参数结构体。   |
+|   `electronic_fence` |    `(rm_fence_config_t)`    |  几何模型参数结构体。   |
 
 - **返回值:**
 函数执行的状态码：
@@ -74,7 +74,7 @@ rm_update_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> 
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   electronic_fence |    `(rm_fence_config_t)`   |   几何模型参数结构体    |
+|   `electronic_fence` |    `(rm_fence_config_t)`   |   几何模型参数结构体    |
 
 - **返回值:**
 函数执行的状态码：
@@ -117,7 +117,7 @@ rm_delete_electronic_fence_config(self, name: str) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-| name |    `str`    |  几何模型名称，不超过 10 个字节，支持字母、数字、下划线。    |
+| `name` |    `str`    |  几何模型名称，不超过 10 个字节，支持字母、数字、下划线。    |
 
 - **返回值:**
 函数执行的状态码
@@ -155,7 +155,7 @@ rm_get_electronic_fence_list_names(self) -> dict[str, any]:
 ```
 
 - **返回值:**
-dict[str,any]: 包含以下键值的字典。<br>
+`dict[str,any]`: 包含以下键值的字典。<br>
 
 1. `return_code` (int): 函数执行的状态码
 
@@ -207,7 +207,7 @@ rm_get_given_electronic_fence_config(self, name: str) -> tuple[int, dict[str, an
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-| name |    `str`    |     指定几何模型名称    |
+| `name` |    `str`    |     指定几何模型名称    |
 
 - **返回值:**<br>
 tuple[int,dict[str,any]]: 包含两个元素的元组。-int 函数执行的状态码。
@@ -262,14 +262,14 @@ type: 包含以下键值的字典:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   electronic_fence_list  |    `list[str]`    |    几何模型参数列表    |
+|   `electronic_fence_list`  |    `list[str]`    |    几何模型参数列表    |
 
 
 3. 几何模型列表长度
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   len  |    `int`    |    几何模型列表长度    |
+|   `len`  |    `int`    |    几何模型列表长度    |
 
 - **使用示例**
 
@@ -299,7 +299,7 @@ rm_set_electronic_fence_enable(self, electronic_fence_enable: rm_electronic_fenc
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   electronic_fence_enable |    `rm_electronic_fence_enable_t`    |     电子围栏使能状态|
+|   `electronic_fence_enable` |    `rm_electronic_fence_enable_t`    |     电子围栏使能状态|
 
 - **返回值:**
 
@@ -339,7 +339,7 @@ rm_get_electronic_fence_enable(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int,dict[str,any]]: 包含两个元素的元组。-int 函数执行的状态码。
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。-int 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -380,7 +380,7 @@ rm_set_electronic_fence_config(self, electronic_fence: rm_fence_config_t) -> int
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   electronic_fence |    `rm_fence_config_t`    |     当前电子围栏参数结构体（无需设置电子围栏名称）|
+|   `electronic_fence` |    `rm_fence_config_t`    |     当前电子围栏参数结构体（无需设置电子围栏名称）|
 
 - **返回值:**
 int: 函数执行的状态码：
@@ -419,7 +419,7 @@ rm_get_electronic_fence_config(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。<br>
 
 1. int 函数执行的状态码
 
@@ -435,7 +435,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   dict  | `[str,any]`|   返回当前电子围栏参数字典，键为rm_fence_config_t结构体的字段名称（不返回电子围栏名称）    |
+|   `dict`  | `[str,any]`|   返回当前电子围栏参数字典，键为rm_fence_config_t结构体的字段名称（不返回电子围栏名称）    |
 
 - **使用示例**
 
@@ -500,7 +500,7 @@ rm_get_virtual_wall_enable(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。<br>
 
 1. int 函数执行的状态码
 
@@ -516,7 +516,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   dict  | `[str,any]`|   返回虚拟墙使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称。    |
+|   `dict`  | `[str,any]`|   返回虚拟墙使能状态字典，键为rm_electronic_fence_enable_t结构体的字段名称。    |
 
 - **使用示例**
 
@@ -548,7 +548,7 @@ rm_set_virtual_wall_config(self, virtual_wall: rm_fence_config_t) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   virtual_wall |    `rm_fence_config_t`    |   当前虚拟墙参数（无需设置虚拟墙名称）。|
+|   `virtual_wall` |    `rm_fence_config_t`    |   当前虚拟墙参数（无需设置虚拟墙名称）。|
 
 - **返回值:**
 int: 函数执行的状态码：
@@ -587,7 +587,7 @@ rm_get_virtual_wall_config(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。<br>
 -int 函数执行的状态码
 
 |   参数    |   类型    |   说明    |

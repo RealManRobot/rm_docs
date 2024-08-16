@@ -16,7 +16,7 @@ rm_add_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| waypoint      | `rm_waypoint_t` | 新增全局路点参数（无需输入新增全局路点时间）。  |
+| `waypoint`      | `rm_waypoint_t` | 新增全局路点参数（无需输入新增全局路点时间）。  |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -62,7 +62,7 @@ rm_update_global_waypoint(self, waypoint: rm_waypoint_t) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| waypoint      | `rm_waypoint_t` | 更新全局路点参数（无需输入更新全局路点时间）。  |
+| `waypoint`      | `rm_waypoint_t` | 更新全局路点参数（无需输入更新全局路点时间）。  |
 
 - **返回值:** </br>
 函数执行的状态码
@@ -105,7 +105,7 @@ rm_delete_global_waypoint(self, point_name: str) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_name      | `str` | 全局路点名称。  |
+| `point_name`      | `str` | 全局路点名称。  |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -147,10 +147,10 @@ rm_get_given_global_waypoint(self, point_name: str) -> tuple[int, dict[str, any]
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_name      | `str` | 指定全局路点名称。  |
+| `point_name`      | `str` | 指定全局路点名称。  |
 
 - **返回值:** </br>
-tuple[int,dict[str,any]]: 包含两个元素的元组
+`tuple[int,dict[str,any]]`: 包含两个元素的元组
 
 1. int：函数执行的状态码。
 
@@ -166,7 +166,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_waypoint_t  |    `dict[str,any]`   |    返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称。    |
+|   `rm_waypoint_t`  |    `dict[str,any]`   |    返回指定全局路点的参数字典，键为rm_waypoint_t结构体的字段名称。    |
 
 - **使用示例**
   
@@ -197,10 +197,10 @@ rm_get_global_waypoints_list(self, page_num: int, page_size: int, vague_search: 
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_name      | `str` | 指定全局路点名称  |
+| `point_name`      | `str` | 指定全局路点名称  |
 
 - **返回值:** </br>
-tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。<br>
 
 1. int：函数执行的状态码。
 
@@ -216,7 +216,7 @@ tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_waypoint_list_t  |    `dict[str,any]`   |    返回符合条件的全局路点列表字典，键为rm_waypoint_list_t结构体的字段名称    |
+|   `rm_waypoint_list_t`  |    `dict[str,any]`   |    返回符合条件的全局路点列表字典，键为rm_waypoint_list_t结构体的字段名称    |
 
 - **使用示例**
   

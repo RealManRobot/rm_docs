@@ -14,8 +14,8 @@ rm_set_wifi_ap(self, wifi_name: str, password: str) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| wifi_name      | `str` | wifi名称                    |
-| password | `str` | wifi密码 |
+| `wifi_name`      | `str` | wifi名称                    |
+| `password` | `str` | wifi密码 |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -57,8 +57,8 @@ rm_set_wifi_sta(self, router_name: str, password: str) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| router_name      | `str` | 路由器名称                    |
-| password | `str` | 路由器wifi密码 |
+| `router_name`      | `str` | 路由器名称                    |
+| `password` | `str` | 路由器wifi密码 |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -102,7 +102,7 @@ rm_set_RS485(self, baudrate: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| baudrate      | `int` | 波特率：9600,19200,38400,115200和460800，若用户设置其他数据，控制器会默认按照460800处理。                    |
+| `baudrate`      | `int` | 波特率：9600,19200,38400,115200和460800，若用户设置其他数据，控制器会默认按照460800处理。                    |
 
 - **返回值:** </br>
 函数执行的状态码
@@ -143,7 +143,7 @@ rm_get_wired_net(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str,any]: 包含以下键值的字典
+`dict[str,any]`: 包含以下键值的字典
 
 1. 'return_code' (int): 函数执行的状态码
 
@@ -189,9 +189,9 @@ rm_get_wifi_net(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-dict[str,any]: 包含以下键值的字典
+`dict[str,any]`: 包含以下键值的字典
 
-1. 'return_code' (int): 函数执行的状态码
+1. `return_code` (int): 函数执行的状态码
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -205,7 +205,7 @@ dict[str,any]: 包含以下键值的字典
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_wifi_net_t  |    `dict[str,any]`   |    无线网络信息字典，键为rm_wifi_net_t结构体的字段    |
+|   `rm_wifi_net_t`  |    `dict[str,any]`   |    无线网络信息字典，键为rm_wifi_net_t结构体的字段    |
 
 - **使用示例**
   

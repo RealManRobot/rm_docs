@@ -14,8 +14,8 @@ rm_set_joint_max_speed(self, joint_num: int, speed: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   speed  |    `float`   |   关节的最大转速，单位为度每秒(°/s)，定义了关节在运动时所能达到的最大速度。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `speed`  |    `float`   |   关节的最大转速，单位为度每秒(°/s)，定义了关节在运动时所能达到的最大速度。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -56,8 +56,8 @@ rm_set_joint_max_acc(self, joint_num: int, acc: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   acc  |    `float`   |   关节最大加速度，单位：°/s²，定义了关节在运动时所能达到的最大加速度。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `acc`  |    `float`   |   关节最大加速度，单位：°/s²，定义了关节在运动时所能达到的最大加速度。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -98,8 +98,8 @@ rm_set_joint_min_pos(self, joint_num: int, min_pos: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   min_pos  |    `float`   |   关节最小位置，单位：°。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `min_pos`  |    `float`   |   关节最小位置，单位：°。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -139,8 +139,8 @@ rm_set_joint_max_pos(self, joint_num: int, max_pos: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   max_pos  |    `float`   |   关节最大位置，单位：°。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `max_pos`  |    `float`   |   关节最大位置，单位：°。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -181,8 +181,8 @@ rm_set_joint_drive_max_speed(self, joint_num: int, speed: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   speed  |    `float`   |   关节的最大转速，单位为度每秒(°/s)，定义了关节在运动时所能达到的最大速度。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `speed`  |    `float`   |   关节的最大转速，单位为度每秒(°/s)，定义了关节在运动时所能达到的最大速度。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -223,8 +223,8 @@ rm_set_joint_drive_max_acc(self, joint_num: int, acc: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   acc  |    `float`   |   关节最大加速度，单位：°/s²。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `acc`  |    `float`   |   关节最大加速度，单位：°/s²。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -265,8 +265,8 @@ rm_set_joint_drive_min_pos(self, joint_num: int, min_pos: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   min_pos  |    `float`   |   关节最小位置，单位：°。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `min_pos`  |    `float`   |   关节最小位置，单位：°。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -307,8 +307,8 @@ rm_set_joint_drive_max_pos(self, joint_num: int, max_pos: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   max_pos  |    `float`   |   关节最大位置，单位：°。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `max_pos`  |    `float`   |   关节最大位置，单位：°。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -349,8 +349,8 @@ rm_set_joint_en_state(self, joint_num: int, en_state: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
-|   en_state  |    `int`   |   1：上使能 0：掉使能。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `en_state`  |    `int`   |   1：上使能 0：掉使能。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -391,7 +391,7 @@ rm_set_joint_zero_pos(self, joint_num: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -432,7 +432,7 @@ rm_set_joint_clear_err(self, joint_num: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_num  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
+|   `joint_num`  |    `int`    |    关节的序号，取值范围为1到7，表示机械臂上不同关节的编号。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码
@@ -473,7 +473,7 @@ rm_auto_set_joint_limit(self, mode: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   mode  |    `int`    |    1-正式模式，各关节限位为规格参数中的软限位和硬件限位。    |
+|   `mode`  |    `int`    |    1-正式模式，各关节限位为规格参数中的软限位和硬件限位。    |
 
 - **返回值:**</br>
 int: 函数执行的状态码

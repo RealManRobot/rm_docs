@@ -16,7 +16,7 @@ rm_set_gripper_route(self, min_route: int, max_route: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| min_route      | `int` | 夹爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 夹爪开口最大值，范围：0~1000，无单位量纲                    |
+| `min_route`      | `int` | 夹爪开口最小值，范围：0~1000，无单位量纲 max_route (int): 夹爪开口最大值，范围：0~1000，无单位量纲                    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -61,9 +61,9 @@ rm_set_gripper_release(self, speed: int, block: bool, timeout: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 夹爪松开速度，范围 1~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
+| `speed`      | `int` | 夹爪松开速度，范围 1~1000，无单位量纲    |
+| `block`      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| `timeout`      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
 - **返回值:** </br>
 函数执行的状态码
@@ -108,10 +108,10 @@ rm_set_gripper_pick(self, speed: int, force: int, block: bool, timeout: int) -> 
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲    |
-| force      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
+| `speed`      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲    |
+| `force`      | `int` | 力控阈值，范围：50~1000，无单位量纲    |
+| `block`      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| `timeout`      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -154,10 +154,10 @@ rm_set_gripper_pick_on(self, speed: int, force: int, block: bool, timeout: int) 
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| speed      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲。    |
-| force      | `int` | 力控阈值，范围：50~1000，无单位量纲。    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式。    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒。    |
+| `speed`      | `int` | 夹爪夹取速度，范围 1~1000，无单位量纲。    |
+| `force`      | `int` | 力控阈值，范围：50~1000，无单位量纲。    |
+| `block`      | `bool` | true 表示阻塞模式，false 表示非阻塞模式。    |
+| `timeout`      | `int` | 阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -200,9 +200,9 @@ rm_set_gripper_position(self, position: int, block: bool, timeout: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| position      | `int` | 夹爪开口位置，范围：1~1000，无单位量纲    |
-| block      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
-| timeout      | `int` | 阻塞模式下超时时间设置，单位：秒    |
+| `position`      | `int` | 夹爪开口位置，范围：1~1000，无单位量纲    |
+| `block`      | `bool` | true 表示阻塞模式，false 表示非阻塞模式    |
+| `timeout`      | `int` | 阻塞模式下超时时间设置，单位：秒    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -242,7 +242,7 @@ rm_get_gripper_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状态码
+`tuple[int,dict[str, any]]`: 包含两个元素的元组 -int 函数执行的状态码
 
 1. int: 函数执行的状态码
 
@@ -258,7 +258,7 @@ tuple[int,dict[str, any]]: 包含两个元素的元组 -int 函数执行的状�
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_gripper_state_t  |    `dict[str, any]`   |    夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称    |
+|   `rm_gripper_state_t`  |    `dict[str, any]`   |    夹爪状态信息字典，键为rm_gripper_state_t结构体的字段名称    |
 
 - **使用示例**
   

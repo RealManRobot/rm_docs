@@ -21,7 +21,7 @@ rm_get_force_data(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str,any]]: 包含两个元素的元组。<br>
+`tuple[int, dict[str,any]]`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -37,7 +37,7 @@ tuple[int, dict[str,any]]: 包含两个元素的元组。<br>
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   rm_force_data_t  |    `dict[str, any]`   |    六维力数据字典，键为rm_force_data_t结构体的字段名称    |
+|   `rm_force_data_t`  |    `dict[str, any]`   |    六维力数据字典，键为rm_force_data_t结构体的字段名称    |
 
 - **使用示例**
   
@@ -67,7 +67,7 @@ rm_clear_force_data(self) -> int:
 ```
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -113,7 +113,7 @@ rm_set_force_sensor(self, block: bool) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| block      | `bool` | true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回             |
+| `block`      | `bool` | true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回             |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -160,9 +160,9 @@ rm_manual_set_force(self, point_num: int, joint: list[float], block: bool) -> in
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| point_num      | `int` | 点位；1~4             |
-| joint      | `list[float]` | 关节角度，单位：°度             |
-| block      | `bool` | true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回             |
+| `point_num`      | `int` | 点位；1~4             |
+| `joint`      | `list[float]` | 关节角度，单位：°度             |
+| `block`      | `bool` | true 表示阻塞模式，等待标定完成后返回；false 表示非阻塞模式，发送后立即返回             |
 
 - **返回值:** </br>
 函数执行的状态码：
