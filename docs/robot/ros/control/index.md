@@ -36,7 +36,7 @@ roslaunch rm_control rm_65_control.launch
 
 ![alt text](image.png)
 
-在单独启动该功能包的节点时并不发挥作用，需要结合rm_driver功能包和moveit的相关节点一起使用才能发挥作用，详细请查看[rm_moveit_config](../ros/rm_moveit_config_ROS.md)相关内容。
+在单独启动该功能包的节点时并不发挥作用，需要结合rm_driver功能包和moveit的相关节点一起使用才能发挥作用，详细请查看[rm_moveit_config](../moveitConfig/index.md)相关内容。
 
 ### 1.2功能包进阶使用
 
