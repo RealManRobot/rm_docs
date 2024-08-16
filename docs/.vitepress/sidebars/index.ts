@@ -199,6 +199,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
+            text: "快速开始",
+            link: "/robot/json/getStartedJson",
+          },
+          {
             text: "关节配置指令集",
             link: "/robot/json/jointConfig",
           },

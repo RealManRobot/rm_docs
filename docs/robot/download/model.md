@@ -8,9 +8,11 @@
 介绍了每个产品的三维模型图，仿真模型，机械臂尺寸图等。三维模型图采用通用的 STEP 格式，支持 SolidWorks、UG、Cero、Pro-E、Rhino、3Dmax 等常用的 3D 设计软件使用。
 </p>
 <p>
-仿真模型为 URDF 格式，可支持 Gazebo、Moveit!、Webots、Matlab 等进行机器人仿真开发使用。
+仿真模型为 URDF 格式，可支持 Gazebo、Moveit、Webots、Matlab 等进行机器人仿真开发使用。
 </p>
-
+<p>
+机械臂尺寸提供了外形尺寸、底座安装尺寸、末端扩展尺寸说明等内容。
+</p>
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
