@@ -18,7 +18,7 @@ __init__(self, mode: rm_thread_mode_e = None):
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   mode  |    `rm_robot_arm_model_e`    |    RM_SINGLE_MODE_E：单线程模式，单线程非阻塞等待数据返回；RM_DUAL_MODE_E：双线程模式，增加接收线程监测队列中的数据； RM_TRIPLE_MODE_E：三线程模式，在双线程模式基础上增加线程监测UDP接口数据。    |
+|   `mode`  |    `rm_robot_arm_model_e`    |    RM_SINGLE_MODE_E：单线程模式，单线程非阻塞等待数据返回；RM_DUAL_MODE_E：双线程模式，增加接收线程监测队列中的数据； RM_TRIPLE_MODE_E：三线程模式，在双线程模式基础上增加线程监测UDP接口数据。    |
 
 - **使用示例**
 
@@ -50,10 +50,10 @@ rm_create_robot_arm(self, ip: str, port: int, level: int = 3, log_func: CFUNCTYP
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|ip|`str`|机械臂的IP地址。|
-|port|`int`|机械臂的端口号。|
-|level|`int`|日志打印等级，默认为3。- 0: debug模式;- 1: info模式;- 2: warning模式;- 3: error模式。|
-|log_func|`CFUNCTYPE`|自定义日志打印函数（当前Python版本API暂不支持）。默认为None。|
+|`ip`|`str`|机械臂的IP地址。|
+|`port`|`int`|机械臂的端口号。|
+|`level`|`int`|日志打印等级，默认为3。- 0: debug模式;- 1: info模式;- 2: warning模式;- 3: error模式。|
+|`log_func`|`CFUNCTYPE`|自定义日志打印函数（当前Python版本API暂不支持）。默认为None。|
 
 - **返回值:**
 
@@ -159,7 +159,7 @@ rm_set_log_save(self, path) -> None:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|path|`string`|日志保存文件路径。|
+|`path`|`string`|日志保存文件路径。|
 
 - **使用示例**
   
@@ -191,7 +191,7 @@ rm_set_arm_run_mode(self, mode: int) -> int:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|mode|int|模式 0:仿真 1:真实。|
+|`mode`|int|模式 0:仿真 1:真实。|
 
 - **返回值:**
 函数执行的状态码：
@@ -232,7 +232,7 @@ rm_get_arm_run_mode(self) -> tuple[int, int]:
 ```
 
 - **返回值:**
-tuple[int, int]: 包含两个元素的元组。<br>
+`tuple[int, int]`: 包含两个元素的元组。<br>
 
 1.函数执行的状态码：
 |   参数    |  类型   |   说明    |
@@ -276,7 +276,7 @@ rm_get_robot_info(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int, dict[str, any]]: 包含两个元素的元组。<br>
+`tuple[int, dict[str, any]]`: 包含两个元素的元组。<br>
 
 1.函数执行的状态码：
 |   参数    |  类型   |   说明    |
@@ -288,7 +288,7 @@ tuple[int, dict[str, any]]: 包含两个元素的元组。<br>
 2.返回当前工具坐标系字典：
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   dict[str, any]  |    `str`   |    返回当前工具坐标系字典，键为rm_robot_info_t结构体的字段名称。    |
+|   `dict[str, any]`  |    `str`   |    返回当前工具坐标系字典，键为rm_robot_info_t结构体的字段名称。    |
 
 - **使用示例**
   
@@ -323,7 +323,7 @@ rm_get_arm_event_call_back(self, event_callback: rm_event_callback_ptr):
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|event_callback|`rm_event_callback_ptr`|机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。|
+|`event_callback`|`rm_event_callback_ptr`|机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。|
 
 >注意：单线程模式无法使用该回调函数。
 
@@ -380,7 +380,7 @@ rm_realtime_arm_state_call_back(self, arm_state_callback):
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|arm_state_callback|`rm_realtime_arm_state_callback_ptr`|机械臂实时状态信息回调函数。|
+|`arm_state_callback`|`rm_realtime_arm_state_callback_ptr`|机械臂实时状态信息回调函数。|
 
 >注意：需确保打开三线程模式，仅在三线程模式会打开UDP接口接收数据；需确保广播端口号、上报目标IP、是否主动上报等 UDP 机械臂状态主动上报配置正确；需确保防火墙不会阻止数据的接收。
 

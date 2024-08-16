@@ -16,7 +16,7 @@ rm_set_self_collision_enable(self, enable: bool) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| enable      | `bool` | True代表使能，False代表禁使能。                    |
+| `enable`      | `bool` | True代表使能，False代表禁使能。                    |
 
 - **返回值:**
 函数执行的状态码：
@@ -54,8 +54,8 @@ arm.rm_delete_robot_arm()
 rm_get_self_collision_enable(self) -> tuple[int, bool]:
 ```
 
-- **返回值:** 
-tuple[int,bool]: 包含两个元素的元组
+- **返回值:**
+`tuple[int,bool]`: 包含两个元素的元组
 
 1. int: 函数执行的状态码
 

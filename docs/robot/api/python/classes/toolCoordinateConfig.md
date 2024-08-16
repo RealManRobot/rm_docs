@@ -14,7 +14,7 @@ rm_set_auto_tool_frame(self, point_num: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   point_num  |    `int`    |    1~6代表6个标定点。    |
+|   `point_num`  |    `int`    |    1~6代表6个标定点。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -107,11 +107,11 @@ rm_generate_auto_tool_frame(self, tool_name: str, payload: float, x: float, y: f
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `str`    |    工具坐标系名称，不能超过十个字节。    |
-|   payload    | `payload`   |    新工具执行末端负载重量 单位kg    |
-|   x  |    `float`    |    新工具执行末端负载位置 位置x 单位m 。    |
-|   y  |    `float`    |    新工具执行末端负载位置y 单位m 。    |
-|   z  |    `float`    |    新工具执行末端负载位置 位置z 单位m 。    |
+|   `tool_name`  |    `str`    |    工具坐标系名称，不能超过十个字节。    |
+|   `payload`    | `payload`   |    新工具执行末端负载重量 单位kg    |
+|   `x`  |    `float`    |    新工具执行末端负载位置 位置x 单位m 。    |
+|   `y`  |    `float`    |    新工具执行末端负载位置y 单位m 。    |
+|   `z`  |    `float`    |    新工具执行末端负载位置 位置z 单位m 。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -155,7 +155,7 @@ rm_set_manual_tool_frame(self, frame: rm_frame_t) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   frame  |    `rm_frame_t`    |    新工具坐标系参数结构体。   |
+|   `frame`  |    `rm_frame_t`    |    新工具坐标系参数结构体。   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -197,7 +197,7 @@ rm_change_tool_frame(self, tool_name: str) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `str`    |    目标工具坐标系名称。   |
+|   `tool_name`  |    `str`    |    目标工具坐标系名称。   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -238,7 +238,7 @@ rm_delete_tool_frame(self, tool_name: str) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `str`    |    要删除的工具坐标系名称。   |
+|   `tool_name`  |    `str`    |    要删除的工具坐标系名称。   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -281,7 +281,7 @@ rm_update_tool_frame(self, frame: rm_frame_t) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   frame  |    `rm_frame_t`    |    要修改的工具坐标系名称。   |
+|   `frame`  |    `rm_frame_t`    |    要修改的工具坐标系名称。   |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -320,7 +320,7 @@ rm_get_total_tool_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典:<br>
+`dict[str, any]`: 包含以下键值的字典:<br>
 
 1. 'return_code' (int): 函数执行的状态码。
 
@@ -336,13 +336,13 @@ dict[str, any]: 包含以下键值的字典:<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_names  |    `list[str]`    |    字符串列表，表示所有工具坐标系名称。    |
+|   `tool_names`  |    `list[str]`    |    字符串列表，表示所有工具坐标系名称。    |
 
 3. 工具坐标系名称数量
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   len  |    `int`    |    工具坐标系名称数量。    |
+|   `len`  |    `int`    |    工具坐标系名称数量。    |
 
 - **使用示例**
   
@@ -372,10 +372,10 @@ rm_get_given_tool_frame(self, tool_name: str) -> tuple[int, dict[str, any]]:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `str`    |   工具坐标系名称。   |
+|   `tool_name`  |    `str`    |   工具坐标系名称。   |
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。<br>
+`tuple`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -391,7 +391,7 @@ tuple: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
+|   `rm_frame_t`  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
 
 - **使用示例**
   
@@ -418,7 +418,7 @@ rm_get_current_tool_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。<br>
+`tuple`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -434,7 +434,7 @@ tuple: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
+|   `rm_frame_t`  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
 
 - **使用示例**
   
@@ -464,7 +464,7 @@ rm_set_tool_envelope(self, envelope: rm_envelope_balls_list_t) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   envelope  |    `rm_envelope_balls_list_t`    |    包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。   |
+|   `envelope`  |    `rm_envelope_balls_list_t`    |    包络参数列表，每个工具最多支持 5 个包络球，可以没有包络。   |
 
 - **返回值:** </br>
 函数执行的状态码。
@@ -508,10 +508,10 @@ rm_get_tool_envelope(self, tool_name: str) -> tuple[int, dict[str, any]]:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_name  |    `string`    |    工具坐标系名称   |
+|   `tool_name`  |    `string`    |    工具坐标系名称   |
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。<br>
+`tuple`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -527,7 +527,7 @@ tuple: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   rm_frame_t  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
+|   `rm_frame_t`  |    `dict[str, any]`    |    工具坐标系字典，键为rm_frame_t的参数名。   |
 
 - **使用示例**
   

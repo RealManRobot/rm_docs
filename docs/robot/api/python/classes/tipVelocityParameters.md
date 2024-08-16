@@ -14,7 +14,7 @@ rm_set_arm_max_line_speed(self, speed: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   speed  |    `float`    |    末端最大线速度，单位m/s。    |
+|   `speed`  |    `float`    |    末端最大线速度，单位m/s。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -55,7 +55,7 @@ rm_set_arm_max_line_acc(self, acc: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   acc  |    `float`    |    末端最大线加速度，单位m/s^2。    |
+|   `acc`  |    `float`    |    末端最大线加速度，单位m/s^2。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -96,7 +96,7 @@ rm_set_arm_max_angular_speed(self, speed: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   speed  |    `float`    |    末端最大角速度，单位rad/s。    |
+|   `speed`  |    `float`    |    末端最大角速度，单位rad/s。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -137,7 +137,7 @@ rm_set_arm_max_angular_acc(self, acc: float) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   acc  |    `float`    |    末端最大角加速度，单位rad/s^2    |
+|   `acc`  |    `float`    |    末端最大角加速度，单位rad/s^2    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -216,8 +216,7 @@ rm_set_collision_state(self, stage: int) -> int:
 
 |   名称    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   stage  |    `int`    |    等级：0~8，0-无碰撞，8-碰撞最灵敏。    |
-
+|   `stage`  |    `int`    |    等级：0~8，0-无碰撞，8-碰撞最灵敏。    |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -256,7 +255,7 @@ rm_get_collision_stage(self) -> tuple[int, int]:
 ```
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组。<br>
+`tuple[int,int]`: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -299,7 +298,7 @@ rm_get_arm_max_line_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组。<br>
+`tuple[int,int]`: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -385,7 +384,7 @@ rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int,float]: 包含两个元素的元组。<br>
+`tuple[int,float]`: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 

@@ -18,7 +18,7 @@ rm_set_realtime_push(self, config: rm_realtime_push_config_t) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| config      | `rm_realtime_push_config_t` | UDP配置结构体。     |
+| `config`      | `rm_realtime_push_config_t` | UDP配置结构体。     |
 
 - **返回值:** 
 函数执行的状态码：
@@ -58,8 +58,8 @@ arm.rm_delete_robot_arm()
 rm_get_realtime_push(self) -> tuple[int, dict[str, any]]:
 ```
 
-- **返回值:** 
-tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
+- **返回值:**
+`tuple[int,dict[str,any]]`: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
