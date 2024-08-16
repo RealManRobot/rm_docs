@@ -434,19 +434,19 @@ rm_get_tool_rs485_mode(self) -> dict[str, any]:
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   mode  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式。 |
+|   `mode`  |  `int`   | 0-代表默认 RS485 串行通讯，1-代表 modbus-RTU 主站模式。 |
 
 3. 波特率
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   baudrate  |    `int`   |    波特率    |
+|   `baudrate`  |    `int`   |    波特率    |
 
 4. Timeout
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
-|   timeout  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
+|   `timeout`  |    `int`   |  modbus 协议超时时间，单位 100ms，仅在 modbus-RTU 模式下提供此字段|
 
 - **使用示例**
   
