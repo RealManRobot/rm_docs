@@ -473,7 +473,7 @@ rostopic echo /rm_driver/SetJointTeach_Result
 |:------------------|:-------|:----------------------------------------|
 |`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
 
-### 3.9.2位置示教`Pos_Teach.msg`
+### 位置示教`Pos_Teach.msg`
 
 **参数说明：**
 
