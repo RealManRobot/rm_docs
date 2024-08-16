@@ -29,7 +29,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "API(C、C++)示例",
+            text: "API2(C、C++)示例",
             collapsed: true,
             items: [
               {
@@ -79,7 +79,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             ],
           },
           {
-            text: "API(Python)示例",
+            text: "API2(Python)示例",
             collapsed: true,
             items: [
               {
@@ -249,7 +249,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "API(C、C++)",
+        text: "API2(C、C++)",
         collapsed: true,
         items: [
           {
@@ -523,7 +523,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "API(Python)",
+        text: "API2(Python)",
         collapsed: true,
         items: [
           {
