@@ -223,7 +223,10 @@
 
 ```json
 // 实现：设置关节2，最大加速度500RPM/s，加速度分辨率0.001RPM/s。
-{"command":"set_joint_drive_max_acc","joint_max_acc":[2,500000]}
+{
+    "command":"set_joint_drive_max_acc",
+    "joint_max_acc":[2,500000]
+}
 ```
 
 **输出**
@@ -257,7 +260,10 @@
 
 ```json
 // 实现：设置关节1，最小限位度数-170°，分辨率0.001°。
-{"command":"set_joint_drive_min_pos","joint_min_pos":[1,-170000]}
+{
+    "command":"set_joint_drive_min_pos",
+    "joint_min_pos":[1,-170000]
+}
 ```
 
 **输出**
@@ -291,7 +297,10 @@
 
 ```json
 // 实现：设置关节6上使能°。
-{"command":"set_joint_en_state","joint_en_state":[6,1]}
+{
+    "command":"set_joint_en_state",
+    "joint_en_state":[6,1]
+}
 ```
 
 **输出**
@@ -325,7 +334,10 @@
 
 ```json
 // 实现：设置关节3位置为零位。
-{"command":"set_joint_zero_pos","joint_zero_pos":3}
+{
+    "command":"set_joint_zero_pos",
+    "joint_zero_pos":3
+}
 ```
 
 **输出**
@@ -359,7 +371,10 @@
 
 ```json
 // 实现：清除关节2错误代码。
-{"command":"set_joint_clear_err","joint_clear_err":2}
+{
+    "command":"set_joint_clear_err",
+    "joint_clear_err":2
+}
 ```
 
 **输出**
@@ -394,7 +409,10 @@
 
 ```json
 // 实现：1-正式模式，各关节限位为规格参数中的软限位和硬件限位。
-{"command":"auto_set_joint_limit","limit_mode":1}
+{
+    "command":"auto_set_joint_limit",
+    "limit_mode":1
+}
 ```
 
 **输出**

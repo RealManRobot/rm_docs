@@ -30,7 +30,10 @@
 
 ```json
 //实现：设置机械臂末端最大线速度 0.5m/s，分辨率 0.001m/s。
-{ "command": "set_arm_max_line_speed", "arm_line_speed": 500 }
+{ 
+  "command": "set_arm_max_line_speed", 
+  "arm_line_speed": 500 
+}
 ```
 
 **输出**
@@ -67,7 +70,10 @@
 
 ```json
 // 实现：设置机械臂末端最大线加速度 2m/s²，分辨率 0.001m/s²。
-{ "command": "set_arm_max_line_acc", "arm_line_acc": 2000 }
+{ 
+  "command": "set_arm_max_line_acc", 
+  "arm_line_acc": 2000 
+}
 ```
 
 **输出**
@@ -102,7 +108,10 @@
 
 ```json
 // 实现：设置机械臂末端最大角速度 0.2rad/s，分辨率 0.001rad/s。
-{ "command": "set_arm_max_angular_speed", "arm_angular_speed": 200 }
+{ 
+  "command": "set_arm_max_angular_speed", 
+  "arm_angular_speed": 200 
+}
 ```
 
 **输出**
@@ -137,7 +146,10 @@
 
 ```json
 // 实现：设置机械臂末端最大角加速度 4rad/s²，分辨率 0.001rad/s²。
-{ "command": "set_arm_max_angular_acc", "arm_angular_acc": 4000 }
+{ 
+  "command": "set_arm_max_angular_acc", 
+  "arm_angular_acc": 4000 
+}
 ```
 
 **输出**
@@ -200,7 +212,10 @@
 
 ```json
 // 实现：设置机械臂碰撞防护等级 1，等级越高，检测越灵敏。
-{ "command": "set_collision_stage", "collision_stage": 1 }
+{ 
+  "command": "set_collision_stage", 
+  "collision_stage": 1 
+}
 ```
 
 **输出**
@@ -925,7 +940,10 @@
 
 ```json
 // 实现：查询名为 tool1 工具坐标系的包络参数。
-{ "command": "get_tool_envelope", "tool_name": "tool1" }
+{ 
+  "command": "get_tool_envelope",
+  "tool_name": "tool1"
+}
 ```
 
 **输出**
@@ -963,7 +981,10 @@
 
 ```json
 // 查询失败:
-{ "command": "get_tool_envelope", "get_state": false }
+{ 
+  "command": "get_tool_envelope", 
+  "get_state": false 
+}
 ```
 
 ## 工作坐标系
@@ -995,7 +1016,11 @@
 
 ```json
 // 实现：设置工作坐标系，名称 work2_frame，将当前位置标定为参考点 3（Y 轴上一点）。
-{ "command": "set_auto_work_frame", "frame_name": "work_frame", "point_num": 3 }
+{ 
+  "command": "set_auto_work_frame", 
+  "frame_name": "work_frame", 
+  "point_num": 3 
+}
 ```
 
 **输出**
@@ -1074,7 +1099,10 @@
 
 ```json
 //  实现：切换当前工作坐标系，名称 work2_frame。
-{ "command": "set_change_work_frame", "frame_name": "work2_frame" }
+{ 
+  "command": "set_change_work_frame", 
+  "frame_name": "work2_frame"
+}
 ```
 
 **输出**
@@ -1107,7 +1135,10 @@
 
 ```json
 //  实现：删除工作坐标系，名称 work2_frame。
-{ "command": "set_delete_work_frame", "frame_name": "work2_frame" }
+{ 
+  "command": "set_delete_work_frame", 
+  "frame_name": "work2_frame" 
+}
 ```
 
 **输出**
