@@ -211,6 +211,4 @@
     test_Get_Arm_Six_Force_pub.publish(empty_value);
     ```
 
-## 7. 许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

@@ -227,6 +227,4 @@
     void ToolForceData_Callback(const rm_ros_interfaces::msg::Sixforce::SharedPtr msg);
     ```
 
-## 7.许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

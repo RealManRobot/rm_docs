@@ -202,6 +202,4 @@
     this->stop_force_postion_publisher_->publish(stop_force_postion_data);
     ```
 
-## 7.许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。
