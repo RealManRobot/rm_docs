@@ -415,9 +415,9 @@
 
 | 参数                 | 类型     | 说明                                                              |
 | :------------------- | :------- | :---------------------------------------------------------------- |
-| set_program_id_start | `string` | 开始运行编号轨迹。                                                |
-| id                   | `int`    | 运行指定的 ID，1-100，存在轨迹可运行。                            |
-| speed                | `int`    | 1-100，需要运行轨迹的速度，可不提供速度比例，按照存储的速度运行。 |
+| `set_program_id_start` | `string` | 开始运行编号轨迹。                                                |
+| `id`                   | `int`    | 运行指定的 ID，1-100，存在轨迹可运行。                            |
+| `speed`                | `int`    | 1-100，需要运行轨迹的速度，可不提供速度比例，按照存储的速度运行。 |
 
 
 - **输出参数**
@@ -474,8 +474,8 @@
 
 | 参数                      | 类型     | 说明                   |
 | :------------------------ | :------- | :--------------------- |
-| delete_program_trajectory | `string` | 删除指定 ID 的轨迹     |
-| id                        | `int`    | 指定的 ID,删除的 ID 号 |
+| `delete_program_trajectory` | `string` | 删除指定 ID 的轨迹     |
+| `id`                        | `int`    | 指定的 ID,删除的 ID 号 |
 
 - **输出参数**
 
@@ -512,10 +512,10 @@
 
 | 参数                      | 类型     | 说明                                            |
 | :------------------------ | :------- | :---------------------------------------------- |
-| update_program_trajectory | `string` | 修改指定编号轨迹的信息                          |
-| id                        | `int`    | 指定在线编程轨迹编号                            |
-| plan_speed                | `int`    | 更新后的规划速度比例 1-100 （可选配置）         |
-| project_name              | `string` | 更新后的文件名称（最大 10 个字节） （可选配置） |
+| `update_program_trajectory` | `string` | 修改指定编号轨迹的信息                          |
+| `id`                        | `int`    | 指定在线编程轨迹编号                            |
+| `plan_speed`                | `int`    | 更新后的规划速度比例 1-100 （可选配置）         |
+| `project_name`              | `string` | 更新后的文件名称（最大 10 个字节） （可选配置） |
 
 
 - **输出参数**
@@ -553,7 +553,7 @@
 
 | 参数                    | 类型     | 说明                   |
 | :---------------------- | :------- | :--------------------- |
-| set_default_run_program | `string` | 设置IO默认运行的在线编程文件编号。 
+| `set_default_run_program` | `string` | 设置IO默认运行的在线编程文件编号。 
     |
 - **输出参数**
 
@@ -590,7 +590,7 @@
 
 | 参数                    | 类型     | 说明                               |
 | :---------------------- | :------- | :--------------------------------- |
-| get_default_run_program | `string` | 获取 IO 默认运行的在线编程文件编号。 |
+| `get_default_run_program` | `string` | 获取 IO 默认运行的在线编程文件编号。 |
 
 
 - **输出参数**
@@ -630,13 +630,13 @@
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|add_global_waypoint|`string`|新增全局路点|
-|point_name|`string`|全局路点的名称|
-|joint|`int`|新增全局路点的关节角度，单位 0.001°|
-|pose|`object`|新增全局路点的位置，位置：x：0.1m，y:0.2m，z：0.03m，姿态：rx:0.4rad，ry:0.5rad，rz:0.6rad|
-|work_frame|`object`|工作坐标系名称|
-|tool_frame|`string`|工具坐标系名称|
-|time|`string`|新增全局路点时间|
+|`add_global_waypoint`|`string`|新增全局路点|
+|`point_name`|`string`|全局路点的名称|
+|`joint`|`int`|新增全局路点的关节角度，单位 0.001°|
+|`pose`|`object`|新增全局路点的位置，位置：x：0.1m，y:0.2m，z：0.03m，姿态：rx:0.4rad，ry:0.5rad，rz:0.6rad|
+|`work_frame`|`object`|工作坐标系名称|
+|`tool_frame`|`string`|工具坐标系名称|
+|`time`|`string`|新增全局路点时间|
 
 
 - **输出参数**
@@ -679,13 +679,13 @@
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|update_global_waypoint|`string`|更新全局路点指令。|
-|point_name|`string`|全局路点的名称。|
-|joint|`int`|更新全局路点的关节角度，单位 0.001°。|
-|pose|`object`|更新全局路点的位置，位置：x：0.1m，y:0.2m，z：0.03m，姿态：rx:0.4rad，ry:0.5rad，rz:0.6rad。|
-|work_frame|`object`|工作坐标系名称。|
-|tool_frame|`string`|工具坐标系名称。|
-|time|`string`|更新全局路点时间。|
+|`update_global_waypoint`|`string`|更新全局路点指令。|
+|`point_name`|`string`|全局路点的名称。|
+|`joint`|`int`|更新全局路点的关节角度，单位 0.001°。|
+|`pose`|`object`|更新全局路点的位置，位置：x：0.1m，y:0.2m，z：0.03m，姿态：rx:0.4rad，ry:0.5rad，rz:0.6rad。|
+|`work_frame`|`object`|工作坐标系名称。|
+|`tool_frame`|`string`|工具坐标系名称。|
+|`time`|`string`|更新全局路点时间。|
 
 
 - **输出参数**
@@ -728,8 +728,8 @@
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|delete_global_waypoint|`string`|删除全局路点指令。|
-|point_name|`string`|全局路点的名称。|
+|`delete_global_waypoint`|`string`|删除全局路点指令。|
+|`point_name`|`string`|全局路点的名称。|
 
 
 - **输出参数**
@@ -767,8 +767,8 @@
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|given_global_waypoint|`string`|查询指定全局路点|
-|point_name|`string`|全局路点的名称|
+|`given_global_waypoint`|`string`|查询指定全局路点|
+|`point_name`|`string`|全局路点的名称|
 
 
 - **输出参数**
@@ -811,9 +811,9 @@
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|get_global_waypoints_list|`string`|查询多个全局路点|
-|page_num|`int`|页码（全部查询时不传此参数）|
-|page_size|`int`|每页大小（全部查询时不传此参数）|
+|`get_global_waypoints_list`|`string`|查询多个全局路点|
+|`page_num`|`int`|页码（全部查询时不传此参数）|
+|`page_size`|`int`|每页大小（全部查询时不传此参数）|
 |vague_search|`string`|模糊搜索 （传递此参数可进行模糊查询）|
 
 
@@ -821,9 +821,9 @@
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|get_global_waypoints_list|`string`|查询全局路点。|
-|total_size|`int`|路点总数。|
-|list|`object`|路点详细信息。|
+|`get_global_waypoints_list`|`string`|查询全局路点。|
+|`total_size`|`int`|路点总数。|
+|`list`|`object`|路点详细信息。|
 
 - **代码示例**
 
