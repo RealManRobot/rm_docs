@@ -4,7 +4,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     "/robot/": [
       {
         text: "概述",
-        link: "/robot/summarize/summarize",
+        link: "/robot/summarize/",
       },
       {
         text: "版本对照表",
@@ -972,12 +972,16 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "二次开发",
+            text: "二次开发包",
             link: "/robot/download/redevelopment",
           },
           {
-            text: "其他",
-            link: "/robot/download/other",
+            text: "用户手册",
+            link: "/robot/download/userManual",
+          },
+          {
+            text: "模型",
+            link: "/robot/download/model",
           },
         ],
       },
