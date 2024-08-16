@@ -84,7 +84,7 @@ rostopic echo /rm_driver/Joint_En_State_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 切换当前工具坐标系
 
@@ -109,7 +109,7 @@ rostopic echo /rm_driver/ChangeTool_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 切换当前工作坐标系
 
@@ -134,7 +134,7 @@ rostopic echo /rm_driver/ChangeWorkFrame_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 查询当前工作坐标系
 
@@ -211,7 +211,7 @@ rostopic echo /rm_driver/Plan_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 笛卡尔空间直线运动`MoveL.msg`
 
@@ -249,7 +249,7 @@ rostopic echo /rm_driver/Plan_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 笛卡尔空间圆弧运动`MoveC.msg`
 
@@ -298,7 +298,7 @@ rostopic echo /rm_driver/Plan_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 关节角度CANFD透传`JointPos.msg`
 
@@ -414,7 +414,7 @@ rostopic echo /rm_driver/Plan_State
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 机械臂运动配置-运动指令
 
@@ -424,7 +424,7 @@ rostopic echo /rm_driver/Plan_State
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|`state`|   `tool`   | `true`：生效 `false`：不生效          |
+|`state`|   `tool`   | true：生效 false：不生效          |
 
 **使用命令示例：**
 
@@ -441,7 +441,7 @@ rostopic echo /rm_driver/Set_Arm_Stop_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 机械臂运动配置-示教指令类
 
@@ -471,7 +471,7 @@ rostopic echo /rm_driver/SetJointTeach_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 位置示教`Pos_Teach.msg`
 
@@ -498,7 +498,7 @@ rostopic echo /rm_driver/SetPosTeach_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 姿态示教`Ort_Teach.msg`
 
@@ -525,7 +525,7 @@ rostopic echo /rm_driver/SetOrtTeach_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 示教停止`Stop_Teach.msg`
 
@@ -550,7 +550,7 @@ rostopic echo /rm_driver/SetStopTeach_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 系统配置
 
@@ -577,7 +577,7 @@ rostopic echo /rm_driver/Set_Arm_Power_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 读取软件版本号
 
@@ -627,7 +627,7 @@ rostopic echo /rm_driver/System_En_State_Result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 查询机械臂状态信息
 
@@ -770,7 +770,7 @@ rostopic echo /rm_driver/Set_DO_State_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 获取所有IO输入状态`IO_Update.msg`
 
@@ -826,7 +826,7 @@ rostopic echo /rm_driver/Set_Tool_DO_State_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 获取工具端数字IO状态`IO_Update.msg`
 
@@ -887,7 +887,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 设置夹爪力控夹取`Gripper_Pick.msg`
 
@@ -916,7 +916,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 夹爪到达指定位置`Gripper_Set.msg`
 
@@ -944,7 +944,7 @@ rostopic echo /rm_driver/Set_Gripper_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ## 3.15末端六维力传感器的使用（选配）
 
@@ -1009,7 +1009,7 @@ rostopic echo /rm_driver/ClearForceData_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 自动设置六维力重心参数
 
@@ -1035,7 +1035,7 @@ rostopic echo /rm_driver/ForceSensorSet_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 手动标定六维力数据
 
@@ -1068,7 +1068,7 @@ rostopic echo /rm_driver/ForceSensorSet_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ## 3.15.5停止标定力传感器重心
 
@@ -1094,7 +1094,7 @@ rostopic echo /rm_driver/StopSetForceSensor_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ## 拖动示教
 
@@ -1122,7 +1122,7 @@ rostopic echo /rm_driver/StopDragTeach_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 开启复合拖动示教
 
@@ -1149,7 +1149,7 @@ rostopic echo /rm_driver/StartMultiDragTeach_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 力位混合控制`Set_Force_Position.msg`
 
@@ -1177,7 +1177,7 @@ rostopic echo /rm_driver/SetForcePosition_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |   true：设置成功；false：设置失败。 |
 
 ### 结束力位混合控制
 
@@ -1203,7 +1203,7 @@ rostopic echo /rm_driver/StopForcePostion_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ## 末端五指灵巧手控制（选配）
 
@@ -1233,7 +1233,7 @@ rostopic echo /rm_driver/Set_Hand_Posture_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 设置灵巧手动作序列`Hand_Seq.msg`
 
@@ -1259,7 +1259,7 @@ rostopic echo /rm_driver/Set_Hand_Seq_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 设置灵巧手各自由度角度`Hand_Angle.msg`
 
@@ -1286,7 +1286,7 @@ rostopic echo /rm_driver/Set_Hand_Angle_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 设置灵巧手速度`Hand_Speed.msg`
 
@@ -1312,7 +1312,7 @@ rostopic echo /rm_driver/Set_Hand_Speed_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |  true：设置成功；false：设置失败。 |
 
 ### 设置灵巧手力阈值`Hand_Force.msg`
 
@@ -1338,7 +1338,7 @@ rostopic echo /rm_driver/Set_Hand_Force_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |  true：设置成功；false：设置失败。 |
 
 ## 透传力位混合控制补偿模式
 
@@ -1368,7 +1368,7 @@ rostopic echo /rm_driver/StartForcePositionMove_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |true：设置成功；false：设置失败。 |
 
 ### 透传力位混合控制补偿(位姿)`Force_Position_Move_Pose.msg`
 
@@ -1439,7 +1439,7 @@ rostopic echo /rm_driver/StopForcePositionMove_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |   true：设置成功；false：设置失败。 |
 
 ## 升降机构
 
@@ -1469,7 +1469,7 @@ rostopic echo /rm_driver/Set_Lift_Speed_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |   true：设置成功；false：设置失败。 |
 
 ### 升降机构位置闭环控制`Lift_Height.msg`
 
@@ -1497,7 +1497,7 @@ rostopic echo /rm_driver/Plan_State
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |   true：设置成功；false：设置失败。 |
 
 ### 获取升降机构状态
 
@@ -1557,7 +1557,7 @@ rostopic echo /rm_driver/Set_Realtime_Push_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |   true：设置成功；false：设置失败。 |
 
 ### 查询 UDP 机械臂状态主动上报配置
 
@@ -1583,7 +1583,7 @@ rostopic echo /rm_driver/Get_Realtime_Push_Result
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `Bool` |成功返回：true；失败返回：false。 |
+|`std_msgs`            | `Bool` |  true：设置成功；false：设置失败。 |
 
 ### UDP机械臂状态主动上报
 

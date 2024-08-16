@@ -104,7 +104,7 @@ ros2 topic echo /rm_driver/set_joint_err_clear_result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 工作坐标系设置
 
@@ -131,7 +131,7 @@ ros2 topic echo /rm_driver/change_work_frame_result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ## 坐标系查询
 
@@ -200,7 +200,7 @@ ros2 topic echo /rm_driver/get_curr_workFrame_result
 **参数说明：**
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
-|`std_msgs`            | `bool` |`ture`：设置成功；`false`：设置失败。 |
+|`std_msgs`            | `bool` |true：设置成功；false：设置失败。 |
 
 ### 查询所有工作坐标系
 
@@ -301,7 +301,7 @@ ros2 topic echo /rm_driver/movej_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 笛卡尔空间直线运动`Movel.msg`
 
@@ -335,7 +335,7 @@ ros2 topic echo /rm_driver/movel_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 笛卡尔空间圆弧运动`Movec.msg`
 
@@ -424,7 +424,7 @@ ros2 topic echo /rm_driver/movej_p_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 轨迹急停`std_msgs`
 
@@ -447,7 +447,7 @@ ros2 topic echo /rm_driver/move_stop_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 控制器配置
 
@@ -476,7 +476,7 @@ ros2 topic echo /rm_driver/get_arm_software_version_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 末端工具IO配置
 
@@ -501,7 +501,7 @@ ros2 topic echo /rm_driver/set_tool_voltage_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 末端手爪控制
 
@@ -530,7 +530,7 @@ ros2 topic echo /rm_driver/set_gripper_pick_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 设置夹爪持续力控夹取`Gripperpick.msg`
 
@@ -555,7 +555,7 @@ ros2 topic echo /rm_driver/set_gripper_pick_on_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 夹爪到达指定位置`Gripperset.msg`
 
@@ -579,7 +579,7 @@ ros2 topic echo /rm_driver/set_gripper_position_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 拖动示教及轨迹复现
 
@@ -607,7 +607,7 @@ ros2 topic echo /rm_driver/set_force_postion_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 结束力位混合控制`std_msgs`
 
@@ -630,7 +630,7 @@ ros2 topic echo /rm_driver/clear_force_data_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 末端六维力传感器的使用
 
@@ -657,7 +657,7 @@ ros2 topic echo /rm_driver/clear_force_data_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 末端五指灵巧手控制
 
@@ -685,7 +685,7 @@ ros2 topic echo /rm_driver/set_hand_posture_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 设置灵巧手动作序列`Handseq.msg`
 
@@ -709,7 +709,7 @@ ros2 topic echo /rm_driver/set_hand_seq_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 设置灵巧手各自由度角度`Handangle.msg`
 
@@ -733,7 +733,7 @@ ros2 topic echo /rm_driver/set_hand_angle_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 设置灵巧手速度`Handspeed.msg`
 
@@ -757,7 +757,7 @@ ros2 topic echo /rm_driver/set_hand_speed_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 设置灵巧手力阈值`Handforce.msg`
 
@@ -781,7 +781,7 @@ ros2 topic echo /rm_driver/set_hand_force_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ## 升降机构
 
@@ -809,7 +809,7 @@ ros2 topic echo /rm_driver/set_lift_speed_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 升降机构位置闭环控制`Liftheight.msg`
 
@@ -835,7 +835,7 @@ ros2 topic echo /rm_driver/set_lift_height_result
 
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |ture：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 获取升降机构状态`Liftstate.msg`
 
@@ -884,7 +884,7 @@ ros2 topic echo /rm_driver/start_force_position_move_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |ture：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 关闭透传力位混合控制补偿模式`std_msgs`
 
@@ -907,7 +907,7 @@ ros2 topic echo /rm_driver/stop_force_position_move_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 透传力位混合补偿-关节`Forcepositionmovejoint.msg`
 
@@ -980,7 +980,7 @@ ros2 topic echo /rm_driver/set_realtime_push_result
 **参数说明：**
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
-|`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
+|`std_msgs`  | `bool` |true：设置成功；false：设置失败。driver终端返回错误码。 |
 
 ### 查询UDP机械臂状态主动上报配置`Setrealtimepush.msg`
 
