@@ -1493,13 +1493,13 @@ rostopic echo /rm_driver/Plan_State
 **使用命令示例：**
 
 ```json
-rostopic pub /rm_driver/get_lift_state_cmd std_msgs/msg/Empty "{}"
+rostopic pub /rm_driver/Lift_GetState std_msgs/Empty "{}"
 ```
 
 **返回命令示例：**
 
 ```json
-rostopic pub /rm_driver/Lift_GetState std_msgs/Empty "{}"
+rostopic echo /rm_driver/LiftState
 ```
 
 **参数说明：**
