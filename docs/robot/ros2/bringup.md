@@ -37,7 +37,7 @@ ros2 launch rm_bringup rm_65_bringup.launch.py
 ros2 launch rm_bringup rm_<arm_type>_gazebo.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。  
 例如65机械臂的启动命令：
 
 ```
