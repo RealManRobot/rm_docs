@@ -91,6 +91,9 @@ colcon build
 
 ```ros
 source ~/ros2_ws/install/setup.bash
+```
+
+```ros
 ros2 launch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
