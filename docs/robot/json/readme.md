@@ -2,21 +2,21 @@
 
 ## JOSN文件目录
 
-[机械臂配置指令集](../json/armConfig.md)
-[机械臂初始状态配置指令集](../json/armInit.md)
-[机械臂状态信息查询指令集](../json/armState.md)
-[数据管理配置指令集](../json/dataManagement.md)
-[电子围栏和虚拟墙配置指令集](../json/electronicFence.md)
-[附录：错误代码](../json/errorList.md)
-[通用扩展关节配置指令集](../json/expandControl.md)
-[关节配置指令集](../json/jointConfig.md)
-[升降机构配置指令集](../json/liftControl.md)
-[运动配置指令集](../json/motionConfig.md)
-[关节配置指令集](../json/jointConfig.md)
-[在线编程配置指令集](../json/onlineProgram.md)
-[自碰撞安全检测配置指令集](../json/systemConfig.md)
-[系统配置指令集](../json/onlineProgram.md)
-[UDP主动上报配置指令集](../json/udpConfig.md)
+1. [机械臂配置指令集](../json/armConfig.md)
+2. [机械臂初始状态配置指令集](../json/armInit.md)
+3. [机械臂状态信息查询指令集](../json/armState.md)
+4. [数据管理配置指令集](../json/dataManagement.md)
+5. [电子围栏和虚拟墙配置指令集](../json/electronicFence.md)
+6. [附录：错误代码](../json/errorList.md)
+7. [通用扩展关节配置指令集](../json/expandControl.md)
+8. [关节配置指令集](../json/jointConfig.md)
+9. [升降机构配置指令集](../json/liftControl.md)
+10. [运动配置指令集](../json/motionConfig.md)
+11. [关节配置指令集](../json/jointConfig.md)
+12. [在线编程配置指令集](../json/onlineProgram.md)
+13. [自碰撞安全检测配置指令集](../json/systemConfig.md)
+14. [系统配置指令集](../json/onlineProgram.md)
+15. [UDP主动上报配置指令集](../json/udpConfig.md)
 
 ## 版本信息
 
