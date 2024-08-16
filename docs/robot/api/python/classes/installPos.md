@@ -100,7 +100,7 @@ rm_get_joint_software_version(self) -> tuple[int, list[int]]:
 ```
 
 - **返回值:** </br>
-tuple[int,list[int]]: 包含两个元素的元组 -int 函数执行的状态码
+tuple[int,list[int]]: 包含两个元素的元组 -int 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |

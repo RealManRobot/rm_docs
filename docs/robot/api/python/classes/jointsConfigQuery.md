@@ -70,7 +70,7 @@ rm_get_joint_min_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:**
-tuple[int, list]: 包含两个元素的元组
+tuple[int, list]: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -99,7 +99,7 @@ rm_get_joint_max_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -160,7 +160,7 @@ rm_get_joint_drive_max_acc(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -192,7 +192,7 @@ rm_get_joint_drive_min_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -224,7 +224,7 @@ rm_get_joint_drive_max_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -256,7 +256,7 @@ rm_get_joint_en_state(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -288,7 +288,7 @@ rm_get_joint_err_flag(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |

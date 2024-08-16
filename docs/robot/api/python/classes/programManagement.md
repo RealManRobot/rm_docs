@@ -19,7 +19,7 @@ rm_send_project(self, send_project: rm_send_project_t) -> tuple[int, int]:
 | send_project      | `rm_send_project_t` | 要发送的文件数据。        |
 
 - **返回值:** </br>
-Tuple[int, int]: 包含两个元素的元组
+Tuple[int, int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -76,7 +76,7 @@ rm_get_program_trajectory_list(self, page_num: int, page_size: int, vague_search
 | vague_search      | `str` | 模糊搜索。        |
 
 - **返回值:** </br>
-tuple[int, dict[str,any]]: 包含两个元素的元组
+tuple[int, dict[str,any]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -167,7 +167,7 @@ rm_get_program_run_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str,any]]: 包含两个元素的元组
+tuple[int, dict[str,any]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -339,7 +339,7 @@ rm_get_default_run_program(self) -> tuple[int, int]:
 ```
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

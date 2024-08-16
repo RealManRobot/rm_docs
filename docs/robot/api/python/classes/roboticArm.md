@@ -232,7 +232,7 @@ rm_get_arm_run_mode(self) -> tuple[int, int]:
 ```
 
 - **返回值:**
-tuple[int, int]: 包含两个元素的元组。
+tuple[int, int]: 包含两个元素的元组。<br>
 
 1.函数执行的状态码：
 |   参数    |  类型   |   说明    |
@@ -276,7 +276,7 @@ rm_get_robot_info(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:**
-tuple[int, dict[str, any]]: 包含两个元素的元组。
+tuple[int, dict[str, any]]: 包含两个元素的元组。<br>
 
 1.函数执行的状态码：
 |   参数    |  类型   |   说明    |

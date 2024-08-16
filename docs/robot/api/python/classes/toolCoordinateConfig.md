@@ -320,7 +320,7 @@ rm_get_total_tool_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典:
+dict[str, any]: 包含以下键值的字典:<br>
 
 1. 'return_code' (int): 函数执行的状态码。
 
@@ -375,7 +375,7 @@ rm_get_given_tool_frame(self, tool_name: str) -> tuple[int, dict[str, any]]:
 |   tool_name  |    `str`    |   工具坐标系名称。   |
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。
+tuple: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -418,7 +418,7 @@ rm_get_current_tool_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。
+tuple: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -511,7 +511,7 @@ rm_get_tool_envelope(self, tool_name: str) -> tuple[int, dict[str, any]]:
 |   tool_name  |    `string`    |    工具坐标系名称   |
 
 - **返回值:** </br>
-tuple: 包含两个元素的元组。
+tuple: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

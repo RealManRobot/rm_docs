@@ -1,6 +1,6 @@
 # <p class="hidden">Python: </p>Modbus 配置`ModbusConfig`
 
-可用于Modbus 配置，睿尔曼机械臂在控制器和末端接口板上各提供一个RS485通讯接口，这些接口可通过接口配置为标准的Modbus RTU模式。在Modbus RTU模式下，用户可通过提供的接口对连接在端口上的外设进行读写操作。下面是Modbus配置`ModbusConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
+可用于Modbus 配置，睿尔曼机械臂在控制器和末端接口板上各提供一个RS485通讯接口，这些接口可通过接口配置为标准的Modbus RTU模式。在Modbus RTU模式下，用户可通过提供的接口对连接在端口上的外设进行读写操作。下面是Modbus配置`ModbusConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。<br>
 
 > **注意**</br>
 >
@@ -184,7 +184,7 @@ arm.rm_delete_robot_arm()
 rm_read_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int, int]:
 ```
 
-*可以跳转[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams.md)查阅结构体详细描述*
+*可以跳转[rm_peripheral_read_write_params_t](../struct/peripheralReadWriteParams.md)查阅结构体详细描述*<br>
 
 - **参数说明:**
 
@@ -193,7 +193,7 @@ rm_read_coils(self, read_params: rm_peripheral_read_write_params_t) -> tuple[int
 | read_params      | `rm_peripheral_read_write_params_t` | 线圈读取参数结构体，该指令最多一次性支持读 8 个线圈数据，即返回的数据不会超过一个字节     |
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -247,7 +247,7 @@ rm_read_input_status(self, read_params: rm_peripheral_read_write_params_t) -> tu
 | read_params      | `rm_peripheral_read_write_params_t` | 离散量输入读取参数结构体，该指令最多一次性支持读 8 个离散量数据，即返回的数据不会超过一个字节   |
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -301,7 +301,7 @@ rm_read_holding_registers(self, read_params: rm_peripheral_read_write_params_t) 
 | read_params      | `rm_peripheral_read_write_params_t` | 保持寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，即 2 个字节的数据，不可一次性读取多个寄存器数据，该结构体成员num无需设置   |
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -355,7 +355,7 @@ rm_read_input_registers(self, read_params: rm_peripheral_read_write_params_t) ->
 | read_params      | `rm_peripheral_read_write_params_t` |  输入寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，即 2 个字节的数据，不可一次性读取多个寄存器数据，该结构体成员num无需设置，该指令每次只能读 1 个寄存器，即 2 个字节的数据，不可一次性读取多个寄存器数据，该结构体成员num无需设置   |
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -585,7 +585,7 @@ rm_read_multiple_coils(self, read_params: rm_peripheral_read_write_params_t) -> 
 | read_params      | `rm_peripheral_read_write_params_t` | 多圈数据读取参数结构体，要读的线圈的数量 8< num <= 120，该指令最多一次性支持读 120 个线圈数据， 即 15 个 byte   |
 
 - **返回值:** </br>
-tuple[int,list[int]]: 包含两个元素的元组
+tuple[int,list[int]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -639,7 +639,7 @@ rm_read_multiple_holding_registers(self, read_params: rm_peripheral_read_write_p
 | read_params      | `rm_peripheral_read_write_params_t` | 多个保存寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte   |
 
 - **返回值:** </br>
-tuple[int,list[int]]: 包含两个元素的元组
+tuple[int,list[int]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 
@@ -693,7 +693,7 @@ rm_read_multiple_input_registers(self, read_params: rm_peripheral_read_write_par
 | read_params      | `rm_peripheral_read_write_params_t` | 多个输入寄存器读取参数结构体。要读的寄存器的数量 2 < num < 13，该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte   |
 
 - **返回值:** </br>
-tuple[int,list[int]]: 包含两个元素的元组
+tuple[int,list[int]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

@@ -235,7 +235,7 @@ rm_get_arm_current_trajectory(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
- dict[str,any]: 包含以下键值的字典
+ dict[str,any]: 包含以下键值的字典。<br>
  
 1. 'return_code' (int): 函数执行的状态码
 
@@ -253,7 +253,7 @@ rm_get_arm_current_trajectory(self) -> dict[str, any]:
 | :--- | :--- | :---|
 |   trajectory_type  |    `rm_arm_current_trajectory_e`   |    返回的规划类型    |
 
-3. 规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿
+3. 规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿。<br>
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|

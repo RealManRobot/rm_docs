@@ -11,7 +11,7 @@ rm_get_controller_state(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str,any]: 包含以下键值的字典
+dict[str,any]: 包含以下键值的字典。<br>
 
 1. int: 函数执行的状态码。
 
@@ -228,7 +228,7 @@ rm_get_joint_odom(self) -> tuple[int, list[float]]:
 ```
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组
+tuple[int, list[float]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

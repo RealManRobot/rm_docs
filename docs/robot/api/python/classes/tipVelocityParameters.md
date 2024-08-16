@@ -256,7 +256,7 @@ rm_get_collision_stage(self) -> tuple[int, int]:
 ```
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组。
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -299,7 +299,7 @@ rm_get_arm_max_line_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组。
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -342,7 +342,7 @@ rm_get_arm_max_line_acc(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-`tuple[int,float]`: 包含两个元素的元组。
+`tuple[int,float]`: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -385,7 +385,7 @@ rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-tuple[int,float]: 包含两个元素的元组。
+tuple[int,float]: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 
@@ -427,7 +427,7 @@ rm_get_arm_max_angular_speed(self) -> tuple[int, float]:
 ```
 
 - **返回值:** </br>
-`tuple[int,float]`: 包含两个元素的元组。
+`tuple[int,float]`: 包含两个元素的元组。<br>
 
 1. 函数执行的状态码
 

@@ -59,7 +59,7 @@ rm_get_realtime_push(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** 
-tuple[int,dict[str,any]]: 包含两个元素的元组
+tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

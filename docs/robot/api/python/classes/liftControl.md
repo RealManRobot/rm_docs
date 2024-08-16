@@ -98,7 +98,7 @@ rm_get_lift_state(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int,dict[str,any]]: 包含两个元素的元组
+tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 1. 获取到的升降机构状态字典
 

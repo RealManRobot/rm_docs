@@ -423,7 +423,7 @@ rm_save_trajectory(self, file_path: str) -> tuple[int, int]:
 | file_path      | `str` | 轨迹要保存的文件路径及名称，例: c:/rm_test.txt |
 
 - **返回值:** </br>
-tuple[int,int]: 包含两个元素的元组
+tuple[int,int]: 包含两个元素的元组。<br>
 
 1. int: 函数执行的状态码
 

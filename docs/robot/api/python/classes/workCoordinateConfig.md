@@ -77,7 +77,7 @@ rm_set_manual_work_frame(self, name: str, pose: list) -> int:
 | pose | `list` | 新工作坐标系相对于基坐标系的位姿。             |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -118,7 +118,7 @@ rm_change_work_frame(self, tool_name: str) -> int:
 | tool_name      | `str` | 目标工作坐标系名称 |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -201,7 +201,7 @@ rm_update_work_frame(self, name: str, pose: list) -> int:
 | pose      | `list` | 更新工作坐标系相对于基坐标系的位姿。 |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -236,9 +236,9 @@ rm_get_total_work_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典:
+dict[str, any]: 包含以下键值的字典:<br>
 
-1. 'return_code' (int): 函数执行的状态码
+1. `return_code`(int): 函数执行的状态码
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -289,9 +289,9 @@ rm_get_given_work_frame(self, name: str) -> tuple[int, list[float]]:
 | name      | `str` | 指定的工作坐标系名称。 |
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组
+tuple[int, list[float]]: 包含两个元素的元组。<br>
 
-1. 'return_code' (int): 函数执行的状态码。
+1. `return_code`(int): 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -332,7 +332,7 @@ rm_get_current_work_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str, any]]: 包含两个元素的元组
+tuple[int, dict[str, any]]: 包含两个元素的元组。<br>
 
 1. 'return_code' (int): 函数执行的状态码。
 

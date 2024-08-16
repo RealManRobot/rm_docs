@@ -200,7 +200,7 @@ rm_get_global_waypoints_list(self, page_num: int, page_size: int, vague_search: 
 | point_name      | `str` | 指定全局路点名称  |
 
 - **返回值:** </br>
-tuple[int,dict[str,any]]: 包含两个元素的元组
+tuple[int,dict[str,any]]: 包含两个元素的元组。<br>
 
 1. int：函数执行的状态码。
 
