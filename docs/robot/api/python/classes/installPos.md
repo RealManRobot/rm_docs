@@ -137,7 +137,7 @@ arm.rm_delete_robot_arm()
 rm_get_tool_software_version(self) -> tuple[int, int]:    
 ```
 
-- **返回值: **</br>
+- **返回值:**</br>
 tuple[int,int]: 包含两个元素的元组 -int 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
