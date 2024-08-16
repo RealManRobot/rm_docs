@@ -933,23 +933,23 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         items: [
           {
             text: "RM65系列本体参数",
-            link: "/robot/robotParameter/RM65系列本体参数",
+            link: "/robot/robotParameter/RM65OntologyParameters",
           },
           {
             text: "RM75系列本体参数",
-            link: "/robot/robotParameter/RM75系列本体参数",
+            link: "/robot/robotParameter/RM75OntologyParameters",
           },
           {
             text: "RML63系列本体参数",
-            link: "/robot/robotParameter/RML63系列本体参数",
+            link: "/robot/robotParameter/RML63OntologyParameters",
           },
           {
             text: "ECO65系列本体参数",
-            link: "/robot/robotParameter/ECO65系列本体参数",
+            link: "/robot/robotParameter/ECO65OntologyParameters",
           },
           {
             text: "GEN72系列本体参数",
-            link: "/robot/robotParameter/GEN72系列本体参数",
+            link: "/robot/robotParameter/GEN72OntologyParameters",
           },
         ],
       },
