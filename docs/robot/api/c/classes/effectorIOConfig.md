@@ -143,8 +143,8 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 - **使用示例**
   
 ```C
-//设置工具端电源输出类型
-int type = 1;
+//设置工具端电源输出类型 12V
+int type = 2;
 ret = rm_set_tool_voltage(robot_handle, type);
 ```
 

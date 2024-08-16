@@ -333,7 +333,7 @@
 
 | 参数      | 类型   | 说明                   |
 | :-------- | :----- | :--------------------- |
-| `set_state` | `bool` | true:成功 false:失败。 |
+| `set_state` | `bool` | `true`:成功 `false`:失败。 |
 
 - **代码示例**
 
@@ -366,7 +366,7 @@
 
 | 参数             | 类型   | 说明                                             |
 | :--------------- | :----- | :----------------------------------------------- |
-| `enable_state`     | `bool` | true 代表使能，false 代表禁使能。                |
+| `enable_state`     | `bool` | `true` 代表使能，`false `代表禁使能。                |
 | `in_out_side`      | `int`  | 0-机器人在电子围栏内部，1-机器人在电子围栏外部。 |
 | `effective_region` | `int`  | 0-针对整臂区域生效。                             |
 
@@ -413,7 +413,7 @@
 
 | 参数       | 类型   | 说明                    |
 | :--------- | :----- | :---------------------- |
-| `set_config` | `bool` | true 成功，false 失败。 |
+| `set_config` | `bool` | `true` 成功，`false` 失败。 |
 
 - **代码示例**
 
@@ -511,7 +511,7 @@
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
 |`set_virtual_wall_enable`|`string` |设置虚拟墙使能状态。|
-|`set_enable`|`bool`|true 代表使能，false 代表禁使能。|
+|`set_enable`|`bool`|`true` 代表使能，`false` 代表禁使能。|
 |`in_out_side`|`int`|0-机器人在虚拟墙内部。|
 |`effective_region`|`int`|1-针对末端生效。|
 
@@ -520,7 +520,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_virtual_wall_enable`|`bool`|true 成功 false 失败|
+|`set_virtual_wall_enable`|`bool`|`true` 成功 `false` 失败|
 
 - **代码示例**
 
@@ -547,7 +547,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|get_virtual_wall_enable|`string` |获取虚拟墙使能状态。|
+|`get_virtual_wall_enable`|`string` |获取虚拟墙使能状态。|
 
 
 
@@ -590,7 +590,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|set_virtual_wall_config|`string`|设置当前虚拟墙参数。|
+|`set_virtual_wall_config`|`string`|设置当前虚拟墙参数。|
 |`form`|`int`|形状，1 表示长方体，3 表示球体。|
 |`x_min_limit`|`int`|长方体基于世界坐标系 X 方向最小位置，单位 0.001m，示例中表示 0.5m。|
 |`x_max_limit`|`int`|长方体基于世界坐标系 X 方向最大位置，单位 0.001m，示例中表示 1m。|
@@ -598,7 +598,7 @@
 |`y_max_limit`|`int`|长方体基于世界坐标系 y 方向最大位置，单位 0.001m，示例中表示 1m。|
 |`z_min_limit`|`int`|长方体基于世界坐标系 z 方向最小位置，单位 0.001m，示例中表示 0.5m。|
 |`z_max_limit`|`int`|长方体基于世界坐标系 z 方向最大位置，单位 0.001m，示例中表示 1m。|
-|`x，y，z`|`int`|表示球体基于世界坐标系的球心坐标，单位 0.001m，示例中表示 x-0.5m，y-1m，z-0.5m。|
+|`x,y,z`|`int`|表示球体基于世界坐标系的球心坐标，单位 0.001m，示例中表示 x-0.5m，y-1m，z-0.5m。|
 |`radius`|`int`|表示球体的半径，单位 0.001m，示例中表示 0.9m。|
 
 
@@ -607,7 +607,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_config`|`bool`|true 成功，false 失败。|
+|`set_config`|`bool`|`true` `成功，false` 失败。|
 
 - **代码示例**
 
@@ -669,7 +669,7 @@
 | `y_max_limit` | `int` | 长方体基于世界坐标系 y 方向最大位置，单位 0.001m，示例中表示 1m。                |
 | `z_min_limit` | `int` | 长方体基于世界坐标系 z 方向最小位置，单位 0.001m，示例中表示 0.5m。              |
 | `z_max_limit` | `int` | 长方体基于世界坐标系 z 方向最大位置，单位 0.001m，示例中表示 1m。                |
-| `x，y，z`     | `int` | 表示球体基于世界坐标系的球心坐标，单位 0.001m，示例中表示 x-0.5m，y-1m，z-0.5m。 |
+| `x,y,z`     | `int` | 表示球体基于世界坐标系的球心坐标，单位 0.001m，示例中表示 x-0.5m，y-1m，z-0.5m。 |
 | `radius`      | `int` | 表示球体的半径，单位 0.001m，示例中表示 0.9m。                                   |
 
 
@@ -677,7 +677,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_state`|`bool`|true 成功 false 失败。|
+|`set_state`|`bool`|`true` 成功 `false` 失败。|
 
 
 - **代码示例**
@@ -748,7 +748,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`enable_state`|`bool`|true 使能 false 禁使能。|
+|`enable_state`|`bool`|`true` 使能 `false` 禁使能。|
 
 - **代码示例**
 

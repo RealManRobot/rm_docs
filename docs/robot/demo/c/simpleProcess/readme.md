@@ -1,4 +1,4 @@
-#  <p class="hidden">Demo演示(C)：</p>Cmake项目基础搭建示例
+#  <p class="hidden">Demo演示(C、C++)：</p>Cmake项目基础搭建示例
 
 
 ## **1. 项目介绍**
