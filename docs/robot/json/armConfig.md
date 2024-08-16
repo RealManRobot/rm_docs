@@ -1510,27 +1510,23 @@
 - **代码示例**
 
 **输入**
+实现：查询指定工具信息。
 
 ```json
-//  实现：查询指定工具信息。
 
 { "command": "get_tool_frame", "tool_name": "tool" }
 ```
 
 **输出**
+返回指定工具信息，如下：
+工具名称：tool2_frame,
+工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm
+工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad
+重量：payload：5kg精度0.001kg
+质心：position：1mm精度0.001mm。
 
+成功：
 ```json
-//  返回指定工具信息，如下：
-
-//  工具名称：tool2_frame,
-//  工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm
-//  工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad
-//  重量：payload：5kg精度0.001kg
-//  质心：position：1mm精度0.001mm。
-```
-
-```json
-// 成功：
 {
   "state": "given_tool_frame",
   "tool_name": "tool2_frame",
@@ -1540,8 +1536,8 @@
 }
 ```
 
+失败：
 ```json
-// 失败：
 {
   "command": "get_tool_frame",
   "get_state": false
@@ -1565,21 +1561,19 @@
 - **代码示例**
 
 **输入**
+实现：查询当前工作坐标系。
 
 ```json
-//  实现：查询当前工作坐标系。
-
 { "command": "get_current_work_frame" }
 ```
 
 **输出**
+返回当前工作坐标系信息，如下：
+坐标系名称：work2_frame，
+坐标系位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm；
+坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad。
 
 ```json
-// 返回当前工作坐标系信息，如下：
-
-// 坐标系名称：work2_frame，
-// 坐标系位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm；
-// 坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad。
 {
   "state": "current_work_frame",
   "frame_name": "work2_frame",
