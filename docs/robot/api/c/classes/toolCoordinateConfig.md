@@ -477,8 +477,7 @@ if (result == 0) {
 - **方法原型：**
 
 ```C
-int rm_get_tool_envelope(rm_robot_handle * 	handle,const char * tool_name,rm_envelope_balls_list_t * envelope
-)
+int rm_get_tool_envelope(rm_robot_handle * 	handle,const char * tool_name,rm_envelope_balls_list_t * envelope)
 ```
 
 *可以跳转[rm_robot_handle](../struct/robotHandle.md)和[rm_envelope_balls_list_t](../struct/envelopeBallsList.md)查阅结构体详细描述*
