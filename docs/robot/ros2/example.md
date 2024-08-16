@@ -142,7 +142,7 @@ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+ros2 launch rm_driver rm_65_driver.launch.py
 ```
 
 节点启动成功后，需要执行如下指令控制机械臂进行运动。
