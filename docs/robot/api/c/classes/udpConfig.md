@@ -16,8 +16,8 @@ int rm_set_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t conf
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   config  |    输入参数    |    UDP配置结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `config`  |    输入参数    |    UDP配置结构体。    |
 
 - **返回值:**
 
@@ -58,8 +58,8 @@ int rm_get_realtime_push(rm_robot_handle * handle,rm_realtime_push_config_t * co
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   config  |    输出参数    |    获取到的UDP机械臂状态主动上报配置。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `config`  |    输出参数    |    获取到的UDP机械臂状态主动上报配置。    |
 
 - **返回值:**
 

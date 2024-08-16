@@ -24,10 +24,10 @@ int rm_set_modbus_mode(rm_robot_handle * handle,int port,int baudrate,int timeou
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  port  |    输入参数    |    通讯端口，<br>0-控制器RS485端口为RTU主站，<br>1-末端接口板RS485接口为RTU主站，<br>2-控制器RS485端口为RTU从站。    |
-|  baudrate  |    输入参数    |    波特率，支持 9600,115200,460800 三种常见波特率。    |
-|   timeout  |    输入参数    |    超时时间，单位百毫秒。<br>对Modbus设备所有的读写指令，在规定的超时时间内未返回响应数据，则返回超时报错提醒。<br>超时时间不能为0，若设置为0，则机械臂按1进行配置。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `port`  |    输入参数    |    通讯端口，<br>0-控制器RS485端口为RTU主站，<br>1-末端接口板RS485接口为RTU主站，<br>2-控制器RS485端口为RTU从站。    |
+|  `baudrate`  |    输入参数    |    波特率，支持 9600,115200,460800 三种常见波特率。    |
+|   `timeout`  |    输入参数    |    超时时间，单位百毫秒。<br>对Modbus设备所有的读写指令，在规定的超时时间内未返回响应数据，则返回超时报错提醒。<br>超时时间不能为0，若设置为0，则机械臂按1进行配置。    |
 
 >注解：其他配置默认为：数据位-8，停止位-1，奇偶校验-无。
 
@@ -65,8 +65,8 @@ int rm_close_modbus_mode(rm_robot_handle * handle,int port)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  port  |    输入参数    |    通讯端口，0-控制器RS485端口为RTU主站，1-末端接口板RS485接口为RTU主站，2-控制器RS485端口为RTU从站。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `port`  |    输入参数    |    通讯端口，0-控制器RS485端口为RTU主站，1-末端接口板RS485接口为RTU主站，2-控制器RS485端口为RTU从站。    |
 
 - **返回值:**
 
@@ -100,10 +100,10 @@ int rm_set_modbustcp_mode(rm_robot_handle * handle,const char * ip,int port,int 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   ip  |    输入参数    |    机械臂句柄。    |
-|  port  |    输入参数    |    端口号。    |
-|  timeout  |    输入参数    |    超时时间，单位秒。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `ip`  |    输入参数    |    机械臂句柄。    |
+|  `port`  |    输入参数    |    端口号。    |
+|  `timeout`  |    输入参数    |    超时时间，单位秒。    |
 
 - **返回值:**
 
@@ -135,7 +135,7 @@ int rm_close_modbustcp_mode(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -168,9 +168,9 @@ int rm_read_coils(rm_robot_handle * handle,rm_peripheral_read_write_params_t par
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    线圈读取参数结构体，该指令最多一次性支持读 8 个线圈数据，即返回的数据不会超过一个字节。    |
-|   data  |    输出参数    |    返回线圈状态，数据类型：int8。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    线圈读取参数结构体，该指令最多一次性支持读 8 个线圈数据，即返回的数据不会超过一个字节。    |
+|   `data`  |    输出参数    |    返回线圈状态，数据类型：int8。    |
 
 - **返回值:**
 
@@ -210,9 +210,9 @@ int rm_read_input_status(rm_robot_handle * handle,rm_peripheral_read_write_param
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    离散量输入读取参数结构体，该指令最多一次性支持读 8 个离散量数据，<br>即返回的数据不会超过一个字节。    |
-|   data  |    输出参数    |    返回离散量，数据类型：int8。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    离散量输入读取参数结构体，该指令最多一次性支持读 8 个离散量数据，<br>即返回的数据不会超过一个字节。    |
+|   `data`  |    输出参数    |    返回离散量，数据类型：int8。    |
 
 - **返回值:**
 
@@ -252,9 +252,9 @@ int rm_read_holding_registers(rm_robot_handle * handle,rm_peripheral_read_write_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    保持寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，<br>即 2 个字节的数据，不可一次性读取多个寄存器数据，<br>该结构体成员num无需设置。    |
-|   data  |    输出参数    |    返回寄存器数据，数据类型：int16。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    保持寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，<br>即 2 个字节的数据，不可一次性读取多个寄存器数据，<br>该结构体成员num无需设置。    |
+|   `data`  |    输出参数    |    返回寄存器数据，数据类型：int16。    |
 
 - **返回值:**
 
@@ -293,9 +293,9 @@ int rm_read_input_registers(rm_robot_handle * handle,rm_peripheral_read_write_pa
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    输入寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，<br>即 2 个字节的数据，不可一次性读取多个寄存器数据，<br>该结构体成员num无需设置。    |
-|   data  |    输出参数    |    返回寄存器数据，数据类型：int16。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    输入寄存器数据读取参数结构体，该指令每次只能读 1 个寄存器，<br>即 2 个字节的数据，不可一次性读取多个寄存器数据，<br>该结构体成员num无需设置。    |
+|   `data`  |    输出参数    |    返回寄存器数据，数据类型：int16。    |
 
 - **返回值:**
 
@@ -334,9 +334,9 @@ int rm_write_single_coil(rm_robot_handle * handle,rm_peripheral_read_write_param
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    单圈数据写入参数结构体，该结构体成员num无需设置。    |
-|   data  |    输入参数    |    要写入线圈的数据，数据类型：int16。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    单圈数据写入参数结构体，该结构体成员num无需设置。    |
+|   `data`  |    输入参数    |    要写入线圈的数据，数据类型：int16。    |
 
 - **返回值:**
 
@@ -374,9 +374,9 @@ int rm_write_single_register(rm_robot_handle * handle,rm_peripheral_read_write_p
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    单圈数据写入参数结构体，该结构体成员num无需设置。    |
-|   data  |    输入参数    |    要写入寄存器的数据，类型：int16。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    单圈数据写入参数结构体，该结构体成员num无需设置。    |
+|   `data`  |    输入参数    |    要写入寄存器的数据，类型：int16。    |
 
 - **返回值:**
 
@@ -414,9 +414,9 @@ int rm_write_registers(rm_robot_handle * handle,rm_peripheral_read_write_params_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    多个寄存器数据写入参数结构体。其中寄存器每次写的数量不超过10个，即该结构体成员num<=10。    |
-|   data  |    输入参数    |    要写入寄存器的数据数组，类型：byte。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    多个寄存器数据写入参数结构体。其中寄存器每次写的数量不超过10个，即该结构体成员num<=10。    |
+|   `data`  |    输入参数    |    要写入寄存器的数据数组，类型：byte。    |
 
 - **返回值:**
 
@@ -455,9 +455,9 @@ int rm_write_coils(rm_robot_handle * handle,rm_peripheral_read_write_params_t pa
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    多圈数据写入参数结构体。每次写的数量不超过 160 个，<br>即该结构体成员num<=160。    |
-|   data  |    输入参数    |    要写入线圈的数据数组，类型：byte。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    多圈数据写入参数结构体。每次写的数量不超过 160 个，<br>即该结构体成员num<=160。    |
+|   `data`  |    输入参数    |    要写入线圈的数据数组，类型：byte。    |
 
 - **返回值:**
 
@@ -496,9 +496,9 @@ int rm_read_multiple_coils(rm_robot_handle * handle,rm_peripheral_read_write_par
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    多圈数据读取参数结构体，要读的线圈的数量 8< num <= 120，<br>该指令最多一次性支持读 120 个线圈数据， 即 15 个 byte。    |
-|   data  |    输出参数    |    返回线圈状态，数据类型：int8。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    多圈数据读取参数结构体，要读的线圈的数量 8< num <= 120，<br>该指令最多一次性支持读 120 个线圈数据， 即 15 个 byte。    |
+|   `data`  |    输出参数    |    返回线圈状态，数据类型：int8。    |
 
 - **返回值:**
 
@@ -541,9 +541,9 @@ int rm_read_multiple_holding_registers(rm_robot_handle * handle,rm_peripheral_re
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    多个保存寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，<br>该指令最多一次性支持读 12 个寄存器数据，即 24 个byte。    |
-|   data  |    输出参数    |    返回寄存器数据，数据类型：int8。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    多个保存寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，<br>该指令最多一次性支持读 12 个寄存器数据，即 24 个byte。    |
+|   `data`  |    输出参数    |    返回寄存器数据，数据类型：int8。    |
 
 - **返回值:**
 
@@ -586,9 +586,9 @@ int rm_read_multiple_input_registers(rm_robot_handle * handle,rm_peripheral_read
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   params  |    输入参数    |    多个输入寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，<br>该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte。    |
-|   data  |    输出参数    |    返回寄存器数据，数据类型：int8。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `params`  |    输入参数    |    多个输入寄存器读取参数结构体，要读的寄存器的数量 2 < num < 13，<br>该指令最多一次性支持读 12 个寄存器数据， 即 24 个 byte。    |
+|   `data`  |    输出参数    |    返回寄存器数据，数据类型：int8。    |
 
 - **返回值:**
 

@@ -18,9 +18,9 @@ int rm_set_gripper_route(rm_robot_handle * handle,int min_limit,int max_limit)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  min_limit  |    输入参数    |    夹爪开口最小值，范围：0~1000，无单位量纲。    |
-|  max_limit  |    输入参数    |    夹爪开口最大值，范围：0~1000，无单位量纲。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `min_limit`  |    输入参数    |    夹爪开口最小值，范围：0~1000，无单位量纲。    |
+|  `max_limit`  |    输入参数    |    夹爪开口最大值，范围：0~1000，无单位量纲。    |
 
 - **返回值:**
 
@@ -57,10 +57,10 @@ int rm_set_gripper_release(rm_robot_handle * handle,int speed,bool block,int tim
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
-|  block  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
+|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -97,11 +97,11 @@ int rm_set_gripper_pick(rm_robot_handle * handle,int speed,int force,bool block,
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
-|  force  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
-|  block  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
+|  `force`  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
+|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -137,11 +137,11 @@ int rm_set_gripper_pick_on(rm_robot_handle * handle,int speed,int force,bool blo
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
-|  force  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
-|  block  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
+|  `force`  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
+|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -179,10 +179,10 @@ int rm_set_gripper_position(rm_robot_handle * handle,int position,bool block,int
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  position  |    输入参数    |    夹爪开口位置，范围 1~1000，无单位量纲。    |
-|  block  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `position`  |    输入参数    |    夹爪开口位置，范围 1~1000，无单位量纲。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
+|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
 
@@ -217,8 +217,8 @@ int rm_get_gripper_state(rm_robot_handle * handle,rm_gripper_state_t * state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  state  |    输出参数    |    存放夹爪状态结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `state`  |    输出参数    |    存放夹爪状态结构体。    |
 
 - **返回值:**
 

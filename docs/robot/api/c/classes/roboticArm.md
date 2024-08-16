@@ -198,8 +198,8 @@ int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   handle  |    机械臂控制句柄。    |
-|   mode  |    0：仿真模式；1：真实模式。    |
+|   `handle`  |    机械臂控制句柄。    |
+|   `mode`  |    0：仿真模式；1：真实模式。    |
 
 - **返回值:**
 
@@ -280,8 +280,8 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   robot_info  |    输入参数    |    存放机械臂基本信息结构体。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `robot_info`  |    输入参数    |    存放机械臂基本信息结构体。    |
 
 
 - **返回值:**
@@ -318,8 +318,8 @@ void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 
 |   参数    |   值    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   event_callback  |    用户自定义    |    机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。    |
+|   `handle`  |    用户自定义    |    机械臂控制句柄。    |
+|   `event_callback`  |    用户自定义    |    机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。    |
 
 - **使用示例**
   

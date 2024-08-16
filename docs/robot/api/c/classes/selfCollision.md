@@ -17,8 +17,8 @@ int rm_set_self_collision_enable(rm_robot_handle * handle,bool state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   state  |    输入参数    |    true代表使能，false代表禁使能。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `state`  |    输入参数    |    true代表使能，false代表禁使能。    |
 
 - **返回值:**
 
@@ -51,8 +51,8 @@ int rm_get_self_collision_enable(rm_robot_handle * handle,bool * state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   state  |    输出参数    |    true代表使能，false代表禁使能。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `state`  |    输出参数    |    true代表使能，false代表禁使能。    |
 
 - **返回值:**
 
