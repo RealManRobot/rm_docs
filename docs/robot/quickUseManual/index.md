@@ -8,15 +8,7 @@
 
 一套完整的睿尔曼协作机器人产品组成如下所示：
 
-| 名称                 | 数量 | 图例                      |
-| :------------------- | :--- | :------------------------ |
-| 机器人本体           | 1    | ![alt text](image-19.png) |
-| 电源连接线           | 1    | ![alt text](image-14.png) |
-| 6 芯工具端 IO 连接线 | 1    | ![alt text](image-23.png) |
-| 16 芯 IO 连接线      | 1    | ![alt text](image-24.png) |
-| 网线                 | 1    | ![alt text](image-15.png) |
-| M6\*20 固定螺丝      | 4    | ![alt text](image-16.png) |
-| 平板示教器（选配）   | 1    | ![alt text](image-22.png) |
+![alt text](image-25.png)
 
 **机器人电气接口功能说明**
 ![alt text](image.png)
