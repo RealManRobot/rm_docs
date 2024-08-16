@@ -350,7 +350,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
               {
                 text: "算法接口配置",
-                link: "/robot/api/c/classes/algoInterface",
+                link: "/robot/api/c/classes/algo",
               },
               {
                 text: "机械臂轨迹指令",
