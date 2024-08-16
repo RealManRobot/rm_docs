@@ -55,7 +55,7 @@ ros2 topic pub --once /rm_driver/get_curr_workFrame_cmd std_msgs/msg/Empty "{}"
 ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。  
 例如65机械臂的启动命令：
 
 ```
@@ -81,7 +81,7 @@ ros2 run rm_example rm_get_state
 ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。  
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。  
 例如65机械臂的启动命令：
 
 ```
@@ -113,7 +113,7 @@ ros2 launch rm_example rm_7dof_movej.launch.py
 ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
-在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有`65`、`63`、`eco65`、`75`。  
+在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有`65`、`63`、`eco65`、`75`、`gen72`。  
 例如65机械臂的启动命令：
 
 ```
