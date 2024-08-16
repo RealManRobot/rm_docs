@@ -76,7 +76,7 @@ rosrun rm_demo api_ChangeToolFrame_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 例如65机械臂的启动命令：
 
@@ -106,7 +106,7 @@ rosrun rm_demo api_Get_Arm_State_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 例如65机械臂的启动命令：
 
@@ -142,7 +142,7 @@ rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 例如65机械臂的启动命令：
 
@@ -170,7 +170,7 @@ rosrun rm_demo api_moveJ_P_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 
 例如65机械臂的启动命令：
 
@@ -198,13 +198,13 @@ rosrun rm_demo api_moveL_demo
 roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，eco65，75，63，gen72机械臂的启动指令如下。
 
 ```
 roslaunch rml_63_moveit_config demo.launch
 ```
 
-其中<arm_type>可选择的型号有65、63、75、eco65。
+其中<arm_type>可选择的型号有65，63，75，eco65、gen72。
 
 例如65机械臂的启动命令：
 
@@ -246,7 +246,7 @@ roslaunch rm_demo arm_<arm_type>_planning_scene_ros_api_demo
 roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，eco65，75，63，gen72机械臂的启动指令如下。
 
 ```
 roslaunch rml_63_moveit_config demo.launch
@@ -268,7 +268,7 @@ roslaunch rm_65_moveit_config demo.launch
 rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 ```
 
-其中<arm_type>可选择的型号有65、63、75、eco65。
+其中<arm_type>可选择的型号有65，63，75，eco65，gen72。
 
 节点运行后，在rviz中可以看到场景中添加了一个table物体，然后机器人自动避开table运行到forward位姿，最后从forward位姿自动避开table回到zero位姿
 
@@ -284,7 +284,7 @@ rosrun rm_demo rm_<arm_type>_moveit_obstacles_demo.py
 roslaunch rm_<arm_type>_moveit_config demo.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、eco65、75，63机械臂的启动指令如下。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，eco65，75，63，gen72机械臂的启动指令如下。
 
 ```
 roslaunch rml_63_moveit_config demo.launch
@@ -306,7 +306,7 @@ roslaunch rm_65_moveit_config demo.launch
 rosrun rm_demo rm_<arm_type>_pick_place_demo
 ```
 
-其中<arm_type>可选择的型号有65、63、75、eco65。
+其中<arm_type>可选择的型号有65，63，75，eco65，gen72。
 
 节点运行后，在rviz中可以看到场景中添加了三个物体，分别代表两个桌子和一个抓取的目标物，然后机器人运动到目标物的位置将目标物附着到机器人上模拟抓取物体，接着进行运动规划将目标物体放置到另一个桌子上然后解除附着，最后机器人返回zero姿态。
 
