@@ -4,19 +4,31 @@
 
 ## 设置自碰撞安全检测使能状态`set_self_collision_enable`
 
-**参数说明：**
+- **输入参数**
+
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
 |set_self_collision_enable|`string` |设置自碰撞安全检测使能状态。|
 
-**使用示例：**
-实现：设置当前虚拟墙参数。
+
+- **输出参数**
+|   参数    |   类型    |   说明    |
+|   :--     |   :--     |   :--     |
+|set_state|`bool`|true 成功  false  失败。|
+
+- **代码示例**
+
+**输入**
 
 ```json
-{"command":"set_self_collision_enable","set_enable":false}
+// 设置当前虚拟墙参数。
+{
+    "command":"set_self_collision_enable",
+    "set_enable":false
+}
 ```
 
-**返回示例：**
+**输出**
 
 ```json
 {
@@ -25,26 +37,32 @@
 }
 ```
 
-**参数说明：**
-|   参数    |   类型    |   说明    |
-|   :--     |   :--     |   :--     |
-|set_state|`bool`|true 成功  false  失败。|
 
 ## 获取自碰撞安全检测使能状态`get_self_collision_enable`
 
-**参数说明：**
+- **输入参数**
+
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
 |get_self_collision_enable|`string` |获取自碰撞安全检测使能状态。|
 
-**使用示例：**
-实现：设置当前虚拟墙参数。
+
+- **输出参数**
+
+|   参数    |   类型    |   说明    |
+|   :--     |   :--     |   :--     |
+|enable_state|bool|`true` 使能  false  禁使能。|
+
+- **代码示例**
+
+**输入**
 
 ```json
+// 设置当前虚拟墙参数。
 {"command":"get_self_collision_enable"}
 ```
 
-**返回示例 ：**
+**输出**
 
 ```json
 {
@@ -53,7 +71,3 @@
 }
 ```
 
-**参数说明：**
-|   参数    |   类型    |   说明    |
-|   :--     |   :--     |   :--     |
-|enable_state|bool|`true` 使能  false  禁使能。|
