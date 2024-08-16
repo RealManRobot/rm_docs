@@ -988,7 +988,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/download/userManual",
           },
           {
-            text: "模型",
+            text: "模型和尺寸图",
             link: "/robot/download/model",
           },
         ],
