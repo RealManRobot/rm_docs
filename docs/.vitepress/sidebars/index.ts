@@ -265,6 +265,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/roboticArm",
               },
               {
+                text: "机械臂轨迹指令",
+                link: "/robot/api/c/classes/movePlan",
+              },
+              {
                 text: "在线编程配置",
                 link: "/robot/api/c/classes/projectManagement",
               },
@@ -351,10 +355,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               {
                 text: "算法接口配置",
                 link: "/robot/api/c/classes/algo",
-              },
-              {
-                text: "机械臂轨迹指令",
-                link: "/robot/api/c/classes/movePlan",
               },
             ],
           },
@@ -539,6 +539,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/roboticArm",
               },
               {
+                text: "机械臂轨迹控制",
+                link: "/robot/api/python/classes/movePlan",
+              },
+              {
                 text: "工具坐标系配置",
                 link: "/robot/api/python/classes/toolCoordinateConfig",
               },
@@ -630,10 +634,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               {
                 text: "Modbus 配置",
                 link: "/robot/api/python/classes/modbusConfig",
-              },
-              {
-                text: "机械臂轨迹控制",
-                link: "/robot/api/python/classes/movePlan",
               },
               {
                 text: "自碰撞安全检测接口配置",

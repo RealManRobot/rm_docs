@@ -333,7 +333,7 @@
 
 | 参数      | 类型   | 说明                   |
 | :-------- | :----- | :--------------------- |
-| `set_state` | `bool` | true:成功 false:失败。 |
+| `set_state` | `bool` | `true`:成功 `false`:失败。 |
 
 - **代码示例**
 
@@ -366,7 +366,7 @@
 
 | 参数             | 类型   | 说明                                             |
 | :--------------- | :----- | :----------------------------------------------- |
-| `enable_state`     | `bool` | true 代表使能，false 代表禁使能。                |
+| `enable_state`     | `bool` | `true` 代表使能，`false `代表禁使能。                |
 | `in_out_side`      | `int`  | 0-机器人在电子围栏内部，1-机器人在电子围栏外部。 |
 | `effective_region` | `int`  | 0-针对整臂区域生效。                             |
 
@@ -413,7 +413,7 @@
 
 | 参数       | 类型   | 说明                    |
 | :--------- | :----- | :---------------------- |
-| `set_config` | `bool` | true 成功，false 失败。 |
+| `set_config` | `bool` | `true` 成功，`false` 失败。 |
 
 - **代码示例**
 
@@ -511,7 +511,7 @@
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
 |`set_virtual_wall_enable`|`string` |设置虚拟墙使能状态。|
-|`set_enable`|`bool`|true 代表使能，false 代表禁使能。|
+|`set_enable`|`bool`|`true` 代表使能，`false` 代表禁使能。|
 |`in_out_side`|`int`|0-机器人在虚拟墙内部。|
 |`effective_region`|`int`|1-针对末端生效。|
 
@@ -520,7 +520,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_virtual_wall_enable`|`bool`|true 成功 false 失败|
+|`set_virtual_wall_enable`|`bool`|`true` 成功 `false` 失败|
 
 - **代码示例**
 
@@ -547,7 +547,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|get_virtual_wall_enable|`string` |获取虚拟墙使能状态。|
+|`get_virtual_wall_enable`|`string` |获取虚拟墙使能状态。|
 
 
 
@@ -607,7 +607,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_config`|`bool`|true 成功，false 失败。|
+|`set_config`|`bool`|`true` `成功，false` 失败。|
 
 - **代码示例**
 
@@ -677,7 +677,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`set_state`|`bool`|true 成功 false 失败。|
+|`set_state`|`bool`|`true` 成功 `false` 失败。|
 
 
 - **代码示例**
@@ -748,7 +748,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|`enable_state`|`bool`|true 使能 false 禁使能。|
+|`enable_state`|`bool`|`true` 使能 `false` 禁使能。|
 
 - **代码示例**
 
