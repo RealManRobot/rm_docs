@@ -56,7 +56,7 @@
 
 16芯线中的IO具备复用功能，可以通过程序指令或者web端示教器切换为：具体操作方法如下：点击IO配置界面的下拉列表，选择对应的复用功能。
 
-<div align=center><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mD6wz6nJbv/img/2603dde4-be84-4809-9e0a-477e1eb5f69d.png"></div>
+![alt text](image.png)
 
 ### 7.什么是机械臂DH参数？
 
