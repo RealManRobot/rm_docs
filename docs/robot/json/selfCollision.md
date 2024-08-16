@@ -21,21 +21,16 @@
 
 **输入**
 
+设置当前虚拟墙参数。
+
 ```json
-// 设置当前虚拟墙参数。
-{
-    "command":"set_self_collision_enable",
-    "set_enable":false
-}
+{"command":"set_self_collision_enable","set_enable":false}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_self_collision_enable",
-    "set_state": true
-}
+{"command":"set_self_collision_enable","set_state":true}
 ```
 
 
@@ -58,17 +53,15 @@
 
 **输入**
 
+设置当前虚拟墙参数。
+
 ```json
-// 设置当前虚拟墙参数。
 {"command":"get_self_collision_enable"}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "get_self_collision_enable",
-    "enable_state": false
-}
+{"command":"get_self_collision_enable","enable_state":false}
 ```
 

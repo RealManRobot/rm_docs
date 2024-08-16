@@ -27,9 +27,10 @@
 - **代码示例**
 
 **输入**
-
 ```json
 //实现：设置机械臂末端最大线速度 0.5m/s，分辨率 0.001m/s。
+```
+```json
 { 
   "command": "set_arm_max_line_speed", 
   "arm_line_speed": 500 
@@ -39,10 +40,7 @@
 **输出**
 
 ```json
-{
-  "command": "set_arm_max_line_speed",
-  "arm_line_speed": true
-}
+{"command":"set_arm_max_line_speed","arm_line_speed":true}
 ```
 
 ### 设置末端最大线加速度`set_arm_max_line_acc`
@@ -67,22 +65,17 @@
 - **代码示例**
 
 **输入**
-
 ```json
 // 实现：设置机械臂末端最大线加速度 2m/s²，分辨率 0.001m/s²。
-{ 
-  "command": "set_arm_max_line_acc", 
-  "arm_line_acc": 2000 
-}
+```
+```json
+{"command":"set_arm_max_line_acc","arm_line_acc":2000}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_arm_max_line_acc",
-  "arm_line_acc": true
-}
+{"command":"set_arm_max_line_acc","arm_line_acc":true}
 ```
 
 ### 设置末端最大角速度`set_arm_max_angular_speed`
@@ -105,22 +98,17 @@
 | `arm_angular_speed` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
 **输入**
-
 ```json
 // 实现：设置机械臂末端最大角速度 0.2rad/s，分辨率 0.001rad/s。
-{ 
-  "command": "set_arm_max_angular_speed", 
-  "arm_angular_speed": 200 
-}
+```
+```json
+{"command":"set_arm_max_angular_speed","arm_angular_speed":200}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_arm_max_angular_speed",
-  "arm_angular_speed": true
-}
+{"command":"set_arm_max_angular_speed","arm_angular_speed":true}
 ```
 
 ### 设置末端最大角加速度`set_arm_max_angular_acc`
@@ -143,22 +131,17 @@
 | `arm_angular_acc` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
 **输入**
-
 ```json
 // 实现：设置机械臂末端最大角加速度 4rad/s²，分辨率 0.001rad/s²。
-{ 
-  "command": "set_arm_max_angular_acc", 
-  "arm_angular_acc": 4000 
-}
+```
+```json
+{"command":"set_arm_max_angular_acc","arm_angular_acc":4000}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_arm_max_angular_acc",
-  "arm_angular_acc": true
-}
+{"command":"set_arm_max_angular_acc","arm_angular_acc":true}
 ```
 
 ### 初始化机械臂参数`set_arm_max_angular_acc`
@@ -181,16 +164,14 @@
 // 实现：初始化机械臂参数，机械臂的末端参数恢复到默认值。
 // 末端线速度：0.25m/s; 末端线加速度：1.6m/s²;
 // 末端角速度：0.6rad/s; 末端角加速度：4rad/s²。
+```
+```json
 { "command": "set_arm_init" }
 ```
-
 **输出**
 
 ```json
-{
-  "command": "set_arm_init",
-  "arm_init": true
-}
+{"command":"set_arm_init","arm_init":true}
 ```
 
 ### 设置碰撞防护等级`set_collision_stage`
@@ -209,22 +190,17 @@
 | `collision_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
 **输入**
-
 ```json
 // 实现：设置机械臂碰撞防护等级 1，等级越高，检测越灵敏。
-{ 
-  "command": "set_collision_stage", 
-  "collision_stage": 1 
-}
+```
+```json
+{"command":"set_collision_stage","collision_stage":1}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_collision_state",
-  "collision_state": true
-}
+{"command":"set_collision_state","collision_state":true}
 ```
 
 ### 查询碰撞防护等级`get_collision_stage`
@@ -244,19 +220,17 @@
 - **代码示例**
 
 **输入**
-
 ```json
 // 实现：查询碰撞防护等级。
+```
+```json
 { "command": "get_collision_stage" }
 ```
 
 **输出**
 
 ```json
-{
-  "state": "get_collision_stage",
-  "collision_stage": 5
-}
+{"state":"get_collision_stage","collision_stage":5}
 ```
 
 ### 重新设置 DH 参数`set_DH_data`
@@ -292,38 +266,23 @@
 
 ```json
 // 6 自由度机械臂：
-{
-  "command": "set_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000]
-}
 ```
 
 ```json
+{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000]}
+```
+```josn
 // 7 自由度机械臂：
-{
-  "command": "set_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000],
-  "joint_7": [1000, 2000, 3000, 4000]
-}
+```
+
+```json
+{"command":"set_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000],"joint_7":[1000,2000,3000,4000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_DH_data",
-  "set_state": true
-}
+{"command":"set_DH_data","set_state":true}
 ```
 
 ### 查询 DH 参数`get_DH_data`
@@ -347,16 +306,18 @@
 - **代码示例**
 
   **输入**
-
 ```json
 // 实现：查询机械臂 DH 参数。
+```
+```json
 { "command": "get_DH_data" }
 ```
 
 **输出**
-
 ```json
 // 6 自由度机械臂：
+```
+```json
 {
   "command": "get_DH_data",
   "joint_1": [1000, 2000, 3000, 4000],
@@ -370,16 +331,10 @@
 
 ```json
 // 7 自由度机械臂：
-{
-  "command": "get_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000],
-  "joint_7": [1000, 2000, 3000, 4000]
-}
+```
+
+```json
+{"command":"get_DH_data","joint_1":[1000,2000,3000,4000],"joint_2":[1000,2000,3000,4000],"joint_3":[1000,2000,3000,4000],"joint_4":[1000,2000,3000,4000],"joint_5":[1000,2000,3000,4000],"joint_6":[1000,2000,3000,4000],"joint_7":[1000,2000,3000,4000]}
 ```
 
 ### 恢复机械臂默认 DH 参数`set_DH_data_default`
@@ -403,19 +358,17 @@
 - **代码示例**
 
 **输入**
-
 ```json
 // 实现：恢复机械臂默认 DH 参数。
+```
+```json
 { "command": "set_DH_data_default" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_DH_data_default",
-  "set_state": true
-}
+{"command":"set_DH_data_default","set_state":true}
 ```
 
 ### 重设关节零位补偿`set_joint_zero_offset`
@@ -439,23 +392,20 @@
 | `set_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
 
 - **代码示例**
-  **输入**
 
+**输入**
 ```json
 // 实现：设置关节零位偏移，精度：0.001° 关节 1~6 的零位补偿角度：1°，-2°，3°，-4°，5°，-6°。
-{
-  "command": "set_joint_zero_offset",
-  "offset": [1000, -2000, 3000, -4000, 5000, -6000]
-}
+```
+
+```json
+{"command":"set_joint_zero_offset","offset":[1000,-2000,3000,-4000,5000,-6000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_joint_zero_offset",
-  "set_state": true
-}
+{"command":"set_joint_zero_offset","set_state":true}
 ```
 
 ## 查询运动参数
@@ -479,20 +429,19 @@
 - **代码示例**
 
 **输入**
-
 ```json
 //  实现：查询机械臂末端最大线速度。
+```
+```json
 { "command": "get_arm_max_line_speed" }
 ```
 
 **输出**
-
 ```json
 // 反馈机械臂末端最大线速度，0.5m/s，分辨率：0.001m/s。
-{
-  "state": "arm_max_line_speed",
-  "arm_line_speed": 500
-}
+```
+```json
+{"state":"arm_max_line_speed","arm_line_speed":500}
 ```
 
 ### 查询末端最大线加速度`get_arm_max_line_acc`
@@ -515,6 +464,9 @@
 
 ```json
 //  实现：查询机械臂末端最大线加速度。
+```
+
+```json
 { "command": "get_arm_max_line_acc" }
 ```
 
@@ -522,10 +474,10 @@
 
 ```json
 // 反馈机械臂末端最大线加速度，0.2m/s²，分辨率：0.001m/s²。
-{
-  "state": "arm_max_line_acc",
-  "arm_line_acc": 200
-}
+```
+
+```json
+{"state":"arm_max_line_acc","arm_line_acc":200}
 ```
 
 ### 查询末端最大角速度`get_arm_max_angular_speed`
@@ -548,6 +500,9 @@
 
 ```json
 //  实现：查询机械臂末端最大角速度。
+```
+
+```json
 { "command": "get_arm_max_angular_speed" }
 ```
 
@@ -555,10 +510,10 @@
 
 ```json
 // 反馈机械臂末端最大角速度，1rad/s，分辨率：0.001rad/s。
-{
-  "state": "arm_max_angular_speed",
-  "arm_angular_speed": 1000
-}
+```
+
+```json
+{"state":"arm_max_angular_speed","arm_angular_speed":1000}
 ```
 
 ### 查询末端最大角加速度`get_arm_max_angular_acc`
@@ -580,17 +535,20 @@
 
 ```json
 //  实现：查询机械臂末端最大角加速度。
+```
+
+```json
 { "command": "get_arm_max_angular_acc" }
 ```
 
 **输出**
-实现：反馈机械臂末端最大角加速度，10rad/s²，分辨率：0.001rad/s²。
 
 ```json
-{
-  "state": "arm_max_angular_acc",
-  "arm_angular_acc": 10000
-}
+// 反馈机械臂末端最大角加速度，10rad/s²，分辨率：0.001rad/s²。
+```
+
+```json
+{"state":"arm_max_angular_acc","arm_angular_acc":10000}
 ```
 
 ## 工具坐标系
@@ -627,21 +585,16 @@
 
 ```json
 //  实现：自动计算工具坐标系，标定当前位置为参考点 6。
-{"command":"set_auto_tool_frame","point_num":1}
-{"command":"set_auto_tool_frame","point_num":2}
-{"command":"set_auto_tool_frame","point_num":3}
-{"command":"set_auto_tool_frame","point_num":4}
-{"command":"set_auto_tool_frame","point_num":5}
-{"command":"set_auto_tool_frame","point_num":6}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":1}{"command":"set_auto_tool_frame","point_num":2}{"command":"set_auto_tool_frame","point_num":3}{"command":"set_auto_tool_frame","point_num":4}{"command":"set_auto_tool_frame","point_num":5}{"command":"set_auto_tool_frame","point_num":6}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_auto_tool_frame",
-  "auto_tool_frame": true
-}
+{"command":"set_auto_tool_frame","auto_tool_frame":true}
 ```
 
 ### 自动计算工具坐标系（自动计算生成工具）`set_auto_tool_frame`
@@ -674,21 +627,15 @@
 
 ```json
 //  实现：自动计算工具坐标系，名称为 tool2_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
-{
-  "command": "set_auto_tool_frame",
-  "tool_name": "tool_frame",
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+```
+```json
+{"command":"set_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_auto_tool_frame",
-  "auto_tool_frame": true
-}
+{"command":"set_auto_tool_frame","auto_tool_frame":true}
 ```
 
 ### 手动输入工具坐标系`set_auto_tool_frame`
@@ -729,22 +676,16 @@
 //  质心位置：x-1mm,y-2mm,z-3mm;
 //  payload：单位：g，最高不超过5000g；
 //  position：质心位置，单位：mm，精度0.001mm。
-{
-  "command": "set_manual_tool_frame",
-  "tool_name": "tool_frame",
-  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+```
+
+```json
+{"command":"set_manual_tool_frame","tool_name":"tool_frame","tool_pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_manual_tool_frame",
-  "manual_tool_frame": true
-}
+{"command":"set_manual_tool_frame","manual_tool_frame":true}
 ```
 
 ### 切换当前工具坐标系`set_change_tool_frame`
@@ -768,16 +709,15 @@
 
 ```json
 // 实现：切换当前工具坐标系，名称 tool2_frame。
+```
+```json
 { "command": "set_change_tool_frame", "tool_name": "tool2_frame" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_change_tool_frame",
-  "change_tool_frame": true
-}
+{"command":"set_change_tool_frame","change_tool_frame":true}
 ```
 
 ### 删除工具坐标系`set_delete_tool_frame`
@@ -801,16 +741,16 @@
 
 ```json
 // 实现：删除工具坐标系，名称 tool2_frame。
+```
+
+```json
 { "command": "set_delete_tool_frame", "tool_name": "tool2_frame" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_delete_tool_frame",
-  "delete_tool_frame": true
-}
+{"command":"set_delete_tool_frame","delete_tool_frame":true}
 ```
 
 ### 修改工具坐标系`update_tool_frame`
@@ -846,22 +786,15 @@
 // 质心位置：x-1mm,y-2mm,z-3mm；
 // payload：单位：g，最高不超过5000g；
 // position：质心位置，单位：mm，精度0.001mm。
-{
-  "command": "update_tool_frame",
-  "tool_name": "tool_frame",
-  "tool_pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+```
+```json
+{"command":"update_tool_frame","tool_name":"tool_frame","tool_pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "update_tool_frame",
-  "update_state": true
-}
+{"command":"update_tool_frame","update_state":true}
 ```
 
 ### 设置工具坐标系包络参数`set_tool_envelope`
@@ -893,24 +826,16 @@
 // 实现：名为 left 工具包络球的半径为 0.02m,球心 x 坐标 0.01m,球心 y 坐标 0.02m,z 坐标 0.03m;
 // 名为 right 工具包络球的半径为 0.03m,球心 x 坐标 0.03m,球心 y 坐标 0.04m,z 坐标 0.05m;
 // 名为 center 工具包络球的半径为 0.04m,球心 x 坐标 0.05m,球心 y 坐标 0.06m,z 坐标 0.07m;
-{
-  "command": "set_tool_envelope",
-  "tool_name": "test",
-  "list": [
-    { "name": "left", "radius": 20, "x": 10, "y": 20, "z": 30 },
-    { "name": "right", "radius": 30, "x": 30, "y": 40, "z": 50 },
-    { "name": "center", "radius": 40, "x": 50, "y": 60, "z": 70 }
-  ]
-}
+```
+
+```json
+{"command":"set_tool_envelope","tool_name":"test","list":[{"name":"left","radius":20,"x":10,"y":20,"z":30},{"name":"right","radius":30,"x":30,"y":40,"z":50},{"name":"center","radius":40,"x":50,"y":60,"z":70}]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_tool_envelope",
-  "set_state": true
-}
+{"command":"set_tool_envelope","set_state":true}
 ```
 
 ### 查询工具坐标系包络参数`get_tool_envelope`
@@ -940,51 +865,26 @@
 
 ```json
 // 实现：查询名为 tool1 工具坐标系的包络参数。
-{ 
-  "command": "get_tool_envelope",
-  "tool_name": "tool1"
-}
+```
+```json
+{"command":"get_tool_envelope","tool_name":"tool1"}
 ```
 
 **输出**
 
 ```json
 // 查询结果:
-{
-  "command": "get_tool_envelope",
-  "tool_name": "test",
-  "list": [
-    {
-      "name": "left",
-      "radius": 20,
-      "x": 10,
-      "y": 20,
-      "z": 30
-    },
-    {
-      "name": "right",
-      "radius": 30,
-      "x": 30,
-      "y": 40,
-      "z": 50
-    },
-    {
-      "name": "center",
-      "radius": 40,
-      "x": 50,
-      "y": 60,
-      "z": 70
-    }
-  ]
-}
+```
+
+```json
+{"command":"get_tool_envelope","tool_name":"test","list":[{"name":"left","radius":20,"x":10,"y":20,"z":30},{"name":"right","radius":30,"x":30,"y":40,"z":50},{"name":"center","radius":40,"x":50,"y":60,"z":70}]}
 ```
 
 ```json
 // 查询失败:
-{ 
-  "command": "get_tool_envelope", 
-  "get_state": false 
-}
+```
+```json
+{"command":"get_tool_envelope","get_state":false}
 ```
 
 ## 工作坐标系
@@ -1016,20 +916,15 @@
 
 ```json
 // 实现：设置工作坐标系，名称 work2_frame，将当前位置标定为参考点 3（Y 轴上一点）。
-{ 
-  "command": "set_auto_work_frame", 
-  "frame_name": "work_frame", 
-  "point_num": 3 
-}
+```
+```json
+{"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_auto_work_frame",
-  "auto_work_frame": true
-}
+{"command":"set_auto_work_frame","auto_work_frame":true}
 ```
 
 ### 手动输入工作坐标系`set_manual_work_frame`
@@ -1062,20 +957,15 @@
 //位置精度：0.001mm；
 //坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad；
 //姿态精度：0.001rad。
-{
-  "command": "set_manual_work_frame",
-  "frame_name": "work_frame",
-  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
-}
+```
+```json
+{"command":"set_manual_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_manual_work_frame",
-  "manual_work_frame": true
-}
+{"command":"set_manual_work_frame","manual_work_frame":true}
 ```
 
 ### 切换当前工作坐标系`set_change_work_frame`
@@ -1098,20 +988,17 @@
 **输入**
 
 ```json
-//  实现：切换当前工作坐标系，名称 work2_frame。
-{ 
-  "command": "set_change_work_frame", 
-  "frame_name": "work2_frame"
-}
+//  切换当前工作坐标系，名称 work2_frame。
+```
+
+```json
+{"command":"set_change_work_frame","frame_name":"work2_frame"}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_change_work_frame",
-  "change_work_frame": true
-}
+{"command":"set_change_work_frame","change_work_frame":true}
 ```
 
 ### 删除工作坐标系`set_delete_work_frame`
@@ -1134,20 +1021,16 @@
 **输入**
 
 ```json
-//  实现：删除工作坐标系，名称 work2_frame。
-{ 
-  "command": "set_delete_work_frame", 
-  "frame_name": "work2_frame" 
-}
+//  删除工作坐标系，名称 work2_frame。
+```
+```json
+{"command":"set_delete_work_frame","frame_name":"work2_frame"}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_delete_work_frame",
-  "delete_work_frame": true
-}
+{"command":"set_delete_work_frame","delete_work_frame":true}
 ```
 
 ### 修改工作坐标系`update_work_frame`
@@ -1177,20 +1060,15 @@
 //  位置精度：0.001mm;
 //  坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad;
 //  姿态精度：0.001rad。
-{
-  "command": "update_work_frame",
-  "frame_name": "work_frame",
-  "frame_pose": [100000, 200000, 30000, 400, 500, 600]
-}
+```
+```json
+{"command":"update_work_frame","frame_name":"work_frame","frame_pose":[100000,200000,30000,400,500,600]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "update_work_frame",
-  "update_state": true
-}
+{"command":"update_work_frame","update_state":true}
 ```
 
 ## 机械臂状态查询集
@@ -1219,6 +1097,8 @@
 
 ```json
 //  实现：查询机械臂状态。
+```
+```json
 { "command": "get_current_arm_state" }
 ```
 
@@ -1238,28 +1118,17 @@
 
 ```json
 // 六自由度：
-{
-  "state": "current_arm_state",
-  "arm_state": {
-    "joint": [100, 200, 300, 400, 500, 600],
-    "pose": [100000, 200000, 30000, 400, 500, 600],
-    "arm_err": 0,
-    "sys_err": 0
-  }
-}
+```
+
+```json
+{"state":"current_arm_state","arm_state":{"joint":[100,200,300,400,500,600],"pose":[100000,200000,30000,400,500,600],"arm_err":0,"sys_err":0}}
 ```
 
 ```json
 // 七自由度：
-{
-  "state": "current_arm_state",
-  "arm_state": {
-    "joint": [100, 200, 300, 400, 500, 600, 700],
-    "pose": [100000, 200000, 30000, 400, 500, 600],
-    "arm_err": 0,
-    "sys_err": 0
-  }
-}
+```
+```json
+{"state":"current_arm_state","arm_state":{"joint":[100,200,300,400,500,600,700],"pose":[100000,200000,30000,400,500,600],"arm_err":0,"sys_err":0}}
 ```
 
 ### 查询关节温度`get_current_joint_temperature`
@@ -1282,6 +1151,9 @@
 
 ```json
 //  实现：查询关节温度。
+```
+
+```json
 { "command": "get_current_joint_temperature" }
 ```
 
@@ -1296,18 +1168,16 @@
 
 ```json
 // 六自由度:
-{
-  "state": "current_joint_temperature",
-  "joint_temperature": [27500, 28000, 26800, 26800, 28900, 30100]
-}
+```
+```json
+{"state":"current_joint_temperature","joint_temperature":[27500,28000,26800,26800,28900,30100]}
 ```
 
 ```json
 // 七自由度:
-{
-  "state": "current_joint_temperature",
-  "joint_temperature": [27500, 28000, 26800, 26800, 28900, 30100, 31100]
-}
+```
+```json
+{"state":"current_joint_temperature","joint_temperature":[27500,28000,26800,26800,28900,30100,31100]}
 ```
 
 ### 查询关节当前电流`get_current_joint_current`
@@ -1329,6 +1199,8 @@
 
 ```json
 //  实现：查询关节当前电流。
+```
+```json
 { "command": "get_current_joint_current" }
 ```
 
@@ -1346,18 +1218,16 @@
 
 ```json
 // 六自由度：
-{
-  "state": "current_joint_current",
-  "joint_current": [65, -200, 170, 200, -300, 168]
-}
+```
+```json
+{"state":"current_joint_current","joint_current":[65,-200,170,200,-300,168]}
 ```
 
 ```json
 // 七自由度：
-{
-  "state": "current_joint_current",
-  "joint_current": [65, -200, 170, 200, -300, 168, 178]
-}
+```
+```json
+{"state":"current_joint_current","joint_current":[65,-200,170,200,-300,168,178]}
 ```
 
 ### 查询关节当前电压`get_current_joint_voltage`
@@ -1380,6 +1250,8 @@
 
 ```json
 //  实现：查询关节当前电压。
+```
+```json
 { "command": "get_current_joint_voltage" }
 ```
 
@@ -1394,18 +1266,16 @@
 
 ```json
 // 六自由度：
-{
-  "state": "current_joint_voltage",
-  "joint_voltage": [27500, 28000, 26800, 26800, 28900, 30100]
-}
+```
+```json
+{"state":"current_joint_voltage","joint_voltage":[27500,28000,26800,26800,28900,30100]}
 ```
 
 ```json
 // 七自由度：
-{
-  "state": "current_joint_voltage",
-  "joint_voltage": [27500, 28000, 26800, 26800, 28900, 30100, 31100]
-}
+```
+```json
+{"state":"current_joint_voltage","joint_voltage":[27500,28000,26800,26800,28900,30100,31100]}
 ```
 
 ## 坐标系查询集
@@ -1430,7 +1300,8 @@
 
 ```json
 //  实现：查询当前工具。
-
+```
+```json
 { "command": "get_current_tool_frame" }
 ```
 
@@ -1449,13 +1320,7 @@
 ```
 
 ```json
-{
-  "state": "current_tool_frame",
-  "tool_name": "tool2_frame",
-  "pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+{"state":"current_tool_frame","tool_name":"tool2_frame","pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
 ```
 
 ### 查询已有所有工具名称`get_total_tool_frame`
@@ -1478,7 +1343,8 @@
 
 ```json
 //  实现：查询已有所有工具名称。
-
+```
+```json
 { "command": "get_total_tool_frame" }
 ```
 
@@ -1486,10 +1352,9 @@
 
 ```json
 // 返回所有工具名称，共 10 个。工具名称：base_tool1，base_tool2，其中“NULL”为空坐标系，未建立。
-{
-    "state":"total_tool_frame",
-    "tool_names":["base_tool1","base_tool2"….,"NULL"]
-}
+```
+```json
+{"state":"total_tool_frame","tool_names":["base_tool1","base_tool2"….,"NULL"]}
 ```
 
 ### 查询指定工具信息`get_tool_frame`
@@ -1510,38 +1375,38 @@
 - **代码示例**
 
 **输入**
-实现：查询指定工具信息。
 
 ```json
-
+实现：查询指定工具信息。
+```
+```json
 { "command": "get_tool_frame", "tool_name": "tool" }
 ```
 
 **输出**
-返回指定工具信息，如下：
-工具名称：tool2_frame,
-工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm
-工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad
-重量：payload：5kg精度0.001kg
-质心：position：1mm精度0.001mm。
 
-成功：
 ```json
-{
-  "state": "given_tool_frame",
-  "tool_name": "tool2_frame",
-  "pose": [100000, 200000, 30000, 400, 500, 600],
-  "payload": 5000,
-  "position": [1000, 2000, 3000]
-}
+// 返回指定工具信息，如下：
+// 工具名称：tool2_frame,
+// 工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm
+// 工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad
+// 重量：payload：5kg精度0.001kg
+// 质心：position：1mm精度0.001mm。
 ```
 
-失败：
 ```json
-{
-  "command": "get_tool_frame",
-  "get_state": false
-}
+//成功
+```
+
+```json
+{"state":"given_tool_frame","tool_name":"tool2_frame","pose":[100000,200000,30000,400,500,600],"payload":5000,"position":[1000,2000,3000]}
+```
+```json
+// 失败：
+```
+
+```json
+{"command":"get_tool_frame","get_state":false}
 ```
 
 ### 查询当前工作坐标系`get_current_work_frame`
@@ -1561,24 +1426,22 @@
 - **代码示例**
 
 **输入**
-实现：查询当前工作坐标系。
-
+```json
+// 实现：查询当前工作坐标系。
+```
 ```json
 { "command": "get_current_work_frame" }
 ```
 
 **输出**
-返回当前工作坐标系信息，如下：
-坐标系名称：work2_frame，
-坐标系位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm；
-坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad。
-
 ```json
-{
-  "state": "current_work_frame",
-  "frame_name": "work2_frame",
-  "pose": [100000, 200000, 30000, 400, 500, 600]
-}
+// 返回当前工作坐标系信息，如下：
+// 坐标系名称：work2_frame，
+// 坐标系位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm；
+// 坐标系姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad。
+```
+```json
+{"state":"current_work_frame","frame_name":"work2_frame","pose":[100000,200000,30000,400,500,600]}
 ```
 
 ### 查询已有所有工作坐标系名称`get_total_work_frame`
@@ -1600,7 +1463,8 @@
 
 ```json
 //  实现：查询已有所有工作坐标系名称。
-
+```
+```json
 { "command": "get_total_work_frame" }
 ```
 
@@ -1608,11 +1472,9 @@
 
 ```json
 // 返回所有工作坐标系名称，坐标系名称：work1,work2,…。
-
-{
-  "state": "total_work_frame",
-  "frame_names": ["work1", "work2", "NULL"]
-}
+```
+```json
+{"state":"total_work_frame","frame_names":["work1","work2","NULL"]}
 ```
 
 ### 查询指定工作坐标系`get_work_frame`
@@ -1636,7 +1498,9 @@
 
 ```json
 //  实现：查询指定工作坐标系。
+```
 
+```json
 { "command": "get_work_frame", "frame_name": "work1" }
 ```
 
@@ -1652,15 +1516,16 @@
 
 ```json
 // 成功：
-{
-  "state": "given_work_frame",
-  "frame_name": "work2_frame",
-  "pose": [100000, 200000, 30000, 400, 500, 600]
-}
+```
+```json
+{"state":"given_work_frame","frame_name":"work2_frame","pose":[100000,200000,30000,400,500,600]}
 ```
 
 ```json
 // 失败：
+```
+
+```json
 { "command": "get_work_frame", "get_state": false }
 ```
 
@@ -1694,24 +1559,23 @@
 
 ```json
 // 六自由度：
+```
+
+```json
 { "command": "set_init_pose", "init_pose": [10000, 0, 20000, 30000, 0, 20000] }
 ```
 
 ```json
 // 七自由度：
-{
-  "command": "set_init_pose",
-  "init_pose": [10000, 0, 20000, 30000, 0, 20000, 20000]
-}
+```
+```json
+{"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```
 
 **输出**
 
 ```json
-{
-  "command": "set_init_pose",
-  "init_pose": true
-}
+{"command":"set_init_pose","init_pose":true}
 ```
 
 ### 查询初始位置`get_init_pose`
@@ -1735,7 +1599,8 @@
 
 ```json
 //  实现：查询初始位置。
-
+```
+```json
 { "command": "get_init_pose" }
 ```
 
@@ -1743,16 +1608,14 @@
 
 ```json
 // 六自由度：
-{
-  "state": "arm_init_pose",
-  "init_pose": [10000, 0, 20000, 30000, 0, 20000]
-}
+```
+```json
+{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000]}
 ```
 
 ```json
 // 七自由度：
-{
-  "state": "arm_init_pose",
-  "init_pose": [10000, 0, 20000, 30000, 0, 20000, 20000]
-}
+```
+```json
+{"state":"arm_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```

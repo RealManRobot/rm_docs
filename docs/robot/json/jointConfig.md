@@ -37,16 +37,15 @@
 
 ```json
 // 实现：设置关节2，最大转速30RPM，对应转速分辨率0.001RPM。
+```
+```json
 {"command":"set_joint_max_speed","joint_max_speed":[2,30000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_max_speed",
-    "joint_max_speed": true
-}
+{"command":"set_joint_max_speed","joint_max_speed":true}
 ```
 
 
@@ -74,18 +73,16 @@
 
 **输入**
 
+实现：设置关节2，最大加速度100RPM/s，加速度分辨率0.001RPM/s
+
 ```json
-// 实现：设置关节2，最大加速度100RPM/s，加速度分辨率0.001RPM/s。
 {"command":"set_joint_max_acc","joint_max_acc":[2,100000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_max_acc",
-    "joint_max_acc": true
-}
+{"command":"set_joint_max_acc","joint_max_acc":true}
 ```
 
 
@@ -108,19 +105,16 @@
 
 **输入**
 
+实现：设置关节1，最小限位度数-170°，分辨率0.001°。
 
 ```json
-// 实现：设置关节1，最小限位度数-170°，分辨率0.001°。
 {"command":"set_joint_min_pos","joint_min_pos":[1,-170000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_min_pos",
-    "joint_min_pos": true
-}
+{"command":"set_joint_min_pos","joint_min_pos":true}
 ```
 
 
@@ -143,19 +137,16 @@
 
 **输入**
 
+实现：设置关节1，最大限位度数170°，分辨率0.001°。
 
 ```json
-// 实现：设置关节1，最大限位度数170°，分辨率0.001°。
 {"command":"set_joint_max_pos","joint_max_pos":[1,170000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_max_pos",
-    "joint_max_pos": true
-}
+{"command":"set_joint_max_pos","joint_max_pos":true}
 ```
 
 
@@ -182,19 +173,16 @@
 
 **输入**
 
+实现：设置关节2，最大转速30RPM，转速分辨率0.001RPM。
 
 ```json
-// 实现：设置关节2，最大转速30RPM，转速分辨率0.001RPM。
 {"command":"set_joint_drive_max_speed","joint_max_speed":[2,30000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_drive_max_speed",
-    "joint_max_speed": true
-}
+{"command":"set_joint_drive_max_speed","joint_max_speed":true}
 ```
 
 
@@ -223,21 +211,16 @@
 
 **输入**
 
+实现：设置关节2，最大加速度500RPM/s，加速度分辨率0.001RPM/s。
+
 ```json
-// 实现：设置关节2，最大加速度500RPM/s，加速度分辨率0.001RPM/s。
-{
-    "command":"set_joint_drive_max_acc",
-    "joint_max_acc":[2,500000]
-}
+{"command":"set_joint_drive_max_acc","joint_max_acc":[2,500000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_drive_max_acc",
-    "joint_max_acc": true
-}
+{"command":"set_joint_drive_max_acc","joint_max_acc":true}
 ```
 
 
@@ -260,21 +243,16 @@
 
 **输入**
 
+实现：设置关节1，最小限位度数-170°，分辨率0.001°。
+
 ```json
-// 实现：设置关节1，最小限位度数-170°，分辨率0.001°。
-{
-    "command":"set_joint_drive_min_pos",
-    "joint_min_pos":[1,-170000]
-}
+{"command":"set_joint_drive_min_pos","joint_min_pos":[1,-170000]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_drive_min_pos",
-    "joint_min_pos": true
-}
+{"command":"set_joint_drive_min_pos","joint_min_pos":true}
 ```
 
 
@@ -297,21 +275,16 @@
 
 **输入**
 
+实现：设置关节6上使能°。
+
 ```json
-// 实现：设置关节6上使能°。
-{
-    "command":"set_joint_en_state",
-    "joint_en_state":[6,1]
-}
+{"command":"set_joint_en_state","joint_en_state":[6,1]}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_en_state",
-    "joint_en_state": true
-}
+{"command":"set_joint_en_state","joint_en_state":true}
 ```
 
 
@@ -334,21 +307,16 @@
 
 **输入**
 
+实现：设置关节3位置为零位。
+
 ```json
-// 实现：设置关节3位置为零位。
-{
-    "command":"set_joint_zero_pos",
-    "joint_zero_pos":3
-}
+{"command":"set_joint_zero_pos","joint_zero_pos":3}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_zero_pos",
-    "joint_zero_pos": true
-}
+{"command":"set_joint_zero_pos","joint_zero_pos":true}
 ```
 
 
@@ -371,21 +339,16 @@
 
 **输入**
 
+实现：清除关节2错误代码。
+
 ```json
-// 实现：清除关节2错误代码。
-{
-    "command":"set_joint_clear_err",
-    "joint_clear_err":2
-}
+{"command":"set_joint_clear_err","joint_clear_err":2}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_joint_clear_err",
-    "joint_clear_err": true
-}
+{"command":"set_joint_clear_err","joint_clear_err":true}
 ```
 
 
@@ -409,21 +372,16 @@
 
 **输入**
 
+实现：1-正式模式，各关节限位为规格参数中的软限位和硬件限位。
+
 ```json
-// 实现：1-正式模式，各关节限位为规格参数中的软限位和硬件限位。
-{
-    "command":"auto_set_joint_limit",
-    "limit_mode":1
-}
+{"command":"auto_set_joint_limit","limit_mode":1}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "auto_set_joint_limit",
-    "limit_mode": true
-}
+{"command":"auto_set_joint_limit","limit_mode":true}
 ```
 
 
@@ -448,32 +406,27 @@
 
 **输入**
 
+实现：查询关节最大速度。
+
+
 ```json
-// 实现：查询关节最大速度。
 {"command":"get_joint_max_speed"}
 ```
 
 **输出**
 依次反馈关节最大转速均为0.03RPM，单位RPM，分辨率：0。
 
-
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "state":"joint_max_speed",
-    "joint_speed":[30,30,30,30,30,30]
-}
+{"state":"joint_max_speed","joint_speed":[30,30,30,30,30,30]}
 ```
 
 
+七自由度：
 
 ```json
-// 七自由度：
-{
-    "state":"joint_max_speed",
-    "joint_speed":[30,30,30,30,30,30,30]
-}
+{"state":"joint_max_speed","joint_speed":[30,30,30,30,30,30,30]}
 ```
 
 
@@ -496,31 +449,25 @@
 
 **输入**
 
+实现：查询关节最大加速度。
+
 ```json
-// 实现：查询关节最大加速度。
 {"command":"get_joint_max_acc"}
 ```
 
 **输出**
 依次反馈关节最大加速度均为0.5RPM/s，单位RPM/s，分辨率：0.001RPM/s。
 
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "state":"joint_max_acc",
-    "joint_acc":[500,500,500,500,500,500]
-}
+{"state":"joint_max_acc","joint_acc":[500,500,500,500,500,500]}
 ```
 
+七自由度：
 
 ```json
-// 七自由度：
-
-{
-    "state":"joint_max_acc",
-    "joint_acc":[500,500,500,500,500,500,500]
-}
+{"state":"joint_max_acc","joint_acc":[500,500,500,500,500,500,500]}
 ```
 
 
@@ -542,9 +489,9 @@
 
 **输入**
 
-```json
-// 实现：查询关节最小限位。
+实现：查询关节最小限位。
 
+```json
 {"command":"get_joint_min_pos"}
 ```
 
@@ -558,24 +505,17 @@
 // 关节单位：度，分辨率：0.001°。
 ```
 
-
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "state":"joint_min_pos",
-    "min_pos":[-170000,-110000,-170000,-110000,-170000,-110000]
-}
+{"state":"joint_min_pos","min_pos":[-170000,-110000,-170000,-110000,-170000,-110000]}
 ```
 
 
+七自由度：
 
 ```json
-// 七自由度：
-{
-    "state":"joint_min_pos",
-    "min_pos":[-170000,-110000,-170000,-170000,-110000,-170000,-110000]
-}
+{"state":"joint_min_pos","min_pos":[-170000,-110000,-170000,-170000,-110000,-170000,-110000]}
 ```
 
 
@@ -599,8 +539,9 @@
 
 **输入**
 
+实现：查询关节最大限位。
+
 ```json
-// 实现：查询关节最大限位。
 {"command":"get_joint_max_pos"}
 ```
 
@@ -613,23 +554,17 @@
 // 关节单位：度，分辨率：0.001°。
 ```
 
-```json
-// 六自由度：
+六自由度：
 
-{
-    "state":"joint_max_pos",
-    "max_pos":[170000,110000,170000,110000,170000,110000]
-}
+```json
+{"state":"joint_max_pos","max_pos":[170000,110000,170000,110000,170000,110000]}
 ```
 
+七自由度：
+
 
 ```json
-// 七自由度：
-
-{
-    "state":"joint_max_pos",
-    "max_pos":[170000,110000,170000,170000,110000,170000,110000]
-}
+{"state":"joint_max_pos","max_pos":[170000,110000,170000,170000,110000,170000,110000]}
 ```
 
 
@@ -645,33 +580,26 @@
 
 **输入**
 
-```json
-// 实现：查询关节最大速度。
+实现：查询关节最大速度。
 
+
+```json
 {"command":"get_joint_drive_max_speed"}
 ```
 
 **输出**
 依次反馈关节最大转速均为0.03RPM，单位RPM，分辨率：0.001RPM。
 
+六自由度：
 
 ```json
-// 六自由度：
-
-{
-    "command":"get_joint_drive_max_speed",
-    "joint_speed":[30,30,30,30,30,30]
-}
+{"command":"get_joint_drive_max_speed","joint_speed":[30,30,30,30,30,30]}
 ```
 
+七自由度：
 
 ```json
-// 七自由度：
-
-{
-    "command":"get_joint_drive_max_speed",
-    "joint_speed":[30,30,30,30,30,30,30]
-}
+{"command":"get_joint_drive_max_speed","joint_speed":[30,30,30,30,30,30,30]}
 ```
 
 
@@ -693,30 +621,25 @@
 
 **输入**
 
+实现：查询关节最大加速度
+
 ```json
-// 实现：查询关节最大加速度。=
 {"command":"get_joint_drive_max_acc"}
 ```
 
 **输出**
 依次反馈关节最大加速度均为0.5RPM/s，单位RPM/s，分辨率：0.001RPM/s。
 
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "command":"get_joint_drive_max_acc",
-    "joint_acc":[500,500,500,500,500,500]
-}
+{"command":"get_joint_drive_max_acc","joint_acc":[500,500,500,500,500,500]}
 ```
 
+七自由度：
 
 ```json
-// 七自由度：
-{
-    "command":"get_joint_drive_max_acc",
-    "joint_acc":[500,500,500,500,500,500,500]
-}
+{"command":"get_joint_drive_max_acc","joint_acc":[500,500,500,500,500,500,500]}
 ```
 
 
@@ -739,8 +662,9 @@
 
 **输入**
 
+实现：查询关节最大加速度。
+
 ```json
-// 实现：查询关节最大加速度。
 {"command":"get_joint_drive_min_pos"}
 ```
 
@@ -752,22 +676,16 @@
 // 七自由度的关节1、3、4、6最小位置-170°，关节2、5、7最小位置-110°
 // 关节单位：度，分辨率：0.001°。
 ```
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "command":"get_joint_drive_min_pos",
-    "min_pos":[-170000,-110000,-170000,-110000,-170000,-110000]
-}
+{"command":"get_joint_drive_min_pos","min_pos":[-170000,-110000,-170000,-110000,-170000,-110000]}
 ```
 
+七自由度：
 
 ```json
-// 七自由度：
-{
-    "command":"get_joint_drive_min_pos",
-    "min_pos":[-170000,-110000,-170000,-170000,-110000,-170000,-110000]
-}
+{"command":"get_joint_drive_min_pos","min_pos":[-170000,-110000,-170000,-170000,-110000,-170000,-110000]}
 ```
 
 
@@ -790,8 +708,9 @@
 
 **输入**
 
+实现：查询关节最大限位。
+
 ```json
-// 实现：查询关节最大限位。
 {"command":"get_joint_drive_max_pos"}
 ```
 
@@ -803,22 +722,16 @@
 // 关节单位：度，分辨率：0.001°。
 ```
 
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "command":"get_joint_drive_max_pos",
-    "max_pos":[170000,110000,170000,110000,170000,110000]
-}
+{"command":"get_joint_drive_max_pos","max_pos":[170000,110000,170000,110000,170000,110000]}
 ```
 
+七自由度：
 
 ```json
-// 七自由度：
-{
-    "command":"get_joint_drive_max_pos",
-    "max_pos":[170000,110000,170000,170000,110000,170000,110000]
-}
+{"command":"get_joint_drive_max_pos","max_pos":[170000,110000,170000,170000,110000,170000,110000]}
 ```
 
 
@@ -842,32 +755,28 @@
 
 **输入**
 
+实现：查询关节使能状态。
+
 ```json
-// 实现：查询关节使能状态。
 {"command":"get_joint_en_state"}
 ```
 
 **输出**
+
 ```json
 // 反馈关节使能状态，1-上使能状态，0-掉使能状态。
 ```
 
+六自由度：
 
 ```json
-// 六自由度：
-{
-    "state":"joint_en_state",
-    "en_state":[1,1,1,1,1,0]
-}
+{"state":"joint_en_state","en_state":[1,1,1,1,1,0]}
 ```
+七自由度：
 
 
 ```json
-// 七自由度：
-{
-    "state":"joint_en_state",
-    "en_state":[1,1,1,1,1,1,0]
-}
+{"state":"joint_en_state","en_state":[1,1,1,1,1,1,0]}
 ```
 
 
@@ -889,8 +798,9 @@
 
 **输入**
 
+实现：查询关节错误代码。
+
 ```json
-// 实现：查询关节错误代码。
 {"command":"get_joint_err_flag"}
 ```
 
@@ -900,22 +810,17 @@
 // err_flag：反馈关节错误代码，错误代码为整型;
 // brake_state：反馈关节抱闸状态，1代表抱闸未打开，0代表抱闸已打开。
 ```
+
+六自由度：
+
 ```json
-// 六自由度：
-{
-    "state":"joint_err_flag",
-    "err_flag":[0,0,0,0,0,1],"brake_state":[0,0,0,0,0,1]
-}
+{"state":"joint_err_flag","err_flag":[0,0,0,0,0,1],"brake_state":[0,0,0,0,0,1]}
 ```
 
+七自由度：
 
 ```json
-//七自由度：
-{
-    "state":"joint_err_flag",
-    "err_flag":[0,0,0,0,0,0,1],
-    "brake_state":[0,0,0,0,0,0,1]
-}
+{"state":"joint_err_flag","err_flag":[0,0,0,0,0,0,1],"brake_state":[0,0,0,0,0,0,1]}
 ```
 
 

@@ -36,61 +36,17 @@
 - **代码示例**
 
 **输入**
+六自由度UDP数据上报。
 
 ```json
-// 六自由度UDP数据上报。
-{
-    "arm_err":0,
-    "joint_status":{
-        "joint_current":[43000,2085000,1020000,1000,257000,-57000],
-        "joint_en_flag":[1,1,1,1,1,1],
-        "joint_err_code":[0,0,0,0,0,0],
-        "joint_position":[13434,-69764,2926,-4742,-45721,-223],
-        "joint_temperature":[33000,35000,37000,36000,37000,39000],
-        "joint_voltage":[22000,22000,22000,22000,22000,22000]
-    },
-    "six_force_sensor":{
-        "force":[-13000,3799,-22393,-216,-408,481],
-        "zero_force":[17476,10415,30827,5,2,2],
-        "coordinate":1
-    },
-    "state":"realtime_arm_joint_state",
-    "sys_err":0,
-    "waypoint":{
-        "euler":[2935,2935,2935],
-        "position":[578568,127709,345856],
-        "quat":[-23405,824245,106348,555663]
-    }
-}
+{"arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000],"joint_en_flag":[1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000],"joint_voltage":[22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
 ```
 
 
+七自由度UDP数据上报。
 
 ```json
-// 七自由度UDP数据上报。
-{
-    "arm_err":0,
-    "joint_status":{
-        "joint_current":[43000,2085000,1020000,1000,257000,-57000,1000],
-        "joint_en_flag":[1,1,1,1,1,1,1],
-        "joint_err_code":[0,0,0,0,0,0,0],
-        "joint_position":[13434,-69764,2926,-4742,-45721,-223,-223],
-        "joint_temperature":[33000,35000,37000,36000,37000,39000,37000],
-        "joint_voltage":[22000,22000,22000,22000,22000,22000,22000]
-    },
-    "six_force_sensor":{
-        "force":[-13000,3799,-22393,-216,-408,481],
-        "zero_force":[17476,10415,30827,5,2,2],
-        "coordinate":1
-    },
-    "state":"realtime_arm_joint_state",
-    "sys_err":0,
-    "waypoint":{
-        "euler":[2935,2935,2935],
-        "position":[578568,127709,345856],
-        "quat":[-23405,824245,106348,555663]
-    }
-}
+{"arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000,1000],"joint_en_flag":[1,1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000,37000],"joint_voltage":[22000,22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
 ```
 
 ## 查询 UDP 机械臂状态主动上报配置`get_realtime_push`
@@ -117,27 +73,16 @@
 
 **输入**
 
+用于查询 UDP 机械臂状态主动上报配置。
+
 ```json
-// 用于查询 UDP 机械臂状态主动上报配置。
 {"command":"get_realtime_push"}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "get_realtime_push",
-    "custom": {
-        "expand_state": true,
-        "joint_speed": true,
-        "lift_state": true
-    },
-    "cycle": 100,
-    "enable": true,
-    "force_coordinate": 2,
-    "ip": "192.168.1.10",
-    "port": 8099
-}
+{"command":"get_realtime_push","custom":{"expand_state":true,"joint_speed":true,"lift_state":true},"cycle":100,"enable":true,"force_coordinate":2,"ip":"192.168.1.10","port":8099}
 ```
 
 
@@ -166,23 +111,14 @@
 
 **输入**
 
+用于设置 UDP 机械臂状态主动上报配置
+
 ```json
-// 用于设置 UDP 机械臂状态主动上报配置
-{
-    "command":"set_realtime_push",
-    "cycle":10,
-    "enable":true,
-    "port":8099,
-    "force_coordinate":2,
-    "ip":"192.168.1.10"
-}
+{"command":"set_realtime_push","cycle":10,"enable":true,"port":8099,"force_coordinate":2,"ip":"192.168.1.10"}
 ```
 
 **返回示例：**
 
 ```json
-{
-    "command": "set_realtime_push",
-    "state": true
-}
+{"command":"set_realtime_push","state":true}
 ```

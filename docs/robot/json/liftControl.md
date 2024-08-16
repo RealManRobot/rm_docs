@@ -22,23 +22,18 @@
 
 **输入**
 
+控制升降机构以50速比运动。
 
 ```json
-// 控制升降机构以50速比运动。
-{
-    "command":"set_lift_speed",
-    "speed":50
-}
+{"command":"set_lift_speed","speed":50}
 ```
 
 **输出**
 
+设置成功
+
 ```json
-// 设置成功
-{
-    "command": "set_lift_speed",
-    "set_state": true
-}
+{"command":"set_lift_speed","set_state":true}
 ```
 
 
@@ -66,25 +61,19 @@
 
 **输入**
 
+控制升降机构以50速比运动运动到1m位置
+
 ```json
-// 控制升降机构以50速比运动运动到1m位置
-{
-    "command":"set_lift_height",
-    "height":1000,
-    "speed":50
-}
+{"command":"set_lift_height","height":1000,"speed":50}
 ```
 
 **输出**
 
+成功到位
+
+
 ```json
-// 成功到位
-{
-    "device": 3,
-    "state": "current _trajectory_state",
-    "trajectory_connect": 0,
-    "trajectory_state": true
-}
+{"device":3,"state":"current _trajectory_state","trajectory_connect":0,"trajectory_state":true}
 ```
 
 
@@ -110,23 +99,19 @@
 
 **输入**
 
+获取升降机构状态
+
+
 ```json
-// 获取升降机构状态
 {"command":"get_lift_state"}
 ```
 
 **输出**
 
+成功到位
+
+
 ```json
-// 成功到位
-{
-    "current": 2554,
-    "en_flag": "1",
-    "err_flag": "0",
-    "height": 0,
-    "joint_id": 1,
-    "mode": 0,
-    "state":"lift_state"
-}
+{"current":2554,"en_flag":"1","err_flag":"0","height":0,"joint_id":1,"mode":0,"state":"lift_state"}
 ```
 

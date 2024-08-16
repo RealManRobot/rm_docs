@@ -39,59 +39,32 @@
 
 ```json
 // 新增集合模型：长方体。
-{
-  "command": "add_electronic_fence_config",
-  "form": 1,
-  "form_name": "my_form",
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit":1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+```
+```json
+{"command":"add_electronic_fence_config","form":1,"form_name":"my_form","x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 新增集合模型：矢量平面。
-{
-  "command": "add_electronic_fence_config",
-  "form": 2,
-  "form_name": "my_form",
-  "x1": 500,
-  "y1": 1000,
-  "z1": 500,
-  "x2": 900,
-  "y2": 200,
-  "z2": 800,
-  "x3": 700,
-  "y3": 1200,
-  "z3": 300
-}
+```
+
+```json
+{"command":"add_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 
 ```json
 // 新增集合模型：球形。
-{
-  "command": "add_electronic_fence_config",
-  "form": 3,
-  "form_name": "my_form",
-  "radius": 500,
-  "x": 1000,
-  "y": 500,
-  "z": 900
-}
+```
+```json
+{"command":"add_electronic_fence_config","form":3,"form_name":"my_form","radius":500,"x":1000,"y":500,"z":900}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "add_electronic_fence_config",
-    "add_config": true
-}
+{"command":"add_electronic_fence_config","add_config":true}
 ```
 
 
@@ -129,59 +102,33 @@
 
 ```json
 // 新增集合模型：长方体。
-{
-  "command": "update_electronic_fence_config",
-  "form": 1,
-  "form_name": "my_form",
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+```
+
+```json
+{"command":"update_electronic_fence_config","form":1,"form_name":"my_form","x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 新增集合模型：矢量平面。
-{
-  "command":"update_electronic_fence_config",
-  "form":2,
-  "form_name":"my_form",
-  "x1":500,
-  "y1":1000,
-  "z1":500,
-  "x2":900,
-  "y2":200,
-  "z2":800,
-  "x3":700,
-  "y3":1200,
-  "z3":300
-}
+```
+
+```json
+{"command":"update_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 
 ```json
 // 新增集合模型：球形。
-{
-  "command":"update_electronic_fence_config",
-  "form":3,
-  "form_name":"my_form",
-  "radius":500,
-  "x":1000,
-  "y":500,
-  "z":900
-}
+```
+```json
+{"command":"update_electronic_fence_config","form":3,"form_name":"my_form","radius":500,"x":1000,"y":500,"z":900}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "update_electronic_fence_config",
-    "update_config": true
-}
+{"command":"update_electronic_fence_config","update_config":true}
 ```
 
 
@@ -207,19 +154,15 @@
 
 ```json
 // 删除指定几何模型。
-{ 
-  "command": "delete_electronic_fence_config", 
-  "form_name": "my_form"
-}
+```
+```json
+{"command":"delete_electronic_fence_config","form_name":"my_form"}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "delete_electronic_fence_config",
-    "delete_config": true
-}
+{"command":"delete_electronic_fence_config","delete_config":true}
 ```
 
 
@@ -244,16 +187,15 @@
 
 ```json
 // 查询所有几何模型。
+```
+```json
 { "command": "get_electronic_fence_list_names" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "get_electronic_fence_list_names",
-  "name_list": ["a_form", "b_form"]
-}
+{"command":"get_electronic_fence_list_names","name_list":["a_form","b_form"]}
 ```
 
 ### 查询指定几何模型`given_electronic_fence_config`
@@ -291,69 +233,45 @@
 
 ```json
 // 查询指定几何模型。
-{ 
-  "command": "given_electronic_fence_config", 
-  "form_name": "my_form"
-}
+```
+```json
+{"command":"given_electronic_fence_config","form_name":"my_form"}
 ```
 
 **输出**
 
 ```json
 // 返回示例-长方体
-{
-  "command": "given_electronic_fence_config",
-  "form": 1,
-  "form_name": "my_form",
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+```
+
+```json
+{"command":"given_electronic_fence_config","form":1,"form_name":"my_form","x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 返回示例-几何平面
-{
-  "command": "given_electronic_fence_config",
-  "form": 2,
-  "form_name": "my_form",
-  "x1": 500,
-  "y1": 1000,
-  "z1": 500,
-  "x2": 900,
-  "y2": 200,
-  "z2": 800,
-  "x3": 700,
-  "y3": 1200,
-  "z3": 300
-}
+```
+
+```json
+{"command":"given_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 
 ```json
 // 返回示例-球体
-{
-  "command": "given_electronic_fence_config",
-  "form": 3,
-  "form_name": "my_form",
-  "radius": 500,
-  "x": 1000,
-  "y": 500,
-  "z": 900
-}
+```
+```json
+{"command":"given_electronic_fence_config","form":3,"form_name":"my_form","radius":500,"x":1000,"y":500,"z":900}
 ```
 
 
 ```json
 // 返回示例-查询失败
-{
-    "command": "given_electronic_fence_config",
-    "given_state": false
-}
+```
+
+```json
+{"command":"given_electronic_fence_config","given_state":false}
 ```
                     |
 
@@ -378,40 +296,15 @@
 
 ```json
 // 查询所有几何模型参数
+```
+```json
 { "command": "get_electronic_fence_list_infos" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "get_electronic_fence_list_infos",
-  "info_list": [
-    {
-      "form": 1,
-      "form_name": "my_form",
-      "x_min_limit": 500,
-      "x_max_limit": 1000,
-      "y_min_limit": 500,
-      "y_max_limit": 1000,
-      "z_min_limit": 500,
-      "z_max_limit": 1000
-    },
-    {
-      "form": 2,
-      "form_name": "my_form",
-      "x1": 500,
-      "y1": 1000,
-      "z1": 500,
-      "x2": 900,
-      "y2": 200,
-      "z2": 800,
-      "x3": 700,
-      "y3": 1200,
-      "z3": 300
-    }
-  ]
-}
+{"command":"get_electronic_fence_list_infos","info_list":[{"form":1,"form_name":"my_form","x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000},{"form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}]}
 ```
 
 
@@ -448,21 +341,15 @@
 
 ```json
 // 设置电子围栏使能状态。
-{
-  "command":"set_electronic_fence_enable",
-  "set_enable":false,
-  "in_out_side":0,
-  "effective_region":0
-}
+```
+```json
+{"command":"set_electronic_fence_enable","set_enable":false,"in_out_side":0,"effective_region":0}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_electronic_fence_enable",
-    "set_state": true
-}
+{"command":"set_electronic_fence_enable","set_state":true}
 ```
 
 
@@ -490,18 +377,15 @@
 
 ```json
 // 获取电子围栏使能状态。
+```
+```json
 { "command": "get_electronic_fence_enable" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "get_electronic_fence_enable",
-  "enable_state": false,
-  "in_out_side": 0,
-  "effective_region": 0
-}
+{"command":"get_electronic_fence_enable","enable_state":false,"in_out_side":0,"effective_region":0}
 ```
 
 
@@ -538,44 +422,23 @@
 
 ```json
 // 设置当前电子围栏参数-长方体。
-{
-  "command":"set_electronic_fence_config",
-  "form":1,
-  "x_min_limit":500,
-  "x_max_limit":1000,
-  "y_min_limit":500,
-  "y_max_limit":1000,
-  "z_ min_limit":500,
-  "z_max_limit":1000
-}
+```
+```json
+{"command":"set_electronic_fence_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_ min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 设置当前电子围栏参数-点面矢量平面。
-{
-  "command":"set_electronic_fence_config",
-  "form":2,
-  "form_name": "my_form",
-  "x1":500,
-  "y1":1000,
-  "z1":500,
-  "x2":900,
-  "y2":200,
-  "z2":800,
-  "x3":700,
-  "y3":1200,
-  "z3":300
-}
+```
+```json
+{"command":"set_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_electronic_fence_config",
-    "set_config": false
-}
+{"command":"set_electronic_fence_config","set_config":false}
 ```
 
 
@@ -611,40 +474,26 @@
 
 ```json
 // 获取当前电子围栏参数。
+```
+```json
 { "command": "get_electronic_fence_config" }
 ```
 
 
 ```json
 // 返回示例-长方体
-{
-  "command": "get_electronic_fence_config",
-  "form": 1,
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_ min_limit": 500,
-  "z_max_limit": 1000
-}
+```
+```json
+{"command":"get_electronic_fence_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_ min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 返回示例-点面矢量平面
-{
-  "command":"get_electronic_fence_config",
-  "form":2,"form_name":"my_form",
-  "x1":500,
-  "y1":1000,
-  "z1":500,
-  "x2":900,
-  "y2":200,
-  "z2":800,
-  "x3":700,
-  "y3":1200,
-  "z3":300
-}
+```
+
+```json
+{"command":"get_electronic_fence_config","form":2,"form_name":"my_form","x1":500,"y1":1000,"z1":500,"x2":900,"y2":200,"z2":800,"x3":700,"y3":1200,"z3":300}
 ```
 
 
@@ -680,21 +529,16 @@
 
 ```json
 // 设置虚拟墙使能状态。
-{
-  "command":"set_virtual_wall_enable",
-  "set_enable":false,
-  "in_out_side":0,
-  "effective_region":1
-}
+```
+
+```json
+{"command":"set_virtual_wall_enable","set_enable":false,"in_out_side":0,"effective_region":1}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_virtual_wall_enable",
-    "set_state": true
-}
+{"command":"set_virtual_wall_enable","set_state":true}
 ```
 
 
@@ -728,18 +572,16 @@
 
 ```json
 // 获取虚拟墙使能状态。
+```
+
+```json
 { "command": "get_virtual_wall_enable" }
 ```
 
 **输出**
 
 ```json
-{
-  "command": "get_virtual_wall_enable",
-  "enable_state": false,
-  "in_out _side": 0,
-  "effective_region": 1
-}
+{"command":"get_virtual_wall_enable","enable_state":false,"in_out _side":0,"effective_region":1}
 ```
 
 
@@ -774,48 +616,38 @@
 
 ```json
 // 设置当前虚拟墙参数-长方体。
-{
-  "command":"set_virtual_wall_config",
-  "form":1,
-  "x_min_limit":500,
-  "x_max_limit":1000,
-  "y_min_limit":500,
-  "y_max_limit":1000,
-  "z_min_limit":500,
-  "z_max_limit":1000
-}
+```
+
+```json
+{"command":"set_virtual_wall_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 
 ```json
 // 设置当前虚拟墙参数-球体。
-{
-  "command":"set_virtual_wall_config",
-  "form":3,
-  "x":500,
-  "y":1000,
-  "z":500,
-  "radius":900
-}
+```
+
+```json
+{"command":"set_virtual_wall_config","form":3,"x":500,"y":1000,"z":500,"radius":900}
 ```
 
 **输出**
 
 ```json
 // 设置成功。
-{
-    "command": "set_virtual_wall_config",
-    "set_config": true
-}
+```
+
+```json
+{"command":"set_virtual_wall_config","set_config":true}
 ```
 
 
 ```json
 // 设置失败。
-{
-    "command": "set_virtual_wall_config",
-    "set_config": false
-}
+```
+
+```json
+{"command":"set_virtual_wall_config","set_config":false}
 ```
 
 
@@ -855,35 +687,27 @@
 
 ```json
 // 设置当前虚拟墙参数。
+```
+
+```json
 { "command": "get_virtual_wall_config" }
 ```
 
 
 ```json
 // 返回示例-长方体
-{
-  "command": "get_virtual_wall_config",
-  "form": 1,
-  "x_min_limit": 500,
-  "x_max_limit": 1000,
-  "y_min_limit": 500,
-  "y_max_limit": 1000,
-  "z_min_limit": 500,
-  "z_max_limit": 1000
-}
+```
+
+```json
+{"command":"get_virtual_wall_config","form":1,"x_min_limit":500,"x_max_limit":1000,"y_min_limit":500,"y_max_limit":1000,"z_min_limit":500,"z_max_limit":1000}
 ```
 
 ```json
 // 返回示例-球体
+```
 
-{
-  "command": "get_virtual_wall_config",
-  "form": 3,
-  "x": 500,
-  "y": 1000,
-  "z": 500,
-  "radius": 900
-}
+```json
+{"command":"get_virtual_wall_config","form":3,"x":500,"y":1000,"z":500,"radius":900}
 ```
 
 
@@ -901,19 +725,15 @@
 
 ```json
 // 设置当前虚拟墙参数。
-{ 
-  "command": "set_self_collision_enable", 
-  "set_enable": false
-}
+```
+```json
+{"command":"set_self_collision_enable","set_enable":false}
 ```
 
 **输出**
 
 ```json
-{
-    "command": "set_self_collision_enable",
-    "set_state": true
-}
+{"command":"set_self_collision_enable","set_state":true}
 ```
 
 ### 自碰撞检测 获取自碰撞安全检测使能状态`get_self_collision_enable`
@@ -938,15 +758,15 @@
 
 ```json
 // 设置当前虚拟墙参数。
+```
+
+```json
 { "command": "get_self_collision_enable" }
 ```
 
 **输出**
 
 ```json
-{
-    "command": "get_self_collision_enable",
-    "enable_state": false
-}
+{"command":"get_self_collision_enable","enable_state":false}
 ```
 
