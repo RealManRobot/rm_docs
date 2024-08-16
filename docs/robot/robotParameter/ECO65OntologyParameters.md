@@ -7,21 +7,7 @@
 
 <br>
 
-**MDH参数(改进D-H参数)：**
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表1.1 ECO65系列MDH参数</font></p>
-
-<div class="center">
+**ECO65系列MDH参数(改进D-H参数)：**
 
 |关节编号(i)|$a_{i-1}$(mm)|$\alpha_{i -1}$(°)|$d_i$(mm)|offset(°)|
 |:--|:--|:--|:--|:--|
@@ -32,7 +18,6 @@
 |   5   |  90  |   0  |  110   |    0  |
 |   6   | -90  |   0  |  $d_6$ |    0  |
 
-</div>
 
 <br>
 
@@ -45,18 +30,7 @@
 
 <br>
 
-# ECO65系列连杆动力学参数
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表2.1 ECO65系列连杆动力学参数</font></p>
+## ECO65系列连杆动力学参数
 
 |   joint_id(i)   |  1    |  2    |  3    |  4    |  5    |  6    |  -    |
 |:--   |:--    |:--    |:--    |:--    |:--    |:--    |:--    |
@@ -71,7 +45,6 @@
 | **$L_{yz}$**  | -10.516 | 4.192  | -4.827 | 0.000  | 6.408  | 0.388  | 0.888  |
 | **$L_{zz}$**  | 2611.768 | 24073.795 | 38122.090 | 1163.421 | 886.381 | 60.350 | 122.620 |
 | **备注**       |         |         |         |         |         | B       | 6F     |
-
 
 <br>
 

@@ -4,21 +4,7 @@
 
 <div align="center"> <img src="../robotParameter/doc/RML63.png" width = 500 /> </div>
 
-**MDH参数(改进D-H参数)：**
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表1.1 RML63系列MDH参数</font></p>
-
-<div class="center">
+**RML63系列MDH参数(改进D-H参数)：**
 
 |关节编号(i)|$a_{i-1}$(mm)|$\alpha_{i -1}$(°)|$d_i$(mm)|offset(°)|
 |:--|:--|:--|:--|:--|
@@ -29,7 +15,6 @@
 |   5   |   0     |   -90  |   0   |  180 |
 |   6   |   0     |   -90  | $d_6$ |  180 |
 
-</div>
 
 <br>
 
@@ -45,18 +30,7 @@
 
 
 
-# RML63系列连杆动力学参数
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表2.1 RML63系列连杆动力学参数</font></p>
+## RML63系列连杆动力学参数
 
 |   joint_id(i)     |  1      |  2      |  3      |  4       |  5      |  6      |  -      |
 |:--        |:--      |:--      |:--      |:--       |:--      |:--      |:--      |

@@ -4,23 +4,11 @@
 
 <div align="center"> <img src="../robotParameter/doc/RM75.png" width = 500 /> </div>
 
-**MDH参数(改进D-H参数)：**
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表1.1 RM75系列MDH参数</font></p>
+**RM75系列MDH参数(改进D-H参数)：**
 
 <div class="center">
 
-|关节编号(i)|$a_{i-1}$(mm)|$\alpha_{i -1}$(°)|$d_i$(mm)|offset(°)|
+|joint_id(i) |$a_{i-1}$(mm)|$\alpha_{i -1}$(°)|$d_i$(mm)|offset(°)|
 |:--|:--|:--|:--|:--|
 |   1   |   0   |   0    |  240.5 |  0  |
 |   2   |   0   |   -90  |   0    |  0  |
@@ -44,19 +32,7 @@
 
 <br>
 
-# RM75系列连杆动力学参数
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表2.1 RM75系列连杆动力学参数</font></p>
+## RM75系列连杆动力学参数
 
 |    joint_id(i)   |  1     |  2      |  3     |  4     |  5     |  6     |  7     |  -     |
 |:--    |:--     |:--      |:--     |:--     |:--     |:--     |:--     |:--     |

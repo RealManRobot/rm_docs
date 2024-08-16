@@ -7,21 +7,7 @@
 
 <br>
 
-**MDH参数(改进D-H参数)：**
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表1.1 GEN72系列MDH参数</font></p>
-
-<div class="center">
+**GEN72系列MDH参数(改进D-H参数)：**
 
 |关节编号(i)|$a_{i-1}$(mm)|$\alpha_{i -1}$(°)|$d_i$(mm)|offset(°)|
 |:--|:--|:--|:--|:--|
@@ -33,27 +19,13 @@
 |   6   |   0   |   90  |   0    |  90 |
 |   7   |   67  |   90  |   74   |  0  |
 
-</div>
-
 <br>
 
 说明: offset为机械零位与建模零位的偏差, 即`模型角度 = 关节角度 + offset`.
 
 <br>
 
-
-# GEN72系列连杆动力学参数
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<p align="center"><font face="黑体" size=2.>表2.1 GEN72系列连杆动力学参数</font></p>
+## GEN72系列连杆动力学参数
 
 |   joint_id(i)   |  1    |  2    |  3    |  4    |  5    |  6    |  7    |
 |:--   |:--    |:--    |:--    |:--    |:--    |:--    |:--    |
