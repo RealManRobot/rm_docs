@@ -58,7 +58,7 @@ rm@rm-desktop:~$ ros2 launch rm_control rm_<arm_type>_control.launch.py
 ros2 launch rm_<arm_type>_config real_moveit_demo.launch.py
 ```
 
-注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、63、eco65、75。  
+注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、63、eco65、75、gen72。  
 完成以上操作后将会出现以下界面，我们可以通过拖动控制球的方式控制机械臂运动。  
 ![image](doc/rm_moveit2_config4.png)
 

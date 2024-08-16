@@ -928,28 +928,28 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "D-H模型及参数",
+        text: "本体参数",
         collapsed: true,
         items: [
           {
-            text: "RM65系列D-H模型及参数",
-            link: "/robot/DH/RM65系列D-H参数模型及参数",
+            text: "RM65系列本体参数",
+            link: "/robot/robotParameter/RM65OntologyParameters",
           },
           {
-            text: "RM75系列D-H模型及参数",
-            link: "/robot/DH/RM75系列D-H参数模型及参数",
+            text: "RM75系列本体参数",
+            link: "/robot/robotParameter/RM75OntologyParameters",
           },
           {
-            text: "RML63系列D-H模型及参数",
-            link: "/robot/DH/RML63系列D-H参数模型及参数",
+            text: "RML63系列本体参数",
+            link: "/robot/robotParameter/RML63OntologyParameters",
           },
           {
-            text: "ECO65系列D-H模型及参数",
-            link: "/robot/DH/ECO65系列D-H参数模型及参数",
+            text: "ECO65系列本体参数",
+            link: "/robot/robotParameter/ECO65OntologyParameters",
           },
           {
-            text: "GEN72系列D-H模型及参数",
-            link: "/robot/DH/GEN72系列D-H参数模型及参数",
+            text: "GEN72系列本体参数",
+            link: "/robot/robotParameter/GEN72OntologyParameters",
           },
         ],
       },
@@ -972,12 +972,16 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "二次开发",
+            text: "二次开发包",
             link: "/robot/download/redevelopment",
           },
           {
-            text: "其他",
-            link: "/robot/download/other",
+            text: "用户手册",
+            link: "/robot/download/userManual",
+          },
+          {
+            text: "模型",
+            link: "/robot/download/model",
           },
         ],
       },

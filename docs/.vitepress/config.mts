@@ -10,7 +10,8 @@ export default defineConfig({
   markdown:{
     image:{
       lazyLoading:true
-    }
+    },
+    math:true
   },
   sitemap:{
     hostname: 'https://develop.realman-robotics.com/'

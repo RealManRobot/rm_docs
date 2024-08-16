@@ -49,7 +49,7 @@ rm_driver:
 
 * arm_ip：改参数代表机械臂当前的IP
 * tcp_port：设置TCP连接时的端口。
-* arm_type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RML_63（63系列）、RM_75（75系列）。
+* arm_type：该参数代表机械臂当前的型号，可以选择的参数有RM_65（65系列）、RM_eco65（ECO65系列）、RML_63（63系列）、RM_75（75系列）、GEN_72（G72 系列）。
 * arm_dof: 机械臂自由度设置。6为6自由度，7为7自由度。
 * udp_ip: 设置udp主动上报目标IP。
 * udp_cycle：udp主动上报周期，需要是5的倍数。
@@ -59,7 +59,7 @@ rm_driver:
 * 在工作空间目录运行colcon build指令。
 
 ```
-~/ros2_ws$ colcon build
+colcon build
 ```
 
 * 编译成功后可按如上指令进行功能包启动。
