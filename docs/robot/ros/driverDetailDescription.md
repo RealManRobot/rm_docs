@@ -424,7 +424,7 @@ rostopic echo /rm_driver/Plan_State
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
-|`state`|   `tool`   | true生效 false 不生效          |
+|`state`|   `tool`   | `true`：生效 `false`：不生效          |
 
 **使用命令示例：**
 
