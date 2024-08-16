@@ -349,6 +349,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/modbusConfig",
               },
               {
+                text: "算法接口配置",
+                link: "/robot/api/c/classes/algoInterface",
+              },
+              {
                 text: "机械臂轨迹指令",
                 link: "/robot/api/c/classes/movePlan",
               },
