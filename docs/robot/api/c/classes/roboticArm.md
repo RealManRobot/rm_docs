@@ -91,8 +91,8 @@ void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback
 
 |  参数    |   说明    |
 | :--- | :--- |
-|   LogCallback  |    日志打印回调函数。    |
-|   level  |   日志打印等级。0：debug级别；1：info级别；2：warn级别；3.error级别。    |
+|   `LogCallback`  |    日志打印回调函数。    |
+|   `level`  |   日志打印等级。0：debug级别；1：info级别；2：warn级别；3.error级别。    |
 
 - **使用示例**
   
@@ -133,8 +133,8 @@ rm_robot_handle* rm_create_robot_arm(const char * ip, int port)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   ip  |    机械臂的ip地址。    |
-|   port  |   机械臂的端口号。    |
+|   `ip`  |    机械臂的ip地址。    |
+|   `port`  |   机械臂的端口号。    |
 
 - **返回值:**
 
@@ -169,7 +169,7 @@ int rm_delete_robot_arm(rm_robot_handle * handle)
 
 |   变量    |   说明    |
 | :--- | :--- |
-|   handle  |    需要删除的机械臂句柄。    |
+|   `handle`  |    需要删除的机械臂句柄。    |
 
 - **返回值:**
 
@@ -239,8 +239,8 @@ int rm_get_arm_run_mode(rm_robot_handle * handle,int * mode)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   handle  |    机械臂控制句柄。    |
-|   mode  |    0：仿真模式；1：真实模式。    |
+|   `handle`  |    机械臂控制句柄。    |
+|   `mode`  |    0：仿真模式；1：真实模式。    |
 
 - **返回值:**
 
@@ -358,8 +358,8 @@ void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime
 
 |   参数    |   值    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   realtime_callback  |    用户自定义    |    机械臂状态信息回调函数。    |
+|   `handle`  |    用户自定义    |    机械臂控制句柄。    |
+|   `realtime_callback`  |    用户自定义    |    机械臂状态信息回调函数。    |
 
 - **使用示例**
   

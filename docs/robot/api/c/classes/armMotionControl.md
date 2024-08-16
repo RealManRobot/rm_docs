@@ -18,7 +18,7 @@ int rm_set_arm_slow_stop(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -57,7 +57,7 @@ int rm_set_arm_stop(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -96,7 +96,7 @@ int rm_set_arm_pause(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -133,7 +133,7 @@ int rm_set_arm_continue(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -172,7 +172,7 @@ int rm_set_delete_current_trajectory(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -211,7 +211,7 @@ int rm_set_arm_delete_trajectory(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -249,9 +249,9 @@ int rm_get_arm_current_trajectory(rm_robot_handle * handle,rm_arm_current_trajec
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   type  |    输入参数    |    返回的规划类型。    |
-|   data  |    输出参数    |    存放无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `type`  |    输入参数    |    返回的规划类型。    |
+|   `data`  |    输出参数    |    存放无规划和关节空间规划为当前关节1~7角度数组；笛卡尔空间规划则为当前末端位姿。    |
 
 - **返回值:**
 

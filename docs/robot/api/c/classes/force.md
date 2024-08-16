@@ -21,8 +21,8 @@ int rm_get_force_data(rm_robot_handle * handle,rm_force_data_t * data)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  data  |    输出参数    |    力传感器数据结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `data`  |    输出参数    |    力传感器数据结构体。    |
 
 - **返回值:**
 
@@ -65,7 +65,7 @@ int rm_clear_force_data(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -107,8 +107,8 @@ int rm_set_force_sensor(rm_robot_handle * handle,bool block)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   block  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `block`  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；`false`表示非阻塞模式，发送后立即返回。    |
 
 - **返回值:**
 
@@ -145,10 +145,10 @@ int rm_manual_set_force(rm_robot_handle * handle,int count,float * joint,bool bl
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   count  |    输入参数    |    点位；1~4。    |
-|   joint  |    输入参数    |    关节角度，单位：°。    |
-|   block  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；<br>`false`表示非阻塞模式，发送后立即返回。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `count`  |    输入参数    |    点位；1~4。    |
+|   `joint`  |    输入参数    |    关节角度，单位：°。    |
+|   `block`  |    输入参数    |    `true`表示阻塞模式，等待标定完成后返回；<br>`false`表示非阻塞模式，发送后立即返回。    |
 
 - **返回值:**
 
@@ -226,7 +226,7 @@ int rm_stop_set_force_sensor(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 

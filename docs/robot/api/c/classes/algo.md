@@ -19,8 +19,8 @@ void rm_algo_init_sys_data(rm_robot_arm_model_e Mode,rm_force_type_e Type)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   Mode  |    输入参数    |    机械臂型号。    |
-|   Type  |    输入参数    |    传感器型号。    |
+|   `Mode`  |    输入参数    |    机械臂型号。    |
+|   `Type`  |    输入参数    |    传感器型号。    |
 
 - **使用示例**
 
@@ -42,9 +42,9 @@ void rm_algo_set_angle(float x,float y,float z)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   x  |    输入参数    |    X轴安装角度，单位°。    |
-|   y  |    输入参数    |    Y轴安装角度，单位°。    |
-|   z  |    输入参数    |    Z轴安装角度，单位°。    |
+|   `x`  |    输入参数    |    X轴安装角度，单位°。    |
+|   `y`  |    输入参数    |    Y轴安装角度，单位°。    |
+|   `z`  |    输入参数    |    Z轴安装角度，单位°。    |
 
 - **使用示例**
   
@@ -64,9 +64,9 @@ void rm_algo_get_angle(float x,float y,float z)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   x  |    输出参数    |    X轴安装角度，单位°。    |
-|   y  |    输出参数    |    Y轴安装角度，单位°。    |
-|   z  |    输出参数    |    Z轴安装角度，单位°。    |
+|   `x`  |    输出参数    |    X轴安装角度，单位°。    |
+|   `y`  |    输出参数    |    Y轴安装角度，单位°。    |
+|   `z`  |    输出参数    |    Z轴安装角度，单位°。    |
 
 - **使用示例**
   
@@ -89,7 +89,7 @@ void rm_algo_set_workframe(const rm_frame_t *const coord_work)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   coord_work  |    输出参数    |    坐标系数据(无需设置名称)。    |
+|   `coord_work`  |    输出参数    |    坐标系数据(无需设置名称)。    |
 
 - **使用示例**
   
@@ -119,7 +119,7 @@ void rm_algo_get_curr_workframe(rm_frame_t * coord_work)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   coord_work  |    输出参数    |    当前工作坐标系(获取到的坐标系参数，不包括坐标系名称)。    |
+|   `coord_work`  |    输出参数    |    当前工作坐标系(获取到的坐标系参数，不包括坐标系名称)。    |
 
 - **使用示例**
   
@@ -142,7 +142,7 @@ void rm_algo_set_toolframe(const rm_frame_t *const coord_tool)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   coord_tool  |    输入参数    |    坐标系数据。    |
+|   `coord_tool`  |    输入参数    |    坐标系数据。    |
 
 - **使用示例**
   
@@ -176,7 +176,7 @@ void rm_algo_get_curr_toolframe(rm_frame_t * coord_tool)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   coord_tool  |    输出参数    |    当前工具坐标系。    |
+|   `coord_tool`  |    输出参数    |    当前工具坐标系。    |
 
 - **使用示例**
   
@@ -197,7 +197,7 @@ void rm_algo_set_joint_max_limit(const float *const joint_limit)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_limit  |    输出参数    |    关节最大限位角度，单位°。    |
+|   `joint_limit`  |    输出参数    |    关节最大限位角度，单位°。    |
 
 - **使用示例**
   
@@ -218,7 +218,7 @@ void rm_algo_get_joint_max_limit(float * joint_limit)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_limit  |    输出参数    |    返回关节最大限位。    |
+|   `joint_limit`  |    输出参数    |    返回关节最大限位。    |
 
 - **使用示例**
   
@@ -239,7 +239,7 @@ void rm_algo_set_joint_min_limit(const float *const joint_limit)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_limit  |    输入参数    |    最小限位角度，单位°。    |
+|   `joint_limit`  |    输入参数    |    最小限位角度，单位°。    |
 
 - **使用示例**
   
@@ -260,7 +260,7 @@ void rm_algo_get_joint_min_limit(const float *const joint_limit)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_limit  |    输出参数    |    存放返回关节最小限位。    |
+|   `joint_limit`  |    输出参数    |    存放返回关节最小限位。    |
 
 - **使用示例**
   
@@ -281,7 +281,7 @@ void rm_algo_set_joint_max_speed(const float *const joint_slim_max)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_slim_max  |    输入参数    |    最大转速（RPM），单位转/分。    |
+|   `joint_slim_max`  |    输入参数    |    最大转速（RPM），单位转/分。    |
 
 - **使用示例**
   
@@ -302,7 +302,7 @@ void rm_algo_get_joint_max_speed(float * joint_slim_max)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_slim_max  |    输出参数    |    存放返回的最大转速（RPM），单位转/分。    |
+|   `joint_slim_max`  |    输出参数    |    存放返回的最大转速（RPM），单位转/分。    |
 
 - **使用示例**
   
@@ -323,7 +323,7 @@ void rm_algo_set_joint_max_acc(const float *const joint_alim_max)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_alim_max  |    输入参数    |    最大加速度，单位RPM/s。    |
+|   `joint_alim_max`  |    输入参数    |    最大加速度，单位RPM/s。    |
 
 - **使用示例**
   
@@ -344,7 +344,7 @@ void rm_algo_get_joint_max_acc(float * joint_alim_max)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   joint_alim_max  |    输出参数    |    存放返回的最大加速度，单位RPM/s。    |
+|   `joint_alim_max`  |    输出参数    |    存放返回的最大加速度，单位RPM/s。    |
 
 - **使用示例**
   
@@ -367,9 +367,9 @@ int rm_algo_inverse_kinematics(rm_robot_handle * handle,rm_inverse_kinematics_pa
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   params  |    输入参数    |    逆解输入参数结构体。    |
-|   q_out  |    输出参数    |    输出的关节角度 单位°。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `params`  |    输入参数    |    逆解输入参数结构体。    |
+|   `q_out`  |    输出参数    |    输出的关节角度 单位°。    |
 
 - **返回值:**
 
@@ -423,8 +423,8 @@ rm_pose_t rm_algo_forward_kinematics(rm_robot_handle * handle,const float *const
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄，连接机械臂时传入机械臂控制句柄，不连接时传入NULL。    |
-|   joint  |    输入参数    |    关节角度，单位：°。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄，连接机械臂时传入机械臂控制句柄，不连接时传入NULL。    |
+|   `joint`  |    输入参数    |    关节角度，单位：°。    |
 
 - **返回值:**
 
@@ -490,7 +490,7 @@ rm_euler_t rm_algo_quaternion2euler(rm_quat_t qua)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   qua  |    输入参数    |    四元数。    |
+|   `qua`  |    输入参数    |    四元数。    |
 
 - **返回值:**
 
@@ -519,7 +519,7 @@ rm_matrix_t rm_algo_euler2matrix(rm_euler_t state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   state  |    输入参数    |    欧拉角，单位：rad。    |
+|   `state`  |    输入参数    |    欧拉角，单位：rad。    |
 
 - **返回值:**
 
@@ -551,7 +551,7 @@ rm_matrix_t rm_algo_pos2matrix(rm_pose_t state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   state  |    输入参数    |    位姿。    |
+|   `state`  |    输入参数    |    位姿。    |
 
 - **返回值:**
 
@@ -585,7 +585,7 @@ rm_pose_t rm_algo_matrix2pos(rm_matrix_t matrix)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   matrix  |    输入参数    |    旋转矩阵。    |
+|   `matrix`  |    输入参数    |    旋转矩阵。    |
 
 - **返回值:**
 
@@ -620,8 +620,8 @@ rm_pose_t rm_algo_base2workframe(rm_matrix_t matrix,rm_pose_t state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   matrix  |    输入参数    |    工作坐标系在基坐标系下的矩阵。    |
-|   state  |    输入参数    |    工具端坐标在基坐标系下位姿。    |
+|   `matrix`  |    输入参数    |    工作坐标系在基坐标系下的矩阵。    |
+|   `state`  |    输入参数    |    工具端坐标在基坐标系下位姿。    |
 
 - **返回值:**
 
@@ -662,8 +662,8 @@ rm_pose_t rm_algo_workframe2base(rm_matrix_t matrix,rm_pose_t state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   matrix  |    输入参数    |    工作坐标系在基坐标系下的矩阵。    |
-|   state  |    输入参数    |    工具端坐标在基坐标系下位姿。    |
+|   `matrix`  |    输入参数    |    工作坐标系在基坐标系下的矩阵。    |
+|   `state`  |    输入参数    |    工具端坐标在基坐标系下位姿。    |
 
 - **返回值:**
 
@@ -704,11 +704,11 @@ rm_pose_t rm_algo_RotateMove(rm_robot_handle * handle,const float *const curr_jo
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   curr_joint  |    输入参数    |    当前关节角度，单位°。    |
-|   rotate_axis  |    输入参数    |    旋转轴: 1:x轴, 2:y轴, 3:z轴。    |
-|   rotate_angle  |    输入参数    |    旋转角度: 旋转角度, 单位：°。    |
-|   choose_axis  |    输入参数    |    指定计算时使用的坐标系。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `curr_joint`  |    输入参数    |    当前关节角度，单位°。    |
+|   `rotate_axis`  |    输入参数    |    旋转轴: 1:x轴, 2:y轴, 3:z轴。    |
+|   `rotate_angle`  |    输入参数    |    旋转角度: 旋转角度, 单位：°。    |
+|   `choose_axis`  |    输入参数    |    指定计算时使用的坐标系。    |
 
 - **返回值:**
 
@@ -746,11 +746,11 @@ rm_pose_t rm_algo_cartesian_tool(rm_robot_handle * handle,const float *const cur
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   curr_joint  |    输入参数    |    当前关节角度，单位°。    |
-|   move_lengthx  |    输入参数    |    沿X轴移动长度，单位：米。    |
-|   move_lengthy  |    输入参数    |    沿Y轴移动长度，单位：米。    |
-|   move_lengthz  |    输入参数    |    沿Z轴移动长度，单位：米。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `curr_joint`  |    输入参数    |    当前关节角度，单位°。    |
+|   `move_lengthx`  |    输入参数    |    沿X轴移动长度，单位：米。    |
+|   `move_lengthy`  |    输入参数    |    沿Y轴移动长度，单位：米。    |
+|   `move_lengthz`  |    输入参数    |    沿Z轴移动长度，单位：米。    |
 
 - **返回值:**
 
@@ -778,8 +778,8 @@ rm_pose_t rm_algo_end2tool(rm_robot_handle * handle,rm_pose_t eu_end)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   eu_end  |    输入参数    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `eu_end`  |    输入参数    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
 
 - **返回值:**
 
@@ -814,8 +814,8 @@ rm_pose_t rm_algo_tool2end(rm_robot_handle * handle,rm_pose_t eu_tool)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   eu_tool  |    输入参数    |    基于工作坐标系和工具坐标系的末端位姿。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `eu_tool`  |    输入参数    |    基于工作坐标系和工具坐标系的末端位姿。    |
 
 - **返回值:**
 

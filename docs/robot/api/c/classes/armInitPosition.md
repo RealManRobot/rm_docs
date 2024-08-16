@@ -18,8 +18,8 @@ int rm_set_init_pose(rm_robot_handle * handle,float * joint)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  joint  |    输入参数    |    机械臂初始位置关节角度数组。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `joint`  |    输入参数    |    机械臂初始位置关节角度数组。    |
 
 - **返回值:**
 
@@ -62,8 +62,8 @@ int rm_get_init_pose(rm_robot_handle * handle,float * joint)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  joint  |    输出参数    |    存放机械臂初始位置关节角度数组。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `joint`  |    输出参数    |    存放机械臂初始位置关节角度数组。    |
 
 - **返回值:**
 
