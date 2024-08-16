@@ -52,7 +52,7 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|enable_state|bool|`true` 使能  false  禁使能。|
+|enable_state|`bool`|`true` 使能  false  禁使能。|
 
 - **代码示例**
 

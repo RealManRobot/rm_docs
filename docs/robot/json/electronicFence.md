@@ -672,7 +672,7 @@
 
 | 参数 | 类型 | 说明 |
 | :-- | :-- | :-- |
-|set_virtual_wall_enable|bool|true 成功 false 失败|
+|set_virtual_wall_enable|`bool`|true 成功 false 失败|
 
 - **代码示例**
 
