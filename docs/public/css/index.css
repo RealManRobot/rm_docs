@@ -268,10 +268,10 @@ img {
     color:var(--vp-c-text-1);
 }
 .vp-doc th{
-    min-width: 48px;
+    min-width: 64px;
     width:auto !important;
 }
 .vp-doc td{
-    min-width: 48px;
+    min-width: 64px;
     width:auto !important;
 }

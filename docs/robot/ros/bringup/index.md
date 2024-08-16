@@ -44,7 +44,7 @@ roslaunch rm_bringup rm_65_robot.launch
 
 ![alt text](image.png)
 
-实际该launch文件启动的为moveit控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看《rm_moveit_config详解》相关内容。
+实际该launch文件启动的为moveit控制真实机械臂的功能下面就可以使用控制球规划控制机械臂运动，详细可查看[rm_moveit_config详解](../moveitConfig/index.md)相关内容。
 
 ## 3.rm_bringup功能包架构说明
 
@@ -69,4 +69,4 @@ roslaunch rm_bringup rm_65_robot.launch
 
 ## 4.rm_bringup话题说明
 
-该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit相关话题可查看[rm_moveit_config详解](/docs/robot/ros/moveitConfig/index.md)相关内容。
+该功能包当前并没有本身的话题，主要为调用其他功能包的话题实现，关于moveit相关话题可查看[rm_moveit_config详解](../moveitConfig/index.md)相关内容。
