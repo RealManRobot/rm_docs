@@ -87,22 +87,22 @@ Windows 系统通过网口与机械臂建立有线连接。
   （1）右击电脑右下方 WiFi 按钮打开“网络和 Internet 设置”：
   >注：win11 点击后须先点击<高级网络设置，再点击更多网络适配器选项后进入以太网选项。
 
-    ![alt text](./操作截图/111.png)
+    ![alt text](./operation/111.png)
     （2）单击“以太网-->更改适配器选项”。点击“以太网”下拉页面，在下拉页面中选择更多适配器选项。
-    ![alt text](./操作截图/222.png)
-    ![alt text](./操作截图/333.png)
+    ![alt text](./operation/222.png)
+    ![alt text](./operation/333.png)
     （3）在弹出的对话框中，第一步选中“Internet协议版本4”，第二步单击“属性”按钮。
-    ![alt text](./操作截图/444.png)
+    ![alt text](./operation/444.png)
     （4）按下图配置网络IP地址，配置完成后点击“确定”按钮，即可完成本地网络设置。
-    ![alt text](./操作截图/555.png)
+    ![alt text](./operation/555.png)
 
 - 打开示教器
   （1）打开浏览器，输入网址`192.168.1.18`。
   ![alt text](image-3.png)
   （2）输入账号：`user`，密码：`123`，点击登录。
-  ![alt text](./操作截图/666.png)
+  ![alt text](./operation/666.png)
   （3）打开机械臂示教界面。
-  ![alt text](./操作截图/777.png)
+  ![alt text](./operation/777.png)
 
 **无线连接：**
 
@@ -116,7 +116,7 @@ Windows 系统通过网口与机械臂建立有线连接。
 - 打开示教器
   （1）打开浏览器，若使用无线的 AP 模式连接，则网址输入`192.168.33.80`。
   （2）输入账号：`user`，密码：`123`，点击登录。
-  ![alt text](./操作截图/666.png)
+  ![alt text](./operation/666.png)
   （3）打开机械臂示教界面。
 
 ## 5.示教器界面说明
