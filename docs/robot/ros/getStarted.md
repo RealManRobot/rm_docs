@@ -73,6 +73,9 @@ source ~/ros_ws/devel/setup.bash
 
 ```ros
 source ~/ros_ws/install/setup.bash
+```
+
+```ros
 roslaunch rm_control rm_<arm_type>_control.launch
 ```
 
@@ -80,6 +83,9 @@ roslaunch rm_control rm_<arm_type>_control.launch
 
 ```ros
 source ~/ros_ws/install/setup.bash
+```
+
+```ros
 roslaunch rm_bringup rm_<arm_type>_robot.launch
 ```
 
