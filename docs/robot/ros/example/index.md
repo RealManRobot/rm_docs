@@ -61,7 +61,7 @@ roslaunch rm_driver rm_65_driver.launch
 节点启动成功后，需要执行如下指令运行我们更换工作坐标系的节点。
 
 ```
-rosrun rm_demo api_ChangeToolFrame_demo
+rosrun rm_demo api_ChangeToolName_demo
 ```
 
 弹出以下指令代表更换成功。
