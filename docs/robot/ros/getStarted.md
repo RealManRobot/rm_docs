@@ -76,7 +76,7 @@ source ~/ros_ws/install/setup.bash
 roslaunch rm_control rm_<arm_type>_control.launch
 ```
 
-<arm_type>需要使用65、75、eco65、63字符进行代替，如使用RM65机械臂时，命令如下。
+<arm_type>需要使用65、75、eco65、63、gen72字符进行代替，如使用RM65机械臂时，命令如下。
 
 ```ros
 source ~/ros_ws/install/setup.bash
