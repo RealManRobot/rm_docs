@@ -8,14 +8,14 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|set_self_collision_enable|`string` |设置自碰撞安全检测使能状态。|
+|`set_self_collision_enable`|`string` |设置自碰撞安全检测使能状态。|
 
 
 - **输出参数**
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|set_state|`bool`|true 成功  false  失败。|
+|`set_state`|`bool`|true 成功  false  失败。|
 
 - **代码示例**
 
@@ -40,14 +40,14 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|get_self_collision_enable|`string` |获取自碰撞安全检测使能状态。|
+|`get_self_collision_enable`|`string` |获取自碰撞安全检测使能状态。|
 
 
 - **输出参数**
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|enable_state|`bool`|`true` 使能  false  禁使能。|
+|`enable_state`|`bool`|`true` 使能  false  禁使能。|
 
 - **代码示例**
 

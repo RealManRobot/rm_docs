@@ -10,28 +10,28 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|state|`string`|realtime_arm_joint_state 实时机械臂状态上报。|
-|arm_err|`int`|机械臂错误码。|
-|sys_err|`int`|系统错误码。|
-|joint_status|`int`|当前关节状态。|
-|joint_current|`int`|当前关节电流，精度 0.001mA。|
-|joint_en_flag|`int`|当前关节使能状态 ，1 为上使能，0 为掉使能。|
-|joint_err_code|`int`|当前关节错误码。|
-|joint_position|`int`|当前关节角度，精度 0.001°。|
-|joint_temperature|`int`|当前关节温度，精度 0.001℃。|
-|joint_voltage|`int`|当前关节电压，精度 0.001V。|
-|joint_speed|`int`|当前关节速度，精度0.01RPM。|
-|waypoint|`object`|当前路点信息。|
-|position|`int`|当前路点位置，精度 0.000001M。|
-|euler|`object`|当前路点姿态欧拉角，精度 0.001rad。|
-|quat|`object`|当前路点四元数，精度 0.000001。|
-|six_force_sensor|`object`|六维力数据（六维力版本支持）。|
-|one_force_sensor|`object`|一维力数据（一维力版本支持）。|
-|force|`object`|当前力传感器原始数据 0.001N 或 0.001Nm。|
-|zero_force|`object`|当前力传感器系统外受力数据 0.001N 或 0.001Nm。|
-|coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。|
-|lift_state|`int`|升降关节数据。包含height：当前升降机构高度，单位：mm，精度：1mm；pos：当前角度  精度 0.001°；current：当前升降驱动电流，单位：mA，精度：1mA；err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。|
-|expand_state|`int`|扩展关节相关数据。包含pos：当前角度，精度 0.001°；current：当前升降驱动电流，单位：mA，精度：1mA；err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。|
+|`state`|`string`|realtime_arm_joint_state 实时机械臂状态上报。|
+|`arm_err`|`int`|机械臂错误码。|
+|`sys_err`|`int`|系统错误码。|
+|`joint_status`|`int`|当前关节状态。|
+|`joint_current`|`int`|当前关节电流，精度 0.001mA。|
+|`joint_en_flag`|`int`|当前关节使能状态 ，1 为上使能，0 为掉使能。|
+|`joint_err_code`|`int`|当前关节错误码。|
+|`joint_position`|`int`|当前关节角度，精度 0.001°。|
+|`joint_temperature`|`int`|当前关节温度，精度 0.001℃。|
+|`joint_voltage`|`int`|当前关节电压，精度 0.001V。|
+|`joint_speed`|`int`|当前关节速度，精度0.01RPM。|
+|`waypoint`|`object`|当前路点信息。|
+|`position`|`int`|当前路点位置，精度 0.000001M。|
+|`euler`|`object`|当前路点姿态欧拉角，精度 0.001rad。|
+|`quat`|`object`|当前路点四元数，精度 0.000001。|
+|`six_force_sensor`|`object`|六维力数据（六维力版本支持）。|
+|`one_force_sensor`|`object`|一维力数据（一维力版本支持）。|
+|`force`|`object`|当前力传感器原始数据 0.001N 或 0.001Nm。|
+|`zero_force`|`object`|当前力传感器系统外受力数据 0.001N 或 0.001Nm。|
+|`coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。|
+|`lift_state`|`int`|升降关节数据。包含height：当前升降机构高度，单位：mm，精度：1mm；pos：当前角度  精度 0.001°；current：当前升降驱动电流，单位：mA，精度：1mA；err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。|
+|`expand_state`|`int`|扩展关节相关数据。包含pos：当前角度，精度 0.001°；current：当前升降驱动电流，单位：mA，精度：1mA；err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。|
 
 - **代码示例**
 
@@ -62,12 +62,12 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|port|`int`|设置广播的端口号。|
-|cycle|`int`|设置广播周期，单位为 5ms。|
-|enable|`bool`|设置使能，是否使能主动上报。|
-|force_coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
-|ip|`string`|自定义的上报目标 IP 地址。|
-|custom|`int`| 包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息。|
+|`port`|`int`|设置广播的端口号。|
+|`cycle`|`int`|设置广播周期，单位为 5ms。|
+|`enable`|`bool`|设置使能，是否使能主动上报。|
+|`force_coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
+|`ip`|`string`|自定义的上报目标 IP 地址。|
+|`custom`|`int`| 包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息。|
 
 - **代码示例**
 
@@ -92,19 +92,19 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|set_realtime_push|   `string`   |   设置 UDP 机械臂状态主动上报配置。     |
-|port|`int`|设置广播的端口号。|
-|cycle|`int`|设置广播周期，单位为5ms，如参数为1则表示5ms，参数为2则表示10ms。|
-|enable|`bool`|设置使能，是否使能主动上报。|
-|force_coordinate|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
-|ip|`string`|自定义的上报目标 IP 地址。|
-|custom|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）。|
+|`set_realtime_push`|   `string`   |   设置 UDP 机械臂状态主动上报配置。     |
+|`port`|`int`|设置广播的端口号。|
+|`cycle`|`int`|设置广播周期，单位为5ms，如参数为1则表示5ms，参数为2则表示10ms。|
+|`enable`|`bool`|设置使能，是否使能主动上报。|
+|`force_coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
+|`ip`|`string`|自定义的上报目标 IP 地址。|
+|`custom`|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）。|
 
 - **输出参数**
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|set_realtime_push|`bool`|true 成功  false  失败。|
+|`set_realtime_push`|`bool`|true 成功  false  失败。|
 
 
 - **代码示例**
