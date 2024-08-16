@@ -32,12 +32,10 @@
 pip install Robotic_Arm
 ```
 
-或者下载（示例，暂未有下载地址）：
+或者本地下载二次开发包：
 
 ```bash
-git clone https://github.com/your_repository/mechanical_arm_sdk.git
-cd mechanical_arm_sdk
-python setup.py install
+git clone https://github.com/RealManRobot/RM_API2.git
 ```
 
 ### 使用
@@ -71,4 +69,4 @@ else:
 ## 5.技术支持与社区
 
 - **示例与文档**：[API（Python）演示](/demo/python/simpleProcess/)
-- **SDK与库**: [Python SDK](wwwwwwwwww)
+- **SDK与库**: [Python SDK](https://github.com/RealManRobot/RM_API2.git)

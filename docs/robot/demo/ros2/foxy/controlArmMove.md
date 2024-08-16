@@ -1,4 +1,4 @@
-# <p class="hidden">Demo演示(ROS2)：</p>机械臂运动控制`ARM_MOVE_DEMO`
+# <p class="hidden">Demo演示(ROS2)：</p>机械臂运动控制示例`Arm_Move_Demo`
 
 
 ## 1.项目介绍
@@ -213,6 +213,4 @@
     this->movec_publisher_->publish(moveC_TargetPose);
     ```
 
-## 7.许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

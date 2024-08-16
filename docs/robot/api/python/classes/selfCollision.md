@@ -4,7 +4,7 @@
 
 > **注意**</br>以上自碰撞安全检测功能目前只在仿真模式下生效，用于进行预演轨迹与轨迹优化。
 
-## 设置自碰撞安全检测使能状态`rm_set_self_collision_enable()`
+## 设置自碰撞安全检测使能`rm_set_self_collision_enable()`
 
 - **方法原型：**
 
@@ -16,7 +16,7 @@ rm_set_self_collision_enable(self, enable: bool) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| enable      | `bool` | True代表使能，False代表禁使能。                    |
+| `enable`      | `bool` | True代表使能，False代表禁使能。                    |
 
 - **返回值:**
 函数执行的状态码：
@@ -46,7 +46,7 @@ print(arm.rm_set_self_collision_enable(True))
 arm.rm_delete_robot_arm()
 ```
 
-## 获取自碰撞安全检测使能状态`rm_get_self_collision_enable()`
+## 获取自碰撞安全检测使能`rm_get_self_collision_enable()`
 
 - **方法原型：**
 
@@ -54,8 +54,8 @@ arm.rm_delete_robot_arm()
 rm_get_self_collision_enable(self) -> tuple[int, bool]:
 ```
 
-- **返回值:** 
-tuple[int,bool]: 包含两个元素的元组
+- **返回值:**
+`tuple[int,bool]`: 包含两个元素的元组
 
 1. int: 函数执行的状态码
 

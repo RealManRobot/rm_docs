@@ -1,4 +1,4 @@
-# <p class="hidden">Python: </p>力位混合控制补偿配置`ForcePositionControl`
+# <p class="hidden">Python: </p>透传力位混合控制补偿配置`ForcePositionControl`
 
 可用于设置透传力位混合控制补偿等。下面是透传力位混合控制补偿`ForcePositionControl`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
@@ -74,7 +74,7 @@ print(arm.rm_stop_force_position_move())
 arm.rm_delete_robot_arm()
 ```
 
-## 透传力位混合补偿-角度方式`rm_force_position_move_joint()`
+## 透传力位混合角度补偿`rm_force_position_move_joint()`
 
 - **方法原型：**
 
@@ -123,7 +123,7 @@ print(arm.rm_force_position_move_joint([0, 0, 0, 0, 0, 0], 1, 1, 2, 2, True))
 arm.rm_delete_robot_arm()
 ```
 
-## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`
+## 透传力位混合位姿补偿`rm_force_position_move_pose()`
 
 - **方法原型：**
 
@@ -135,12 +135,12 @@ rm_force_position_move_pose(self, pose: list[float], sensor: int, mode: int, dir
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| pose      | `list[float]` | 当前坐标系下目标位姿列表，支持欧拉角及四元数方式表示姿态，若列表长度为6，则认为使用欧拉角方式表示；列表长度为7则认为使用四元数表示。       |
-| sensor | `int` | 所使用传感器类型，0-一维力，1-六维力。 |
-| mode | `int` | 模式，0-沿基坐标系，1-沿工具端坐标系。 |
-| dir | `int`|力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，其中一维力类型时默认方向为Z方向。 |
-| force | `float` | 力的大小 单位N。 |
-| follow | `bool` | 是否高跟随。 |
+| `pose`      | `list[float]` | 当前坐标系下目标位姿列表，支持欧拉角及四元数方式表示姿态，若列表长度为6，则认为使用欧拉角方式表示；列表长度为7则认为使用四元数表示。       |
+| `sensor` | `int` | 所使用传感器类型，0-一维力，1-六维力。 |
+| `mode` | `int` | 模式，0-沿基坐标系，1-沿工具端坐标系。 |
+| `dir` | `int`|力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，其中一维力类型时默认方向为Z方向。 |
+| `force` | `float` | 力的大小 单位N。 |
+| `follow` | `bool` | 是否高跟随。 |
 
 - **返回值:** </br>
 函数执行的状态码：

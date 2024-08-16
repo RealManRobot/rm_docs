@@ -16,9 +16,9 @@ int rm_set_tool_DO_state(rm_robot_handle * handle,int io_num,int state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  io_num  |    输入参数    |    IO 端口号，范围：1~2。    |
-|  state  |    输入参数    |    IO 状态，1-输出高，0-输出低。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `io_num`  |    输入参数    |    IO 端口号，范围：1~2。    |
+|  `state`  |    输入参数    |    IO 状态，1-输出高，0-输出低。    |
 
 - **返回值:**
 
@@ -53,9 +53,9 @@ int rm_set_tool_IO_mode(rm_robot_handle * handle,int io_num,int io_mode)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  io_num  |    输入参数    |    IO 端口号，范围：1~2。    |
-|  io_mode  |    输入参数    |    模式，0-输入状态，1-输出状态。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `io_num`  |    输入参数    |    IO 端口号，范围：1~2。    |
+|  `io_mode`  |    输入参数    |    模式，0-输入状态，1-输出状态。    |
 
 - **返回值:**
 
@@ -90,9 +90,9 @@ int rm_get_tool_IO_state(rm_robot_handle * handle,int * mode,int * state)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  mode  |    输出参数    |    0-输入模式，1-输出模式。    |
-|  state  |    输出参数    |    0-低，1-高。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `mode`  |    输出参数    |    0-输入模式，1-输出模式。    |
+|  `state`  |    输出参数    |    0-低，1-高。    |
 
 - **返回值:**
 
@@ -127,8 +127,8 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  voltage_type  |    输出参数    |    电源输出类型，0：0V，2：12V，3：24V。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `voltage_type`  |    输出参数    |    电源输出类型，0：0V，2：12V，3：24V。    |
 
 - **返回值:**
 
@@ -140,12 +140,10 @@ iint rm_set_tool_voltage(rm_robot_handle * handle,int voltage_type)
 |  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
 |  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
 
->注意：电源输出设置为 5V 时，工具端的IO 暂不支持输入输出功能。
-
 - **使用示例**
   
 ```C
-//设置工具端电源输出类型5V
+//设置工具端电源输出类型
 int type = 1;
 ret = rm_set_tool_voltage(robot_handle, type);
 ```
@@ -164,8 +162,8 @@ iint rm_get_tool_voltage(rm_robot_handle * handle,int voltage_type)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  voltage_type  |    输出参数    |    存放电源输出类型，0：0V，2：12V，3：24V。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `voltage_type`  |    输出参数    |    存放电源输出类型，0：0V，2：12V，3：24V。    |
 
 - **返回值:**
 

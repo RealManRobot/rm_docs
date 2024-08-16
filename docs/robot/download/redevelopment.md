@@ -1,4 +1,4 @@
-# <p class="hidden">相关下载：</p>二次开发
+# <p class="hidden">相关下载：</p>二次开发包
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择
 
@@ -7,9 +7,9 @@
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
-            <h2>API 2</h2>
-            <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs" target="_blank">JSON协议（github）</a></p>
+            <h2>JSON</h2>
+            <p>睿尔曼基于json通信协议提供了下载安装包</p>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/tree/user_public/docs/robot/json" target="_blank">JSON协议（github）</a></p>
         </div>
         <div class="wrap-item2">
             <p>版本号：V3.7.2</p>
@@ -35,7 +35,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>API</h2>
-            <p>API I睿尔曼将继续为您更新维护至2024年年底。2025年后，您可以继续使用API，但睿尔曼将停止维护不再升级。</p>
+            <p>API 睿尔曼将继续为您更新维护至2024年年底。2025年后，您可以继续使用API，但睿尔曼将停止维护不再升级。</p>
             <p>下载地址： <a href="https://github.com/RealManRobot/RM_API" target="_blank">API（github）</a></p>
         </div>
         <div class="wrap-item2">

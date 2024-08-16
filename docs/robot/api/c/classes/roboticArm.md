@@ -91,8 +91,8 @@ void rm_set_log_call_back(void(*)(const char *message, va_list args) LogCallback
 
 |  参数    |   说明    |
 | :--- | :--- |
-|   LogCallback  |    日志打印回调函数。    |
-|   level  |   日志打印等级。0：debug级别；1：info级别；2：warn级别；3.error级别。    |
+|   `LogCallback`  |    日志打印回调函数。    |
+|   `level`  |   日志打印等级。0：debug级别；1：info级别；2：warn级别；3.error级别。    |
 
 - **使用示例**
   
@@ -133,8 +133,8 @@ rm_robot_handle* rm_create_robot_arm(const char * ip, int port)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   ip  |    机械臂的ip地址。    |
-|   port  |   机械臂的端口号。    |
+|   `ip`  |    机械臂的ip地址。    |
+|   `port`  |   机械臂的端口号。    |
 
 - **返回值:**
 
@@ -169,7 +169,7 @@ int rm_delete_robot_arm(rm_robot_handle * handle)
 
 |   变量    |   说明    |
 | :--- | :--- |
-|   handle  |    需要删除的机械臂句柄。    |
+|   `handle`  |    需要删除的机械臂句柄。    |
 
 - **返回值:**
 
@@ -198,8 +198,8 @@ int rm_set_arm_run_mode(rm_robot_handle * handle,int mode)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   handle  |    机械臂控制句柄。    |
-|   mode  |    0：仿真模式；1：真实模式。    |
+|   `handle`  |    机械臂控制句柄。    |
+|   `mode`  |    0：仿真模式；1：真实模式。    |
 
 - **返回值:**
 
@@ -239,8 +239,8 @@ int rm_get_arm_run_mode(rm_robot_handle * handle,int * mode)
 
 |   参数    |   说明    |
 | :--- | :--- |
-|   handle  |    机械臂控制句柄。    |
-|   mode  |    0：仿真模式；1：真实模式。    |
+|   `handle`  |    机械臂控制句柄。    |
+|   `mode`  |    0：仿真模式；1：真实模式。    |
 
 - **返回值:**
 
@@ -280,8 +280,8 @@ int rm_get_robot_info(rm_robot_handle * handle,rm_robot_info_t * robot_info)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂控制句柄。    |
-|   robot_info  |    输入参数    |    存放机械臂基本信息结构体。    |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `robot_info`  |    输入参数    |    存放机械臂基本信息结构体。    |
 
 
 - **返回值:**
@@ -310,7 +310,7 @@ printf("Robot info : %d %d %d \n", robot_info.arm_dof,robot_info.arm_model,robot
 void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。<br>方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`。<br>跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。*
 
 >注意：单线程无法使用该函数获取到位信息。
 
@@ -318,8 +318,8 @@ void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 
 |   参数    |   值    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   event_callback  |    用户自定义    |    机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。    |
+|   `handle`  |    用户自定义    |    机械臂控制句柄。    |
+|   `event_callback`  |    用户自定义    |    机械臂事件回调函数，该回调函数接收rm_event_push_data_t类型的数据作为参数，没有返回值。    |
 
 - **使用示例**
   
@@ -352,14 +352,14 @@ rm_get_arm_event_call_back(callback_event);
 void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。<br>方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`。<br>跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。*
 
 - **参数说明:**
 
 |   参数    |   值    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    用户自定义    |    机械臂控制句柄。    |
-|   realtime_callback  |    用户自定义    |    机械臂状态信息回调函数。    |
+|   `handle`  |    用户自定义    |    机械臂控制句柄。    |
+|   `realtime_callback`  |    用户自定义    |    机械臂状态信息回调函数。    |
 
 - **使用示例**
   

@@ -33,8 +33,8 @@
   
 - **动态链接库（DLLs）**：包含了控制机械臂所需的函数和接口。用户需要在项目中正确配置这些DLLs的路径及版本，以便编译器能够找到并链接它们。包含以下版本：
 
-  - `32bit`：对应Windows 32位编译器（例如MSVC2017 32bit）使用的库，分为`release/debug`版本
-  - `64bit`：对应Windows 64位编译器（例如MSVC2017 64bit）使用的库，分为`release/debug`版本
+  - `32bit`：对应Windows 32位编译器（例如MSVC2017 32bit）使用的库
+  - `64bit`：对应Windows 64位编译器（例如MSVC2017 64bit）使用的库
 
 ### 3.2 Linux 环境使用说明
 
@@ -51,14 +51,14 @@
 
 - **头文件**：与Windows 头文件相同，详见Windows环境的开发包说明
 - **共享库（.so 文件）**：包含了控制机械臂所需的函数和接口。用户需要确保这些库文件在编译和运行时都能被系统找到。包含以下版本的库：
-  - `linux_x86`：包含`release/debug`版本
-  - `linux_arm`：包含`release/debug`版本
+  - `linux_x86_release`版本
+  - `linux_arm_release`版本
 
 ## 4.使用示例-MSVC
 
 >支持MSVC2015及以上版本
 
-本项目是一个使用Microsoft Visual Studio开发的C/C++项目，旨在演示如何将睿尔曼C语言版本的二次开发包集成到Visual Studio项目中。本Readme文档将指导用户如何配置环境、导入库文件、设置项目属性以及编译和运行项目。
+本项目是一个使用Microsoft Visual Studio开发的C/C++项目，旨在演示如何将睿尔曼C语言版本的二次开发包集成到Visual Studio项目中。<br>本Readme文档将指导用户如何配置环境、导入库文件、设置项目属性以及编译和运行项目。
 
 ### 4.1代码结构
 
@@ -195,7 +195,7 @@ int main(int argc,char **argv)
 
 ## 5.使用示例-Qt
 
-本项目是一个跨平台的Qt应用程序，支持Linux和Windows操作系统。项目旨在演示如何使用Qt的qmake构建系统来导入并使用睿尔曼C语言版本二次开发包完成机械臂的连接、获取机械臂版本、机械臂运动以及断开连接。本Readme文档将说明使用环境要求、并指导用户如何新建項目-->导入库-->调用接口-->构建和运行项目。
+本项目是一个跨平台的Qt应用程序，支持Linux和Windows操作系统。<br>项目旨在演示如何使用Qt的qmake构建系统来导入并使用睿尔曼C语言版本二次开发包完成机械臂的连接、获取机械臂版本、机械臂运动以及断开连接。本Readme文档将说明使用环境要求、并指导用户如何新建項目-->导入库-->调用接口-->构建和运行项目。
 
 ### 5.2代码结构
 
@@ -285,4 +285,4 @@ RMDemo_QtExample_C
 ## 6.支持渠道
 
 - **示例与文档**：[API C/C++demo](/demo/c/simpleProcess/)。
-- **SDK与库**：[C/C++ SDK包下载](wwwwwwwwwwwww)。
+- **SDK与库**：[C/C++ SDK包下载](https://github.com/RealManRobot/RM_API2.git)。

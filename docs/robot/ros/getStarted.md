@@ -7,7 +7,7 @@
 * 基于的Ubuntu版本为18.04或20.04。
 * ROS版本支持melodic和noetic。
 
-功能包下载地址：[wwwwwwwww]()
+功能包下载地址：[rm_robot](https://github.com/RealManRobot/rm_robot/)
 
 ---
 
@@ -67,30 +67,25 @@ source ~/ros_ws/devel/setup.bash
 
 以上为当前的十个功能包，每个功能包都有其独特的作用，详情请参考rm_doc功能包下的doc文件夹中的文档进行详细了解。
 
-### 2.2运行虚拟机械臂
-
-使用如下指令可以启动gazebo显示仿真机械臂，并同时启动moveit进行仿真机械臂的规划操控。
-
-```ros
-source ~/ros_ws/install/setup.bash
-roslaunch rm_gazebo arm_<arm_type>_bringup_moveit.launch
-```
-
-启动成功后即可使用moveit进行虚拟机械臂的控制。
-
-### 2.3控制真实机械臂
+### 2.2控制真实机械臂
 
 使用如下指令可以启动机械臂硬件驱动，并同时启动moveit进行机械臂的规划操控。
 
 ```ros
 source ~/ros_ws/install/setup.bash
+```
+
+```ros
 roslaunch rm_control rm_<arm_type>_control.launch
 ```
 
-<arm_type>需要使用65、75、eco65、63字符进行代替，如使用RM65机械臂时，命令如下。
+<arm_type>需要使用65、75、eco65、63、gen72字符进行代替，如使用RM65机械臂时，命令如下。
 
 ```ros
 source ~/ros_ws/install/setup.bash
+```
+
+```ros
 roslaunch rm_bringup rm_<arm_type>_robot.launch
 ```
 

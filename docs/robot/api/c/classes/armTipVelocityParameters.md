@@ -1,8 +1,8 @@
-# <p class="hidden">C、C++: </p>机械臂末端运动参数配置`armTipVelocityParameters`
+# <p class="hidden">C、C++: </p>末端运动参数配置`armTipVelocityParameters`
 
 机械臂末端运动参数设置及查询，包含线速度设置与查询、角速度设置与查询、角加速度设置与查询、碰撞等级设置与查询等。
 
-## 设置机械臂末端最大线速度`rm_set_arm_max_line_speed()`
+## 设置末端最大线速度`rm_set_arm_max_line_speed()`
 
 - **方法原型：**
 
@@ -16,8 +16,8 @@ int rm_set_arm_max_line_speed(rm_robot_handle * handle,float speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输入参数    |    末端最大线速度，单位m/s。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输入参数    |    末端最大线速度，单位m/s。    |
 
 - **返回值:**
 
@@ -37,7 +37,7 @@ float speed = 0.1;
 ret = rm_set_arm_max_line_speed(robot_handle,speed);
 ```
 
-## 设置机械臂末端最大线加速度`rm_set_arm_max_line_acc()`
+## 设置末端最大线加速度`rm_set_arm_max_line_acc()`
 
 - **方法原型：**
 
@@ -51,8 +51,8 @@ int rm_set_arm_max_line_acc(rm_robot_handle * handle,float acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  acc  |    输入参数    |    末端最大线加速度，单位m/s^2。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `acc`  |    输入参数    |    末端最大线加速度，单位m/s^2。    |
 
 - **返回值:**
 
@@ -72,7 +72,7 @@ float acc = 2;
 ret = rm_set_arm_max_line_acc(robot_handle,acc);
 ```
 
-## 设置机械臂末端最大角速度`rm_set_arm_max_angular_speed()`
+## 设置末端最大角速度`rm_set_arm_max_angular_speed()`
 
 - **方法原型：**
 
@@ -86,8 +86,8 @@ int rm_set_arm_max_angular_speed(rm_robot_handle * handle,float speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输入参数    |    末端最大角速度，单位rad/s。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输入参数    |    末端最大角速度，单位rad/s。    |
 
 - **返回值:**
 
@@ -107,7 +107,7 @@ float speed = 0.2;
 ret=rm_set_arm_max_angular_speed(robot_handle,speed);
 ```
 
-## 设置机械臂末端最大角加速度`rm_set_arm_max_angular_acc()`
+## 设置末端最大角加速度`rm_set_arm_max_angular_acc()`
 
 - **方法原型：**
 
@@ -121,8 +121,8 @@ int rm_set_arm_max_angular_acc(rm_robot_handle * handle,float acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  acc  |    输入参数    |    末端最大角加速度，单位rad/s^2。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `acc`  |    输入参数    |    末端最大角加速度，单位rad/s^2。    |
 
 - **返回值:**
 
@@ -142,7 +142,7 @@ float acc = 4;
 ret = rm_set_arm_max_angular_acc(robot_handle,acc);
 ```
 
-## 设置机械臂末端参数为默认值`rm_set_arm_tcp_init()`
+## 设置末端参数为默认值`rm_set_arm_tcp_init()`
 
 - **方法原型：**
 
@@ -156,7 +156,7 @@ int rm_set_arm_tcp_init(rm_robot_handle * handle)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
 
 - **返回值:**
 
@@ -177,7 +177,7 @@ int rm_set_arm_tcp_init(rm_robot_handle * handle)
 ret = rm_set_arm_tcp_init(robot_handle);
 ```
 
-## 设置机械臂动力学碰撞检测等级`rm_set_collision_state()`
+## 设置动力学碰撞检测等级`rm_set_collision_state()`
 
 - **方法原型：**
 
@@ -191,8 +191,8 @@ int rm_set_collision_state(rm_robot_handle * handle,int collision_stage)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  collision_stage  |    输入参数    |    等级：0~8，0-无碰撞检测，8-碰撞检测最灵敏。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `collision_stage`  |    输入参数    |    等级：0~8，0-无碰撞检测，8-碰撞检测最灵敏。    |
 
 - **返回值:**
 
@@ -226,8 +226,8 @@ int rm_get_collision_stage(rm_robot_handle * handle,int * collision_stage)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  collision_stage  |    输出参数    |    存放返回的碰撞等级值的变量，数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `collision_stage`  |    输出参数    |    存放返回的碰撞等级值的变量，<br>数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
 
 - **返回值:**
 
@@ -247,7 +247,7 @@ int stage = -1;
 ret = rm_get_collision_stage(robot_handle,&stage);
 ```
 
-## 获取机械臂末端最大线速度`rm_get_arm_max_line_speed()`
+## 获取末端最大线速度`rm_get_arm_max_line_speed()`
 
 - **方法原型：**
 
@@ -261,8 +261,8 @@ int rm_get_arm_max_line_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输出参数    |    存放返回的末端最大线速度值的变量，单位m/s。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输出参数    |    存放返回的末端最大线速度值的变量，单位m/s。    |
 
 - **返回值:**
 
@@ -282,7 +282,7 @@ float speed = 0;
 ret = rm_get_arm_max_line_speed(robot_handle,&speed);
 ```
 
-## 获取机械臂末端最大线加速度`rm_get_arm_max_line_acc()`
+## 获取末端最大线加速度`rm_get_arm_max_line_acc()`
 
 - **方法原型：**
 
@@ -296,8 +296,8 @@ int rm_get_arm_max_line_acc(rm_robot_handle * handle,float * acc)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  acc  |    输出参数    |    存放返回的末端最大线加速度值的变量，单位m/s^2。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `acc`  |    输出参数    |    存放返回的末端最大线加速度值的变量，单位m/s^2。    |
 
 - **返回值:**
 
@@ -317,7 +317,7 @@ float acc = 0;
 ret = rm_get_arm_max_line_acc(robot_handle,&acc);      
 ```
 
-## 获取机械臂末端最大角速度`rm_get_arm_max_angular_speed()`
+## 获取末端最大角速度`rm_get_arm_max_angular_speed()`
 
 - **方法原型：**
 
@@ -331,8 +331,8 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  speed  |    输出参数    |    存放返回的末端末端最大角速度值的变量，单位rad/s。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `speed`  |    输出参数    |    存放返回的末端末端最大角速度值的变量，单位rad/s。    |
 
 - **返回值:**
 
@@ -352,7 +352,7 @@ float speed = 0;
 ret = rm_get_arm_max_angular_speed(robot_handle,&speed);
 ```
 
-## 获取机械臂末端最大角加速度`rm_get_arm_max_angular_acc()`
+## 获取末端最大角加速度`rm_get_arm_max_angular_acc()`
 
 - **方法原型：**
 
@@ -366,8 +366,8 @@ int rm_get_arm_max_angular_speed(rm_robot_handle * handle,float * speed)
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|  acc  |    输出参数    |    存放返回的末端最大角加速度值的变量，单位rad/s^2。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `acc`  |    输出参数    |    存放返回的末端最大角加速度值的变量，单位rad/s^2。    |
 
 - **返回值:**
 

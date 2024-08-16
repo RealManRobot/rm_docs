@@ -1,4 +1,4 @@
-# <p class="hidden">Demo演示(ROS)：</p>获取机械臂状态`GET_ARM_STATE_DEMO`
+# <p class="hidden">Demo演示(ROS)：</p>获取机械臂状态示例`Get_Arm_State_Demo`
 
 ## 1.项目介绍
 
@@ -211,6 +211,4 @@
     test_Get_Arm_Six_Force_pub.publish(empty_value);
     ```
 
-## 7. 许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

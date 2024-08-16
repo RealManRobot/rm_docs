@@ -12,14 +12,14 @@ rm_description功能包为显示机器人模型和TF变换的功能包，通过�
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_description功能包。  
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_description rm_<arm_type>_display.launch.py
+ros2 launch rm_description rm_<arm_type>_display.launch.py
 ```
 
 在实际使用时需要将以上的`<arm_type>`更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
 例如65机械臂的启动命令：
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_description rm_65_display.launch.py
+ros2 launch rm_description rm_65_display.launch.py
 ```
 
 节点启动成功后，将显示以下画面。  
@@ -27,13 +27,13 @@ rm@rm-desktop:~$ ros2 launch rm_description rm_65_display.launch.py
 之后我们还需要启动rm_driver节点。
 
 ```
-rm@rm-desktop:~$ ros2 launch rm_driver rm_<arm_type>_driver.launch.py
+ros2 launch rm_driver rm_<arm_type>_driver.launch.py
 ```
 
 启动成功后我们就可以在rviz2中，查看机械臂状态了，运行如下命令启动rviz2。
 
 ```
-rm@rm-desktop:~$ rviz2
+rviz2
 ```
 
 通过如下配置打开机器人模型。  

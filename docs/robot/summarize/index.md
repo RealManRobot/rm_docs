@@ -52,8 +52,8 @@
 
 ## 联系方式和支持
 
-1. 要了解更多关于睿尔曼的产品线，请访问：[睿尔曼官网](https://www.realman-robotics.cn/)
-2. 要了解更多关于睿尔曼产品的使用问题，请访问：[睿尔曼学院](https://blog.csdn.net/realman_Rop)
-3. 要询问更多关于睿尔曼产品的使用问题，请邮件联系。官方邮箱: sales@realman-robot.com
-4. 要了解更多关于睿尔曼产品的最新资讯，请关注：官方微信公众号
+1. 了解更多睿尔曼产品，请访问：[睿尔曼官网](https://www.realman-robotics.cn/)
+2. 了解更多睿尔曼产品的使用，请访问：[睿尔曼学院](https://blog.csdn.net/realman_Rop)
+3. 咨询睿尔曼产品相关问题，请发送邮件至官方邮箱: sales@realman-robot.com
+4. 睿尔曼产品的最新资讯请关注：官方微信公众号
   ![alt text](公众号.jpg)

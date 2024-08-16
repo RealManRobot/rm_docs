@@ -14,8 +14,8 @@ rm_set_auto_work_frame(self, name: str, point_num: int) -> int:
 
 | 名称        | 类型    | 说明                                   |
 | :-------- | :---- | :----------------------------------- |
-| name      | `str` | 工作坐标系名称，不能超过十个字节。                    |
-| point_num | `int` | 1~3代表3个标定点，依次为原点、X轴一点、Y轴一点，4代表生成坐标系。 |
+| `name`      | `str` | 工作坐标系名称，不能超过十个字节。                    |
+| `point_num` | `int` | 1~3代表3个标定点，依次为原点、X轴一点、Y轴一点，4代表生成坐标系。 |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -39,14 +39,21 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 设置关节角度[0, 20, 70, 0, 90, 0]的位置为原点
-print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, True))
+# 设置关节角度[0, 20, 70, 0, 90, 0]的位置为工作坐标系原点
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
 print(arm.rm_set_auto_work_frame("test_work", 1))
-# 设置关节角度[0, 30, 60, 0, 90, 0]的位置为X轴一点
-print(arm.rm_movej([0, 30, 60, 0, 90, 0], 20, 0, 0, True))
+# 设置工作坐标系X轴一点
+time.sleep(1)
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][0] += 0.1    # X轴0.1m
+result = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
 print(arm.rm_set_auto_work_frame("test_work", 2))
-# 设置关节角度[0, 40, 50, 0, 90, 0]的位置为Y轴一点
-print(arm.rm_movej([0, 40, 50, 0, 90, 0], 20, 0, 0, True))
+# 设置工作坐标系Y轴一点
+time.sleep(1)
+print(arm.rm_movej([0, 20, 70, 0, 90, 0], 20, 0, 0, 1))
+result = arm.rm_get_current_arm_state()
+result[1]["pose"][1] += 0.1    # Y轴0.1m
+result = arm.rm_movel(result[1]["pose"], 20, 0, 0, 1)
 print(arm.rm_set_auto_work_frame("test_work", 3))
 # 生成“test_work”坐标系
 print(arm.rm_set_auto_work_frame("test_work", 4))
@@ -66,11 +73,11 @@ rm_set_manual_work_frame(self, name: str, pose: list) -> int:
 
 | 名称        | 类型    | 说明                               |
 | :-------- | :---- | :----------------------------------- |
-| name      | `str` | 工作坐标系名称，不能超过十个字节。         |
-| pose | `list` | 新工作坐标系相对于基坐标系的位姿。             |
+| `name`      | `str` | 工作坐标系名称，不能超过十个字节。         |
+| `pose` | `list` | 新工作坐标系相对于基坐标系的位姿。             |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -108,10 +115,10 @@ rm_change_work_frame(self, tool_name: str) -> int:
 
 | 名称        | 类型    | 说明                               |
 | :-------- | :---- | :----------------------------------- |
-| tool_name      | `str` | 目标工作坐标系名称 |
+| `tool_name`      | `str` | 目标工作坐标系名称 |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -149,7 +156,7 @@ rm_delete_work_frame(self, tool_name: str) -> int:
 
 | 名称        | 类型    | 说明                               |
 | :-------- | :---- | :----------------------------------- |
-| tool_name      | `str` | 要删除的工作坐标系名称 |
+| `tool_name`      | `str` | 要删除的工作坐标系名称 |
 
 - **返回值:** </br>
 函数执行的状态码：
@@ -190,11 +197,11 @@ rm_update_work_frame(self, name: str, pose: list) -> int:
 
 | 名称        | 类型    | 说明                               |
 | :-------- | :---- | :----------------------------------- |
-| name      | `str` | 指定工具坐标系名称。 |
-| pose      | `list` | 更新工作坐标系相对于基坐标系的位姿。 |
+| `name`      | `str` | 指定工具坐标系名称。 |
+| `pose`      | `list` | 更新工作坐标系相对于基坐标系的位姿。 |
 
 - **返回值:** </br>
-函数执行的状态码
+函数执行的状态码：
 
 |   参数    |  类型   |   说明    |
 | :--- | :--- | :---|
@@ -229,9 +236,9 @@ rm_get_total_work_frame(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-dict[str, any]: 包含以下键值的字典:
+`dict[str, any]`: 包含以下键值的字典:<br>
 
-1. 'return_code' (int): 函数执行的状态码
+1. `return_code`(int): 函数执行的状态码
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -245,13 +252,13 @@ dict[str, any]: 包含以下键值的字典:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   tool_names  |    `list[str]`    |    字符串列表，表示所有工作坐标系名称。    |
+|   `tool_names`  |    `list[str]`    |    字符串列表，表示所有工作坐标系名称。    |
 
 3. 工作坐标系名称数量
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   len  |    `int`    |    工作坐标系名称数量。    |
+|   `len`  |    `int`    |    工作坐标系名称数量。    |
 
 - **使用示例**
   
@@ -279,12 +286,12 @@ rm_get_given_work_frame(self, name: str) -> tuple[int, list[float]]:
 
 | 名称        | 类型    | 说明                               |
 | :-------- | :---- | :----------------------------------- |
-| name      | `str` | 指定的工作坐标系名称。 |
+| `name`      | `str` | 指定的工作坐标系名称。 |
 
 - **返回值:** </br>
-tuple[int, list[float]]: 包含两个元素的元组
+tuple[int, list[float]]: 包含两个元素的元组。<br>
 
-1. 'return_code' (int): 函数执行的状态码。
+1. `return_code`(int): 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -298,7 +305,7 @@ tuple[int, list[float]]: 包含两个元素的元组
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   pose  |    `list[float]`    |    工作坐标系位姿列表。   |
+|   `pose`  |    `list[float]`    |    工作坐标系位姿列表。   |
 
 - **使用示例**
   
@@ -325,9 +332,9 @@ rm_get_current_work_frame(self) -> tuple[int, dict[str, any]]:
 ```
 
 - **返回值:** </br>
-tuple[int, dict[str, any]]: 包含两个元素的元组
+`tuple[int, dict[str, any]]`: 包含两个元素的元组。<br>
 
-1. 'return_code' (int): 函数执行的状态码。
+1. `return_code`(int): 函数执行的状态码。
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -341,7 +348,7 @@ tuple[int, dict[str, any]]: 包含两个元素的元组
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   rm_frame_t  |    `dict[str, any]`    |    工作坐标系字典，键为rm_frame_t的参数名。   |
+|   `rm_frame_t`  |    `dict[str, any]`    |    工作坐标系字典，键为rm_frame_t的参数名。   |
 
 - **使用示例**
   

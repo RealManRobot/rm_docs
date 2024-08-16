@@ -8,8 +8,8 @@
 * ROS2支持humble为Ubuntu版本是22.04
 * ROS2支持foxy为Ubuntu版本是20.04
 
-humble功能包下载地址：[wwwwwwwww]()
-foxy功能包下载地址：[wwwwwwwww]()
+humble功能包下载地址：[humble](https://github.com/RealManRobot/ros2_rm_robot/tree/humble)
+foxy功能包下载地址：[foxy](https://github.com/RealManRobot/ros2_rm_robot/tree/foxy)
 
 ---
 
@@ -85,33 +85,19 @@ colcon build
 
 以上为当前的十个功能包，每个功能包都有其独特的作用，详情请参考rm_doc功能包下的doc文件夹中的文档进行详细了解。
 
-### 2.2运行虚拟机械臂
-
-使用如下指令可以启动gazebo显示仿真机械臂，并同时启动moveit2进行仿真机械臂的规划操控。
-
-```ros
-source ~/ros2_ws/install/setup.bash
-ros2 launch rm_bringup rm_<arm_type>_gazebo.launch.py
-```
-
-`<arm_type>`需要使用`65`、`75`、`eco65`、`63`字符进行代替，如使用RM65机械臂时，命令如下:
-
-```ros
-ros2 launch rm_bringup rm_65_gazebo.launch.py
-```
-
-启动成功后即可使用MoveIt2进行虚拟机械臂的控制。
-
-### 2.3控制真实机械臂
+### 2.2控制真实机械臂
 
 使用如下指令可以启动机械臂硬件驱动，并同时启动moveit2进行机械臂的规划操控。
 
 ```ros
 source ~/ros2_ws/install/setup.bash
+```
+
+```ros
 ros2 launch rm_bringup rm_<arm_type>_bringup.launch.py
 ```
 
-<arm_type>需要使用65、75、eco65、63字符进行代替，如使用RM65机械臂时，命令如下。
+<arm_type>需要使用65、75、eco65、63、gen72字符进行代替，如使用RM65机械臂时，命令如下。
 
 ```ros
 ros2 launch rm_bringup rm_65_bringup.launch.py

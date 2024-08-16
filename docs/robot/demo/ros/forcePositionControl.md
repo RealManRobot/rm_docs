@@ -1,4 +1,4 @@
-# <p class="hidden">Demo演示(ROS)：</p>力位混合控制规划`ARM_FORCE_POSITION_CONTROL_DEMO`
+# <p class="hidden">Demo演示(ROS)：</p>力位混合控制规划示例`Arm_Force_Position_Control_Demo`
 
 ## 1.项目介绍
 
@@ -179,6 +179,4 @@
     StopForcePosition_pub.publish(empty_value);
     ```
 
-## 7.许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

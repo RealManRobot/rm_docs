@@ -70,7 +70,7 @@ rm_get_joint_min_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:**
-tuple[int, list]: 包含两个元素的元组
+tuple[int, list]: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -99,7 +99,7 @@ rm_get_joint_max_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -119,7 +119,7 @@ print(arm.rm_get_joint_max_pos())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大速度`rm_get_joint_drive_max_speed()`
+## 查询关节最大速度(驱动器)`rm_get_joint_drive_max_speed()`
 
 - **方法原型：**
 
@@ -151,7 +151,7 @@ print(arm.rm_get_joint_drive_max_speed())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大加速度`rm_get_joint_drive_max_acc()`
+## 查询关节最大加速度(驱动器)`rm_get_joint_drive_max_acc()`
 
 - **方法原型：**
 
@@ -160,7 +160,7 @@ rm_get_joint_drive_max_acc(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -183,7 +183,7 @@ print(arm.rm_get_joint_drive_max_acc())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最小限位`rm_get_joint_drive_min_pos()`
+## 查询关节最小限位(驱动器)`rm_get_joint_drive_min_pos()`
 
 - **方法原型：**
 
@@ -192,7 +192,7 @@ rm_get_joint_drive_min_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -215,7 +215,7 @@ print(arm.rm_get_joint_drive_min_pos())
 arm.rm_delete_robot_arm()
 ```
 
-## 查询关节(驱动器)最大限位`rm_get_joint_drive_max_pos()`
+## 查询关节最大限位(驱动器)`rm_get_joint_drive_max_pos()`
 
 - **方法原型：**
 
@@ -224,7 +224,7 @@ rm_get_joint_drive_max_pos(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -256,7 +256,7 @@ rm_get_joint_en_state(self) -> tuple[int, list]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -288,13 +288,13 @@ rm_get_joint_err_flag(self) -> dict[str, any]:
 ```
 
 - **返回值:** </br>
-`tuple[int, list]`: 包含两个元素的元组
+`tuple[int, list]`: 包含两个元素的元组。<br>
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|  int  |    `int`    |    函数执行的状态码。</br> 0:成功。</br> -1: 数据发送失败，通信过程中出现问题。</br> -2: 数据接收失败，通信过程中出现问题或控制器长久没有返回。</br> -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。|
-|  err_flag |    `list[float]`    |    浮点数列表，表示每个关节的错误标志。</br>如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。  |
-|  brake_state |    `list[float]`    |    浮点数列表，表示每个关节的抱闸状态。</br>如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。  |
+|  `int`  |    `int`    |    函数执行的状态码。</br> 0:成功。</br> -1: 数据发送失败，通信过程中出现问题。</br> -2: 数据接收失败，通信过程中出现问题或控制器长久没有返回。</br> -3: 返回值解析失败，控制器返回的数据无法识别或不完整等情况。|
+|  `err_flag` |    `list[float]`    |    浮点数列表，表示每个关节的错误标志。</br>如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。  |
+|  `brake_state` |    `list[float]`    |    浮点数列表，表示每个关节的抱闸状态。</br>如果arm_dof不为0，则列表长度为arm_dof；否则，使用默认的ARM_DOF长度。  |
 
 - **使用示例**
   

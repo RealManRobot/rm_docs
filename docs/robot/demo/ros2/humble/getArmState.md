@@ -1,4 +1,4 @@
-# <p class="hidden">Demo演示(ROS2)：</p>获取机械臂状态`GET_ARM_STATE_DEMO`
+# <p class="hidden">Demo演示(ROS2)：</p>获取机械臂状态`Get_Arm_State_Demo`
 
 
 ## 1.项目介绍
@@ -227,6 +227,4 @@
     void ToolForceData_Callback(const rm_ros_interfaces::msg::Sixforce::SharedPtr msg);
     ```
 
-## 7.许可证信息
 
-* 具体许可证内容请参见`LICENSE`文件。

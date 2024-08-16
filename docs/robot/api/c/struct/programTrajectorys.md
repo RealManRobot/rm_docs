@@ -2,7 +2,7 @@
 
 ## 类成员变量说明
 
-- ### `balpage_numls`
+- ### `page_num`
 
     ```C++
     int rm_program_trajectorys_t::page_num

@@ -25,8 +25,8 @@ int rm_add_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t co
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   config  |    输入参数    |    几何模型参数结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `config`  |    输入参数    |    几何模型参数结构体。    |
 
 - **返回值:**
 
@@ -69,8 +69,8 @@ int rm_update_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   config  |    输入参数    |    几何模型参数结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `config`  |    输入参数    |    几何模型参数结构体。    |
 
 - **返回值:**
 
@@ -113,8 +113,8 @@ int rm_delete_electronic_fence_config(rm_robot_handle * handle,const char * form
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   form_name  |    输入参数    |    几何模型名称，不超过 10 个字节，支持字母、数字、下划线。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `form_name`  |    输入参数    |    几何模型名称，不超过 10 个字节，支持字母、数字、下划线。    |
 
 - **返回值:**
 
@@ -147,9 +147,9 @@ int rm_get_electronic_fence_list_names(rm_robot_handle * handle,rm_fence_names_t
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   names  |    输出参数    |    存放几何模型名称列表，长度为实际存在几何模型数量。    |
-|   len  |    输出参数    |    存放几何模型名称列表长度。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `names`  |    输出参数    |    存放几何模型名称列表，长度为实际存在几何模型数量。    |
+|   `len`  |    输出参数    |    存放几何模型名称列表长度。    |
 
 - **返回值:**
 
@@ -187,9 +187,9 @@ int rm_get_given_electronic_fence_config(rm_robot_handle * handle,const char * n
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   name  |    输入参数    |    指定几何模型名称。    |
-|   config  |    输出参数    |    返回几何模型参数结构体。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `name`  |    输入参数    |    指定几何模型名称。    |
+|   `config`  |    输出参数    |    返回几何模型参数结构体。    |
 
 - **返回值:**
 
@@ -230,9 +230,9 @@ int rm_get_electronic_fence_list_infos(rm_robot_handle * handle,rm_fence_config_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    输入参数    |    机械臂句柄。    |
-|   config_list  |    输出参数    |    存放几何模型信息列表，长度为实际存在几何模型数量。    |
-|   len  |    输出参数    |    存放几何模型信息列表长度。    |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `config_list`  |    输出参数    |    存放几何模型信息列表，长度为实际存在几何模型数量。    |
+|   `len`  |    输出参数    |    存放几何模型信息列表长度。    |
 
 - **返回值:**
 
@@ -271,8 +271,8 @@ int rm_set_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `/`    |    电子围栏使能状态。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `state`  |    `/`    |    电子围栏使能状态。    |
 
 - **返回值:**
 
@@ -312,8 +312,8 @@ int rm_get_electronic_fence_enable(rm_robot_handle * handle,rm_electronic_fence_
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `/`    |    电子围栏使能状态。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `state`  |    `/`    |    电子围栏使能状态。    |
 
 - **返回值:**
 
@@ -349,8 +349,8 @@ int rm_set_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t co
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    当前电子围栏参数结构体（无需设置电子围栏名称）。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `config`  |    `/`    |    当前电子围栏参数结构体（无需设置电子围栏名称）。    |
 
 - **返回值:**
 
@@ -392,8 +392,8 @@ int rm_get_electronic_fence_config(rm_robot_handle * handle,rm_fence_config_t * 
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    返回当前电子围栏参数结构体（返回参数中不包含电子围栏名称）。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `config`  |    `/`    |    返回当前电子围栏参数结构体（返回参数中不包含电子围栏名称）。    |
 
 - **返回值:**
 
@@ -433,8 +433,8 @@ int rm_set_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enab
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `/`    |    虚拟墙状态结构体。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `state`  |    `/`    |    虚拟墙状态结构体。    |
 
 - **返回值:**
 
@@ -472,8 +472,8 @@ int rm_get_virtual_wall_enable(rm_robot_handle * handle,rm_electronic_fence_enab
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   state  |    `/`    |    虚拟墙状态结构体。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `state`  |    `/`    |    虚拟墙状态结构体。    |
 
 - **返回值:**
 
@@ -509,8 +509,8 @@ int rm_set_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t config
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    当前虚拟墙参数（无需设置虚拟墙名称）。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `config`  |    `/`    |    当前虚拟墙参数（无需设置虚拟墙名称）。    |
 
 - **返回值:**
 
@@ -552,8 +552,8 @@ int rm_get_virtual_wall_config(rm_robot_handle * handle,rm_fence_config_t * conf
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   handle  |    `/`    |    机械臂句柄。    |
-|   config  |    `/`    |    当前虚拟墙参数（返回参数中不包含虚拟墙名称）。    |
+|   `handle`  |    `/`    |    机械臂句柄。    |
+|   `config`  |    `/`    |    当前虚拟墙参数（返回参数中不包含虚拟墙名称）。    |
 
 - **返回值:**
 

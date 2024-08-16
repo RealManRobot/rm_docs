@@ -25,7 +25,7 @@ rm_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功�
 完成上面操作后，使用如下指令启动gazebo虚拟空间和虚拟机械臂。
 
 ```ROS
-rm@rm-desktop:~$ roslaunch rm_gazebo arm_<arm_type>_bringup_moveit.launch
+roslaunch rm_gazebo arm_<arm_type>_bringup_moveit.launch
 ```
 
 运行成功后将弹出如下界面。
