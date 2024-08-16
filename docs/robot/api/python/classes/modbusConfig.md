@@ -49,7 +49,7 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-print(arm.rm_set_modbus_mode(1,115200,2))
+print(arm.rm_set_modbus_mode(0,115200,2))
 
 arm.rm_delete_robot_arm()
 ```
@@ -223,6 +223,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485接口读数据，起始地址为10， 外设设备地址为2，读2个数据
 read_params = rm_peripheral_read_write_params_t(0, 10, 2, 2)
 print(arm.rm_read_coils(read_params))
@@ -276,6 +279,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
+
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
 
 # 通过控制器RS485接口读数据，起始地址为10， 外设设备地址为2，读3个数据
 read_params = rm_peripheral_read_write_params_t(0, 10, 2, 3)
@@ -331,6 +337,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485端口读取数据，起始地址为10， 外设设备地址为2
 param = rm_peripheral_read_write_params_t(0, 10, 2)
 print("读保持寄存器: ", arm.rm_read_holding_registers(param))
@@ -384,6 +393,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
+
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
 
 # 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2
 param = rm_peripheral_read_write_params_t(0, 10, 2)
@@ -482,6 +494,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485接口写100数据，起始地址为10， 外设设备地址为2
 write_params = rm_peripheral_read_write_params_t(0, 10, 2)
 print(arm.rm_write_single_register(write_params, 100))
@@ -529,6 +544,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485接口写数据，起始地址为10， 外设设备地址为2，寄存器数量为2
 write_params = rm_peripheral_read_write_params_t(0, 10, 2, 2)
 print(arm.rm_write_registers(write_params), [15, 20, 25, 30])
@@ -575,6 +593,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
+
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
 
 # 通过控制器RS485接口写数据，起始地址为10， 外设设备地址为2，线圈数量为16
 write_params = rm_peripheral_read_write_params_t(0, 10, 2, 16)
@@ -630,6 +651,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，线圈数量为24
 param = rm_peripheral_read_write_params_t(0, 10, 2, 24)
 print(arm.rm_read_multiple_coils(param))
@@ -684,6 +708,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
+
 # 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，寄存器数量为5
 param = rm_peripheral_read_write_params_t(0, 10, 2, 5)
 print(arm.rm_read_multiple_holding_registers(param))
@@ -737,6 +764,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 # 创建机械臂连接，打印连接id
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
+
+# 配置控制器RS485端口为RTU主站
+print(arm.rm_set_modbus_mode(0,115200,2))
 
 # 通过控制器RS485端口读取数据，起始地址为10，外设设备地址为2，寄存器数量为5
 param = rm_peripheral_read_write_params_t(0, 10, 2, 5)
