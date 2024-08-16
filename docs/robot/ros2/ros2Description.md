@@ -832,6 +832,7 @@ ros2 topic echo /rm_driver/set_lift_height_result
 ```
 
 **参数说明：**
+
 | 参数  | 类型     | 说明      |
 |:---|:---|:---|
 |`std_msgs`  | `bool` |`ture`：设置成功；`false`：设置失败。driver终端返回错误码。 |
