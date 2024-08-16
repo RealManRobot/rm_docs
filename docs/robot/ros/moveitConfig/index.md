@@ -69,7 +69,7 @@ roslaunch rm_control rm_<arm_type>_control.launch.py
 roslaunch rm_<arm_type>_config demo_realrobot.launch
 ```
 
-注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65_6f、eco65_6f、75_6f。
+注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65_6f、eco65_6f、75_6f、gen72。
 
 注意在使用63时应使用如下启动指令，若使用六维力设备时，应将63更换为63_6f。
 

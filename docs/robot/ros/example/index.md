@@ -50,7 +50,7 @@ rosrun rm_demo api_ChangeWorkFrame_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，63，eco65，75，gen72。
 
 例如65机械臂的启动命令：
 
@@ -76,7 +76,7 @@ rosrun rm_demo api_ChangeToolName_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，63，eco65，75，gen72。
 
 例如65机械臂的启动命令：
 
@@ -106,7 +106,7 @@ rosrun rm_demo api_Get_Arm_State_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，63，eco65，75，gen72。
 
 例如65机械臂的启动命令：
 
@@ -142,7 +142,7 @@ rosrun rm_demo api_moveJ_demo _Arm_Dof:=7
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，63，eco65，75，gen72。
 
 例如65机械臂的启动命令：
 
@@ -170,7 +170,7 @@ rosrun rm_demo api_moveJ_P_demo
 roslaunch rm_driver rm_<arm_type>_driver.launch
 ```
 
-在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65、63、eco65、75、gen72。
+在实际使用时需要将以上的<arm_type>更换为实际的机械臂型号，可选择的机械臂型号有65，63，eco65，75，gen72。
 
 例如65机械臂的启动命令：
 
@@ -204,7 +204,7 @@ roslaunch rm_<arm_type>_moveit_config demo.launch
 roslaunch rml_63_moveit_config demo.launch
 ```
 
-其中<arm_type>可选择的型号有65，63，75，eco65、gen72。
+其中<arm_type>可选择的型号有65，63，75，eco65，gen72。
 
 例如65机械臂的启动命令：
 
