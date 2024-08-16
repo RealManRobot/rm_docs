@@ -797,7 +797,7 @@ ros2 topic echo /rm_driver/set_hand_force_result
 **使用命令示例：**
 
 ```json
-ros2 topic pub --once /rm_driver/set_lift_height_cmd rm_ros_interfaces/msg/Liftheight "height: 0 speed: 10 block: true"
+ros2 topic pub /rm_driver/set_lift_speed_cmd rm_ros_interfaces/msg/Liftspeed "speed: 100"
 ```
 
 **返回命令示例：**
@@ -822,7 +822,7 @@ ros2 topic echo /rm_driver/set_lift_speed_result
 **使用命令示例：**
 
 ```json
-ros2 topic pub --once /rm_driver/set_lift_speed_cmd rm_ros_interfaces/msg/Liftspeed "speed: 100"
+ros2 topic pub --once /rm_driver/set_lift_height_cmd rm_ros_interfaces/msg/Liftheight "height: 0 speed: 10 block: true"
 ```
 
 **返回命令示例：**
