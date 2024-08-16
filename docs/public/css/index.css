@@ -263,3 +263,9 @@ img {
 .vp-doc th {
     text-align: center !important;
 }
+.aside-container{
+    width: 248px !important;
+}
+.vp-doc strong{
+    color:var(--vp-c-text-1);
+}
