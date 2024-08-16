@@ -69,4 +69,4 @@ else:
 ## 5.技术支持与社区
 
 - **示例与文档**：[API（Python）演示](/demo/python/simpleProcess/)
-- **SDK与库**: [Python SDK](wwwwwwwwww)
+- **SDK与库**: [Python SDK](https://github.com/RealManRobot/RM_API2.git)

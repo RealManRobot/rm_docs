@@ -28,7 +28,7 @@ RMDemo_SimpleProcess
 
 ## **3.项目下载**
 
-通过链接下载 `RM_API2` 到本地：[https://github.com/RealManRobot/RM_API2.git]()，进入`RM_API2\Demo\RMDemo_C`目录，可找到对应的Demo。
+通过链接下载 `RM_API2` 到本地：[开发包下载](https://github.com/RealManRobot/RM_API2.git)，进入`RM_API2\Demo\RMDemo_C`目录，可找到RMDemo_SimpleProcess。
 
 ## **4. 环境配置**
 

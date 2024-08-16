@@ -285,4 +285,4 @@ RMDemo_QtExample_C
 ## 6.支持渠道
 
 - **示例与文档**：[API C/C++demo](/demo/c/simpleProcess/)。
-- **SDK与库**：[C/C++ SDK包下载](https://github.com/RealManRobot/RM_API2/tree/main)。
+- **SDK与库**：[C/C++ SDK包下载](https://github.com/RealManRobot/RM_API2.git)。
