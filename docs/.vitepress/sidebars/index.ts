@@ -835,31 +835,31 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
           {
             text: "RM-机械臂驱动功能包",
-            link: "/robot/ros/driver",
+            link: "/robot/ros/driver/index",
           },
           {
             text: "RM-快速启动功能包",
-            link: "/robot/ros/bringup/",
+            link: "/robot/ros/bringup/index",
           },
           {
             text: "RM-Moveit通信功能包",
-            link: "/robot/ros/control",
+            link: "/robot/ros/control/index",
           },
           {
             text: "RM-机械臂模型功能包",
-            link: "/robot/ros/description",
+            link: "/robot/ros/description/index",
           },
           {
             text: "RM-机械臂ROS示例",
-            link: "/robot/ros/example",
+            link: "/robot/ros/example/index",
           },
           {
             text: "RM-Gazebo功能包",
-            link: "/robot/ros/gazebo",
+            link: "/robot/ros/gazebo/index",
           },
           {
             text: "RM-Moveit控制功能包",
-            link: "/robot/ros/moveitConfig",
+            link: "/robot/ros/moveitConfig/index",
           },
           {
             text: "RM-机械臂ROS话题说明",
