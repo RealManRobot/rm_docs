@@ -310,7 +310,7 @@ printf("Robot info : %d %d %d \n", robot_info.arm_dof,robot_info.arm_model,robot
 void rm_get_arm_event_call_back(rm_event_callback_ptr event_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_event_callback_ptr`。<br>方法原型为：`typedef void(* rm_event_callback_ptr) (rm_event_push_data_t data)`。<br>跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。*
 
 >注意：单线程无法使用该函数获取到位信息。
 
@@ -352,7 +352,7 @@ rm_get_arm_event_call_back(callback_event);
 void rm_realtime_arm_state_call_back(rm_realtime_arm_state_callback_ptr realtime_callback)
 ```
 
-*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`*。跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。
+*这里使用了机械臂事件回调函数`rm_realtime_arm_state_callback_ptr`。<br>方法原型为：`typedef void(* rm_realtime_arm_state_callback_ptr) (rm_realtime_arm_joint_state_t data)`。<br>跳转[rm_realtime_arm_joint_state_t](../struct/realtimeArmJointState.md)查阅结构体详情。*
 
 - **参数说明:**
 

@@ -227,7 +227,7 @@ int rm_get_collision_stage(rm_robot_handle * handle,int * collision_stage)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
-|  collision_stage  |    输出参数    |    存放返回的碰撞等级值的变量，数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
+|  collision_stage  |    输出参数    |    存放返回的碰撞等级值的变量，<br>数据为0-8，0-无碰撞检测，8-碰撞检测最灵敏。    |
 
 - **返回值:**
 

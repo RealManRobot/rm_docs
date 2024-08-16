@@ -57,7 +57,7 @@ int rm_set_hand_seq(rm_robot_handle * handle,int seq_num,bool block,int timeout)
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
 |  seq_num  |    输入参数    |    预先保存在灵巧手内的动作序号，范围：1~40。    |
-|  block  |    输入参数    |    `true`表示阻塞模式，等待灵巧手运动结束后返回；`false`表示非阻塞模式，发送后立即返回。    |
+|  block  |    输入参数    |    `true`表示阻塞模式，等待灵巧手运动结束后返回；<br>`false`表示非阻塞模式，发送后立即返回。    |
 |   timeout  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
 
 - **返回值:**
@@ -97,7 +97,7 @@ int rm_set_hand_angle(rm_robot_handle * handle,const int * hand_angle)
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
 |   handle  |    输入参数    |    机械臂句柄。    |
-|  hand_angle  |    输入参数    |    预手指角度数组，范围：0~1000. 另外，-1代表该自由度不执行任何操作，保持当前状态。    |
+|  hand_angle  |    输入参数    |    预手指角度数组，范围：0~1000. <br>另外，-1代表该自由度不执行任何操作，保持当前状态。    |
 
 - **返回值:**
 

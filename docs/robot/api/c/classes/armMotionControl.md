@@ -242,7 +242,7 @@ if (rm_set_arm_delete_trajectory(robot_handle) == 0) {
 int rm_get_arm_current_trajectory(rm_robot_handle * handle,rm_arm_current_trajectory_e * type,float * data)
 ```
 
-*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*<br>
 *可以跳转[rm_arm_current_trajectory_e](../type/typeList#rm-arm-current-trajectory-e机械臂当前规划类型)查阅枚举类型详细描述*
 
 - **参数说明:**
