@@ -7,8 +7,8 @@
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
-            <h2>JOSN</h2>
-            <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
+            <h2>JSON</h2>
+            <p>推荐您使用JSON开发包，其拥有了全新的架构和更丰富的接口内容。</p>
             <p>下载地址： <a href="https://github.com/RealManRobot/rm_docs/tree/user_public/docs/robot/json" target="_blank">JSON协议（github）</a></p>
         </div>
         <div class="wrap-item2">

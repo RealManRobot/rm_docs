@@ -900,7 +900,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/ros2/example",
           },
           {
-            text: "Gazebo功能包",
+            text: "RM-Gazebo功能包",
             link: "/robot/ros2/gazebo",
           },
           {
