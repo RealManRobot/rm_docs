@@ -31,10 +31,7 @@
 实现：设置机械臂末端最大线速度 0.5m/s，分辨率 0.001m/s。
 
 ```json
-{ 
-  "command": "set_arm_max_line_speed", 
-  "arm_line_speed": 500 
-}
+{"command":"set_arm_max_line_speed","arm_line_speed":500}
 ```
 
 **输出**
