@@ -220,7 +220,7 @@ ros2 topic pub --once /rm_driver/get_all_work_frame_cmd std_msgs/msg/Empty "{}"
 所有工作坐标系名称。
 
 ```json
-ros2 topic echo /rm_driver/change_work_frame_result
+ros2 topic echo /rm_driver/get_all_work_frame_result
 ```
 
 ## 机械臂状态查询
@@ -797,7 +797,7 @@ ros2 topic echo /rm_driver/set_hand_force_result
 **使用命令示例：**
 
 ```json
-ros2 topic pub /rm_driver/set_lift_speed_cmd rm_ros_interfaces/msg/Liftspeed "speed: 100"
+ros2 topic pub --once /rm_driver/set_lift_height_cmd rm_ros_interfaces/msg/Liftheight "height: 0 speed: 10 block: true"
 ```
 
 **返回命令示例：**
