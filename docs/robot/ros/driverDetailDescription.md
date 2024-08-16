@@ -595,7 +595,7 @@ rostopic pub /rm_driver/Get_Arm_Software_Version std_msgs/Empty "{}"
 
 **返回命令示例：**
 
-```
+```json
 rostopic echo /rm_driver/Get_Arm_Software_Version_Result
 ```
 
