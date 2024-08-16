@@ -1,4 +1,4 @@
-# 1. ECO65系列DH参数
+# <p class="hidden">本体参数：</p>ECO65系列DH参数
 
 **MDH模型坐标系：**
 
@@ -45,7 +45,7 @@
 
 <br>
 
-# 2. ECO65系列连杆动力学参数
+# ECO65系列连杆动力学参数
 <style>
 .center 
 {
