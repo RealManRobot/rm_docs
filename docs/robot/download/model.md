@@ -17,10 +17,10 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM65系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RM65" target="_blank">RM65系列（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="d-flex flex-h-start flex-v-center">
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_models/tree/main/RM65" target="_blank">RM65系列（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/RM65" target="_blank">RM65系列（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
@@ -28,10 +28,10 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RM75系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RM75" target="_blank">RM75系列（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="d-flex flex-h-start flex-v-center">
+                <p>Github下载: <a href="https://github.com/RealManRobot/rm_models/tree/main/RM75" target="_blank">RM75系列（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/RM75" target="_blank">RM75系列（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
@@ -39,10 +39,10 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>RML63系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/RML63" target="_blank">RML63系列（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="d-flex flex-h-start flex-v-center">
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_models/tree/main/RML63" target="_blank">RML63系列（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/RML63" target="_blank">RML63系列（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
@@ -50,10 +50,10 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>ECO65系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/ECO65" target="_blank">ECO65系列（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="d-flex flex-h-start flex-v-center">
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_models/tree/main/ECO65" target="_blank">ECO65系列（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/ECO65" target="_blank">ECO65系列（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
@@ -62,51 +62,53 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>GEN72系列</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/GEN72" target="_blank">GEN72系列（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="d-flex flex-h-start flex-v-center">
+            <p>Github下载： <a href="https://github.com/RealManRobot/rm_models/tree/main/GEN72" target="_blank">GEN72系列（Github）</a></p>
+            <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/GEN72" target="_blank">GEN72系列（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
-
 
 <div class="wrap">
-    <div class="d-flex">
+    <div class="d-flex w-100">
         <div class="wrap-item1">
             <h2>其他设备及配件</h2>
-            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/thirdparty" target="_blank">其他设备及配件（github）</a></p>
-        </div>
-        <div class="wrap-item2">
-            <!-- <p>版本号：V2.1.0</p> -->
+            <div class="w-100 d-flex flex-h-start flex-v-center ">
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_models/tree/main/thirdparty" target="_blank">其他设备及配件（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_models/tree/main/thirdparty" target="_blank">其他设备及配件（Gitee）</a></p>
+            </div>
         </div>
     </div>
 </div>
 
-
 <style>
+.w-100{
+    width:100%;
+}
 .wrap{
     position:relative;
     width:100%;
     border-radius: 8px;
     background-color:var(--vp-c-bg);
     margin:16px 0;
-    padding:16px 16px 8px;
+    padding:16px;
     font-size: var(--vp-custom-block-font-size);
 }
 .d-flex{
     display:flex;
-    margin-bottom:16px;
+    flex-wrap:wrap;
+}
+.flex-h-start{
+    justify-content: flex-start;
+}
+.flex-v-center{
+  align-items: center;
 }
 .wrap-item1{
-     width:80%;
+     width:100%;
 }
-.wrap-item2{
-    width:20%;
-    display:flex;
-    justify-content: end;
-    align-items: center;
-}
+
 .wrap-item1 h2{
     font-size:24px !important;
     line-height:32px !important;
@@ -117,8 +119,14 @@
     padding-top:0 !important;
 }
 .wrap-item1 p{
+    margin:0 !important;
     color:var(--vp-c-text-2) !important;
-    margin:0 0 8px 0 !important;
+    width:auto;
+    min-width:50%;
+}
+.wrap-item1 p:nth-of-type(1){
+    color:var(--vp-c-text-1) !important;
+    margin: 0 !important;
 }
 .wrap-item1 p:nth-of-type(2){
     color:var(--vp-c-text-1) !important;
