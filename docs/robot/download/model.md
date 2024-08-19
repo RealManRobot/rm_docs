@@ -1,4 +1,4 @@
-# <p class="hidden">相关下载：</p>模型
+# <p class="hidden">相关下载：</p>模型和尺寸图
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择。
 
@@ -70,11 +70,19 @@
     </div>
 </div>
 
-<script setup>
-    const handleDownload=()=>{
-        window.open('https://www.baidu.com/', '_blank')
-    }
-</script>
+
+<div class="wrap">
+    <div class="d-flex">
+        <div class="wrap-item1">
+            <h2>其他设备及配件</h2>
+            <p>下载地址： <a href="https://github.com/RealManRobot/rm_models/tree/main/thirdparty" target="_blank">其他设备及配件（github）</a></p>
+        </div>
+        <div class="wrap-item2">
+            <!-- <p>版本号：V2.1.0</p> -->
+        </div>
+    </div>
+</div>
+
 
 <style>
 .wrap{

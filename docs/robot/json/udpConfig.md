@@ -104,7 +104,7 @@
 
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
-|`set_realtime_push`|`bool`|true 成功  false  失败。|
+|`set_realtime_push`|`bool`|`true` 成功  `false`  失败。|
 
 
 - **代码示例**
