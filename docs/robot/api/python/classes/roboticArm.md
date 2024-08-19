@@ -388,11 +388,11 @@ rm_realtime_arm_state_call_back(self, arm_state_callback):
   
 ```python
 # 下面是一个如何注册UDP机械臂实时状态主动上报信息回调函数的示例：
-# 在这个示例中，我们定义了一个名为`arm_state_callback`的函数，用于处理机械臂实时上报的数据，并将其注册为回调函数。
-# `arm_state_callback`函数会按照UDP接口设置的周期被调用，该函数接收一个rm_realtime_arm_joint_state_t的对象作为参数
+# 在这个示例中，我们定义了一个名为`arm_state_func`的函数，用于处理机械臂实时上报的数据，并将其注册为回调函数。
+# `arm_state_func`函数会按照UDP接口设置的周期被调用，该函数接收一个rm_realtime_arm_joint_state_t的对象作为参数
 from Robotic_Arm.rm_robot_interface import *
 
-def arm_state_callback(data):
+def arm_state_func(data):
     print("Current arm ip: ", data.arm_ip)
     print("Current arm pose: ", data.waypoint.to_dict())
 
@@ -409,8 +409,8 @@ config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104")
 print(arm.rm_set_realtime_push(config))
 print(arm.rm_get_realtime_push())
 
-arm_state_callback = rm_realtime_arm_state_callback_ptr(event_func)
-arm.rm_get_arm_event_call_back(arm_state_callback)
+arm_state_callback = rm_realtime_arm_state_callback_ptr(arm_state_func)
+arm.rm_realtime_arm_state_call_back(arm_state_callback)
 
 # 关节运动
 ret = arm.rm_movej([0, 30, 60, 0, 90, 0], 30, 0, 0, 1)
