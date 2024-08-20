@@ -75,6 +75,7 @@ bool block
 ```
 
 **msg成员：**  
+
 `joint_num`:对应关节序号，从基座到机械臂夹爪端，序号依次为1-6或1-7。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 
@@ -85,6 +86,7 @@ string[10] frame_name
 ```
 
 **msg成员：**
+
 `frame_name`：返回的工作坐标系的名称数组。
 
 ### 2.4关节运动Movej_msg
@@ -98,6 +100,7 @@ uint8 dof
 ```
 
 **msg成员：**
+
 `joint`：关节角度，float类型，单位：弧度。  
 `speed`：速度百分比例系数，0-100。  
 `block`：是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
@@ -114,6 +117,7 @@ bool block
 ```
 
 **msg成员:**
+
 `pose`:机械臂位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数（float类型）。  
 `speed`:速度百分比例系数，0-100。  
 `trajectory_connect`:#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
@@ -131,6 +135,7 @@ uint8 loop
 ```
 
 **msg成员：**
+
 `pose_mid`：中间位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `pose_end`：目标位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `speed`：速度百分比例系数，0-100。  
@@ -148,6 +153,7 @@ bool block
 ```
 
 **msg成员：**
+
 `pose`：目标位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `speed`：速度百分比例系数，0-100。  
 `trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
@@ -163,6 +169,7 @@ uint8 dof
 ```
 
 **msg成员：**
+
 `joint`：关节角度，float类型，单位：弧度。  
 `follow`：跟随状态，bool类型，true高跟随，false低跟随，不设置默认高跟随。  
 `expand`：拓展关节，float类型，单位：弧度。  
@@ -176,6 +183,7 @@ bool follow
 ```
 
 **msg成员：**
+
 `pose` :机械臂位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `follow`:跟随状态，bool类型，true高跟随，false低跟随，不设置默认高跟随。
 
@@ -190,6 +198,7 @@ uint8 dof
 ```
 
 **msg成员：**
+
 `joint`:关节角度，float类型，单位：度。  
 `pose`:机械臂当前位姿，float类型，x、y、z坐标，单位：m，x、y、z欧拉角，单位：度。  
 `arm_err`:机械臂运行错误代码，unsigned int类型。  
@@ -207,6 +216,7 @@ uint8 dof
 ```
 
 **msg成员：**
+
 `joint`:关节角度，float类型，单位：弧度。  
 `pose`:机械臂当前位姿，float类型，x、y、z坐标，单位：m，x、y、z、w四元数。  
 `arm_err`:机械臂运行错误代码，unsigned int类型。  
@@ -224,6 +234,7 @@ string productversion
 ```
 
 **msg成员：**  
+
 `planversion`:读取到的用户接口内核版本号，string类型。  
 `ctrlversion`:实时内核版本号，string类型。  
 `kernal1`:实时内核子核心 1 版本号，string类型。  
@@ -239,6 +250,7 @@ bool block
 ```
 
 **msg成员：**  
+
 `speed`:夹爪力控夹取速度，unsigned int类型，范围：1-1000。  
 `force`:夹爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
@@ -252,6 +264,7 @@ bool block
 ```
 
 **msg成员：**
+
 `speed`:夹爪力控夹取速度，unsigned int类型，范围：1-1000。  
 `force`:夹爪夹取力矩阈值，unsigned int类型，范围 ：50-1000。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
@@ -264,6 +277,7 @@ bool block
 ```
 
 **msg成员：**
+
 `position`:夹爪目标位置，unsigned int类型，范围：1-1000,代表夹爪开口度：0-70mm。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
@@ -277,7 +291,8 @@ int16 n
 bool block
 ```
 
-**msg成员：**  
+**msg成员：** 
+
 `sensor`:传感器；0-一维力；1-六维力。  
 `mode`:Mode：0-工作坐标系力控； 1-工具坐标系力控。  
 `Direction`:力控方向；0-沿X 轴；1-沿Y 轴；2-沿 Z 轴；3-沿RX 姿态方向；4-沿 RY 姿态方向；5-沿 RZ 姿态方向。  
@@ -295,7 +310,8 @@ float32 force_my
 float32 force_mz
 ```
 
-**msg成员：**  
+**msg成员：**
+
 `force_fx`:沿x轴方向受力大小。  
 `force_fy`:沿y轴方向受力大小。  
 `force_fz`:沿z轴方向受力大小。  
@@ -362,6 +378,7 @@ bool block
 
 `hand_force`:手指力，范围：1-1000。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
+
 ### 透传力位混合补偿-角度Forcepositionmovejoint_msg
 
 ```
@@ -412,6 +429,7 @@ bool block
 ```
 
 **msg成员：**  
+
 `speed`:速度百分比，-100-100。Speed < 0:升降机构向下运动；Speed > 0:升降机构向上运动；Speed = 0:升降机构停止运动。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 
@@ -424,6 +442,7 @@ bool block
 ```
 
 **msg成员：**  
+
 `height`:目标高度，单位 mm，范围：0-2600。  
 `speed`:速度百分比，1-100。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
@@ -437,6 +456,7 @@ uint16 err_flag
 ```
 
 **msg成员：**  
+
 `height`:当前升降机构高度，单位：mm，精度：1mm，范围：0-2300。  
 `current`:升降驱动错误代码，错误代码类型参考关节错误代码。  
 
@@ -450,6 +470,7 @@ string ip
 ```
 
 **msg成员：**  
+
 `cycle`:设置广播周期，为5ms的倍数。  
 `port`:设置广播的端口号。  
 `force_coordinate`:系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。  

@@ -1,6 +1,6 @@
 # 相关信息查阅
 
-## JOSN文件目录
+## JSON文件目录
 
 [机械臂配置指令集](../json/armConfig.md)
 [机械臂初始状态配置指令集](../json/armInit.md)
