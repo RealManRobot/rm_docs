@@ -10,8 +10,8 @@
             <h2>快速使用手册</h2>
             <p>睿尔曼机器人快速使用手册 V1.5.0  文件格式：PDF</p>
             <div class="w-100 d-flex flex-h-satrt flex-v-center">
-                <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CV1.5.pdf" target="_blank">快速使用手册（Github）</a></p>
-                <p>Gitee下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CV1.5.pdf" target="_blank">快速使用手册（Gitee）</a></p>
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">快速使用手册（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">快速使用手册（Gitee）</a></p>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
             <h2>Web示教器用户手册</h2>
             <p>睿尔曼机器人Web示教器用户手册 V1.6.0 文件格式：PDF</p>
             <div class="w-100 d-flex flex-h-satrt flex-v-center">
-                <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BAWEB%E7%A4%BA%E6%95%99%E5%99%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-1.6.pdf" target="_blank">Web示教器用户手册（Github）</a></p>
-                <p>Gitee下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/%E7%9D%BF%E5%B0%94%E6%9B%BC%E6%9C%BA%E5%99%A8%E4%BA%BAWEB%E7%A4%BA%E6%95%99%E5%99%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-1.6.pdf" target="_blank">Web示教器用户手册（Gitee）</a></p>
+                <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">Web示教器用户手册（Github）</a></p>
+                <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">Web示教器用户手册（Gitee）</a></p>
             </div>
         </div>
     </div>
