@@ -175,11 +175,11 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     ```
   
 - 执行moves运动，沿多点轨迹进行样条曲线移动。 轨迹如下图所示
-- ![Moves_trajectoryConnect](Moves_trajectoryConnect.png)
+![Moves_trajectoryConnect](Moves_trajectoryConnect.png)
 
 - 当 trajectory_connect 为 0时候 会如下：
--   ![Moves_trajectory](Moves_trajectory.png)
-- 
+![Moves_trajectory](Moves_trajectory.png)
+
 - **断开机械臂连接**
 
     ```C

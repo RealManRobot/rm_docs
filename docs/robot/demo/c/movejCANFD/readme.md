@@ -119,7 +119,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    运行结果如下：
 
 
-### **2. 关键代码说明**
+### **5.2 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
@@ -158,7 +158,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     disconnect_robot_arm(robot_handle);
     ```
 
-### **3. 运行结果示例**
+### **5.3 运行结果示例**
 
 运行脚本后，输出结果如下所示：
 
@@ -216,7 +216,7 @@ Joint positions:
 INFO: disconnect_robot_arm: Operation successful
 
 ```
-#### 2）运行脚本后，运行轨迹从上至下如下图所示：
+#### 运行脚本后，运行轨迹从上至下如下图所示：
 
 ![moveCANFD](moveCANFD.gif)
 
