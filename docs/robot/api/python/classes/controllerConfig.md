@@ -2,7 +2,7 @@
 
 可用于系统配置（机械臂状态、电源）等。下面是系统配置`ControllerConfig`的详细成员函数说明，包含了方法原型、参数说明、返回值说明和使用示例。
 
-## 获取控制器状态`rm_get_controller_state()`1
+## 获取控制器状态`rm_get_controller_state()`
 
 - **方法原型：**
 

@@ -265,12 +265,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/roboticArm",
               },
               {
-                text: "机械臂轨迹指令",
+                text: "机械臂轨迹控制",
                 link: "/robot/api/c/classes/movePlan",
-              },
-              {
-                text: "在线编程配置",
-                link: "/robot/api/c/classes/projectManagement",
               },
               {
                 text: "工具坐标系配置",
@@ -281,52 +277,60 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/workCoordinateConfig",
               },
               {
-                text: "初始位置配置",
-                link: "/robot/api/c/classes/armInitPosition",
-              },
-              {
-                text: "运动状态控制指令",
-                link: "/robot/api/c/classes/armMotionControl",
-              },
-              {
                 text: "机械臂状态查询",
                 link: "/robot/api/c/classes/armState",
               },
               {
-                text: "机械臂示教指令",
-                link: "/robot/api/c/classes/armTeachMove",
-              },
-              {
-                text: "末端运动参数配置",
+                text: "机械臂运动参数配置",
                 link: "/robot/api/c/classes/armTipVelocityParameters",
               },
               {
-                text: "通讯内容配置",
-                link: "/robot/api/c/classes/communicationConfig",
-              },
-              {
-                text: "控制器IO配置及查询",
-                link: "/robot/api/c/classes/controllerIOConfig",
+                text: "机械臂示教及步进运动控制",
+                link: "/robot/api/c/classes/armTeachMove",
               },
               {
                 text: "拖动示教配置",
                 link: "/robot/api/c/classes/dragTeach",
               },
               {
-                text: "末端工具IO配置",
-                link: "/robot/api/c/classes/effectorIOConfig",
+                text: "机械臂运动状态控制",
+                link: "/robot/api/c/classes/armMotionControl",
+              },
+              {
+                text: "通讯内容配置",
+                link: "/robot/api/c/classes/communicationConfig",
+              },
+              {
+                text: "系统配置",
+                link: "/robot/api/c/classes/controllerConfig",
+              },
+              {
+                text: "系统安装方式配置",
+                link: "/robot/api/c/classes/installPos",
               },
               {
                 text: "通用扩展关节配置",
                 link: "/robot/api/c/classes/expandControl",
               },
               {
+                text: "升降机构配置",
+                link: "/robot/api/c/classes/liftControl",
+              },
+              {
                 text: "末端六维力配置",
                 link: "/robot/api/c/classes/force",
               },
               {
+                text: "电子围栏和虚拟墙配置",
+                link: "/robot/api/c/classes/electronicFenceConfig",
+              },
+              {
                 text: "透传力位混合控制补偿配置",
                 link: "/robot/api/c/classes/forcePositionControl",
+              },
+              {
+                text: "全局路点管理",
+                link: "/robot/api/c/classes/globalWaypointManage",
               },
               {
                 text: "末端工具夹爪配置",
@@ -337,24 +341,40 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/classes/handControl",
               },
               {
-                text: "系统安装方式配置",
-                link: "/robot/api/c/classes/installPos",
+                text: "控制器IO配置及查询",
+                link: "/robot/api/c/classes/controllerIOConfig",
+              },
+              {
+                text: "末端工具IO配置",
+                link: "/robot/api/c/classes/effectorIOConfig",
               },
               {
                 text: "关节配置",
                 link: "/robot/api/c/classes/jointConfigSettings",
               },
               {
-                text: "升降机构配置",
-                link: "/robot/api/c/classes/liftControl",
+                text: "关节配置查询",
+                link: "/robot/api/c/classes/jointConfigRead",
               },
               {
                 text: "Modbus 配置",
                 link: "/robot/api/c/classes/modbusConfig",
               },
               {
+                text: "自碰撞安全检测配置",
+                link: "/robot/api/c/classes/selfCollision",
+              },
+              {
+                text: "在线编程文件管理",
+                link: "/robot/api/c/classes/projectManagement",
+              },
+              {
                 text: "算法接口配置",
                 link: "/robot/api/c/classes/algo",
+              },
+              {
+                text: "UDP 主动上报配置",
+                link: "/robot/api/c/classes/udpConfig",
               },
             ],
           },
@@ -620,8 +640,12 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/classes/handControl",
               },
               {
-                text: "IO控制",
-                link: "/robot/api/python/classes/ioConfig",
+                text: "控制器IO配置及查询",
+                link: "/robot/api/python/classes/controllerIOConfig",
+              },
+              {
+                text: "末端工具IO配置",
+                link: "/robot/api/python/classes/effectorIOConfig",
               },
               {
                 text: "关节配置",
