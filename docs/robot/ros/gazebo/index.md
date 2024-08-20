@@ -10,7 +10,7 @@ rm_gazebo的主要作用为帮助我们实现机械臂Moveit规划的仿真功�
 1. 了解该功能包的使用。
 2. 熟悉功能包中的文件构成及作用。
 
-源码地址：[https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo](https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo)
+代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo](https://github.com/RealManRobot/rm_robot/tree/main/rm_gazebo)
 
 ## 1.rm_gazebo功能包运行
 

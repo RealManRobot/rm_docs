@@ -104,7 +104,7 @@ uint8 dof
 `joint`：关节角度，float类型，单位：弧度。  
 `speed`：速度百分比例系数，0-100。  
 `block`：是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
-`trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
+`trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行。  
 `dof`：机械臂自由度信息。
 
 ### 2.5直线运动Movel_msg
@@ -139,7 +139,7 @@ uint8 loop
 `pose_mid`：中间位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `pose_end`：目标位姿，geometry_msgs/Pose类型，x、y、z坐标（float类型，单位：m）+四元数。  
 `speed`：速度百分比例系数，0-100。  
-`trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行
+`trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
 `block`：是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 `loop`：循环次数。
 
