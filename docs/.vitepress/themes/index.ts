@@ -84,7 +84,7 @@ export const themeConfig: DefaultTheme.Config = {
   outline: [1, 6],
   footer: {
     message: "<a class='footerStyle' href='https://beian.miit.gov.cn/'>京ICP备20031630号-2</a>",
-    copyright: "©2021 睿尔曼智能科技（北京）有限公司 版权所有",
+    copyright: `©2021 睿尔曼智能科技（北京）有限公司 版权所有<br>V 1.0.1`,
   },
   socialLinks: [{ icon: "github", link: "https://github.com/RealManRobot" }],
 };

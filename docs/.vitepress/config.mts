@@ -5,7 +5,7 @@ import { themeConfig } from "./themes";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: " ",
-  description: "睿尔曼智能科技有限公司-在线文档",
+  description: "睿尔曼智能科技有限公司-在线文档V1.0.1",
   lang: "zh-CN",
   markdown:{
     image:{
