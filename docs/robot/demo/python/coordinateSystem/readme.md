@@ -72,23 +72,15 @@ pip install -r requirements.txt
 
 3. **运行结果示例及说明**
 
-    ```python
+    ```
     current api version:  0.2.9
-    //API版本号
     Successfully connected to the robot arm: 1
-    //机械臂连接成功
     API Version:  0.2.9 
-    //API版本号
     Manually set work frame succeeded
-    //
     Update work frame succeeded
-    //
     Get work frame succeeded:  [0.30000001192092896, 0.0, 0.30000001192092896, 3.1419999599456787, 0.0, 0.0] 
-    //
     Delete work frame succeeded
-    //
     Successfully disconnected from the robot arm
-    //
     ```
 
     **运行结果说明：**
