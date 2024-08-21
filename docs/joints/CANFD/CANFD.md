@@ -9,17 +9,17 @@
 所有的查询、控制和参数修改指令均通过对一张储存于模块主控芯片内部的**内存控制表**的读写操作完成。内存控制表的基本储存单位为2字节的有符号整形数据。
 所有长度大于1字节的数据均采用低位在先的传输和储存方式，在协议解析中可配合使用c语音中的memcpy函数实现字节数据到整形数据或整形数据到字节数据的转换。
 指令类型如下：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/e4f8eced-93e8-401c-9eab-e38ce7a8d5cd.png)
+![alt text](image.png)
 
 ### 1.2协议标准
 
 关节使用CANFD的标准帧格式，只使用数据帧，远程帧无应答。CANFD协议的数据帧最长64个字节，通讯速率可达5M，CANFD协议的数据长度码如下所示。
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/dfc7b937-cad7-47bc-ba62-b45354283949.png)
+![alt text](image-1.png)
 
 #### 指令包
 
 指令包格式如下：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/521f63e6-e74d-4ca6-a902-99f9b653628f.png)
+![alt text](image-2.png)
 
 **仲裁域**：只有目标ID段需要仲裁，仲裁域ID即为模块ID，模块ID为0x00~0x1E（0~30），广播ID为0x00（0）。ID0固定为接口板使用。
 **控制域**：DLC长度，即数据域字节长度，最大位64个字节，数据长度表如上所示；BRS表示速率可变，可变为1，不可变为0；ESI，暂定为0，总线不主动报错。
@@ -28,7 +28,7 @@
 #### 应答包
 
 应答包格式如下：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/062d34e9-ab3c-44bf-b901-d19ba7ae3d95.png)
+![alt text](image-3.png)
 应答包的格式与指令包基本一致，其区别在于：
 
     若模块收到的是读指令，则返回的数据段为指定长度的数据。
@@ -36,9 +36,9 @@
     应答包的ID为指令包ID+0x100。
 
 >备注：当下发的CANFD控制帧不符合协议要求时，驱动器返回CMD\_ERR应答包，应答包格式如下所示。
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/64c5b1b7-35ac-400e-80f5-a5295cc57301.png)
+![alt text](image-4.png)
 ERR代表错误类型，错误代码如下所示：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/9468035e-6891-4e23-8c02-437f9427cae3.png)
+![alt text](image-5.png)
 
 ## 2.常用指令包
 
@@ -47,40 +47,40 @@ ERR代表错误类型，错误代码如下所示：
 当关节处于位置伺服模式下，关节进入周期性位置伺服控制阶段，控制器向各个关节模块发送位置指令帧，各个关节模块在收到指令帧之后进行相应的位置伺服控制，并将当前的位置信息、电流信息、速度信息、使能状态和错误代码通过一帧反馈帧发送给控制器。如果一个总线上有7个模块参与周期性伺服控制，那么一个控制周期之内，总线上将会产生14帧的通讯，以此降低总线负载。
 
 **位置伺服指令帧**：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/0193b223-06f9-4f88-8324-6a3c15eacf24.png)
+![alt text](image-6.png)
 
 **伺服反馈帧：**
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/b44d378b-7c47-4487-b604-f532eb375c35.png)
+![alt text](image-7.png)
 
 ### 速度伺服指令包
 
 当关节处于速度伺服模式下，关节进入周期性速度伺服控制阶段，控制器向各个关节模块发送速度指令帧，各个关节模块在收到指令帧之后进行相应的速度伺服控制，并将当前的位置信息、电流信息、速度信息、使能状态和错误代码通过一帧反馈帧发送给控制器。
 
 **速度伺服指令帧**：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/fe5023ca-25c9-4ec5-b0f6-e04d6e6157c1.png)
+![alt text](image-8.png)
 
 **伺服反馈帧：**
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/999a759b-85a0-41ce-b2ac-de9257e1bbed.png)
+![alt text](image-9.png)
 
 ### 电流伺服指令包
 
 控制关节的电流，每下发一帧电流伺服指令帧，返回一帧伺服反馈帧。
 
 **电流伺服指令帧**：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/40aba694-3f89-495b-b8fa-078d529540b0.png)
+![alt text](image-10.png)
 
 **伺服反馈帧：**
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/58108650-bf78-472f-b99d-4b93f32fe0cf.png)
+![alt text](image-11.png)
 
 ### 关节状态查询指令包
 
 周期性的查询关节的状态，为了提高总线利用率，将常用的关节数据通过一帧指令进行查询，关节收到该指令帧后，将错误代码、系统电压、系统温度、使能状态和当前位置放到一帧关节状态反馈帧内进行反馈。
 
 **关节状态查询指令帧**：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/d5ea6e35-8f7a-4d6b-9608-406e30a63810.png)
+![alt text](image-12.png)
 
 **关节状态反馈帧：**
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/014db149-a40e-4847-b17c-21d8994064fa.png)
+![alt text](image-13.png)
 
 ## 3.内存控制表
 
