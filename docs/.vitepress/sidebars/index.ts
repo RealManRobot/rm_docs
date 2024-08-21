@@ -1020,6 +1020,40 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     ],
     "/joints/": [
       {
+        text: "各系列关节详细参数",
+        collapsed: true,
+        items: [
+          {
+            text: "快速选型说明",
+            link: "joints/parameter/hardwareProduct",
+          },
+          {
+            text: "03关节规格参数",
+            link: "joints/parameter/WHJ03_M_D33_100_N",
+          },
+          {
+            text: "10B关节规格参数",
+            link: "joints/parameter/WHJ10-M-D50-80-B",
+          },
+          {
+            text: "10N关节规格参数",
+            link: "joints/parameter/WHJ10-M-D50-80-N",
+          },
+          {
+            text: "30关节规格参数",
+            link: "joints/parameter/WHJ30_S_D60_80_B",
+          },
+          {
+            text: "60关节规格参数",
+            link: "joints/parameter/WHJ60_S_D70_100_B",
+          },
+          {
+            text: "120关节规格参数",
+            link: "joints/parameter/WHJ120_M_D88_100_B",
+          },
+        ],
+      },
+      {
         text: "关节CANFD通信协议说明",
         link: "/joints/CANFD/CANFD.md",
       },

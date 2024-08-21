@@ -112,7 +112,7 @@ Successfully disconnected from the robot arm
 Both robot motions completed
 ```
 
-### **2. 代码说明**
+### **6.2 代码说明**
 
 下面是 `demo_double_robotic_arm.py` 文件的主要功能：
 

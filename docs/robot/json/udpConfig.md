@@ -94,11 +94,11 @@
 |   :--     |   :--     |   :--     |
 |`set_realtime_push`|   `string`   |   设置 UDP 机械臂状态主动上报配置。     |
 |`port`|`int`|设置广播的端口号。|
-|`cycle`|`int`|设置广播周期，单位为5ms，如参数为1则表示5ms，参数为2则表示10ms。|
+|`cycle`|`int`|设置广播周期，单位为5ms的倍数，如参数为1则表示5ms，参数为2则表示10ms。|
 |`enable`|`bool`|设置使能，是否使能主动上报。|
 |`force_coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
 |`ip`|`string`|自定义的上报目标 IP 地址。|
-|`custom`|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）。|
+|`custom`|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含：<br>joint_speed：关节速度；<br>lift_state：升降关节信息；<br>expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）。|
 
 - **输出参数**
 
@@ -113,7 +113,7 @@
 用于设置 UDP 机械臂状态主动上报配置
 
 ```json
-{"command":"set_realtime_push","cycle":100,"enable":true,"port": 8099,"force_coordinate":2,"ip":"192.168.1.223","custom":{"joint_s peed":true,"lift_state":true,"expand_state":true}}
+{"command":"set_realtime_push","cycle":100,"enable":true,"port": 8099,"force_coordinate":2,"ip":"192.168.1.223","custom":{"joint_speed":true,"lift_state":true,"expand_state":true}}
 ```
 
 **返回示例：**

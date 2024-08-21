@@ -216,7 +216,7 @@ Joint positions:
 INFO: disconnect_robot_arm: Operation successful
 
 ```
-#### 运行脚本后，运行轨迹从上至下如下图所示：
+运行脚本后，运行轨迹从上至下如下图所示：
 
 ![moveCANFD](moveCANFD.gif)
 

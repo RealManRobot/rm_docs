@@ -121,7 +121,7 @@ IO mode set successfully: IO number 4
 Successfully disconnected from the robot arm
 ```
 
-#### 6.2 代码说明
+### 6.2 代码说明
 下面是 `demo_io_control.py` 文件的主要功能：
 
 - **拖动示教**
