@@ -106,7 +106,6 @@
 |   :--     |   :--     |   :--     |
 |`set_realtime_push`|`bool`|`true` 成功  `false`  失败。|
 
-
 - **代码示例**
 
 **输入**
@@ -114,7 +113,7 @@
 用于设置 UDP 机械臂状态主动上报配置
 
 ```json
-{"command":"set_realtime_push","cycle":10,"enable":true,"port":8099,"force_coordinate":2,"ip":"192.168.1.10"}
+{"command":"set_realtime_push","cycle":100,"enable":true,"port": 8099,"force_coordinate":2,"ip":"192.168.1.223","custom":{"joint_s peed":true,"lift_state":true,"expand_state":true}}
 ```
 
 **返回示例：**
