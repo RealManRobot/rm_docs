@@ -751,9 +751,8 @@ trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，
 
 **输出**
 
-```json
 当前正在运行关节规划，数组内为当前关节角度，精度 0.001°
-```
+
 六自由度：
 
 ```json
@@ -784,14 +783,14 @@ trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，
 六自由度：
 
 ```json
-{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0]}
+{"state":"arm_current_trajectory","type":"none","data":[0,0,0,0,0,0]}
 ```
 
 七自由度：
 
 
 ```json
-{"state":"arm_current_trajectory","type":"movej","data":[0,0,0,0,0,0,0]}
+{"state":"arm_current_trajectory","type":"none","data":[0,0,0,0,0,0,0]}
 ```
 
 ## 示教指令类
