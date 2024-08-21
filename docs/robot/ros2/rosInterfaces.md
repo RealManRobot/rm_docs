@@ -5,7 +5,9 @@ rm_ros_interface功能包的主要作用为RM机械臂在ROS2的框架下运行�
 
 * 1.功能包使用：了解该功能包的使用。  
 * 2.功能包架构说明：熟悉功能包中的文件构成及作用。  
-* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。  
+* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
+
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_ros_interfaces](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_ros_interfaces)
 
 ## 1.rm_ros_interface功能包架构文件总览
 

@@ -7,6 +7,8 @@ rm_moveit2_config是实现Moveit2控制真实机械臂的功能包，该功能�
 * 2.功能包架构说明：熟悉功能包中的文件构成及作用。
 * 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
 
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_moveit2_config](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_moveit2_config)
+
 ## 1.rm_moveit2_config使用
 
 ### 1.1moveit2控制虚拟机械臂
