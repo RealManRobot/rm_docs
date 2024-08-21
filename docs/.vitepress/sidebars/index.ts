@@ -1018,4 +1018,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
     ],
+    "/joint/": [
+      {
+        text: "概述",
+        link: "/joint/CANFD/CANFD.md",
+      },
+    ]
   };
