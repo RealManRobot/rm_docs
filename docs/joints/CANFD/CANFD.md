@@ -1,4 +1,4 @@
-# 关节CANFD通信协议说明
+# <p class="hidden">CANFD: </p>关节CANFD通信协议说明
 
 ## 1.CANFD协议说明
 
@@ -282,24 +282,24 @@ ERR代表错误类型，错误代码如下所示：
 
 ### 示例1：读取ID为1的当前位置
 
-指令 = CMD\_RD；当前位置低16位地址 = 0x14，读取两个寄存器的数据；
+指令 = CMD_RD；当前位置低16位地址 = 0x14，读取两个寄存器的数据；
 
 指令包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/fb3f77e1-0508-4cbb-a95f-13f7e761a6f7.png)
+![alt text](image-18.png)
 
 应答包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/469a2855-7676-4ad3-be2c-3b578aef4b75.png)
+![alt text](image-17.png)
 
 当前位置为：position = 0x00002710/10000 = 1°
 
 ### 示例2：设置ID为1的模块目标位置为1°
 
-指令 = CMD\_WR；地址 = 0x36; 数据 = 10000 = 0x00002710；
+指令 = CMD_WR；地址 = 0x36; 数据 = 10000 = 0x00002710；
 
 **（1）正常模式：**
 
 指令包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/8cd61934-9dd8-43ad-9200-dd02f924093a.png)
+![alt text](image-16.png)
 
 应答包：
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/dc865465-a5de-4bb8-97b5-356ff39da8b1.png)
@@ -307,7 +307,7 @@ ERR代表错误类型，错误代码如下所示：
 **（2）伺服模式：**
 
 指令包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/04aaf7e1-048e-4244-ac90-15402eac2e08.png)
+![alt text](image-15.png)
 
 应答包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/38a06275-88b4-444b-b13f-198c6466de8d.png)
+![alt text](image-14.png)

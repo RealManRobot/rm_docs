@@ -1018,10 +1018,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
     ],
-    "/joint/": [
+    "/joints/": [
       {
-        text: "概述",
-        link: "/joint/CANFD/CANFD.md",
+        text: "关节CANFD通信协议说明",
+        link: "/joints/CANFD/CANFD.md",
       },
     ]
   };
