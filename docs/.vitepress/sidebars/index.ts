@@ -1025,31 +1025,31 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         items: [
           {
             text: "快速选型说明",
-            link: "joints/parameter/hardwareProduct",
+            link: "/joints/parameter/hardwareProduct.md",
           },
           {
             text: "03关节规格参数",
-            link: "joints/parameter/WHJ03_M_D33_100_N",
+            link: "/joints/parameter/WHJ03_M_D33_100_N/index.md",
           },
           {
             text: "10B关节规格参数",
-            link: "joints/parameter/WHJ10-M-D50-80-B",
+            link: "/joints/parameter/WHJ10-M-D50-80-B/index.md",
           },
           {
             text: "10N关节规格参数",
-            link: "joints/parameter/WHJ10-M-D50-80-N",
+            link: "/joints/parameter/WHJ10-M-D50-80-N/index.md",
           },
           {
             text: "30关节规格参数",
-            link: "joints/parameter/WHJ30_S_D60_80_B",
+            link: "/joints/parameter/WHJ30_S_D60_80_B/index.md",
           },
           {
             text: "60关节规格参数",
-            link: "joints/parameter/WHJ60_S_D70_100_B",
+            link: "/joints/parameter/WHJ60_S_D70_100_B/index.md",
           },
           {
             text: "120关节规格参数",
-            link: "joints/parameter/WHJ120_M_D88_100_B",
+            link: "/joints/parameter/WHJ120_M_D88_100_B/index.md",
           },
         ],
       },
