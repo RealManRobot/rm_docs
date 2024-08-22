@@ -303,7 +303,7 @@ ERR代表错误类型，错误代码如下所示：
 **（1）正常模式：**
 
 指令包：
-![alt text](image-16.png)
+![alt text](image-20.png)
 
 应答包：
 ![alt text](image-19.png)
