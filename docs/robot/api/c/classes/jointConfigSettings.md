@@ -42,7 +42,7 @@ int ret = rm_set_joint_max_speed(robot_handle,1,180);
 printf("set_joint_max_speed result:%d\n",ret);
 ```
 
-## 设置关节最大速度`rm_set_joint_max_acc()`
+## 设置关节最大加速度`rm_set_joint_max_acc()`
 
 - **方法原型：**
 
@@ -194,7 +194,7 @@ printf("rm_set_joint_drive_max_speed result:%d\n",ret);
 - **方法原型：**
 
 ```C
-int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float max_speed)
+int rm_set_joint_drive_max_acc(rm_robot_handle * handle,int joint_num,float max_speed)
 ```
 
 *可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
@@ -223,7 +223,7 @@ int rm_set_joint_drive_max_speed(rm_robot_handle * handle,int joint_num,float ma
 //设置关节驱动器2最大加速度600°/s²
 int joint_num = 2;
 float acc = 600;
-ret = rm_set_joint_drive_max_speed(robot_handle,joint_num,acc);
+ret = rm_set_joint_drive_max_acc(robot_handle,joint_num,acc);
 ```
 
 ## 设置关节最小限位(驱动器)`rm_set_joint_drive_min_pos()`
@@ -300,7 +300,7 @@ float joint = 360;
 ret = rm_set_joint_drive_max_pos(robot_handle,joint_num,joint);
 ```
 
-## 设置关节最大限位(驱动器)`rm_set_joint_en_state()`
+## 设置关节使能状态`rm_set_joint_en_state()`
 
 - **方法原型：**
 
