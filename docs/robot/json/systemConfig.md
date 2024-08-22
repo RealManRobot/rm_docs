@@ -299,7 +299,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 {"command":"set_high_speed_eth","set_state":true}
 ```
 
-### 参数保存（第二代）`set_high_speed_eth`
+### 参数保存（第二代）`save_device_info_all`
 
 - **输入参数**
 
@@ -456,7 +456,7 @@ IP地址设置失败：
 {"command":"set_wifi_ap","wifi_name":"robot","password":"12345678"}
 ```
 
-### 设置wifiSTA`set_wifi_ap`
+### 设置wifiSTA`set_wifi_sta`
 
 配置wifiSTA内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFISTA模式。
 

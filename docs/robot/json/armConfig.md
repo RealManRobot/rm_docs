@@ -141,13 +141,13 @@
 {"command":"set_arm_max_angular_acc","arm_angular_acc":true}
 ```
 
-### 初始化机械臂参数`set_arm_max_angular_acc`
+### 初始化机械臂参数`set_arm_init`
 
 - **输入参数**
 
 | 参数                      | 类型     | 说明               |
 | :------------------------ | :------- | :----------------- |
-| `set_arm_max_angular_acc` | `string` | 初始化机械臂参数。 |
+| `set_arm_init` | `string` | 初始化机械臂参数。 |
 
 - **输出参数**
 
@@ -636,7 +636,7 @@
 {"command":"set_auto_tool_frame","auto_tool_frame":true}
 ```
 
-### 手动输入工具坐标系`set_auto_tool_frame`
+### 手动输入工具坐标系`set_manual_tool_frame`
 
 ::: tip 提示
 手动输入工具坐标系：机械臂只能存储 10 个工具坐标系，若超过 10 个，则新建立工具不成功
@@ -646,7 +646,7 @@
 
 | 参数                  | 类型  | 说明                                 |
 | :-------------------- | :---- | :----------------------------------- |
-| `set_auto_tool_frame` | `int` | 自动计算工具坐标系。                 |
+| `set_manual_tool_frame` | `int` | 自动计算工具坐标系。                 |
 | `tool_name`           | `int` | 工具坐标系名称，不能超过 10 个字符。 |
 | `payload`             | `int` | 单位：g，最高不超过 5000g            |
 | position              | `int` | 质心位置，单位：mm，精度 0.001mm     |
