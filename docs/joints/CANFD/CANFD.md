@@ -306,7 +306,7 @@ ERR代表错误类型，错误代码如下所示：
 ![alt text](image-16.png)
 
 应答包：
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/1X3lE6mxGxQRnJbv/img/dc865465-a5de-4bb8-97b5-356ff39da8b1.png)
+![alt text](image-19.png)
 
 **（2）伺服模式：**
 
