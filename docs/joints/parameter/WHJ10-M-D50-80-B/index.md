@@ -1,5 +1,9 @@
 # <p class="hidden">关节：</p>WHJ10-M-D50-80-B规格参数
 
+## 10B关节实物图
+
+<div align="left"> <img src="../WHJ10-M-D50-80-B/10B--2.png" width = 300 /> </div>
+
 ## 性能参数
 
 | 参数 | 数值 |

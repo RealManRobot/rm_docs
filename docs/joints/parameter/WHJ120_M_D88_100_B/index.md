@@ -1,5 +1,9 @@
 # <p class="hidden">关节：</p>WHJ120-M-D88-100-B规格参数
 
+## 120关节实物图
+
+<div align="left"> <img src="../WHJ120_M_D88_100_B/120-2.png" width = 300 /> </div>
+
 ## 性能参数
 
 | 参数 | 数值 |

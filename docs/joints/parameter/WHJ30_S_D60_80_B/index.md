@@ -1,5 +1,10 @@
 # <p class="hidden">关节：</p>WHJ30_S_D60_80_B规格参数
 
+## 30关节实物图
+
+<div align="left"> <img src="../WHJ30_S_D60_80_B/30-2.png" width = 300 /> </div>
+
+
 ## 性能参数
 
 | 参数 | 数值 |
