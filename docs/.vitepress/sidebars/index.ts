@@ -1032,12 +1032,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/joints/parameter/WHJ03_M_D33_100_N/index.md",
           },
           {
-            text: "10B关节规格参数",
-            link: "/joints/parameter/WHJ10-M-D50-80-B/index.md",
-          },
-          {
-            text: "10N关节规格参数",
-            link: "/joints/parameter/WHJ10-M-D50-80-N/index.md",
+            text: "10系列关节规格参数",
+            link: "/joints/parameter/WHJ10/index.md",
           },
           {
             text: "30关节规格参数",
@@ -1054,7 +1050,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
-        text: "关节CANFD通信协议说明",
+        text: "关节CANFD通信协议",
         collapsed: true,
         items: [
           {
