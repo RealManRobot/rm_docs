@@ -25,7 +25,7 @@
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
-            <h2>API 2</h2>
+            <h2>API2</h2>
             <p>推荐您使用API2，其拥有了全新的架构和更丰富的接口内容。</p>
             <div class="d-flex flex-h-start flex-v-center">
                 <p>Github下载： <a href="https://github.com/RealManRobot/RM_API2" target="_blank">API2（Github）</a></p>
@@ -58,7 +58,7 @@
 <div class="wrap">
     <div class="d-flex">
         <div class="wrap-item1">
-            <h2>ROS 2</h2>
+            <h2>ROS2</h2>
             <p>当您使用ROS对机械臂进行操控时，推荐您优先使用ROS2。</p>
             <div class="d-flex flex-h-start flex-v-center">
                 <p>Github下载： <a href="https://github.com/RealManRobot/ros2_rm_robot" target="_blank">ROS2（Github）</a></p>
