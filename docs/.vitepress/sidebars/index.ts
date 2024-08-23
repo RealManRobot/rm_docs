@@ -1024,7 +1024,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         collapsed: true,
         items: [
           {
-            text: "快速选型说明",
+            text: "关节产品简述",
             link: "/joints/parameter/hardwareProduct.md",
           },
           {
