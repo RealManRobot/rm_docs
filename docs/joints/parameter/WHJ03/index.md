@@ -2,7 +2,7 @@
 
 ## 03关节示意图
 
-<div align="left"> <img src="../WHJ03_M_D33_100_N/03-2.png" width = 400 /> </div>
+<div align="left"> <img src="../WHJ03/03-2.png" width = 400 /> </div>
 
 ## 性能参数
 

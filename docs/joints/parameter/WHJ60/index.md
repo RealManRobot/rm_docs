@@ -2,7 +2,7 @@
 
 ## 60关节示意图
 
-<div align="left"> <img src="../WHJ60_S_D70_100_B/60-2.png" width = 400 /> </div>
+<div align="left"> <img src="../WHJ60/60-2.png" width = 400 /> </div>
 
 ## 性能参数
 

@@ -2,7 +2,7 @@
 
 ## 120关节示意图
 
-<div align="left"> <img src="../WHJ120_M_D88_100_B/120-2.png" width = 400 /> </div>
+<div align="left"> <img src="../WHJ120/120-2.png" width = 400 /> </div>
 
 ## 性能参数
 

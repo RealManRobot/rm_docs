@@ -2,7 +2,7 @@
 
 ## 30关节示意图
 
-<div align="left"> <img src="../WHJ30_S_D60_80_B/30-2.png" width = 400 /> </div>
+<div align="left"> <img src="../WHJ30/30-2.png" width = 400 /> </div>
 
 
 ## 性能参数
