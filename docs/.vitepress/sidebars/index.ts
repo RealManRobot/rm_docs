@@ -1055,7 +1055,21 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "关节CANFD通信协议说明",
-        link: "/joints/CANFD/CANFD.md",
+        collapsed: true,
+        items: [
+          {
+            text: "CANFD协议说明",
+            link: "/joints/CANFD/explanation.md",
+          },
+          {
+            text: "内存控制表",
+            link: "/joints/CANFD/memoryControlTable.md",
+          },
+          {
+            text: "使用示例",
+            link: "/joints/CANFD/usageDemo.md",
+          },
+        ],
       },
     ]
   };
