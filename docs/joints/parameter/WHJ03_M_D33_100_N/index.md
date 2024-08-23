@@ -1,8 +1,8 @@
 # <p class="hidden">关节：</p>WHJ03-M-D33-100-N规格参数
 
-## 03关节实物图
+## 03关节示意图
 
-<div align="left"> <img src="../WHJ03_M_D33_100_N/03-2.png" width = 300 /> </div>
+<div align="left"> <img src="../WHJ03_M_D33_100_N/03-2.png" width = 400 /> </div>
 
 ## 性能参数
 
