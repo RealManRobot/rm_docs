@@ -25,7 +25,7 @@ lspci | grep -i vga
 
 查看到Nvidia字样，则安装了Nvidia加速卡，否则将无法安装cuda环境。
 
-![alt text](nvidia_image.png)
+![alt text](../getStarted/doc/nvidia_image.png)
 
 （2）查看本机适合的显卡驱动
 
@@ -57,4 +57,4 @@ nvidia-smi
 
 出现如图详细信息展示则安装完成，可以使用GPU了。
 
-![alt text](nvidia_smi.png)
+![alt text](../getStarted/doc/nvidia_smi.png)

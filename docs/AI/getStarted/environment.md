@@ -45,7 +45,7 @@ bash Anaconda3-2021.11-Linux-x86_64.sh
 
 通过安装最后一步的交互：
 
-![alt text](image.png)
+![alt text](../getStarted/doc/image.png)
 
 或可安装完成后通过命令行
 
