@@ -1,8 +1,8 @@
-# 机械臂视觉垂直抓取V1.0
+# <p class="hidden">SDK开发指南: </p>机械臂视觉垂直抓取
 
 一种适用于RM机械臂结合视觉在桌面识别抓取物体的操作方法，最小能在桌面级抓取起小于等于1cm高度的物体。
 
-**基本方法**
+**基本方法**<br>
 其中方法包括如下步骤：
 
 1. 识别物体的位置信息，按照位置信息将夹爪先行移动到物体正上方。
@@ -10,7 +10,7 @@
 3. 识别物体的mask信息，按照物体mask信息确认夹爪偏转角度。
 4. 一次检测即可实现全部信息的检测，无需多次检测。
 
-**使用场景**
+**使用场景**<br>
 机械臂视觉垂直抓取提高了从垂直或倾斜面抓取物体的效率，优化了自动化系统的工作流程。广泛应用于生产线装配、仓储物流、书籍管理、电子产品组装及医疗设备操作等场景。
 
 **目标用户**  
@@ -21,7 +21,7 @@
 
 ## 1. 快速入门
 
-### 1.1 基础环境准备
+### 基础环境准备
 
 | 项目 | 版本 |
 |:-----|:-----|
@@ -30,7 +30,7 @@
 | Python | 3.8 |
 | pip | 24.2 |
 
-### 2.2 Python环境准备
+### Python环境准备
 
 | 依赖 | 版本 |
 |:-----|:-----|
@@ -40,69 +40,75 @@
 | Pillow | 10.4.0 |
 | scipy | 1.10.1 |
 
-1. 确保已经安装了基本环境
+（1）确保已经安装了基本环境
 
-    安装conda包管理工具和python对应环境，详细参考《[安装conda和python环境](D:/文档总结/第二版/安装conda环境/安装conda和python环境.md)》
+安装conda包管理工具和python对应环境，详细参考[安装conda和python环境](../getStarted/environment.md)
 
-2. 构建python环境
+（2）构建python环境
 
-    创建conda虚拟环境
+创建conda虚拟环境
 
-    ```bash
-    conda create --name [conda_env_name] python=3.8 -y
-    ```
+```bash
+conda create --name [conda_env_name] python=3.8 -y
+```
 
-    激活conda虚拟环境
+激活conda虚拟环境
 
-    ```bash
-    conda activate [conda_env_name]
-    ```
+```bash
+conda activate [conda_env_name]
+```
 
-    查看python版本
+查看python版本
 
-    ```bash
-    python -V
-    ```
+```bash
+python -V
+```
 
-    查看pip版本
+查看pip版本
 
-    ```bash
-    pip -V
-    ```
+```bash
+pip -V
+```
 
-    更新 pip 到最新版本
+更新 pip 到最新版本
 
-    ```bash
-    pip install -U pip
-    ```
+```bash
+pip install -U pip
+```
 
 3. 安装python环境三方包依赖
 
-    安装其他第三方依赖
+安装opencv
 
-    文档格式要求-----------------下面命令逐行说明一下
+```bash
+pip install opencv-python==4.9.0.80
+```
 
-    ```bash
-    pip install opencv-python==4.9.0.80
-    ```
+安装matplotlib
 
-    ```bash
-    pip install matplotlib==3.7.5
-    ```
+```bash
+pip install matplotlib==3.7.5
+```
 
-    ```bash
-    pip install numpy==1.24.4
-    ```
+安装numpy
 
-    ```bash
-    pip install Pillow==10.4.0
-    ```
+```bash
+pip install numpy==1.24.4
+```
 
-    ```bash
-    pip install scipy==1.10.1
-    ```
+安装pillow
 
-### 2.3 代码获取
+```bash
+pip install Pillow==10.4.0
+```
+
+安装scipy
+
+```bash
+pip install scipy==1.10.1
+```
+
+### 代码获取
 
 代码可以在[github链接](wwwwwwww)获取最新代码。
 
@@ -136,71 +142,74 @@ ret = arm.Set_Gripper_Pick_On(500, 500)
 arm.movej_p(above_object_pose)
 ```
 
-## 2.API参考
+## 2. API参考
 
 ### 计算抓取位置 vertical_catch
 
-```Python
+```python
 above_object_pose, correct_angle_pose, finally_pose = vertical_catch(mask, depth_image, color_intr, pose, 165, [0, 0, -0.25], [], [])
 ```
 
 根据提供的信息，计算出垂直抓取必须经过的三个位置。
 
-- **函数输入：**
+- 函数输入：
+  1. mask: 物体轮廓信息
+  2. depth_frame: 深度帧
+  3. color_intr: 相机内参
+  4. current_pose: 当前位姿
+  5. arm_gripper_length: 夹爪长度
+  6. vertical_rx_ry_rz: 预设的夹爪垂直的位姿
+  7. rotation_matrix: 手眼标定结果的转换矩阵
+  8. translation_vector: 手眼标定结果的平移矩阵
+  9. use_point_depth_or_mean: 是否使用平均深度还是单点深度，True：使用单点深度
+- 函数输出：
+  1. above_object_pose：物体正上方约10cm的位置
+  2. correct_angle_pose：夹爪或机械手按照物体位姿方向转动
+  3. finally_pose：最终夹取的位置
 
-1. mask: 物体轮廓信息
-2. depth_frame: 深度帧
-3. color_intr: 相机内参
-4. current_pose: 当前位姿
-5. arm_gripper_length: 夹爪长度
-6. vertical_rx_ry_rz: 预设的夹爪垂直的位姿
-7. rotation_matrix: 手眼标定结果的转换矩阵
-8. translation_vector: 手眼标定结果的平移矩阵
-9. use_point_depth_or_mean: 是否使用平均深度还是单点深度，True：使用单点深度
-
-- **函数输出：**
-
-1. above_object_pose：物体正上方约10cm的位置
-2. correct_angle_pose：夹爪或机械手按照物体位姿方向转动
-3. finally_pose：最终夹取的位置
-
-## 3.功能介绍
+## 3. 功能介绍
 
 ### 使用条件
 
 - 机械臂需要正装在桌面上，抓取物品必须放在桌面以上位置且在摄像头检测范围内。如下图参考安装：
-![机械臂正装在桌面上](机械臂正装在桌面上.png)
+
+![机械臂正装在桌面上](../developerGuide/doc/intall.png)
 
 ### 功能详解
 
 根据环境和设备信息的参数输入计算出垂直方式抓取物体的三个关键步骤点位，根据三个点位即可以发送给机械臂SDK并实施移动和抓取。
 
-- 输入参数
-
+- 输入参数：
   1. 当前环境的彩色图片、深度图片；
   2. 物体轮廓mask（需要使用其他AI SDK获取）；
   3. 收集机械臂当前位姿；
   4. 收集摄像头信息。
 
-[垂直抓取视频]（垂直抓取.mp4）
+<video width="300px" autoplay loop muted height="300px" >
+  <source src="../developerGuide/doc/verticalGrab.mp4" type="video/mp4">
+</video>
 
-- 输出参数
-  垂直抓取的三个点位。
+- 输出参数：垂直抓取的三个点位。
 
-三个点位是按照夹取物体并规避碰撞物体或桌面的形式计算而来，具体的点位信息是：（1）物体正上方10cm左右，这将有力于机械臂下爪时不会触碰到物体。（2）计算物体的长短边，判断夹取长边的转轴角度，根据机械臂当前位姿计算出转轴的最终位姿。（3）真正抓取物体的位姿，通过桌面坐标系和物体高度计算出最终夹爪下移距离，并计算出最终位姿。
+三个点位是按照夹取物体并规避碰撞物体或桌面的形式计算而来，具体的点位信息是：
+
+1. 物体正上方10cm左右，这将有力于机械臂下爪时不会触碰到物体。
+2. 计算物体的长短边，判断夹取长边的转轴角度，根据机械臂当前位姿计算出转轴的最终位姿。
+3. 真正抓取物体的位姿，通过桌面坐标系和物体高度计算出最终夹爪下移距离，并计算出最终位姿。
 
 ## 4. 开发指南
 
-**图像输入规范**  
+### 图像输入规范
 
-1. 一般采用640x480x3通道的图片作为整个项目的输入，并使用BGR作为主要的通道顺序。推荐使用opencv方式读取的图片并传到模型中。
-2. 一般采用了640x480x1通道的深度信息图片做为项目输入。
+一般采用640x480x3通道的图片作为整个项目的输入，并使用BGR作为主要的通道顺序。一般推荐使用opencv方式读取的图片并传到模型中。
 
-**长度输入规范**  
+一般采用了640x480x1通道的深度信息图片做为项目输入。
+
+### 长度输入规范
 
 本案例中所有的长度单位均是以mm为单位的。
 
-**相机内参规范**  
+### 相机内参规范
 
 相机内参规范为：
 
@@ -216,7 +225,7 @@ above_object_pose, correct_angle_pose, finally_pose = vertical_catch(mask, depth
 }
 ```
 
-**手眼标定结果规范**  
+### 手眼标定结果规范
 
 手眼标定结果规范：
 
@@ -226,6 +235,7 @@ hand_to_camera = np.array(
     [-0.9998988955501277, 0.01358205757415265, 0.0042102719255664445, 0.0435019505437101],
     [0.006974039098208998, 0.21038005709014823, 0.9775948007008847, -0.0005546366642718483],
     [0, 0, 0, 1]])
+
 ```
 
 ## 5. 常见问题解答（FAQ）
@@ -254,9 +264,9 @@ hand_to_camera = np.array(
 
 ## 6. 更新日志
 
-|更新日期|更新内容|
-|:--|:--|
-|2024.08.16|新增内容|
+|更新日期|更新内容|版本|
+|:--|:--|:--|
+|2024.08.16|新增内容|V1.0|
 
 ## 7. 版权和许可协议
 

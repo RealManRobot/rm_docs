@@ -211,11 +211,8 @@ TrackRmx.delete_model(processor)
 
 用于在**连续**的视频帧中追踪一个物体。
 
-
-[任意物品追踪](../developerGuide/doc/efb8cf86ef54320e5d7dd500e51c78a2.mp4)
-
 <video width="300px" autoplay loop muted height="300px" >
-  <source src="../developerGuide/doc/efb8cf86ef54320e5d7dd500e51c78a2.mp4" type="video/mp4">
+  <source src="../developerGuide/doc/tracking_object.mp4" type="video/mp4">
 </video>
 
 - 目标检测
@@ -270,7 +267,6 @@ TrackRmx.delete_model(processor)
 分割最终输出的结果是mask（掩膜或轮廓），根据mask可以得到物体的点位信息，比如最小外接矩形中心点，最大外接矩形中心点，物体偏转方向等图片坐标系点，再加上相机深度和相机内参信息，可以得到相机坐标系下物体的坐标点。若需要在机械臂坐标系下得到计算结果，还需要进一步根据手眼标定结果转换坐标。
 
 ## 6. 更新日志
-
 
 | 更新日期   | 更新内容 | 版本 |
 | :----------- | :--------- | :----- |

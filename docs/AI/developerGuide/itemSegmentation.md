@@ -2,20 +2,19 @@
 
 对画面内的任意物品分割，提取其轮廓信息。
 
-**功能价值和特性**
+**功能价值和特性**  
 
 - 可提示的分割任务： 模型在设计时考虑到了可提示的分割任务，使其能够根据任何给定的提示（如识别物体的空间或文本线索）生成有效的分割掩码。我们一般通过给定图像内像素点坐标信息做到该位置物体分割。
-
 - 先进的架构：Segment Anything Model 采用功能强大的图像编码器、提示编码器和轻量级掩码解码器。这种独特的架构可在分割任务中实现灵活的提示、实时掩码计算和模糊感知。
 - 本代码对SAM进行了封装与特异性适配，使用此功能，可不用训练，生成分割Mask，搭配姿态生成算法，可实现快速抓取任意物体。
-- 原始开源项目：https://segment-anything.com/
-- ![Alt text](image.png)
 
-**使用场景**
+如果想要了解更多信息，请访问：[segment](https://segment-anything.com/)
+![Alt text](../developerGuide/doc/image1.png)
+
+**使用场景**<br>
 常见使用场景包括自动标注、物体分割、提取mask等等。
 
-**目标用户**
-
+**目标用户**  <br>
 包括计算机视觉领域的研究人员、数据科学家和开发人员。这些用户通常需要高效、准确的实时目标检测解决方案。机器人开发工程师也会使用他来分割目标点位的物体，做到不需要识别训练该物体即可分割，高效快速低成本。
 
 ## 1. 快速入门
@@ -46,86 +45,93 @@
 
 1. 确保已经安装了基本环境
 
-安装Nvidia驱动，详细参考《[Nvidia显卡驱动安装](D:/文档总结/第二版/安装nvidia驱动/安装Nvidia显卡环境.md)》
+安装Nvidia驱动，详细参考[安装Nvidia显卡环境](../getStarted/nivdia.md)
 
-
-安装conda包管理工具和python对应环境，详细参考《[安装conda和python环境]()》
+安装conda包管理工具和python对应环境，详细参考[安装conda和python环境](../getStarted/environment.md)
 
 2. 构建python环境
 
-```
-conda create --name [conda_env_name] python=3.8 -y		# 创建conda虚拟环境
+创建conda虚拟环境
+
+```bash
+conda create --name [conda_env_name] python=3.8 -y
 ```
 
-```
-conda activate [conda_env_name]		# 激活虚拟环境
+激活虚拟环境
+
+```bash
+conda activate [conda_env_name]
 ```
 
-```
-python -V		# 查看python版本
+查看python版本
+
+```bash
+python -V
 ```
 
-```
-pip -V		# 查看pip版本
+查看pip版本
+
+```bash
+pip -V
 ```
 
-```
-pip install -U pip		# 更新pip到最新版本
+更新pip到最新版本
+
+```bash
+pip install -U pip
 ```
 
-安装python环境三方包依赖
+安装python环境三方包依赖、pytorch的gpu版本和cuda等深度学习加速环境
 
-安装pytorch的gpu版本和cuda等深度学习加速环境
-
-```
+```bash
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch -y
 ```
 
 安装opencv
 
-```
+```bash
 pip install opencv-python==4.10.0.84
 ```
 
 安装pyyaml
 
-```
+```bash
 pip install pyyaml==5.4.1
 ```
 
 安装matplotlib
 
-```
+```bash
 pip install matplotlib==3.7.5
 ```
 
 安装pandas
 
-```
+```bash
 pip install pandas==1.5.3
 ```
 
 安装pillow
 
-```
+```bash
 pip install Pillow==10.4.0
 ```
 
 安装scipy
 
-```
+```bash
 pip install scipy==1.10.1
 ```
 
 安装ultralytics
 
-```
+```bash
 pip install ultralytics==8.2.66
 ```
 
 ### 资源准备
 
-下载训练好的【sam.pt】权重：[下载sam模型权重](链接：https://pan.baidu.com/s/1qebYRV1qjDLZL2McMZbLPw?pwd=1234)
+下载完成训练的sam模型权重权重：[sam.pt](链接：https://pan.baidu.com/s/1qebYRV1qjDLZL2McMZbLPw?pwd=1234)
 
 ### 代码获取
 
@@ -209,10 +215,10 @@ center, mask = sam_seg.backward_handle_output(results)
 
 给定彩色图片和指定点位坐标信息，可以得到指定点位的物体的分割信息，如图，蓝色为指定点位，下图为分割内容。
 
-![物体分割](任意物品分割.jpg)
+![物体分割](../developerGuide/doc/segmentation.jpg)
 
-- 目标分割
-在图像指定点位（x\y坐标系点位）给定一个辅助点，推理并给出这个辅助点所在物体的mask（掩膜或轮廓）信息，用于定位、追踪、判断形状等等功能。
+- 目标分割<br>
+在图像指定点位（x,y坐标系点位）给定一个辅助点，推理并给出这个辅助点所在物体的mask（掩膜或轮廓）信息，用于定位、追踪、判断形状等等功能。
 
 SAM分割模型的输出是一组掩膜或轮廓，用于描绘图像中每个物体的边界。
 
