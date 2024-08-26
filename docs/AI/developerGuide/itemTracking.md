@@ -12,22 +12,22 @@ XMem 采用了阿特金森-希夫林记忆模型，将其应用于视频对象�
 - 记忆交互机制：结合短期和长期记忆模块，提供一个综合的对象分割策略。
 
 本SDK针对XMem做了特异性适配与改进，在非训练场景下应用，可以更精确的跟踪移动对象实现分割目标，帮助机械臂更准确的进行操作，提升任务鲁棒性。
-原始开源项目：https://github.com/hkchengrex/XMem
 
-**使用场景**
-追踪算法具有多种使用场景：
+如果想要了解更多信息，请访问：[XMem](https://github.com/hkchengrex/XMem)
+
+**使用场景**  
 
 - 自动标注：通过算法和技术手段，自动对图像或视频中的对象进行标记和分类的过程。XMem 采用阿特金森-希夫林记忆模型进行长期视频对象分割，在自动标注方面展现出强大的能力，广泛应用于多个领域。
 - 物体追踪：在机器人开发过程中，机器人与目标物体的交互往往不是相对距离固定的，会随着机器人本体或者目标物的移动而使得原先的定位结果不可用，我们需要一种实时的准确的定位，物品追踪在这里显的尤为重要。
 
-**目标用户**
+**目标用户**  
 
-图像识别领域的开发工程师。机器人开发工程师。
+- 图像识别领域的开发工程师
+- 机器人开发工程师
 
-## 1.快速入门
+## 1. 快速入门
 
 ### 基础环境准备
-
 
 | 项目     | 版本              |
 | :--------- | :------------------ |
@@ -38,7 +38,6 @@ XMem 采用了阿特金森-希夫林记忆模型，将其应用于视频对象�
 | pip      | 24.2              |
 
 ### Python环境准备
-
 
 | 包            | 版本     |
 | --------------- | ---------- |
@@ -52,69 +51,79 @@ XMem 采用了阿特金森-希夫林记忆模型，将其应用于视频对象�
 | pandas        | 1.5.3    |
 | Pillow        | 9.5.0    |
 
-（1）确保已经安装了基本环境
+1. 确保已经安装了基本环境
 
-安装Nvidia驱动，详细参考《[Nvidia显卡驱动安装](D:/文档总结/第二版/安装nvidia驱动/安装Nvidia显卡环境.md)》
+安装Nvidia驱动，详细参考[安装Nvidia显卡环境](../getStarted/nivdia.md)
 
-安装conda包管理工具和python对应环境，详细参考《[安装conda和python环境]()》
+安装conda包管理工具和python对应环境，详细参考[安装conda和python环境](../getStarted/environment.md)
 
-（2）构建python环境
+2. 构建python环境
 
-```
-conda create --name [conda_env_name] python=3.8 -y		# 创建conda虚拟环境
-```
+创建conda虚拟环境
 
-```
-conda activate [conda_env_name]		# 激活虚拟环境
+```bash
+conda create --name [conda_env_name] python=3.8 -y
 ```
 
-```
-python -V		# 查看python版本
+激活虚拟环境
+
+```bash
+conda activate [conda_env_name]
 ```
 
-```
-pip -V		# 查看pip版本
+查看python版本
+
+```bash
+python -V
 ```
 
-```
-pip install -U pip		# 更新pip到最新版本
+查看pip版本
+
+```bash
+pip -V
 ```
 
-（3）安装python环境三方包依赖
+更新pip到最新版本
+
+```bash
+pip install -U pip
+```
+
+3. 安装python环境三方包依赖
 
 安装pytorch的gpu版本和cuda等深度学习加速环境
 
-```
+```bash
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch -y
 ```
 
 安装opencv
 
-```
+```bash
 pip install opencv-python==4.10.0.84
 ```
 
 安装pyyaml
 
-```
+```bash
 pip install pyyaml==5.4.1
 ```
 
 安装matplotlib
 
-```
+```bash
 pip install matplotlib==3.7.5
 ```
 
 安装pandas
 
-```
+```bash
 pip install pandas==1.5.3
 ```
 
 安装pillow
 
-```
+```bash
 pip install Pillow==10.4.0
 ```
 
@@ -173,23 +182,23 @@ while True:
 
 ### 目标追踪  TrackRmx.detect
 
-```
+```python
 predict_mask = TrackRmx.detect(processor, original_image, original_mask, color_image, 1)
 ```
 
 输入已有图片和图片内的mask信息，给定需要追踪的目标图片，追踪出目标图片内物体的具体位置。
 
 - 函数输入：
-  （1）processor：加载的追踪模型。
-  （2）original_image：已有图片。
-  （3）original_mask：已有图片内的需要追踪的物体mask。
-  （4）color_image：待识别的RGB图片。
+  1. processor：加载的追踪模型。
+  2. original_image：已有图片。
+  3. original_mask：已有图片内的需要追踪的物体mask。
+  4. color_image：待识别的RGB图片。
 - 函数输出：
-  （1）predict_mask：目标图片内识别到的目标轮廓。图片为640x480x1图像，轮廓点值为255，非轮廓点值为0。
+  1. predict_mask：目标图片内识别到的目标轮廓。图片为640x480x1图像，轮廓点值为255，非轮廓点值为0。
 
 ### 清空追踪模型缓存 TrackRmx.delete_model
 
-```
+```python
 TrackRmx.delete_model(processor)
 ```
 
