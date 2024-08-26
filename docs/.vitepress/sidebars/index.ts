@@ -1020,13 +1020,13 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     ],
     "/joints/": [
       {
+        text: "关节产品简述",
+        link: "/joints/parameter/hardwareProduct.md",
+      },
+      {
         text: "各系列关节详细参数",
         collapsed: true,
         items: [
-          {
-            text: "关节产品简述",
-            link: "/joints/parameter/hardwareProduct.md",
-          },
           {
             text: "03系列关节规格参数",
             link: "/joints/parameter/WHJ03/index.md",
@@ -1070,13 +1070,13 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     ],
     "/AI/": [
       {
+        text: "概述",
+        link: "/AI/getStarted/overview.md",
+      },
+      {
         text: "快速开始",
         collapsed: true,
         items: [
-          {
-            text: "概述",
-            link: "/AI/getStarted/overview.md",
-          },
           {
             text: "安装conda和python环境",
             link: "/AI/getStarted/environment.md",
@@ -1113,5 +1113,5 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
-    ]
+    ],
   };
