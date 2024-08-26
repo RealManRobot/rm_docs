@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="wrap-item2">
-            <p>版本号：V4.3.3</p>
+            <p>版本号：V4.3.4</p>
         </div>
     </div>
 </div>
