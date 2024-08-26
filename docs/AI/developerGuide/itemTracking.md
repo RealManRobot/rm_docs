@@ -202,7 +202,12 @@ TrackRmx.delete_model(processor)
 
 用于在**连续**的视频帧中追踪一个物体。
 
-[任意物品追踪](../developerGuide/doc/tracking_object.mp4)
+
+[任意物品追踪](../developerGuide/doc/efb8cf86ef54320e5d7dd500e51c78a2.mp4)
+
+<video width="300px" autoplay loop muted height="300px" >
+  <source src="../developerGuide/doc/efb8cf86ef54320e5d7dd500e51c78a2.mp4" type="video/mp4">
+</video>
 
 - 目标检测
 
