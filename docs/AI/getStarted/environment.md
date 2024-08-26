@@ -1,6 +1,7 @@
 # 安装conda和python环境V1.0
 
-文档详细介绍了如何安装AI算法的conda包管理工具的安装方法、基本的python环境安装方式、显卡加速驱动的安装方式。此教程的主要目的是构建基础的AI开发环境，并让读者能快速上手AI调试。
+文档详细介绍了如何安装AI算法的conda包管理工具的安装方法、基本的python环境安装方式、显卡加速驱动的安装方式。
+<br>此教程的主要目的是构建基础的AI开发环境，并让读者能快速上手AI调试。
 
 **目标用户**  
 
@@ -15,10 +16,10 @@
 | 操作系统 | ubuntu20.04 |
 | 架构     | x86         |
 
-### 安装conda
+#### 安装conda
 
-算法环境大多需要conda源内的包支持，且不同算法之间的环境为避免冲突需要隔离，所以我们选择用conda来构建虚拟环境执行。
-conda可以直接帮我们安装python、pip这些基础包，这减免了本身安装的耗时。
+算法环境大多需要conda源内的包支持，且不同算法之间的环境为避免冲突需要隔离，所以选择用conda来构建虚拟环境执行。
+conda可以直接安装python、pip这些基础包，这减免了本身安装的耗时。
 
 1. 下载conda安装包
 
@@ -61,7 +62,7 @@ conda -V
 
 6. 配置conda到国内源，推荐清华源
 
-可以自定义其他源。
+> 可以自定义其他源。
 
 ```bash
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -71,15 +72,15 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --set show_channel_urls yes
 ```
 
-使源配置生效
+7. 使源配置生效
 
 ```bash
 conda update -n base -c defaults conda
 ```
 
-至此，conda环境安装完成，我们可以使用conda环境来配置和管理python环境。
+至此，conda环境安装完成，可以使用conda环境来配置和管理python环境。
 
-### 安装python
+#### 安装python
 
 1. 确认conda安装完成，使用conda配置安装python
 

@@ -1067,5 +1067,51 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
+    ],
+    "/AI/": [
+      {
+        text: "快速开始",
+        collapsed: true,
+        items: [
+          {
+            text: "概述",
+            link: "/AI/getStarted/overview.md",
+          },
+          {
+            text: "安装conda和python环境",
+            link: "/AI/getStarted/environment.md",
+          },
+          {
+            text: "安装Nvidia显卡环境",
+            link: "/AI/getStarted/nivdia.md",
+          },
+        ],
+      },
+      {
+        text: "SDK开发指南",
+        collapsed: true,
+        items: [
+          {
+            text: "垂直抓取",
+            link: "/AI/developerGuide/verticalGrab.md",
+          },
+          {
+            text: "多模态识别",
+            link: "/AI/developerGuide/multimodalRecognition.md",
+          },
+          {
+            text: "任意物品分割",
+            link: "/AI/developerGuide/itemSegmentation.md",
+          },
+          {
+            text: "任意物品追踪",
+            link: "/AI/developerGuide/itemTracking.md",
+          },
+          {
+            text: "任意物品姿态",
+            link: "/AI/developerGuide/itemPosture.md",
+          },
+        ],
+      },
     ]
   };
