@@ -34,3 +34,29 @@
 ### 详细尺寸
 
 ![alt text](<CleanShot 2024-08-21 at 18.17.31.png>)
+
+## 关节性能参数
+
+### 电机电流-输出扭矩-转速
+
+#### 曲线
+
+![alt text](<motorCurrent.png>)
+
+#### 数据
+
+![alt text](<motorCurrentData.png>)
+
+### 母线电流-输出扭矩-转速
+
+#### 曲线
+
+![alt text](<busCurrent.png>)
+
+#### 数据
+
+![alt text](<busCurrentData.png>)
+
+### 扭矩-转速曲线
+
+![alt text](<torqueSpeed.png>)

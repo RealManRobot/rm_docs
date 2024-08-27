@@ -1020,13 +1020,17 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
     ],
     "/joints/": [
       {
-        text: "关节产品简述",
-        link: "/joints/parameter/hardwareProduct.md",
+        text: "概述",
+        link: "/joints/summarize/index.md",
       },
       {
         text: "各系列关节详细参数",
         collapsed: true,
         items: [
+          {
+            text: "WHJ关节简述",
+            link: "/joints/parameter/hardwareProduct.md",
+          },
           {
             text: "03系列关节规格参数",
             link: "/joints/parameter/WHJ03/index.md",
