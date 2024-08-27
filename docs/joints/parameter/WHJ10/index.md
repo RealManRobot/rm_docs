@@ -69,3 +69,19 @@
 ### 详细尺寸
 
 ![alt text](<CleanShot 2024-08-21 at 18.03.21.png>)
+
+## 关节模组测试图表
+
+> 10N和10B关节模组测试图表一致
+
+### 母线电流-输出扭矩-转速曲线数据
+
+![alt text](<busCurrent.png>)
+
+### 扭矩-转速曲线
+
+![alt text](<torqueSpeed.png>)
+
+### 电机电流-输出扭矩-转速曲线数据
+
+![alt text](<motorCurrent.png>)
