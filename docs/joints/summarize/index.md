@@ -49,4 +49,4 @@
 
 1. 咨询微焊一体化关节产品相关问题，请发送邮件至官方邮箱: sales@realman-robot.com
 2. 微焊一体化关节产品的最新资讯请关注：官方微信公众号
-  ![alt text](公众号.jpg)
+  ![alt text](qrcode.jpg)
