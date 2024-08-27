@@ -47,3 +47,11 @@
     ```C++
     float rm_joint_status_t::joint_voltage[ARM_DOF]
     ```
+
+- ### 当前关节速度`joint_speed`
+
+    精度0.01RPM。
+
+    ```C++
+    float rm_joint_status_t::joint_speed[ARM_DOF]
+    ```

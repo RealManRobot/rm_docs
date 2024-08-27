@@ -44,7 +44,11 @@ handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
 # 设置使能UDP上报配置，周期为500ms，端口号8089，系统外受力坐标系为传感器坐标系，上报目标IP地址为"192.168.1.104"
-config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104")
+custom = rm_udp_custom_config()
+custom.joint_speed = 0
+custom.lift_state = 0
+custom.expand_state = 0
+config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104", custom)
 print(arm.rm_set_realtime_push(config))
 
 arm.rm_delete_robot_arm()
@@ -132,8 +136,12 @@ handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
 # 设置UDP端口，广播周期500ms，使能，广播端口号8089，力数据坐标系使用传感器坐标系，上报目标IP为"192.168.1.104"
-# 用户需根据实际情况修改这些配置
-config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104")
+# 自定义上报项均设置关闭，用户可根据实际情况修改这些配置
+custom = rm_udp_custom_config()
+custom.joint_speed = 0
+custom.lift_state = 0
+custom.expand_state = 0
+config = rm_realtime_push_config_t(100, True, 8089, 0, "192.168.1.104", custom)
 print(arm.rm_set_realtime_push(config))
 print(arm.rm_get_realtime_push())
 

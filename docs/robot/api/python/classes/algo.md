@@ -927,3 +927,49 @@ algo_handle = Algo(arm_model, force_type)
 current_joint = [0, 0, -60, 0, 60, 0]
 algo_handle.rm_algo_cartesian_tool(current_joint, 0.01, 0, 0.01)
 ```
+
+## 计算Pos和Rot沿某坐标系有一定的位移和旋转角度后，所得到的位姿数据`rm_algo_PoseMove()`
+
+- **方法原型：**
+
+```python
+rm_algo_PoseMove(self, poseCurrent: list[float], deltaPosAndRot: list[float], frameMode: int) -> list[float]
+```
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `poseCurrent`  |    `list[float]`    |    当前时刻位姿（欧拉角形式）    |
+|   `deltaPosAndRot`  |    `list[float]`    |    移动及旋转数组，位置移动（单位：m），旋转（单位：度）    |
+|   `frameMode`  |    `int`    |    坐标系模式选择 0:Work（work即可任意设置坐标系），1:Tool    |
+
+- **返回值:**
+
+`list[float]`: 平移旋转后的位姿 
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+arm_model = rm_robot_arm_model_e.RM_MODEL_RM_65_E  # RM_65机械臂
+force_type = rm_force_type_e.RM_MODEL_RM_B_E  # 标准版
+# 初始化算法的机械臂及末端型号
+algo_handle = Algo(arm_model, force_type)
+
+# 设置当前使用的工具坐标系
+frame = rm_frame_t("", [0.01, 0.01, 0.01, 0.5, 0.5, 0.5], 1, 0, 0, 0)
+algo_handle.rm_algo_set_toolframe(frame)
+
+# 当前位姿
+current_joint = [0,-30,90,30,90,0]
+poseCurrent = algo_handle.rm_algo_forward_kinematics(current_joint)
+print("当前位姿:", poseCurrent)
+
+# 计算变化后的位姿
+deltaPosAndRot = [0.01,0.01,0.01,20,20,20]
+afterPosAndRot = algo_handle.rm_algo_PoseMove(poseCurrent, deltaPosAndRot,1)
+print("平移旋转后的位姿:", afterPosAndRot)
+```
+

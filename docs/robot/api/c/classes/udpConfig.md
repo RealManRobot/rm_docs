@@ -40,6 +40,9 @@ config.enable = true;
 config.force_coordinate = 0;
 config.port = 8089;
 strcpy(config.ip, "192.168.1.108");
+config.custom_config.expand_state = 0;
+config.custom_config.joint_speed = 1;
+config.custom_config.lift_state = 1;
 int ret = rm_set_realtime_push(robot_handle, config);
 printf("rm_set_realtime_push result %d\n",ret);
 ```

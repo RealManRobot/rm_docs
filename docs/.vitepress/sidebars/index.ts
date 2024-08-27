@@ -503,12 +503,24 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/struct/peripheralReadWriteParams",
               },
               {
-                text: "UDP主动上报",
-                link: "/robot/api/c/struct/realtimeArmJointState",
+                text: "UDP主动上报自定义项",
+                link: "/robot/api/c/struct/udpCustomConfig",
               },
               {
                 text: "UDP主动上报接口配置",
                 link: "/robot/api/c/struct/realtimePushConfig",
+              },
+              {
+                text: "UDP主动上报扩展关节状态",
+                link: "/robot/api/c/struct/udpExpandState",
+              },
+              {
+                text: "UDP主动上报升降机构状态",
+                link: "/robot/api/c/struct/udpLiftState",
+              },
+              {
+                text: "UDP机械臂实时状态推送",
+                link: "/robot/api/c/struct/realtimeArmJointState",
               },
               {
                 text: "算法库版本",
@@ -814,12 +826,24 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/python/struct/quat",
               },
               {
-                text: "机械臂实时状态推送",
-                link: "/robot/api/python/struct/realtimeArmJointState",
+                text: "UDP主动上报自定义项",
+                link: "/robot/api/python/struct/udpCustomConfig",
               },
               {
-                text: "UDP主动上报机械臂状态",
+                text: "UDP主动上报机械臂配置",
                 link: "/robot/api/python/struct/realtimePushConfig",
+              },
+              {
+                text: "UDP主动上报扩展关节状态",
+                link: "/robot/api/python/struct/udpExpandState",
+              },
+              {
+                text: "UDP主动上报升降机构状态",
+                link: "/robot/api/python/struct/udpLiftState",
+              },
+              {
+                text: "UDP机械臂实时状态推送",
+                link: "/robot/api/python/struct/realtimeArmJointState",
               },
               {
                 text: "句柄",

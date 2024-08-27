@@ -762,6 +762,42 @@ rm_pose_t pose = rm_algo_cartesian_tool(joint,0.01f,0.01f,0.01f);
 printf("POSE: %f, %f, %f, %f, %f, %f\n",pose.position.x,pose.position.y,pose.position.z,pose.euler.rx ,pose.euler.ry ,pose.euler.rz );
 ```
 
+## 计算Pos和Rot沿某坐标系有一定的位移和旋转角度后，所得到的位姿数据`rm_algo_cartesian_tool()`
+
+- **方法原型：**
+
+```C
+rm_pose_t rm_algo_PoseMove(rm_robot_handle *handle,rm_pose_t poseCurrent, const float *deltaPosAndRot, int frameMode);
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_pose_t](../struct/pose)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂控制句柄。    |
+|   `poseCurrent`  |    输入参数    |    当前时刻位姿（欧拉角形式）。    |
+|   `deltaPosAndRot`  |    输入参数    |    移动及旋转数组，位置移动（单位：m），旋转（单位：度）。    |
+|   `frameMode`  |    输入参数    |    坐标系模式选择 0:Work（work即可任意设置坐标系），1:Tool。    |
+
+- **返回值:**
+
+返回[rm_pose_t](../struct/pose)结构体中位姿，表示平移旋转后的位姿。
+
+- **使用示例**
+  
+```C
+// 有当前角度正解得到当前位姿
+float joint[6] = {0,-30,90,30,90,0, 0};
+rm_pose_t target = rm_algo_forward_kinematics(handle, joint);
+// 计算移动后的位姿
+rm_pose_t afterPosAndRot;
+float deltaPosAndRot[6] = {0.01,0.01,0.01,20,20,20};
+afterPosAndRot = rm_algo_PoseMove(target, deltaPosAndRot,1);
+printf("POSE: %f, %f, %f, %f, %f, %f\n",afterPosAndRot.position.x,afterPosAndRot.position.y,afterPosAndRot.position.z,afterPosAndRot.euler.rx ,afterPosAndRot.euler.ry ,afterPosAndRot.euler.rz );
+```
+
 ## 末端位姿转成工具位姿`rm_algo_end2tool()`
 
 - **方法原型：**
