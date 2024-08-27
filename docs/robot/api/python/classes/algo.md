@@ -134,7 +134,7 @@ rm_algo_get_curr_workframe(self) -> dict[str, any]:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工作坐标系字典，键为rm_frame_t结构体的字段名称。    |
+|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工作坐标系字典，<br>键为rm_frame_t结构体的字段名称。    |
 
 *可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
@@ -199,7 +199,7 @@ rm_algo_get_curr_toolframe(self) -> dict[str, any]:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工具坐标系字典，键为rm_frame_t结构体的字段名称。    |
+|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工具坐标系字典，<br>键为rm_frame_t结构体的字段名称。    |
 
 *可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
@@ -512,7 +512,7 @@ rm_algo_forward_kinematics(self, joint: list[float], flag: int = 1) -> list[floa
 
 - **返回值:**
 
-list[float]: 解得目标位姿列表。
+`list[float]`: 解得目标位姿列表。
 
 - **使用示例**
   
@@ -545,9 +545,7 @@ rm_algo_euler2quaternion(self, eul: list[float]) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    四元数列表[w,x,y,z]。    |
+`list[float]`: 四元数列表[w,x,y,z]
 
 - **使用示例**
   
@@ -579,9 +577,7 @@ rm_algo_quaternion2euler(self, quat: list[float]) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    欧拉角列表[rx.ry,rz]，单位：rad。    |
+`list[float]`: 欧拉角列表[rx.ry,rz]，单位：rad。
 
 - **使用示例**
   
@@ -682,9 +678,7 @@ rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    解得目标位姿。    |
+`list[float]`: 解得目标位姿。
 
 - **使用示例**
   
@@ -723,9 +717,7 @@ rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基坐标系在工作坐标系下的位姿。    |
+`list[float]`: 基坐标系在工作坐标系下的位姿。
 
 - **使用示例**
   
@@ -765,9 +757,7 @@ rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    工作坐标系在基坐标系下的位姿。    |
+`list[float]`: 工作坐标系在基坐标系下的位姿。
 
 - **使用示例**
   
@@ -804,11 +794,7 @@ rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> list[float]:
 |   `eu_end`  |    `rm_pose_t`    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
 |   `flag`  |    `int`    |    选择姿态表示方式，默认欧拉角表示姿态;- 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z];- 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]。    |
 
-- **返回值:**
-
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基于工作坐标系和工具坐标系的末端位姿。    |
+`list[float]`: 基于工作坐标系和工具坐标系的末端位姿。
 
 - **使用示例**
   
@@ -844,11 +830,7 @@ rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> list[float]:
 |   `eu_tool`  |    `rm_pose_t`    |    基于工作坐标系和工具坐标系的末端位姿。    |
 |   `flag`  |    `int`    |    选择姿态表示方式，默认欧拉角表示姿态;- 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z];- 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]。    |
 
-- **返回值:**
-
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
+`list[float]` 基于世界坐标系和默认工具坐标系的末端位姿。
 
 - **使用示例**
   
@@ -889,9 +871,7 @@ rm_algo_RotateMove(self, curr_joint: list[float], rotate_axis: int, rotate_angle
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    目标位姿。    |
+`list[float]`:目标位姿。
 
 - **使用示例**
   
@@ -931,9 +911,7 @@ rm_algo_cartesian_tool(self, curr_joint: list[float], move_lengthx: float, move_
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    目标位姿。    |
+`list[float]`:目标位姿。
 
 - **使用示例**
   
