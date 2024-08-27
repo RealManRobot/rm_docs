@@ -1,4 +1,4 @@
-# 安装conda和python环境V1.0
+# <p class="hidden">快速开始：</p>安装conda和python环境 V1.0
 
 文档详细介绍了如何安装AI算法的conda包管理工具的安装方法、基本的python环境安装方式、显卡加速驱动的安装方式。
 <br>此教程的主要目的是构建基础的AI开发环境，并让读者能快速上手AI调试。
