@@ -11,7 +11,6 @@
 | `set_lift_speed` |   `string`   | 设置升降机构速度指令。           |
 | `speed` |   `int`   | 速度百分比，-100~100。speed<0：升降机构向下运动；speed>0：升降机构向上运动；speed=0：升降机构停止运动。          |
 
-
 - **输出参数**
 
 | 参数        | 类型   | 说明                                  |
@@ -20,7 +19,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 控制升降机构以50速比运动。
 
@@ -28,14 +27,16 @@
 {"command":"set_lift_speed","speed":50}
 ```
 
-**输出**
+**输出**  
 
 设置成功
 
 ```json
-{"command":"set_lift_speed","set_state":true}
+{
+    "command": "set_lift_speed",
+    "set_state": true
+}
 ```
-
 
 ## 位置闭环控制`set_lift_height`
 
@@ -49,9 +50,7 @@
 | `height` |   `int`   | 目标高度，单位mm，范围：0~2600。          |
 | `speed` |   `int`   | 速度百分比，1-100。          |
 
-
 - **输出参数**
-
 
 | 参数        | 类型   | 说明                                  |
 | :---------- | :----- | :------------------------------------ |
@@ -59,7 +58,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 控制升降机构以50速比运动运动到1m位置
 
@@ -67,15 +66,18 @@
 {"command":"set_lift_height","height":1000,"speed":50}
 ```
 
-**输出**
+**输出**  
 
 成功到位
 
-
 ```json
-{"device":3,"state":"current _trajectory_state","trajectory_connect":0,"trajectory_state":true}
+{
+    "device": 3,
+    "state": "current _trajectory_state",
+    "trajectory_connect": 0,
+    "trajectory_state": true
+}
 ```
-
 
 ## 获取升降机构状态`get_lift_state`
 
@@ -84,7 +86,6 @@
 | 参数            | 类型 | 说明                     |
 | :-------------- | :--- | :----------------------- |
 | `get_lift_state` |   `string`   | 获取升降机构状态。           |
-
 
 - **输出参数**
 
@@ -97,21 +98,26 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取升降机构状态
-
 
 ```json
 {"command":"get_lift_state"}
 ```
 
-**输出**
+**输出**  
 
 成功到位
 
-
 ```json
-{"current":2554,"en_flag":"1","err_flag":"0","height":0,"joint_id":1,"mode":0,"state":"lift_state"}
+{
+    "current": 2554,
+    "en_flag": "1",
+    "err_flag": "0",
+    "height": 0,
+    "joint_id": 1,
+    "mode": 0,
+    "state": "lift_state"
+}
 ```
-

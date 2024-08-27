@@ -18,31 +18,25 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
+
+实现：查询控制器状态。
 
 ```json
-实现：查询控制器状态。
 { "command": "get_controller_state" }
 ```
 
-**输出**
+**输出**  
 
-```json
-//反馈控制器状态
-//电压：24v，
-//电流：1.5A
-//温度：42℃
-//控制器错误标志 0，
-//电压、电流和温度的精度均为 0.001。
-```
+电压、电流和温度的精度均为 0.001。
 
 ```json
 {
-  "state": "controller_state",
-  "voltage": 24000,
-  "current": 1500,
-  "temperature": 42000,
-  "err_flag": 0
+  "state": "controller_state",    //反馈控制器状态
+  "voltage": 24000,               //电压：24v，
+  "current": 1500,                //电流：1.5A
+  "temperature": 42000,           //温度：42℃
+  "err_flag": 0                  //控制器错误标志 0，
 }
 ```
 
@@ -59,15 +53,12 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
+说明：控制机械臂上电。
 
 ```json
-//说明：控制机械臂上电。
-{
-    "command":"set_arm_power",
-    "arm_power":1
-}
+{"command":"set_arm_power","arm_power":1}
 ```
 
 **输出**
@@ -89,17 +80,19 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
+
+说明：查询机械臂电源状态。
 
 ```json
-说明：查询机械臂电源状态。
 {"command":"get_arm_power_state"}
 ```
 
-**输出**
+**输出**  
+
+上电状态（1-上电状态，0断电状态）。
 
 ```json
-上电状态（1-上电状态，0断电状态）。
 {
     "state": "arm_power_state",
     "power_state": 1
@@ -124,10 +117,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
+
+说明：查询机械臂软件版本。
 
 ```json
-说明：查询机械臂软件版本。
 {"command":"get_arm_software_version"}
 ```
 
@@ -147,8 +141,6 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 }
 ```
 
-
-
 ### 查询控制器的累计运行时间`get_system_runtime`
 
 查询控制器自出厂以来，累计的运行时间。
@@ -162,17 +154,25 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 - **代码示例**
 
 **输入**
+
 说明：查询系统运行时间。
 
 ```json
 {"command":"get_system_runtime"}
 ```
 
-**输出**
+**输出**  
+
 若系统正常，则返回运行时间。
 
 ```json
-{"command":"get_system_runtime","day":0,"hour":0,"min":0,"sec":0}
+{
+    "command": "get_system_runtime",
+    "day": 0,
+    "hour": 0,
+    "min": 0,
+    "sec": 0
+}
 ```
 
 ### 清零控制器的累计运行时间`clear_system_runtime`
@@ -187,7 +187,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：清零系统运行时间。
 
@@ -195,12 +195,14 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 {"command":"clear_system_runtime"}
 ```
 
-**输出**
-
+**输出**  
 清除成功（true-清除成功，false-清除失败）。
 
 ```json
-{"command":"clear_system_runtime","clear_state":true}
+{
+    "command": "clear_system_runtime",
+    "clear_state": true
+}
 ```
 
 ### 查询关节的累计转动角度`get_joint_odom`
@@ -215,26 +217,47 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：查询关节的累计转动角度。
-
 
 ```json
 {"command":"get_joint_odom"}  
 ```
 
-**输出**
+**输出**  
 
 若指令正确，返回六自由度各关节累计的转动角度。
 
 ```json
-{"command":"get_joint_odom","odom":[1000,2000,3000,4000,5000,6000]}
+{
+    "command": "get_joint_odom",
+    "odom": [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000,
+        6000
+    ]
+}
 ```
+
 若指令正确，返回七自由度各关节累计的转动角度。
 
 ```json
-{"command":"get_joint_odom","odom":[1000,2000,3000,4000,5000,6000,7000]}
+{
+    "command": "get_joint_odom",
+    "odom": [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000,
+        6000,
+        7000
+    ]
+}
 ```
 
 ### 清零关节的累计转动角度`clear_joint_odom`
@@ -249,7 +272,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：清零关节累计转动的角度。
 
@@ -261,7 +284,18 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 清除成功（true-清除成功，false-清除失败）。
 
 ```json
-{"command":"clear_joint_odom","clear_state":true}
+{
+    "command": "get_joint_odom",
+    "odom": [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000,
+        6000,
+        7000
+    ]
+}
 ```
 
 ### 设置高速网口（第二代）`set_high_speed_eth`
@@ -285,18 +319,21 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
   {"command":"set_high_speed_eth","mode":0}
 ```
 
-**输出**
+**输出**  
 
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"set_high_speed_eth","set_state":true}
+{
+    "command": "set_high_speed_eth",
+    "set_state": true
+}
 ```
 
 ### 参数保存（第二代）`save_device_info_all`
@@ -309,7 +346,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：保存所有参数
 
@@ -317,12 +354,15 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 {"command":"save_device_info_all"}
 ```
 
-**输出**
+**输出**  
 
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"save_device_info_all","model":true}
+{
+    "command": "save_device_info_all",
+    "model": true
+}
 ```
 
 ### 设置有线网IP地址（第三代）`set_NetIP`
@@ -339,7 +379,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：配置有线网口 IP 地址为 192.168.1.18，子网掩码为255.255.255.0，网关地址192.168.1.1。
 
@@ -347,18 +387,24 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 {"command":"set_NetIP","ip":"192.168.1.18","netmask":"255.255.255.0","gw":"192.168.1.1"}
 ```
 
-**输出**
+**输出**  
 
 IP地址设置成功：
 
 ```json
-{"command":"set_NetIP","status":true}
+{
+    "command": "set_NetIP",
+    "status": true
+}
 ```
+
 IP地址设置失败：
 
-
 ```json
-{"command":"set_NetIP","status":false}
+{
+    "command": "set_NetIP",
+    "status": false
+}
 ```
 
 ### 清除系统错误`clear_system_err`
@@ -371,7 +417,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 用于手动清除系统错误，如果不手动清除，错误将一直保留，直到新的运动指令下发则会自动清除
 
@@ -379,19 +425,24 @@ IP地址设置失败：
  {"command":"clear_system_err"} 
 ```
 
-**输出**
+**输出**  
 
 清除系统错误成功。
 
 ```json
-{"command":"clear_system_err","clear_state":true}
+{
+    "command": "clear_system_err",
+    "clear_state": true
+}
 ```
 
 清除系统错误失败。
 
-
 ```json
-{"command":"clear_system_err","clear_state":false}
+{
+    "command": "clear_system_err",
+    "clear_state": false
+}
 ```
 
 ### 查询机械臂软件信息`get_arm_software_info`
@@ -417,7 +468,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询机械臂软件信息。
 
@@ -425,12 +476,28 @@ IP地址设置失败：
 {"command":"get_arm_software_info"} 
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"Product_version":"RM65-BI","algorithm_info":{"version":"1.2.3"},"command":"arm_software_info","ctrl_info":{"build_time":"2023/12/13 20:58:10","version":"V1.4.6"},"dynamic_info":{"model_version":"1"},"plan_info":{"build_time":"2023/12/13 20:58:24","version":"V1.4.6"}}
+{
+    "Product_version": "RM65-BI",
+    "algorithm_info": {
+        "version": "1.2.3"
+    },
+    "command": "arm_software_info",
+    "ctrl_info": {
+        "build_time": "2023/12/13 20:58:10",
+        "version": "V1.4.6"
+    },
+    "dynamic_info": {
+        "model_version": "1"
+    },
+    "plan_info": {
+        "build_time": "2023/12/13 20:58:24",
+        "version": "V1.4.6"
+    }
+}
 ```
-
 
 ## 通讯配置
 
@@ -448,7 +515,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置wifiAP内容，wifi名称：robot，连接密码：12345678
 
@@ -468,7 +535,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置wifiSTA内容，目标路由器名称：robot，路由器密码：12345678。
 
@@ -488,10 +555,9 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置USB波特率为460800。
-
 
 ```json
 {"command":"set_usb","baudrate":460800}
@@ -509,10 +575,9 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置RS485波特率为460800。
-
 
 ```json
 {"command":"set_RS485","baudrate":460800}
@@ -531,7 +596,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置高速网口网络IP。
 
@@ -539,13 +604,15 @@ IP地址设置失败：
 {"command":"set_high_ethernet","ip":"192.168.1.18","mask":"255.255.255.0","gateway":"192.168.1.1"}
 ```
 
-**输出**
+**输出**  
 
 设置成功（true-设置成功，false-设置失败）。
 
-
 ```json
-{"command":"set_high_ethernet","state":true}
+{
+    "command": "set_high_ethernet",
+    "state": true
+}
 ```
 
 ### 查询高速网口IP（第二代）`get_high_ethernet`
@@ -567,19 +634,24 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
-//获取高速网口网络配置。
-
+获取高速网口网络配置。
 
 ```json
 {"command":"get_high_ethernet"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_high_ethernet","mask":"255.255.255.0","ip":"192.168.1.20","gateway":"192.168.1.1","mac":"11:22:33:44:55:66"}
+{
+    "command": "get_high_ethernet",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.20",
+    "gateway": "192.168.1.1",
+    "mac": "11:22:33:44:55:66"
+}
 ```
 
 ### 查询有线网卡网络信息（第三代）`get_wired_net`
@@ -589,7 +661,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_wired_net` | `string` |获取有线网卡信息，未连接有线网卡则会返回无效数据。|
-
 
 - **输出参数**
 
@@ -601,19 +672,23 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询有线网卡网络信息。
-
 
 ```json
 {"command":"get_wired_net"}   
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_wired_net","mask":"255.255.255.0","ip":"192.168.1.18","mac":"11:22:33:44:55:66"}
+{
+    "command": "get_wired_net",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.18",
+    "mac": "11:22:33:44:55:66"
+}
 ```
 
 ### 查询无线网卡网络信息（第三代）`get_wifi_net`
@@ -638,21 +713,28 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询无线网卡网络信息。
-
 
 ```json
 {"command":"get_wifi_net"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_wifi_net","mode":"ap","mask":"255.255.255.0","ip":"192.168.1.18","mac":"11:22:33:44:55:66","ssid":"realman_ap","password":"12345678","channel":6}
+{
+    "command": "get_wifi_net",
+    "mode": "ap",
+    "mask": "255.255.255.0",
+    "ip": "192.168.1.18",
+    "mac": "11:22:33:44:55:66",
+    "ssid": "realman_ap",
+    "password": "12345678",
+    "channel": 6
+}
 ```
-
 
 ### 恢复网络设置（第三代）`set_net_default`
 
@@ -666,7 +748,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 网络恢复默认设置
 
@@ -674,19 +756,24 @@ IP地址设置失败：
 {"command":"set_net_default"} 
 ```
 
-**输出**
+**输出**  
 
 配置成功
 
-
 ```json
-{"command":"set_net_default","net_default_state":true}
+{
+    "command": "set_net_default",
+    "net_default_state": true
+}
 ```
+
 配置失败：
 
-
 ```json
-{"command":"set_net_default","net_default_state":false}
+{
+    "command": "set_net_default",
+    "net_default_state": false
+}
 ```
 
 ### 关闭wifi功能（第三代）`set_wifi_close`
@@ -701,7 +788,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 配置关闭wifi功能。
 
@@ -709,18 +796,24 @@ IP地址设置失败：
 {"command":"set_wifi_close"} 
 ```
 
-**输出**
+**输出**  
 
 配置成功：
 
 ```json
-{"command":"set_wifi_close","wifi_close_state":true}
+{
+    "command": "set_wifi_close",
+    "wifi_close_state": true
+}
 ```
+
 配置失败：
 
-
 ```json
-{"command":"set_wifi_close","wifi_close_state":false}
+{
+    "command": "set_wifi_close",
+    "wifi_close_state": false
+}
 ```
 
 ## 查询机械臂状态信息
@@ -735,7 +828,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：查询机械臂关节角度。
 
@@ -743,18 +836,39 @@ IP地址设置失败：
 {"command":"get_joint_degree"}
 ```
 
-**输出**
+**输出**  
 
 反馈六自由度机械臂关节角度，关节精度：0.001°。
 
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60]}
+{
+    "state": "joint_degree",
+    "joint": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60
+    ]
+}
 ```
+
 反馈七自由度机械臂关节角度，关节精度：0.001°。
 
-
 ```json
-{"state":"joint_degree","joint":[10,20,30,40,50,60,70]}
+{
+    "state": "joint_degree",
+    "joint": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70
+    ]
+}
 ```
 
 ### 一次性查询机械臂所有状态信息`get_arm_all_state`
@@ -764,7 +878,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_arm_all_state` | `string` |获取机械臂所有信息。|
-
 
 - **输出参数**
 
@@ -778,7 +891,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 说明：一次性查询机械臂所有信息。
 
@@ -786,20 +899,113 @@ IP地址设置失败：
 {"command":"get_arm_all_state"}
 ```
 
-**输出**
+**输出**  
 
 反馈六自由度机械臂所有信息。
 
 ```json
-{"state":"arm_all_state","all_state":{"temperature":[21,22,23,24,25,26],"current":[11,12,13,14,15,16],"voltage":[31,32,33,34,35,36],"err_flag":[1,2,3,4,5,6],"en_flag":[1,1,1,1,1,1],"sys_err":0}}
+{
+    "state": "arm_all_state",
+    "all_state": {
+        "temperature": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+        ],
+        "current": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "voltage": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+        ],
+        "err_flag": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "en_flag": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "sys_err": 0
+    }
+}
 ```
+
 反馈七自由度机械臂所有信息。
 
-
 ```json
-{"state":"arm_all_state","all_state":{"temperature":[21,22,23,24,25,26,27],"current":[11,12,13,14,15,16,17],"voltage":[31,32,33,34,35,36,37],"err_flag":[1,2,3,4,5,6,7],"en_flag":[1,1,1,1,1,1],"sys_err":0}}
+{
+    "state": "arm_all_state",
+    "all_state": {
+        "temperature": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+        ],
+        "current": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+        ],
+        "voltage": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+        ],
+        "err_flag": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "en_flag": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "sys_err": 0
+    }
+}
 ```
-
 
 ### 查询轨迹规划计数`get_arm_plan_num`
 
@@ -808,7 +1014,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_arm_plan_num` | `string` |获取机械臂轨迹规划计数。|
-
 
 - **输出参数**
 
@@ -820,24 +1025,30 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 反馈机械臂所有信息
-
 
 ```json
 {"command":"get_arm_plan_num"}
 ```
 
-**输出**
+**输出**  
 
 规划完成第三段轨迹，轨迹规划中不包含循环指令
 
-
 ```json
-{"loop_cont":[],"loop_num":[],"plan_num":3,"state":"arm_plan_num"}
-```
+{
+    "loop_cont": [
 
+    ],
+    "loop_num": [
+
+    ],
+    "plan_num": 3,
+    "state": "arm_plan_num"
+}
+```
 
 ### 查询控制器RS485模式（第三代）`get_controller_RS485_mode`
 
@@ -846,7 +1057,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_controller_RS485_mode` | `string` |查询控制器RS485模式。|
-
 
 - **输出参数**
 
@@ -858,21 +1068,24 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询控制器RS485模式。
-
 
 ```json
 {"command":"get_controller_RS485_mode"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_controller_RS485_mode","controller_RS485_mode":1,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_controller_RS485_mode",
+    "controller_RS485_mode": 1,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```
-
 
 ### 查询工具端RS485模式（第三代）`get_tool_RS485_mode`
 
@@ -892,22 +1105,24 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询工具端RS485模式。
-
 
 ```json
 {"command":"get_tool_RS485_mode"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_tool_RS485_mode","tool_RS485_mode":0,"baudrate":460800,"modbus_timeout":1}
+{
+    "command": "get_tool_RS485_mode",
+    "tool_RS485_mode": 0,
+    "baudrate": 460800,
+    "modbus_timeout": 1
+}
 ```
-
-
 
 ## 控制器IO配置
 
@@ -937,7 +1152,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置数字IO模式。
 
@@ -945,18 +1160,24 @@ IP地址设置失败：
 {"command":"set_IO_mode","IO_Num":1,"IO_mode":0}
 ```
 
-**输出**
+**输出**  
 
 配置成功：
 
 ```json
-{"command":"set_IO_mode","set_state":true}
+{
+    "command": "set_IO_mode",
+    "set_state": true
+}
 ```
+
 配置失败：
 
-
 ```json
-{"command":"set_IO_mode","set_state":false}
+{
+    "command": "set_IO_mode",
+    "set_state": false
+}
 ```
 
 ### 设置数字IO输出状态`set_DO_state`
@@ -971,25 +1192,30 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_DO_state","IO_Num":1,"state":1}
 ```
 
-**输出**
+**输出**  
 
 配置成功：
 
-
 ```json
-{"command":"set_DO_state","set_state":true}
+{
+    "command": "set_DO_state",
+    "set_state": true
+}
 ```
+
 配置失败：
 
-
 ```json
-{"command":"set_DO_state","set_state":false}
+{
+    "command": "set_DO_state",
+    "set_state": false
+}
 ```
 
 ### 查询数字IO状态（第三代）`get_IO_state`
@@ -1003,7 +1229,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取数字IO输出状态
 
@@ -1011,10 +1237,15 @@ IP地址设置失败：
  {"command":"get_IO_state","IO_Num":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"IO_state","IO_Num":1,"IO_Mode":1,"IO_state":1}
+{
+    "state": "IO_state",
+    "IO_Num": 1,
+    "IO_Mode": 1,
+    "IO_state": 1
+}
 ```
 
 - **输入参数**
@@ -1033,7 +1264,6 @@ IP地址设置失败：
 | `get_DO_state` | `string` |获取数字IO输出。|
 | `IO_Num` | `int` |IO端口号，范围：1~4。|
 
-
 - **输出参数**
 
 | 功能描述 | 类型 |说明|
@@ -1042,21 +1272,23 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取数字IO输出状态。
-
 
 ```json
 {"command":"get_DO_state","IO_Num":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"DO_state","IO_Num":1,"IO_state":1}
+{
+    "state": "DO_state",
+    "IO_Num": 1,
+    "IO_state": 1
+}
 ```
-
 
 ### 查询数字IO输入状态（第二代）`get_DI_state`
 
@@ -1067,7 +1299,6 @@ IP地址设置失败：
 | `get_DI_state` | `string` |获取数字IO输入状态。|
 | `IO_Num` | `int` |IO端口号，范围：1~4。|
 
-
 - **输出参数**
 
 | 功能描述 | 类型 |说明|
@@ -1076,21 +1307,23 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取数字IO输出状态
-
 
 ```json
 {"command":"get_DI_state","IO_Num":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"DI_state","IO_Num":1,"IO_state":1}
+{
+    "state": "DI_state",
+    "IO_Num": 1,
+    "IO_state": 1
+}
 ```
-
 
 ### 设置模拟IO输出状态（第二代）`set_AO_state`
 
@@ -1104,7 +1337,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置模拟IO输出。
 
@@ -1112,18 +1345,24 @@ IP地址设置失败：
 {"command":"set_AO_state","IO_Num":1,"voltage":1000}
 ```
 
-**输出**
+**输出**  
 
 配置成功：
 
 ```json
-{"command":"set_AO_state","state":true}
+{
+    "command": "set_AO_state",
+    "state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_AO_state","state":false}
+{
+    "command": "set_AO_state",
+    "state": false
+}
 ```
 
 ### 查询模拟IO输出状态（第二代）`get_AO_state`
@@ -1135,7 +1374,6 @@ IP地址设置失败：
 | `get_AO_state` | `string` |查询模拟IO输出状态。|
 | `IO_Num` | `int` |IO端口号，范围：1~4。|
 
-
 - **输出参数**
 
 | 功能描述 | 类型 |说明|
@@ -1145,21 +1383,23 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取模拟IO输出。
-
 
 ```json
 {"command":"get_AO_state","IO_Num":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"AO_state","IO_Num":1,"voltage":1000}
+{
+    "state": "AO_state",
+    "IO_Num": 1,
+    "voltage": 1000
+}
 ```
-
 
 ### 查询模拟IO输入状态（第二代）`get_AI_state`
 
@@ -1170,7 +1410,6 @@ IP地址设置失败：
 | `get_AI_state` | `string` |获取模拟IO输入状态。|
 | `IO_Num` | `int` |IO端口号，范围：1~4。|
 
-
 - **输出参数**
 
 | 功能描述 | 类型 |说明|
@@ -1180,7 +1419,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取模拟IO输出。
 
@@ -1188,12 +1427,15 @@ IP地址设置失败：
 {"command":"get_AI_state","IO_Num":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"AI_state","IO_Num":1,"voltage":1000}
+{
+    "state": "AI_state",
+    "IO_Num": 1,
+    "voltage": 1000
+}
 ```
-
 
 ### 查询所有IO输入状态`get_IO_input`
 
@@ -1202,7 +1444,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_IO_input` | `string` |获取所有IO输入状态。|
-
 
 - **输出参数**
 
@@ -1213,21 +1454,32 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取所有IO输入状态。
-
 
 ```json
 {"command":"get_IO_input"}   
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"IO_input_state","DI":[1,1,1],"AI":[1000,2000,3000,4000]}
+{
+    "state": "IO_input_state",
+    "DI": [
+        1,
+        1,
+        1
+    ],
+    "AI": [
+        1000,
+        2000,
+        3000,
+        4000
+    ]
+}
 ```
-
 
 ### 查询所有IO输出状态`get_IO_output`
 
@@ -1236,7 +1488,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_IO_output` | `string` |获取所有IO输出状态。|
-
 
 - **输出参数**
 
@@ -1254,12 +1505,25 @@ IP地址设置失败：
 {"command":"get_IO_output"}    
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"IO_output_state","DO":[1,1,1,1],"AO":[1000,2000,3000,3000]}
+{
+    "state": "IO_output_state",
+    "DO": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "AO": [
+        1000,
+        2000,
+        3000,
+        3000
+    ]
+}
 ```
-
 
 ### 设置电源输出（第三代）`set_voltage`
 
@@ -1272,7 +1536,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置电源输出。
 
@@ -1280,18 +1544,24 @@ IP地址设置失败：
  {"command":"set_voltage","voltage_type":2}
 ```
 
-**输出**
+**输出**  
 
 配置成功:
 
 ```json
-{"command":"set_voltage","state":true}
+{
+    "command": "set_voltage",
+    "state": true
+}
 ```
+
 配置失败:
 
-
 ```json
-{"command":"set_voltage","state":false}
+{
+    "command": "set_voltage",
+    "state": false
+}
 ```
 
 ### 查询电源输出（第三代）`get_voltage`
@@ -1301,7 +1571,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_voltage` | `string` |获取电源输出。|
-
 
 - **输出参数**
 
@@ -1318,13 +1587,14 @@ IP地址设置失败：
 {"command":"get_voltage"}   
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"voltage_state","voltage_type":2}
+{
+    "command": "voltage_state",
+    "voltage_type": 2
+}
 ```
-
-
 
 ## 末端工具IO配置
 
@@ -1359,13 +1629,19 @@ IP地址设置失败：
 配置成功：
 
 ```json
-{"command":"set_tool_DO_state","set_state":true}
+{
+    "command": "set_tool_DO_state",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_tool_DO_state","set_state":false}
+{
+    "command": "set_tool_DO_state",
+    "set_state": false
+}
 ```
 
 ### 设置工具端数字IO模式`set_tool_IO_mode`
@@ -1391,13 +1667,19 @@ IP地址设置失败：
 配置成功：
 
 ```json
-{"command":"set_tool_IO_mode","set_state":true}
+{
+    "command": "set_tool_IO_mode",
+    "set_state": true
+}
 ```
+
 配置失败：
 
-
 ```json
-{"command":"set_tool_IO_mode","set_state":false}
+{
+    "command": "set_tool_IO_mode",
+    "set_state": false
+}
 ```
 
 ### 查询工具端数字IO状态`get_tool_IO_state`
@@ -1407,7 +1689,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | `get_tool_IO_state` | `string` |获取数字IO状态。|
-
 
 - **输出参数**
 
@@ -1425,12 +1706,21 @@ IP地址设置失败：
 {"command":"get_tool_IO_state"} 
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"tool_IO_state","IO_Mode":[0,1],"IO_State":[0,1]}
+{
+    "state": "tool_IO_state",
+    "IO_Mode": [
+        0,
+        1
+    ],
+    "IO_State": [
+        0,
+        1
+    ]
+}
 ```
-
 
 ### 设置工具端电源输出`set_tool_voltage`
 
@@ -1454,13 +1744,19 @@ IP地址设置失败：
 配置成功
 
 ```json
-{"command":"set_tool_voltage","state":true}
+{
+    "command": "set_tool_voltage",
+    "state": true
+}
 ```
 
 配置失败
 
 ```json
-{"command":"set_tool_voltage","state":false}
+{
+    "command": "set_tool_voltage",
+    "state": false
+}
 ```
 
 ### 查询工具端电源输出`get_tool_voltage`
@@ -1471,13 +1767,11 @@ IP地址设置失败：
 | :--- | :------------------------- |:---|
 | `get_tool_voltage` | `string` |获取电源输出。|
 
-
 - **输出参数**
 
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
 | voltage_type | `int` |电源输出类型，范围：0~3。0-0V，2-12V，3-24V。|
-
 
 - **代码示例**
 
@@ -1488,10 +1782,13 @@ IP地址设置失败：
 {"command":"get_tool_voltage"} 
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"tool_voltage_state","voltage_type":1}
+{
+    "state": "tool_voltage_state",
+    "voltage_type": 1
+}
 ```
 
 ## 末端工具：夹爪控制（选配）
@@ -1500,9 +1797,9 @@ IP地址设置失败：
 
 ### 设置夹爪行程`set_gripper_route`
 
-设置夹爪行程，即夹爪开口的最大值和最小值，设置成功后会自动保存，夹爪断电不丢失
-。
-- **输入参数**
+设置夹爪行程，即夹爪开口的最大值和最小值，设置成功后会自动保存，夹爪断电不丢失。
+
+- **输入参数**  
 
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
@@ -1512,27 +1809,33 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置夹爪行程，即夹爪开口的最大值和最小值<br>
 设置成功后会自动保存，夹爪断电不丢失
+
 ```json
 {"command":"set_gripper_route","min":70,"max":500}
 ```
 
-**输出**
+**输出**  
 
 配置成功:
 
-
 ```json
-{"command":"set_gripper_route","state":true}
+{
+    "command": "set_gripper_route",
+    "state": true
+}
 ```
+
 配置失败:
 
-
 ```json
-{"command":"set_gripper_route","state":false}
+{
+    "command": "set_gripper_route",
+    "state": false
+}
 ```
 
 ### 松开夹爪`set_gripper_release`
@@ -1547,7 +1850,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置夹爪行程，即夹爪开口的最大值和最小值<br>
 设置成功后会自动保存，夹爪断电不丢失。
@@ -1556,19 +1859,26 @@ IP地址设置失败：
 {"command":"set_gripper_release","speed":500,"block":true}
 ```
 
-**输出**
+**输出**  
 
 夹爪松开成功：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
+
 夹爪松开失败：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
@@ -1599,27 +1909,36 @@ IP地址设置失败：
 {"command":"set_gripper_pick","speed":500,"force":200,"block":true}
 ```
 
-**输出**
+**输出**  
 
 夹爪松开成功：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
 
 夹爪松开失败：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
-
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 夹爪持续力控夹取`set_gripper_pick_on`
@@ -1639,23 +1958,29 @@ IP地址设置失败：
 {"command":"set_gripper_pick_on","speed":500,"force":200,"block":true}
 ```
 
-**输出**
+**输出**  
 
 夹爪松开成功：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 夹爪松开失败：<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
-该指令为阻塞模式下，运动到指定位置的上报信息。
 
+该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
 {
@@ -1685,25 +2010,36 @@ IP地址设置失败：
 }
 ```
 
-**输出**
+**输出**  
 
 夹爪松开成功。<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":true}
+{
+    "command": "set_gripper",
+    "state": true
+}
 ```
+
 夹爪松开失败。<br>
 该指令不论是否为阻塞模式均会返回。
 
 ```json
-{"command":"set_gripper","state":false}
+{
+    "command": "set_gripper",
+    "state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":1}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 1
+}
 ```
 
 ### 查询夹爪状态`get_gripper_state`
@@ -1713,7 +2049,6 @@ IP地址设置失败：
 | 功能描述 | 类型 |说明|
 | :--- | :--- |:---|
 | `get_gripper_state` | `string` |查询夹爪状态。|
-
 
 - **输出参数**
 
@@ -1729,18 +2064,26 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"get_gripper_state"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_gripper_state","enable":1,"status":1,"error":0,"mode":1,"current_force":100,"temperature":40,"actpos":150}
+{
+    "command": "get_gripper_state",
+    "enable": 1,
+    "status": 1,
+    "error": 0,
+    "mode": 1,
+    "current_force": 100,
+    "temperature": 40,
+    "actpos": 150
+}
 ```
-
 
 ## 末端工具：六维力（选配）
 
@@ -1750,7 +2093,7 @@ IP地址设置失败：
 
 另外，六维力额定力200N，额定力矩8Nm，过载水平300%FS，工作温度5\~80℃，准度0.5%FS。使用过程中注意使用要求，防止损坏六维力传感器。
 
-![](../api/python/doc/sixForce.png)
+![sixForce](../api/python/doc/sixForce.png)
 
 ### 查询六维力数据`get_force_data`
 
@@ -1764,13 +2107,13 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"get_force_data"}
 ```
 
-**输出**
+**输出**  
 
 原始力数据force_data<br>
 依次为Fx=1N，Fy=2N，Fz=3N，Mx=0.4Nm，My=0.5Nm，Mz=0.6Nm；
@@ -1787,7 +2130,41 @@ IP地址设置失败：
 数据精度：0.001。
 
 ```json
-{"command":"get_force_data","force_data":[1000,2000,3000,400,500,600],"zero_force_data":[500,1000,1500,200,250,300],"work_zero_force_data":[500,1000,1500,200,250,300],"tool_zero_force_data":[500,1000,1500,200,250,300]}
+{
+    "command": "get_force_data",
+    "force_data": [
+        1000,
+        2000,
+        3000,
+        400,
+        500,
+        600
+    ],
+    "zero_force_data": [
+        500,
+        1000,
+        1500,
+        200,
+        250,
+        300
+    ],
+    "work_zero_force_data": [
+        500,
+        1000,
+        1500,
+        200,
+        250,
+        300
+    ],
+    "tool_zero_force_data": [
+        500,
+        1000,
+        1500,
+        200,
+        250,
+        300
+    ]
+}
 ```
 
 ### 六维力数据清零`clear_force_data`
@@ -1802,24 +2179,30 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"clear_force_data"}
 ```
 
-**输出**
+**输出**  
 
 清空成功：
 
 ```json
-{"command":"clear_force_data","clear_state":true}
+{
+    "command": "clear_force_data",
+    "clear_state": true
+}
 ```
 
 清空失败：
 
 ```json
-{"command":"clear_force_data","clear_state":false}
+{
+    "command": "clear_force_data",
+    "clear_state": false
+}
 ```
 
 ### 自动设置六维力重心参数`set_force_sensor`
@@ -1843,7 +2226,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_force_sensor"}
@@ -1853,13 +2236,19 @@ IP地址设置失败：
 配置成功：
 
 ```json
-{"command":"set_force_sensor","set_state":true}
+{
+    "command": "set_force_sensor",
+    "set_state": true
+}
 ```
 
 配置失败：
 
 ```json
-{"command":"set_force_sensor","set_state":false}
+{
+    "command": "set_force_sensor",
+    "set_state": false
+}
 ```
 
 ### 手动标定六维力数据`manual_set_force`
@@ -1899,13 +2288,19 @@ IP地址设置失败：
 标定成功:
 
 ```json
-{"command":"set_force_sensor","set_state":true}
+{
+    "command": "set_force_sensor",
+    "set_state": true
+}
 ```
 
 标定失败:
 
 ```json
-{"command":"set_force_sensor","set_state":false}
+{
+    "command": "set_force_sensor",
+    "set_state": false
+}
 ```
 
 ### 停止标定力传感器重心`stop_set_force_sensor`
@@ -1920,7 +2315,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"stop_set_force_sensor"}
@@ -1930,13 +2325,19 @@ IP地址设置失败：
 计算成功：
 
 ```json
-{"command":"stop_set_force_sensor","stop_state":true}
+{
+    "command": "stop_set_force_sensor",
+    "stop_state": true
+}
 ```
+
 计算失败：
 
-
 ```json
-{"command":"stop_set_force_sensor","stop_state":false}
+{
+    "command": "stop_set_force_sensor",
+    "stop_state": false
+}
 ```
 
 ## 拖动示教
@@ -1954,18 +2355,21 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"start_drag_teach","trajectory_record":1}
 ```
 
-**输出**
+**输出**  
 
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"start_drag_teach","drag_teach":true}
+{
+    "command": "start_drag_teach",
+    "drag_teach": true
+}
 ```
 
 ### 拖动示教结束`stop_drag_teach`
@@ -1984,7 +2388,10 @@ IP地址设置失败：
 设置成功（true-设置成功，false-设置失败）。
 
 ```json
-{"command":"stop_drag_teach","drag_teach":true}
+{
+    "command": "stop_drag_teach",
+    "drag_teach": true
+}
 ```
 
 ### 开始复合模式拖动示教`start_multi_drag_teach`
@@ -1999,7 +2406,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"start_multi_drag_teach","mode":0,"singular_wall":0}
@@ -2009,13 +2416,19 @@ IP地址设置失败：
 设置成功:
 
 ```json
-{"command":"start_multi_drag_teach","set_state":true}
+{
+    "command": "start_multi_drag_teach",
+    "set_state": true
+}
 ```
 
 设置失败:
 
 ```json
-{"command":"start_multi_drag_teach","set_state":false}
+{
+    "command": "start_multi_drag_teach",
+    "set_state": false
+}
 ```
 
 ### 轨迹复现开始`run_drag_trajectory`
@@ -2028,7 +2441,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"run_drag_trajectory"}
@@ -2038,13 +2451,19 @@ IP地址设置失败：
 复现成功:
 
 ```json
-{"command":"run_drag_trajectory","run_state":true}
+{
+    "command": "run_drag_trajectory",
+    "run_state": true
+}
 ```
+
 复现失败:
 
-
 ```json
-{"command":"run_drag_trajectory","run_state":false}
+{
+    "command": "run_drag_trajectory",
+    "run_state": false
+}
 ```
 
 ### 轨迹复现暂停`pause_drag_trajectory`
@@ -2059,7 +2478,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"pause_drag_trajectory"}
@@ -2069,13 +2488,19 @@ IP地址设置失败：
 暂停成功：
 
 ```json
-{"command":"pause_drag_trajectory","pause_state":true}
+{
+    "command": "pause_drag_trajectory",
+    "pause_state": true
+}
 ```
 
 暂停失败：
 
 ```json
-{"command":"pasuse_drag_trajectory","pause_state":false}
+{
+    "command": "pause_drag_trajectory",
+    "pause_state": false
+}
 ```
 
 ### 轨迹复现继续`continue_drag_trajectory`
@@ -2090,7 +2515,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"continue_drag_trajectory"}
@@ -2100,13 +2525,19 @@ IP地址设置失败：
 继续成功：
 
 ```json
-{"command":"continue_drag_trajectory","continue_state":true}
+{
+    "command": "continue_drag_trajectory",
+    "continue_state": true
+}
 ```
+
 继续失败：
 
-
 ```json
-{"command":"continue_drag_trajectory","continue_state":false}
+{
+    "command": "continue_drag_trajectory",
+    "continue_state": false
+}
 ```
 
 ### 轨迹复现停止`stop_drag_trajectory`
@@ -2119,7 +2550,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"stop_drag_trajectory"}
@@ -2129,13 +2560,19 @@ IP地址设置失败：
 停止成功：
 
 ```json
-{"command":"stop_drag_trajectory","stop_state":true}
+{
+    "command": "stop_drag_trajectory",
+    "stop_state": true
+}
 ```
+
 停止失败：
 
-
 ```json
-{"command":"stop_drag_trajectory","stop_state":false}
+{
+    "command": "stop_drag_trajectory",
+    "stop_state": false
+}
 ```
 
 ### 运动到轨迹起点`drag_trajectory_origin`
@@ -2150,16 +2587,21 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"drag_trajectory_origin"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"device":0,"state":"current_trajectory_state","trajectory_connect":0,"trajectory_state":true}
+{
+    "device": 0,
+    "state": "current_trajectory_state",
+    "trajectory_connect": 0,
+    "trajectory_state": true
+}
 ```
 
 ### 力位混合控制`set_force_position`
@@ -2178,7 +2620,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_force_position","sensor":1,"mode":0,"direction":2,"N":10}
@@ -2188,13 +2630,19 @@ IP地址设置失败：
 设置成功:
 
 ```json
-{"command":"set_force_position","set_state":true}
+{
+    "command": "set_force_position",
+    "set_state": true
+}
 ```
 
 设置失败:
 
 ```json
-{"command":"set_force_position","set_state":false}
+{
+    "command": "set_force_position",
+    "set_state": false
+}
 ```
 
 ### 结束力位混合控制`stop_force_position`
@@ -2209,7 +2657,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"stop_force_position"}
@@ -2219,13 +2667,19 @@ IP地址设置失败：
 结束成功：
 
 ```json
-{"command":"stop_force_position","stop_state":true}
+{
+    "command": "stop_force_position",
+    "stop_state": true
+}
 ```
 
 结束失败：
 
 ```json
-{"command":"stop_force_position","stop_state":false}
+{
+    "command": "stop_force_position",
+    "stop_state": false
+}
 ```
 
 ## 五指灵巧手（选配）
@@ -2244,7 +2698,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_hand_posture","posture_num":1,"block":true}
@@ -2254,19 +2708,29 @@ IP地址设置失败：
 设置成功:
 
 ```json
-{"command":"set_hand_posture","set_state":true}
+{
+    "command": "set_hand_posture",
+    "set_state": true
+}
 ```
+
 设置失败:
 
-
 ```json
-{"command":"set_hand_posture","set_state":false}
+{
+    "command": "set_hand_posture",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手动作序列`set_hand_seq`
@@ -2281,7 +2745,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_hand_seq","seq_num":1,"block":true}
@@ -2291,19 +2755,29 @@ IP地址设置失败：
 设置成功：
 
 ```json
-{"command":"set_hand_seq","set_state":true}
+{
+    "command": "set_hand_seq",
+    "set_state": false
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_seq","set_state":false}
+{
+    "command": "set_hand_seq",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手各自由度角度`set_hand_angle`
@@ -2320,7 +2794,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_hand_angle","hand_angle":[-1,100,200,300,400,500],"block":true}
@@ -2330,19 +2804,29 @@ IP地址设置失败：
 设置成功：
 
 ```json
-{"command":"set_hand_angle","set_state":true}
+{
+    "command": "set_hand_angle",
+    "set_state": true
+}
 ```
 
 设置失败：
 
 ```json
-{"command":"set_hand_angle","set_state":false}
+{
+    "command": "set_hand_angle",
+    "set_state": false
+}
 ```
 
 该指令为阻塞模式下，运动到指定位置的上报信息。
 
 ```json
-{"state":"current_trajectory_state","trajectory_state":true,"device":2}
+{
+    "state": "current_trajectory_state",
+    "trajectory_state": true,
+    "device": 2
+}
 ```
 
 ### 设置灵巧手速度`set_hand_speed`
@@ -2356,7 +2840,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_hand_speed","hand_speed":500}
@@ -2366,13 +2850,18 @@ IP地址设置失败：
 设置成功
 
 ```json
-{"command":"set_hand_speed","set_state":true}
-```
+{
+    "command": "set_hand_speed",
+    "set_state": true
+}```
+
 设置失败
 
-
 ```json
-{"command":"set_hand_speed","set_state":false}
+{
+    "command": "set_hand_speed",
+    "set_state": false
+}
 ```
 
 ### 设置灵巧手力阈值`set_hand_force`
@@ -2386,7 +2875,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_hand_force","hand_force":500}
@@ -2396,13 +2885,19 @@ IP地址设置失败：
 设置成功
 
 ```json
-{"command":"set_hand_force","set_state":true}
+{
+    "command": "set_hand_force",
+    "set_state": true
+}
 ```
+
 设置失败
 
-
 ```json
-{"command":"set_hand_force","set_state":false}
+{
+    "command": "set_hand_force",
+    "set_state": false
+}
 ```
 
 ## Modbus配置
@@ -2428,7 +2923,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_modbus_mode","port":0,"baudrate":115200,"timeout":1}
@@ -2438,13 +2933,19 @@ IP地址设置失败：
 设置成功
 
 ```json
-{"command":"set_modbus_mode","set_state":true}
+{
+    "command": "set_modbus_mode",
+    "set_state": true
+}
 ```
+
 设置失败
 
-
 ```json
-{"command":"set_modbus_mode","set_state":false}
+{
+    "command": "set_modbus_mode",
+    "set_state": false
+}
 ```
 
 ### 关闭通讯端口ModbusRTU模式`close_modbus_mode`
@@ -2458,7 +2959,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"close_modbus_mode","port":0}
@@ -2468,13 +2969,19 @@ IP地址设置失败：
 设置成功：
 
 ```json
-{"command":"close_modbus_mode","set_state":true}
+{
+    "command": "close_modbus_mode",
+    "set_state": true
+}
 ```
+
 设置失败：
 
-
 ```json
-{"command":"close_modbus_mode","set_state":false}
+{
+    "command": "close_modbus_mode",
+    "set_state": false
+}
 ```
 
 ### 配置连接ModbusTCP从站（第三代）`set_modbustcp_mode`
@@ -2492,7 +2999,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_modbustcp_mode","ip":"192.168.1.120","port":502,"timeout":2000}
@@ -2502,13 +3009,19 @@ IP地址设置失败：
 连接成功：
 
 ```json
-{"command":"set_modbustcp_mode","set_state":true}
+{
+    "command": "set_modbustcp_mode",
+    "set_state": true
+}
 ```
 
 连接失败：
 
 ```json
-{"command":"set_modbustcp_mode","set_state":false}
+{
+    "command": "set_modbustcp_mode",
+    "set_state": false
+}
 ```
 
 ### 配置关闭ModbusTCP从站（第三代）`close_modbustcp_mode`
@@ -2521,7 +3034,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"close_modbustcp_mode"}
@@ -2531,13 +3044,19 @@ IP地址设置失败：
 成功
 
 ```json
-{"command":"close_modbustcp_mode","set_state":true}
+{
+    "command": "close_modbustcp_mode",
+    "set_state": true
+}
 ```
+
 失败
 
-
 ```json
-{"command":"close_modbustcp_mode","set_state":false}
+{
+    "command": "close_modbustcp_mode",
+    "set_state": false
+}
 ```
 
 ### 读线圈`read_coils`
@@ -2563,15 +3082,20 @@ IP地址设置失败：
 **输出**
 读取成功，返回线圈状态，数据类型：int8。
 
-
 ```json
-{"command":"read_coils","data":8}
+{
+    "command": "read_coils",
+    "data": 8
+}
 ```
+
 读取失败，超时时间内未获取到数据。
 
-
 ```json
-{"command":"read_coils","read_state":false}
+{
+    "command": "read_coils",
+    "read_state": false
+}
 ```
 
 ### 读离散量输入`read_input_status`
@@ -2588,23 +3112,35 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
-{"command":"read_input_status","port":0,"address":10,"num":2,"device":2}
+{
+    "command": "read_input_status",
+    "port": 0,
+    "address": 10,
+    "num": 2,
+    "device": 2
+}
 ```
 
 **输出**
 读取成功，返回离散量，数据类型：int8。
 
 ```json
-{"command":"read_input_status","data":8}
+{
+    "command": "read_input_status",
+    "data": 8
+}
 ```
+
 读取失败，超时时间内未获取到数据。
 
-
 ```json
-{"command":"read_input_status","read_state":false}
+{
+    "command": "read_input_status",
+    "read_state": false
+}
 ```
 
 ### 读保持寄存器`read_holding_registers`
@@ -2620,7 +3156,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"read_holding_registers","port":0,"address":10,"device":2}
@@ -2630,13 +3166,19 @@ IP地址设置失败：
 读取成功，返回寄存器数据，数据类型：int16。
 
 ```json
-{"command":"read_holding_registers","data":8}
+{
+    "command": "read_holding_registers",
+    "data": 16
+}
 ```
+
 读取失败，超时时间内未获取到数据。
 
-
 ```json
-{"command":"read_holding_registers","read_state":false}
+{
+    "command": "read_holding_registers",
+    "read_state": false
+}
 ```
 
 ### 读输入寄存器`read_input_registers`
@@ -2652,7 +3194,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"read_input_registers","port":0,"address":10,"device":2}
@@ -2662,13 +3204,19 @@ IP地址设置失败：
 读取成功，返回寄存器数据，数据类型：int16。
 
 ```json
-{"command":"read_input_registers","data":8}
+{
+    "command": "read_input_registers",
+    "data": 8
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_input_registers","read_state":false}
+{
+    "command": "read_input_registers",
+    "read_state": false
+}
 ```
 
 ### 写单圈数据`write_single_coil`
@@ -2691,17 +3239,24 @@ IP地址设置失败：
 {"command":"write_single_coil","port":0,"address":10,"data":1,"device":2}
 ```
 
-**输出**
+**输出**  
 
 写操作成功。
+
 ```json
-{"command":"write_single_coil","write_state":true}
+{
+    "command": "write_single_coil",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_single_coil","write_state":false}
+{
+    "command": "write_single_coil",
+    "write_state": false
+}
 ```
 
 ### 写单个寄存器`write_single_register`
@@ -2718,7 +3273,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"write_single_register","port":0,"address":10,"data":1000,"device":2}
@@ -2728,14 +3283,19 @@ IP地址设置失败：
 写操作成功。
 
 ```json
-{"command":"write_single_register","write_state":true}
+{
+    "command": "write_single_register",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_single_register","write_state":false}
-```
+{
+    "command": "write_single_register",
+    "write_state": false
+}```
 
 ### 写多个寄存器`write_registers`
 
@@ -2762,13 +3322,19 @@ IP地址设置失败：
 写操作成功。
 
 ```json
-{"command":"write_registers","write_state":true}
+{
+    "command": "write_registers",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_registers","write_state":false}
+{
+    "command": "write_registers",
+    "write_state": false
+}
 ```
 
 ### 写多圈数据`write_coils`
@@ -2786,7 +3352,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"write_coils","port":0,"address":10,"num":16,"data":[15,20],"device":2}
@@ -2796,13 +3362,19 @@ IP地址设置失败：
 写操作成功。
 
 ```json
-{"command":"write_coils","write_state":true}
+{
+    "command": "write_coils",
+    "write_state": true
+}
 ```
 
 写操作失败，超时时间内未获取到数据，或者指令内容错误。
 
 ```json
-{"command":"write_coils","write_state":false}
+{
+    "command": "write_coils",
+    "write_state": false
+}
 ```
 
 ### 读多圈数据`read_multiple_coils`
@@ -2819,7 +3391,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"read_multiple_coils","port":0,"address":0,"num":24,"device":2}
@@ -2829,13 +3401,23 @@ IP地址设置失败：
 读取成功，返回线圈状态，数据类型：int8。
 
 ```json
-{"command":"read_multiple_coils","data":[1,2,3]}
+{
+    "command": "read_multiple_coils",
+    "data": [
+        1,
+        2,
+        3
+    ]
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_multiple_coils","read_state":false}
+{
+    "command": "read_multiple_coils",
+    "read_state": false
+}
 ```
 
 ### 读多个保存寄存器`read_multiple_holding_registers`
@@ -2852,7 +3434,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"read_multiple_holding_registers","port":0,"address":0,"num":5,"device":2}
@@ -2862,13 +3444,30 @@ IP地址设置失败：
 读取成功，返回寄存器数据，数据类型：int8。
 
 ```json
-{"command":"read_multiple_holding_registers","data":[1,2,3,4,5,6,7,8,9,10]}
+{
+    "command": "read_multiple_holding_registers",
+    "data": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}
 ```
+
 读取失败，超时时间内未获取到数据。
 
-
 ```json
-{"command":"read_multiple_holding_registers","read_state":false}
+{
+    "command": "read_multiple_holding_registers",
+    "read_state": false
+}
 ```
 
 ### 读多个输入寄存器`read_multiple_input_registers`
@@ -2885,7 +3484,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"read_multiple_input_registers","port":0,"address":0,"num":5,"device":2}
@@ -2895,13 +3494,30 @@ IP地址设置失败：
 读取成功，返回寄存器数据，数据类型：int8。
 
 ```json
-{"command":"read_multiple_input_registers","data":[1,2,3,4,5,6,7,8,9,10]}
+{
+    "command": "read_multiple_input_registers",
+    "data": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ]
+}
 ```
 
 读取失败，超时时间内未获取到数据。
 
 ```json
-{"command":"read_multiple_input_registers","read_state":false}
+{
+    "command": "read_multiple_input_registers",
+    "read_state": false
+}
 ```
 
 ## 系统安装方式及关节版本信息
@@ -2919,7 +3535,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"set_install_pose","pose":[0,90,45]}
@@ -2929,13 +3545,19 @@ IP地址设置失败：
 设置成功。
 
 ```json
-{"command":"set_install_pose","set_state":true}
+{
+    "command": "set_install_pose",
+    "set_state": true
+}
 ```
 
 设置失败。
 
 ```json
-{"command":"set_install_pose","set_state":false}
+{
+    "command": "set_install_pose",
+    "set_state": false
+}
 ```
 
 ### 查询关节软件版本号`get_joint_software_version`
@@ -2958,9 +3580,18 @@ IP地址设置失败：
 531为uint16类型，转化为16进制为：0x0213，则当前关节的版本号为2.13。
 
 ```json
-{"state":"joint_software_version","version":[531,531,531,531,531,531]}
+{
+    "state": "joint_software_version",
+    "version": [
+        531,
+        531,
+        531,
+        531,
+        531,
+        531
+    ]
+}
 ```
-
 
 ### 查询末端接口板软件版本号`get_tool_software_version`
 
@@ -2972,7 +3603,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"get_tool_software_version"}
@@ -2982,9 +3613,11 @@ IP地址设置失败：
 531为uint16类型，转化为16进制为：0x0213，则当前末端接口板的版本号为2.13。
 
 ```json
-{"state":"tool_software_version","version":531}
+{
+    "state": "tool_software_version",
+    "version": 531
+}
 ```
-
 
 ## 透传力位混合控制补偿（选配）`Start_Force_Position_Move`
 
@@ -3002,7 +3635,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"Start_Force_Position_Move"}
@@ -3013,13 +3646,15 @@ IP地址设置失败：
 
 ```json
 
-{"command":"Start_Force_Position_Move","set_state":true}
+{
+    "command": "Start_Force_Position_Move",
+    "set_state": true
+}
 ```
 
 ### 透传力位混合补偿
 
 用户周期性下发目标角度或者目标位姿，使用机械臂底层力位混合控制模块通过一维力传感器或者六维力传感器实现力位补偿。
-
 
 ::: warning 注意
 该功能只适用于一维力传感器和六维力传感器机械臂版本
@@ -3043,22 +3678,24 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 透传目标位姿进行力位混合控制补偿<br>
 目标位置（欧拉角方式）：x：0.1m，y:0.2m，z：0.03m，Rx：0.4rad， Ry：0.5rad，Rz：0.6rad<br>
 目标位置（四元数方式）：x：0.1m，y:0.2m，z：0.03m，w：0.4， x：0.5，y：0.6，z：0.7<br>
 使用一维力沿工作坐标系进行Z方向补偿，力控为Fz：1.5N。<br>
 位姿（姿态欧拉角）方式。<br>
+
 ```json
 {"command":"Force_Position_Move","pose":[100000,200000,30000,400,500,600],"sensor":0,"mode":0,"dir":0,"force":15,"follow":true}
 ```
-位姿（姿态四元数）方式。
 
+位姿（姿态四元数）方式。
 
 ```json
 {"command":"Force_Position_Move","pose_quat":[100000,200000,30000,400000,500000,600000,700000],"sensor":0,"mode":0,"dir":0,"force":15,"follow":true}
 ```
+
 透传目标角度进行力位混合控制补偿<br>
 关节1~6目标角度：1°，2°，3°，4°，5°，6°<br>
 使用一维力沿工作坐标系进行Z方向补偿，力控为Fz：1.5N。<br>
@@ -3067,18 +3704,43 @@ IP地址设置失败：
 {"command":"Force_Position_Move","joint":[1000,2000,3000,4000,5000,6000],"sensor":0,"mode":0,"dir":0,"force":15}
 ```
 
-**输出**
+**输出**  
 
 规划成功——返回当前各关节角度和所使用力控方式的力或力矩，如果使用的是六维力，则也会返回全部方向上的力和力矩。
 
 六维力：当前关节1~6角度为0.01°~0.06°，力控方向所受到的力或力矩为-1.5N，所有方向的力或力矩为X：1.1N，Y：2.1N，Z：-1.5N，Rx：4.1Nm，Ry：5.1Nm，Rz：6.1Nm。
+
 ```json
-{"state":"Force_Position_State","joint":[10,20,30,40,50,60],"force":-15,"all_direction_force":[11,21,-15,41,51,61],"arm_err":0}
+{
+    "state": "Force_Position_State",
+    "joint": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60
+    ],
+    "force": -15,
+    "all_direction_force": [
+        11,
+        21,
+        -15,
+        41,
+        51,
+        61
+    ],
+    "arm_err": 0
+}
 ```
 
 需要注意的是第三代机械臂不再提供返回值，可通过UDP状态主动上报接口采集机械臂实时状态。
+
 ```json
-{"command":"Force_Position_Move","set_state":false}
+{
+    "command": "Force_Position_Move",
+    "set_state": false
+}
 ```
 
 ### 关闭透传力位混合控制补偿模式
@@ -3093,7 +3755,7 @@ IP地址设置失败：
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 ```json
 {"command":"Stop_Force_Position_Move"}
@@ -3103,5 +3765,8 @@ IP地址设置失败：
 设置成功(True：设置成功，False：设置失败)。
 
 ```json
-{"command":"Stop_Force_Position_Move","set_state":true}
+{
+    "command": "Stop_Force_Position_Move",
+    "set_state": true
+}
 ```
