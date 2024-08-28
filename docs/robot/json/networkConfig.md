@@ -277,6 +277,46 @@ IP地址设置失败：
 }
 ```
 
+### 设置wifiAP`set_wifi_ap`
+
+配置wifiAP内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFIAP模式。
+
+- **输入参数**
+
+| 功能描述 | 类型 |说明|
+| :--- | :------------------------- |:---|
+| `set_wifi_ap` | `string` |配置wifiAP内容。|
+
+- **代码示例**
+
+**输入**  
+
+配置wifiAP内容，wifi名称：robot，连接密码：12345678
+
+```json
+{"command":"set_wifi_ap","wifi_name":"robot","password":"12345678"}
+```
+
+### 设置wifiSTA`set_wifi_sta`
+
+配置wifiSTA内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFISTA模式。
+
+- **输入参数**
+
+| 功能描述 | 类型 |说明|
+| :--- | :------------------------- |:---|
+| `set_wifi_sta` | `string` |配置wifiSTA内容。|
+
+- **代码示例**
+
+**输入**  
+
+配置wifiSTA内容，目标路由器名称：robot，路由器密码：12345678。
+
+```json
+{"command":"set_wifi_sta","router_name":"robot","password":"12345678"}
+```
+
 ## 恢复网络
 
 ### 恢复网络设置（第三代）`set_net_default`
