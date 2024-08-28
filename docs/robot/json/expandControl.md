@@ -8,8 +8,6 @@
 |:----------------------|:---|:------------------------------|
 |`expand_get_state`|   `string`   | 扩展关节状态获取。          |
 
-
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
@@ -21,25 +19,29 @@
 |`mode`           | `int` |当前升降状态，0-空闲，1-正方向速度运动，2-正方向位置运动，3-负方向速度运动，4-负方向位置运动。|
 |`joint_id`        | `int` |扩展关节ID。 |
 
-- **代码示例** 
+- **代码示例**  
 
-**输入**
+**输入**  
 
-
-```json
-// 实现：扩展关节状态获取。
-```
+实现：扩展关节状态获取。
 
 ```json
 {"command":"expand_get_state"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"expand_state","pos":0,"err_flag":0,"en_flag":1,"current":0," mode":0,"joint_id":1}
+{
+    "state": "expand_state",
+    "pos": 0,
+    "err_flag": 0,
+    "en_flag": 1,
+    "current": 0,
+    " mode": 0,
+    "joint_id": 1
+}
 ```
-
 
 ## 扩展关节速度环控制`expand_set_speed`
 
@@ -58,23 +60,22 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
-
-```json
 // 实现：以50%的最大速度进行运动。
-```
 
 ```json
 {"command":"expand_set_speed","speed":-50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"expand_set_speed","set_speed_state":true}
+{
+    "command": "expand_set_speed",
+    "set_speed_state": true
+}
 ```
-
 
 ## 关节位置环控制`expand_set_pos`
 
@@ -86,7 +87,6 @@
 |`pos`|   `int`   | 位置。          |
 |`speed`|   `int`   | 速度百分比。          |
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
@@ -95,28 +95,29 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
+以50%的最大速度运动到0.0100°。
 
-```json
-// 以50%的最大速度运动到0.0100°。
-```
 ```json
 {"command":"expand_set_pos","pos":100,"speed":50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"expand_set_pos","set_pos_state":true}
+{
+    "command": "expand_set_pos",
+    "set_pos_state": true
+}
 ```
 
-
-
-```json
-// 到位后，会范围到位指令，如下:
-```
+到位后，会范围到位指令，如下:
 
 ```json
-{"state":"current_trajectory_state","device":4,"trajectory_state":true}
+{
+    "state": "current_trajectory_state",
+    "device": 4,
+    "trajectory_state": true
+}
 ```

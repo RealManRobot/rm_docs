@@ -20,7 +20,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 实现：文件 xxx，大小是 2048，速度是 50%。
 
@@ -28,12 +28,14 @@
 {"command":"run_project","project_name":"XXX","file_size":2048,"plan_speed":50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"run_project","project_state":true}
+{
+    "command": "run_project",
+    "project_state": true
+}
 ```
-
 
 ### 下发前准备(第三代)`run_project`
 
@@ -48,18 +50,15 @@
 | `save_id`      | `int`    | 保存到控制器中的编号，支持 1-100。                       |
 | `step_flag`    | `int`    | 设置单步运行方式模式 1-设置单步模式 0-设置正常运动模式。 |
 
-
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
 |:------------------|:-------|:----------------------------------------|
 |`run_project` | `bool` |`ture`：设置成功；`false`：设置失败 |
 
-
 - **代码示例**
 
-**输入**
+**输入**  
 
 实现：文件 xxx，大小是 2048，速度是 50%。
 
@@ -67,14 +66,16 @@
 {"command":"run_project","project_name":"XXX","file_size":2048,"plan_speed":50,"step_flag":0,"only_save":0,"save_id":0}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"run_project","project_state":true}
+{
+    "command": "run_project",
+    "project_state": true
+}
 ```
 
 ### 文件下发过程中`conduct_project`
-
 
 ::: warning 注意
 从第二次开始
@@ -84,7 +85,6 @@
 
 机械臂每收到 2K 的数据，返回一帧该指令，示教器收到后，继续发送剩余数据。
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
@@ -93,12 +93,11 @@
 
 - **代码示例**
 
-**输出**
+**输出**  
 
 ```json
 {"command":"conduct_project","project_conduct":true}
 ```
-
 
 ### 发送校验返回`download_project`
 
@@ -110,13 +109,11 @@
 | `project_state`    | `string` | 校验结果。     |
 | `err_line`         | `bool`   | 错误行数。     |
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
 |:------------------|:-------|:----------------------------------------|
 |`project_state` | `bool` |`ture`：设置成功；`false`：设置失败。 |
-
 
 - **输出参数**
 
@@ -127,23 +124,29 @@
 
 - **代码示例**
 
-**输出**
+**输出**  
 
 校验成功，示教器弹框提示。
 
 ```json
-{"command":"download_project","project_state":true}
+{
+    "command": "download_project",
+    "project_state": true
+}
 ```
 
-
-**输出**
+**输出**  
 
 校验失败，err_line 为有问题的工程行数，示教器弹框提示，并将该行轨迹标红。<br>
 若 err_line 为 0，则代表校验数据长度不对。
-```json
-{"command":"download_project","project_state":false,"err_line":60}
-```
 
+```json
+{
+    "command": "download_project",
+    "project_state": false,
+    "err_line": 60
+}
+```
 
 ### 规划过程中改变速度系数`plan_speed`
 
@@ -160,10 +163,9 @@
 |:------------------|:-------|:----------------------------------------|
 |`plan_state` | `bool` |`ture`：设置成功；`false`：设置失败 |
 
-
 - **代码示例**
 
-**输入**
+**输入**  
 
 实现：设置速度比例系数为 50%。
 
@@ -171,12 +173,14 @@
 {"command":"plan_speed","speed":50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"plan_speed","plan_state":true}
+{
+    "command": "plan_speed",
+    "plan_state": true
+}
 ```
-
 
 ## 提示框
 
@@ -198,7 +202,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 实现：执行文件树第一条弹窗。
 
@@ -206,14 +210,16 @@
 {"state":"popup","content":1}
 ```
 
-**输出**
+**输出**  
 
 继续执行。
 
 ```json
-{"command":"popup","popup_result":true}
+{
+    "command": "popup",
+    "popup_result": true
+}
 ```
-
 
 ## 拖动示教
 
@@ -226,7 +232,6 @@
 | `save_trajectory` | `string` | 保存轨迹。         |
 | `trajectory_name` | `int`    | 轨迹要保存的名称。 |
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
@@ -235,7 +240,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 实现：获取刚拖动过的轨迹，在拖动示教后调用。
 
@@ -243,12 +248,20 @@
 {"command":"save_trajectory","trajectory_name":"XXX"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"point":[30971,56885,-3416,76201,47121,-4845]}
+{
+    "point": [
+        30971,
+        56885,
+        -3416,
+        76201,
+        47121,
+        -4845
+    ]
+}
 ```
-
 
 ## 在线编程存储列表
 
@@ -277,7 +290,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取刚拖动过的轨迹，在拖动示教后调用。
 
@@ -285,13 +298,31 @@
 {"command":"get_program_trajectory_list","page_num":1,"page_size":10,"vague_search":"file"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_program_trajectory_list","page_num":1,"page_size":2,"total_size":2,"vague_search":"file","list":[{"id":1,"size":2580,"speed":50,"trajectory_name":"1_file1.txt"},{"id":2,"size":2580,"speed":50,"trajectory_name":"2_file2.txt"}]}
+{
+    "command": "get_program_trajectory_list",
+    "page_num": 1,
+    "page_size": 2,
+    "total_size": 2,
+    "vague_search": "file",
+    "list": [
+        {
+            "id": 1,
+            "size": 2580,
+            "speed": 50,
+            "trajectory_name": "1_file1.txt"
+        },
+        {
+            "id": 2,
+            "size": 2580,
+            "speed": 50,
+            "trajectory_name": "2_file2.txt"
+        }
+    ]
+}
 ```
-
-
 
 ### 查询在线编程状态`get_program_run_state`
 
@@ -316,7 +347,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取刚拖动过的轨迹，在拖动示教后调用。
 
@@ -324,12 +355,25 @@
 { "command": "get_program_run_state" }
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_program_run_state","run_state":1,"id":1,"plan_num":1,"loop_num":[1],"loop_cont":[3],"step_mode":0,"plan_speed":50,"edit_id":1}
+{
+    "command": "get_program_run_state",
+    "run_state": 1,
+    "id": 1,
+    "plan_num": 1,
+    "loop_num": [
+        1
+    ],
+    "loop_cont": [
+        3
+    ],
+    "step_mode": 0,
+    "plan_speed": 50,
+    "edit_id": 1
+}
 ```
-
 
 ### 运行指定轨迹`set_program_id_start`
 
@@ -341,13 +385,11 @@
 | `id`                   | `int`    | 运行指定的 ID，1-100，存在轨迹可运行。                            |
 | `speed`                | `int`    | 1-100，需要运行轨迹的速度，可不提供速度比例，按照存储的速度运行。 |
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
 |:------------------|:-------|:----------------------------------------|
 |`start_state`|`bool`|`true`:开始运行 `false`:运行失败。|
-
 
 - **输出参数**
 
@@ -357,7 +399,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 开始运行轨迹 2，速度 50%。
 
@@ -365,21 +407,25 @@
 {"command":"set_program_id_start","id":2,"speed":50}
 ```
 
-**输出**
+**输出**  
 
 开始运行成功。
 
 ```json
-{"command":"set_program_id_run","start_state":true}
+{
+    "command": "set_program_id_run",
+    "start_state": true
+}
 ```
-
 
 在线编程程序结束后，会主动上报结束的 ID。
 
 ```json
-{"state":"program_run_finish","finish_id":4}
+{
+    "state": "program_run_finish",
+    "finish_id": 4
+}
 ```
-
 
 ### 删除指定轨迹`delete_program_trajectory`
 
@@ -398,7 +444,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 开始运行轨迹 2，速度 50%
 
@@ -406,12 +452,14 @@
 {"command":"delete_program_trajectory","id":2}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"delete_program_trajectory","delete_state":true}
+{
+    "command": "delete_program_trajectory",
+    "delete_state": true
+}
 ```
-
 
 ### 修改指定轨迹信息
 
@@ -424,17 +472,15 @@
 | `plan_speed`                | `int`    | 更新后的规划速度比例 1-100 （可选配置）         |
 | `project_name`              | `string` | 更新后的文件名称（最大 10 个字节） （可选配置） |
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
 |:------------------|:-------|:----------------------------------------|
 |`update_state`|`bool`|`true`:成功 `false`:失败|
 
-
 - **代码示例**
 
-**输入**
+**输入**  
 
 修改指定编号轨迹的信息
 
@@ -442,10 +488,13 @@
 {"command":"set_init_pose","init_pose":[10000,0,20000,30000,0,20000,20000]}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"update_program_trajectory","update_state":true}
+{
+    "command": "update_program_trajectory",
+    "update_state": true
+}
 ```
 
 ### 设置IO默认运行编号
@@ -454,8 +503,8 @@
 
 | 参数                    | 类型     | 说明                   |
 | :---------------------- | :------- | :--------------------- |
-| `set_default_run_program` | `string` | 设置IO默认运行的在线编程文件编号。 
-    |
+| `set_default_run_program` | `string` | 设置IO默认运行的在线编程文件编号。 |
+
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
@@ -464,7 +513,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置 IO 默认运行的在线编程文件编号，支持 0-100，0 代表取消设置。
 
@@ -472,12 +521,14 @@
 {"command":"set_default_run_program","id":1}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"set_default_run_program","set_state":true}
+{
+    "command": "set_default_run_program",
+    "set_state": true
+}
 ```
-
 
 ### 获取 IO 默认运行编号
 
@@ -487,7 +538,6 @@
 | :---------------------- | :------- | :--------------------------------- |
 | `get_default_run_program` | `string` | 获取 IO 默认运行的在线编程文件编号。 |
 
-
 - **输出参数**
 
 | 参数 | 类型 | 说明 |
@@ -496,7 +546,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 获取 IO 默认运行编号
 
@@ -504,18 +554,21 @@
 { "command": "get_default_run_program" }
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_default_run_program","id":1}
+{
+    "command": "get_default_run_program",
+    "id": 1
+}
 ```
 
 ## 全局路点配置指令集
 
-
 ::: warning 注意
 适用第三代控制器
 :::
+
 ### 新增全局路点`add_global_waypoint`
 
 - **输入参数**
@@ -529,7 +582,6 @@
 |`work_frame`|`object`|工作坐标系名称|
 |`tool_frame`|`string`|工具坐标系名称|
 |`time`|`string`|新增全局路点时间|
-
 
 - **输出参数**
 
@@ -547,12 +599,14 @@
 {"command":"add_global_waypoint","point_name":"abc","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2023-2-22 15:23:00"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"add_global_waypoint","add_state":true}
+{
+    "command": "add_global_waypoint",
+    "add_state": true
+}
 ```
-
 
 ### 更新全局路点`update_global_waypoint`
 
@@ -568,17 +622,15 @@
 |`tool_frame`|`string`|工具坐标系名称。|
 |`time`|`string`|更新全局路点时间。|
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
 |`update_state`|`bool`|`true` 成功   `false` 失败|
 
-
 - **代码示例**
 
-**输入**
+**输入**  
 
 更新全局路点
 
@@ -586,10 +638,13 @@
 {"command":"update_global_waypoint","point_name":"abc","joint ":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2023-2-22 15:23:00"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"update_global_waypoint","update_state":true}
+{
+    "command": "update_global_waypoint",
+    "update_state": true
+}
 ```
 
 ### 删除全局路点`delete_global_waypoint`
@@ -601,7 +656,6 @@
 |`delete_global_waypoint`|`string`|删除全局路点指令。|
 |`point_name`|`string`|全局路点的名称。|
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
@@ -610,21 +664,22 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 删除全局路点
-
 
 ```json
 {"command":"delete_global_waypoint","point_name":"abc"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"delete_global_waypoint","delete_state":true}
+{
+    "command": "delete_global_waypoint",
+    "delete_state": true
+}
 ```
-
 
 ### 查询指定全局路点`given_global_waypoint`
 
@@ -635,29 +690,49 @@
 |`given_global_waypoint`|`string`|查询指定全局路点|
 |`point_name`|`string`|全局路点的名称|
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
 |:------------------|:-------|:----------------------------------------|
 |`delete_state`|`bool`|`true` 成功   `false` 失败|
 
-
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询指定全局路点
-
 
 ```json
 {"command":"given_global_waypoint","point_name":"abc"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"given_global_waypoint","point_name":"abc","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"}
+{
+    "command": "given_global_waypoint",
+    "point_name": "abc",
+    "joint": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        40
+    ],
+    "pose": [
+        100000,
+        200000,
+        30000,
+        400,
+        500,
+        600
+    ],
+    "work_frame": "World",
+    "tool_frame": "Arm_Tip",
+    "time": "2022-12-22 15:23:00"
+}
 ```
 
 ### 查询多个全局路点`get_global_waypoints_list`
@@ -671,7 +746,6 @@
 |`page_size`|`int`|每页大小（全部查询时不传此参数）|
 |vague_search|`string`|模糊搜索 （传递此参数可进行模糊查询）|
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
@@ -682,7 +756,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 查询多个全局路点.
 
@@ -690,9 +764,59 @@
 {"command":"get_global_waypoints_list","page_num":1,"page_size":10,"vague_search":"file"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_global_waypoints_list","total_size":50,"list":[{"point_name":"abcd","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"},{"point_name":"1abc","joint":[10,20,30,40,50,60,40],"pose":[100000,200000,30000,400,500,600],"work_frame":"World","tool_frame":"Arm_Tip","time":"2022-12-22 15:23:00"}]}
+{
+    "command": "get_global_waypoints_list",
+    "total_size": 50,
+    "list": [
+        {
+            "point_name": "abcd",
+            "joint": [
+                10,
+                20,
+                30,
+                40,
+                50,
+                60,
+                40
+            ],
+            "pose": [
+                100000,
+                200000,
+                30000,
+                400,
+                500,
+                600
+            ],
+            "work_frame": "World",
+            "tool_frame": "Arm_Tip",
+            "time": "2022-12-22 15:23:00"
+        },
+        {
+            "point_name": "1abc",
+            "joint": [
+                10,
+                20,
+                30,
+                40,
+                50,
+                60,
+                40
+            ],
+            "pose": [
+                100000,
+                200000,
+                30000,
+                400,
+                500,
+                600
+            ],
+            "work_frame": "World",
+            "tool_frame": "Arm_Tip",
+            "time": "2022-12-22 15:23:00"
+        }
+    ]
+}
 ```
-
