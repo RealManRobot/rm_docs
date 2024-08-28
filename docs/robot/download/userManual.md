@@ -2,7 +2,6 @@
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择。
 
-## 用户手册
 
 <div class="wrap">
     <div class="d-flex">
@@ -35,7 +34,7 @@
     position:relative;
     width:100%;
     border-radius: 8px;
-    background-color:var(--vp-c-bg);
+    background-color:var(--vp-c-bg-alt);
     margin:16px 0;
     padding:16px;
     font-size: var(--vp-custom-block-font-size);
@@ -72,7 +71,7 @@
 
 .wrap-item1 p{
     color:var(--vp-c-text-2) !important;
-    margin: 0 !important;
+    margin:6px 0 !important;
     width:auto;
     min-width:50%;  
 }

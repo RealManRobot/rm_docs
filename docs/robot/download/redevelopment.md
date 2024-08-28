@@ -2,7 +2,7 @@
 
 睿尔曼提供多种下载内容，欢迎您根据实际情况进行选择
 
-# JSON协议
+<h1 class='h1Style'>JSON协议</h1>
 
 <div class="wrap">
     <div class="d-flex">
@@ -20,7 +20,7 @@
     </div>
 </div>
 
-# SDK
+<h1 class='h1Style'>SDK</h1>
 
 <div class="wrap">
     <div class="d-flex">
@@ -53,7 +53,7 @@
     </div>
 </div>
 
-# ROS
+<h1 class='h1Style'>ROS</h1>
 
 <div class="wrap">
     <div class="d-flex">
@@ -91,7 +91,7 @@
     position:relative;
     width:100%;
     border-radius: 8px;
-    background-color:var(--vp-c-bg);
+    background-color:var(--vp-c-bg-alt);
     margin:16px 0;
     padding:16px 16px 8px;
     font-size: var(--vp-custom-block-font-size);

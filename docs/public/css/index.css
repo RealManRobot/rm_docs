@@ -1,10 +1,11 @@
 :root {
     --vp-c-indigo-1: #EC6102;
-    --vp-c-indigo-2:#E5F4FB;
+    --vp-c-indigo-2: #E5F4FB;
     --vp-font-family-base: 'Source Han Serif', 'MiSans', 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, 'PingFang SC', 'Noto Sans CJK SC', 'Noto Sans SC', 'Heiti SC', 'Microsoft YaHei', 'DengXian', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-.dark{
-    --vp-c-indigo-2:#182732;
+
+.dark {
+    --vp-c-indigo-2: #182732;
 }
 
 .group:nth-of-type(1) .VPLink .text {
@@ -207,10 +208,12 @@ tbody {
 .icon {
     margin-bottom: 32px !important;
 }
-.vp-doc blockquote{
+
+.vp-doc blockquote {
     margin-left: 16px !important;
     padding-left: 0 !important;
 }
+
 .vp-doc p {
     /* color: var(--vp-c-text-1) !important; */
     /* padding-left: 16px !important; */
@@ -287,7 +290,6 @@ img {
 
 .vp-doc td {
     min-width: 64px;
-    width: auto !important;
 }
 
 .vp-doc h3 {
@@ -310,6 +312,8 @@ img {
     margin: 30px 0 30px !important;
 }
 
+
+
 .vp-doc h2::before {
     content: '';
     position: absolute;
@@ -323,6 +327,44 @@ img {
     height: 24px;
 }
 
+.vp-doc h3 {
+    position: relative !important;
+    padding-left: 26px !important;
+    padding-top: 26px !important;
+    margin: 26px 0 26px !important;
+}
+
+.vp-doc h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 64%;
+    transform: translateY(-50%);
+    background: url('../assets/icon.png') no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.wrap-item1 h2{
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin:  0 0 16px !important;
+}
+
+.wrap-item1 h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../assets/icon.png') no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
 .vp-doc h1 {
     padding-bottom: 10px !important;
     margin-bottom: 30px !important;
@@ -344,4 +386,21 @@ code {
     margin: 0 0 8px 0 !important;
 }
 
-/* .vp-doc summary {} */
+@media (min-width: 960px) {
+    .content {
+        padding: 0 16px 128px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .aside {
+        padding-left: 16px !important;
+    }
+}
+
+.VPDoc.has-aside .content-container {
+    max-width: 770px !important;
+}
+.h1Style{
+    margin:30px 0 !important;
+}
