@@ -1,4 +1,4 @@
-# <p class="hidden">JSON协议：</p>电子围栏和虚拟墙配置指令集
+# <p class="hidden">JSON协议：</p>电子围栏和虚拟墙指令集
 
 ## 数据管理
 
@@ -122,7 +122,7 @@
 }
 ```
 
-### 更删除指定几何模型`delete_electronic_fence_config`
+### 删除指定几何模型`delete_electronic_fence_config`
 
 删除指定几何模型
 
@@ -757,65 +757,5 @@
     "y": 1000,
     "z": 500,
     "radius": 900
-}
-```
-
-### 自碰撞检测 设置自碰撞安全检测使能状态`set_self_collision_enable`
-
-- **输入参数**
-
-| 参数 | 类型 | 说明 |
-| :-- | :-- | :-- |
-|`set_self_collision_enable`|`string` |设置自碰撞安全检测使能状态。|
-
-- **代码示例**
-
-**输入**  
-
-设置当前虚拟墙参数。
-
-```json
-{"command":"set_self_collision_enable","set_enable":false}
-```
-
-**输出**  
-
-```json
-{
-    "command": "set_self_collision_enable",
-    "set_state": true
-}
-```
-
-### 自碰撞检测 获取自碰撞安全检测使能状态`get_self_collision_enable`
-
-- **输入参数**
-
-| 参数 | 类型 | 说明 |
-| :-- | :-- | :-- |
-|`get_self_collision_enable`|`string`|获取自碰撞安全检测使能状态|
-
-- **输出参数**
-
-| 参数 | 类型 | 说明 |
-| :-- | :-- | :-- |
-|`enable_state`|`bool`|`true` 使能 `false` 禁使能。|
-
-- **代码示例**
-
-**输入**  
-
-设置当前虚拟墙参数。
-
-```json
-{ "command": "get_self_collision_enable" }
-```
-
-**输出**  
-
-```json
-{
-    "command": "get_self_collision_enable",
-    "enable_state": false
 }
 ```

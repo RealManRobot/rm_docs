@@ -203,44 +203,68 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/getStartedJson",
           },
           {
-            text: "关节配置指令集",
-            link: "/robot/json/jointConfig",
+            text: "关节参数指令集",
+            link: "/robot/json/jointParameter.md",
           },
           {
-            text: "机械臂配置指令集",
-            link: "/robot/json/armConfig",
+            text: "运动参数指令集",
+            link: "/robot/json/armConfig.md",
           },
           {
-            text: "运动配置指令集",
+            text: "运动指令集",
             link: "/robot/json/motionConfig",
           },
           {
-            text: "系统配置指令集",
-            link: "/robot/json/systemConfig",
+            text: "坐标系指令集",
+            link: "/robot/json/coordinate.md",
           },
           {
-            text: "升降机构配置指令集",
-            link: "/robot/json/liftControl",
+            text: "状态查询指令集",
+            link: "/robot/json/armState.md",
           },
           {
-            text: "通用扩展关节配置指令集",
-            link: "/robot/json/expandControl",
+            text: "系统指令集",
+            link: "/robot/json/systemConfig.md",
           },
           {
-            text: "在线编程配置指令集",
-            link: "/robot/json/onlineProgram",
+            text: "网络配置指令集",
+            link: "/robot/json/networkConfig.md",
           },
           {
-            text: "UDP 主动上报配置指令集",
+            text: "IO配置指令集",
+            link: "/robot/json/ioConfig.md",
+          },
+          {
+            text: "UDP 主动上报指令集",
             link: "/robot/json/udpConfig",
           },
           {
-            text: "电子围栏和虚拟墙配置指令集",
-            link: "/robot/json/electronicFence",
+            text: "在线编程指令集",
+            link: "/robot/json/onlineProgram.md",
           },
           {
-            text: "自碰撞安全检测配置指令集",
-            link: "/robot/json/selfCollision",
+            text: "拖动示教指令集",
+            link: "/robot/json/dragTech.md",
+          },
+          {
+            text: "RS485与modbus指令集",
+            link: "/robot/json/modbus.md",
+          },
+          {
+            text: "电子围栏与虚拟墙指令集",
+            link: "/robot/json/electronicFence.md",
+          },
+          {
+            text: "力传感器指令集",
+            link: "/robot/json/forceSensor.md",
+          },
+          {
+            text: "末端工具指令集（选配）",
+            link: "/robot/json/endTool.md",
+          },
+          {
+            text: "控制器扩展设备指令集",
+            link: "/robot/json/expandControl.md",
           },
           {
             text: "附录：错误代码",
