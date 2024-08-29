@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: 睿尔曼智能 <p class="titleP">文档中心</p>
+  name: 睿尔曼智能 <p class="titleP">开发者中心</p>
   tagline: 深度开放   /   超好上手   /   携手共创智能未来
   image:
     src: /assets/index.png

@@ -373,7 +373,9 @@ img {
     /* border-bottom: 1px solid var(--vp-c-divider); */
 }
 
-.vp-doc h1 > code, .vp-doc h2 > code, .vp-doc h3 > code{
+.vp-doc h1>code,
+.vp-doc h2>code,
+.vp-doc h3>code {
     color: var(--vp-c-indigo-1) !important;
 }
 
@@ -411,4 +413,18 @@ img {
 
 html:not(.dark) .vp-code span {
     /* color: var(--vp-c-indigo-3, inherit) !important; */
+}
+
+.vp-doc p img {
+    width: auto;
+    min-width: 200px !important;
+    max-width: 375px !important;
+}
+
+@media (min-width: 960px) {
+    .vp-doc p img {
+        width: auto;
+        min-width: 380px !important;
+        max-width: 620px !important;
+    }
 }

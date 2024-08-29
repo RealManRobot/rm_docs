@@ -7,13 +7,8 @@ export const head: HeadConfig[] = [
     "link",
     {
       rel: "stylesheet",
-      href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css",
-    },
-  ],
-  [
-    "script",
-    {
-      src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js",
+      // href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css",
+      href: "/css/fancybox.css",
     },
   ],
   [
@@ -26,5 +21,12 @@ export const head: HeadConfig[] = [
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();`,
+  ],
+  [
+    "script",
+    {
+      // src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js",
+      src: "/js/fancybox.umd.js",
+    },
   ],
 ];
