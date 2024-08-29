@@ -1,4 +1,4 @@
-# <p class="hidden">JSON协议：</p>控制器扩展设备指令集
+# <p class="hidden">JSON协议：</p>控制器扩展设备指令集（选配）
 
 ## 升降机构
 

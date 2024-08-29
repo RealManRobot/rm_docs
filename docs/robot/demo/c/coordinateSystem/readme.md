@@ -6,7 +6,7 @@
 
 ## **2. 代码结构**
 
-```C
+```
 RMDemo_CoordinateSystem/
 ├── build/                  # CMake构建生成的输出目录
 ├── include/                # 自定义头文件存放目录

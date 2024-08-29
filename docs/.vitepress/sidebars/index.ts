@@ -247,7 +247,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/dragTech.md",
           },
           {
-            text: "RS485与modbus指令集",
+            text: "RS485与Modbus指令集",
             link: "/robot/json/modbus.md",
           },
           {
@@ -263,7 +263,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/endTool.md",
           },
           {
-            text: "控制器扩展设备指令集",
+            text: "控制器扩展设备指令集（选配）",
             link: "/robot/json/expandControl.md",
           },
           {
@@ -1073,7 +1073,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "各系列关节详细参数",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "WHJ关节简述",
@@ -1103,7 +1103,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "关节CANFD通信协议",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "CANFD协议说明",
@@ -1127,7 +1127,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "快速开始",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "安装conda和python环境",
@@ -1141,7 +1141,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
       {
         text: "SDK开发指南",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "垂直抓取",

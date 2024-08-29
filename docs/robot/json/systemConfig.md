@@ -69,15 +69,6 @@
 | :--- | :------------------------- |:---|
 | `get_arm_software_version` | `string` |查询机械臂软件版本。|
 
-- **输入参数**
-
-```json
-7013129：转换成uint32_t类型的16进制数据，0x6B0309。
-6B：代表RM65-B型号6D-代表RM65-ZF型号6F-代表RM65-SF型号。
-0309：代表软件版本号为V3.0.9。
-Product_version：机械臂型号，仅第三代机械臂支持。
-```
-
 - **代码示例**
 
 **输入**  
@@ -89,6 +80,11 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 ```
 
 **输出**  
+
+7013129：转换成uint32_t类型的16进制数据，0x6B0309。<br>
+6B：代表RM65-B型号6D-代表RM65-ZF型号6F-代表RM65-SF型号。<br>
+0309：代表软件版本号为V3.0.9。<br>
+Product_version：机械臂型号，仅第三代机械臂支持。
 
 ```json
 {
@@ -122,7 +118,7 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 | ctrl_info | `string` |ctrl层软件信息。|
 | version | `string` |代表版本号。|
 | algorithm_info | `string` |算法库信息。|
-| Product_version | `string` |机械臂型号，仅第三代机械臂支持。|
+| Product_version | `string` |机械臂型号。|
 | dynamic_info | `string` |动力学版本，model_version 动力学模型版本号。|
 
 - **代码示例**
@@ -363,16 +359,8 @@ Product_version：机械臂型号，仅第三代机械臂支持。
 
 ```json
 {
-    "command": "get_joint_odom",
-    "odom": [
-        1000,
-        2000,
-        3000,
-        4000,
-        5000,
-        6000,
-        7000
-    ]
+    "command": "clear_joint_odom",
+    "clear_state": true
 }
 ```
 

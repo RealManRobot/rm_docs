@@ -7,7 +7,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>快速使用手册</h2>
-            <p>睿尔曼机器人快速使用手册 V1.5.0  文件格式：PDF</p>
+            <p>睿尔曼机器人快速使用手册  文件格式：PDF</p>
             <div class="w-100 d-flex flex-h-satrt flex-v-center">
                 <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">快速使用手册（Github）</a></p>
                 <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">快速使用手册（Gitee）</a></p>
@@ -20,7 +20,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>Web示教器用户手册</h2>
-            <p>睿尔曼机器人Web示教器用户手册 V1.6.0 文件格式：PDF</p>
+            <p>睿尔曼机器人Web示教器用户手册 文件格式：PDF</p>
             <div class="w-100 d-flex flex-h-satrt flex-v-center">
                 <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">Web示教器用户手册（Github）</a></p>
                 <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_docs/blob/user_public/docs/robot/userManual/" target="_blank">Web示教器用户手册（Gitee）</a></p>

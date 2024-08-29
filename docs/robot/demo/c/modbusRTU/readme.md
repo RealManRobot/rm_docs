@@ -1,6 +1,7 @@
 #  <p class="hidden">Demo演示(C、C++)：</p>ModbusRTU模式使用示例
 
 ## **1. 项目介绍**
+
 本项目演示如何配置RS485端口为ModbusRTU模式，并通过接口与连接的外设进行读写操作，示例操作流程如下：
 
 完成配置通讯端口ModbusRTU模式、写单圈数据、读单圈数据、写单个寄存器、读保存寄存器、关闭通讯端口 Modbus RTU 模式。
@@ -8,6 +9,7 @@
 项目基于Cmake构建，使用了睿尔曼提供的机械臂C语言开发包。
 
 ## **2. 代码结构**
+
 ```
 RMDemo_ModbusRTU
 ├── build              # CMake构建生成的输出目录（如Makefile、构建文件等）

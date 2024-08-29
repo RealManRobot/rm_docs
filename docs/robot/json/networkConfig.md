@@ -168,6 +168,7 @@ IP地址设置失败：
 | `ip` | `string` |网络地址。|
 | `mask` | `string` |子网掩码。|
 | `mac` | `string` |mac地址。|
+| `gw` | `string` | 网关地址。|
 
 - **代码示例**
 
@@ -186,6 +187,7 @@ IP地址设置失败：
     "command": "get_wired_net",
     "mask": "255.255.255.0",
     "ip": "192.168.1.18",
+    "gw": "192.168.1.1",
     "mac": "11:22:33:44:55:66"
 }
 ```
@@ -277,7 +279,7 @@ IP地址设置失败：
 }
 ```
 
-### 设置wifiAP`set_wifi_ap`
+### 设置wifiAP `set_wifi_ap`
 
 配置wifiAP内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFIAP模式。
 
@@ -297,7 +299,7 @@ IP地址设置失败：
 {"command":"set_wifi_ap","wifi_name":"robot","password":"12345678"}
 ```
 
-### 设置wifiSTA`set_wifi_sta`
+### 设置wifiSTA `set_wifi_sta`
 
 配置wifiSTA内容，无返回，设置成功后蜂鸣器响，手动重启控制器进入WIFISTA模式。
 

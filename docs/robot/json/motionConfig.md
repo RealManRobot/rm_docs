@@ -1,4 +1,4 @@
-# <p class="hidden">JSON 协议：</p>运动配令集
+# <p class="hidden">JSON 协议：</p>运动指令集
 
 ## 轨迹运动
 
@@ -49,12 +49,27 @@ trajectory_connect 参数为 1 交融半径才生效，如果为 0 则交融半�
 
 **输出**  
 
+指令接收成功：
+
 ```json
 {
     "command": "movej",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "movej",
+    "receive_state": false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -62,6 +77,10 @@ trajectory_connect 参数为 1 交融半径才生效，如果为 0 则交融半�
     "trajectory_connect": 1
 }
 ```
+
+::: warning 注意
+trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位， 1 代表连接下一条轨迹
+:::
 
 ### 直线运动`movel`
 
@@ -105,14 +124,27 @@ trajectory_connect 参数为 1 交融半径才生效，如果为 0 则交融半�
 
 **输出**  
 
-运动到位：
+指令接收成功：
 
 ```json
 {
     "command": "movel",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "movel",
+    "receive_state": false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -169,14 +201,27 @@ trajectory_connect 参数为 1 交融半径才生效，如果为 0 则交融半�
 
 **输出**  
 
-运动到位：
+指令接收成功：
 
 ```json
 {
     "command": "movec",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "movec",
+    "receive_state": false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -308,14 +353,27 @@ x：0.1m，y：0.4m，z：0.03m；<br>
 
 **输出**  
 
-返回指令接收状态且运动到位：
+指令接收成功：
 
 ```json
 {
     "command": "moves",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "moves",
+    "receive_state": false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -1147,14 +1205,27 @@ joint：当前关节角度，关节精度：0.001°；
 
 **输出**  
 
-指令接收成功，运动到位后连接吓一条轨迹。
+指令接收成功：
 
 ```json
 {
     "command": "set_joint_step",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "set_joint_step",
+    "receive_state": true
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -1162,6 +1233,10 @@ joint：当前关节角度，关节精度：0.001°；
     "trajectory_connect": 1
 }
 ```
+
+::: warning 注意
+trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹
+:::
 
 ### 位置步进`set_pos_step`
 
@@ -1195,14 +1270,27 @@ joint：当前关节角度，关节精度：0.001°；
 
 **输出**  
 
-指令接收成功，运动到位后连接吓一条轨迹。
+指令接收成功：
 
 ```json
 {
     "command": "set_pos_step",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "set_pos_step",
+    "receive_state": false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -1210,6 +1298,10 @@ joint：当前关节角度，关节精度：0.001°；
     "trajectory_connect": 1
 }
 ```
+
+::: warning 注意
+trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹
+:::
 
 ### 姿态步进`set_ort_step`
 
@@ -1243,14 +1335,27 @@ joint：当前关节角度，关节精度：0.001°；
 
 **输出**  
 
-指令接收成功，运动到位后连接吓一条轨迹。
+指令接收成功：
 
 ```json
 {
     "command": "set_ort_step",
     "receive_state": true
 }
+```
 
+指令接收失败：
+
+```json
+{
+    "command": "set_ort_step",
+    "receive_state":  false
+}
+```
+
+运动到位：
+
+```json
 {
     "state": "current_trajectory_state",
     "trajectory_state": true,
@@ -1258,6 +1363,10 @@ joint：当前关节角度，关节精度：0.001°；
     "trajectory_connect": 1
 }
 ```
+
+::: warning 注意
+trajectory_connect：代表是否连接下一条轨迹，0 代表全部到位，1 代表连接下一条轨迹
+:::
 
 ## 示教运动
 

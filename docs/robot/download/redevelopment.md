@@ -8,7 +8,7 @@
     <div class="d-flex">
         <div class="wrap-item1">
             <h2>JSON</h2>
-            <p>睿尔曼基于json通信协议提供了下载安装包。</p>
+            <p>睿尔曼基于json协议文档提供了下载安装包。</p>
             <div class="d-flex flex-h-start flex-v-center">
                 <p>Github下载： <a href="https://github.com/RealManRobot/rm_docs/tree/user_public/docs/robot/json" target="_blank">JSON协议（Github）</a></p>
                 <p>Gitee下载： <a href="https://gitee.com/RealManRobot/rm_docs/tree/user_public/docs/robot/json" target="_blank">JSON协议（Gitee）</a></p>
