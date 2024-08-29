@@ -133,7 +133,7 @@ pip install Pillow==10.4.0
 
 ### 代码获取
 
-代码可以在[github链接](wwwwwwww)获取最新代码。
+代码可以在[GitHub: 任意物品追踪](https://github.com/xialunhao0508/rmx)获取最新代码。
 
 ### 快速开始示例
 
