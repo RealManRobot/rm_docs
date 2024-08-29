@@ -209,9 +209,9 @@ pip install foundationpose-0.1.0-py3-none-any.whl
 
 ### 资源准备
 
-下载训练好的【refine_ckpt.pth】权重：[下载refine_ckpt权重](https://pan.baidu.com/s/1giIS4ORgzEq9hP7LY6pd8Q?pwd=1234)
+下载训练好的【refine_ckpt.pth】权重：[下载refine_ckpt权重](https://pan.baidu.com/s/1i_7fKFHB2jXfU7hP9_hLpg?pwd=1234)
 
-下载训练好的【predict_ckpt.pth】权重：[下载predict_ckpt权重](https://pan.baidu.com/s/1G1DB-BUJwehraI5Bp41dpA?pwd=1234)
+下载训练好的【predict_ckpt.pth】权重：[下载predict_ckpt权重](https://pan.baidu.com/s/1jARFDZGuSuICV00Pdjw8ww?pwd=1234)
 
 ### 代码获取
 

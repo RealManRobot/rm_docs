@@ -129,7 +129,7 @@ pip install Pillow==10.4.0
 
 ### 资源准备
 
-下载训练好的【Xmem.pth】权重：[下载Xmem权重](链接：https://pan.baidu.com/s/1p65ooaK_vGQGsy5XwrNoMA?pwd=1234)
+下载训练好的【Xmem.pth】权重：[下载Xmem权重](https://pan.baidu.com/s/1YoJvlMIUzxgLUVHkQXE6Lg?pwd=1234)
 
 ### 代码获取
 

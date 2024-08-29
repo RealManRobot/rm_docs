@@ -121,9 +121,9 @@ pip install Pillow==9.5.0
 
 ### 资源准备
 
-下载训练好的【coco.pt】权重：[下载coco权重](https://pan.baidu.com/s/1kgbQ_MdKcRMQ6DcVSWOGBQ?pwd=1234)
+下载训练好的【coco.pt】权重：[下载coco权重](https://pan.baidu.com/s/1PcBmpTTKZkkrnyO9mO320A?pwd=1234)
 
-下载训练好的【CDNet.pth】权重：[下载CDNet权重](https://pan.baidu.com/s/1kgbQ_MdKcRMQ6DcVSWOGBQ?pwd=1234)
+下载训练好的【CDNet.pth】权重：[下载CDNet权重](https://pan.baidu.com/s/1TDpGgA7FGXbigDhdiZapVA?pwd=1234)
 
 ### 代码获取
 

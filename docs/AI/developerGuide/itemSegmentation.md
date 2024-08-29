@@ -131,7 +131,7 @@ pip install ultralytics==8.2.66
 
 ### 资源准备
 
-下载完成训练的sam模型权重权重：[sam.pt](链接：https://pan.baidu.com/s/1qebYRV1qjDLZL2McMZbLPw?pwd=1234)
+下载完成训练的sam模型权重权重：[sam.pt](https://pan.baidu.com/s/17pGgkZBsZu-5uVlSi7CdRg?pwd=1234)
 
 ### 代码获取
 
