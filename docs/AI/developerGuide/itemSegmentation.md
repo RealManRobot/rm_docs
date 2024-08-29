@@ -140,7 +140,7 @@ pip install ultralytics==8.2.66
 ### 快速开始示例
 
 ```python
-from sam.interface import DetectBase
+from rm_sam.interface import DetectBase
 
 # 实例化分割对象
 sam_seg = DetectBase()
