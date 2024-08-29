@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import { head } from "./head";
 import { themeConfig } from "./themes";
+import mdItCustomAttrs  from 'markdown-it-custom-attrs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,7 +12,12 @@ export default defineConfig({
     image:{
       lazyLoading:true
     },
-    math:true
+    math:true,
+    config:(md)=>{
+      md.use(mdItCustomAttrs,'image',{
+        'data-fancybox': "gallery"
+      })
+    }
   },
   sitemap:{
     hostname: 'https://develop.realman-robotics.com/'

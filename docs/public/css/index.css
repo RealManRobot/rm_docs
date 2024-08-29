@@ -1,11 +1,13 @@
 :root {
     --vp-c-indigo-1: #EC6102;
-    --vp-c-indigo-2: #E5F4FB;
+    --vp-c-indigo-2: #E9F4FB;
+    --vp-c-indigo-3: #005CC5;
     --vp-font-family-base: 'Source Han Serif', 'MiSans', 'Punctuation SC', 'Inter', ui-sans-serif, system-ui, 'PingFang SC', 'Noto Sans CJK SC', 'Noto Sans SC', 'Heiti SC', 'Microsoft YaHei', 'DengXian', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .dark {
     --vp-c-indigo-2: #182732;
+    --vp-c-indigo-3: #79B8FF;
 }
 
 .group:nth-of-type(1) .VPLink .text {
@@ -222,8 +224,7 @@ tbody {
 }
 
 .DocSearch-Button {
-    background-color: var(--vp-c-bg) !important;
-    border-radius: 4px !important;
+    border: 1px solid var(--vp-c-bg-alt) !important;
 }
 
 /* .VPNavBar:not(.home.top) .content-body {
@@ -283,13 +284,13 @@ img {
 }
 
 .vp-doc th {
-    min-width: 64px;
+    min-width: 90px;
     background-color: var(--vp-c-indigo-2) !important;
     width: auto !important;
 }
 
 .vp-doc td {
-    min-width: 64px;
+    min-width: 90px;
 }
 
 .vp-doc h3 {
@@ -347,10 +348,10 @@ img {
     height: 18px;
 }
 
-.wrap-item1 h2{
+.wrap-item1 h2 {
     border-top: none !important;
     padding-top: 0 !important;
-    margin:  0 0 16px !important;
+    margin: 0 0 16px !important;
 }
 
 .wrap-item1 h2::before {
@@ -365,13 +366,14 @@ img {
     width: 24px;
     height: 24px;
 }
+
 .vp-doc h1 {
     padding-bottom: 10px !important;
     margin-bottom: 30px !important;
     /* border-bottom: 1px solid var(--vp-c-divider); */
 }
 
-code {
+.vp-doc h1 > code, .vp-doc h2 > code, .vp-doc h3 > code{
     color: var(--vp-c-indigo-1) !important;
 }
 
@@ -379,6 +381,7 @@ code {
     width: 100% !important;
     border-radius: 8px !important;
     margin: 8px 0 16px 0 !important;
+    overflow: auto;
 }
 
 .vp-doc ul,
@@ -401,6 +404,11 @@ code {
 .VPDoc.has-aside .content-container {
     max-width: 770px !important;
 }
-.h1Style{
-    margin:30px 0 !important;
+
+.h1Style {
+    margin: 30px 0 !important;
+}
+
+html:not(.dark) .vp-code span {
+    /* color: var(--vp-c-indigo-3, inherit) !important; */
 }
