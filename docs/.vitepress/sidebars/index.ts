@@ -1143,10 +1143,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         text: "SDK开发指南",
         collapsed: false,
         items: [
-          {
-            text: "垂直抓取",
-            link: "/AI/developerGuide/verticalGrab.md",
-          },
+          //{
+           // text: "垂直抓取",
+            //link: "/AI/developerGuide/verticalGrab.md",
+          //},
           {
             text: "多模态识别",
             link: "/AI/developerGuide/multimodalRecognition.md",
@@ -1159,10 +1159,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             text: "任意物品追踪",
             link: "/AI/developerGuide/itemTracking.md",
           },
-          {
-            text: "任意物品姿态",
-            link: "/AI/developerGuide/itemPosture.md",
-          },
+          //{
+            //text: "任意物品姿态",
+            //link: "/AI/developerGuide/itemPosture.md",
+          //},
         ],
       },
     ],
