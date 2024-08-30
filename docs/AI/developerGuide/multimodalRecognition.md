@@ -130,7 +130,7 @@ pip install Pillow==9.5.0
 
 ### 代码获取
 
-代码可以在[GitHub: 多模态识别](https://github.com/xialunhao0508/yolo-rgbd)获取最新代码。
+代码可以在[GitHub: 多模态识别](https://github.com/RealManRobot/yolo-rgbd)获取最新代码。
 
 ### 快速开始示例
 

@@ -104,7 +104,7 @@ pip install scipy==1.10.1
 
 ### 代码获取
 
-代码可以在[GitHub: 垂直抓取](https://github.com/xialunhao0508/vertical_grab)获取最新代码。
+代码可以在[GitHub: 垂直抓取](https://github.com/RealManRobot/vertical-grasp)获取最新代码。
 
 ### 运行代码
 

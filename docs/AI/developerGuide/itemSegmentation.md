@@ -140,7 +140,7 @@ pip install ultralytics==8.2.66
 
 ### 代码获取
 
-代码可以在[GitHub: 任意物品分割](https://github.com/xialunhao0508/rm-sam)获取最新代码。
+代码可以在[GitHub: 任意物品分割](https://github.com/RealManRobot/rm-sam)获取最新代码。
 
 ### 快速开始示例
 
