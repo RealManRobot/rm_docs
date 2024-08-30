@@ -135,9 +135,9 @@ pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --ind
 
 安装 pytorch3d 库，用于 3D 计算的 PyTorch 扩展
 
-> 注意
-> 若编译失败，应该是内存不足或系统资源耗尽引起的，可以先手动编译，限制编译时使用的并行工作线程数量export MAX_JOBS=4 
-> 编译命令 python setup.py bdist_wheel
+> 注意<br>
+> 若编译失败，应该是内存不足或系统资源耗尽引起的。<br>
+> 解决办法：在当前环境下输入export MAX_JOBS=4（限制编译时使用的并行工作线程,4可以换成内核数量的70%的值），再重新运行下面编译指令
 
 ```bash
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"

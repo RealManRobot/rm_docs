@@ -81,10 +81,18 @@ pip -V
 pip install -U pip
 ```
 
-安装python环境三方包依赖、pytorch的gpu版本和cuda等深度学习加速环境
+3. 安装python环境三方包依赖
+
+安装pytorch的gpu版本和cuda等深度学习加速环境
 
 ```bash
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch -y
+```
+
+如果conda安装失败或时间过长 换成下面代码
+
+```bash
+pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 安装opencv
