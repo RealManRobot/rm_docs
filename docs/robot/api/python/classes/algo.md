@@ -134,7 +134,7 @@ rm_algo_get_curr_workframe(self) -> dict[str, any]:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工作坐标系字典，键为rm_frame_t结构体的字段名称。    |
+|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工作坐标系字典，<br>键为rm_frame_t结构体的字段名称。    |
 
 *可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
@@ -199,7 +199,7 @@ rm_algo_get_curr_toolframe(self) -> dict[str, any]:
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
-|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工具坐标系字典，键为rm_frame_t结构体的字段名称。    |
+|   `dict[str, any]`  |    `rm_frame_t`    |    返回当前工具坐标系字典，<br>键为rm_frame_t结构体的字段名称。    |
 
 *可以跳转[rm_frame_t](../struct/frame.md)查阅结构体详细描述*
 
@@ -512,7 +512,7 @@ rm_algo_forward_kinematics(self, joint: list[float], flag: int = 1) -> list[floa
 
 - **返回值:**
 
-list[float]: 解得目标位姿列表。
+`list[float]`: 解得目标位姿列表。
 
 - **使用示例**
   
@@ -545,9 +545,7 @@ rm_algo_euler2quaternion(self, eul: list[float]) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    四元数列表[w,x,y,z]。    |
+`list[float]`: 四元数列表[w,x,y,z]
 
 - **使用示例**
   
@@ -579,9 +577,7 @@ rm_algo_quaternion2euler(self, quat: list[float]) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    欧拉角列表[rx.ry,rz]，单位：rad。    |
+`list[float]`: 欧拉角列表[rx.ry,rz]，单位：rad。
 
 - **使用示例**
   
@@ -682,9 +678,7 @@ rm_algo_matrix2pos(self, matrix: rm_matrix_t, flag: int = 1) -> list[float]:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    解得目标位姿。    |
+`list[float]`: 解得目标位姿。
 
 - **使用示例**
   
@@ -723,9 +717,7 @@ rm_algo_base2workframe(self, matrix: rm_matrix_t, pose_in_base: rm_pose_t, flag:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基坐标系在工作坐标系下的位姿。    |
+`list[float]`: 基坐标系在工作坐标系下的位姿。
 
 - **使用示例**
   
@@ -765,9 +757,7 @@ rm_algo_workframe2base(self, matrix: rm_matrix_t, pose_in_work: rm_pose_t, flag:
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    工作坐标系在基坐标系下的位姿。    |
+`list[float]`: 工作坐标系在基坐标系下的位姿。
 
 - **使用示例**
   
@@ -804,11 +794,7 @@ rm_algo_end2tool(self, eu_end: rm_pose_t, flag: int = 1) -> list[float]:
 |   `eu_end`  |    `rm_pose_t`    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
 |   `flag`  |    `int`    |    选择姿态表示方式，默认欧拉角表示姿态;- 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z];- 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]。    |
 
-- **返回值:**
-
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基于工作坐标系和工具坐标系的末端位姿。    |
+`list[float]`: 基于工作坐标系和工具坐标系的末端位姿。
 
 - **使用示例**
   
@@ -844,11 +830,7 @@ rm_algo_tool2end(self, eu_tool: rm_pose_t, flag: int = 1) -> list[float]:
 |   `eu_tool`  |    `rm_pose_t`    |    基于工作坐标系和工具坐标系的末端位姿。    |
 |   `flag`  |    `int`    |    选择姿态表示方式，默认欧拉角表示姿态;- 0: 返回使用四元数表示姿态的位姿列表[x,y,z,w,x,y,z];- 1: 返回使用欧拉角表示姿态的位姿列表[x,y,z,rx,ry,rz]。    |
 
-- **返回值:**
-
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    基于世界坐标系和默认工具坐标系的末端位姿。    |
+`list[float]` 基于世界坐标系和默认工具坐标系的末端位姿。
 
 - **使用示例**
   
@@ -889,9 +871,7 @@ rm_algo_RotateMove(self, curr_joint: list[float], rotate_axis: int, rotate_angle
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    目标位姿。    |
+`list[float]`:目标位姿。
 
 - **使用示例**
   
@@ -931,9 +911,7 @@ rm_algo_cartesian_tool(self, curr_joint: list[float], move_lengthx: float, move_
 
 - **返回值:**
 
-|   参数    |   类型    |   说明    |
-| :--- | :--- | :--- |
-|   `list[]`  |    `float`    |    目标位姿。    |
+`list[float]`:目标位姿。
 
 - **使用示例**
   
@@ -949,3 +927,49 @@ algo_handle = Algo(arm_model, force_type)
 current_joint = [0, 0, -60, 0, 60, 0]
 algo_handle.rm_algo_cartesian_tool(current_joint, 0.01, 0, 0.01)
 ```
+
+## 计算Pos和Rot沿某坐标系有一定的位移和旋转角度后，所得到的位姿数据`rm_algo_PoseMove()`
+
+- **方法原型：**
+
+```python
+rm_algo_PoseMove(self, poseCurrent: list[float], deltaPosAndRot: list[float], frameMode: int) -> list[float]
+```
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `poseCurrent`  |    `list[float]`    |    当前时刻位姿（欧拉角形式）    |
+|   `deltaPosAndRot`  |    `list[float]`    |    移动及旋转数组，位置移动（单位：m），旋转（单位：度）    |
+|   `frameMode`  |    `int`    |    坐标系模式选择 0:Work（work即可任意设置坐标系），1:Tool    |
+
+- **返回值:**
+
+`list[float]`: 平移旋转后的位姿 
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+arm_model = rm_robot_arm_model_e.RM_MODEL_RM_65_E  # RM_65机械臂
+force_type = rm_force_type_e.RM_MODEL_RM_B_E  # 标准版
+# 初始化算法的机械臂及末端型号
+algo_handle = Algo(arm_model, force_type)
+
+# 设置当前使用的工具坐标系
+frame = rm_frame_t("", [0.01, 0.01, 0.01, 0.5, 0.5, 0.5], 1, 0, 0, 0)
+algo_handle.rm_algo_set_toolframe(frame)
+
+# 当前位姿
+current_joint = [0,-30,90,30,90,0]
+poseCurrent = algo_handle.rm_algo_forward_kinematics(current_joint)
+print("当前位姿:", poseCurrent)
+
+# 计算变化后的位姿
+deltaPosAndRot = [0.01,0.01,0.01,20,20,20]
+afterPosAndRot = algo_handle.rm_algo_PoseMove(poseCurrent, deltaPosAndRot,1)
+print("平移旋转后的位姿:", afterPosAndRot)
+```
+

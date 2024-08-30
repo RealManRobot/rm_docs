@@ -2,7 +2,7 @@
 
 ## 1. 项目介绍
 
-本项目是一个使用睿尔曼Python开发包完成工程完成机械臂连接、机械臂版本获取、API版本获取、movej运动、moveL运动、moveC运动、关闭连接。
+本项目是使用睿尔曼Python开发包完成工程、完成机械臂连接、机械臂版本获取、API版本获取、movej运动、moveL运动、moveC运动、关闭连接。
 
 ## 2. 代码结构
 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## 6. 使用指南
 
-### 1. 快速运行
+### 6.1 快速运行
 
 按照以下步骤快速运行代码：
 
@@ -109,7 +109,7 @@ movec motion succeeded
 Successfully disconnected from the robot arm
 ```
 
-### 2. 代码说明
+### 6.2 代码说明
 
 下面是 `demo_simple_process.py` 文件的主要功能：
 

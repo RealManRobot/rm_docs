@@ -11,3 +11,5 @@
 | `force_sensor`| [rm_force_sensor_t](../struct/rm_force_sensor_t)    | 力传感器数据结构体  |
 | `sys_err`     | `uint16_t`         | 系统错误码                                 |
 | `waypoint`    | [rm_pose_t](../struct/pose)       | 当前位置姿态结构体     |
+| `liftState`    | [rm_udp_lift_state_t](../struct/udpLiftState)       | 升降关节数据     |
+| `expandState`    | [rm_udp_expand_state_t](../struct/udpExpandState)       | 扩展关节数据     |

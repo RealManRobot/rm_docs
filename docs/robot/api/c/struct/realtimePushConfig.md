@@ -33,3 +33,10 @@
     ```C++
     char rm_realtime_push_config_t::ip[28]
     ```
+
+- ### 自定义上报项`custom_config`
+
+    ```C++
+    rm_udp_custom_config_t rm_realtime_push_config_t::custom_config
+    ```
+    *可以跳转[rm_udp_custom_config_t](../struct/udpCustomConfig)查阅结构体详细描述*

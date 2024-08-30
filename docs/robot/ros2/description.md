@@ -7,6 +7,8 @@ rm_description功能包为显示机器人模型和TF变换的功能包，通过�
 * 2.功能包架构说明：熟悉功能包中的文件构成及作用。
 * 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
 
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_description](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_description)
+
 ## 1.rm_description功能包使用
 
 首先配置好环境完成连接后我们可以通过以下命令直接启动节点，运行rm_description功能包。  

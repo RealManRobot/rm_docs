@@ -10,3 +10,4 @@
 |`joint_position`|`float[7]`|关节角度，单位°，精度：0.001°。|
 |`joint_temperature`|`float[7]`|当前关节温度，精度0.001℃。|
 |`joint_voltage`|`float[7]`|当前关节电压，精度0.001V。|
+|`joint_speed`|`float[7]`|当前关节速度，精度0.01RPM。|

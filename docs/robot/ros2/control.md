@@ -5,7 +5,9 @@ rm_control功能包为实现moveit2控制真实机械臂时所必须的一个功
 
 * 1.功能包使用:了解该功能包的使用。
 * 2.功能包架构说明：熟悉功能包中的文件构成及作用。
-* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。  
+* 3.功能包话题说明：熟悉功能包相关的话题，方便开发和使用。
+
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_control](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_control)
 
 ## 1.rm_control功能包使用
 

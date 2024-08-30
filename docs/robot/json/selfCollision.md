@@ -10,7 +10,6 @@
 |   :--     |   :--     |   :--     |
 |`set_self_collision_enable`|`string` |设置自碰撞安全检测使能状态。|
 
-
 - **输出参数**
 
 |   参数    |   类型    |   说明    |
@@ -19,7 +18,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置当前虚拟墙参数。
 
@@ -27,12 +26,14 @@
 {"command":"set_self_collision_enable","set_enable":false}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"set_self_collision_enable","set_state":true}
+{
+    "command": "set_self_collision_enable",
+    "set_state": true
+}
 ```
-
 
 ## 获取自碰撞安全检测使能状态`get_self_collision_enable`
 
@@ -42,7 +43,6 @@
 |   :--     |   :--     |   :--     |
 |`get_self_collision_enable`|`string` |获取自碰撞安全检测使能状态。|
 
-
 - **输出参数**
 
 |   参数    |   类型    |   说明    |
@@ -51,7 +51,7 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
 设置当前虚拟墙参数。
 
@@ -59,9 +59,11 @@
 {"command":"get_self_collision_enable"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"get_self_collision_enable","enable_state":false}
+{
+    "command": "get_self_collision_enable",
+    "enable_state": false
+}
 ```
-

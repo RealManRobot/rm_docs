@@ -62,9 +62,9 @@ pip install -r requirements.txt
 
 ---
 
-## 5. 使用指南
+## 6. 使用指南
 
-### 5.1 快速运行
+### 6.1 快速运行
 
 按照以下步骤快速运行代码：
 
@@ -113,7 +113,7 @@ Euler to Quaternion: [0.0002963105798698962, 0.9999999403953552, 0.0, 0.0]
 Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
 ```
 
-### **5.2 代码说明**
+### **6.2 代码说明**
 
 下面是 `demo_algo_interface.py` 文件的主要功能：
 
@@ -122,6 +122,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller = AlgoController(arm_model, force_type)
     ```
+
     初始化算法，不连接机械臂。
 
 - **获取API版本**
@@ -129,6 +130,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     print("\nAPI Version: ", rm_api_version(), "\n")
     ```
+
     获取并显示API版本。
 
 - **设置基座安装角度**
@@ -136,6 +138,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.set_angle(0, 0, 0)
     ```
+
     设置基座的安装角度。
 
 - **设置工作坐标系**
@@ -143,6 +146,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.set_workframe((0.0, 0.0, 0.0, 0.0, 0.0, 0.0))
     ```
+
     设置工作坐标系。
 
 - **设置工具坐标系**
@@ -150,6 +154,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.set_toolframe((0.0, 0.0, 0.0, 0.0, 0.0, 0.0), 0, 0, 0, 0)
     ```
+
     设置工具坐标系。
 
 - **运动学正解**
@@ -158,6 +163,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     algo_controller.forward_kinematics(joint, flag_eul)  # Euler angles
     algo_controller.forward_kinematics(joint, flag_qua)  # Quaternion
     ```
+
     使用给定的关节角度进行正向运动学计算。
 
 - **运动学逆解**
@@ -165,6 +171,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.inverse_kinematics(q_in_joint, q_in_pose, flag_eul)
     ```
+
     使用给定的末端位姿进行逆向运动学计算。
 
 - **欧拉角转四元数**
@@ -172,6 +179,7 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.euler2quaternion(eul)
     ```
+
     将欧拉角转换为四元数。
 
 - **四元数转欧拉角**
@@ -179,8 +187,9 @@ Quaternion to Euler: [0.0, -0.0, 3.1415927410125732]
     ```python
     algo_controller.quaternion2euler(qua)
     ```
+
     将四元数转换为欧拉角。
 
-## 6. 许可证信息
+## 7. 许可证信息
 
 - 本项目遵循MIT许可证。

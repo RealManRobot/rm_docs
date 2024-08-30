@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ## 6. 使用指南
 
-### 1. 快速运行
+### 6.1 快速运行
 
 按照以下步骤快速运行代码：
 
@@ -114,7 +114,7 @@ movej_cmd joint movement 1: 0
 Successfully disconnected from the robot arm
 ```
 
-### 2. 代码说明
+### 6.2 代码说明
 
 下面是 `demo_movej_canfd.py` 文件的主要功能：
 

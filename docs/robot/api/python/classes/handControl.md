@@ -48,7 +48,7 @@ print(arm.rm_set_hand_posture(1, True, 10))
 arm.rm_delete_robot_arm()
 ```
 
-## 设置灵巧手目标手势序列号`rm_set_hand_seq()`
+## 设置灵巧手动作序列`rm_set_hand_seq()`
 
 - **方法原型：**
 

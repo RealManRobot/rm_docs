@@ -6,6 +6,8 @@ rm_gazebo的主要作用是帮助我们实现机械臂Moveit2规划的仿真功�
 * 1.功能包使用：了解该功能包的使用。
 * 2.功能包架构说明：熟悉功能包中的文件构成及作用。
 
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_gazebo](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_gazebo)
+
 ## 1.控制仿真机械臂
 
 在完成环境安装和功能包安装后，我们可以进行rm_gazebo功能包的运行。  

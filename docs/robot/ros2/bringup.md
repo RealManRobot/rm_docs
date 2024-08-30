@@ -8,6 +8,8 @@ rm_bringup功能包为实现多个launch文件同时运行所设计的功能包�
 * 2.熟悉rm_bringup功能包中的文件构成及作用。
 * 3.熟悉rm_bringup功能包相关的话题，方便开发和使用。
 
+代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_bringup](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_bringup)
+
 ## 1.rm_bringup功能包使用
 
 ### 1.1moveit2控制真实机械臂

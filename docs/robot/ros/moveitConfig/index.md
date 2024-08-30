@@ -12,7 +12,7 @@ rm_moveit_config文件夹为实现moveit控制真实机械臂的功能包，该�
 2. 熟悉功能包中的文件构成及作用。
 3. 熟悉功能包相关的话题，方便开发和使用。
 
-代码链接：[https://github.com/RealManRobot/rm/robot/tree/main/rm/moveit/config](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config。)
+代码链接：[https://github.com/RealManRobot/rm/robot/tree/main/rm/moveit/config](https://github.com/RealManRobot/rm_robot/tree/main/rm_moveit_config)
 
 ## 1.rm_moveit_config使用
 

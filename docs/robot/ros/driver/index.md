@@ -12,7 +12,7 @@ rm_driver 功能包在机械臂 ROS 功能包中是十分重要的，该功能�
 - 熟悉功能包中的文件构成及作用。
 - 熟悉功能包相关的话题，方便开发和使用。
 
-Github 代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_driver](https://github.com/RealManRobot/rm_robot/tree/main/rm_driver)
+代码链接：[https://github.com/RealManRobot/rm_robot/tree/main/rm_driver](https://github.com/RealManRobot/rm_robot/tree/main/rm_driver)
 
 ## 1.rm_driver 功能包使用
 

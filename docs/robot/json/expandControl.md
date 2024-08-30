@@ -1,14 +1,138 @@
-# <p class="hidden">JSON协议：</p>通用扩展关节配置指令集
+# <p class="hidden">JSON协议：</p>控制器扩展设备指令集（选配）
 
-## 扩展关节状态获取`expand_get_state`
+## 升降机构
+
+### 速度开环控制`set_lift_speed`
+
+升降机构速度开环控制。
+
+- **输入参数**
+
+| 参数            | 类型 | 说明                     |
+| :-------------- | :--- | :----------------------- |
+| `set_lift_speed` |   `string`   | 设置升降机构速度指令。           |
+| `speed` |   `int`   | 速度百分比，-100~100。speed<0：升降机构向下运动；speed>0：升降机构向上运动；speed=0：升降机构停止运动。          |
+
+- **输出参数**
+
+| 参数        | 类型   | 说明                                  |
+| :---------- | :----- | :------------------------------------ |
+| `set_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
+
+- **代码示例**
+
+**输入**  
+
+控制升降机构以50速比运动。
+
+```json
+{"command":"set_lift_speed","speed":50}
+```
+
+**输出**  
+
+设置成功
+
+```json
+{
+    "command": "set_lift_speed",
+    "set_state": true
+}
+```
+
+### 位置闭环控制`set_lift_height`
+
+升降机构位置闭环控制。
+
+- **输入参数**
+
+| 参数            | 类型 | 说明                     |
+| :-------------- | :--- | :----------------------- |
+| `set_lift_height` |   `string`   | 设置升降机构高度。           |
+| `height` |   `int`   | 目标高度，单位mm，范围：0~2600。          |
+| `speed` |   `int`   | 速度百分比，1-100。          |
+
+- **输出参数**
+
+| 参数        | 类型   | 说明                                  |
+| :---------- | :----- | :------------------------------------ |
+| `trajectory_state` | `bool` | `ture`：设置成功；`false`：设置失败。 |
+
+- **代码示例**
+
+**输入**  
+
+控制升降机构以50速比运动运动到1m位置
+
+```json
+{"command":"set_lift_height","height":1000,"speed":50}
+```
+
+**输出**  
+
+成功到位
+
+```json
+{
+    "device": 3,
+    "state": "current _trajectory_state",
+    "trajectory_connect": 0,
+    "trajectory_state": true
+}
+```
+
+### 获取升降机构状态`get_lift_state`
+
+- **输入参数**
+
+| 参数            | 类型 | 说明                     |
+| :-------------- | :--- | :----------------------- |
+| `get_lift_state` |   `string`   | 获取升降机构状态。           |
+
+- **输出参数**
+
+| 参数            | 类型 | 说明                     |
+| :-------------- | :--- | :----------------------- |
+| `height` |   `int`   | 当前升降机构高度，单位：mm，精度：1mm，范围：0~2300。          |
+| `current` |   `int`   | 当前升降驱动电流，单位：mA，精度：1mA。          |
+| `err_flag` |   `int`   | 升降驱动错误代码，错误代码类型参考关节错误代码。          |
+| `mode` |   `int`   | 当前升降状态，0-空闲，1-正方向速度运动，2-正方向位置运动，3-负方向速度运动，4-负方向位置运动。          |
+
+- **代码示例**
+
+**输入**  
+
+获取升降机构状态
+
+```json
+{"command":"get_lift_state"}
+```
+
+**输出**  
+
+成功到位
+
+```json
+{
+    "current": 2554,
+    "en_flag": "1",
+    "err_flag": "0",
+    "height": 0,
+    "joint_id": 1,
+    "mode": 0,
+    "state": "lift_state"
+}
+```
+
+## 通用扩展关节
+
+### 扩展关节状态获取`expand_get_state`
 
 - **输入参数**
 
 | 参数                    | 类型 | 说明                            |
 |:----------------------|:---|:------------------------------|
 |`expand_get_state`|   `string`   | 扩展关节状态获取。          |
-
-
 
 - **输出参数**
 
@@ -21,27 +145,31 @@
 |`mode`           | `int` |当前升降状态，0-空闲，1-正方向速度运动，2-正方向位置运动，3-负方向速度运动，4-负方向位置运动。|
 |`joint_id`        | `int` |扩展关节ID。 |
 
-- **代码示例** 
+- **代码示例**  
 
-**输入**
+**输入**  
 
-
-```json
-// 实现：扩展关节状态获取。
-```
+实现：扩展关节状态获取。
 
 ```json
 {"command":"expand_get_state"}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"state":"expand_state","pos":0,"err_flag":0,"en_flag":1,"current":0," mode":0,"joint_id":1}
+{
+    "state": "expand_state",
+    "pos": 0,
+    "err_flag": 0,
+    "en_flag": 1,
+    "current": 0,
+    " mode": 0,
+    "joint_id": 1
+}
 ```
 
-
-## 扩展关节速度环控制`expand_set_speed`
+### 关节速度环控制`expand_set_speed`
 
 - **输入参数**
 
@@ -58,25 +186,24 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
-
-```json
 // 实现：以50%的最大速度进行运动。
-```
 
 ```json
 {"command":"expand_set_speed","speed":-50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"expand_set_speed","set_speed_state":true}
+{
+    "command": "expand_set_speed",
+    "set_speed_state": true
+}
 ```
 
-
-## 关节位置环控制`expand_set_pos`
+### 关节位置环控制`expand_set_pos`
 
 - **输入参数**
 
@@ -86,7 +213,6 @@
 |`pos`|   `int`   | 位置。          |
 |`speed`|   `int`   | 速度百分比。          |
 
-
 - **输出参数**
 
 | 参数                | 类型     | 说明      |
@@ -95,28 +221,29 @@
 
 - **代码示例**
 
-**输入**
+**输入**  
 
+以50%的最大速度运动到0.0100°。
 
-```json
-// 以50%的最大速度运动到0.0100°。
-```
 ```json
 {"command":"expand_set_pos","pos":100,"speed":50}
 ```
 
-**输出**
+**输出**  
 
 ```json
-{"command":"expand_set_pos","set_pos_state":true}
+{
+    "command": "expand_set_pos",
+    "set_pos_state": true
+}
 ```
 
-
-
-```json
-// 到位后，会范围到位指令，如下:
-```
+到位后，会范围到位指令，如下:
 
 ```json
-{"state":"current_trajectory_state","device":4,"trajectory_state":true}
+{
+    "state": "current_trajectory_state",
+    "device": 4,
+    "trajectory_state": true
+}
 ```
