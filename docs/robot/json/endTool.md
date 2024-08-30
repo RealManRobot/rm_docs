@@ -212,11 +212,7 @@
 | `block` | `int` |true 表示阻塞模式，false 表示非阻塞模式。|
 
 ```json
-{
-    "command":"set_gripper_position",
-    "position":500,
-    "block":true
-}
+{"command":"set_gripper_position","position":500,"block":true}
 ```
 
 **输出**  
