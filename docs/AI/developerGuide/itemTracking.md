@@ -13,7 +13,7 @@ XMem 采用了阿特金森-希夫林记忆模型，将其应用于视频对象�
 
 本SDK针对XMem做了特异性适配与改进，在非训练场景下应用，可以更精确的跟踪移动对象实现分割目标，帮助机械臂更准确的进行操作，提升任务鲁棒性。
 
-如果想要了解更多信息，请访问：[XMem](https://github.com/RealManRobot/rm-track)
+如果想要了解更多信息，请访问：[XMem](https://github.com/hkchengrex/XMem)
 
 **使用场景**  
 
@@ -134,7 +134,7 @@ pip install Pillow==10.4.0
 
 ### 代码获取
 
-代码可以在[GitHub: 任意物品追踪](https://github.com/xialunhao0508/rmx)获取最新代码。
+代码可以在[GitHub: 任意物品追踪](https://github.com/RealManRobot/rm-track)获取最新代码。
 
 ### 快速开始示例
 
