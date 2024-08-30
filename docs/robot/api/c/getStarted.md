@@ -56,7 +56,7 @@
 
 ## 4.使用示例-MSVC
 
->支持MSVC2015及以上版本
+> 支持MSVC2015及以上版本
 
 本项目是一个使用Microsoft Visual Studio开发的C/C++项目，旨在演示如何将睿尔曼C语言版本的二次开发包集成到Visual Studio项目中。<br>本Readme文档将指导用户如何配置环境、导入库文件、设置项目属性以及编译和运行项目。
 
@@ -82,7 +82,7 @@ RMDemo_VisualStudio_Project
   - 在安装时，选择安装使用C++的桌面开发。
   - MSVC编译器要求2015以上
 - **睿尔曼二次开发包**：
-   下载链接
+[下载链接](/docs/robot/download/redevelopment.md)
 
 ### 4.3项目步骤
 
