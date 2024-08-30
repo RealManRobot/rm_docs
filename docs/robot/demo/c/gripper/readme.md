@@ -112,10 +112,15 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
+```bash
+Run...
+API Version: 1.0.0.
+Robot handle created successfully: 1
+请按任意键继续. . .
+```
+
 运行效果如下所示：
 ![demo_gripper](./grippers.gif)
-
-
 
 ### **5.2 关键代码说明**
 
@@ -123,18 +128,21 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **连接机械臂**
   连接到指定IP和端口的机械臂。
+
   ```C
   rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
   ```
 
 - **设置工具端电源输出**
   设置工具端电源输出24V
+
   ```C
   rm_set_tool_voltage(robot_handle, 3);
   ```
 
 - **运动到夹取起始位置**
   调用movej控制机械臂运动到物料所在位置
+
   ```C
   float joint_angles_start[6] = {90.0f, 90.0f, 30.0f, 0.0f, 60.0f, 0.0f};
   result = rm_movej(robot_handle, joint_angles_start, 20, 0, 0, 1);
@@ -142,6 +150,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **控制夹爪夹取物料**
   使用力控持续夹取功能，手爪夹取速度500，力控阈值200，阻塞进行抓取，超时时间30s
+
   ```C
   rm_set_gripper_pick_on(robot_handle, 500, 200, true, 30);
   ```

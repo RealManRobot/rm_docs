@@ -116,7 +116,12 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
-![alt text](image.png)
+```bash
+Run...
+API Version: 1.0.0.
+Robot handle created successfully: 1
+Coordinate demo run successfully...
+```
 
 ### **5.2 关键代码说明**
 

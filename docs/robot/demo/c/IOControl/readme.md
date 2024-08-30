@@ -119,7 +119,19 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
-![alt text](image.png)
+```bash
+API Version: 1.0.0.
+Robot handle created successfully: 1
+Drag teaching started
+Drag teaching has started, complete the drag operation and press Enter to continue...
+
+Drag teaching stopped
+Trajectory saved successfully, total number of points: 682
+Please enter a Save ID for this teaching session: 1
+Save ID { 1 } for this teaching session saved to the controller
+Project sent and run successfully
+请按任意键继续. . .
+```
 
 ### **5.2 关键代码说明**
 
@@ -142,6 +154,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **保存拖动示教的轨迹**
   调用rm_start_drag_teach接口使机械臂开始拖动示教模式，完成拖动后调用rm_stop_drag_teach退出拖动示教模式。调用rm_save_trajectory接口将拖动示教轨迹保存到data文件夹下的trajectory.txt文件。
+     
   ```C
   int result = rm_start_drag_teach(handle, trajectory_record);
   
@@ -157,6 +170,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **将拖动示教轨迹保存为在线编程文件**
   读取trajectory.txt文件，按照规则添加如下内容，并保存为在线编程文件project.txt：
+
   ```C
   // 其中file_value为当前机械臂自由度，type_value为文件行数
   char line1[50];
@@ -168,6 +182,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **将在线编程文件保存到控制器**
   将在线编程文件project.txt下发给控制器，并设置该文件为IO默认运行的在线编程文件：
+
   ```C
   // Get user input for save_id
   int save_id;
@@ -183,6 +198,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **设置IO复用模式**
   调用rm_set_IO_mode接口分别设置IO各端口的模式为输入开始功能复用模式、输入暂停功能复用模式、输入继续功能复用模式、输入急停功能复用模式
+
   ```C
   result = rm_set_IO_mode(robot_handle, 1, 2);  // Set IO mode to input start function multiplexing mode
   result = rm_set_IO_mode(robot_handle, 2, 3);  // Set IO mode to input pause function multiplexing mode

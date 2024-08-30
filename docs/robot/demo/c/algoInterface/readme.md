@@ -105,7 +105,20 @@ chmod +x run.sh
 
 运行结果如下：
 
-![alt text](image.png)
+```bash
+Run...
+API Version: 1.0.0.
+Set robot arm model to 0, sensor model to 0: Success
+Installation pose set successfully
+Forward kinematics calculation: Success
+Joint angles: [0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+End effector pose: Position(-0.00, 0.00, 0.85), Quaternion(0.00, -0.00, 0.00, 1.00), Euler angles(0.00, 0.00, 3.14)
+
+Inverse Kinematics: [0.043802, -21.288101, -78.314949, -0.092543, -80.397034, 0.059240]
+Euler to Quaternion:: [w: 0.000296, x: 1.000000, y: 0.000000, z: 0.000000]
+Quaternion to Euler: [rx: 0.000000, ry: -0.000000, rz: 3.141593]
+请按任意键继续. . .
+```
 
 ### **5.2 关键代码说明**
 

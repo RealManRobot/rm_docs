@@ -115,8 +115,60 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
    运行结果如下：
 
+    ```bash
+    API Version: 1.0.0.
+    Robot handle created successfully: 1
+    Drag teaching started
+    Drag teaching has started, complete the drag operation and press Enter to continue...
+
+    Please enter a Save ID for this teaching session: 50
+    Save ID { 50 } for this teaching session saved to the controller
+    Drag teaching stopped
+    Trajectory saved successfully, total number of points: 3
+    Project sent and run successfully
+    Program running state: 0
+    Program has ended
+    Program running state: 0
+    Program has ended
+    Program running state: 0
+    Program has ended
+    ```
+
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
+
+```bash
+Run...
+API Version: 1.0.0.
+Robot handle created successfully: 1
+Drag teaching started
+Drag teaching has started, complete the drag operation and press Enter to continue...
+
+Please enter a Save ID for this teaching session: 1
+Save ID { 1 } for this teaching session saved to the controller
+Drag teaching stopped
+Trajectory saved successfully, total number of points: 1805
+Project sent and run successfully
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Reached maximum query attempts, exiting
+Program running state: 2
+Program running state: 2
+Program running state: 2
+Program running state: 2
+Program running state: 2
+Reached maximum query attempts, exiting
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Program running state: 1
+Reached maximum query attempts, exiting
+请按任意键继续...
+```
 
 ### **5.2. 代码说明**
 

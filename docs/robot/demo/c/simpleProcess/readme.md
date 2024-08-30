@@ -111,8 +111,33 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
    运行结果如下：
 
+    ```bash
+    API Version: 1.0.0.
+    Robot handle created successfully: 1
+    ================== Arm Software Information ==================
+    Arm Model:  RM65-BI
+    Algorithm Library Version:  1.4.4
+    Control Layer Software Version:  V1.6.1
+    Dynamics Version:  2
+    Planning Layer Software Version:  V1.6.1
+    ==============================================================
+    ```
+
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
+
+```bash
+API Version: 1.0.0.
+Robot handle created successfully: 1
+================== Arm Software Information ==================
+Arm Model:  RM65-BI
+Algorithm Library Version:  1.4.4
+Control Layer Software Version:  V1.6.1
+Dynamics Version:  2
+Planning Layer Software Version:  V1.6.1
+==============================================================
+请按任意键继续...
+```
 
 ### **5.2 关键代码说明**
 

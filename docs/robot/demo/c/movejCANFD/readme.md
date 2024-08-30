@@ -161,59 +161,37 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 运行脚本后，输出结果如下所示：
 
-```
-API Version: 0.3.0.
+```bash
+Run...
+API Version: 1.0.0.
 Robot handle created successfully: 1
 Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
+0.02 -25.82 -38.03 -0.04 -116.15 -0.00
 Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
+...
 Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
+0.02 -25.82 -38.03 -0.03 -116.15 0.00
 Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
+0.02 -25.82 -38.03 -0.03 -116.15 0.00
 Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
-Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
-Joint positions:
-0.01 -21.32 -78.51 -0.03 -80.17 0.02
+0.02 -25.82 -38.03 -0.03 -116.15 0.00
 Successfully set realtime push configuration.
-Current state: -53.000
-Current angles: 0.013 -21.323 -78.511 -0.034 -80.170 0.020
-Current state: 0
-Current state: 0
-Error Code: 0
-Arm IP: 192.168.1.18
-Arm Error: 0
-Joint Position:
- 0.013
- -21.323
- -78.511
- -0.034
- -80.170
- 0.020
-Force Sensor:
-  Coordinate: 888729056
-System Error: 0
-Waypoint:
-  Euler: [3.141, 0.000, 0.000]
-  Position: [0.300, -0.000, 0.299]
-  Quat: [0.000, 1.000, -0.000, -0.000]
-  ....
-  176.12 -128.64 133.60 176.12 126.63 356.12
+Trying to open file: C:/Users/realman/830/RM_API2-main/RM_API2-main/Demo/RMDemo_C/RMDemo_MovejCANFD/data/RM65&RM63_canfd_data.txt
+Total points: 3600
+The motion is complete, the arm is in place.
+Motion result: 1
+Current device: 0
+Is the next trajectory connected: 0
+Moving to point 0
+Moving to point 3598
+Moving to point 3599
 Pass-through completed
-
 The motion is complete, the arm is in place.
 Motion result: 1
 Current device: 0
 Is the next trajectory connected: 0
 movej_cmd joint movement 1: 0
-...
-Joint positions:
--0.00 0.00 0.00 0.00 0.00 -0.00
-INFO: disconnect_robot_arm: Operation successful
-
+请按任意键继续...
 ```
 
 运行脚本后，运行轨迹从上至下如下图所示：

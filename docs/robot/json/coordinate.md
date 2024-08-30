@@ -374,13 +374,13 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 }
 ```
 
-### 查询当前工具`get_current_tool_frame`
+### 查询当前工具坐标系`get_current_tool_frame`
 
 - **输入参数**
 
 | 参数                     | 类型     | 说明           |
 | :----------------------- | :------- | :------------- |
-| `get_current_tool_frame` | `string` | 查询当前工具。 |
+| `get_current_tool_frame` | `string` | 查询当前工具坐标系。 |
 
 - **输出参数**
 
@@ -392,7 +392,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 **输入**  
 
-实现：查询当前工具。
+实现：查询当前工具坐标系。
 
 ```json
 { "command": "get_current_tool_frame" }
@@ -400,7 +400,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 **输出**  
 
-返回当前工具信息,如下：
+返回当前工具坐标系信息,如下：
 
 工具名称：tool2_frame；<br>
 工具位置：x：0.1m，y:0.2m，z：0.03m；<br>

@@ -106,7 +106,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    ```
 
 2. **linux 命令行运行**：
-   在终端进入 `RMDemo_ModbusRTU` 目录，输入以下命令运行C程序： 
+   在终端进入 `RMDemo_ModbusRTU` 目录，输入以下命令运行C程序：
 
    ```bash
    chmod +x run.sh
@@ -115,10 +115,209 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
    运行结果如下：
 
+   参考 Windows 的运行结果。
 
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
+```bash
+Run...
+API Version: 1.0.0.
+ send is: {"command":"get_arm_software_info"}
+
+
+ thread_socket_receive len 315 robot_handle: 1 message:{"Product_version":"RM65-BI","algorithm_info":{"version":"1.4.4"},"command":"arm_software_info","ctrl_info":{"build_time":"2024/08/28 18:36:18","commit_id":"0315333","version":"V1.6.1"},"dynamic_info":{"model_version":"2"},"plan_info":{"build_time":"2024/08/28 18:36:33","commit_id":"166c4a8","version":"V1.6.1"}}
+
+ [rm_get_arm_software_info] Product version: RM65-BI
+
+ [rm_get_arm_software_info] Algorithm version: 1.4.4
+
+ [rm_get_arm_software_info] Ctrl version: V1.6.1
+
+ [rm_get_arm_software_info] Ctrl build Time: 2024/08/28 18:36:18
+
+ [rm_get_arm_software_info] Dynamic model version: 2
+
+ [rm_get_arm_software_info] Plan version: V1.6.1
+
+ [rm_get_arm_software_info] Plan build Time: 2024/08/28 18:36:18
+
+ send is: {"command":"get_realtime_push"}
+
+
+ thread_socket_receive len 195 robot_handle: 1 message:{"command":"get_realtime_push","custom":{"expand_state":false,"joint_acc":false,"joint_speed":false,"lift_state":false,"tail_end":false},"cycle":5,"enable":true,"ip":"192.168.1.88","port":8089}
+
+ [rm_get_realtime_push] cycle parse result: 5
+
+ [rm_get_realtime_push] port parse result: 8089
+
+ [rm_get_realtime_push] ip parse result: 192.168.1.88
+
+ [rm_get_realtime_push] enable parse result: 1
+
+ send is: {"command":"get_current_work_frame"}
+
+
+ thread_socket_receive len 74 robot_handle: 1 message:{"frame_name":"World","pose":[0,0,0,0,0,0],"state":"current_work_frame"}
+
+ [get_current_work_frame] Work frame Name: World
+
+ [get_current_work_frame] Work frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+ send is: {"command":"get_current_tool_frame"}
+
+
+ thread_socket_receive len 106 robot_handle: 1 message:{"payload":0,"pose":[0,0,0,0,0,0],"position":[0,0,0],"state":"current_tool_frame","tool_name":"Arm_Tip"}
+
+ [get_current_tool_frame] Tool frame Name: Arm_Tip
+
+ [get_current_tool_frame] Tool frame pose: (0.000, 0.000, 0.000, 0.000, 0.000, 0.000)
+
+ [get_current_tool_frame] Tool frame payloda: 0.000
+
+ [get_current_tool_frame] Tool frame position: (0.000, 0.000, 0.000)
+
+ send is: {"command":"get_install_pose"}
+
+
+ thread_socket_receive len 41 robot_handle: 1 message:{"pose":[0,0,0],"state":"install_pose"}
+
+ [rm_get_install_pose] pose parse result:
+
+  0
+
+  0
+
+  0
+
+ send is: {"command":"get_joint_min_pos"}
+
+
+ thread_socket_receive len 87 robot_handle: 1 message:{"min_pos":[-178000,-130000,-135000,-178000,-128000,-360000],"state":"joint_min_pos"}
+
+ [rm_get_joint_min_pos] min_pos parse result:
+
+  -178000
+
+  -130000
+
+  -135000
+
+  -178000
+
+  -128000
+
+  -360000
+
+ send is: {"command":"get_joint_max_pos"}
+
+
+ thread_socket_receive len 81 robot_handle: 1 message:{"max_pos":[178000,130000,135000,178000,128000,360000],"state":"joint_max_pos"}
+
+ [rm_get_joint_max_pos] max_pos parse result:
+
+  178000
+
+  130000
+
+  135000
+
+  178000
+
+  128000
+
+  360000
+
+ send is: {"command":"get_joint_max_acc"}
+
+
+ thread_socket_receive len 83 robot_handle: 1 message:{"joint_acc":[100000,100000,100000,100000,100000,100000],"state":"joint_max_acc"}
+
+ [rm_get_joint_max_acc] joint_acc parse result:
+
+  100000
+
+  100000
+
+  100000
+
+  100000
+
+  100000
+
+  100000
+
+ send is: {"command":"get_joint_max_speed"}
+
+
+ thread_socket_receive len 81 robot_handle: 1 message:{"joint_speed":[30000,30000,37500,37500,37500,37500],"state":"joint_max_speed"}
+
+ [rm_get_joint_max_speed] joint_speed parse result:
+
+  30000
+
+  30000
+
+  37500
+
+  37500
+
+  37500
+
+  37500
+
+Robot handle created successfully: 1
+ send is: {"command":"set_modbus_mode","port":0,"baudrate":115200,"timeout":10}
+
+
+ thread_socket_receive len 48 robot_handle: 1 message:{"command":"set_modbus_mode","set_state":true}
+
+ [rm_set_modbus_mode] set_state: true
+
+ send is: {"command":"write_single_coil","port":0,"address":0,"data":0,"device":2}
+
+
+ thread_socket_receive len 52 robot_handle: 1 message:{"command":"write_single_coil","write_state":true}
+
+ [rm_write_single_coil] write_state: true
+
+ send is: {"command":"read_coils","port":0,"address":0,"num":1,"device":2}
+
+
+ thread_socket_receive len 35 robot_handle: 1 message:{"command":"read_coils","data":0}
+
+ [rm_read_coils] data parse result: 0
+
+ send is: {"command":"write_single_coil","port":0,"address":0,"data":1,"device":2}
+
+
+ thread_socket_receive len 52 robot_handle: 1 message:{"command":"write_single_coil","write_state":true}
+
+ [rm_write_single_coil] write_state: true
+
+ send is: {"command":"write_single_register","port":0,"address":0,"data":180,"device":2}
+
+
+ thread_socket_receive len 56 robot_handle: 1 message:{"command":"write_single_register","write_state":true}
+
+ [rm_write_single_register] write_state: true
+
+ send is: {"command":"read_holding_registers","port":0,"address":0,"device":2}
+
+
+ thread_socket_receive len 49 robot_handle: 1 message:{"command":"read_holding_registers","data":180}
+
+ [rm_read_holding_registers] data parse result: 180
+
+ send is: {"command":"close_modbus_mode","port":0}
+
+
+ thread_socket_receive len 50 robot_handle: 1 message:{"command":"close_modbus_mode","set_state":true}
+
+ [rm_close_modbus_mode] set_state: true
+
+请按任意键继续...
+```
 
 ### **5.2 关键代码说明**
 
