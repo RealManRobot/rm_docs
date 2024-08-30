@@ -116,10 +116,8 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
    运行结果如下：
 
-
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
-
 
 ### **5.2 关键代码说明**
 
@@ -152,7 +150,6 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     ```C
     demo_movej_canfd(robot_handle)
     ```
-
 
 - **断开机械臂连接**
 
@@ -218,11 +215,11 @@ Joint positions:
 INFO: disconnect_robot_arm: Operation successful
 
 ```
+
 运行脚本后，运行轨迹从上至下如下图所示：
 
 ![moveCANFD](moveCANFD.gif)
 
-
 ## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
+- 本项目遵循MIT许可证。

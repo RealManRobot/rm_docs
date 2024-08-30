@@ -85,7 +85,8 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 4. 打开命令提示符或PowerShell，输入`cmake --version`检查CMake是否安装成功。
 
 ## 5. 使用指南
-### **5.1. 快速运行**
+
+### **5.1 快速运行**
 
 **1. Linux运行**
 在终端进入 `RMDemo_AlgoInterface` 目录，输入以下命令运行C程序：
@@ -106,11 +107,14 @@ chmod +x run.sh
 
 ![alt text](image.png)
 
-### **5.2. 关键代码说明**
+### **5.2 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
+
 - **初始化算法接口**
+
   初始化机械臂型号RM65-B。
+
   ```c
   rm_robot_arm_model_e Mode = RM_MODEL_RM_65_E;
   rm_force_type_e Type = RM_MODEL_RM_B_E;

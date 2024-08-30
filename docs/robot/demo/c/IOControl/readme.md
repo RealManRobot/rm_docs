@@ -90,7 +90,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **5. 使用指南**
 
-### **5.1. 快速运行**
+### **5.1 快速运行**
 
 按照以下步骤快速运行代码：
 
@@ -121,7 +121,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ![alt text](image.png)
 
-### **5.2. 关键代码说明**
+### **5.2 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
@@ -199,9 +199,8 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
+- 本项目遵循MIT许可证。
   
-
 ## 附录
 
 ### 控制器IO接口图1

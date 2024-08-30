@@ -106,7 +106,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    ```
 
 2. **linux 命令行运行**：
-   在终端进入 `RMDemo_OnlineProgram` 目录，输入以下命令运行C程序： 
+   在终端进入 `RMDemo_OnlineProgram` 目录，输入以下命令运行C程序：
 
    ```bash
    chmod +x run.sh
@@ -114,7 +114,6 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    ```
 
    运行结果如下：
-
 
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
@@ -128,6 +127,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     ```C
     rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
     ```
+  
   连接到指定IP和端口的机械臂。
 
 - **获取API版本**
@@ -136,17 +136,19 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     char *api_version = rm_api_version();
     printf("API Version: %s.\n", api_version);
     ```
+  
   获取并显示API版本。
-
 
 - **拖动示教**
   启动拖动示教模式，参数 `1` 表示记录轨迹。
+
     ```C
     start_drag_teach(robot_handle, 1);
     ```
 
 - **保存轨迹**
   保存记录的轨迹到指定文件。
+
     ```C
     int lines;
     result = rm_save_trajectory(robot_handle, TRAJECTORY_FILE_PATH, &lines);
@@ -154,43 +156,46 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 - **拼接在线编程文件**
   将特定行添加到轨迹文件中，形成在线编程文件。
+
     ```C
     add_lines_to_file(robot_handle, file_path_test, lines);
     ```
 
 - **下发在线编程文件**
   将在线编程文件发送到机械臂。
+
     ```C
     send_project(robot_handle, file_path_test, 20, 0, 16, 0, 0);
     ```
 
 - **查询在线编程运行状态**
   查询在线编程的运行状态，间隔 `1` 秒，最大查询次数为 `5`。
+
     ```C
     get_program_run_state(robot_handle, 1, 5);
     ```
 
 - **暂停机械臂**
   暂停机械臂运行。
+
     ```C
     set_arm_pause(robot_handle);
     ```
 
 - **继续机械臂运行**
   继续机械臂运行。
+
     ```C
     set_arm_continue(robot_handle);
     ```
 
 - **断开机械臂连接**
   断开与机械臂的连接。
+
     ```C
     disconnect_robot_arm(robot_handle);
     ```
 
 ## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
-
-
-  
+- 本项目遵循MIT许可证。

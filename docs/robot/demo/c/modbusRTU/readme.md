@@ -91,7 +91,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **5. 使用指南**
 
-### **5.1. 快速运行**
+### **5.1 快速运行**
 
 按照以下步骤快速运行代码：
 
@@ -120,7 +120,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    运行结果如下：
 
 
-### **5.2. 关键代码说明**
+### **5.2 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
@@ -129,6 +129,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     ```C
     rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
     ```
+
   连接到指定IP和端口的机械臂。
 
 - **获取API版本**
@@ -137,6 +138,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     char *api_version = rm_api_version();
     printf("API Version: %s.\n", api_version);
     ```
+
   获取并显示API版本。
 
 - **配置Modbus RTU模式**
@@ -190,11 +192,9 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
      rm_delete_robot_arm(robot_handle);
     ```
 
-
 ## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
-
+- 本项目遵循MIT许可证。
 
 ## 控制器和终端接口图
 

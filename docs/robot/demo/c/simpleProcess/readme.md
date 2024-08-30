@@ -1,6 +1,5 @@
 #  <p class="hidden">Demo演示(C、C++)：</p>Cmake项目基础搭建示例
 
-
 ## **1. 项目介绍**
 本项目提供了一个基于Cmake构建，使用睿尔曼机械臂C语言开发包完成机械臂连接、机械臂版本获取、API 版本获取、Movej 运动、连接关闭等基本功能的示例，旨在帮助用户快速创建一个cmake构建的跨平台项目。
 
@@ -88,7 +87,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **5. 使用指南**
 
-### **5.1. 快速运行**
+### **5.1 快速运行**
 
 按照以下步骤快速运行代码：
 
@@ -103,7 +102,7 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
    ```
 
 2. **linux 命令行运行**：
-   在终端进入 `RMDemo_SimoleProcess` 目录，输入以下命令运行C程序： 
+   在终端进入 `RMDemo_SimoleProcess` 目录，输入以下命令运行C程序：
 
    ```bash
    chmod +x run.sh
@@ -115,15 +114,16 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 3. **Windows 运行**： 双击run.bat脚本运行
    运行结果如下：
 
-
-### **2. 关键代码说明**
+### **5.2 关键代码说明**
 
 下面是 `main.c` 文件的主要功能：
 
 - **连接机械臂**
+
     ```C
     rm_robot_handle *robot_handle = rm_create_robot_arm(robot_ip_address, robot_port);
     ```
+
   连接到指定IP和端口的机械臂。
 
 - **获取API版本**
@@ -132,14 +132,15 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
     char *api_version = rm_api_version();
     printf("API Version: %s.\n", api_version);
     ```
-  获取并显示API版本。
 
+  获取并显示API版本。
 
 - **获取机械臂软件信息**
 
     ```C
     get_robot_software_info(robot_handle);
     ```
+
   获取并显示机械臂的基本信息，包括产品版本、算法库版本、控制层软件版本、动力学版本和规划层软件版本。
 
 - **执行movej运动**
@@ -179,4 +180,4 @@ MSVC（Microsoft Visual C++）编译器通常随Visual Studio一起安装。可�
 
 ## **6. 许可证信息**
 
-* 本项目遵循MIT许可证。
+- 本项目遵循MIT许可证。
