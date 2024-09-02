@@ -20,7 +20,11 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           // },
           {
             text: "硬件准备",
-            link: "/robot/quickUseManual/",
+            link: "/robot/quickUseManual/index.md",
+          },
+          {
+            text: "机械臂硬件接口详细说明",
+            link: "/robot/quickUseManual/interfaceDescriptionArm.md",
           },
         ],
       },
