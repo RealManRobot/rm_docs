@@ -33,6 +33,7 @@ export const themeConfig: DefaultTheme.Config = {
     options: {
       appId: "SV1S7E1V17",
       apiKey: "98077eb74fe04293108c60a5ba47dc3f",
+      // apiKey: "98077eb74fe04293108c60a5ba47dc3f",
       indexName: "develop-realman-robotics",
       placeholder: "搜索文档",
       translations: {
