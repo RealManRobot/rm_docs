@@ -251,7 +251,7 @@
 
 **输入**  
 
-获取刚拖动过的轨迹，在拖动示教后调用。
+查询已存储的轨迹列表，支持可分页查询和模糊查询。
 
 ```json
 {"command":"get_program_trajectory_list","page_num":1,"page_size":10,"vague_search":"file"}
@@ -308,7 +308,7 @@
 
 **输入**  
 
-获取刚拖动过的轨迹，在拖动示教后调用。
+查询已存储的轨迹列表，支持可分页查询和模糊查询。
 
 ```json
 { "command": "get_program_run_state" }
