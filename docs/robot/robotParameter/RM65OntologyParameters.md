@@ -20,7 +20,7 @@
 
 说明: offset为机械零位与建模零位的偏差, 即`模型角度 = 关节角度 + offset`.
 
-## RM65系列连杆动力学参数
+## 连杆动力学参数
 
 |   joint_id(i)   |  1     |  2     |  3     |  4     |  5     |  6     |  -     |
 |:--   |:--     |:--     |:--     |:--     |:--     |:--     |:--     |
@@ -61,59 +61,59 @@ $$
 L_i = \begin{bmatrix}L_{xx} & L_{xy} & L_{xz} \\ L_{xy} & L_{yy} & L_{yz} \\ L_{xz} & L_{yz} & L_{zz}\end{bmatrix}
 $$
 
-## RM65系列关节分布和尺寸说明
+## 关节分布和尺寸说明
 
 RM65机器人本体模仿人的手臂，共有6个旋转关节，每个关节表示1个自由度。如下图所示，机器人关节包括肩部（关节1），肩部（关节2），肘部（关节3），腕部（关节4），腕部（关节5）和腕部（关节6）。
 
-![alt text](<../quickUseManual/operation/image8.png>)
+![alt text](<../robotParameter/doc/RM_65_image1.png)
 
-### RM65系列工作空间
+### 工作空间
 
 RM65-B运动范围，除去基座正上方和正下方的圆柱空间，工作范围为半径610mm的球体。选择机器人安装位置时，务必考虑机器人正上方和正下方的圆柱体空间，尽可能避免将工具移向圆柱体空间。另外，在实际应用中，关节1转动范围：±178°，关节2转动范围：±130°，关节3转动范围：±135°，关节4转动范围：±178°，关节5转动范围：±128°，关节6转动范围：±360°。
 
-![alt text](<../quickUseManual/operation/image9.png>)
+![alt text](<../robotParameter/doc/RM_65_image2.png>)
 
 <center>机器人可达空间示意图</center>
 
-从工作空间截面上看，6轴机器人可操作度较好的区域如下图5-5黄色框线示意，在工作空间中整体呈现一个环状区域。
+从工作空间截面上看，6轴机器人可操作度较好的区域如下图黄色框线示意，在工作空间中整体呈现一个环状区域。
 
-![可操作度较好的区域示意图](../quickUseManual/operation/image10.png)
+![可操作度较好的区域示意图](../robotParameter/doc/RM_65_image3.png)
 
 <center>可操作度较好的区域示意图</center>
 
-### RM65系列运动奇异点
+### 运动奇异点
 
 #### 肩部奇异
 
 腕部中心点C(关节5、6轴线交点)与1轴共线，示意点位[0, 43.4 -105.7,0,-30,0]，如图下图所示：
 
-![肩部奇异](../quickUseManual/operation/iamge11.png)
+![肩部奇异](../robotParameter/doc/RM_65_image4.png)
 
 <center>肩部奇异</center>
 
 关节1、6共轴，C与1轴共线的特殊情况，示意点位[0, 43.4 -105.7,0,62.3,0]，如图下图所示：
 
-![肩部奇异](../quickUseManual/operation/image12.png)
+![肩部奇异](../robotParameter/doc/RM_65_image5.png)
 
 <center>肩部奇异</center>
 
-### 肘部奇异
+#### 肘部奇异
 
 q3=0，即点位格式为[x,x,0,x,x,x]，示意点位[-90,60,0,0,90,0]，如图下图所示：
 
-![肘部奇异](../quickUseManual/operation/image13.png)
+![肘部奇异](../robotParameter/doc/RM_65_image6.png)
 
 <center>肘部奇异</center>
 
 关节1、4共轴，q3=0的特殊情况，即点位格式为[x,0,0,x,x,x]，示意点位[0,0,0,90,-60,0]，如图下图所示：
 
-![肘部奇异](../quickUseManual/operation/image14.png)
+![肘部奇异](../robotParameter/doc/RM_65_image7.png)
 
 **肘部奇异**  
 
 关节1、4、6共轴，q3=0的特殊情况，即点位格式为[x,0,0,x,0,x]，示意点位[0,0,0,90,0,0]，如图下图所示：
 
-![肘部奇异](../quickUseManual/operation/image15.png)
+![肘部奇异](../robotParameter/doc/RM_65_image8.png)
 
 <center>肘部奇异</center>
 
@@ -121,7 +121,7 @@ q3=0，即点位格式为[x,x,0,x,x,x]，示意点位[-90,60,0,0,90,0]，如图�
 
 关节4、6共轴,q5=0,即点位格式为[x,x,x,x,0,x]，示意点位[0,60,30,0,0,0]，如图下图所示：
 
-![腕部奇异](../quickUseManual/operation/image16.png)
+![腕部奇异](../robotParameter/doc/RM_65_image9.png)
 
 <center>腕部奇异</center>
 
@@ -129,15 +129,15 @@ q3=0，即点位格式为[x,x,0,x,x,x]，示意点位[-90,60,0,0,90,0]，如图�
 
 机械臂末端到达最远端，q3=0的特殊情况,即点位格式为[x,x,0,x,0,x]。示意点位[0,0,0,0,0,0]、[-90,90,0,0,0,0]、[-90,45,0,0,0,0]如下图所示：
 
-![边界奇异1](../quickUseManual/operation/image17.png)
+![边界奇异1](../robotParameter/doc/RM_65_image10.png)
 
 <center>边界奇异1</center>
 
-![边界奇异2](../quickUseManual/operation/image18.png)
+![边界奇异2](../robotParameter/doc/RM_65_image11.png)
 
 <center>边界奇异2</center>
 
-![边界奇异3](../quickUseManual/operation/image19.png)
+![边界奇异3](../robotParameter/doc/RM_65_image12.png)
 
 <center>边界奇异3</center>
 
@@ -145,10 +145,10 @@ q3=0，即点位格式为[x,x,0,x,x,x]，示意点位[-90,60,0,0,90,0]，如图�
 
 表示RM65-B、RM65-6F机械臂末端负载曲线图
 
-![RM65-B](../quickUseManual/operation/image20.png)
+![RM65-B](../robotParameter/doc/RM_65_image13.png)
 
 <center>RM65-B机械臂末端负载曲线图</center>
 
-![RM65-6F](../quickUseManual/operation/image21.png)
+![RM65-6F](../robotParameter/doc/RM_65_image14.png)
 
 <center>RM65-6F机械臂末端负载曲线图</center>
