@@ -210,5 +210,3 @@
     ```
     test_Get_Arm_Six_Force_pub.publish(empty_value);
     ```
-
-
