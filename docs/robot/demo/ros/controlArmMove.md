@@ -1,6 +1,6 @@
 # <p class="hidden">Demo演示(ROS)：</p>机械臂运动控制示例`API_Control_Arm_Move_Demo`
 
-## 1. 项目介绍
+## 1.项目介绍
 
 本项目是一个基于RM65、RM75机械臂和ROS功能包实现MoveJ、MoveJ_P、MoveL、MoveC规划运动功能，在程序执行时将依次执行关节运动MoveJ指令，位姿运动MoveJ_P指令、直线运动MoveL指令，圆弧运动MoveC指令，在运动开始和结束时终端都会收到相关提示，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
@@ -110,7 +110,7 @@
     [ INFO] [1722565945.932390913]: *******Plan MoveC State OK   //MoveC运动结束时的提示信息
     ```
 
-## 6. 关键代码说明
+## 6.关键代码说明
 
 下面是 `api_move_demo.cpp` 文件的主要功能：
 

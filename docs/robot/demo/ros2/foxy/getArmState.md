@@ -1,10 +1,10 @@
 # <p class="hidden">Demo演示(ROS2)：</p>获取机械臂状态示例`Get_Arm_State_Demo`
 
-## 1. 项目介绍
+## 1.项目介绍
 
 本项目是一个基于机械臂本体和ROS功能包实现获取机械臂当前控制器版本、关节状态、位姿状态、六维力信息功能，程序将依次执行获取控制器版本信息，获取机械臂状态，获取六维力数据信息的指令，程序执行时，对应的数据信息会打印在终端中，该示例目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
-## 2. 代码结构
+## 2.代码结构
 
 ```
 ├── CMakeLists.txt                           <-CMake编译文件
@@ -17,11 +17,11 @@
     └── api_Get_Arm_State_demo.cpp           <-源码文件
 ```
 
-## 3. 项目下载
+## 3.项目下载
 
 通过项目链接下载本项目工程文件到本地：[ros2_rm_robot](https://github.com/RealManRobot/ros2_rm_robot/tree/foxy)
 
-## 4. 环境配置
+## 4.环境配置
 
 | 项目 | 内容 |
 | :-- | :-- |
@@ -70,7 +70,7 @@
     source ./install/setup.bash
     ```
 
-## 5. 使用指南
+## 5.使用指南
 
 * **命令行使用**：
 
@@ -107,7 +107,7 @@
     [rm_get_arm_state_demo-1] [INFO] [1722912567.025463071] [get_state]: Productversion is GEN72-BI  //机械臂设备型号息信息
     ```
 
-## 6. 关键代码说明
+## 6.关键代码说明
 
 下面是 `api_Get_Arm_State_demo.cpp` 文件的主要功能：
 
@@ -205,3 +205,5 @@
     ```
     void ToolForceData_Callback(const rm_ros_interfaces::msg::Sixforce::SharedPtr msg);
     ```
+
+

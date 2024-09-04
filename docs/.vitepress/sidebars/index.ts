@@ -23,33 +23,8 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/quickUseManual/index.md",
           },
           {
-            text: "硬件接口",
+            text: "机械臂硬件接口详细说明",
             link: "/robot/quickUseManual/interfaceDescriptionArm.md",
-          },
-          {text: "本体参数",
-            collapsed: true,
-            items: [
-              {
-                text: "RM65系列本体参数",
-                link: "/robot/robotParameter/RM65OntologyParameters",
-              },
-              {
-                text: "RM75系列本体参数",
-                link: "/robot/robotParameter/RM75OntologyParameters",
-              },
-              {
-                text: "RML63系列本体参数",
-                link: "/robot/robotParameter/RML63OntologyParameters",
-              },
-              {
-                text: "ECO65系列本体参数",
-                link: "/robot/robotParameter/ECO65OntologyParameters",
-              },
-              {
-                text: "GEN72系列本体参数",
-                link: "/robot/robotParameter/GEN72OntologyParameters",
-              },
-            ],
           },
         ],
       },
@@ -1037,6 +1012,32 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
       {
+        text: "本体参数",
+        collapsed: true,
+        items: [
+          {
+            text: "RM65系列本体参数",
+            link: "/robot/robotParameter/RM65OntologyParameters",
+          },
+          {
+            text: "RM75系列本体参数",
+            link: "/robot/robotParameter/RM75OntologyParameters",
+          },
+          {
+            text: "RML63系列本体参数",
+            link: "/robot/robotParameter/RML63OntologyParameters",
+          },
+          {
+            text: "ECO65系列本体参数",
+            link: "/robot/robotParameter/ECO65OntologyParameters",
+          },
+          {
+            text: "GEN72系列本体参数",
+            link: "/robot/robotParameter/GEN72OntologyParameters",
+          },
+        ],
+      },
+      {
         text: "常见问题",
         collapsed: true,
         items: [
@@ -1069,60 +1070,60 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
     ],
-    // "/joints/": [
-    //   {
-    //     text: "概述",
-    //     link: "/joints/summarize/index.md",
-    //   },
-    //   {
-    //     text: "各系列关节详细参数",
-    //     collapsed: false,
-    //     items: [
-    //       {
-    //         text: "WHJ关节简述",
-    //         link: "/joints/parameter/hardwareProduct.md",
-    //       },
-    //       {
-    //         text: "03系列关节规格参数",
-    //         link: "/joints/parameter/WHJ03/index.md",
-    //       },
-    //       {
-    //         text: "10系列关节规格参数",
-    //         link: "/joints/parameter/WHJ10/index.md",
-    //       },
-    //       {
-    //         text: "30系列关节规格参数",
-    //         link: "/joints/parameter/WHJ30/index.md",
-    //       },
-    //       {
-    //         text: "60系列关节规格参数",
-    //         link: "/joints/parameter/WHJ60/index.md",
-    //       },
-    //       {
-    //         text: "120系列关节规格参数",
-    //         link: "/joints/parameter/WHJ120/index.md",
-    //       },
-    //     ],
-    //   },
-      // {
-      //   text: "关节CANFD通信协议",
-      //   collapsed: false,
-      //   items: [
-      //     {
-      //       text: "CANFD协议说明",
-      //       link: "/joints/CANFD/explanation.md",
-      //     },
-      //     {
-      //       text: "内存控制表",
-      //       link: "/joints/CANFD/memoryControlTable.md",
-      //     },
-      //     {
-      //       text: "使用示例",
-      //       link: "/joints/CANFD/usageDemo.md",
-      //     },
-      //   ],
-      // },
-    // ],
+    "/joints/": [
+      {
+        text: "概述",
+        link: "/joints/summarize/index.md",
+      },
+      {
+        text: "各系列关节详细参数",
+        collapsed: false,
+        items: [
+          {
+            text: "WHJ关节简述",
+            link: "/joints/parameter/hardwareProduct.md",
+          },
+          {
+            text: "03系列关节规格参数",
+            link: "/joints/parameter/WHJ03/index.md",
+          },
+          {
+            text: "10系列关节规格参数",
+            link: "/joints/parameter/WHJ10/index.md",
+          },
+          {
+            text: "30系列关节规格参数",
+            link: "/joints/parameter/WHJ30/index.md",
+          },
+          {
+            text: "60系列关节规格参数",
+            link: "/joints/parameter/WHJ60/index.md",
+          },
+          {
+            text: "120系列关节规格参数",
+            link: "/joints/parameter/WHJ120/index.md",
+          },
+        ],
+      },
+      {
+        text: "关节CANFD通信协议",
+        collapsed: false,
+        items: [
+          {
+            text: "CANFD协议说明",
+            link: "/joints/CANFD/explanation.md",
+          },
+          {
+            text: "内存控制表",
+            link: "/joints/CANFD/memoryControlTable.md",
+          },
+          {
+            text: "使用示例",
+            link: "/joints/CANFD/usageDemo.md",
+          },
+        ],
+      },
+    ],
     "/AI/": [
       {
         text: "概述",

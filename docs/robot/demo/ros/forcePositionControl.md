@@ -1,6 +1,6 @@
 # <p class="hidden">Demo演示(ROS)：</p>力位混合控制规划示例`Arm_Force_Position_Control_Demo`
 
-## 1. 项目介绍
+## 1.项目介绍
 
 本项目是一个基于RM65和RM75机械臂和ROS功能包实现力位混合控制规划运动功能（该功能适用于类似于MoveL的笛卡尔运动，不适用与MoveJ等关节运动），程序在执行时会依次执行开启力位混合控制，进行笛卡尔运动，关闭力位混合控制的操作，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
@@ -92,7 +92,7 @@
     [ INFO] [1722825456.121631421]: *******All command is over please click ctrl+c end******* //所有指令完成后提示
     ```
 
-## 6. 关键代码说明
+## 6.关键代码说明：
 
 下面是 `api_force_position_control_demo.cpp` 文件的主要功能：
 
@@ -178,3 +178,5 @@
     ```
     StopForcePosition_pub.publish(empty_value);
     ```
+
+
