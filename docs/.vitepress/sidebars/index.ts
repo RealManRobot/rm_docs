@@ -23,8 +23,34 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/quickUseManual/index.md",
           },
           {
-            text: "机械臂硬件接口详细说明",
+            text: "硬件接说明",
             link: "/robot/quickUseManual/interfaceDescriptionArm.md",
+          },
+          {
+            text: "本体参数",
+            collapsed: true,
+            items: [
+              {
+                text: "RM65系列本体参数",
+                link: "/robot/robotParameter/RM65OntologyParameters",
+              },
+              {
+                text: "RM75系列本体参数",
+                link: "/robot/robotParameter/RM75OntologyParameters",
+              },
+              {
+                text: "RML63系列本体参数",
+                link: "/robot/robotParameter/RML63OntologyParameters",
+              },
+              {
+                text: "ECO65系列本体参数",
+                link: "/robot/robotParameter/ECO65OntologyParameters",
+              },
+              {
+                text: "GEN72系列本体参数",
+                link: "/robot/robotParameter/GEN72OntologyParameters",
+              },
+            ],
           },
         ],
       },
@@ -1008,32 +1034,6 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           {
             text: "Modbus从站地址表",
             link: "/robot/modbus/",
-          },
-        ],
-      },
-      {
-        text: "本体参数",
-        collapsed: true,
-        items: [
-          {
-            text: "RM65系列本体参数",
-            link: "/robot/robotParameter/RM65OntologyParameters",
-          },
-          {
-            text: "RM75系列本体参数",
-            link: "/robot/robotParameter/RM75OntologyParameters",
-          },
-          {
-            text: "RML63系列本体参数",
-            link: "/robot/robotParameter/RML63OntologyParameters",
-          },
-          {
-            text: "ECO65系列本体参数",
-            link: "/robot/robotParameter/ECO65OntologyParameters",
-          },
-          {
-            text: "GEN72系列本体参数",
-            link: "/robot/robotParameter/GEN72OntologyParameters",
           },
         ],
       },
