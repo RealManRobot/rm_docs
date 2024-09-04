@@ -79,3 +79,55 @@ $$I_c = L_i - m (P_{c}^{T}P_cI_{3×3} - P_cP_{c}^{T})$$
 $$
 L_i = \begin{bmatrix}L_{xx} & L_{xy} & L_{xz} \\ L_{xy} & L_{yy} & L_{yz} \\ L_{xz} & L_{yz} & L_{zz}\end{bmatrix}
 $$
+
+## 关节分布和尺寸说明
+
+RML63机器人本体模仿人的手臂，共有6个旋转关节，每个关节表示1个自由度。如图5-47所示，机器人关节包括肩部（关节1），肩部（关节2），肘部（关节3），腕部（关节4），腕部（关节5）和腕部（关节6）。
+
+![alt text](<../robotParameter/doc/RML_63_image1.png>)
+
+### 工作空间
+
+RML63-B运动范围，除去基座正上方和正下方的圆柱空间，工作范围为半径900mm的球体。选择机器人安装位置时，务必考虑机器人正上方和正下方的圆柱体空间，尽可能避免将工具移向圆柱体空间。另外，在实际应用中，关节1转动范围：±178°，关节2转动范围：±178°，关节3转动范围：-178°~+145°，关节4转动范围：±178°，关节5转动范围：±178°，关节6转动范围：±360°。
+
+![alt text](<../robotParameter/doc/RML_63_image2.png>)
+
+<center>机器人可达空间示意图</center>
+
+### 运动奇异点
+
+#### 腕部奇异
+
+关节4、6共轴,q5=0,即点位格式为[x,x,x,x,0,x]，示意点位[0,60,30,0,0,0]，如图下图所示：
+
+![腕部奇异](../robotParameter/doc/RML_63_image3.png)
+
+<center>腕部奇异</center>
+
+#### 边界奇异
+
+机械臂末端到达最远端，q3=0的特殊情况,即点位格式为[x,x,0,x,0,x]。示意点位[0,0,0,0,0,0]、[-90,-45,0,0,0,0]、[-90,-90,0,0,0,0]，如下图所示：
+
+![边界奇异1](../robotParameter/doc/RML_63_image4.png)
+
+<center>边界奇异1</center>
+
+![边界奇异2](../robotParameter/doc/RML_63_image5.png)
+
+<center>边界奇异2</center>
+
+![边界奇异3](../robotParameter/doc/RML_63_image6.png)
+
+<center>边界奇异3</center>
+
+#### 负载曲线图
+
+表示RML63-B、RML63-6F机械臂末端负载曲线图。其中L是末端负载的质心相对于末端法兰平面的径向距离，Z是相对于末端法兰平面的法向距离。
+
+![RML63-B](../robotParameter/doc/RML_63_image7.png)
+
+<center>RML63-B机械臂末端负载曲线图</center>
+
+![RML63-6F](../robotParameter/doc/RML_63_image8.png)
+
+<center>RML63-6F机械臂末端负载曲线图</center>
