@@ -285,7 +285,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/json/electronicFence.md",
           },
           {
-            text: "力传感器指令集",
+            text: "力传感器指令集（选配）",
             link: "/robot/json/forceSensor.md",
           },
           {
