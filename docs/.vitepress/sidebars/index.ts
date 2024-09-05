@@ -23,7 +23,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/quickUseManual/index.md",
           },
           {
-            text: "硬件接口说明",
+            text: "硬件接口",
             link: "/robot/quickUseManual/interfaceDescriptionArm.md",
           },
           {
