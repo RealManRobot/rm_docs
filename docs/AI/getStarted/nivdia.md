@@ -1,4 +1,4 @@
-# <p class="hidden">快速开始：</p>安装Nvidia显卡环境 V1.0
+# <p class="hidden">快速开始：</p>安装Nvidia显卡环境
 
 文档详细介绍了如何在Ubuntu20.04上安装Nvidia显卡驱动，目的是通过Nvidia的cuda加速整个AI的推理过程。
 
