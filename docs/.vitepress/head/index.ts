@@ -26,7 +26,7 @@ export const head: HeadConfig[] = [
     "script",
     {
       // src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js",
-      src: "/js/fancybox.umd.js",
+      src: "/js/fancybox2.umd.js",
     },
   ],
 ];
