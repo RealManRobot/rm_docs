@@ -141,18 +141,18 @@ arm.movej_p(above_object_pose)
 ### 计算抓取位置 vertical_catch
 
 ```python
-above_object_pose, correct_angle_pose, finally_pose = vertical_catch(mask, depth_image, color_intr, pose, 165, [0, 0, -0.25], [], [])
+above_object_pose, correct_angle_pose, finally_pose = vertical_catch(mask, depth_image, color_intr, pose, 165, [3.14, 0, 0], [旋转矩阵], [平移矩阵])
 ```
 
 根据提供的信息，计算出垂直抓取必须经过的三个位置。
 
 - 函数输入：
-  1. mask: 物体轮廓信息
+  1. mask: 物体轮廓信息，mask来源可以是多样性，需与深度图片大小一致的单通道图片
   2. depth_frame: 深度帧
   3. color_intr: 相机内参
   4. current_pose: 当前位姿
   5. arm_gripper_length: 夹爪长度
-  6. vertical_rx_ry_rz: 预设的夹爪垂直的位姿
+  6. vertical_rx_ry_rz: 预设的夹爪垂直的位姿，可从示教器中获取
   7. rotation_matrix: 手眼标定结果的转换矩阵
   8. translation_vector: 手眼标定结果的平移矩阵
   9. use_point_depth_or_mean: 是否使用平均深度还是单点深度，True：使用单点深度
@@ -174,10 +174,13 @@ above_object_pose, correct_angle_pose, finally_pose = vertical_catch(mask, depth
 根据环境和设备信息的参数输入计算出垂直方式抓取物体的三个关键步骤点位，根据三个点位即可以发送给机械臂SDK并实施移动和抓取。
 
 - 输入参数：
-  1. 当前环境的彩色图片、深度图片；
-  2. 物体轮廓mask（需要使用其他AI SDK获取）；
+  1. 当前环境的深度图片；
+  2. 物体轮廓mask（需要使用其他AI SDK获取，推荐使用睿尔曼[任意物品分割](../developerGuide/itemSegmentation.md)、[多模态识别](../developerGuide/multimodalRecognition.md)和[任意物品追踪](../developerGuide/itemTracking.md)）；
   3. 收集机械臂当前位姿；
-  4. 收集摄像头信息。
+  4. 相机内参信息，无统一获取方式，需要使用相机厂商提供的SDK或软件获取；
+  5. 夹爪长度信息；
+  6. 机械臂最后一轴垂直于桌面的位姿的rx，ry，rz信息，可手动调整睿尔曼机械臂并从示教器中读取；
+  7. 机械臂加装摄像头后的手眼标定矩阵信息，可以使用睿尔曼提供的手眼标定软件获取；
 
 <video width="300px" autoplay loop muted height="300px" >
   <source src="../developerGuide/doc/verticalGrab.mp4" type="video/mp4">

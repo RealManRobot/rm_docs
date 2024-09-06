@@ -1,6 +1,6 @@
 # <p class="hidden">Demo演示(ROS2)：</p>力位混合控制示例`Arm_Force_Position_Control_Demo`
 
-## 1.项目介绍
+## 1. 项目介绍
 
 本项目是一个基于RM65和RM75机械臂和ROS功能包实现力位混合控制规划运动功能（该功能适用于类似于MoveL的笛卡尔运动，不适用与MoveJ等关节运动），程序在执行时会依次执行开启力位混合控制，进行笛卡尔运动，关闭力位混合控制的操作，目的是使ROS开发者迅速掌握并灵活运用机械臂。
 
@@ -17,11 +17,11 @@
     └── api_force_position_control_demo.cpp  <-源码文件
 ```
 
-## 3.项目下载
+## 3. 项目下载
 
 通过项目链接下载本项目工程文件到本地：[ros2_rm_robot](https://github.com/RealManRobot/ros2_rm_robot/tree/foxy)
 
-## 4.环境配置
+## 4. 环境配置
 
 | 项目 | 内容 |
 | :-- | :-- |
@@ -69,7 +69,7 @@
     ource ./install/setup.bash
     ```
 
-## 5.使用指南
+## 5. 使用指南
 
 * **命令行使用**：
 
@@ -103,7 +103,7 @@
     [rm_force_position_control-1] [INFO] [1722914116.647943527] [Force_Position_Control_pub_node]: *******All step run over      //指令运行完成提示
     ```
 
-## 6.关键代码说明
+## 6. 关键代码说明
 
 下面是 `api_force_position_control_demo.cpp` 文件的主要功能：
 
@@ -200,5 +200,3 @@
     ```ROS
     this->stop_force_postion_publisher_->publish(stop_force_postion_data);
     ```
-
-
