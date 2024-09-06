@@ -1,4 +1,4 @@
-# <p class="hidden">硬件准备：</p>机械臂硬件接口详细说明
+# <p class="hidden">硬件准备：</p>硬件接口详细说明
 
 ## 机械臂系统组成
 
@@ -207,7 +207,7 @@
 
 示教器软件面板用于机器人示教操作，用户通过点击面板上的图标来移动机器人。同时面板也会把机器人的运动信息反馈给用户。
 
-![示教界面标号](../quickUseManual/operation/image7.jpeg)
+![示教界面标号](../quickUseManual/operation/image7.png)
 
 <center>机器人示教面板</center>
 

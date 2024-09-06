@@ -12,7 +12,7 @@
 指令类型如下：
 
 <div class="imgWrap">
-    <img src="./image.png"/> 
+    <img src="./image.png"/>
 </div>
 
 ## 协议格式约定
