@@ -1,10 +1,8 @@
-# <p class="hidden">C、C++: </p>包络球参数集合结构体`rm_send_project_t`
+# <p class="hidden">C、C++: </p>下发在线编程文件`rm_send_project_t`
 
 ## 类成员变量说明
 
 - ### 下发文件路径文件名`project_pat`
-
-    每个工具最多支持 5 个包络球，可以没有包络。
 
     ```C++
     char rm_send_project_t::project_path[300]

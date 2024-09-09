@@ -505,7 +505,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/api/c/struct/envelopesBall",
               },
               {
-                text: "包络球集合",
+                text: "下发在线编程文件",
                 link: "/robot/api/c/struct/sendProject",
               },
               {
