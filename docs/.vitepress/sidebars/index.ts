@@ -52,6 +52,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
+          {
+            text: "示教器使用说明",
+            link: "/robot/teachingPendant/index.md",
+          },
         ],
       },
       {
