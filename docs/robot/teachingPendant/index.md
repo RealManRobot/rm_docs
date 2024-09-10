@@ -891,3 +891,96 @@
 
 例如我们设置控制器数字IO四个通道依次为输入开始功能复用模式、输入暂停功能复用模式、输入继续功能复用模式、输入急停功能复用模式，且分别接通外部输入数字电源通道（OUT_P_IN+）和外部数字地通道（OUT_P_GND），打开控制器电源输出12V，此时，对应IO通道输入低电平会触发编程文件的开始、暂停、继续、急停操作。
 
+#### 模型预览
+
+模型预览区可以在仿真模式下运行程序，对程序进行轨迹预览，也可以在真实机械臂模式下与机械臂进行同步运行。
+
+![模型预览](../teachingPendant/doc/image121.png)
+
+<center>模型预览</center>
+
+### 数据管理
+
+用户保存的轨迹、点位、图形化编程、脚本编程、电子围栏。均可在此页面进行管理。
+
+![数据管理](../teachingPendant/doc/image122.png)
+
+<center>数据管理</center>
+
+#### 轨迹列表
+
+轨迹管理页面会显示轨迹名称、文件大小、创建时间以及修改时间，可执行的操作包括“删除”、“编辑”、“下载”。
+
+**按钮表格**  
+
+| 删除 |编辑 |下载 |
+|------|-----|-----|
+| ![删除](../teachingPendant/doc/image127.png)  |![编辑](../teachingPendant/doc/image128.png)  |![下载](../teachingPendant/doc/image129.png)  |
+
+![数据管理](../teachingPendant/doc/image123.png)
+
+<center>数据管理</center>
+
+**删除：** 删除该条轨迹。
+
+![删除轨迹](../teachingPendant/doc/image124.png)
+
+<center>删除轨迹</center>
+
+**编辑：** 修改保存的点位。
+
+点击该按钮跳转到机械臂示教页面，在该页面的轨迹裁剪部分裁剪轨迹，点击确定即可保存。
+
+![编辑轨迹](../teachingPendant/doc/image125.png)
+
+<center>编辑轨迹</center>
+
+**下载：** 保存该轨迹到本地。
+
+点击下载按钮会将轨迹文件下载到浏览器设置的下载路径中，后缀为.txt。
+
+![下载轨迹](../teachingPendant/doc/image126.png)
+
+<center>下载轨迹</center>
+
+#### 点位管理
+
+点位管理页面会显示点位名称、位置姿态、关节角度、工作坐标系以及工具坐标系，可执行的操作包括“删除”、“编辑”、“新建”、“一键删除”、“搜索”。在页面下方有保存点位的页数展示，及页面跳转选项，保存的点位、编程的脚本无条数限制。
+
+![轨迹/点位管理](../teachingPendant/doc/image130.png)
+
+<center>轨迹/点位管理</center>
+
+**删除：** 删除该点位。
+
+![删除点位](../teachingPendant/doc/image131.png)
+
+<center>删除点位</center>
+
+**编辑：** 修改保存的点位。
+
+点击该按钮跳转到机械臂示教页面，在该页面通过示教按钮或者末端拖动示教按钮拖动使机械臂到达需要的点位，点击确定即可保存。
+
+![编辑点位](../teachingPendant/doc/image132.png)
+
+<center>编辑点位</center>
+
+**新建：** 建立新的点位。
+
+新建点位步骤同8.3.1.13节新建路点。
+
+![](../teachingPendant/doc/image133.png)
+
+<center>新建点位</center>
+
+**批量删除：** 一键删除多个点位。
+
+![](../teachingPendant/doc/image134.png)
+
+<center>一键删除</center>
+
+**搜索：** 通过点位名称搜索点位，支持模糊搜索。
+
+![](../teachingPendant/doc/image135.png)
+
+<center>搜索</center>
