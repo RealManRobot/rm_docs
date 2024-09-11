@@ -52,20 +52,20 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
-          {
-            text: "示教器使用说明",
-            collapsed: true,
-            items: [
-              {
-                text: "机械臂示教",
-                link: "/robot/teachingPendant/index.md",
-              },
-              {
-                text: "在线编程",
-                link: "/robot/teachingPendant/onlineCode.md",
-              },
-            ],
-          },
+          //{
+            //text: "示教器使用说明",
+            //collapsed: true,
+            //items: [
+              //{
+              //  text: "机械臂示教",
+              //  link: "/robot/teachingPendant/index.md",
+              //},
+              //{
+              //  text: "在线编程",
+              //  link: "/robot/teachingPendant/onlineCode.md",
+              //},
+            //],
+          //},
         ],
       },
       {
