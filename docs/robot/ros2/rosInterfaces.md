@@ -9,7 +9,7 @@ rm_ros_interface功能包的主要作用为RM机械臂在ROS2的框架下运行�
 
 代码链接：[https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_ros_interfaces](https://github.com/RealManRobot/ros2_rm_robot/tree/main/rm_ros_interfaces)
 
-## 1.rm_ros_interface功能包架构文件总览
+## rm_ros_interface功能包架构文件总览
 
 ```
 当前rm_driver功能包的文件构成如下。
@@ -55,9 +55,9 @@ rm_ros_interface功能包的主要作用为RM机械臂在ROS2的框架下运行�
 └── src
 ```
 
-## 2.rm_ros_interface消息说明
+## rm_ros_interface消息说明
 
-### 2.1关节错误代码Jointerrorcode_msg
+### 关节错误代码Jointerrorcode_msg
 
 ```
 uint16[] joint_error  
@@ -69,7 +69,7 @@ uint8 dof
 `uint16[] joint_error`:每个关节报错信息。  
 `uint8 dof`:机械臂自由度信息。  
 
-### 2.2清除关节错误代码Jointerrclear_msg
+### 清除关节错误代码Jointerrclear_msg
 
 ```
 uint8 joint_num  
@@ -81,7 +81,7 @@ bool block
 `joint_num`:对应关节序号，从基座到机械臂夹爪端，序号依次为1-6或1-7。  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 
-### 2.3所有坐标系名称Getallframe_msg
+### 所有坐标系名称Getallframe_msg
 
 ```
 string[10] frame_name
@@ -91,7 +91,7 @@ string[10] frame_name
 
 `frame_name`：返回的工作坐标系的名称数组。
 
-### 2.4关节运动Movej_msg
+### 关节运动Movej_msg
 
 ```
 float32[] joint  
@@ -109,7 +109,7 @@ uint8 dof
 `trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行。  
 `dof`：机械臂自由度信息。
 
-### 2.5直线运动Movel_msg
+### 直线运动Movel_msg
 
 ```
 geometry_msgs/Pose pose  
@@ -125,7 +125,7 @@ bool block
 `trajectory_connect`:#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
 `block`:是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
-### 2.6圆弧运动Movec_msg
+### 圆弧运动Movec_msg
 
 ```
 geometry_msgs/Pose pose_mid  
@@ -145,7 +145,7 @@ uint8 loop
 `block`：是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。  
 `loop`：循环次数。
 
-### 2.7关节空间规划到目标位姿Movejp_msg
+### 关节空间规划到目标位姿Movejp_msg
 
 ```
 geometry_msgs/Pose pose  
@@ -161,7 +161,7 @@ bool block
 `trajectory_connect`：#0 代表立即规划，1 代表和下一条轨迹一起规划，当为 1 时，轨迹不会立即执行  
 `block`：是否为阻塞模式，bool类型，true:阻塞，false:非阻塞。
 
-### 2.8角度透传Jointpos_msg
+### 角度透传Jointpos_msg
 
 ```
 float32[] joint  
@@ -177,7 +177,7 @@ uint8 dof
 `expand`：拓展关节，float类型，单位：弧度。  
 `dof`：机械臂自由度信息。  
 
-### 2.9位姿透传Cartepos_msg
+### 位姿透传Cartepos_msg
 
 ```
 geometry_msgs/Pose pose  
