@@ -58,11 +58,19 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             items: [
             {
                 text: "机械臂示教",
-                link: "/robot/teachingPendant/index.md",
+                link: "/robot/teachingPendant/armTeching.md",
               },
               {
                 text: "在线编程",
                 link: "/robot/teachingPendant/onlineCode.md",
+              },
+              {
+                text: "配置",
+                link: "/robot/teachingPendant/setting.md",
+              },
+              {
+                text: "扩展",
+                link: "/robot/teachingPendant/extension.md",
               },
             ],
           },
