@@ -81,8 +81,7 @@ RMDemo_VisualStudio_Project
   - 安装适合C/C++开发的Visual Studio版本（如Visual Studio Community），推荐最新版本。
   - 在安装时，选择安装使用C++的桌面开发。
   - MSVC编译器要求2015以上
-- **睿尔曼二次开发包**：
-[下载链接](/docs/robot/download/redevelopment.md)
+- **睿尔曼二次开发包**：[下载链接](../../download/redevelopment.md)
 
 ### 4.3项目步骤
 
