@@ -65,12 +65,24 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/teachingPendant/onlineCode.md",
               },
               {
-                text: "配置",
+                text: "在线编程示例",
+                link: "/robot/teachingPendant/onlineCodeExample.md",
+              },
+              {
+                text: "机械臂配置",
                 link: "/robot/teachingPendant/setting.md",
               },
               {
-                text: "扩展",
+                text: "机械臂扩展",
                 link: "/robot/teachingPendant/extension.md",
+              },
+              {
+                text: "MODBUS-TCP介绍",
+                link: "/robot/teachingPendant/modbusTCP.md",
+              },
+              {
+                text: "外部接口设置",
+                link: "/robot/teachingPendant/externalInterface.md",
               },
             ],
           },
