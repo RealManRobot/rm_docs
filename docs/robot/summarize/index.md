@@ -44,7 +44,7 @@
 * **三维模型图**
   采用通用的STEP格式，可直接进行下载，支持SolidWorks、UG、Cero、Pro-E、Rhino、3Dmax等常用的3D设计软件使用。
 * **仿真模型**
-  为URDF格式，可直接进行下载，支持Gazebo、Moveit!、Webots、Matlab等进行机器人仿真开发使用。
+  为URDF格式，可直接进行下载，支持Gazebo、Moveit、Webots、Matlab等进行机器人仿真开发使用。
 * **机械臂尺寸图**
   提供了外形尺寸、底座安装尺寸、末端扩展尺寸说明等内容的下载资源。
 * **软件二次开发资源包**
