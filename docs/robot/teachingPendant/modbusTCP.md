@@ -1,4 +1,4 @@
-# <p class="hidden">入门指南：</p>MODBUS-TCP介绍
+# <p class="hidden">入门指南：</p>MODBUS-TCP功能
 
 RM65 I系列机械臂可以通过MODBUS-TCP协议可以直接调用WEB示教器保存的编程文件，也可直接控制或者查询机械臂状态。
 

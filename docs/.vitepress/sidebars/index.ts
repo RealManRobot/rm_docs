@@ -23,6 +23,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             link: "/robot/quickUseManual/index.md",
           },
           {
+            text: "安全指南",
+            link: "/robot/safetyGuide/safetyGuide.md",
+          },
+          {
             text: "硬件接口",
             link: "/robot/quickUseManual/interfaceDescriptionArm.md",
           },
@@ -77,7 +81,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 link: "/robot/teachingPendant/extension.md",
               },
               {
-                text: "MODBUS-TCP介绍",
+                text: "MODBUS-TCP功能",
                 link: "/robot/teachingPendant/modbusTCP.md",
               },
               {
