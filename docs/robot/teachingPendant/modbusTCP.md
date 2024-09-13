@@ -12,32 +12,16 @@ RM65 I系列机械臂可以通过MODBUS-TCP协议可以直接调用WEB示教器�
 
 ## 控制机械臂
 
-使用modbus-TCP协议，同样可以在对应寄存器内写入角度、位置、姿态，控制机械臂移动，具体地址参考下图。具体用例可以联系技术支持或关注官网论坛获取。
-
-![保持寄存器指令集](../teachingPendant/doc/image253.png)
-
-<center>保持寄存器指令集</center>
+使用modbus-TCP协议，同样可以在对应寄存器内写入角度、位置、姿态，控制机械臂移动。具体地址参考[保持寄存器指令集](../modbus/index.md#13保持寄存器)
 
 ## 获取机械臂当前状态
 
-用户选择查询模式、输入寄存器进行查询机械臂当前数据。
+用户选择查询模式、输入寄存器进行查询机械臂当前数据。具体地址参考[保持寄存器指令集](../modbus/index.md#14输入寄存器)
 
 ![image254](../teachingPendant/doc/image254.png)
 
-![输入寄存器指令集1](../teachingPendant/doc/image255.png)
-
-![输入寄存器指令集2](../teachingPendant/doc/image256.png)
-
-<center>输入寄存器指令集</center>
-
 ## IO线圈输出查询写入-离散量输入
 
-线圈输出可根据在地址栏中填写对应的指令，来获取或者操作IO模式的输出或者输出。离散量输入可以通过指令来读取当前机械臂状态。
+线圈输出可根据在地址栏中填写对应的指令，来获取或者操作IO模式的输出或者输出。离散量输入可以通过指令来读取当前机械臂状态。具体地址参考[Modbus 从站地址表](../modbus/index.md)
 
 ![image257](../teachingPendant/doc/image257.png)
-
-![IO查询写入指令集1](../teachingPendant/doc/image258.png)
-
-![IO查询写入指令集2](../teachingPendant/doc/image259.png)
-
-<center>IO查询写入指令集</center>
