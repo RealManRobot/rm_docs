@@ -90,6 +90,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
+          {
+            text: "选配功能",
+            link: "/robot/optionalfunction/optionalfunction.md",
+          },
         ],
       },
       {
