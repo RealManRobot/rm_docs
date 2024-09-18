@@ -59,8 +59,8 @@ int rm_set_gripper_release(rm_robot_handle * handle,int speed,bool block,int tim
 | :--- | :--- | :--- |
 |   `handle`  |    输入参数    |    机械臂句柄。    |
 |  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
-|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，等待控制器返回夹爪到位指令；false 表示非阻塞模式，不接收夹爪到位指令。   |
+|  `timeout`  |    输入参数    |    阻塞模式：设置等待夹爪到位超时时间，单位：秒；非阻塞模式：0-发送后立即返回；其他值-接收设置成功指令后返回。    |
 
 - **返回值:**
 
@@ -100,8 +100,8 @@ int rm_set_gripper_pick(rm_robot_handle * handle,int speed,int force,bool block,
 |   `handle`  |    输入参数    |    机械臂句柄。    |
 |  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
 |  `force`  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
-|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，等待控制器返回夹爪到位指令；false 表示非阻塞模式，不接收夹爪到位指令。   |
+|  `timeout`  |    输入参数    |    阻塞模式：设置等待夹爪到位超时时间，单位：秒；非阻塞模式：0-发送后立即返回；其他值-接收设置成功指令后返回。    |
 
 - **返回值:**
 
@@ -140,8 +140,8 @@ int rm_set_gripper_pick_on(rm_robot_handle * handle,int speed,int force,bool blo
 |   `handle`  |    输入参数    |    机械臂句柄。    |
 |  `speed`  |    输入参数    |    夹爪松开速度，范围 1~1000，无单位量纲。    |
 |  `force`  |    输入参数    |    力控阈值，范围：50~1000，无单位量纲。    |
-|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，等待控制器返回夹爪到位指令；false 表示非阻塞模式，不接收夹爪到位指令。   |
+|  `timeout`  |    输入参数    |    阻塞模式：设置等待夹爪到位超时时间，单位：秒；非阻塞模式：0-发送后立即返回；其他值-接收设置成功指令后返回。    |
 
 - **返回值:**
 
@@ -181,8 +181,8 @@ int rm_set_gripper_position(rm_robot_handle * handle,int position,bool block,int
 | :--- | :--- | :--- |
 |   `handle`  |    输入参数    |    机械臂句柄。    |
 |  `position`  |    输入参数    |    夹爪开口位置，范围 1~1000，无单位量纲。    |
-|  `block`  |    输入参数    |    true 表示阻塞模式，false 表示非阻塞模式。    |
-|  `timeout`  |    输入参数    |    阻塞模式下超时时间设置，单位：秒。    |
+|  `block`  |    输入参数    |    true 表示阻塞模式，等待控制器返回夹爪到位指令；false 表示非阻塞模式，不接收夹爪到位指令。   |
+|  `timeout`  |    输入参数    |    阻塞模式：设置等待夹爪到位超时时间，单位：秒；非阻塞模式：0-发送后立即返回；其他值-接收设置成功指令后返回。    |
 
 - **返回值:**
 
