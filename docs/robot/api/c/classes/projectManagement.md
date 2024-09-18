@@ -29,6 +29,8 @@ int rm_send_project(rm_robot_handle * handle,rm_send_project_t project,int * err
 |  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
 |  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+|  -4  |    `int`   |   文件名称校验失败。    |
+|  -5  |    `int`   |   文件读取失败。   |
 
 - **使用示例**
   

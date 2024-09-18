@@ -37,3 +37,9 @@
     ```C++
     int rm_send_project_t::step_flag
     ```
+
+- ### 下发文件类型。0-在线编程文件，1-拖动示教轨迹文件`project_type`
+
+    ```C++
+    int rm_send_project_t::project_type
+    ```
