@@ -157,3 +157,36 @@ float force = 15;
 bool follow = true;
 ret=rm_force_position_move_pose(robot_handle,pose,sensor,mode,dir,force,follow);
 ```
+
+## 透传力位混合补偿(新参数)`rm_force_position_move()`
+
+- **方法原型：**
+
+```C
+int rm_force_position_move(rm_robot_handle * handle, rm_force_position_move_t param)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)和[rm_force_position_move_t](../struct/forcePositionMove)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `param`  |    输入参数    |    透传力位混合补偿参数。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+
+- **使用示例**
+  
+```C
+
+```

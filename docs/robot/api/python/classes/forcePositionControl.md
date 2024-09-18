@@ -174,3 +174,35 @@ print(arm.rm_force_position_move_pose(ret[1]["pose"], 1, 1, 2, 2, True))
 
 arm.rm_delete_robot_arm()
 ```
+
+## 透传力位混合补偿-新参数`rm_force_position_move()`
+
+- **方法原型：**
+
+```python
+rm_force_position_move(self, param:rm_force_position_move_t) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| `param`      | `rm_force_position_move_t` | 透传力位混合补偿参数。       |
+
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+
+```

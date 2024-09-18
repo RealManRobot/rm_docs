@@ -55,7 +55,7 @@
 - ### 升降关节数据`liftState`
 
     ```C++
-    rm_pose_t rm_udp_lift_state_t::liftState
+    rm_udp_lift_state_t rm_realtime_arm_joint_state_t::liftState
     ```
 
     *可以跳转[rm_udp_lift_state_t](../struct/udpLiftState)查阅结构体详细描述*
@@ -63,7 +63,8 @@
 - ### 扩展关节数据`expandState`
 
     ```C++
-    rm_pose_t rm_udp_expand_state_t::expandState
+    rm_udp_expand_state_t rm_realtime_arm_joint_state_t::expandState
     ```
 
     *可以跳转[rm_udp_expand_state_t](../struct/udpExpandState)查阅结构体详细描述*
+

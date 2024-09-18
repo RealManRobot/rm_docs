@@ -115,6 +115,57 @@ int singular_wall = 1;
 ret = rm_start_multi_drag_teach(robot_handle,mode,singular_wall);
 ```
 
+## 开始复合模式拖动示教（新参数）`rm_start_multi_drag_teach_new()`
+
+- **方法原型：**
+
+```C
+int rm_start_multi_drag_teach_new(rm_robot_handle * handle,rm_multi_drag_teach_t teach_state)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+*可以跳转[rm_multi_drag_teach_t](../struct/multiDragTeach)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `teach_state`  |    输入参数    |    复合拖动示教参数    |
+
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+
+>注解：可能失败的原因
+>
+> - 当前机械臂非六维力版本（六维力拖动示教）。
+> - 机械臂当前处于 IO 急停状态。
+> - 机械臂当前处于仿真模式。
+> - 输入参数有误。
+> - 使用六维力模式拖动示教时，当前已处于奇异区。
+
+- **使用示例**
+  
+```C
+rm_multi_drag_teach_t teach = 
+{
+    {0,0,0,0,0,0},      // 所有轴都不可拖动
+    0,      // 使用工作坐标系  
+    0       // 不开启拖动奇异墙  
+};
+
+teach.free_axes[0] = 1;     // 参考坐标系X轴方向可拖动
+ret = rm_start_multi_drag_teach_new(robot_handle, teach);
+```
+
 ## 运动到轨迹起点`rm_drag_trajectory_origin()`
 
 >轨迹复现前，必须控制机械臂运动到轨迹起点，如果设置正确，机械臂将以20的速度运动到轨迹起点。
@@ -361,7 +412,7 @@ int rm_set_force_position(rm_robot_handle * handle,int sensor,int mode,int direc
 |   `sensor`  |    输入参数    |    0-一维力；1-六维力。    |
 |   `mode`  |    输入参数    |    0-基坐标系力控；1-工具坐标系力控。    |
 |   `direction`  |    输入参数    |    力控方向；<br>0-沿X轴；<br>1-沿Y轴；<br>2-沿Z轴；<br>3-沿RX姿态方向；<br>4-沿RY姿态方向；<br>5-沿RZ姿态方向。    |
-|   N  |    输入参数    |    力的大小，单位N。    |
+|   `N`  |    输入参数    |    力的大小，单位N。    |
 
 - **返回值:**
 
@@ -382,6 +433,43 @@ int mode = 0;
 int direction = 2;
 float N = 5;                          
 ret = rm_set_force_position(robot_handle, sensor, mode, direction, N);
+```
+
+## 力位混合控制（新参数）`rm_set_force_position_new()`
+
+>在笛卡尔空间轨迹规划时，使用该功能可保证机械臂末端接触力恒定，使用时力的方向与机械臂运动方向不能在同一方向。 开启力位混合控制，执行笛卡尔空间运动，接收到运动完成反馈后，需要等待2S后继续下发下一条运动指令。
+
+- **方法原型：**
+
+```C
+int rm_set_force_position_new(rm_robot_handle * handle, rm_force_position_t param)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+*可以跳转[rm_force_position_t](../struct/forcePosition)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `param`  |    输入参数    |    力位混合控制参数。    |
+
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+
+- **使用示例**
+  
+```C
+
 ```
 
 ## 结束力位混合控制`rm_stop_force_position()`
@@ -416,3 +504,73 @@ int rm_stop_force_position(rm_robot_handle * handle)
 //结束力位混合控制
 ret = rm_stop_force_position(robot_handle);
 ```
+
+## 设置电流环拖动示教灵敏度`rm_set_drag_teach_sensitivity()`
+
+- **方法原型：**
+
+```C
+int rm_set_drag_teach_sensitivity(rm_robot_handle * handle, int grade)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   grade  |    输入参数    |    等级，0到100，表示0~100%，当设置为100时保持初始状态。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+
+- **使用示例**
+  
+```C
+// 设置灵敏度50%
+ret = rm_set_drag_teach_sensitivity(robot_handle, 50);
+```
+
+## 获取电流环拖动示教灵敏度`rm_get_drag_teach_sensitivity()`
+
+- **方法原型：**
+
+```C
+int rm_get_drag_teach_sensitivity(rm_robot_handle * handle, int* grade)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   handle  |    输入参数    |    机械臂句柄。    |
+|   grade  |    输出参数    |    等级，0到100，表示0~100%，当设置为100时保持初始状态。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|   1  |    `int`    |    控制器返回false，传递参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`    |    数据接收失败，通信过程中出现问题或者控制器超时没有返回。    |
+|  -3  |    `int`    |    返回值解析失败，接收到的数据格式不正确或不完整。    |
+
+- **使用示例**
+  
+```C
+int grade;
+ret = rm_get_drag_teach_sensitivity(robot_handle, &grade);
+```
+
+

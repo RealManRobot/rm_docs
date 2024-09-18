@@ -4,11 +4,11 @@
 
 |属性名|类型|说明|
 |:--|:--|:--|
-|`joint_current`|`float[7]`|关节电流，单位mA。|
-|`joint_en_flag`|`int[7]`|关节使能状态。|
-|`joint_temperature`|`float[7]`|关节温度,单位℃。|
-|`joint_voltage`|`float[7]`|关节电压，单位V。|
-|`joint_err_code`|`int[7]`|关节错误码。|
+|`joint_current`|`List[float]`|关节电流，单位mA。|
+|`joint_en_flag`|`List[int]`|关节使能状态。|
+|`joint_temperature`|`List[float]`|关节温度,单位℃。|
+|`joint_voltage`|`List[float]`|关节电压，单位V。|
+|`joint_err_code`|`List[int]`|关节错误码。|
 |`sys_err`|`int`|机械臂错误代码。|
 
 ## 成员函数

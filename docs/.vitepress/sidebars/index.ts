@@ -148,6 +148,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 text: "算法示例",
                 link: "/robot/demo/c/algoInterface/readme",
               },
+              {
+                text: "试管夹取模拟",
+                link: "/robot/demo/c/tubePicking/readme",
+              },
             ],
           },
           {
@@ -642,6 +646,18 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
                 text: "编译说明",
                 link: "/robot/api/c/struct/planinfo",
               },
+              {
+                text: "力位混合控制",
+                link: "/robot/api/c/struct/forcePosition",
+              },
+              {
+                text: "透传力位混合补偿",
+                link: "/robot/api/c/struct/forcePositionMove",
+              },
+              {
+                text: "复合模式拖动示教",
+                link: "/robot/api/c/struct/multiDragTeach",
+              },
             ],
           },
           {
@@ -968,6 +984,18 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               {
                 text: "无线网络信息",
                 link: "/robot/api/python/struct/wifiNet",
+              },
+              {
+                text: "力位混合控制",
+                link: "/robot/api/python/struct/forcePosition",
+              },
+              {
+                text: "透传力位混合补偿",
+                link: "/robot/api/python/struct/forcePositionMove",
+              },
+              {
+                text: "复合模式拖动示教",
+                link: "/robot/api/python/struct/multiDragTeach",
               },
             ],
           },

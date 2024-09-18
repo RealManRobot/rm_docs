@@ -27,6 +27,26 @@ rm_robot_arm_model_e Mode = RM_MODEL_RM_75_E;
 rm_force_type_e Type = RM_MODEL_RM_SF_E;
 rm_algo_init_sys_data(Mode, Type);
 ```
+## 获取算法库版本号`rm_algo_version()`
+
+- **方法原型：**
+
+```C
+char* rm_algo_version(void);
+```
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   -  |    `str`    |    算法库版本号。    |
+
+- **使用示例**
+
+```C
+char *version = rm_algo_version();
+printf("current algo version: %s\n", version);
+```
 
 ## 设置安装角度`rm_algo_set_angle()`
 
@@ -349,6 +369,58 @@ void rm_algo_get_joint_max_acc(float * joint_alim_max)
 ```C
 float after_joint_alimit[6];
 rm_algo_get_joint_max_acc(after_joint_alimit);
+```
+
+## 设置逆解求解模式`rm_algo_set_redundant_parameter_traversal_mode()`
+
+- **方法原型：**
+
+```C
+void rm_algo_set_redundant_parameter_traversal_mode(bool mode);
+```
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `mode`  |    输入参数    |     - true：遍历模式，冗余参数遍历的求解策略。适于当前位姿跟要求解的位姿差别特别大的应用场景，如MOVJ_P、位姿编辑等，耗时较长</br> - false：单步模式，自动调整冗余参数的求解策略。适于当前位姿跟要求解的位姿差别特别小、连续周期控制的场景，如笛卡尔空间规划的位姿求解等，耗时短。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    逆解成功。    |
+|   1  |    `int`    |    逆解失败。    |
+|  -1  |    `int`    |    上一时刻关节角度输入为空。    |
+|  -2  |    `int`    |    目标位姿四元数不合法。    |
+
+>注意：<br>
+>1.机械臂已连接时，可直接调用该接口进行计算，计算使用的参数均为机械臂当前的参数；<br>
+>2.未连接机械臂时，需首先调用初始化算法依赖数据接口，并按照实际需求设置使用的坐标系、安装方式及关节速度位置等限制 （不设置，则按照出厂默认的参数进行计算），此时机械臂控制句柄设置为NULL即可。
+
+- **使用示例**
+  
+```C
+rm_inverse_kinematics_params_t params;
+float joint_angles[6] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+float q_in[6] = {0.5f, 1.0f, 1.5f, 2.0f, 2.5f, 3.0f};
+params.q_in = q_in;
+params.q_pose.position.x = (float)0.3;
+params.q_pose.position.y = (float)0.0;
+params.q_pose.position.z = (float)0.3;
+params.q_pose.quaternion.w = (float)0.0;
+params.q_pose.quaternion.x = (float)0.0;
+params.q_pose.quaternion.y = (float)0.0;
+params.q_pose.quaternion.z = (float)0.0;
+params.q_pose.euler.rx = (float)3.14;
+params.q_pose.euler.ry = (float)0.0;
+params.q_pose.euler.rz = (float)0.0;
+params.flag = 1;
+int result = wrapper.rm_algo_inverse_kinematics(handle, params, joint_angles);
+printf("Inverse kinematics calculation: %d\n", result);
+if (result == 0) {
+    printf("Joint angles: [%.2f, %.2f, %.2f, %.2f, %.2f, %.2f]\n", joint_angles[0], joint_angles[1], joint_angles[2], joint_angles[3], joint_angles[4], joint_angles[5]);
+}
 ```
 
 ## 逆解函数`rm_algo_inverse_kinematics()`

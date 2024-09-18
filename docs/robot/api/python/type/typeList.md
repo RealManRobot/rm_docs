@@ -28,6 +28,7 @@
 |   `RM_MODEL_ECO_65_E`     |  ECO_65  |
 |   `RM_MODEL_ECO_62_E`     |  ECO_62  |
 |   `RM_MODEL_GEN_72_E`     |  GEN_72  |
+|   `RM_MODEL_ECO_63_E`     |  ECO_63  |
 
 ## `rm_force_type_e`机械臂末端力传感器版本
 
