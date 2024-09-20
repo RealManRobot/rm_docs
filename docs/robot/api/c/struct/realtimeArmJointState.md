@@ -68,3 +68,18 @@
 
     *可以跳转[rm_udp_expand_state_t](../struct/udpExpandState)查阅结构体详细描述*
 
+- ### 灵巧手数据`handState`
+
+    ```C++
+    rm_udp_hand_state_t rm_realtime_arm_joint_state_t::handState
+    ```
+
+    *可以跳转[rm_udp_hand_state_t](../struct/udpHandState)查阅结构体详细描述*
+
+- ### 机械臂状态`arm_current_status`
+
+    ```C++
+    rm_udp_arm_current_status_e rm_realtime_arm_joint_state_t::arm_current_status
+    ```
+
+    *可以跳转[typeList](../type/typeList)查阅`rm_udp_arm_current_status_e`枚举详细描述*

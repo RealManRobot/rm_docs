@@ -64,3 +64,23 @@
 |   `RM_RX_ROTATE_E`    |   姿态示教，绕x轴旋转。  |
 |   `RM_RY_ROTATE_E`    |    姿态示教，绕y轴旋转。   |
 |   `RM_RZ_ROTATE_E`    |  姿态示教，绕z轴旋转。  |
+
+## `rm_udp_arm_current_status_e`UDP推送的机械臂当前状态枚举
+
+|   枚举值    |    说明    |
+|   :---    |   :---|
+|   `RM_IDLE_E`     |   使能但空闲状态      |
+|   `RM_MOVE_L_E`       |   move L运动中状态        |
+|   `RM_MOVE_J_E`       |   move J运动中状态        |
+|   `RM_MOVE_C_E`       |   move C运动中状态        |
+|   `RM_MOVE_S_E`       |   move S运动中状态        |
+|   `RM_MOVE_THROUGH_JOINT_E`       |   角度透传状态        |
+|   `RM_MOVE_THROUGH_POSE_E`        |   位姿透传状态        |
+|   `RM_MOVE_THROUGH_FORCE_POSE_E`      |   力控透传状态        |
+|   `RM_MOVE_THROUGH_CURRENT_E`     |   电流环透传状态      |
+|   `RM_STOP_E`     |   急停状态        |
+|   `RM_SLOW_STOP_E`        |   缓停状态        |
+|   `RM_PAUSE_E`        |   暂停状态        |
+|   `RM_CURRENT_DRAG_E`     |   电流环拖动状态      |
+|   `RM_SENSOR_DRAG_E`      |   六维力拖动状态      |
+|   `RM_TECH_DEMONSTRATION_E`       |   示教状态        |

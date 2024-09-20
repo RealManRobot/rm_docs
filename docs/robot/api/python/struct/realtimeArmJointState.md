@@ -13,3 +13,5 @@
 | `waypoint`    | [rm_pose_t](../struct/pose)       | 当前位置姿态结构体     |
 | `liftState`    | [rm_udp_lift_state_t](../struct/udpLiftState)       | 升降关节数据     |
 | `expandState`    | [rm_udp_expand_state_t](../struct/udpExpandState)       | 扩展关节数据     |
+| `handState`    | [rm_udp_hand_state_t](../struct/udpHandState)       | 灵巧手数据     |
+| `arm_current_status`    | [rm_udp_arm_current_status_e](../type/typeList)       | 机械臂当前状态     |

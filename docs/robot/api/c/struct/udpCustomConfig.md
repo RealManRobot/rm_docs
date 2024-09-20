@@ -25,3 +25,11 @@
     ```C++
     int rm_udp_custom_config_t::expand_state
     ```
+
+- ### 机械臂状态 `arm_current_status`
+
+    机械臂当前状态。1：上报；0：关闭上报；-1：不设置，保持之前的状态
+
+    ```C++
+    int rm_udp_custom_config_t::arm_current_status
+    ```
