@@ -192,7 +192,7 @@ conda create --name new2 --file ./py_env/conda_new2.yml    # 创建虚拟环境
 
 ![retail_7](../doc/retail_7.png)
 
-若机器人所处于新环境之中，建议对环境进行重新建图并采集点位：dianA(28, 第一列商品位置)、dianB(28, 第二列商品位置)、dianC(29, 拿取商品点位)、dianD(11, 充电桩点位，选择红外充电，其中充电桩编号位于无线充电桩背面的条形码下方)。其中：建图相应操作请查阅：[水滴2使用手册](./files/pdf/水滴2使用手册.pdf)
+若机器人所处于新环境之中，建议对环境进行重新建图并采集点位：dianA(28, 第一列商品位置)、dianB(28, 第二列商品位置)、dianC(29, 拿取商品点位)、dianD(11, 充电桩点位，选择红外充电，其中充电桩编号位于无线充电桩背面的条形码下方)。其中：建图相应操作请查阅：[水滴2使用手册](../doc/WATER2UserManual.pdf)
 
 **踩点过程：**
 
@@ -662,21 +662,25 @@ def publish_movej_command():
 
 - 新零售抓取演示
 
-<video src="../doc/retail_20.mp4"></video>
+<video width="300px" autoplay loop muted height="300px" >
+  <source src="../doc/retail_20.mp4" type="video/mp4">
+</video>
 
 - 新零售下单操作演示
 
-<video src="../doc/retail_21.mp4"></video>
+<video width="300px" autoplay loop muted height="300px" >
+  <source src="../doc/retail_21.mp4" type="video/mp4">
+</video>
 
-## 附录：资源下载
+## 附录：相关资源获取
 
-**1. 文件下载**
+**1. 相关文件查阅**  
 
- [睿尔曼机械臂JSON通信协议v3.7.0.pdf](./files/pdf/睿尔曼机械臂JSON通信协议v3.7.0.pdf)
-[水滴2上位机接口说明](./files/pdf/水滴2上位机接口说明.pdf)
-[水滴2软件API手册](./files/pdf/水滴2软件API手册.pdf)
-[水滴2使用手册](./files/pdf/水滴2使用手册.pdf)
+- JSON 相关说明请访问[睿尔曼JSON通信协议](../../../robot/json/getStartedJson.md)
+- [水滴2上位机接口说明](../doc/WATER2Interface.pdf)
+- [水滴2软件API手册](../doc/WATER2API.pdf)
+- [水滴2使用手册](../doc/WATER2UserManual.pdf)
 
-**2. 功能包下载**
+**2. 功能包下载**  
 
 [新零售3.0开源功能包](./src)
