@@ -5,5 +5,5 @@ export const navsList: DefaultTheme.NavItem[] = [
   //{ text: "关节", link: "/joints/summarize/index.md", activeMatch: "/joints/" },
   // { text: "复合机器人", link: "/compositeRobot/index", activeMatch: "/compositeRobot/" },
   { text: "AI", link: "/AI/getStarted/overview.md", activeMatch: "/AI/" },
-  { text: "生态", link: "/symbiosis/index", activeMatch: "/symbiosis/" },
+  { text: "生态", link: "/symbiosis/getStarted/index.md", activeMatch: "/symbiosis/" },
 ];

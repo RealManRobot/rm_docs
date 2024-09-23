@@ -1240,4 +1240,24 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         ],
       },
     ],
+    "/symbiosis/": [
+      {
+        text: "概述",
+        link: "/symbiosis/getStarted/index.md",
+      },
+      {
+        text: "集成应用案例",
+        collapsed: false,
+        items: [
+          {
+            text: "新零售",
+            link: "/symbiosis/demo/newRetail/newRetail.md",
+          },
+          // {
+          //   text: "机器狗",
+          //   link: "/symbiosis/demo/robotDog/robotDog.md",
+          // },
+        ],
+      },
+    ]  
   };
