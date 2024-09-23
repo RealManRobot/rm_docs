@@ -297,13 +297,13 @@ conda create --name new2 --file ./py_env/conda_new2.yml    # 创建虚拟环境
 
 **注意：**针对于货架高度的设置，需将机器人位于dianA/dianB，之后将机械臂的各个关节设置在上述参数中的joint_posture_1处，如下所示：
 
-![retail_10](../doc/retail_10.png)
+![retail_10](../doc/retail_10.jpg)
 
 控制升降机运动，使得夹爪与各层货架的相对位置大致为上述位置处设置相应的层级高度V_height_1、V_height_2，且目前没有第三层货架，所以V_height_3可忽略。
 
 另外，货架各个商品的位置摆放应大致按照下述所示：
 
-![retail_11](../doc/retail_11.png)
+![retail_11](../doc/retail_11.jpg)
 
 ## 六、 运行演示
 
