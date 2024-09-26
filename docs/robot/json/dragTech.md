@@ -61,7 +61,8 @@
 | 功能描述 | 类型 |说明|
 | :--- | :--- |:---|
 | `start_multi_drag_teach` | `string` |开始复合模式拖动示教。|
-| `mode` | `int` |拖动示教模式。0-电流环模式，1-使用末端六维力，只动位置，2-使用末端六维力，只动姿态，3-使用末端六维力，位置和姿态同时动。|
+| `frame` | `int` |拖参考坐标系，0-工作坐标系 1-工具坐标系。|
+| `free_axes` | `int` |自由驱动方向，前三个元素表示TCP将按照参考坐标系的x、y、z方向平移拖动，后三个元素表示TCP将按照参考坐标系的rx、ry、rz方向旋转拖动。|
 | `singular_wall` | `int` |可选参数，仅在六维力模式拖动示教中生效，用于指定是否开启拖动奇异墙，0表示关闭拖动奇异墙，1表示开启拖动奇异墙，若无配置参数，默认启动拖动奇异墙。|
 
 - **代码示例**
@@ -69,7 +70,7 @@
 **输入**  
 
 ```json
-{"command":"start_multi_drag_teach","mode":0,"singular_wall":0}
+{"command":"start_multi_drag_teach","free_axes":[0,1,1,0,1,0],"frame":0,"singular_wall":0}
 ```
 
 **输出**
@@ -90,6 +91,16 @@
     "set_state": false
 }
 ```
+
+::: warning 注意
+失败的可能原因：
+
+- 当前机械臂非六维力版本（六维力拖动示教）
+- 机械臂当前处于IO急停状态
+- 机械臂当前处于仿真模式
+- 输入参数有误
+- 使用六维力模式拖动示教时，当前已处于奇异区
+:::
 
 ### 轨迹复现开始`run_drag_trajectory`
 
@@ -303,3 +314,78 @@
     ]
 }
 ```
+
+### 设置电流环拖动示教灵敏度`set_drag_teach_sensitivity`
+
+- **输入参数**
+
+| 参数              | 类型     | 说明               |
+| :---------------- | :------- | :----------------- |
+| `set_drag_teach_sensitivity` | `string` | 设置电流环拖动示教灵敏度         |
+
+- **代码示例**
+
+**输入**  
+
+说明：grade百分比，取值范围0~100%
+
+```json
+{"command":"set_drag_teach_sensitivity","grade":0}
+```
+
+**输出**  
+
+设置成功:
+
+```json
+{
+    "command": "set_drag_teach_sensitivity",
+    "set_state": true
+}
+```
+
+设置失败:
+
+```json
+{
+    "command": "set_drag_teach_sensitivity",
+    "set_state": false
+}
+```
+
+::: warning 备注
+灵敏度取0-100, 数值越小越沉，当设置为100时保持原本拖动灵敏度。
+:::
+
+### 获取电流环拖动示教灵敏度`get_drag_teach_sensitivity`
+
+- **输入参数**
+
+| 参数              | 类型     | 说明               |
+| :---------------- | :------- | :----------------- |
+| `get_drag_teach_sensitivity` | `string` | 获取电流环拖动示教灵敏度         |
+
+- **代码示例**
+
+**输入**  
+
+说明：grade百分比，取值范围0~100%
+
+```json
+{"command":"get_drag_teach_sensitivity","grade":0}
+```
+
+**输出**  
+
+查询成功:
+
+```json
+{
+    "command": "get_drag_teach_sensitivity",
+    "grade": 0
+}
+```
+
+::: warning 备注
+灵敏度取0-100, 数值越小越沉，当设置为100时保持原本拖动灵敏度。
+:::
