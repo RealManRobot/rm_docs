@@ -377,3 +377,76 @@ pose.euler.ry=0;
 pose.euler.rz=3.142;                       
 rm_movep_canfd(robot_handle,pose,true);  
 ```
+
+## 关节空间跟随运动`rm_movej_follow()`
+
+- **方法原型：**
+
+```C
+int rm_movej_follow(rm_robot_handle * handle,float * joint)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*<br>
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `joint`  |    输入参数    |    关节1~7目标角度数组,单位：°。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+
+- **使用示例**
+  
+```C
+//关节跟随运动到目标关节角度：[1°,0°,20°,30°,0°,20°]
+float joint[6] = { 1, 0, 20, 30, 0, 20};
+rm_movej_follow(robot_handle,joint);
+```
+
+## 笛卡尔空间跟随运动`rm_movep_follow()`
+
+- **方法原型：**
+
+```C
+int rm_movep_follow(rm_robot_handle * handle,rm_pose_t pose)
+```
+
+*可以跳转[rm_robot_handle](../struct/robotHandle)[rm_pose_t](../struct/pose.md)和查阅结构体详细描述*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|  `pose`  |    输入参数    |    位姿 (优先采用四元数表达)。    |
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   0  |    `int`    |    成功。    |
+|  -1  |    `int`    |    数据发送失败，通信过程中出现问题。    |
+
+- **使用示例**
+  
+```C
+/*pose：目标位姿，位置精度：0.001mm，姿态精度：0.001rad
+目标位置：x：0m，y:0m，z：0.85049m
+目标姿态：rx:0rad，ry:0rad，rz:3.142rad
+目标位姿为当前工具在当前工作坐标系下的数值。*/
+rm_pose_t pose;                                                           
+pose.position.x=0;                                                           
+pose.position.y=0;                                                           
+pose.position.z=0.85049;                                                         
+pose.euler.rx=0;                                                           
+pose.euler.ry=0;
+pose.euler.rz=3.142;                       
+rm_movep_follow(robot_handle,pose);  
+```
