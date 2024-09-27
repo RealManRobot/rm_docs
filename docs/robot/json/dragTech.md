@@ -372,7 +372,7 @@
 说明：grade百分比，取值范围0~100%
 
 ```json
-{"command":"get_drag_teach_sensitivity","grade":0}
+{"command":"get_drag_teach_sensitivity"}
 ```
 
 **输出**  
