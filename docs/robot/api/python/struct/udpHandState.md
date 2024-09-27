@@ -1,4 +1,4 @@
-# <p class="hidden">Python: </p>udp推送的灵巧手状态`rm_udp_expand_state_t`
+# <p class="hidden">Python: </p>udp推送的灵巧手状态`rm_udp_hand_state_t`
 
 ## 属性
 
