@@ -73,7 +73,8 @@
 {"command":"start_multi_drag_teach","free_axes":[0,1,1,0,1,0],"frame":0,"singular_wall":0}
 ```
 
-**输出**
+**输出**  
+
 设置成功:
 
 ```json
