@@ -56,44 +56,44 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
               },
             ],
           },
-          {
-            text: "示教器使用说明",
-            collapsed: true,
-            items: [
-            {
-                text: "机械臂示教",
-                link: "/robot/teachingPendant/armTeching.md",
-              },
-              {
-                text: "在线编程",
-                link: "/robot/teachingPendant/onlineCode.md",
-              },
-              {
-                text: "在线编程示例",
-                link: "/robot/teachingPendant/onlineCodeExample.md",
-              },
-              {
-                text: "机械臂配置",
-                link: "/robot/teachingPendant/setting.md",
-              },
-              {
-                text: "机械臂扩展",
-                link: "/robot/teachingPendant/extension.md",
-              },
-              {
-                text: "MODBUS-TCP功能",
-                link: "/robot/teachingPendant/modbusTCP.md",
-              },
-              {
-                text: "外部接口设置",
-                link: "/robot/teachingPendant/externalInterface.md",
-              },
-            ],
-          },
-          {
-            text: "选配功能",
-            link: "/robot/optionalfunction/optionalfunction.md",
-          },
+          // {
+          //   text: "示教器使用说明",
+          //   collapsed: true,
+          //   items: [
+          //   {
+          //       text: "机械臂示教",
+          //       link: "/robot/teachingPendant/armTeching.md",
+          //     },
+          //     {
+          //       text: "在线编程",
+          //       link: "/robot/teachingPendant/onlineCode.md",
+          //     },
+          //     {
+          //       text: "在线编程示例",
+          //       link: "/robot/teachingPendant/onlineCodeExample.md",
+          //     },
+          //     {
+          //       text: "机械臂配置",
+          //       link: "/robot/teachingPendant/setting.md",
+          //     },
+          //     {
+          //       text: "机械臂扩展",
+          //       link: "/robot/teachingPendant/extension.md",
+          //     },
+          //     {
+          //       text: "MODBUS-TCP功能",
+          //       link: "/robot/teachingPendant/modbusTCP.md",
+          //     },
+          //     {
+          //       text: "外部接口设置",
+          //       link: "/robot/teachingPendant/externalInterface.md",
+          //     },
+          //   ],
+          // },
+          // {
+          //   text: "选配功能",
+          //   link: "/robot/optionalfunction/optionalfunction.md",
+          // },
         ],
       },
       {
