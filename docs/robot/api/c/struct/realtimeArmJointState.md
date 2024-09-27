@@ -67,14 +67,14 @@
     ```
 
     *可以跳转[rm_udp_expand_state_t](../struct/udpExpandState)查阅结构体详细描述*
-
+<!-- 
 - ### 灵巧手数据`handState`
 
     ```C++
     rm_udp_hand_state_t rm_realtime_arm_joint_state_t::handState
     ```
 
-    *可以跳转[rm_udp_hand_state_t](../struct/udpHandState)查阅结构体详细描述*
+    *可以跳转[rm_udp_hand_state_t](../struct/udpHandState)查阅结构体详细描述* -->
 
 - ### 机械臂状态`arm_current_status`
 
