@@ -14,7 +14,7 @@
     int rm_send_project_t::project_path_len
     ```
 
-- ### 规划速度比例系数`tool_nplan_speedame`
+- ### 规划速度比例系数`plan_speed`
 
     ```C++
     int rm_send_project_t::plan_speed

@@ -150,6 +150,14 @@ int rm_force_position_move_pose(rm_robot_handle * handle,rm_pose_t pose,int sens
   
 ```C
 //透传力位混合补偿--位姿
+rm_pose_t pose;
+pose.position.x = 0.186350;
+pose.position.y = 0.062099;
+pose.position.z = 0.2;
+pose.euler.rx = 3.141;
+pose.euler.ry = 0;
+pose.euler.rz = 1.569;
+
 int sensor = 0;
 int mode = 0;
 int dir = 2;
@@ -188,5 +196,9 @@ int rm_force_position_move(rm_robot_handle * handle, rm_force_position_move_t pa
 - **使用示例**
   
 ```C
-
+// 力位混合控制补偿-透传目标角度[0,20,0,90,0,0]，六维力传感器，工具坐标系力控，高跟随，Z轴为力跟踪模式，期望力5N，最大线速度0.2m/s
+rm_force_position_move_t move = {
+    0,{0,0,0},{0,20,0,90,0,0},1,1,true,{0,0,4,0,0,0},{0,0,5,0,0,0},{0,0,0.2,0,0,0}
+};
+ret = rm_force_position_move(robot_handle, move);
 ```

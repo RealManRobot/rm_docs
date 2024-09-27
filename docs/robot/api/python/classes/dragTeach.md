@@ -152,7 +152,21 @@ rm_start_multi_drag_teach_new(self, param: rm_multi_drag_teach_t) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+param = rm_multi_drag_teach_t((0, 1, 1, 0, 1, 0), 0, 1)
+result1 = arm.rm_start_multi_drag_teach_new(param)
+time.sleep(2)
+result2 = arm.rm_set_stop_teach()
+
+arm.rm_delete_robot_arm()
 ```
 
 ## 设置电流环拖动示教灵敏度`rm_set_drag_teach_sensitivity()`
@@ -504,6 +518,7 @@ rm_set_force_position_new(self, param: rm_force_position_t) -> int:
 | :-------- | :---- | :----------------------------------- |
 | `param`      | `rm_force_position_t` | 力位混合控制参数。 |
 
+*可以跳转[rm_force_position_t](../struct/forcePosition)查阅结构体详细描述*
 - **返回值:** </br>
 函数执行的状态码：
 
@@ -518,7 +533,24 @@ rm_set_force_position_new(self, param: rm_force_position_t) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+arm.rm_movej_p([0.2, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+param = rm_force_position_t(1, 0, (3, 3, 4, 3, 3, 3), (0, 0, 1, 0, 0, 0), (0.1, 0.1, 0.1, 10, 10, 10))
+for i in range(3):
+    result1 = arm.rm_movel([0.2, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+    result2 = arm.rm_set_force_position_new(param)
+    result3 = arm.rm_movel([0.3, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+
+arm.rm_stop_force_position()
+arm.rm_delete_robot_arm()
 ```
 
 ## 结束力位混合控制`rm_stop_force_position()`

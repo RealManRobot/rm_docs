@@ -51,7 +51,7 @@ bool rm_force_position_move_t::follow
 
 ### 各轴的力控模式数组`control_mode`
 
- 6个力控方向（Fx Fy Fz Mx My Mz）的模式 0-固定模式 1-浮动模式 2-弹簧模式 3-运动模 4-力跟踪模式 8-力跟踪+姿态自适应模式
+ 6个力控方向（Fx Fy Fz Mx My Mz）的模式 0-固定模式 1-浮动模式 2-弹簧模式 3-运动模式 4-力跟踪模式 8-力跟踪+姿态自适应模式
 
 
 ```C++

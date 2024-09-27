@@ -204,5 +204,24 @@ rm_force_position_move(self, param:rm_force_position_move_t) -> int:
 - **使用示例**
   
 ```python
+from Robotic_Arm.rm_robot_interface import *
 
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+joint = [0, 40, 50, 0, 90, 0]
+arm.rm_movej(joint, 20, 0, 0, 1)
+
+joint[2] += 0.01
+param = rm_force_position_move_t(flag=0, joint=joint, sensor=1, mode=1, follow=False,
+                                                 control_mode=[3, 3, 4, 3, 3, 3],
+                                                 desired_force=[0, 0, 0, 0, 0, 0],
+                                                 limit_vel=[0.1, 0.1, 0.1, 10, 10, 10])
+arm.rm_force_position_move(param)                                                 
+
+arm.rm_delete_robot_arm()
 ```

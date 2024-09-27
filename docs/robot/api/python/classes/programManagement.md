@@ -53,9 +53,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 将文件保存到控制器，编号为8，规划速度比例系数50%。并且运行文件
+# 将在线编程文件保存到控制器，编号为8，规划速度比例系数50%。并且运行文件
 file_path = "../TestDatas/example.txt"
-send_project = rm_send_project_t(file_path, 50, 0, 8, 0, 0)
+send_project = rm_send_project_t(file_path, 50, 0, 8, 0, 0, 0)
 print(arm.rm_send_project(send_project))
 
 arm.rm_delete_robot_arm()

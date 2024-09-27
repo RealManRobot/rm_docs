@@ -469,7 +469,15 @@ int rm_set_force_position_new(rm_robot_handle * handle, rm_force_position_t para
 - **使用示例**
   
 ```C
+rm_force_position_t param = {
+    1,
+    1,
+    {3, 3, 4, 3, 3, 3},
+    {0, 0, 1, 0, 0, 0},
+    {0.1, 0.1, 0.1, 10, 10, 10},
+};
 
+rm_set_force_position_new(robot_handle, param);
 ```
 
 ## 结束力位混合控制`rm_stop_force_position()`
