@@ -60,13 +60,13 @@ roslaunch rm_driver rm_<arm_type>_driver.launch
 
 之后需要运行中间功能包rm_control的相关节点。
 ```
-roslaunch rm_control rm_<arm_type>_control.launch.py
+roslaunch rm_control rm_<arm_type>_control.launch
 ```
 
 最终需要启动控制真实机械臂的moveit节点。
 
 ```
-roslaunch rm_<arm_type>_config demo_realrobot.launch
+roslaunch rm_<arm_type>_moveit_config demo_realrobot.launch
 ```
 
 注意以上指令均需要将<arm_type>更换为对应的机械臂型号，可选择的型号有65、eco65、75、65_6f、eco65_6f、75_6f、gen72。
