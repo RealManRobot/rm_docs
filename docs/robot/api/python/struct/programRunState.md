@@ -10,9 +10,9 @@
 |  `plan_num`  |  `int`  |  运行行数。  |
 |  `total_loop`  |  `int`  |  循环指令数量。  |
 |  `step_mode`  |  `int`  |  单步模式：</br>1: 单步模式</br>0: 非单步模式。  |
-|  `plan_speed`  |  `int array[100]`  |  全局规划速度比例 1-100。  |
-|  `loop_num`  |  `int array[100]`  |  循环行数。  |
-|  `loop_cont`  |  `int array[100]`  |  对应循环次数  |
+|  `plan_speed`  |  `int`  |  全局规划速度比例 1-100。  |
+|  `loop_num`  |  `List[int]`  |  循环行数。  |
+|  `loop_cont`  |  `List[int]`  |  对应循环次数  |
 
 ## 成员函数
 

@@ -3,8 +3,7 @@
 ## 构造函数
 
 ```Python
-rm_ctypes_wrap.rm_waypoint_t.__init__(self,
-str point_name = None, list[float] joint = None, list[float] pose = None, str work_frame = None, str tool_frame = None, str time = '' )
+rm_ctypes_wrap.rm_waypoint_t.__init__(self, point_name: str = None, joint: list[float] = None, pose: list[float] = None, work_frame: str = None, tool_frame: str = None, time: str = ''):
 ```
 
 **参数说明：**

@@ -30,6 +30,8 @@ rm_send_project(self, send_project: rm_send_project_t) -> tuple[int, int]:
 |  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
 |  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
 |  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+|  -4  |    `int`   |   文件名称校验失败。    |
+|  -5  |    `int`   |   文件读取失败。   |
 
 2. int: 若运行失败，该参数返回有问题的工程行数
 
@@ -51,9 +53,9 @@ arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
 handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
 print(handle.id)
 
-# 将文件保存到控制器，编号为8，规划速度比例系数50%。并且运行文件
+# 将在线编程文件保存到控制器，编号为8，规划速度比例系数50%。并且运行文件
 file_path = "../TestDatas/example.txt"
-send_project = rm_send_project_t(file_path, 50, 0, 8, 0, 0)
+send_project = rm_send_project_t(file_path, 50, 0, 8, 0, 0, 0)
 print(arm.rm_send_project(send_project))
 
 arm.rm_delete_robot_arm()

@@ -31,6 +31,34 @@ algo_handle = Algo(arm_model, force_type)
 
 ```
 
+## 获取算法库版本`rm_algo_version()`
+
+- **方法原型：**
+
+```python
+rm_algo_version(self) -> str:
+```
+
+- **返回值:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   -  |    `str`    |    算法库版本号。    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+arm_model = rm_robot_arm_model_e.RM_MODEL_RM_65_E  # RM_65机械臂
+force_type = rm_force_type_e.RM_MODEL_RM_B_E  # 标准版
+# 初始化算法的机械臂及末端型号
+algo_handle = Algo(arm_model, force_type)
+
+# 获取当前算法使用的机械臂安装角度
+print(algo_handle.rm_algo_version())
+```
+
 ## 设置安装角度`rm_algo_set_angle()`
 
 - **方法原型：**
@@ -69,7 +97,7 @@ algo_handle.rm_algo_set_angle(0,90,0)
 rm_algo_get_angle(self) -> tuple[float, float, float]:
 ```
 
-- **参数说明:**
+- **返回值:**
 
 |   参数    |   类型    |   说明    |
 | :--- | :--- | :--- |
@@ -448,6 +476,34 @@ algo_handle = Algo(arm_model, force_type)
 
 # 获取算法使用的关节最小限位
 print(algo_handle.rm_algo_get_joint_max_acc())
+```
+
+## 设置逆解求解模式`rm_algo_set_redundant_parameter_traversal_mode()`
+
+- **方法原型：**
+
+```python
+rm_algo_set_redundant_parameter_traversal_mode(self, mode: bool) -> None:
+```
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `mode`  |    `bool`    |    - true：遍历模式，冗余参数遍历的求解策略。适于当前位姿跟要求解的位姿差别特别大的应用场景，如MOVJ_P、位姿编辑等，耗时较长</br> - false：单步模式，自动调整冗余参数的求解策略。适于当前位姿跟要求解的位姿差别特别小、连续周期控制的场景，如笛卡尔空间规划的位姿求解等，耗时短    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+arm_model = rm_robot_arm_model_e.RM_MODEL_RM_65_E  # RM_65机械臂
+force_type = rm_force_type_e.RM_MODEL_RM_B_E  # 标准版
+# 初始化算法的机械臂及末端型号
+algo_handle = Algo(arm_model, force_type)
+
+# 设置逆解求解为遍历模式
+algo_handle.rm_algo_set_redundant_parameter_traversal_mode(true)
 ```
 
 ## 逆解函数`rm_algo_inverse_kinematics()`

@@ -124,6 +124,136 @@ print(arm.rm_start_multi_drag_teach(0, 0))
 arm.rm_delete_robot_arm()
 ```
 
+## 开始复合模式拖动示教-新参数`rm_start_multi_drag_teach_new()`
+
+- **方法原型：**
+
+```python
+rm_start_multi_drag_teach_new(self, param: rm_multi_drag_teach_t) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| `param`      | `rm_multi_drag_teach_t` | 复合拖动示教参数 |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+param = rm_multi_drag_teach_t((0, 1, 1, 0, 1, 0), 0, 1)
+result1 = arm.rm_start_multi_drag_teach_new(param)
+time.sleep(2)
+result2 = arm.rm_set_stop_teach()
+
+arm.rm_delete_robot_arm()
+```
+
+## 设置电流环拖动示教灵敏度`rm_set_drag_teach_sensitivity()`
+
+- **方法原型：**
+
+```python
+rm_set_drag_teach_sensitivity(self, grade: int) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| `grade`      | `int` | 灵敏度等级，取值范围0~100%，数值越小越沉，当设置为100时保持原本拖动灵敏度 |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+print(arm.rm_set_drag_teach_sensitivity(50))
+
+arm.rm_delete_robot_arm()
+```
+
+## 获取电流环拖动示教灵敏度`rm_get_drag_teach_sensitivity()`
+
+- **方法原型：**
+
+```python
+rm_get_drag_teach_sensitivity(self) -> int:
+```
+
+- **返回值:** </br>
+tuple[int,int]: 包含两个元素的元组。<br>
+
+1. int: 函数执行的状态码
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+2. int: 灵敏度等级
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   -  |    `int`   |    灵敏度等级，取值范围0~100%，数值越小越沉，当设置为100时保持原本拖动灵敏度   |
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+print(arm.rm_get_drag_teach_sensitivity())
+
+arm.rm_delete_robot_arm()
+```
+
 ## 运动到轨迹起点`rm_drag_trajectory_origin()`
 
 > 轨迹复现前，必须控制机械臂运动到轨迹起点，如果设置正确，机械臂将以20的速度运动到轨迹起点
@@ -369,6 +499,57 @@ print(handle.id)
 
 print(arm.rm_set_force_position(1, 0, 2, 5))
 
+arm.rm_delete_robot_arm()
+```
+
+## 力位混合控制-新参数`rm_set_force_position_new()`
+
+> 在笛卡尔空间轨迹规划时，使用该功能可保证机械臂末端接触力恒定，使用时力的方向与机械臂运动方向不能在同一方向。 开启力位混合控制，执行笛卡尔空间运动，接收到运动完成反馈后，需要等待2S后继续下发下一条运动指令。
+
+- **方法原型：**
+
+```python
+rm_set_force_position_new(self, param: rm_force_position_t) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| `param`      | `rm_force_position_t` | 力位混合控制参数。 |
+
+*可以跳转[rm_force_position_t](../struct/forcePosition)查阅结构体详细描述*
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+arm.rm_movej_p([0.2, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+param = rm_force_position_t(1, 0, (3, 3, 4, 3, 3, 3), (0, 0, 1, 0, 0, 0), (0.1, 0.1, 0.1, 10, 10, 10))
+for i in range(3):
+    result1 = arm.rm_movel([0.2, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+    result2 = arm.rm_set_force_position_new(param)
+    result3 = arm.rm_movel([0.3, 0, 0.3, 3.142, 0, 0], 20, 0, 0, 1)
+
+arm.rm_stop_force_position()
 arm.rm_delete_robot_arm()
 ```
 

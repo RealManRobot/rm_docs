@@ -263,7 +263,7 @@ print(arm.rm_movej_p([0.3, 0, 0.3, 3.14, 0, 0], 20, 0, 0, 1))
 arm.rm_delete_robot_arm()
 ```
 
-## 角度透传控制`rm_movej_canfd()`
+## 角度透传（CANFD）`rm_movej_canfd()`
 
 - **方法原型：**
 
@@ -351,3 +351,92 @@ arm.rm_delete_robot_arm()
 > 当目标位姿被透传到机械臂控制器时，控制器首先尝试进行逆解计算。 若逆解成功且计算出的各关节角度与当前角度差异不大，则直接下发至关节执行，跳过额外的轨迹规划步骤。 这一特性适用于需要周期性调整位姿的场景，如视觉伺服等应用。</br>透传效果受通信周期和轨迹平滑度影响，因此要求通信周期稳定，避免大幅波动。</br>
 用户在使用此功能时，建议进行良好的轨迹规划，以确保机械臂的稳定运行。</br>
 第三代有线网口周期最快可达2ms，提供了更高的实时性。
+
+## 关节空间跟随运动`rm_movej_follow()`
+
+- **方法原型：**
+
+```python
+rm_movej_follow(self, joint: list[float]) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `joint`  |    `list[float]`    |    关节1~7目标角度数组,单位：°。   |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+import time
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+joint_start = [0,-30,90,30,90,0]
+joint_end = [0,0,0,0,0,0]
+print(arm.rm_movej_follow(joint_start))
+time.sleep(2)
+print(arm.rm_movej_follow(joint_end))
+time.sleep(2)
+
+arm.rm_delete_robot_arm()
+```
+
+## 笛卡尔空间跟随运动`rm_movep_follow()`
+
+- **方法原型：**
+
+```python
+rm_movep_canfd(self, pose: list[float], follow: bool) -> int:
+```
+
+- **参数说明:**
+
+|   名称    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `pose`  |    `list[float]`    |    位姿 (若位姿列表长度为7则认为使用四元数表达位姿，长度为6则认为使用欧拉角表达位姿)   |
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+import time
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+print(arm.rm_movep_follow([0,0,0.879,0,0,0]))
+time.sleep(2)
+print(arm.rm_movep_follow([0.3, 0, 0.3, 3.14, 0, 0]))
+time.sleep(2)
+
+arm.rm_delete_robot_arm()
+```
+

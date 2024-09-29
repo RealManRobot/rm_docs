@@ -1,10 +1,8 @@
-# <p class="hidden">C、C++: </p>包络球参数集合结构体`rm_send_project_t`
+# <p class="hidden">C、C++: </p>下发在线编程文件`rm_send_project_t`
 
 ## 类成员变量说明
 
 - ### 下发文件路径文件名`project_pat`
-
-    每个工具最多支持 5 个包络球，可以没有包络。
 
     ```C++
     char rm_send_project_t::project_path[300]
@@ -16,7 +14,7 @@
     int rm_send_project_t::project_path_len
     ```
 
-- ### 规划速度比例系数`tool_nplan_speedame`
+- ### 规划速度比例系数`plan_speed`
 
     ```C++
     int rm_send_project_t::plan_speed
@@ -38,4 +36,10 @@
 
     ```C++
     int rm_send_project_t::step_flag
+    ```
+
+- ### 下发文件类型。0-在线编程文件，1-拖动示教轨迹文件`project_type`
+
+    ```C++
+    int rm_send_project_t::project_type
     ```

@@ -174,3 +174,54 @@ print(arm.rm_force_position_move_pose(ret[1]["pose"], 1, 1, 2, 2, True))
 
 arm.rm_delete_robot_arm()
 ```
+
+## 透传力位混合补偿-新参数`rm_force_position_move()`
+
+- **方法原型：**
+
+```python
+rm_force_position_move(self, param:rm_force_position_move_t) -> int:
+```
+
+- **参数说明:**
+
+| 名称        | 类型    | 说明                                   |
+| :-------- | :---- | :----------------------------------- |
+| `param`      | `rm_force_position_move_t` | 透传力位混合补偿参数。       |
+
+
+- **返回值:** </br>
+函数执行的状态码：
+
+|   参数    |  类型   |   说明    |
+| :--- | :--- | :---|
+|   0  |    `int`   |    成功。    |
+|   1  |    `int`   |   控制器返回false，参数错误或机械臂状态发生错误。    |
+|  -1  |    `int`   |   数据发送失败，通信过程中出现问题。    |
+|  -2  |    `int`   |   数据接收失败，通信过程中出现问题或者控制器长久没有返回。    |
+|  -3  |    `int`   |   返回值解析失败，接收到的数据格式不正确或不完整。   |
+
+- **使用示例**
+  
+```python
+from Robotic_Arm.rm_robot_interface import *
+
+# 实例化RoboticArm类
+arm = RoboticArm(rm_thread_mode_e.RM_TRIPLE_MODE_E)
+
+# 创建机械臂连接，打印连接id
+handle = arm.rm_create_robot_arm("192.168.1.18", 8080)
+print(handle.id)
+
+joint = [0, 40, 50, 0, 90, 0]
+arm.rm_movej(joint, 20, 0, 0, 1)
+
+joint[2] += 0.01
+param = rm_force_position_move_t(flag=0, joint=joint, sensor=1, mode=1, follow=False,
+                                                 control_mode=[3, 3, 4, 3, 3, 3],
+                                                 desired_force=[0, 0, 0, 0, 0, 0],
+                                                 limit_vel=[0.1, 0.1, 0.1, 10, 10, 10])
+arm.rm_force_position_move(param)                                                 
+
+arm.rm_delete_robot_arm()
+```
