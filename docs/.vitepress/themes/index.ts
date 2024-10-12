@@ -1,6 +1,7 @@
 import type { DefaultTheme } from "vitepress";
 import { navsList } from "../nav";
 import { sidebars } from "../sidebars";
+import { title } from "process";
 export const themeConfig: DefaultTheme.Config = {
   logo: {
     light: "/assets/light_logo.png",
@@ -26,6 +27,24 @@ export const themeConfig: DefaultTheme.Config = {
             selectText: "选择",
             navigateText: "切换",
             closeText: "关闭",
+          },
+        },
+      },
+      miniSearch: {
+        options: {},
+        searchOptions: {
+          fuzzy: 1,
+          maxFuzzy: 6,
+          prefix:true,
+          filter: (result: any) => {
+            console.log(result);
+            return result;
+          },
+          fields: ["title", "content", "idiom", "text", "titles"],
+          boost: { title: 4, text: 4, titles: 1, idiom: 1, content: 1 },
+          weights: {
+            fuzzy: 1,
+            prefix: 0.2,
           },
         },
       },
