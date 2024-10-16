@@ -35,19 +35,20 @@
 |`coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。|
 |`lift_state`|`int`|升降关节数据。包含：<br>height：当前升降机构高度，单位：mm，精度：1mm；<br>pos：当前角度  精度 0.001°；<br>current：当前升降驱动电流，单位：mA，精度：1mA；<br>err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；<br>en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。<br>|
 |`expand_state`|`int`|扩展关节相关数据。包含：<br>pos：当前角度，精度 0.001°；<br>current：当前升降驱动电流，单位：mA，精度：1mA；<br>err_flag：升降驱动错误代码，错误代码类型参考关节错误代码；en_flag：当前关节使能状态 ，1 为上使能，0 为掉使能。<br>mode: 当前升降状态，0-空闲，1-正方向速度运动，2-正方向位置运动，3-负方向速度运动，4-负方向位置运动。<br>joint_id: 扩展关节ID。|
+|`aloha_state`|`int`|aloha主臂状态。包含：<br>io1_state: IO1状态（手柄光电检测），0为按键未触发，1为按键触发；<br>io2_state: IO2状态（手柄按键检测），0为按键未触发，1为按键触发。|
 
 - **代码示例**
 
 六自由度UDP数据上报。
 
 ```json
-{"arm_current_status":"idle","arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000],"joint_en_flag":[1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000],"joint_voltage":[22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
+{"aloha_state":{"io1_state":0,"io2_state":0},"arm_current_status":"idle","arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000],"joint_en_flag":[1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000],"joint_voltage":[22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
 ```
 
 七自由度UDP数据上报。
 
 ```json
-{"arm_current_status":"idle","arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000,1000],"joint_en_flag":[1,1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000,37000],"joint_voltage":[22000,22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
+{"aloha_state":{"io1_state":0,"io2_state":0},"arm_current_status":"idle","arm_err":0,"joint_status":{"joint_current":[43000,2085000,1020000,1000,257000,-57000,1000],"joint_en_flag":[1,1,1,1,1,1,1],"joint_err_code":[0,0,0,0,0,0,0],"joint_position":[13434,-69764,2926,-4742,-45721,-223,-223],"joint_temperature":[33000,35000,37000,36000,37000,39000,37000],"joint_voltage":[22000,22000,22000,22000,22000,22000,22000]},"six_force_sensor":{"force":[-13000,3799,-22393,-216,-408,481],"zero_force":[17476,10415,30827,5,2,2],"coordinate":1},"state":"realtime_arm_joint_state","sys_err":0,"waypoint":{"euler":[2935,2935,2935],"position":[578568,127709,345856],"quat":[-23405,824245,106348,555663]}}
 ```
 
 ### 查询 UDP 机械臂状态主动上报配置`get_realtime_push`
@@ -67,7 +68,7 @@
 |`enable`|`bool`|设置使能，是否使能主动上报。|
 |`force_coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
 |`ip`|`string`|自定义的上报目标 IP 地址。|
-|`custom`|`int`| 包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息；arm_current_status：机械臂当前状态|
+|`custom`|`int`| 包含joint_speed：关节速度；lift_state：升降关节信息；expand_state：扩展关节信息；arm_current_status：机械臂当前状态；aloha_state: aloha：主臂状态|
 
 - **代码示例**
 
@@ -85,6 +86,7 @@
 {
     "command": "get_realtime_push",
     "custom": {
+        "aloha_state": false,
         "expand_state": true,
         "joint_speed": true,
         "lift_state": true,
@@ -110,7 +112,7 @@
 |`enable`|`bool`|设置使能，是否使能主动上报。|
 |`force_coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系（力传感器版本支持）。|
 |`ip`|`string`|自定义的上报目标 IP 地址。|
-|`custom`|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含：<br>joint_speed：关节速度；<br>lift_state：升降关节信息；<br>expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）；<br>arm_current_status：机械臂当前状态|
+|`custom`|`int`| 自定义项内容，如下选项不是必选项，如果不设置，则保持设置之前的状态。包含：<br>joint_speed：关节速度；<br>lift_state：升降关节信息；<br>expand_state：扩展关节信息（升降关节和扩展关节为二选一，优先显示升降关节）；<br>arm_current_status：机械臂当前状态；<br>aloha_state: aloha：主臂状态|
 
 - **输出参数**
 
@@ -125,7 +127,7 @@
 用于设置 UDP 机械臂状态主动上报配置
 
 ```json
-{"command":"set_realtime_push","cycle":100,"enable":true,"port":8099,"force_coordinate":2,"ip":"192.168.1.223","custom":{"joint_speed":true,"lift_state":true,"expand_state":true,"arm_current_status":true}}
+{"command":"set_realtime_push","cycle":100,"enable":true,"port":8099,"force_coordinate":2,"ip":"192.168.1.223","custom":{"aloha_state":true,"joint_speed":true,"lift_state":true,"expand_state":true,"arm_current_status":true}}
 ```
 
 **返回示例：**
