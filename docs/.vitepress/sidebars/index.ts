@@ -1237,6 +1237,10 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
             text: "任意物品姿态",
             link: "/AI/developerGuide/itemPosture.md",
           },
+          {
+            text: "视觉伺服",
+            link: "/AI/developerGuide/visualServo.md",
+          },
         ],
       },
     ],
