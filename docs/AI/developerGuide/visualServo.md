@@ -239,7 +239,8 @@ ibvs.center = [xxx, xxx, xxx]
 ### 使用条件
 
 - 机械臂需要正装在桌面上，伺服位置必须在摄像头检测范围内。如下图参考安装：
-  ![机械臂正装在桌面上](img.png)
+
+![机械臂正装在桌面上](../developerGuide/doc/visualServo_1.png)
 
 ### 功能详解
 
