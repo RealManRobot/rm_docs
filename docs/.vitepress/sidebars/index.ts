@@ -1243,6 +1243,16 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
+      {
+        text: "末端工具硬件适配指南",
+        collapsed: false,
+        items: [
+          {
+            text: "手眼标定",
+            link: "/AI/developerGuide/handEye.md",
+          },
+        ],
+      },
     ],
     "/symbiosis/": [
       {
