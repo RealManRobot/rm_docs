@@ -451,7 +451,7 @@ xx:标定板的横向角点数（长边格子数减1），下图长边12个格�
 
 运行脚本`compute_in_hand.py`, 获取标定结果
 
-![image-20241015220058689](../developerGuide/doc/handEye_12.png)
+![image-20241015220058689](../developerGuide/doc/handEye_11.png)
 
 得出**相机坐标系**相对于**机械臂末端**坐标系的**旋转矩阵**和**平移向量**
 
