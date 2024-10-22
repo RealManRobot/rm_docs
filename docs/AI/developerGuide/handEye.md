@@ -16,13 +16,13 @@
 
 Eye-in-Hand系统:相机安装在机械臂末端，在机械臂移动过程中随着机械臂一起运动。
 
-![image](picture/f6c716fb-c8d2-4adc-b3da-a86c6b1e78d0.png)
+![image](../developerGuide/doc/handEye_1.png)
 
 - 第二种是相机固定在机械臂之外某处
 
 Eye-to-hand系统：相机固定在机械臂之外
 
-![44776e79-47f7-4de2-9ef2-172b654169d5](picture/44776e79-47f7-4de2-9ef2-172b654169d5-17291349013411.png)
+![44776e79-47f7-4de2-9ef2-172b654169d5](../developerGuide/doc/handEye_2.png)
 
 ## 原理
 
@@ -30,13 +30,13 @@ Eye-to-hand系统：相机固定在机械臂之外
 
 ​**对于eye-in-hand情况，机器人手眼标定即标定得到相机和机械臂末端之间的坐标变换关系:**
 
-![image](picture/f6c716fb-c8d2-4adc-b3da-a86c6b1e78d0.png)
+![image](../developerGuide/doc/handEye_3.png)
 
 对目标点的空间三维坐标进行变换的过程中，首先遇到的问题就是机械臂末端坐标系与相机坐标系之间的位置变换关系，也就是机械臂的手眼位置关系，也是手眼标定最后计算的结果，该关系用符号X表示，可以用方程AX=XB求解。其中A表示相邻两次运动时**机械臂末端的变换关系**；B表示相邻两次运动时**相机坐标的相对运动**。
 
 如图所示，为眼在手上，也即eye-in-hand。（此处仅是为了演示效果图，而非真实的实验场景）。相机固定在机械臂末端，会随着机械臂的运动而运动。
 
-![图1 眼在手上](picture/1b3bb9f5348fe9f1dd4ae02afed614e9.png)
+![图1 眼在手上](../developerGuide/doc/handEye_4.png)
 
 - A：机械臂末端在机械臂坐标系下的位姿，通过机械臂API获取。（已知）。
 
@@ -69,7 +69,7 @@ $$
 
 如图所示，我们让机械臂运动两个位置，保证这两个位置下都可以看到标定板，然后构建空间变换回路：
 
-![图2 机械臂运动到两个位置，构建变换回路](picture/29fb4d433468f12530eca3e2a563da72.png)
+![图2 机械臂运动到两个位置，构建变换回路](../developerGuide/doc/handEye_5.png)
 
 $$
 A_{1} \cdot B \cdot C_{1}^{-1}=A_{2} \cdot B \cdot C_{2}^{-1} \\
@@ -92,7 +92,7 @@ $$
 
 ### 2.眼在手外（eye-to-hand）
 
-![image](picture/44776e79-47f7-4de2-9ef2-172b654169d5-17291482180503.png)
+![image](../developerGuide/doc/handEye_6.png)
 
 **眼在手外**标定时**固定机械臂基座和相机**，将**标定板固定在机械臂末端**，所以标定过程中**标定板与机械臂末端的关系固定不变，以及相机与机器人基座标的关系固定不变**
 
@@ -375,7 +375,7 @@ Copy codedef save_matrices_to_csv(matrices, file_name):
 
   1. 打印纸质标定板
 
-  ![标定板图片_00(1)](picture/标定板图片_00(1).png)
+  ![标定板图片_00(1)](../developerGuide/doc/handEye_7.png)
 
   2. 淘宝上搜索“标定板棋盘格”购买
 
@@ -390,11 +390,11 @@ Copy codedef save_matrices_to_csv(matrices, file_name):
 
 如果机械臂IP为192.168.1.18 ，则将程序运行设备 ip地址设为1网段
 
-![image-20241018143659263](picture/image-20241018143659263.png)
+![image-20241018143659263](../developerGuide/doc/handEye_8.png)
 
 如果机械臂的IP为192.168.10.18，则将程序运行设备的IP设置为10网段
 
-![image-20241018143810060](picture/image-20241018143810060.png)
+![image-20241018143810060](../developerGuide/doc/handEye_9.png)
 
 3. 标定板放置在平面上，相机固定在机械臂末端，相机对准标定板，并在**程序中**设置标定板尺寸
 
@@ -404,14 +404,14 @@ xx:标定板的横向角点数（长边格子数减1），下图长边12个格�
 
 ​L :  标定板单个方格的实际尺寸（单位：米）
 
-![image](picture/image-20241016181226851.png)
+![image](../developerGuide/doc/handEye_10.png)
 
 4. 运行脚本`collect_data.py`，出现一个弹窗
 5. 拖动机械臂末端，使呈现相机视野下的标定板清晰、完整、大，将光标放在弹窗上
 6. 点击键盘“s”采集数据
 7. 移动15~20次机械臂，重复步骤(5)(6)，采集不同机械臂姿态下的标定板图片15~20张左右
 
-![image-20241015215924806](picture/image-20241015215924806.png)
+![image-20241015215924806](../developerGuide/doc/handEye_11.png)
 
 ##### 眼在手外
 
@@ -420,11 +420,11 @@ xx:标定板的横向角点数（长边格子数减1），下图长边12个格�
 
 如果机械臂IP为192.168.1.18 ，则将程序运行设备 ip地址设为1网段
 
-![image-20241018143659263](picture/image-20241018143659263.png)
+![image-20241018143659263](../developerGuide/doc/handEye_8.png)
 
 如果机械臂的IP为192.168.10.18，则将程序运行设备的IP设置为10网段
 
-![image-20241018143810060](picture/image-20241018143810060.png)
+![image-20241018143810060](../developerGuide/doc/handEye_9.png)
 
 3. 标定板固定在机械臂末端，在程序中设置标定板尺寸
 
@@ -434,7 +434,7 @@ xx:标定板的横向角点数（长边格子数减1），下图长边12个格�
 
 ​L :  标定板单个方格的实际尺寸（单位：米）
 
-![image](picture/image-20241016181226851.png)
+![image](../developerGuide/doc/handEye_10.png)
 
 4. 运行脚本`collect_data.py`，出现一个弹窗
 5. 拖动机械臂末端，使显示当前相机视野下的标定板清晰、完整、大，将光标放在弹窗上
@@ -447,7 +447,7 @@ xx:标定板的横向角点数（长边格子数减1），下图长边12个格�
 
 运行脚本`compute_in_hand.py`, 获取标定结果
 
-![image-20241015220058689](picture/image-20241015220058689.png)
+![image-20241015220058689](../developerGuide/doc/handEye_12.png)
 
 得出**相机坐标系**相对于**机械臂末端**坐标系的**旋转矩阵**和**平移向量**
 
