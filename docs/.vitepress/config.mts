@@ -26,5 +26,5 @@ export default defineConfig({
   head,
   themeConfig,
   ignoreDeadLinks:true,
-  srcExclude:['**/joints/**','**/symbiosis/**']
+  srcExclude:['**/joints/**']
 });
