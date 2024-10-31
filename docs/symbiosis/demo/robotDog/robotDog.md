@@ -635,8 +635,8 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 - [B1机器狗产品手册](../doc/dog_8.pdf)
 - [智能仿生手说明书](../doc/dog_9.pdf)
 - [傲意灵巧手Modbus协议](../../accessory/rohand/rohandModbus.md)
-- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](../doc/dog_10.upd)
+- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730344698&Signature=6ID%2F4Du%2FuECo0uL1haxoflGeb94%3D)
 
 **2. 功能包下载**  
 
-- [宇树B1机器狗+睿尔曼RM65-6f-v机械臂+傲意灵巧手的手柄控制系统](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730344698&Signature=6ID%2F4Du%2FuECo0uL1haxoflGeb94%3D)
+- [宇树B1机器狗+睿尔曼RM65-6f-v机械臂+傲意灵巧手的手柄控制系统](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/rm65_roh_b1_ws.zip?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730346532&Signature=g9iNJA9FfMJPj0rjiv5mAjAQpuY%3D)

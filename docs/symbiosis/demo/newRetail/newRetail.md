@@ -681,4 +681,4 @@ def publish_movej_command():
 
 **2. 功能包下载**  
 
-[新零售3.0开源功能包](./src)
+[新零售3.0开源功能包](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/new_retail3_ros1.zip?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730346739&Signature=hB5FI%2FP8KFAdIkClfR5FIl5Dt6s%3D)
