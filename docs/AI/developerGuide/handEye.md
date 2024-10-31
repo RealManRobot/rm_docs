@@ -360,7 +360,7 @@ Copy codedef save_matrices_to_csv(matrices, file_name):
 
 | 项目     | 版本           |
 | :------- | :------------- |
-| 操作系统 | ubantu/windows |
+| 操作系统 | Ubuntu/Windows |
 | Python   | 3.9及以上      |
 |          |                |
 
