@@ -1273,15 +1273,15 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
           },
         ],
       },
-      {
-        text: "生态配件使用协议",
-        collapsed: false,
-        items: [
-          {
-            text: "傲意灵巧手Modbus协议",
-            link: "/symbiosis/accessory/rohand/rohandModbus.md",
-          },
-        ],
-      },
+      // {
+      //   text: "生态配件使用协议",
+      //   collapsed: false,
+      //   items: [
+      //     {
+      //       text: "傲意灵巧手Modbus协议",
+      //       link: "/symbiosis/accessory/rohand/rohandModbus.md",
+      //     },
+      //   ],
+      // },
     ]  
   };

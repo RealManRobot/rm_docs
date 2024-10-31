@@ -634,7 +634,7 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 - [B1机器狗接口说明](../doc/dog_7.pdf)
 - [B1机器狗产品手册](../doc/dog_8.pdf)
 - [智能仿生手说明书](../doc/dog_9.pdf)
-- [傲意灵巧手Modbus协议](../../accessory/rohand/rohandModbus.md)
+- [傲意灵巧手Modbus协议](https://github.com/oymotion/roh_firmware)
 - [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730344698&Signature=6ID%2F4Du%2FuECo0uL1haxoflGeb94%3D)
 
 **2. 功能包下载**  
