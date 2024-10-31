@@ -1255,23 +1255,33 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
       },
     ],
     "/symbiosis/": [
-      {
-        text: "概述",
-        link: "/symbiosis/getStarted/index.md",
-      },
       // {
-      //   text: "集成应用案例",
-      //   collapsed: false,
-      //   items: [
-      //     {
-      //       text: "新零售",
-      //       link: "/symbiosis/demo/newRetail/newRetail.md",
-      //     },
-      //     // {
-      //     //   text: "机器狗",
-      //     //   link: "/symbiosis/demo/robotDog/robotDog.md",
-      //     // },
-      //   ],
+      //   text: "概述",
+      //   link: "/symbiosis/getStarted/index.md",
       // },
+      {
+        text: "集成应用案例",
+        collapsed: false,
+        items: [
+          {
+            text: "新零售",
+            link: "/symbiosis/demo/newRetail/newRetail.md",
+          },
+          {
+            text: "机器狗",
+            link: "/symbiosis/demo/robotDog/robotDog.md",
+          },
+        ],
+      },
+      {
+        text: "生态配件使用协议",
+        collapsed: false,
+        items: [
+          {
+            text: "傲意灵巧手Modbus协议",
+            link: "/symbiosis/accessory/rohand/rohandModbus.md",
+          },
+        ],
+      },
     ]  
   };
