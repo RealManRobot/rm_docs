@@ -1249,7 +1249,7 @@ export const sidebars: DefaultTheme.SidebarItem[] | DefaultTheme.SidebarMulti =
         items: [
           {
             text: "手眼标定",
-            link: "/AI/developerGuide/handEye.md",
+            link: "/AI/developerGuide/hand.md",
           },
         ],
       },
