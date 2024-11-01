@@ -16,7 +16,7 @@
 
 | 参数                  | 类型     | 说明               |
 | :-------------------- | :------- | :----------------- |
-| `set_auto_tool_frame` | `string` | 一键设置关节限位。 |
+| `set_auto_tool_frame` | `string` | 自动计算工具坐标系。 |
 | `point_num`           | `int`    | 1~6 为标定参考点。 |
 
 - **输出参数**
@@ -36,7 +36,27 @@
 实现：自动计算工具坐标系，标定当前位置为参考点 6。
 
 ```json
-{"command":"set_auto_tool_frame","point_num":1}{"command":"set_auto_tool_frame","point_num":2}{"command":"set_auto_tool_frame","point_num":3}{"command":"set_auto_tool_frame","point_num":4}{"command":"set_auto_tool_frame","point_num":5}{"command":"set_auto_tool_frame","point_num":6}
+{"command":"set_auto_tool_frame","point_num":1}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":2}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":3}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":4}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":5}
+```
+
+```json
+{"command":"set_auto_tool_frame","point_num":6}
 ```
 
 **输出**  
@@ -104,7 +124,7 @@
 | `set_manual_tool_frame` | `int` | 自动计算工具坐标系。                 |
 | `tool_name`           | `int` | 工具坐标系名称，不能超过 10 个字符。 |
 | `payload`             | `int` | 单位：g，最高不超过 5000g            |
-| position              | `int` | 质心位置，单位：mm，精度 0.001mm     |
+| `position`              | `int` | 质心位置，单位：mm，精度 0.001mm     |
 
 - **输出参数**
 

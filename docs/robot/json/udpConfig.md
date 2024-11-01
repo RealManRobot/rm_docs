@@ -23,7 +23,7 @@
 |`joint_position`|`int`|当前关节角度，精度 0.001°。|
 |`joint_temperature`|`int`|当前关节温度，精度 0.001℃。|
 |`joint_voltage`|`int`|当前关节电压，精度 0.001V。|
-|`joint_speed`|`int`|当前关节速度，精度0.01RPM。|
+|`joint_speed`|`int`|当前关节速度，精度0.02RPM。|
 |`waypoint`|`object`|当前路点信息。|
 |`position`|`int`|当前路点位置，精度 0.000001M。|
 |`euler`|`object`|当前路点姿态欧拉角，精度 0.001rad。|
