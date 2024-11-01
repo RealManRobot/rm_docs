@@ -6,7 +6,7 @@ import mdItCustomAttrs  from 'markdown-it-custom-attrs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: " ",
-  description: "睿尔曼智能科技有限公司-在线文档V1.0.1",
+  description: "睿尔曼智能科技有限公司-在线文档V1.0.5",
   lang: "zh-CN",
   markdown:{
     image:{
