@@ -1,4 +1,4 @@
-# <p class="hidden">应用集成案例: </p>赋能RealMan机械臂-复合机器狗手柄控制案例
+# <p class="hidden">应用集成案例: </p>RealMan机械臂_赋能机器狗
 
 ## 一、 项目概述
 
@@ -174,7 +174,7 @@ sudo apt-get install libjsoncpp-dev libjsoncpp0
 | /high_state                   | unitree_legged_msgs::HighState | 机器狗状态话题     |
 | /joy                          | sensor_msgs::joy               | 手柄状态话题       |
 
-**注：**示教话题发布一次就会一直按照发布数据进行执行，若想停止则必须发布暂停示教话题。
+**注：** 示教话题发布一次就会一直按照发布数据进行执行，若想停止则必须发布暂停示教话题。
 
 ### 服务说明
 
@@ -637,10 +637,10 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 
 - [睿尔曼机械臂接口函数说明(c++)](../../../robot/api/c/getStarted.md)
 - [睿尔曼机械臂JSON通信协议](../../../robot/json/getStartedJson.md)
-- [B1机器狗接口说明和产品手册请问宇树科技Github](https://github.com/unitreerobotics)
-- [傲意灵巧手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/ROHAND_userMaunal.pdf)
+- [B1机器狗接口说明和产品手册，请访问Unitree github](https://github.com/unitreerobotics)
+- [傲意灵巧手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/ROHAND_userManual.pdf)
 - [傲意灵巧手Modbus协议](https://github.com/oymotion/roh_firmware)
-- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)
+- [灵巧手固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)
 
 **2. 功能包下载**  
 
