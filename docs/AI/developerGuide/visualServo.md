@@ -112,7 +112,7 @@ pip3 install -e .
 
 ### 代码获取
 
-代码可以在[github链接](https://github.com/RealManRobot/hand_eye_calibration)获取最新代码。
+代码可以在[github链接](https://github.com/RealManRobot/visual-servo)获取最新代码。
 
 ### 运行代码
 

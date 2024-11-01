@@ -141,6 +141,10 @@ $$
 
 ## 关键代码解释
 
+### 代码获取
+
+代码可以在[github链接](https://github.com/RealManRobot/hand_eye_calibration)获取最新代码。
+
 ### 代码结构
 
 ```
