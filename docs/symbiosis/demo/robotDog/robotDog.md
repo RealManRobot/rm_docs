@@ -628,7 +628,7 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 ## 十、 视频演示
 
 <video width="300px" autoplay loop muted height="300px" >
-  <source src="https://develop1.oss-cn-beijing.aliyuncs.com/video/robotDog/dog_6.mp4?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730343333&Signature=dyBXeNN7k0XmAAZ7oLExB35oX98%3D" type="video/mp4">
+  <source src="https://develop1.oss-cn-beijing.aliyuncs.com/video/robotDog/dog_6.mp4" type="video/mp4">
 </video>
 
 ## 附录：资源下载
@@ -637,12 +637,12 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 
 - [睿尔曼机械臂接口函数说明(c++)](../../../robot/api/c/getStarted.md)
 - [睿尔曼机械臂JSON通信协议](../../../robot/json/getStartedJson.md)
-- [B1机器狗接口说明](../doc/dog_7.pdf)
-- [B1机器狗产品手册](../doc/dog_8.pdf)
-- [智能仿生手说明书](../doc/dog_9.pdf)
+- [B1机器狗接口说明](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_7.pdf)
+- [B1机器狗产品手册](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_8.pdf)
+- [智能仿生手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_9.pdf)
 - [傲意灵巧手Modbus协议](https://github.com/oymotion/roh_firmware)
-- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730344698&Signature=6ID%2F4Du%2FuECo0uL1haxoflGeb94%3D)
+- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd)
 
 **2. 功能包下载**  
 
-- [宇树B1机器狗+睿尔曼RM65-6f-v机械臂+傲意灵巧手的手柄控制系统](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/rm65_roh_b1_ws.zip?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730346532&Signature=g9iNJA9FfMJPj0rjiv5mAjAQpuY%3D)
+- [宇树B1机器狗+睿尔曼RM65-6f-v机械臂+傲意灵巧手的手柄控制系统](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/rm65_roh_b1_ws.zip)

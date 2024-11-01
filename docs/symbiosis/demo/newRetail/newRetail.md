@@ -675,10 +675,10 @@ def publish_movej_command():
 **1. 相关文件查阅**  
 
 - JSON 相关说明请访问[睿尔曼JSON通信协议](../../../robot/json/getStartedJson.md)
-- [水滴2上位机接口说明](../doc/WATER2Interface.pdf)
-- [水滴2软件API手册](../doc/WATER2API.pdf)
-- [水滴2使用手册](../doc/WATER2UserManual.pdf)
+- [水滴2上位机接口说明](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/WATER2API.pdf)
+- [水滴2软件API手册](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/WATER2API.pdf)
+- [水滴2使用手册](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/WATER2UserManual.pdf)
 
 **2. 功能包下载**  
 
-[新零售3.0开源功能包](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/new_retail3_ros1.zip?OSSAccessKeyId=LTAI5tKokEbjuKFBerwjMUBV&Expires=1730346739&Signature=hB5FI%2FP8KFAdIkClfR5FIl5Dt6s%3D)
+[新零售3.0开源功能包](https://develop1.oss-cn-beijing.aliyuncs.com/files/newRetail/new_retail3_ros1.zip)
