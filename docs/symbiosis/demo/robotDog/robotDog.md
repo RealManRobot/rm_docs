@@ -73,7 +73,7 @@
 
 ### 灵巧手固件升级
 
-傲意灵巧手需用USB转485数据与24V电源将灵巧手内部的固件通过upd拓展文件oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd文件进行升级，从而获取末端Modbus控制协议通讯功能。升级过程如下所示：
+傲意灵巧手需用USB转485数据与24V电源将灵巧手内部的固件，通过upd拓展文件[傲意灵巧手固件](../../demo/robotDog/robotDog.md#资源下载)文件进行升级，从而获取末端Modbus控制协议通讯功能。升级过程如下所示：
 
 1. 手头断电
 2. 连接好USB转485模块以及手头，并将USB转485模块连接到电脑
@@ -631,7 +631,7 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
   <source src="https://develop1.oss-cn-beijing.aliyuncs.com/video/robotDog/dog_6.mp4" type="video/mp4">
 </video>
 
-## 附录：资源下载
+## 资源下载
 
 **1. 相关文件查阅**  
 
@@ -640,7 +640,7 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 - [B1机器狗接口说明和产品手册，请访问Unitree github](https://github.com/unitreerobotics)
 - [傲意灵巧手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/ROHAND_userManual.pdf)
 - [傲意灵巧手Modbus协议](https://github.com/oymotion/roh_firmware)
-- [灵巧手固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)
+- [傲意灵巧手固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)
 
 **2. 功能包下载**  
 
