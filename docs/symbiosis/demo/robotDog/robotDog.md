@@ -73,7 +73,7 @@
 
 ### 灵巧手固件升级
 
-傲意灵巧手需用USB转485数据与24V电源将灵巧手内部的固件，通过upd拓展文件[傲意灵巧手固件](../../demo/robotDog/robotDog.md#资源下载)文件进行升级，从而获取末端Modbus控制协议通讯功能。升级过程如下所示：
+傲意灵巧手需用USB转485数据与24V电源将灵巧手内部的固件，通过upd拓展文件[傲意灵巧手固件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)文件进行升级，从而获取末端Modbus控制协议通讯功能。升级过程如下所示：
 
 1. 手头断电
 2. 连接好USB转485模块以及手头，并将USB转485模块连接到电脑
