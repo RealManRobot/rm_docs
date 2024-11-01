@@ -41,7 +41,7 @@
 
 ### 硬件基础介绍
 
-- 外部拓展模块：宇树提供了8个2×8PIN千兆以太网+12V电源+485/CAN(透传)接口、6个Type-C USB2.0接口等。
+- 外部拓展模块：宇树提供了8个2×8PIN千兆以太网、12V电源、485/CAN(透传)接口、6个Type-C USB2.0接口等。
 - 电池电源（58.8V）：机器人唯一电源，机械臂与灵巧手皆通过外部拓展模块（24.0V）供电。
 - 主控制器：获取IMU数据，将接口接入以太网交换机，构成物理连接的局域网。可通过网线连接访问对应ip。
 - IMU：获取机器人姿态等数据。
@@ -637,11 +637,10 @@ void Rm_Unitree_Getcmd::Joy_Listener(const sensor_msgs::Joy::ConstPtr &joy) {
 
 - [睿尔曼机械臂接口函数说明(c++)](../../../robot/api/c/getStarted.md)
 - [睿尔曼机械臂JSON通信协议](../../../robot/json/getStartedJson.md)
-- [B1机器狗接口说明](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_7.pdf)
-- [B1机器狗产品手册](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_8.pdf)
-- [智能仿生手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_9.pdf)
+- [B1机器狗接口说明和产品手册请问宇树科技Github](https://github.com/unitreerobotics)
+- [傲意灵巧手说明书](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/ROHAND_userMaunal.pdf)
 - [傲意灵巧手Modbus协议](https://github.com/oymotion/roh_firmware)
-- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/dog_10.upd)
+- [oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd固件升级文件](https://develop1.oss-cn-beijing.aliyuncs.com/files/robotDog/oHandSerialRobotic_SpeedControlModBus_1B01_V3.0-68-bcf55cb.upd)
 
 **2. 功能包下载**  
 
