@@ -1,4 +1,4 @@
-# <p class="hidden">应用集成案例: </p>复合机器狗手柄控制案例—赋能RealMan机械臂
+# <p class="hidden">应用集成案例: </p>赋能RealMan机械臂-复合机器狗手柄控制案例
 
 ## 一、 项目概述
 
