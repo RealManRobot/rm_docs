@@ -1,0 +1,174 @@
+# <p class="hidden">C、C++: </p>透传力位混合控制补偿配置`forcePositionControl`
+
+睿尔曼机械臂配置了六维力版本，用户除了可直接使用示教器调用底层的力位混合控制模块外，还可以通过该接口将自定义的轨迹以周期性透传的形式结合底层的力位混合控制算法进行补偿。<br>
+透传效果和周期、轨迹是否平滑有关，周期要求稳定，防止出现较大波动，用户使用该指令时请做好轨迹规划，轨迹规划的平滑程度决定了机械臂的运行状态。<br>
+有线网口周期最快可达2ms。
+
+## 开启透传力位混合控制补偿模式`rm_start_force_position_move()`
+
+- **方法原型：**
+
+```C
+int rm_start_force_position_move(rm_robot_handle * handle)
+```
+
+*可以跳转[rm_robot_handle](../../struct/robotHandle/index.md)查阅结构体详细描述。*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+
+- **返回值:**
+
+0代表成功，其他错误码请参考[API2错误代码](../../../apierrorList2/index.md)。
+
+- **使用示例**
+  
+```C
+//开启透传力位混合控制补偿模式
+ret = rm_start_force_position_move(robot_handle);
+```
+
+## 停止透传力位混合控制补偿模式`rm_stop_force_position_move()`
+
+- **方法原型：**
+
+```C
+int rm_stop_force_position_move(rm_robot_handle * handle)
+```
+
+*可以跳转[rm_robot_handle](../../struct/robotHandle/index.md)查阅结构体详细描述。*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+
+- **返回值:**
+
+0代表成功，其他错误码请参考[API2错误代码](../../../apierrorList2/index.md)。
+
+- **使用示例**
+  
+```C
+ret = rm_stop_force_position_move(robot_handle);
+```
+
+## 透传力位混合补偿-角度方式`rm_force_position_move_joint()`
+
+- **方法原型：**
+
+```C
+int rm_force_position_move_joint(rm_robot_handle * handle,const float * joint,int sensor,int mode,int dir,float force,bool follow)
+```
+
+*可以跳转[rm_robot_handle](../../struct/robotHandle/index.md)查阅结构体详细描述。*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `joint`  |    输入参数    |    目标关节角度。    |
+|   `sensor`  |    输入参数    |    所使用传感器类型，0-一维力，1-六维力。    |
+|   `mode`  |    输入参数    |    模式，0-沿基坐标系，1-沿工具端坐标系。    |
+|   `dir`  |    输入参数    |    力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，<br>其中一维力类型时默认方向为Z方向。    |
+|   `force`  |    输入参数    |    力的大小,单位N。    |
+|   `follow`  |    输入参数    |    是否高跟随。true：高跟随；false：低跟随。    |
+
+- **返回值:**
+
+0代表成功，其他错误码请参考[API2错误代码](../../../apierrorList2/index.md)。
+
+- **使用示例**
+  
+```C
+//透传力位混合补偿--关节角度
+const float joint[6] = {1,2,3,4,5,6};
+int sensor = 0;
+int mode = 0;
+int dir = 2;
+float force = 5;
+bool follow = true;
+ret=rm_force_position_move_joint(robot_handle,joint,sensor,mode,dir,force,follow);
+```
+
+## 透传力位混合补偿-位姿方式`rm_force_position_move_pose()`
+
+- **方法原型：**
+
+```C
+int rm_force_position_move_pose(rm_robot_handle * handle,rm_pose_t pose,int sensor,int mode,int dir,float force,bool follow)
+```
+
+*可以跳转[rm_robot_handle](../../struct/robotHandle/index.md)和[rm_pose_t](../../struct/pose/index.md)查阅结构体详细描述。*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `pose`  |    输入参数    |    目标关节角度。    |
+|   `sensor`  |    输入参数    |    所使用传感器类型，0-一维力，1-六维力。    |
+|   `mode`  |    输入参数    |    模式，0-沿基坐标系，1-沿工具端坐标系。    |
+|   `dir`  |    输入参数    |    力控方向，0~5分别代表X/Y/Z/Rx/Ry/Rz，<br>其中一维力类型时默认方向为Z方向。    |
+|   `force`  |    输入参数    |    力的大小,单位N。    |
+|   `follow`  |    输入参数    |    是否高跟随。true：高跟随；false：低跟随。    |
+
+- **返回值:**
+
+0代表成功，其他错误码请参考[API2错误代码](../../../apierrorList2/index.md)。
+
+- **使用示例**
+  
+```C
+//透传力位混合补偿--位姿
+rm_pose_t pose;
+pose.position.x = 0.186350;
+pose.position.y = 0.062099;
+pose.position.z = 0.2;
+pose.euler.rx = 3.141;
+pose.euler.ry = 0;
+pose.euler.rz = 1.569;
+
+int sensor = 0;
+int mode = 0;
+int dir = 2;
+float force = 15;
+bool follow = true;
+ret=rm_force_position_move_pose(robot_handle,pose,sensor,mode,dir,force,follow);
+```
+
+## 透传力位混合补偿`rm_force_position_move()`
+
+- **方法原型：**
+
+```C
+int rm_force_position_move(rm_robot_handle * handle, rm_force_position_move_t param)
+```
+
+*可以跳转[rm_robot_handle](../../struct/robotHandle/index.md)和[rm_force_position_move_t](../../struct/forcePositionMove/index.md)查阅结构体详细描述。*
+
+- **参数说明:**
+
+|   参数    |   类型    |   说明    |
+| :--- | :--- | :--- |
+|   `handle`  |    输入参数    |    机械臂句柄。    |
+|   `param`  |    输入参数    |    透传力位混合补偿参数。    |
+
+- **返回值:**
+
+0代表成功，其他错误码请参考[API2错误代码](../../../apierrorList2/index.md)。
+
+- **使用示例**
+  
+```C
+// 力位混合控制补偿-透传目标角度[0,20,0,90,0,0]，六维力传感器，工具坐标系力控，高跟随，Z轴为力跟踪模式，期望力5N，最大线速度0.2m/s
+rm_force_position_move_t move = {
+    0,{0,0,0},{0,20,0,90,0,0},1,1,true,{0,0,4,0,0,0},{0,0,5,0,0,0},{0,0,0.2,0,0,0}
+};
+ret = rm_force_position_move(robot_handle, move);
+```
