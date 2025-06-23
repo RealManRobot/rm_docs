@@ -66,6 +66,8 @@ You can refer to [current_trajectory_state](../motionConfig/index.md#5439) for t
 
 **Input**
 
+Set the gripper release.
+
 ```json
 {"command":"set_gripper_release","speed":500,"block":true}
 ```
@@ -349,7 +351,7 @@ The RealMan robotic arm is equipped with an INSPIRE-ROBOTS five-fingered dextero
 
 | Parameter        | Type    | Description                                   |
 | :-------------- | :----- | :------------------------------------ |
-| `state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
 You can refer to [current_trajectory_state](../motionConfig/index.md#5439) for the output parameters of the motion completion return result.
 
@@ -407,7 +409,7 @@ This command is used to report the motion to a given position in blocking mode.
 
 | Parameter        | Type    | Description                                   |
 | :-------------- | :----- | :------------------------------------ |
-| `state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
 You can refer to [current_trajectory_state](../motionConfig/index.md#5439) for the output parameters of the motion completion return result.
 
@@ -467,7 +469,7 @@ Set the angles of the dexterous hand, which has 6 degrees of freedom: 1. Little 
 
 | Parameter        | Type    | Description                                   |
 | :-------------- | :----- | :------------------------------------ |
-| `state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
 You can refer to [current_trajectory_state](../motionConfig/index.md#5439) for the output parameters of the motion completion return result.
 

@@ -98,7 +98,7 @@
 机械臂上电初始化后，默认无负载
 :::
 
-实现：自动计算工具坐标系，名称为 tool2_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
+实现：自动计算工具坐标系，名称为 tool_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
 
 ```json
 {"command":"generate_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
@@ -291,7 +291,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数                 | 类型     | 说明               |
 | :------------------- | :------- | :----------------- |
-| `current_tool_frame` | `string` | 返回当前工具信息。 |
+| `get_current_tool_frame` | `string` | 返回当前工具信息。 |
 
 - **代码示例**
 
@@ -307,17 +307,17 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 返回当前工具坐标系信息,如下：
 
-工具名称：tool2_frame；<br>
-工具位置：x：0.1m，y:0.2m，z：0.03m；<br>
-位置精度：0.001mm；<br>
-工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad；<br>
-姿态精度：0.001rad；<br>
-重量：payload：5kg精度0.001kg；<br>
-质心：position：1mm精度0.001mm。
+- **工具名称**：tool2_frame；<br>
+- **工具位置**：x：0.1m，y:0.2m，z：0.03m；<br>
+- **位置精度**：0.001mm；<br>
+- **工具姿态**：rx：0.4rad，ry：0.5rad，rz：0.6rad；<br>
+- **姿态精度**：0.001rad；<br>
+- **重量**：payload：5kg精度0.001kg；<br>
+- **质心**：position：1mm精度0.001mm。
 
 ```json
 {
-    "state": "current_tool_frame",
+    "command": "get_current_tool_frame",
     "tool_name": "tool2_frame",
     "pose": [
         100000,
@@ -348,7 +348,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数               | 类型     | 说明               |
 | :----------------- | :------- | :----------------- |
-| `total_tool_frame` | `string` | 返回所有工具名称。 |
+| `get_total_tool_frame` | `string` | 返回所有工具名称。 |
 
 - **代码示例**
 
@@ -366,7 +366,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 ```json
 {
-  "state":"total_tool_frame",
+  "command": "get_total_tool_frame",
   "tool_names":["base_tool1","base_tool2"….,"NULL"]
 }
 ```
@@ -384,33 +384,33 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数               | 类型    | 说明               |
 | :----------------- | :------ | :----------------- |
-| `given_tool_frame` | `sting` | 返回指定工具信息。 |
+| `get_tool_frame` | `sting` | 返回指定工具信息。 |
 
 - **代码示例**
 
-**输入**  
+**输入**  <br>
 
-实现：查询指定工具信息。
+**实现**：查询指定工具信息。
 
 ```json
-{ "command": "get_tool_frame", "tool_name": "tool" }
+{ "command": "get_tool_frame", "tool_name": "tool2_frame" }
 ```
 
-**输出**  
+**输出**  <br>
 
 返回指定工具信息，如下：
 
-工具名称：tool2_frame,<br>
-工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm<br>
-工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad<br>
-重量：payload：5kg精度0.001kg<br>
-质心：position：1mm精度0.001mm。
+- **工具名称**：tool2_frame,<br>
+- **工具位置**：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm<br>
+- **工具姿态**：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad<br>
+- **重量**：payload：5kg精度0.001kg<br>
+- **质心**：position：1mm精度0.001mm。
 
 成功
 
 ```json
 {
-    "state": "given_tool_frame",
+    "command": "get_tool_frame",
     "tool_name": "tool2_frame",
     "pose": [
         100000,
@@ -466,7 +466,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
   
 **输入**  
 
-实现：设置工作坐标系，名称 work2_frame，将当前位置标定为参考点 3（Y 轴上一点）。
+实现：设置工作坐标系，名称 work_frame，将当前位置标定为参考点 3（Y 轴上一点）。
 
 ```json
 {"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
@@ -645,7 +645,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数                 | 类型     | 说明                     |
 | :------------------- | :------- | :----------------------- |
-| `current_work_frame` | `string` | 返回当前工作坐标系信息。 |
+| `get_current_work_frame` | `string` | 返回当前工作坐标系信息。 |
 
 - **代码示例**
 
@@ -667,7 +667,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 ```json
 {
-    "state": "current_work_frame",
+    "command": "get_current_work_frame",
     "frame_name": "work2_frame",
     "pose": [
         100000,
@@ -692,7 +692,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数               | 类型     | 说明                     |
 | :----------------- | :------- | :----------------------- |
-| `total_work_frame` | `string` | 返回所有工作坐标系名称。 |
+| `get_total_work_frame` | `string` | 返回所有工作坐标系名称。 |
 
 - **代码示例**
 
@@ -710,7 +710,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 ```json
 {
-  "state":"total_work_frame",
+  "command":"get_total_work_frame",
   "frame_names":["work1","work2","NULL"]
 }
 ```
@@ -728,7 +728,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 | 参数               | 类型     | 说明                 |
 | :----------------- | :------- | :------------------- |
-| `given_work_frame` | `string` | 返回指定坐标系信息。 |
+| `get_work_frame` | `string` | 返回指定坐标系信息。 |
 
 - **代码示例**
 
@@ -737,7 +737,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 实现：查询指定工作坐标系。
 
 ```json
-{ "command": "get_work_frame", "frame_name": "work1" }
+{ "command": "get_work_frame", "frame_name": "work2_frame" }
 ```
 
 **输出**  
@@ -752,7 +752,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 ```json
 {
-    "state": "given_work_frame",
+    "command": "get_work_frame",
     "frame_name": "work2_frame",
     "pose": [
         100000,

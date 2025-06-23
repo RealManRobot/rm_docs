@@ -54,7 +54,7 @@
 
 ```json
 {
-    "state": "arm_power_state",
+    "command":"get_arm_power_state",
     "power_state": 1
 }
 ```
@@ -184,7 +184,7 @@
 
 ```json
 {
-    "state": "joint_software_version",
+    "command":"get_joint_software_version",
     "version": [
         "Vd5.1.0",
         "Vd5.1.0",
@@ -217,7 +217,7 @@
 
 ```json
 {
-    "state": "tool_software_version",
+    "command":"get_tool_software_version",
     "version": "V1.9.3"
 }
 ```

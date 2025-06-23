@@ -890,7 +890,7 @@ Execution: Delete all trajectories.
 
 | Parameter                     | Type     | Description                     |
 | :----------------------- | :------- | :----------------------- |
-| `arm_current_trajectory` | `string` | Return the currently running trajectory. |
+| `get_arm_current_trajectory` | `string` | Return the currently running trajectory. |
 
 - **Code demo**
 
@@ -910,7 +910,7 @@ Currently running joint planning, with the array containing the current joint an
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "movej",
     "data": [
         0,
@@ -927,7 +927,7 @@ Currently running joint planning, with the array containing the current joint an
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "movej",
     "data": [
         0,
@@ -944,15 +944,15 @@ Currently running joint planning, with the array containing the current joint an
 Currently running linear planning, with the array containing the current end effector pose, position accuracy:0.001 mm, orientation accuracy: 0.001 rad.
 
 ```json
-{"state":"arm_current_trajectory","type":"movel","data":[0,0,0,0,0,0]}
+{"command": "get_arm_current_trajectory","type":"movel","data":[0,0,0,0,0,0]}
 ```
 
 Currently running circular planning, with the array containing the current end effector pose, position accuracy:0.001 mm, orientation accuracy: 0.001 rad.
 
 ```json
 {
-    "state": "arm_current_trajectory",
-    "type": "movel",
+    "command": "get_arm_current_trajectory",
+    "type": "movec",
     "data": [
         0,
         0,
@@ -970,7 +970,7 @@ No active planning, with the array containing the current joint angles, accuracy
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "none",
     "data": [
         0,
@@ -987,7 +987,7 @@ No active planning, with the array containing the current joint angles, accuracy
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "none",
     "data": [
         0,

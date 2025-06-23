@@ -1386,7 +1386,7 @@ control_mode：力控轴（x、y、z、rx、ry、rz）的力控模式，取值�
 ```json
 {
     "state": "arm_current_trajectory",
-    "type": "movel",
+    "type": "movec",
     "data": [
         0,
         0,

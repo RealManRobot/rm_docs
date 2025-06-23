@@ -14,7 +14,7 @@
 
 | Parameter        | Type    | Description                         |
 | :------------------ | :------- | :--------------- |
-| `current_arm_state` | `string` | Return the current robotic arm state. |
+| `get_current_arm_state` | `string` | Return the current robotic arm state. |
 | `joint`             | `int`    | Joint angle        |
 | `pose`              | `int`    | End effector pose         |
 | `err`               | `int`    | System error code   |
@@ -43,7 +43,7 @@ err: system error code, indicating the hardware error during the system running:
 
 ```json
 {
-    "state": "current_arm_state",
+    "command": "get_current_arm_state",
     "arm_state": {
         "joint": [
             100,
@@ -70,7 +70,7 @@ err: system error code, indicating the hardware error during the system running:
 
 ```json
 {
-    "state": "current_arm_state",
+    "command": "get_current_arm_state",
     "arm_state": {
         "joint": [
             100,
@@ -106,7 +106,7 @@ err: system error code, indicating the hardware error during the system running:
 
 | Parameter             | Type     | Description             |
 | :--- | :------------------------- |:---|
-| `controller_state` | `string` | Return the controller state. |
+| `get_controller_state` | `string` | Return the controller state. |
 
 - **Code demo**
 
@@ -124,7 +124,7 @@ The accuracy of voltage, current, and temperature is 0.001.
 
 ```json
 {
-  "state": "controller_state",    //Return the controller state
+  "command": "get_controller_state",    //Return the controller state
   "voltage": 24000,               //Voltage: 24 V
   "current": 1500,                //Current: 1.5 A
   "temperature": 42000,           //Temperature: 42°C
@@ -182,7 +182,7 @@ The clearing of the system error has failed.
 
 | Parameter        | Type    | Description                                   |
 | :-------------------------- | :---- | :-------------------------------- |
-| `current_joint_temperature` | `int` | Return the current joint temperature, unit: °C, accuracy: 0.001℃ |
+| `get_current_joint_temperature` | `int` | Return the current joint temperature, unit: °C, accuracy: 0.001℃ |
 
 - **Code demo**
 
@@ -205,7 +205,7 @@ Temperature of joints 1−7 of the 7-DoF robotic arm [27.5, 28.0, 26.8, 26.8, 28
 
 ```json
 {
-    "state": "current_joint_temperature",
+    "command": "get_current_joint_temperature",
     "joint_temperature": [
         27500,
         28000,
@@ -221,7 +221,7 @@ Temperature of joints 1−7 of the 7-DoF robotic arm [27.5, 28.0, 26.8, 26.8, 28
 
 ```json
 {
-    "state": "current_joint_temperature",
+    "command": "get_current_joint_temperature",
     "joint_temperature": [
         27500,
         28000,
@@ -246,7 +246,7 @@ Temperature of joints 1−7 of the 7-DoF robotic arm [27.5, 28.0, 26.8, 26.8, 28
 
 | Parameter        | Type    | Description                                   |
 | :---------------------- | :---- | :---------------------------------------- |
-| `current_joint_current` | `int` | Return the current joint current, unit: mA, accuracy: 0.001 mA. |
+| `get_current_joint_current` | `int` | Return the current joint current, unit: mA, accuracy: 0.001 mA. |
 
 - **Code demo**
 
@@ -272,7 +272,7 @@ Current of joints 1−7 of the 7-DoF robotic arm:
 
 ```json
 {
-    "state": "current_joint_current",
+    "command": "get_current_joint_current",
     "joint_current": [
         65,
         -200,
@@ -288,7 +288,7 @@ Current of joints 1−7 of the 7-DoF robotic arm:
 
 ```json
 {
-    "state": "current_joint_current",
+    "command": "get_current_joint_current",
     "joint_current": [
         65,
         -200,
@@ -313,7 +313,7 @@ Current of joints 1−7 of the 7-DoF robotic arm:
 
 | Parameter        | Type    | Description                                   |
 | :---------------------- | :---- | :-------------------------------------- |
-| `current_joint_voltage` | `int` | Return the current joint voltage, unit: V, accuracy: 0.001 V. |
+| `get_current_joint_voltage` | `int` | Return the current joint voltage, unit: V, accuracy: 0.001 V. |
 
 - **Code demo**
 
@@ -336,7 +336,7 @@ Voltage of joints 1−7 of the 7-DoF robotic arm: 27.5 V, 28.0 V, 26.8 V, 26.8 V
 
 ```json
 {
-    "state": "current_joint_voltage",
+    "command": "get_current_joint_voltage",
     "joint_voltage": [
         27500,
         28000,
@@ -352,7 +352,7 @@ Voltage of joints 1−7 of the 7-DoF robotic arm: 27.5 V, 28.0 V, 26.8 V, 26.8 V
 
 ```json
 {
-    "state": "current_joint_voltage",
+    "command": "get_current_joint_voltage",
     "joint_voltage": [
         27500,
         28000,
@@ -389,7 +389,7 @@ Return the joint angle of the 6-DoF robotic arm, accuracy: 0.001°.
 
 ```json
 {
-    "state": "joint_degree",
+    "command":"get_joint_degree",
     "joint": [
         10,
         20,
@@ -405,7 +405,7 @@ Return the joint angle of the 7-DoF robotic arm, accuracy: 0.001°.
 
 ```json
 {
-    "state": "joint_degree",
+    "command":"get_joint_degree",
     "joint": [
         10,
         20,
@@ -452,7 +452,7 @@ Return all states of the 6-DoF robotic arm.
 
 ```json
 {
-    "state": "arm_all_state",
+    "command":"get_arm_all_state",
     "all_state": {
         "temperature": [
             21,
@@ -503,7 +503,7 @@ Return all states of the 7-DoF robotic arm.
 
 ```json
 {
-    "state": "arm_all_state",
+    "command":"get_arm_all_state",
     "all_state": {
         "temperature": [
             21,
@@ -613,8 +613,7 @@ Initial pose of the 7-DoF robotic arm [10°, 0°, 20°, 30°, 0°, 20°, 20°].
 
 | Parameter        | Type    | Description                                   |
 | :-------------- | :------- | :------------- |
-| `arm_init_pose` | `string` | Return the initial pose. |
-| `init_pose`     | `int`    | Accuracy: 0.001°    |
+| `get_init_pose` | `string` | Return the initial pose. |
 
 - **Code demo**
 
@@ -632,7 +631,7 @@ Execution: Get the initial pose.
 
 ```json
 {
-    "state": "arm_init_pose",
+    "command": "get_init_pose",
     "init_pose": [
         10000,
         0,
@@ -648,7 +647,7 @@ Execution: Get the initial pose.
 
 ```json
 {
-    "state": "arm_init_pose",
+    "command": "get_init_pose",
     "init_pose": [
         10000,
         0,
@@ -722,7 +721,7 @@ Rotation angle, pitch angle, and azimuth angle of the base against the horizonta
 
 ```json
 {
-    "state": "install_pose",
+    "command": "get_install_pose",
     "pose": [
         0,
         90,

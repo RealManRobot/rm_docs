@@ -28,7 +28,6 @@
 |`euler`|`object`|当前路点姿态欧拉角，精度 0.001rad。|
 |`quat`|`object`|当前路点四元数，精度 0.000001。|
 |`six_force_sensor`|`object`|六维力数据（六维力版本支持）。|
-|`one_force_sensor`|`object`|一维力数据（一维力版本支持）。|
 |`force`|`object`|当前力传感器原始数据 0.001N 或 0.001Nm。|
 |`zero_force`|`object`|当前力传感器系统外受力数据 0.001N 或 0.001Nm。|
 |`coordinate`|`int`|系统外受力数据的坐标系，0 为传感器坐标系 1 为当前工作坐标系 2 为当前工具坐标系。|

@@ -455,7 +455,7 @@ Get information such as joint speed, acceleration, limits, and errors.
 
 | Parameter              | Type | Description               |
 | :---------------- | :--- | :----------------- |
-| `joint_max_speed` |   `int`   | Return feedback on maximum joint speed. |
+| `get_joint_max_speed` |   `int`   | Return feedback on maximum joint speed. |
 
 - **Code demo**
 
@@ -475,7 +475,7 @@ The maximum speed of each joint is sequentially reported as 0.03 RPM, in RPM, re
 
 ```json
 {
-    "state": "joint_max_speed",
+    "command":"get_joint_max_speed",
     "joint_speed": [
         30,
         30,
@@ -491,7 +491,7 @@ The maximum speed of each joint is sequentially reported as 0.03 RPM, in RPM, re
 
 ```json
 {
-    "state": "joint_max_speed",
+    "command":"get_joint_max_speed",
     "joint_speed": [
         30,
         30,
@@ -516,7 +516,7 @@ The maximum speed of each joint is sequentially reported as 0.03 RPM, in RPM, re
 
 | Parameter            | Type | Description                 |
 | :-------------- | :--- | :------------------- |
-| `joint_max_acc` |   `int`   | Return feedback on maximum joint acceleration. |
+| `get_joint_max_acc` |   `int`   | Return feedback on maximum joint acceleration. |
 
 - **Code demo**
 
@@ -536,7 +536,7 @@ The maximum acceleration of each joint is sequentially reported as 0.5 RPM/s, in
 
 ```json
 {
-    "state": "joint_max_acc",
+    "command":"get_joint_max_acc",
     "joint_acc": [
         500,
         500,
@@ -552,7 +552,7 @@ The maximum acceleration of each joint is sequentially reported as 0.5 RPM/s, in
 
 ```json
 {
-    "state": "joint_max_acc",
+    "command":"get_joint_max_acc",
     "joint_acc": [
         500,
         500,
@@ -577,7 +577,7 @@ The maximum acceleration of each joint is sequentially reported as 0.5 RPM/s, in
 
 | Parameter            | Type | Description               |
 | :-------------- | :--- | :----------------- |
-| `joint_min_pos` |   `int`   | Return feedback on minimum joint limit. |
+| `get_joint_min_pos` |   `int`   | Return feedback on minimum joint limit. |
 
 - **Code demo**
 
@@ -602,7 +602,7 @@ Joint unit: °, resolution: 0.001°.
 
 ```json
 {
-    "state": "joint_min_pos",
+    "command":"get_joint_min_pos",
     "min_pos": [
         -170000,
         -110000,
@@ -618,7 +618,7 @@ Joint unit: °, resolution: 0.001°.
 
 ```json
 {
-    "state": "joint_min_pos",
+    "command":"get_joint_min_pos",
     "min_pos": [
         -170000,
         -110000,
@@ -643,7 +643,7 @@ Joint unit: °, resolution: 0.001°.
 
 | Parameter            | Type | Description               |
 | :-------------- | :--- | :----------------- |
-| `joint_max_pos` |   `int`   | Return feedback on maximum joint limit. |
+| `get_joint_max_pos` |   `int`   | Return feedback on maximum joint limit. |
 
 - **Code demo**
 
@@ -668,7 +668,7 @@ Joint unit: °, resolution: 0.001°.
 
 ```json
 {
-    "state": "joint_max_pos",
+    "command":"get_joint_max_pos",
     "max_pos": [
         170000,
         110000,
@@ -684,7 +684,7 @@ Joint unit: °, resolution: 0.001°.
 
 ```json
 {
-    "state": "joint_max_pos",
+    "command":"get_joint_max_pos",
     "max_pos": [
         170000,
         110000,
@@ -697,13 +697,13 @@ Joint unit: °, resolution: 0.001°.
 }
 ```
 
-### Get the maximum joint speed (driver)`get_joint_min_pos`
+### Get the maximum joint speed (driver)`get_joint_drive_max_speed`
 
 - **Input parameter**
 
 | Parameter                | Type | Description               |
 | :------------------ | :--- | :----------------- |
-| `get_joint_min_pos` |   `string`   | Get the maximum joint speed. |
+| `get_joint_drive_max_speed` |   `string`   | Get the maximum joint speed. |
 
 - **Code demo**
 
@@ -955,7 +955,7 @@ Return feedback on maximum joint limit. For example, the following parameters ar
 
 | Parameter             | Type | Description               |
 | :--------------- | :--- | :----------------- |
-| `joint_en_state` |   `int`   | Return feedback on joint enabling state. |
+| `get_joint_en_state` |   `int`   | Return feedback on joint enabling state. |
 
 - **Code demo**
 
@@ -975,7 +975,7 @@ Return feedback on joint enabling state, 1: enable 0: disable.
 
 ```json
 {
-    "state": "joint_en_state",
+    "command":"get_joint_en_state",
     "en_state": [
         1,
         1,
@@ -991,7 +991,7 @@ Return feedback on joint enabling state, 1: enable 0: disable.
 
 ```json
 {
-    "state": "joint_en_state",
+    "command":"get_joint_en_state",
     "en_state": [
         1,
         1,
@@ -1016,7 +1016,7 @@ Return feedback on joint enabling state, 1: enable 0: disable.
 
 | Parameter  | Type | Description   |
 | :-- | :--- | :-- |
-| `joint_err_flag` |   `int`   | Return feedback on joint enabling state. |
+| `get_joint_err_flag` |   `int`   | Return feedback on joint enabling state. |
 
 - **Code demo**
 
@@ -1037,7 +1037,7 @@ brake_state: return feedback on joint brake state, 1: brake not engaged, 0: brak
 
 ```json
 {
-    "state": "joint_err_flag",
+    "command":"get_joint_err_flag",
     "err_flag": [
         0,
         0,
@@ -1061,7 +1061,7 @@ brake_state: return feedback on joint brake state, 1: brake not engaged, 0: brak
 
 ```json
 {
-    "state": "joint_err_flag",
+    "command":"get_joint_err_flag",
     "err_flag": [
         0,
         0,

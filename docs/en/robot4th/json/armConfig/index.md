@@ -33,12 +33,23 @@ Execution: Set the maximum linear speed of the end effector to 0.5 m/s, with a r
 {"command":"set_arm_max_line_speed","arm_line_speed":500}
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
     "command": "set_arm_max_line_speed",
     "arm_line_speed": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_arm_max_line_speed",
+    "arm_line_speed": false
 }
 ```
 
@@ -71,12 +82,23 @@ Execution: Set the maximum linear acceleration of the end effector to 2 m/s2, wi
 {"command":"set_arm_max_line_acc","arm_line_acc":2000}
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
     "command": "set_arm_max_line_acc",
     "arm_line_acc": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_arm_max_line_acc",
+    "arm_line_acc": false
 }
 ```
 
@@ -99,6 +121,8 @@ It is recommended to use the default maximum angular speed. If any changes are r
 | :------------------ | :----- | :------------------------------------ |
 | `arm_angular_speed` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the maximum angular speed of the end effector to 0.2 rad/s, with a resolution of 0.001 rad/s.
@@ -107,12 +131,23 @@ Execution: Set the maximum angular speed of the end effector to 0.2 rad/s, with 
 {"command":"set_arm_max_angular_speed","arm_angular_speed":200}
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
     "command": "set_arm_max_angular_speed",
     "arm_angular_speed": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_arm_max_angular_speed",
+    "arm_angular_speed": false
 }
 ```
 
@@ -135,6 +170,8 @@ It is recommended to use the default maximum angular acceleration. If any change
 | :---------------- | :----- | :------------------------------------ |
 | `arm_angular_acc` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the maximum angular acceleration of the end effector to 4 rad/s, with a resolution of 0.001 rad/s2.
@@ -143,12 +180,23 @@ Execution: Set the maximum angular acceleration of the end effector to 4 rad/s, 
 {"command":"set_arm_max_angular_acc","arm_angular_acc":4000}
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
     "command": "set_arm_max_angular_acc",
     "arm_angular_acc": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_arm_max_angular_acc",
+    "arm_angular_acc": false
 }
 ```
 
@@ -166,6 +214,8 @@ Execution: Set the maximum angular acceleration of the end effector to 4 rad/s, 
 | :--------- | :----- | :------------------------------------ |
 | `arm_init` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the parameter initialization of the robotic arm, and the end effector parameters will be restored to defaults.
@@ -177,7 +227,9 @@ Angular speed: 0.6 rad/s; angular acceleration: 4 rad/s2
 { "command": "set_arm_init" }
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
@@ -186,7 +238,16 @@ Angular speed: 0.6 rad/s; angular acceleration: 4 rad/s2
 }
 ```
 
-### Set the collision stage `set_collision_stage`
+Setting failed
+
+```json
+{
+    "command": "set_arm_init",
+    "arm_init": false
+}
+```
+
+### Set the collision protection level `set_collision_stage`
 
 - **Input parameter**
 
@@ -201,6 +262,8 @@ Angular speed: 0.6 rad/s; angular acceleration: 4 rad/s2
 | :---------------- | :----- | :------------------------------------ |
 | `collision_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the collision stage of the robotic arm to 1, the higher the stage, the more sensitive the collision detection.
@@ -209,45 +272,22 @@ Execution: Set the collision stage of the robotic arm to 1, the higher the stage
 {"command":"set_collision_stage","collision_stage":1}
 ```
 
-**Output**
+**Output**  
+Setting successful
 
 ```json
 {
-    "command": "set_collision_state",
+    "command": "set_collision_stage",
     "collision_state": true
 }
 ```
 
-### Get the collision stage `get_collision_stage`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                                   |
-| :-------------------- | :------- | :----------------- |
-| `get_collision_stage` | `string` | Get the collision stage of the robotic arm. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :---------------- | :---- | :---------------- |
-| `collision_stage`     | `int`    | Stage: 0−8. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the collision stage of the robotic arm.
-
-```json
-{ "command": "get_collision_stage" }
-```
-
-**Output**
+Setting failed
 
 ```json
 {
-    "state": "get_collision_stage",
-    "collision_stage": 5
+    "command": "set_collision_stage",
+    "collision_state": false
 }
 ```
 
@@ -294,10 +334,292 @@ In the demo, they are 1°, 0.002 m, 0.003 m, and 4° respectively.
 
 **Output**
 
+Setting successful
+
 ```json
 {
     "command": "set_DH_data",
     "set_state": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_DH_data",
+    "set_state": false
+}
+```
+
+### Reset the DH parameters of the robotic arm to defaults `set_DH_data_default`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                                   |
+| :-------------------- | :------- | :----------------------- |
+| `set_DH_data` | `string` | Reset the DH parameters of the robotic arm to defaults. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :---------- | :----- | :------------------------------------ |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Reset the DH parameters of the robotic arm to defaults.
+
+```json
+{ "command": "set_DH_data_default" }
+```
+
+**Output**  
+
+Setting successful
+
+```json
+{
+    "command": "set_DH_data_default",
+    "set_state": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_DH_data_default",
+    "set_state": false
+}
+```
+
+### Reset the zero offset of joints `set_joint_zero_offset`
+
+Reset the zero offset of the joint angle to correct the absolute positioning accuracy.
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                         |
+| :---------------------- | :---- | :------------------------- |
+| `set_joint_zero_offset` | `int` | Reset the zero offset of the joint angle. |
+
+::: warning
+This command cannot be used directly by the user. It is used only with the measuring equipment for absolute accuracy compensation, otherwise the parameter error of the robotic arm will occur.
+:::
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :---------- | :----- | :------------------------------------ |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Set the zero offset of joints, with an accuracy of 0.001° as follows: zero offset of joints 1−6: 1°, -2°, 3°, -4°, 5°, and -6°.
+
+```json
+{"command":"set_joint_zero_offset","offset":[1000,-2000,3000,-4000,5000,-6000]}
+```
+
+**Output**  
+
+Setting successful
+
+```json
+{
+    "command": "set_joint_zero_offset",
+    "set_state": true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command": "set_joint_zero_offset",
+    "set_state": false
+}
+```
+
+## Getting of motion parameters
+
+This instruction set is used to get the maximum linear speed, linear acceleration, angular speed, and angular acceleration of the end effector.
+
+### Get the maximum linear speed of the end effector `get_arm_max_line_speed`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                         |
+| :----------------------- | :------- | :------------------------- |
+| `get_arm_max_line_speed` | `string` | Get the maximum linear speed of the end effector. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :------------------- | :---- | :------------------------- |
+| `get_arm_max_line_speed` | `int` | Return the maximum linear speed of the end effector. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the maximum linear speed of the end effector.
+
+```json
+{ "command": "get_arm_max_line_speed" }
+```
+
+**Output**
+
+Return 0.5 m/s, with a resolution of 0.001 m/s as the maximum linear speed of the end effector.
+
+```json
+{
+    "command": "get_arm_max_line_speed",
+    "arm_line_speed": 500
+}
+```
+
+### Get the maximum linear acceleration of the end effector `get_arm_max_line_acc`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                             |
+| :--------------------- | :------- | :--------------------------- |
+| `get_arm_max_line_acc` | `string` | Get the maximum linear acceleration of the end effector. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :----------------- | :---- | :--------------------------- |
+| `get_arm_max_line_acc` | `int` | Return the maximum linear acceleration of the end effector. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the maximum linear acceleration of the end effector.
+
+```json
+{ "command": "get_arm_max_line_acc" }
+```
+
+**Output**
+
+Return 0.2 m/s2, with a resolution of 0.001 m/s2 as the maximum linear acceleration of the end effector.
+
+```json
+{
+    "command": "get_arm_max_line_acc",
+    "arm_line_acc": 200
+}
+```
+
+### Get the maximum angular speed of the end effector `get_arm_max_angular_speed`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                              |
+| :-------------------------- | :------- | :------------------------- |
+| `get_arm_max_angular_speed` | `string` | Get the maximum angular speed of the end effector. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                         |
+| :---------------------- | :---- | :------------------------- |
+| `get_arm_max_angular_speed` | `int` | Return the maximum angular speed of the end effector. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the maximum angular speed of the end effector.
+
+```json
+{ "command": "get_arm_max_angular_speed" }
+```
+
+**Output**
+
+Return 1 rad/s, with a resolution of 0.001 rad/s as the maximum angular speed of the end effector.
+
+```json
+{
+    "command": "get_arm_max_angular_speed",
+    "arm_angular_speed": 1000
+}
+```
+
+### Get the maximum angular acceleration of the end effector `get_arm_max_angular_acc`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                               |
+| :------------------------ | :------- | :--------------------------- |
+| `get_arm_max_angular_acc` | `string` | Get the maximum angular acceleration of the end effector. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :-------------------- | :---- | :--------------------------- |
+| `get_arm_max_angular_acc` | `int` | Return the maximum angular acceleration of the end effector. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the maximum angular acceleration of the end effector.
+
+```json
+{ "command": "get_arm_max_angular_acc" }
+```
+
+**Output**
+
+Return 10 rad/s2, with a resolution of 0.001 rad/s2 as the maximum angular acceleration of the end effector.
+
+```json
+{
+    "command": "get_arm_max_angular_acc",
+    "arm_angular_acc": 10000
+}
+```
+
+### Get the collision protection level `get_collision_stage`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                                   |
+| :-------------------- | :------- | :----------------- |
+| `get_collision_stage` | `string` | Get the collision stage of the robotic arm. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :---------------- | :---- | :---------------- |
+| `get_collision_stage`     | `int`    | Stage: 0−8. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the collision stage of the robotic arm.
+
+```json
+{ "command": "get_collision_stage" }
+```
+
+**Output**
+
+```json
+{
+    "command": "get_collision_stage",
+    "collision_stage": 5
 }
 ```
 
@@ -353,221 +675,5 @@ Execution: Get the DH parameters of the robotic arm.
   "joint_5":[1000,2000,3000,4000],
   "joint_6":[1000,2000,3000,4000],
   "joint_7":[1000,2000,3000,4000]
-}
-```
-
-### Reset the DH parameters of the robotic arm to defaults `set_DH_data_default`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                                   |
-| :-------------------- | :------- | :----------------------- |
-| `set_DH_data` | `string` | Reset the DH parameters of the robotic arm to defaults. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :---------- | :----- | :------------------------------------ |
-| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Reset the DH parameters of the robotic arm to defaults.
-
-```json
-{ "command": "set_DH_data_default" }
-```
-
-**Output**
-
-```json
-{
-    "command": "set_DH_data_default",
-    "set_state": true
-}
-```
-
-### Reset the zero offset of joints `set_joint_zero_offset`
-
-Reset the zero offset of the joint angle to correct the absolute positioning accuracy.
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                         |
-| :---------------------- | :---- | :------------------------- |
-| `set_joint_zero_offset` | `int` | Reset the zero offset of the joint angle. |
-
-::: warning
-This command cannot be used directly by the user. It is used only with the measuring equipment for absolute accuracy compensation, otherwise the parameter error of the robotic arm will occur.
-:::
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :---------- | :----- | :------------------------------------ |
-| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Set the zero offset of joints, with an accuracy of 0.001° as follows: zero offset of joints 1−6: 1°, -2°, 3°, -4°, 5°, and -6°.
-
-```json
-{"command":"set_joint_zero_offset","offset":[1000,-2000,3000,-4000,5000,-6000]}
-```
-
-**Output**
-
-```json
-{
-    "command": "set_joint_zero_offset",
-    "set_state": true
-}
-```
-
-## Getting of motion parameters
-
-This instruction set is used to get the maximum linear speed, linear acceleration, angular speed, and angular acceleration of the end effector.
-
-### Get the maximum linear speed of the end effector `get_arm_max_line_speed`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                         |
-| :----------------------- | :------- | :------------------------- |
-| `get_arm_max_line_speed` | `string` | Get the maximum linear speed of the end effector. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :------------------- | :---- | :------------------------- |
-| `arm_max_line_speed` | `int` | Return the maximum linear speed of the end effector. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the maximum linear speed of the end effector.
-
-```json
-{ "command": "get_arm_max_line_speed" }
-```
-
-**Output**
-
-Return 0.5 m/s, with a resolution of 0.001 m/s as the maximum linear speed of the end effector.
-
-```json
-{
-    "state": "arm_max_line_speed",
-    "arm_line_speed": 500
-}
-```
-
-### Get the maximum linear acceleration of the end effector `get_arm_max_line_acc`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                             |
-| :--------------------- | :------- | :--------------------------- |
-| `get_arm_max_line_acc` | `string` | Get the maximum linear acceleration of the end effector. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :----------------- | :---- | :--------------------------- |
-| `arm_max_line_acc` | `int` | Return the maximum linear acceleration of the end effector. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the maximum linear acceleration of the end effector.
-
-```json
-{ "command": "get_arm_max_line_acc" }
-```
-
-**Output**
-
-Return 0.2 m/s2, with a resolution of 0.001 m/s2 as the maximum linear acceleration of the end effector.
-
-```json
-{
-    "state": "arm_max_line_acc",
-    "arm_line_acc": 200
-}
-```
-
-### Get the maximum angular speed of the end effector `get_arm_max_angular_speed`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                              |
-| :-------------------------- | :------- | :------------------------- |
-| `get_arm_max_angular_speed` | `string` | Get the maximum angular speed of the end effector. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                         |
-| :---------------------- | :---- | :------------------------- |
-| `arm_max_angular_speed` | `int` | Return the maximum angular speed of the end effector. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the maximum angular speed of the end effector.
-
-```json
-{ "command": "get_arm_max_angular_speed" }
-```
-
-**Output**
-
-Return 1 rad/s, with a resolution of 0.001 rad/s as the maximum angular speed of the end effector.
-
-```json
-{
-    "state": "arm_max_angular_speed",
-    "arm_angular_speed": 1000
-}
-```
-
-### Get the maximum angular acceleration of the end effector `get_arm_max_angular_acc`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                               |
-| :------------------------ | :------- | :--------------------------- |
-| `get_arm_max_angular_acc` | `string` | Get the maximum angular acceleration of the end effector. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :-------------------- | :---- | :--------------------------- |
-| `arm_max_angular_acc` | `int` | Return the maximum angular acceleration of the end effector. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the maximum angular acceleration of the end effector.
-
-```json
-{ "command": "get_arm_max_angular_acc" }
-```
-
-**Output**
-
-Return 10 rad/s2, with a resolution of 0.001 rad/s2 as the maximum angular acceleration of the end effector.
-
-```json
-{
-    "state": "arm_max_angular_acc",
-    "arm_angular_acc": 10000
 }
 ```

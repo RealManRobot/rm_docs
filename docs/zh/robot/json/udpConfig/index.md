@@ -13,7 +13,7 @@
 |   参数    |   类型    |   说明    |
 |   :--     |   :--     |   :--     |
 |`state`|`string`|realtime_arm_joint_state 实时机械臂状态上报。|
-|`arm_current_status`|`string`|"idle"：使能但空闲状态<br>"move_L"：move L运动中状态<br> "move_J"：move J运动中状态<br>"move_C"：move C运动中状态<br>"move_S"：move S运动中状态<br>"move_through_joint"：角度透传状态<br>"move_through_pose"： 位姿透传状态<br>"move_through_force_pose"： 力控透传状态<br>"move_through_current"： 电流环透传状态<br>"stop"： 急停状态<br>"slow_stop"： 缓停状态<br>"pause"： 暂停状态<br>"current_drag"： 电流环拖动状态<br>"sensor_drag"： 六维力拖动状态<br>"tech_demonstration"： 示教状态|
+|`arm_current_status`|`string`|"idle"：使能但空闲状态<br>"move_L"：move L运动中状态<br> "move_J"：move J运动中状态<br>"move_C"：move C运动中状态<br>"move_S"：move S运动中状态<br>"move_through_joint"：角度透传状态<br>"move_through_pose"： 位姿透传状态<br>"move_through_force_pose"： 力控透传状态<br>"move_through_current"： 电流环透传状态<br>"stop"： 急停状态<br>"slow_stop"： 缓停状态<br>"pause"： 暂停状态<br>"current_drag"： 电流环拖动状态<br>"sensor_drag"： 六维力拖动状态<br>"tech_demonstration"： 示教状态<br>"trajectory_reproduction"：拖动示教轨迹复现状态<br>"move_init_position"：长按蓝色按钮恢复初始姿态状态|
 |`err`|`int`|系统错误码。|
 |`joint_status`|`int`|当前关节状态。|
 |`joint_current`|`int`|当前关节电流，精度 0.001mA。|

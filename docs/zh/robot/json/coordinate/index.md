@@ -98,7 +98,7 @@
 机械臂上电初始化后，默认无负载
 :::
 
-实现：自动计算工具坐标系，名称为 tool2_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
+实现：自动计算工具坐标系，名称为 tool_frame，末端负载 5000g，质心位置：x-1mm,y-2mm,z-3mm。
 
 ```json
 {"command":"generate_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
@@ -359,7 +359,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 ```json
 {
     "command": "get_tool_envelope",
-    "tool_name": "test",
+    "tool_name": "tool1",
     "list": [
         {
             "name": "left",
@@ -504,23 +504,23 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 
 - **代码示例**
 
-**输入**  
+**输入**  <br>
 
-实现：查询指定工具信息。
+**实现**：查询指定工具信息。
 
 ```json
-{ "command": "get_tool_frame", "tool_name": "tool" }
+{ "command": "get_tool_frame", "tool_name": "tool2_frame" }
 ```
 
-**输出**  
+**输出**  <br>
 
 返回指定工具信息，如下：
 
-工具名称：tool2_frame,<br>
-工具位置：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm<br>
-工具姿态：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad<br>
-重量：payload：5kg精度0.001kg<br>
-质心：position：1mm精度0.001mm。
+- **工具名称**：tool2_frame,<br>
+- **工具位置**：x：0.1m，y:0.2m，z：0.03m，位置精度：0.001mm<br>
+- **工具姿态**：rx：0.4rad，ry：0.5rad，rz：0.6rad，姿态精度：0.001rad<br>
+- **重量**：payload：5kg精度0.001kg<br>
+- **质心**：position：1mm精度0.001mm。
 
 成功
 
@@ -582,7 +582,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
   
 **输入**  
 
-实现：设置工作坐标系，名称 work2_frame，将当前位置标定为参考点 3（Y 轴上一点）。
+实现：设置工作坐标系，名称 work_frame，将当前位置标定为参考点 3（Y 轴上一点）。
 
 ```json
 {"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
@@ -853,7 +853,7 @@ position：质心位置，单位：mm，精度0.001mm。<br>
 实现：查询指定工作坐标系。
 
 ```json
-{ "command": "get_work_frame", "frame_name": "work1" }
+{ "command": "get_work_frame", "frame_name": "work2_frame" }
 ```
 
 **输出**  

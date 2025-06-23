@@ -124,7 +124,7 @@ Failed to update:
 Delete the TCP master with the name 123.
 
 ```json
-{"command":"delete_modbus_tcp_master","master_name":123}
+{"command":"delete_modbus_tcp_master","master_name":"123"}
 ```
 
 **Output**  
@@ -170,10 +170,10 @@ Failed to delete:
 
 **Input**  
 
-Query the current saved Modbus master list, page number: 1, page size: 10, fuzzy search for "file".
+Query the current saved Modbus master list, page number: 1, page size: 10, and perform a fuzzy search for all master stations containing the character "1".
 
 ```json
-{"command":"get_modbus_tcp_master_list","page_num":1,"page_size":10,"vague_search":"file"}
+{"command":"get_modbus_tcp_master_list","page_num":1,"page_size":10,"vague_search":"1"}
 ```
 
 **Output**  

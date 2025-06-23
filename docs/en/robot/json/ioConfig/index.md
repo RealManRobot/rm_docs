@@ -422,6 +422,7 @@ Get all IO output states.
 | :--- | :------------------------- |:---|
 | `set_voltage` | `string` |Set the power output. |
 | `voltage_type` | `int` |Power output type, range: 0-3. |
+| `start_enable` | `bool` | `true` means that the configured voltage will be output at startup, `false` means that the configured voltage at startup will be disabled. |
 
 - **Code demo**
 
@@ -430,7 +431,7 @@ Get all IO output states.
 Set the power output.
 
 ```json
- {"command":"set_voltage","voltage_type":2}
+ {"command":"set_voltage","voltage_type":2,"start_enable":true}
 ```
 
 **Output**

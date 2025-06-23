@@ -123,7 +123,7 @@
 
 ```json
 {
-    "state": "IO_state",
+    "command":"get_IO_state",
     "IO_Num": 1,
     "IO_Mode": 14,
     "IO_state": 1,
@@ -164,7 +164,7 @@
 
 ```json
 {
-    "state": "IO_input_state",
+    "command":"get_IO_input",
     "DI": [
         1,
         1,
@@ -207,7 +207,7 @@
 
 ```json
 {
-    "state": "IO_output_state",
+    "command":"get_IO_output",
     "DO": [
         1,
         1,
@@ -231,6 +231,7 @@
 | :--- | :------------------------- |:---|
 | `set_voltage` | `string` |设置电源输出。|
 | `voltage_type` | `int` |电源输出类型，0：0V，2：12V，3：24V。|
+|`start_enable`|`bool`|`true`代表开机启动时即输出此配置电压，`false`代表取消开机启动即配置电压。|
 
 - **代码示例**
 
@@ -239,7 +240,7 @@
 设置电源输出。
 
 ```json
- {"command":"set_voltage","voltage_type":2}
+ {"command":"set_voltage","voltage_type":2,"start_enable":true}
 ```
 
 **输出**  
@@ -408,7 +409,7 @@
 
 ```json
 {
-    "state": "tool_IO_state",
+    "command":"get_tool_IO_state",
     "IO_Mode": [
         0,
         1
@@ -469,7 +470,7 @@
 
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
-| voltage_type | `int` |电源输出类型，0：0V，2：12V，3：24V。|
+| `get_tool_voltage` | `int` |电源输出类型，0：0V，2：12V，3：24V。|
 
 - **代码示例**
 
@@ -484,7 +485,7 @@
 
 ```json
 {
-    "state": "tool_voltage_state",
+    "command":"get_tool_voltage",
     "voltage_type": 2
 }
 ```

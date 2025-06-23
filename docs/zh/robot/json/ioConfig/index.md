@@ -422,6 +422,7 @@
 | :--- | :------------------------- |:---|
 | `set_voltage` | `string` |设置电源输出。|
 | `voltage_type` | `int` |电源输出类型，0：0V，2：12V，3：24V。|
+|`start_enable`|`bool`|`true`代表开机启动时即输出此配置电压，`false`代表取消开机启动即配置电压。|
 
 - **代码示例**
 
@@ -430,7 +431,7 @@
 设置电源输出。
 
 ```json
- {"command":"set_voltage","voltage_type":2}
+ {"command":"set_voltage","voltage_type":2,"start_enable":true}
 ```
 
 **输出**  

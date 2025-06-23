@@ -100,7 +100,7 @@ After the robotic arm is powered on and initialized, there is no payload by defa
 
 :::
 
-Execution: Automatically compute the tool frame, featured name: tool2_frame, end effector payload: 5,000 g, and position of the center of mass: x-1 mm, y-2 mm, z-3 mm.
+Execution: Automatically compute the tool frame, featured name: tool_frame, end effector payload: 5,000 g, and position of the center of mass: x-1 mm, y-2 mm, z-3 mm.
 
 ```json
 {"command":"generate_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
@@ -293,7 +293,7 @@ position of the center of mass, unit: mm, accuracy: 0.001 mm. <br>
 
 | Parameter        | Type    | Description                                   |
 | :------------------- | :------- | :----------------- |
-| `current_tool_frame` | `string` | Return the information of the current tool frame. |
+| `get_current_tool_frame` | `string` | Return the information of the current tool frame. |
 
 - **Code demo**
 
@@ -309,17 +309,17 @@ Execution: Get the current tool frame.
 
 Return the information of the current tool frame as follows:
 
-Name: tool2_frame;<br>
-tool position: x: 0.1 m, y: 0.2 m, z: 0.03 m;<br>
-position accuracy: 0.001 mm;<br>
-tool orientation: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad;<br>
-orientation accuracy: 0.001 rad;<br>
-payload: 5 kg, accuracy: 0.001 kg;<br>
-position of the center of mass : 1 mm, accuracy: 0.001 mm.
+- **Name**: tool2_frame;<br>
+- **tool position**: x: 0.1 m, y: 0.2 m, z: 0.03 m;<br>
+- **position accuracy**: 0.001 mm;<br>
+- **tool orientation**: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad;<br>
+- **orientation accuracy**: 0.001 rad;<br>
+- **payload**: 5 kg, accuracy: 0.001 kg;<br>
+- **position of the center of mass**: 1 mm, accuracy: 0.001 mm.
 
 ```json
 {
-    "state": "current_tool_frame",
+    "command": "get_current_tool_frame",
     "tool_name": "tool2_frame",
     "pose": [
         100000,
@@ -350,7 +350,7 @@ position of the center of mass : 1 mm, accuracy: 0.001 mm.
 
 | Parameter        | Type    | Description                                   |
 | :----------------- | :------- | :----------------- |
-| `total_tool_frame` | `string` | Return names of total tool frames. |
+| `get_total_tool_frame` | `string` | Return names of total tool frames. |
 
 - **Code demo**
 
@@ -368,7 +368,7 @@ Return names of total tool frames, 10 in total. Tool name: base_tool1, base_tool
 
 ```json
 {
-  "state":"total_tool_frame",
+  "command": "get_total_tool_frame",
   "tool_names":["base_tool1","base_tool2"….,"NULL"]
 }
 ```
@@ -386,33 +386,33 @@ Return names of total tool frames, 10 in total. Tool name: base_tool1, base_tool
 
 | Parameter        | Type    | Description                         |
 | :----------------- | :------ | :----------------- |
-| `given_tool_frame` | `string` | Return the information of the given tool frame. |
+| `get_tool_frame` | `string` | Return the information of the given tool frame. |
 
 - **Code demo**
 
-**Input**
+**Input**<br>
 
-Execution: Get the information of the given tool frame.
+**Execution**: Get the information of the given tool frame.
 
 ```json
-{ "command": "get_tool_frame", "tool_name": "tool" }
+{ "command": "get_tool_frame", "tool_name": "tool2_frame" }
 ```
 
-**Output**
+**Output**<br>
 
 Return the information of the given tool frame as follows:
 
-Tool name: tool2_frame;<br>
-tool position: x: 0.1 m, y: 0.2 m, z: 0.03 m, accuracy: 0.001 mm;<br>
-tool orientation: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad;<br>
-payload: 5 kg, accuracy: 0.001 kg;<br>
-position of the center of mass : 1 mm, accuracy: 0.001 mm.
+- **Tool name**: tool2_frame;<br>
+- **tool position**: x: 0.1 m, y: 0.2 m, z: 0.03 m, accuracy: 0.001 mm;<br>
+- **tool orientation**: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad;<br>
+- **payload**: 5 kg, accuracy: 0.001 kg;<br>
+- **position of the center of mass**: 1 mm, accuracy: 0.001 mm.
 
 Success:
 
 ```json
 {
-    "state": "given_tool_frame",
+    "command": "get_tool_frame",
     "tool_name": "tool2_frame",
     "pose": [
         100000,
@@ -468,7 +468,7 @@ The robotic arm can only store up to 10 work frames, and if the quantity exceeds
   
 **Input**
 
-Execution: Set the work frame, named work2_frame, and calibrate the current position as reference point 3 (a point on the Y-axis).
+Execution: Set the work frame, named work_frame, and calibrate the current position as reference point 3 (a point on the Y-axis).
 
 ```json
 {"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
@@ -647,7 +647,7 @@ orientation accuracy: 0.001 rad. <br>
 
 | Parameter        | Type    | Description                                   |
 | :------------------- | :------- | :----------------------- |
-| `current_work_frame` | `string` | Return the information of the current work frame. |
+| `get_current_work_frame` | `string` | Return the information of the current work frame. |
 
 - **Code demo**
 
@@ -669,7 +669,7 @@ frame orientation: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad.
 
 ```json
 {
-    "state": "current_work_frame",
+    "command": "get_current_work_frame",
     "frame_name": "work2_frame",
     "pose": [
         100000,
@@ -694,7 +694,7 @@ frame orientation: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad.
 
 | Parameter        | Type    | Description                                   |
 | :----------------- | :------- | :----------------------- |
-| `total_work_frame` | `string` | Return names of total work frames. |
+| `get_total_work_frame` | `string` | Return names of total work frames. |
 
 - **Code demo**
 
@@ -712,7 +712,7 @@ Return names of total work frames, including work1, work2...
 
 ```json
 {
-  "state":"total_work_frame",
+  "command":"get_total_work_frame",
   "frame_names":["work1","work2","NULL"]
 }
 ```
@@ -730,7 +730,7 @@ Return names of total work frames, including work1, work2...
 
 | Parameter        | Type    | Description                                   |
 | :----------------- | :------- | :------------------- |
-| `given_work_frame` | `string` | Return the information of the given work frame. |
+| `get_work_frame` | `string` | Return the information of the given work frame. |
 
 - **Code demo**
 
@@ -739,7 +739,7 @@ Return names of total work frames, including work1, work2...
 Execution: Get the given work frame.
 
 ```json
-{ "command": "get_work_frame", "frame_name": "work1" }
+{ "command": "get_work_frame", "frame_name": "work2_frame" }
 ```
 
 **Output**
@@ -754,7 +754,7 @@ Success:
 
 ```json
 {
-    "state": "given_work_frame",
+    "command": "get_work_frame",
     "frame_name": "work2_frame",
     "pose": [
         100000,
