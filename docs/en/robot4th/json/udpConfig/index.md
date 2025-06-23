@@ -28,7 +28,6 @@ The size of the joint-related array is consistent with the number of joints. For
 |`euler`|`object`|Current waypoint Euler angle, with an accuracy of 0.001 rad. |
 |`quat`|`object`|Current waypoint quaternion, with an accuracy of 0.000001. |
 |`six_force_sensor`|`object`|6-DoF force data (available only in 6-DoF force version). |
-|`one_force_sensor`|`object`|1-DoF force data (available only in 1-DoF force version). |
 |`force`|`object`|Original data of current force sensor, 0.001 N or 0.001 Nm. |
 |`zero_force`|`object`|External force data of current force sensor system, 0.001 N or 0.001 Nm. |
 |`coordinate`|`int`| Frame for system external force data, 0: sensor frame, 1: current work frame, 2: current tool frame. |

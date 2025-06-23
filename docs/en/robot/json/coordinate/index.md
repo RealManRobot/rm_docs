@@ -100,7 +100,7 @@ After the robotic arm is powered on and initialized, there is no payload by defa
 
 :::
 
-Execution: Automatically compute the tool frame, featured name: tool2_frame, end effector payload: 5,000 g, and position of the center of mass: x-1 mm, y-2 mm, z-3 mm.
+Execution: Automatically compute the tool frame, featured name: tool_frame, end effector payload: 5,000 g, and position of the center of mass: x-1 mm, y-2 mm, z-3 mm.
 
 ```json
 {"command":"generate_auto_tool_frame","tool_name":"tool_frame","payload":5000,"position":[1000,2000,3000]}
@@ -361,7 +361,7 @@ Result:
 ```json
 {
     "command": "get_tool_envelope",
-    "tool_name": "test",
+    "tool_name": "tool1",
     "list": [
         {
             "name": "left",
@@ -506,23 +506,23 @@ Return names of total tool frames, 10 in total. Tool name: base_tool1, base_tool
 
 - **Code demo**
 
-**Input**
+**Input**<br>
 
-Execution: Get the information of the given tool frame.
+**Execution**: Get the information of the given tool frame.
 
 ```json
-{ "command": "get_tool_frame", "tool_name": "tool" }
+{ "command": "get_tool_frame", "tool_name": "tool2_frame" }
 ```
 
-**Output**
+**Output**<br>
 
 Return the information of the given tool frame as follows:
 
-Tool name: tool2_frame;<br>
-tool position: x: 0.1 m, y: 0.2 m, z: 0.03 m, accuracy: 0.001 mm;<br>
-tool orientation: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad;<br>
-payload: 5 kg, accuracy: 0.001 kg;<br>
-position of the center of mass : 1 mm, accuracy: 0.001 mm.
+- **Tool name**: tool2_frame;<br>
+- **tool position**: x: 0.1 m, y: 0.2 m, z: 0.03 m, accuracy: 0.001 mm;<br>
+- **tool orientation**: rx: 0.4 rad, ry: 0.5 rad, rz: 0.6 rad, accuracy: 0.001 rad;<br>
+- **payload**: 5 kg, accuracy: 0.001 kg;<br>
+- **position of the center of mass**: 1 mm, accuracy: 0.001 mm.
 
 Success:
 
@@ -584,7 +584,7 @@ The robotic arm can only store up to 10 work frames, and if the quantity exceeds
   
 **Input**
 
-Execution: Set the work frame, named work2_frame, and calibrate the current position as reference point 3 (a point on the Y-axis).
+Execution: Set the work frame, named work_frame, and calibrate the current position as reference point 3 (a point on the Y-axis).
 
 ```json
 {"command":"set_auto_work_frame","frame_name":"work_frame","point_num":3}
@@ -855,7 +855,7 @@ Return names of total work frames, including work1, work2...
 Execution: Get the given work frame.
 
 ```json
-{ "command": "get_work_frame", "frame_name": "work1" }
+{ "command": "get_work_frame", "frame_name": "work2_frame" }
 ```
 
 **Output**

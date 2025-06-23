@@ -1389,7 +1389,7 @@ Currently running circular planning, with the array containing the current end e
 ```json
 {
     "state": "arm_current_trajectory",
-    "type": "movel",
+    "type": "movec",
     "data": [
         0,
         0,

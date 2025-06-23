@@ -124,7 +124,7 @@
 删除主站名称为123的TCP主站。
 
 ```json
-{"command":"delete_modbus_tcp_master","master_name":123}
+{"command":"delete_modbus_tcp_master","master_name":"123"}
 ```
 
 **输出**  
@@ -170,10 +170,10 @@
 
 **输入**  
 
-查询当前保存的modbus主站列表，页码：1，每页大小：10，模糊搜索“file”字符。
+查询当前保存的modbus主站列表，页码：1，每页大小：10，模糊搜索包含字符“1”的所有主站列表。
 
 ```json
-{"command":"get_modbus_tcp_master_list","page_num":1,"page_size":10,"vague_search":"file"}
+{"command":"get_modbus_tcp_master_list","page_num":1,"page_size":10,"vague_search":"1"}
 ```
 
 **输出**  

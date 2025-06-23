@@ -49,7 +49,7 @@ Set the closed-loop position control of the lifting mechanism.
 | Parameter        | Type    | Description                             |
 | :-------------- | :--- | :----------------------- |
 | `set_lift_height` |   `string`   | Set the height of the lifting mechanism.            |
-| `height`      | `int` | Target height, unit: mm, range: 0−2,600.         |
+| `height`      | `int` | Target height, unit: mm.         |
 | `speed`      | `int` | Speed percentage, 1−100.         |
 | `block` |   `bool`   | `true`: indicates blocking mode,`false`: indicates non-blocking mode. |
 
@@ -103,7 +103,7 @@ In-position success
 
 | Parameter        | Type    | Description                             |
 | :-------------- | :--- | :----------------------- |
-|  `height`  |  `int`  |  Height of the current lifting mechanism, unit: mm, accuracy: 1 mm, range: 0−2,300.         |
+|  `height`  |  `int`  |  Height of the current lifting mechanism, unit: mm, accuracy: 1 mm.         |
 |  `current`  |  `int`  |  Current of the current lifting drive, unit: mA, accuracy: 1 mA.         |
 |  `err_flag`  |  `int`  |  Error code of the lifting drive, refer to joint error codes for details.         |
 |  `mode`  |  `int`  |  Current lifting state, 0: idle, 1: forward speed motion, 2: forward position motion, 3: backward speed motion, 4: backward position motion.         |
@@ -130,7 +130,7 @@ In-position success
     "height": 0,
     "joint_id": 1,
     "mode": 0,
-    "state": "lift_state"
+    "command":"get_lift_state"
 }
 ```
 
@@ -169,7 +169,7 @@ Execution: Get the state of the expansion joint.
 
 ```json
 {
-    "state": "expand_state",
+    "command":"expand_get_state",
     "pos": 0,
     "err_flag": 0,
     "en_flag": 1,

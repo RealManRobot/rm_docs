@@ -886,7 +886,7 @@ joint：当前关节角度，关节精度：0.001°；
 
 | 参数                     | 类型     | 说明                     |
 | :----------------------- | :------- | :----------------------- |
-| `arm_current_trajectory` | `string` | 返回当前正在运行的轨迹。 |
+| `get_arm_current_trajectory` | `string` | 返回当前正在运行的轨迹。 |
 
 - **代码示例**
 
@@ -906,7 +906,7 @@ joint：当前关节角度，关节精度：0.001°；
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "movej",
     "data": [
         0,
@@ -923,7 +923,7 @@ joint：当前关节角度，关节精度：0.001°；
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "movej",
     "data": [
         0,
@@ -940,15 +940,15 @@ joint：当前关节角度，关节精度：0.001°；
 当前正在运行直线规划，数组内为当前末端位姿，位置精度：0.001mm，姿态精度：0.001rad。
 
 ```json
-{"state":"arm_current_trajectory","type":"movel","data":[0,0,0,0,0,0]}
+{"command": "get_arm_current_trajectory","type":"movel","data":[0,0,0,0,0,0]}
 ```
 
 当前正在运行圆弧规划，数组内为当前末端位姿，位置精度：0.001mm，姿态精度：0.001rad。
 
 ```json
 {
-    "state": "arm_current_trajectory",
-    "type": "movel",
+    "command": "get_arm_current_trajectory",
+    "type": "movec",
     "data": [
         0,
         0,
@@ -966,7 +966,7 @@ joint：当前关节角度，关节精度：0.001°；
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "none",
     "data": [
         0,
@@ -983,7 +983,7 @@ joint：当前关节角度，关节精度：0.001°；
 
 ```json
 {
-    "state": "arm_current_trajectory",
+    "command": "get_arm_current_trajectory",
     "type": "none",
     "data": [
         0,

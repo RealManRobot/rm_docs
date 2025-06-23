@@ -455,7 +455,7 @@
 
 | 参数              | 类型 | 说明               |
 | :---------------- | :--- | :----------------- |
-| `joint_max_speed` |   `int`   | 反馈关节最大速度。 |
+| `get_joint_max_speed` |   `int`   | 反馈关节最大速度。 |
 
 - **代码示例**
 
@@ -475,7 +475,7 @@
 
 ```json
 {
-    "state": "joint_max_speed",
+    "command":"get_joint_max_speed",
     "joint_speed": [
         30,
         30,
@@ -491,7 +491,7 @@
 
 ```json
 {
-    "state": "joint_max_speed",
+    "command":"get_joint_max_speed",
     "joint_speed": [
         30,
         30,
@@ -516,7 +516,7 @@
 
 | 参数            | 类型 | 说明                 |
 | :-------------- | :--- | :------------------- |
-| `joint_max_acc` |   `int`   | 反馈关节最大加速度。 |
+| `get_joint_max_acc` |   `int`   | 反馈关节最大加速度。 |
 
 - **代码示例**
 
@@ -536,7 +536,7 @@
 
 ```json
 {
-    "state": "joint_max_acc",
+    "command":"get_joint_max_acc",
     "joint_acc": [
         500,
         500,
@@ -552,7 +552,7 @@
 
 ```json
 {
-    "state": "joint_max_acc",
+    "command":"get_joint_max_acc",
     "joint_acc": [
         500,
         500,
@@ -577,7 +577,7 @@
 
 | 参数            | 类型 | 说明               |
 | :-------------- | :--- | :----------------- |
-| `joint_min_pos` |   `int`   | 反馈关节最小限位。 |
+| `get_joint_min_pos` |   `int`   | 反馈关节最小限位。 |
 
 - **代码示例**
 
@@ -602,7 +602,7 @@
 
 ```json
 {
-    "state": "joint_min_pos",
+    "command":"get_joint_min_pos",
     "min_pos": [
         -170000,
         -110000,
@@ -618,7 +618,7 @@
 
 ```json
 {
-    "state": "joint_min_pos",
+    "command":"get_joint_min_pos",
     "min_pos": [
         -170000,
         -110000,
@@ -643,7 +643,7 @@
 
 | 参数            | 类型 | 说明               |
 | :-------------- | :--- | :----------------- |
-| `joint_max_pos` |   `int`   | 反馈关节最大限位。 |
+| `get_joint_max_pos` |   `int`   | 反馈关节最大限位。 |
 
 - **代码示例**
 
@@ -668,7 +668,7 @@
 
 ```json
 {
-    "state": "joint_max_pos",
+    "command":"get_joint_max_pos",
     "max_pos": [
         170000,
         110000,
@@ -684,7 +684,7 @@
 
 ```json
 {
-    "state": "joint_max_pos",
+    "command":"get_joint_max_pos",
     "max_pos": [
         170000,
         110000,
@@ -697,13 +697,13 @@
 }
 ```
 
-### 查询关节最大速度（驱动器）`get_joint_min_pos`
+### 查询关节最大速度（驱动器）`get_joint_drive_max_speed`
 
 - **输入参数**
 
 | 参数                | 类型 | 说明               |
 | :------------------ | :--- | :----------------- |
-| `get_joint_min_pos` |   `string`   | 查询关节最大速度。 |
+| `get_joint_drive_max_speed` |   `string`   | 查询关节最大速度。 |
 
 - **代码示例**
 
@@ -955,7 +955,7 @@
 
 | 参数             | 类型 | 说明               |
 | :--------------- | :--- | :----------------- |
-| `joint_en_state` |   `int`   | 反馈关节使能状态。 |
+| `get_joint_en_state` |   `int`   | 反馈关节使能状态。 |
 
 - **代码示例**
 
@@ -975,7 +975,7 @@
 
 ```json
 {
-    "state": "joint_en_state",
+    "command":"get_joint_en_state",
     "en_state": [
         1,
         1,
@@ -991,7 +991,7 @@
 
 ```json
 {
-    "state": "joint_en_state",
+    "command":"get_joint_en_state",
     "en_state": [
         1,
         1,
@@ -1016,7 +1016,7 @@
 
 | 参数  | 类型 | 说明   |
 | :-- | :--- | :-- |
-| `joint_err_flag` |   `int`   | 反馈关节使能状态。 |
+| `get_joint_err_flag` |   `int`   | 反馈关节使能状态。 |
 
 - **代码示例**
 
@@ -1037,7 +1037,7 @@ brake_state：反馈关节抱闸状态，1代表抱闸未打开，0代表抱闸�
 
 ```json
 {
-    "state": "joint_err_flag",
+    "command":"get_joint_err_flag",
     "err_flag": [
         0,
         0,
@@ -1061,7 +1061,7 @@ brake_state：反馈关节抱闸状态，1代表抱闸未打开，0代表抱闸�
 
 ```json
 {
-    "state": "joint_err_flag",
+    "command":"get_joint_err_flag",
     "err_flag": [
         0,
         0,

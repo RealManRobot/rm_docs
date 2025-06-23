@@ -123,7 +123,7 @@ Get the digital IO output state
 
 ```json
 {
-    "state": "IO_state",
+    "command":"get_IO_state",
     "IO_Num": 1,
     "IO_Mode": 14,
     "IO_state": 1,
@@ -164,7 +164,7 @@ Get all IO input states.
 
 ```json
 {
-    "state": "IO_input_state",
+    "command":"get_IO_input",
     "DI": [
         1,
         1,
@@ -207,7 +207,7 @@ Get all IO output states.
 
 ```json
 {
-    "state": "IO_output_state",
+    "command":"get_IO_output",
     "DO": [
         1,
         1,
@@ -231,6 +231,7 @@ Get all IO output states.
 | :--- | :------------------------- |:---|
 | `set_voltage` | `string` |Set the power output. |
 | `voltage_type` | `int` |Power output type, range: 0-3. |
+| `start_enable` | `bool` | `true` means that the configured voltage will be output at startup, `false` means that the configured voltage at startup will be disabled. |
 
 - **Code demo**
 
@@ -239,7 +240,7 @@ Get all IO output states.
 Set the power output.
 
 ```json
- {"command":"set_voltage","voltage_type":2}
+ {"command":"set_voltage","voltage_type":2,"start_enable":true}
 ```
 
 **Output**
@@ -408,7 +409,7 @@ Get the digital IO state.
 
 ```json
 {
-    "state": "tool_IO_state",
+    "command":"get_tool_IO_state",
     "IO_Mode": [
         0,
         1
@@ -469,7 +470,7 @@ Setting failed
 
 | Parameter             | Type     | Description             |
 | :--- | :------------------------- |:---|
-| voltage_type | `int` |Power output type, 0: 0 V, 2: 12 V, 3: 24 V. |
+| `get_tool_voltage` | `int` |Power output type, 0: 0 V, 2: 12 V, 3: 24 V. |
 
 - **Code demo**
 
@@ -484,7 +485,7 @@ Get the power output type
 
 ```json
 {
-    "state": "tool_voltage_state",
+    "command":"get_tool_voltage",
     "voltage_type": 2
 }
 ```

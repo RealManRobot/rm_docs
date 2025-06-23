@@ -100,6 +100,8 @@ It is recommended to use the default maximum angular speed. If any changes are r
 | :------------------ | :----- | :------------------------------------ |
 | `arm_angular_speed` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the maximum angular speed of the end effector to 0.2 rad/s, with a resolution of 0.001 rad/s.
@@ -136,6 +138,8 @@ It is recommended to use the default maximum angular acceleration. If any change
 | :---------------- | :----- | :------------------------------------ |
 | `arm_angular_acc` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the maximum angular acceleration of the end effector to 4 rad/s, with a resolution of 0.001 rad/s2.
@@ -167,6 +171,8 @@ Execution: Set the maximum angular acceleration of the end effector to 4 rad/s, 
 | :--------- | :----- | :------------------------------------ |
 | `arm_init` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the parameter initialization of the robotic arm, and the end effector parameters will be restored to defaults.
@@ -187,7 +193,52 @@ Angular speed: 0.6 rad/s; angular acceleration: 4 rad/s2
 }
 ```
 
-### Set the collision stage `set_collision_stage`
+### Setting Collision Detection Switch in stationary state `set_collision_detection`
+
+This interface can enable the collision detection function of the robotic arm in its stationary state.
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                 |
+| :-------------------- | :------- | :----------------------- |
+| `set_collision_detection` | `string` | Set the collision detection switch. |
+| `mode`     | `int`    | 0: Disable collision detection function in stationary state; 1: Enable collision detection function in stationary state.  |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                              |
+| :---------------- | :----- | :------------------------------------ |
+| `set_state` | `bool` | `true`: Setting successful; `false`: Setting failed. |
+
+- **Code demo**
+
+**Input**  
+
+```json
+{"command":"set_collision_detection","mode":0}
+```
+
+**Output**  
+
+Setting successful
+
+```json
+{
+    "command":"set_collision_detection",
+    "set_state":true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command":"set_collision_detection",
+    "set_state":false
+}
+```
+
+### Set the collision protection level `set_collision_stage`
 
 - **Input parameter**
 
@@ -202,6 +253,8 @@ Angular speed: 0.6 rad/s; angular acceleration: 4 rad/s2
 | :---------------- | :----- | :------------------------------------ |
 | `collision_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
+- **Code demo**
+
 **Input**
 
 Execution: Set the collision stage of the robotic arm to 1, the higher the stage, the more sensitive the collision detection.
@@ -210,105 +263,65 @@ Execution: Set the collision stage of the robotic arm to 1, the higher the stage
 {"command":"set_collision_stage","collision_stage":1}
 ```
 
-**Output**
+**Output**  
+
+Setting successful
 
 ```json
 {
-    "command": "set_collision_state",
+    "command": "set_collision_stage",
     "collision_state": true
 }
 ```
 
-### Get the collision stage `get_collision_stage`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                                   |
-| :-------------------- | :------- | :----------------- |
-| `get_collision_stage` | `string` | Get the collision stage of the robotic arm. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                                   |
-| :---------------- | :---- | :---------------- |
-| `collision_stage`     | `int`    | Stage: 0−8. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the collision stage of the robotic arm.
-
-```json
-{ "command": "get_collision_stage" }
-```
-
-**Output**
+Setting failed
 
 ```json
 {
-    "state": "get_collision_stage",
-    "collision_stage": 5
+    "command": "set_collision_stage",
+    "collision_state": false
 }
 ```
 
-### Set the enabling state of the self-collision safety detection `set_self_collision_enable`
+### Setting Singularity Avoidance `set_avoid_singularity_mode`
 
 - **Input parameter**
 
-| Parameter  | Type | Description  |
-| :-- | :-- | :-- |
-|`set_self_collision_enable`|`string` | Set the enabling state of the self-collision safety detection. |
-
-- **Code demo**
-
-**Input**
-
-Set the current virtual wall parameters.
-
-```json
-{"command":"set_self_collision_enable","set_enable":false}
-```
-
-**Output**
-
-```json
-{
-    "command": "set_self_collision_enable",
-    "set_state": true
-}
-```
-
-### Get the enabling state of the self-collision safety detection `get_self_collision_enable`
-
-- **Input parameter**
-
-| Parameter  | Type | Description  |
-| :-- | :-- | :-- |
-|`get_self_collision_enable`|`string` | Get the enabling state of the self-collision safety detection. |
+| Parameter        | Type    | Description          |
+| :-------------------- | :------- | :----------------------- |
+| `set_avoid_singularity_mode` | `string` | Set singularity avoidance. |
+| `mode`     | `int`    | 0 - Indicates that singularity avoidance is turned off; <br>1 - Indicates that singularity avoidance is performed using the speed-priority mode (only supports 6-DoF). In this mode, during trajectory operation, the robotic arm will change the posture of some joints near the singularity to avoid it, maintaining the movement speed. The trajectory accuracy will be somewhat reduced near the singularity.    |
 
 - **Output parameter**
 
-| Parameter  | Type | Description  |
-| :-- | :-- | :-- |
-|`enable_state`|`bool`|`true`: enable, `false`: disable. |
+| Parameter        | Type    | Description                 |
+| :---------------- | :----- | :------------------------------------ |
+| `set_state` | `bool` | `true`: setting succeeded, `false`: setting failed. |
 
 - **Code demo**
 
-**Input**
-
-Set the current virtual wall parameters.
+**Input**  
 
 ```json
-{ "command": "get_self_collision_enable" }
+{ "command": "set_avoid_singularity_mode","mode":1}
 ```
 
-**Output**
+**Output**  
+Setting successful
 
 ```json
 {
-    "command": "get_self_collision_enable",
-    "enable_state": false
+    "command":"set_avoid_singularity_mode",
+    "set_state":true
+}
+```
+
+Setting failed
+
+```json
+{
+    "command":"set_avoid_singularity_mode",
+    "set_state":false
 }
 ```
 
@@ -359,61 +372,6 @@ In the demo, they are 1°, 0.002 m, 0.003 m, and 4° respectively.
 {
     "command": "set_DH_data",
     "set_state": true
-}
-```
-
-### Get the DH parameters (Gen 3 controller) `get_DH_data`
-
-- **Input parameter**
-
-| Parameter        | Type    | Description                         |
-| :------------ | :------- | :------------------- |
-| `get_DH_data` | `string` | Get the DH parameters of the robotic arm. |
-
-- **Output parameter**
-
-| Parameter        | Type    | Description                         |
-| :-------- | :------ | :-------------------------------------------------------------------------------------- |
-| `joint_1` | `array` | Each joint has four sets of data, representing alpha, a, d, and offset. In the demo, they are 1°, 0.002 m, 0.003 m, and 4° respectively. |
-
-- **Code demo**
-
-**Input**
-
-Execution: Get the DH parameters of the robotic arm.
-
-```json
-{ "command": "get_DH_data" }
-```
-
-**Output**
-
-6-DoF robotic arm:
-
-```json
-{
-  "command": "get_DH_data",
-  "joint_1": [1000, 2000, 3000, 4000],
-  "joint_2": [1000, 2000, 3000, 4000],
-  "joint_3": [1000, 2000, 3000, 4000],
-  "joint_4": [1000, 2000, 3000, 4000],
-  "joint_5": [1000, 2000, 3000, 4000],
-  "joint_6": [1000, 2000, 3000, 4000]
-}
-```
-
-7-DoF robotic arm:
-
-```json
-{
-  "command":"get_DH_data",
-  "joint_1":[1000,2000,3000,4000],
-  "joint_2":[1000,2000,3000,4000],
-  "joint_3":[1000,2000,3000,4000],
-  "joint_4":[1000,2000,3000,4000],
-  "joint_5":[1000,2000,3000,4000],
-  "joint_6":[1000,2000,3000,4000],
-  "joint_7":[1000,2000,3000,4000]
 }
 ```
 
@@ -630,5 +588,155 @@ Return 10 rad/s2, with a resolution of 0.001 rad/s2 as the maximum angular accel
 {
     "state": "arm_max_angular_acc",
     "arm_angular_acc": 10000
+}
+```
+
+### Get the collision protection level `get_collision_stage`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                                   |
+| :-------------------- | :------- | :----------------- |
+| `get_collision_stage` | `string` | Get the collision stage of the robotic arm. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                                   |
+| :---------------- | :---- | :---------------- |
+| `collision_stage`     | `int`    | Stage: 0−8. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the collision stage of the robotic arm.
+
+```json
+{ "command": "get_collision_stage" }
+```
+
+**Output**
+
+```json
+{
+    "state": "get_collision_stage",
+    "collision_stage": 5
+}
+```
+
+### Querying Collision Detection Switch in stationary state `get_collision_detection`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description           |
+| :-------------------- | :------- | :----------------- |
+| `get_collision_detection` | `string` | Query the collision detection switch. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description           |
+| :---------------- | :---- | :---------------- |
+| `collision_stage` | `int` | 0: Disable collision detection in stationary state; 1: Enable collision detection in stationary state. |
+
+- **Code demo**
+
+**Input**  
+
+```json
+{ "command": "get_collision_detection" }
+```
+
+**Output**  
+
+```json
+{
+    "command":"get_collision_detection",
+    "mode":0
+}
+```
+
+### Getting Singularity Avoidance Mode `get_avoid_singularity_mode`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description            |
+| :-------------------- | :------- | :----------------- |
+| `get_avoid_singularity_mode` | `string` | Get singularity avoidance mode. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description        |
+| :---------------- | :---- | :---------------- |
+| `mode` | `int` |0 - Indicates that singularity avoidance is turned off; <br>1 - Indicates that singularity avoidance is performed using the speed-priority mode (only supports 6-DoF). In this mode, during trajectory operation, the robotic arm will change the posture of some joints near the singularity to avoid it, maintaining the movement speed. The trajectory accuracy will be somewhat reduced near the singularity. |
+
+- **Code demo**
+
+**Input**  
+
+```json
+{ "command": "get_avoid_singularity_mode"}
+```
+
+**Output**  
+
+```json
+{
+    "command":"get_avoid_singularity_mode",
+    "mode":1
+}
+```
+
+### Get the DH parameters (Gen 3 controller) `get_DH_data`
+
+- **Input parameter**
+
+| Parameter        | Type    | Description                         |
+| :------------ | :------- | :------------------- |
+| `get_DH_data` | `string` | Get the DH parameters of the robotic arm. |
+
+- **Output parameter**
+
+| Parameter        | Type    | Description                         |
+| :-------- | :------ | :-------------------------------------------------------------------------------------- |
+| `joint_1` | `array` | Each joint has four sets of data, representing alpha, a, d, and offset. In the demo, they are 1°, 0.002 m, 0.003 m, and 4° respectively. |
+
+- **Code demo**
+
+**Input**
+
+Execution: Get the DH parameters of the robotic arm.
+
+```json
+{ "command": "get_DH_data" }
+```
+
+**Output**
+
+6-DoF robotic arm:
+
+```json
+{
+  "command": "get_DH_data",
+  "joint_1": [1000, 2000, 3000, 4000],
+  "joint_2": [1000, 2000, 3000, 4000],
+  "joint_3": [1000, 2000, 3000, 4000],
+  "joint_4": [1000, 2000, 3000, 4000],
+  "joint_5": [1000, 2000, 3000, 4000],
+  "joint_6": [1000, 2000, 3000, 4000]
+}
+```
+
+7-DoF robotic arm:
+
+```json
+{
+  "command":"get_DH_data",
+  "joint_1":[1000,2000,3000,4000],
+  "joint_2":[1000,2000,3000,4000],
+  "joint_3":[1000,2000,3000,4000],
+  "joint_4":[1000,2000,3000,4000],
+  "joint_5":[1000,2000,3000,4000],
+  "joint_6":[1000,2000,3000,4000],
+  "joint_7":[1000,2000,3000,4000]
 }
 ```

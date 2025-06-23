@@ -14,7 +14,7 @@
 
 | 参数                | 类型     | 说明             |
 | :------------------ | :------- | :--------------- |
-| `current_arm_state` | `string` | 反馈机械臂状态。 |
+| `get_current_arm_state` | `string` | 反馈机械臂状态。 |
 | `joint`             | `int`    | 关节角度         |
 | `pose`              | `int`    | 末端位姿         |
 | `err`           | `int`    | 系统错误代码   |
@@ -43,7 +43,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_arm_state",
+    "command": "get_current_arm_state",
     "arm_state": {
         "joint": [
             100,
@@ -70,7 +70,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_arm_state",
+    "command": "get_current_arm_state",
     "arm_state": {
         "joint": [
             100,
@@ -106,7 +106,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 | 功能描述 | 类型 |说明|
 | :--- | :------------------------- |:---|
-| `controller_state` | `string` |反馈控制器状态。 |
+| `get_controller_state` | `string` |反馈控制器状态。 |
 
 - **代码示例**
 
@@ -124,7 +124,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-  "state": "controller_state",    //反馈控制器状态
+  "command": "get_controller_state",    //反馈控制器状态
   "voltage": 24000,               //电压：24v，
   "current": 1500,                //电流：1.5A
   "temperature": 42000,           //温度：42℃
@@ -182,7 +182,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 | 参数                        | 类型  | 说明                              |
 | :-------------------------- | :---- | :-------------------------------- |
-| `current_joint_temperature` | `int` | 反馈关节温度单位：℃，精度：0.001℃ |
+| `get_current_joint_temperature` | `int` | 反馈关节温度单位：℃，精度：0.001℃ |
 
 - **代码示例**
 
@@ -205,7 +205,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_temperature",
+    "command": "get_current_joint_temperature",
     "joint_temperature": [
         27500,
         28000,
@@ -221,7 +221,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_temperature",
+    "command": "get_current_joint_temperature",
     "joint_temperature": [
         27500,
         28000,
@@ -246,7 +246,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 | 参数                    | 类型  | 说明                                      |
 | :---------------------- | :---- | :---------------------------------------- |
-| `current_joint_current` | `int` | 反馈关节当前电流单位：mA，精度：0.001mA。 |
+| `get_current_joint_current` | `int` | 反馈关节当前电流单位：mA，精度：0.001mA。 |
 
 - **代码示例**
 
@@ -272,7 +272,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_current",
+    "command": "get_current_joint_current",
     "joint_current": [
         65,
         -200,
@@ -288,7 +288,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_current",
+    "command": "get_current_joint_current",
     "joint_current": [
         65,
         -200,
@@ -313,7 +313,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 | 参数                    | 类型  | 说明                                    |
 | :---------------------- | :---- | :-------------------------------------- |
-| `current_joint_voltage` | `int` | 反馈关节当前电压单位：V，精度：0.001V。 |
+| `get_current_joint_voltage` | `int` | 反馈关节当前电压单位：V，精度：0.001V。 |
 
 - **代码示例**
 
@@ -336,7 +336,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_voltage",
+    "command": "get_current_joint_voltage",
     "joint_voltage": [
         27500,
         28000,
@@ -352,7 +352,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "current_joint_voltage",
+    "command": "get_current_joint_voltage",
     "joint_voltage": [
         27500,
         28000,
@@ -389,7 +389,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "joint_degree",
+    "command":"get_joint_degree",
     "joint": [
         10,
         20,
@@ -405,7 +405,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "joint_degree",
+    "command":"get_joint_degree",
     "joint": [
         10,
         20,
@@ -452,7 +452,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "arm_all_state",
+    "command":"get_arm_all_state",
     "all_state": {
         "temperature": [
             21,
@@ -503,7 +503,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "arm_all_state",
+    "command":"get_arm_all_state",
     "all_state": {
         "temperature": [
             21,
@@ -613,8 +613,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 | 参数            | 类型     | 说明           |
 | :-------------- | :------- | :------------- |
-| `arm_init_pose` | `string` | 反馈初始位置。 |
-| `init_pose`     | `int`    | 精度 0.001°    |
+| `get_init_pose` | `string` | 反馈初始位置。 |
 
 - **代码示例**
 
@@ -632,7 +631,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "arm_init_pose",
+    "command": "get_init_pose",
     "init_pose": [
         10000,
         0,
@@ -648,7 +647,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "arm_init_pose",
+    "command": "get_init_pose",
     "init_pose": [
         10000,
         0,
@@ -722,7 +721,7 @@ err：系统错误代码，指系统运行过程中的硬件错误，可存在�
 
 ```json
 {
-    "state": "install_pose",
+    "command": "get_install_pose",
     "pose": [
         0,
         90,
